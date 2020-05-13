@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Internal Use only. The unique identifier for a bridged leg of a call. --></help>
+    <label><!-- Bridge UUID --></label>
+    <name>Bridge_UUID__c</name>
+</CustomFieldTranslation>

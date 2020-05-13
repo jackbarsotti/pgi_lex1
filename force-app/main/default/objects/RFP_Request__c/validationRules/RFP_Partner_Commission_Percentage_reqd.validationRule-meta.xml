@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RFP_Partner_Commission_Percentage_reqd</fullName>
+    <active>true</active>
+    <description>When PGi Bidding is Partner, then Partner Name is required.</description>
+    <errorConditionFormula>AND (
+( ISPICKVAL (PGi_Bidding__c , &quot;Partner&quot;)),
+(ISBLANK ( Partner_Commission_Percentage__c )))</errorConditionFormula>
+    <errorDisplayField>Partner_Commission_Percentage__c</errorDisplayField>
+    <errorMessage>Enter Partner Commission Percentage.</errorMessage>
+</ValidationRule>

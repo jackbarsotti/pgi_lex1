@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Billing_Cycle_not_required_for_Admin</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;, 
+ISPICKVAL( Billing_Cycle__c, &quot;&quot; ), 
+RecordType.DeveloperName = &#39;PGi_Rate_Entry_Request&#39; 
+
+)</errorConditionFormula>
+    <errorDisplayField>Billing_Cycle__c</errorDisplayField>
+    <errorMessage>Billing Cycle is required</errorMessage>
+</ValidationRule>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Company_for_Match_Logic__c</fullName>
+    <description>Used in the matching logic to auto populate leads to accounts</description>
+    <externalId>false</externalId>
+    <formula>IF(CONTAINS(RIGHT(Company,12),&quot; Corporation&quot;),TRIM(SUBSTITUTE(Company,&quot; Corporation&quot;,&quot;&quot;)),
+IF(CONTAINS(RIGHT(Company,9),&quot; Holdings&quot;),TRIM(SUBSTITUTE(Company,&quot; Holdings&quot;,&quot;&quot;)),
+IF(CONTAINS(RIGHT(Company,9),&quot; HOLDINGS&quot;),TRIM(SUBSTITUTE(Company,&quot; HOLDINGS&quot;,&quot;&quot;)),
+IF(CONTAINS(Company,&quot;, Inc.&quot;),TRIM(SUBSTITUTE(Company,&quot;, Inc.&quot;,&quot;&quot;)),
+IF(CONTAINS(Company,&quot;, INC.&quot;),TRIM(SUBSTITUTE(Company,&quot;, INC.&quot;,&quot;&quot;)),
+IF(CONTAINS(Company,&quot;, Inc&quot;),TRIM(SUBSTITUTE(Company,&quot;, Inc&quot;,&quot;&quot;)),
+IF(CONTAINS(Company,&quot;, INC&quot;),TRIM(SUBSTITUTE(Company,&quot;, INC&quot;,&quot;&quot;)),
+IF(CONTAINS(Company,&quot; Inc.&quot;),TRIM(SUBSTITUTE(Company,&quot; Inc.&quot;,&quot;&quot;)),
+IF(CONTAINS(Company,&quot; INC.&quot;),TRIM(SUBSTITUTE(Company,&quot; INC.&quot;,&quot;&quot;)),
+IF(CONTAINS(RIGHT(Company,4),&quot; Inc&quot;),TRIM(SUBSTITUTE(Company,&quot; Inc&quot;,&quot;&quot;)),
+IF(CONTAINS(RIGHT(Company,4),&quot; INC&quot;),TRIM(SUBSTITUTE(Company,&quot; INC&quot;,&quot;&quot;)),
+IF(CONTAINS(Company,&quot;, LP&quot;),TRIM(SUBSTITUTE(Company,&quot;, LP&quot;,&quot;&quot;)),
+IF(CONTAINS(Company,&quot;, Lp&quot;),TRIM(SUBSTITUTE(Company,&quot;, Lp&quot;,&quot;&quot;)),
+IF(CONTAINS(RIGHT(Company,3),&quot; LP&quot;),TRIM(SUBSTITUTE(Company,&quot; LP&quot;,&quot;&quot;)),
+IF(CONTAINS(RIGHT(Company,3),&quot; Lp&quot;),TRIM(SUBSTITUTE(Company,&quot; Lp&quot;,&quot;&quot;)),
+IF(CONTAINS(Company,&quot;, L.L.C.&quot;),TRIM(SUBSTITUTE(Company,&quot;, L.L.C.&quot;,&quot;&quot;)), 
+IF(CONTAINS(Company,&quot; L.L.C.&quot;),TRIM(SUBSTITUTE(Company,&quot; L.L.C.&quot;,&quot;&quot;)), 
+IF(CONTAINS(Company,&quot; L.L.C&quot;),TRIM(SUBSTITUTE(Company,&quot; L.L.C&quot;,&quot;&quot;)), 
+IF(CONTAINS(Company,&quot;, LLC.&quot;),TRIM(SUBSTITUTE(Company,&quot;, LLC.&quot;,&quot;&quot;)), 
+IF(CONTAINS(Company,&quot;, LLC&quot;),TRIM(SUBSTITUTE(Company,&quot;, LLC&quot;,&quot;&quot;)),
+IF(CONTAINS(Company,&quot; LLC.&quot;),TRIM(SUBSTITUTE(Company,&quot; LLC.&quot;,&quot;&quot;)),  
+IF(CONTAINS(Company,&quot; LLC&quot;),TRIM(SUBSTITUTE(Company,&quot; LLC&quot;,&quot;&quot;)),
+IF(CONTAINS(Company,&quot; Co.&quot;),TRIM(SUBSTITUTE(Company,&quot; Co.&quot;,&quot;&quot;)),
+IF(CONTAINS(Company,&quot; CO.&quot;),TRIM(SUBSTITUTE(Company,&quot; CO.&quot;,&quot;&quot;)),
+IF(CONTAINS(Company,&quot; co.&quot;),TRIM(SUBSTITUTE(Company,&quot; co.&quot;,&quot;&quot;)),
+IF(CONTAINS(RIGHT(Company,3),&quot; Co&quot;),TRIM(SUBSTITUTE(Company,&quot; Co&quot;,&quot;&quot;)),
+IF(CONTAINS(RIGHT(Company,3),&quot; CO&quot;),TRIM(SUBSTITUTE(Company,&quot; CO&quot;,&quot;&quot;)),
+IF(CONTAINS(RIGHT(Company,3),&quot; co&quot;),TRIM(SUBSTITUTE(Company,&quot; co&quot;,&quot;&quot;)),
+IF(CONTAINS(Company,&quot; Ltd&quot;),TRIM(SUBSTITUTE(Company,&quot; Ltd&quot;,&quot;&quot;)),
+IF(CONTAINS(Company,&quot; LTD&quot;),TRIM(SUBSTITUTE(Company,&quot; LTD&quot;,&quot;&quot;)),
+IF(CONTAINS(Company,&quot; ltd&quot;),TRIM(SUBSTITUTE(Company,&quot; ltd&quot;,&quot;&quot;)),Company)))))))))))))))))))))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Company for Match Logic</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

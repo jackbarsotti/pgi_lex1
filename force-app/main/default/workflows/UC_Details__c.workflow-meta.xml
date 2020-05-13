@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>UC_Notify_UC_Overlays</fullName>
+        <ccEmails>ucaasoverlays@pgi.com</ccEmails>
+        <description>UC - Notify UC Overlays</description>
+        <protected>false</protected>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Emails/New_UC_Detail_Alert</template>
+    </alerts>
+    <rules>
+        <fullName>UC - Notify UC Overlays</fullName>
+        <actions>
+            <name>UC_Notify_UC_Overlays</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>UC_Details__c.CreatedDate</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

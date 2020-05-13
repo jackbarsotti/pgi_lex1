@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Audio_Slides_Extended_Archiving__c</fullName>
+    <defaultValue>100</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>One-time fee for an additional 12 months of archiving</inlineHelpText>
+    <label>Audio %2B Slides - Extended Archiving</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

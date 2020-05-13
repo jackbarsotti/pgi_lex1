@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Active_Company</fullName>
+    <active>true</active>
+    <description>Can not create a cancellation request against an inactive company</description>
+    <errorConditionFormula>RecordType.Id == &#39;0121B000001CH2u&#39; &amp;&amp; ISNEW() &amp;&amp; (NOT(ISNULL(PGi_Company__r.Inactive_Date__c)))</errorConditionFormula>
+    <errorMessage>Can not create a cancellation request against an inactive Company</errorMessage>
+</ValidationRule>

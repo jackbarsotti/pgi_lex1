@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is the number of GlobalMeet Standard licenses total for this account, not including this order --></help>
+    <label><!-- GlobalMeet Standard Parent --></label>
+    <name>GlobalMeetStandardParent__c</name>
+</CustomFieldTranslation>

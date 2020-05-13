@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>iMC_Internal_Comment_Required</fullName>
+    <active>true</active>
+    <description>If attempting to close a iMC Case that is of the NPS Survey Follow Up type, then the comment field is required to be completed.</description>
+    <errorConditionFormula>AND(
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;,
+NOT(ISCHANGED(IsUpdateFromCaseComment__c)),
+ISPICKVAL(Type,&quot;NPS Survey Follow Up&quot;),
+ISPICKVAL(Status,&quot;Closed&quot;),
+ISBLANK(Comments__c)
+)</errorConditionFormula>
+    <errorDisplayField>Comments__c</errorDisplayField>
+    <errorMessage>You must fill in the &quot;Comment&quot; field with your resolution when closing a NPS Follow Up case.</errorMessage>
+</ValidationRule>

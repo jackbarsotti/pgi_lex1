@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- SvsNow Responsible Party --></label>
+    <name>ResponsibleParty__c</name>
+    <picklistValues>
+        <masterLabel>AP Billing</masterLabel>
+        <translation><!-- AP Billing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AP Contracts</masterLabel>
+        <translation><!-- AP Contracts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AP Pricing</masterLabel>
+        <translation><!-- AP Pricing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer Service</masterLabel>
+        <translation><!-- Customer Service --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Finance</masterLabel>
+        <translation><!-- Finance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing</masterLabel>
+        <translation><!-- Marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MetraTech</masterLabel>
+        <translation><!-- MetraTech --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Network (IT) Operations</masterLabel>
+        <translation><!-- Network (IT) Operations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi Billing Productions</masterLabel>
+        <translation><!-- PGi Billing Productions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales</masterLabel>
+        <translation><!-- Sales --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

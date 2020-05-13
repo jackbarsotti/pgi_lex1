@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- HR Division --></label>
+    <name>HR_Division__c</name>
+    <picklistValues>
+        <masterLabel>Corp. Programs &amp; Planning</masterLabel>
+        <translation><!-- Corp. Programs &amp; Planning --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer Care</masterLabel>
+        <translation><!-- Customer Care --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Finance</masterLabel>
+        <translation><!-- Finance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HR</masterLabel>
+        <translation><!-- HR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Legal</masterLabel>
+        <translation><!-- Legal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing</masterLabel>
+        <translation><!-- Marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PWN</masterLabel>
+        <translation><!-- PWN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ReadyTalk</masterLabel>
+        <translation><!-- ReadyTalk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales</masterLabel>
+        <translation><!-- Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technology/Global IT</masterLabel>
+        <translation><!-- Technology/Global IT --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

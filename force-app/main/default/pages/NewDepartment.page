@@ -1,0 +1,5 @@
+<apex:page standardController="Department__c" extensions="NewDepartment" action="{!doInit}" tabStyle="Department__c">
+    <p>
+        Not Allowed...
+    </p>
+</apex:page>

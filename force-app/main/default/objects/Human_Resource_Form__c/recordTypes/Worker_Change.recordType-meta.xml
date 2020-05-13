@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Worker_Change</fullName>
+    <active>true</active>
+    <label>Worker Change</label>
+    <picklistValues>
+        <picklist>Company__c</picklist>
+        <values>
+            <fullName>Central Desktop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PGi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PowWowNow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ReadyTalk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TalkPoint</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Department_Description__c</picklist>
+        <values>
+            <fullName>010005-Client Services Ops COS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Department_Group__c</picklist>
+        <values>
+            <fullName>EMEA%2FAPAC-Customer Care</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disable_the_following__c</picklist>
+        <values>
+            <fullName>Adobe Creative Cloud License</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Airwatch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fax2mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GlobalMeet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jira</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PGiTime</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Premiere Login</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salesforce</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Equipment_Separation_Urgency__c</picklist>
+        <values>
+            <fullName>1-High %2830 minutes%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2-Medium %28End of day today%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3-Low %28Date in the future%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Form_Origin__c</picklist>
+        <values>
+            <fullName>Manual Entry</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>PGi Service Catalog</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Home_Phone_Changes__c</picklist>
+        <values>
+            <fullName>Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enable</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>In_Customer_Care__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>In_Sales__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Logical_Access_Needs__c</picklist>
+        <values>
+            <fullName>Call Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exchange Mailbox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GlobalMeet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Network%2FWindows Login</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PGiTime</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PeopleSoft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RC2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ROC %28Auditorium%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salesforce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skype for Business %28IM%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tesla</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VPN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VPN Software Installed %28contractor%2Fno PGi computer%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WOC %28Event%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Win%24</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Xlite</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Physical_Access_Separation_Urgency__c</picklist>
+        <values>
+            <fullName>1-High %2830 minutes%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2-Medium %28End of day today%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3-Low %28Date in the future%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primary_Work_Location__c</picklist>
+        <values>
+            <fullName>In Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Work From Home</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_for_New_Worker__c</picklist>
+        <values>
+            <fullName>Backfill %28Exited the Company%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open %28Incremental Addition%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transfer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>System_Access_Separation_Urgency__c</picklist>
+        <values>
+            <fullName>1-High %2830 minutes%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2-Medium %28End of day today%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3-Low %28Date in the future%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Teleservices_Required__c</picklist>
+        <values>
+            <fullName>ACD%2FAspect Phone Setup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call Recording</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Dial Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Headset</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone Extension %28No Direct Line%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ring Master</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Screen Capture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VoiceMail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Worker Speaks French</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Change__c</picklist>
+        <values>
+            <fullName>Conversion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Worker Change</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Wireless_Carrier__c</picklist>
+        <values>
+            <fullName>AT%26T</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Airtel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Au</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Docomo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Softbank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telenoir</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verizon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vodaphone</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Wireless_Device_Required__c</picklist>
+        <values>
+            <fullName>Android</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blackberry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International Data Roaming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International Dialing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Windows</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPhone</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Worker_Changes__c</picklist>
+        <values>
+            <fullName>Department</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>End Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>First Name</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Job Title</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Last Name</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Location</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supervisor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Worker_Conversion__c</picklist>
+        <values>
+            <fullName>Contractor to Employee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee to Contractor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intern to Employee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intern to Temporary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student to Contractor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student to Employee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student to Temporary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Temporary to Contractor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Temporary to Employee</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Worker_Type__c</picklist>
+        <values>
+            <fullName>Contractor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intern</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Temporary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Worker_will_require__c</picklist>
+        <values>
+            <fullName>1 Monitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 Monitors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Desktop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Docking Station</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laptop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Power User%2FTech Laptop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video Cam%2FWeb Cam</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Remove contact from the Marketo Free Trial Nurture Campaign --></help>
+    <label><!-- Remove From Free Trial Campaign --></label>
+    <name>Remove_From_Free_Trial_Campaign__c</name>
+</CustomFieldTranslation>

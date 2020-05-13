@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RFC_Owner_Not_a_User</fullName>
+    <active>true</active>
+    <description>Prevents the Owner field from being set as a User</description>
+    <errorConditionFormula>AND(
+($User.Id &lt;&gt; &#39;0051B000009MZdY&#39;),
+($User.Id &lt;&gt; &#39;0051300000CC9uZ&#39;),
+($User.Id &lt;&gt; &#39;0051B000009MZdk&#39;),
+ISCHANGED(OwnerId) ,
+LEFT( OwnerId , 3) = &#39;005&#39;
+)</errorConditionFormula>
+    <errorMessage>Ownership must be a Queue and not a User. Users are to be assigned in the Assigned To field.</errorMessage>
+</ValidationRule>

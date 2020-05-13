@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The second Wrapup String entered by the user on the Natterbox CTI. --></help>
+    <label><!-- Wrapup String 2 --></label>
+    <name>Wrapup_String_2__c</name>
+</CustomFieldTranslation>

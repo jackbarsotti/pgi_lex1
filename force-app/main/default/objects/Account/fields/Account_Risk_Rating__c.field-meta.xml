@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Risk_Rating__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>SAFE:
+LOW: BAU/in a contract/no change anticipated 
+HIGH: Potential Revenue Decline/Renewal or RFP Coming or Underway 
+EXTREME: Dramatic revenue loss or customer loss probable</inlineHelpText>
+    <label>Account Risk Rating</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SAFE</fullName>
+                <default>false</default>
+                <label>SAFE</label>
+            </value>
+            <value>
+                <fullName>LOW</fullName>
+                <default>false</default>
+                <label>LOW</label>
+            </value>
+            <value>
+                <fullName>HIGH</fullName>
+                <default>false</default>
+                <label>HIGH</label>
+            </value>
+            <value>
+                <fullName>EXTREME</fullName>
+                <default>false</default>
+                <label>EXTREME</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

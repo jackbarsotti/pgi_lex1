@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TASKRAY__TaskRay_Time_Compact</fullName>
+    <fields>Name</fields>
+    <fields>TASKRAY__Task__c</fields>
+    <fields>TASKRAY__Date__c</fields>
+    <fields>TASKRAY__Hours__c</fields>
+    <fields>TASKRAY__Billable__c</fields>
+    <fields>TASKRAY__Owner__c</fields>
+    <label>TaskRay Time Compact</label>
+</CompactLayout>

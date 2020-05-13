@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicates that the account is currently At-Risk. See the At-Risk Opportunity for add&apos;l info. --></help>
+    <label><!-- At-Risk Account --></label>
+    <name>At_Risk_Account__c</name>
+</CustomFieldTranslation>

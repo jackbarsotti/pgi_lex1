@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The Verbiage that should appear on the PGi Contract --></help>
+    <label><!-- Verbiage --></label>
+    <name>Verbiage__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,227 @@
+<apex:page controller="AccessCodeController" tabStyle="Subscription__c" action="{!checkContactStatus}" docType="html-5.0">
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/prototype.js')}"/>
+  <apex:includeScript value="/soap/ajax/15.0/connection.js"/>
+
+  <link type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/themes/redmond/jquery-ui.css" rel="stylesheet" />
+  <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"/>
+  <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"/>
+
+  <script>
+    $(document).ready(function(){  
+      //SFB-1331: If the assigned plan is set to WMP-100 then set the number of audio ports to 100
+      //SFB-1549: Ensure that all new "Meeting" and "Corp License" packages default to the prescribed audio port setting when provisioned.
+      //SFB-1688: Set Plan Options      
+      function setPlanOptions(){
+        //Make a quick association array
+        var planToOptionsMap = [
+          {name:'Meeting 10', ports:'10'}, 
+          {name:'Meeting 25', ports:'25'},
+          {name:'Web 25', ports:'25'},
+          {name:'Meeting 100', ports:'100'},
+          {name: 'Free Trial', ports:'25', collabAllowed:true}
+        ];
+
+        var inMap = false;
+
+        //Loop through association array and set options
+        $.each(planToOptionsMap, function(index, obj){
+          var assignedPackage = $(".assignedProduct option:selected").val();
+
+          var portOption = $('.audioSubscriptionSize option[value="'+obj.ports+'"]');
+          var collabOption = $('.collabAllowed');
+
+          if(assignedPackage.indexOf(obj.name) != -1 && portOption.length>0){
+            portOption.prop('selected', true);   
+
+            if(obj.collabAllowed!='undefined')
+              collabOption.prop('checked', obj.collabAllowed);
+
+            inMap = true;
+          }
+        });
+
+        if(!inMap)
+          $('.audioSubscriptionSize option[value="150"]').prop('selected', true);        
+      }
+
+      //When the assigned plan changes, set the port size
+      $(".assignedProduct").change(function(){
+        setPlanOptions();
+      });
+      
+      //Set the package options on load
+      setPlanOptions();      
+    });
+  </script>
+  <apex:sectionHeader title="Access Code Edit" subtitle="New Access Code"/>
+      
+  <apex:pageMessages escape="false"/>
+
+  <style>
+  label { white-space:nowrap;}
+  </style>
+
+  <apex:form >    
+          
+      <apex:pageBlock id="accessCodeEdit" title="Access Code Edit" mode="edit">
+          <apex:pageBlockButtons location="top">
+              <apex:commandButton value="Save" action="{!save}"/>
+              <apex:commandButton value="Cancel" action="{!cancel}" immediate="true"/>
+          </apex:pageBlockButtons>
+              
+          <apex:pageBlockSection title="Information" columns="2">
+              <apex:pageBlockSection columns="1">
+                  <apex:inputField value="{!subscription.name}" id="Name" required="true"/>            
+                  <apex:inputField value="{!subscription.Passcode__c}" id="Passcode"/>                        
+                  <apex:inputField value="{!subscription.Card_Name__c}" id="CardName"/>            
+                  <apex:inputField value="{!subscription.Subscription_Email__c}" id="SubscriptionEmail"/>            
+                  <apex:inputField value="{!subscription.Reference_ID__c}" id="ReferenceID"/>
+                  <apex:inputField value="{!subscription.Reference_ID_2__c}" id="ReferenceID2"/>
+                  <apex:inputField value="{!subscription.Reference_ID_3__c}" id="ReferenceID3"/>            
+                  <apex:inputField value="{!subscription.Keep_Active__c}" id="KeepActive"/>
+                  <apex:inputField value="{!subscription.First_Used_Date__c}" id="FirstUsedDate" rendered="{!NOT(isAdministrator)}"/>
+                  <apex:inputField value="{!subscription.Last_Used_Date__c}" id="LastUsedDate" rendered="{!NOT(isAdministrator)}"/>                
+                  <apex:inputField value="{!subscription.Contact_Toll_Free_Number__c}" id="tollFree" />
+                  <apex:inputField value="{!subscription.Contact_Toll_Number__c}" id="toll" />
+                  <apex:inputField value="{!subscription.Contact__c}" id="Contact" rendered="{!isAdministrator}"/>
+                  <apex:inputField value="{!subscription.Access_Code__c}" id="AccessCodeOldField" rendered="{!isAdministrator}"/>            
+              </apex:pageBlockSection>
+              
+              <apex:pageBlockSection columns="1">
+                  <apex:inputField value="{!subscription.Status__c}" id="Status"/>
+                  <apex:inputField value="{!subscription.Status_Description__c}" id="StatusDescription"/>
+                  <apex:pageBlockSectionItem >
+                      <apex:outputLabel value="Owner" for="Owner"/>
+                      <apex:outputText value="{!subscription.Owner.Name}" id="Owner"/>                        
+                  </apex:pageBlockSectionItem>              
+                  <apex:inputField value="{!subscription.Contact_Start_Page__c}" id="ContactStartPage"/>
+                  <apex:inputField value="{!subscription.Note__c}" id="Notes" style="width: 215px;"/>    
+                  <apex:inputField value="{!subscription.PortalAdmin__c}" id="PortalAdmin" />                
+              </apex:pageBlockSection>
+              
+          </apex:pageBlockSection>
+          
+          <apex:pageBlockSection title="Address Information" columns="2">
+              <apex:pageBlockSection columns="1">
+                  <apex:inputField value="{!subscription.Ship_To_Name__c}" id="ShipToName"/>
+                  <apex:inputField value="{!subscription.Address_Line_1__c}" id="StreetAddress1"/>                
+                  <apex:inputField value="{!subscription.Address_Line_2__c}" id="StreetAddress2"/>
+                  <apex:inputField value="{!subscription.City__c}" id="City"/>
+                  <apex:inputField value="{!subscription.State__c}" id="State"/>
+                  <apex:inputField value="{!subscription.Zip__c}" id="ZipCode"/>
+                  <apex:inputField value="{!subscription.Country__c}" id="Country"/>                
+              </apex:pageBlockSection>
+              
+              <apex:pageBlockSection columns="1">
+                  <apex:inputField value="{!subscription.Send_Provisioning_Email__c}" id="SendProvisioningEmail"/>
+                  <apex:inputField value="{!subscription.Add_l_Provisioning_Emails__c}" id="SendAddlProvisioningEmail"/>
+                  <apex:inputField value="{!subscription.Add_l_Provisioning_Email_Addresses__c}" id="AdditionalProvisioningEmailAddresses" style="width: 215px; white-space:wrap;"/>
+              </apex:pageBlockSection>            
+          </apex:pageBlockSection>                        
+          
+          <apex:pageBlockSection title="Subscription Configuration" columns="2">
+              <apex:pageBlockSection columns="1">
+                  <apex:inputField value="{!subscription.International_Kit_Number__c}" id="IntlKitNumber"/>
+                  <apex:inputField value="{!subscription.Send_Kit__c}" id="SendKit"/>
+                  <apex:input disabled="true" id="planStartDate" label="Plan Start Date" value="{!planStartDate}"/>  
+                  <apex:selectList label="Assigned Plan" value="{!planId}" size="1" styleClass="assignedProduct">
+                    <apex:selectOptions value="{!accountLevelPlans}"/>
+                  </apex:selectList>                              
+              </apex:pageBlockSection>
+              
+              <apex:pageBlockSection id="Features" columns="1">
+                  <apex:inputField value="{!subscription.Account_Code_Prompt__c}" id="AccountCodePrompt"/>
+                  <apex:inputField value="{!subscription.App_Share_Allowed__c}" id="AppShareAllowed"/>
+                  <apex:inputField value="{!subscription.Archive_Period__c}" id="ArchivePeriod"/>
+                  <apex:inputField value="{!subscription.Audio_subscription_size__c}" id="AudioSubscriptionSize" styleClass="audioSubscriptionSize"/>            
+                  <apex:inputField value="{!subscription.Auto_Delete_Slides__c}" id="AutoDeleteSlides"/>
+                  <apex:inputField value="{!subscription.collabAllowed__c}" id="CollabAllowed" styleClass="collabAllowed"/>
+                  <apex:inputField value="{!subscription.Copresenter_Allowed__c}" id="CopresenterAllowed"/>
+                  <apex:inputField value="{!subscription.Entry_Announcement__c}" id="EntryAnnoucement"/>
+                  <apex:inputField value="{!subscription.International_Dial_Out_Allowed__c}" id="InternationalDialOutAllowed"/>
+                  <apex:inputField value="{!subscription.Moderator_Allowed__c}" id="ModeratorAllowed"/>
+                  <apex:inputField value="{!subscription.Podcasting__c}" id="Podcasting"/>
+                  <apex:inputField value="{!subscription.Quickstart__c}" id="Quickstart"/>
+                  <apex:inputField value="{!subscription.Recording_Allowed__c}" id="RecordingAllowed"/>
+                  <apex:inputField value="{!subscription.Recording_Editing_Allowed__c}" id="RecordingEditingAllowed"/>
+                  <apex:inputField value="{!subscription.Remote_Control_Allowed__c}" id="RemoteControlAllowed"/>
+                  <apex:inputField value="{!subscription.Security_Passcode__c}" id="SecurityOption"/>                
+                  <apex:inputField value="{!subscription.Slide_Presentation_Allowed__c}" id="SlidePresentationAllowed"/>
+                  <apex:inputField value="{!subscription.ssbaAllowed__c}" id="SSBAAllowed"/>
+                  <apex:inputField value="{!subscription.Video_Conferencing_Allowed__c}" id="VideoConferencingAllowed"/>
+                  <apex:inputField value="{!subscription.voipAllowed__c}" id="VoipAllowed"/>
+                  <apex:inputField value="{!subscription.Web_Conference_Allowed__c}" id="WebConferenceAllowed"/>
+                  <apex:inputField value="{!subscription.Kit_Name__c}" id="KitName" rendered="{!isAdministrator}"/>
+              </apex:pageBlockSection>                  
+          </apex:pageBlockSection>
+          
+          <apex:pageBlockSection title="Web and Audio Usage" columns="2" rendered="{!isAdministrator}">
+              <apex:inputField value="{!subscription.First_Used_Date__c}" id="FirstUsedDate"/>
+              <apex:inputField value="{!subscription.Last_Used_Date__c}" id="LastUsedDate"/>
+          </apex:pageBlockSection>
+
+          <apex:pageBlockSection title="System Information" columns="2" rendered="{!isAdministrator}">
+          </apex:pageBlockSection>
+
+          <apex:pageBlockSection title="{!administratorInformationTitle}" columns="2">
+              <apex:pageBlockSectionItem rendered="{!isAdministrator}">
+                  <apex:outputLabel value="Record Type" for="RecordType"/>
+                  <apex:outputText value="{!subscription.RecordType.Name}" id="RecordType"/>                        
+              </apex:pageBlockSectionItem>
+              <apex:outputField value="{!subscription.Parent_Ind_ID__c}" id="ParentIndID" rendered="{!NOT(isAdministrator)}"/>            
+              <apex:outputField value="{!subscription.Provision__c}" id="Provision"/>
+              <apex:outputField value="{!subscription.Kit_Name__c}" id="KitName" rendered="{!NOT(isAdministrator)}"/>            
+              <apex:inputField value="{!subscription.Access_Code_Id__c}" id="BillingID" rendered="{!isAdministrator}"/>
+              <apex:inputField value="{!subscription.Linked__c}" id="UpdatingPasscode" rendered="{!isAdministrator}"/>
+              <apex:inputField value="{!subscription.Inactive__c}" id="Deleted" rendered="{!isAdministrator}"/>
+              <apex:inputField value="{!subscription.Parent_Ind_ID__c}" id="ParentIndIDAdministrator" rendered="{!isAdministrator}"/>
+              <apex:inputField value="{!subscription.Subscription_ID__c}" id="SubscriptionID" rendered="{!isAdministrator}"/>
+              <apex:inputField value="{!subscription.editing__c}" id="Editing" rendered="{!isAdministrator}"/>
+              <apex:inputField value="{!subscription.Passcode_updated__c}" id="PasscodeUpdated" rendered="{!isAdministrator}"/>
+                      
+          </apex:pageBlockSection>
+          
+      </apex:pageBlock>
+      
+      <apex:actionFunction name="cancel" action="{!cancel}" immediate="true"/>
+      <apex:actionFunction name="gotoEdit" action="{!gotoEdit}" immediate="true"/>
+      <apex:actionFunction name="gotoAccount" action="{!gotoAccount}" immediate="true"/>
+         
+      <apex:outputPanel id="pollPanel" layout="block">
+          <apex:pageBlock id="waitPageBlock" rendered="{!waitDialog.shouldRender}">
+              <div id="InlineDialog" class="overlayDialog inlineEditDialog" style="max-width: 500px; display: block; left: 43%; top: 40%; visibility: visible;">
+                  <div class="topRight">
+                      <div class="topLeft">
+                          <h2 id="InlineDialogTitle"><apex:outputText value="{!waitDialog.header}" escape="false"/></h2>
+                      </div>
+                  </div>
+                  <div class="middle">
+                      <div class="innerContent" id="InlineDialogContent">
+                          <div class="activeField">
+                              <ul style="padding: 0; margin: 0;">                    
+                                  <li style="text-align: left;"><apex:outputText value="{!waitDialog.status}" escape="false"/></li>
+                                  <li style="list-style: none; text-align: left;"><br/></li>
+                                  <li style="list-style: none; text-align: left;"><apex:outputText value="{!waitDialog.additionalInfo}" escape="false"/></li>
+                                  <br/>
+                              </ul>
+                          </div>
+                          <div style="display: none;"></div>
+                          <div class="buttons">
+                              <input class="btn" value="{!waitDialog.button}" onclick="{!waitDialog.clickCommand}" type="button"/>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="bottomRight">
+                      <div class="bottomLeft"></div>
+                  </div>
+              </div>
+              
+              <div class="overlayBackground" style="width: 100%; height: 4049px; display: block;"/>
+          </apex:pageBlock>                  
+      </apex:outputPanel>         
+      
+      <apex:actionPoller action="{!pollContactStatus}" rerender="pollPanel,ParentIndIDAdministrator,ParentIndID" interval="5"/>
+
+  </apex:form> 
+ 
+</apex:page>

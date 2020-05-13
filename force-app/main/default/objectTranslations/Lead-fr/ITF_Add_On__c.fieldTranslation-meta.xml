@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- ITF Add-on Rate per 10 international lines booked. --></help>
+    <label><!-- ITF Add On --></label>
+    <name>ITF_Add_On__c</name>
+</CustomFieldTranslation>

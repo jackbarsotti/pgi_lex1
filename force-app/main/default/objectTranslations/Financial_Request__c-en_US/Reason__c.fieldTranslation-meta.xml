@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Reason --></label>
+    <name>Reason__c</name>
+    <picklistValues>
+        <masterLabel>Customer Error</masterLabel>
+        <translation><!-- Customer Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fraud</masterLabel>
+        <translation><!-- Fraud --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Operator Assisted Error-InterCall</masterLabel>
+        <translation><!-- Operator Assisted Error-InterCall --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Operator Assisted Error-Level 3</masterLabel>
+        <translation><!-- Operator Assisted Error-Level 3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Operator Assisted Error-PGi</masterLabel>
+        <translation><!-- Operator Assisted Error-PGi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Provider Technical Failure-InterCall</masterLabel>
+        <translation><!-- Provider Technical Failure-InterCall --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Provider Technical Failure-Level 3</masterLabel>
+        <translation><!-- Provider Technical Failure-Level 3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Provider Technical Failure-PGi</masterLabel>
+        <translation><!-- Provider Technical Failure-PGi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service Fee</masterLabel>
+        <translation><!-- Service Fee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service-GX Outage</masterLabel>
+        <translation><!-- Service-GX Outage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service-InterCall Outage</masterLabel>
+        <translation><!-- Service-InterCall Outage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service-PGi Outage</masterLabel>
+        <translation><!-- Service-PGi Outage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service-RT Outage</masterLabel>
+        <translation><!-- Service-RT Outage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Setup Error-RT</masterLabel>
+        <translation><!-- Setup Error-RT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Subscription Frequency Change</masterLabel>
+        <translation><!-- Subscription Frequency Change --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

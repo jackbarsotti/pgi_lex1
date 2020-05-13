@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Kit Name --></label>
+    <name>Kit_Name__c</name>
+    <picklistValues>
+        <masterLabel>None</masterLabel>
+        <translation><!-- None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RTD</masterLabel>
+        <translation><!-- RTD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RTHW</masterLabel>
+        <translation><!-- RTHW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RTLF</masterLabel>
+        <translation><!-- RTLF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RTS</masterLabel>
+        <translation><!-- RTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RTSSD</masterLabel>
+        <translation><!-- RTSSD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RTSWBC</masterLabel>
+        <translation><!-- RTSWBC --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

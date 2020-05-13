@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Product__c</fullName>
+    <externalId>false</externalId>
+    <label>Credit Product</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Web</fullName>
+                <default>false</default>
+                <label>Web</label>
+            </value>
+            <value>
+                <fullName>Audio</fullName>
+                <default>false</default>
+                <label>Audio</label>
+            </value>
+            <value>
+                <fullName>Subscription</fullName>
+                <default>false</default>
+                <label>Subscription</label>
+            </value>
+            <value>
+                <fullName>Recording</fullName>
+                <default>false</default>
+                <label>Recording</label>
+            </value>
+            <value>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+                <label>Cancellation</label>
+            </value>
+            <value>
+                <fullName>FUSF</fullName>
+                <default>false</default>
+                <label>FUSF</label>
+            </value>
+            <value>
+                <fullName>Billing Adjustment</fullName>
+                <default>false</default>
+                <label>Billing Adjustment</label>
+            </value>
+            <value>
+                <fullName>Res+</fullName>
+                <default>false</default>
+                <label>Res+</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Promotion</fullName>
+                <default>false</default>
+                <label>Promotion</label>
+            </value>
+            <value>
+                <fullName>Fraud</fullName>
+                <default>false</default>
+                <label>Fraud</label>
+            </value>
+            <value>
+                <fullName>Free Trial</fullName>
+                <default>false</default>
+                <label>Free Trial</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

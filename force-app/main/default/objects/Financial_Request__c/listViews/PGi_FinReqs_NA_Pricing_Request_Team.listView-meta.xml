@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_FinReqs_NA_Pricing_Request_Team</fullName>
+    <columns>NAME</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Related_Account__c</columns>
+    <columns>Assigned_To__c</columns>
+    <columns>Subject__c</columns>
+    <columns>Status__c</columns>
+    <columns>Pricing_Approval_Status__c</columns>
+    <columns>PGi_Contract_Status__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Approved,Rejected,Cancelled,Completed</value>
+    </filters>
+    <label>PGi-FinReq-NA-Pricing Request Team</label>
+    <language>en_US</language>
+    <queue>PGi_FinReq_NA_Pricing_Request_Team</queue>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

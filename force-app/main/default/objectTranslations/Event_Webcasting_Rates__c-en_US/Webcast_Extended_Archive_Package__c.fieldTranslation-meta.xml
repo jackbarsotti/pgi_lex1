@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Per month. Available with Standard subscriptions only --></help>
+    <label><!-- Webcast Extended Archive Package --></label>
+    <name>Webcast_Extended_Archive_Package__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This displays approximate days that this record had the Implementation Stage set to include Initial Communication. --></help>
+    <label><!-- Days at Initial Communication Status --></label>
+    <name>Days_at_Initial_Communication_Status__c</name>
+</CustomFieldTranslation>

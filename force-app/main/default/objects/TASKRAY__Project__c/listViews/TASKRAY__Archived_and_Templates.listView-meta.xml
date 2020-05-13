@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TASKRAY__Archived_and_Templates</fullName>
+    <booleanFilter>1 OR 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>TASKRAY__Project_Start__c</columns>
+    <columns>TASKRAY__Project_End__c</columns>
+    <columns>TASKRAY__Status__c</columns>
+    <columns>TASKRAY__trTemplate__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>TASKRAY__Status__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>TASKRAY__trTemplate__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Archived and Templates</label>
+</ListView>

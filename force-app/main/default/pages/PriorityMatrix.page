@@ -1,0 +1,25 @@
+<apex:page id="thePage">
+    <style>
+    	.size16 {
+        	font-size: 16px;
+        	align: center;
+        }
+    </style>
+    <apex:outputPanel style="font-size:16px;text-align: center;" >
+        <apex:tabPanel headerAlignment="center" switchType="client" selectedTab="name1" id="theTabPanel" tabClass="size16" width="100%" style="background-color:white;font-size:16px;text-align: center;">
+            <apex:tab label="Priority Matrix" name="Priority Matrix" id="tabOne" style="background-color:white;font-size:16px;">
+                
+                    <apex:image url="{!$Resource.PM_Matrix}" style="align: center;"/>
+            </apex:tab>
+            <apex:tab label="Products" name="Products" id="tabTwo" style="background-color:white;font-size:16px;">
+                <apex:image url="{!$Resource.PM_Products}" style="align: center;width:100%;"/>
+            </apex:tab>
+            <apex:tab label="Core Services" name="Core Services" id="tabthree" style="background-color:white;font-size:16px;">
+                <apex:outputPanel style="align: center;width:100%;">
+                    <apex:image url="{!$Resource.PM_CoreServices}" style="align: center;width:100%;"/>
+                </apex:outputPanel>
+                
+            </apex:tab>
+        </apex:tabPanel>
+    </apex:outputPanel>
+</apex:page>

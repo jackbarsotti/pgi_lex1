@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>CIR_Approved</fullName>
+        <description>CIR Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>jason.klovski@pgi.com.mainsite</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CIR_Email_Templates/PGI_CIR_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>CIR_Initial_Submission_Email_to_the_Manager</fullName>
+        <description>CIR Initial Submission Email to the Manager</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>jason.klovski@pgi.com.mainsite</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CIR_Email_Templates/PGI_CIR_Initial_Submission</template>
+    </alerts>
+    <alerts>
+        <fullName>CIR_Rejected</fullName>
+        <description>CIR Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>jason.klovski@pgi.com.mainsite</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CIR_Email_Templates/PGI_CIR_Rejected</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>PGI_CIR_Status_Approved</fullName>
+        <field>Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>PGI - CIR, Status - Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGI_CIR_Status_CEO_Approval</fullName>
+        <field>Status__c</field>
+        <literalValue>Awaiting CEO Approval</literalValue>
+        <name>PGI - CIR, Status - CEO Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGI_CIR_Status_CFO_Approval</fullName>
+        <field>Status__c</field>
+        <literalValue>Awaiting CFO Approval</literalValue>
+        <name>PGI - CIR, Status - CFO Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGI_CIR_Status_CHRO_Approval</fullName>
+        <field>Status__c</field>
+        <literalValue>Awaiting CHRO Approval</literalValue>
+        <name>PGI - CIR, Status - CHRO Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGI_CIR_Status_GFL_or_EVP_Approval</fullName>
+        <field>Status__c</field>
+        <literalValue>Awaiting GFL or EVP Approval</literalValue>
+        <name>PGI - CIR, Status - GFL or EVP Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGI_CIR_Status_Global_FP_A_Approval</fullName>
+        <field>Status__c</field>
+        <literalValue>Awaiting Director of Global FP&amp;A Approval</literalValue>
+        <name>PGI - CIR, Status - Global FP&amp;A Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGI_CIR_Status_Manager_Approval</fullName>
+        <field>Status__c</field>
+        <literalValue>Awaiting Manager Approval</literalValue>
+        <name>PGI - CIR, Status - Manager Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGI_CIR_Status_Mike_Havener_Approve</fullName>
+        <field>Status__c</field>
+        <literalValue>Awaiting Mike Havener Approval</literalValue>
+        <name>PGI - CIR, Status - Mike Havener Approve</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGI_CIR_Status_Reg_HR_HUB_Approval</fullName>
+        <field>Status__c</field>
+        <literalValue>Awaiting Regional HR HUB Approval</literalValue>
+        <name>PGI - CIR, Status - Reg. HR HUB Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGI_CIR_Status_Rejected</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>PGI - CIR, Status - Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGI_CIR_Status_Submitted</fullName>
+        <field>Status__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>PGI - CIR, Status - Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

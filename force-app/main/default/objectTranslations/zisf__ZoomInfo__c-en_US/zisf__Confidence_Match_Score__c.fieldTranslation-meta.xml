@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Numeric value for confidence match score (0-100). --></help>
+    <label><!-- Confidence Match Score --></label>
+    <name>zisf__Confidence_Match_Score__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RT1__LeadAssignmentBehavior__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Lead Assignment Behavior</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Assign to self</fullName>
+                <default>true</default>
+                <label>Assign to self</label>
+            </value>
+            <value>
+                <fullName>Assign to another user</fullName>
+                <default>false</default>
+                <label>Assign to another user</label>
+            </value>
+            <value>
+                <fullName>Use lead assignment rule</fullName>
+                <default>false</default>
+                <label>Use lead assignment rule</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

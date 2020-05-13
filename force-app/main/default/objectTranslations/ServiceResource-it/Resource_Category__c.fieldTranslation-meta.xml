@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Resource Category --></label>
+    <name>Resource_Category__c</name>
+    <picklistValues>
+        <masterLabel>ATL</masterLabel>
+        <translation><!-- ATL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lead</masterLabel>
+        <translation><!-- Lead --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MGMT</masterLabel>
+        <translation><!-- MGMT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mentor</masterLabel>
+        <translation><!-- Mentor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Operator</masterLabel>
+        <translation><!-- Operator --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outside Help</masterLabel>
+        <translation><!-- Outside Help --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGI WFH</masterLabel>
+        <translation><!-- PGI WFH --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PPS WFH</masterLabel>
+        <translation><!-- PPS WFH --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Support</masterLabel>
+        <translation><!-- Support --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

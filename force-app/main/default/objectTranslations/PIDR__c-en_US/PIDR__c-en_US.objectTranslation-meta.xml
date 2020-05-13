@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Personal Information Data Request</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Personal Information Data Request</value>
+    </caseValues>
+    <layouts>
+        <layout>Customer Request Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Information --></label>
+            <section>Customer Information</section>
+        </sections>
+        <sections>
+            <label><!-- Data Request Details --></label>
+            <section>Data Request Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Employee Request Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Employee Information --></label>
+            <section>Employee Information</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- For PGi Customer Requests Only --></description>
+        <label><!-- Customer Request Record Type --></label>
+        <name>Customer_Request_Record_Type</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Employee Requests Only --></description>
+        <label><!-- Employee Request Record Type --></label>
+        <name>Employee_Request_Record_Type</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- An Email Address or Phone Number is required to save this record. --></errorMessage>
+        <name>Email_or_Phone_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If the Request Type is &quot;Port&quot;, then the Data Type, Data Details and Notes fields are required. --></errorMessage>
+        <name>Request_Type_Equals_Port</name>
+    </validationRules>
+</CustomObjectTranslation>

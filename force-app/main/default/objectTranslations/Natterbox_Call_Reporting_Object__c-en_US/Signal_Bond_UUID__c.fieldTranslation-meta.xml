@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Internal Use Only. The unique identifier of the signalling leg of the call. --></help>
+    <label><!-- Signal Bond UUID --></label>
+    <name>Signal_Bond_UUID__c</name>
+</CustomFieldTranslation>

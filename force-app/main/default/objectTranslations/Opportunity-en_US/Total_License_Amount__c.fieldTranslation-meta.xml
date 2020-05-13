@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- total amount of the license for the contract --></help>
+    <label><!-- Total License Amount --></label>
+    <name>Total_License_Amount__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_RFC_PendingApproval</fullName>
+    <active>false</active>
+    <description>If RFC Task Case is pending approval then only the Assigned To can be changed</description>
+    <errorConditionFormula>OR(
+
+AND(
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+RecordType.Name = &quot;PGi-RFC Task&quot;,
+OR(
+ISPICKVAL( Status , &#39;Pending Approval(s)&#39;), 
+ISPICKVAL( Status , &#39;Approved&#39;)
+),
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+OR(
+ISCHANGED( Subject ),
+ISCHANGED( Description ),
+ISCHANGED( Task_Start_Date_Time__c ),
+ISCHANGED( Task_End_Date_Time__c ),
+ISCHANGED( Sequence_Order_of_Work__c ),
+ISCHANGED( Implementation_Task__c  )
+)
+),
+
+AND(
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+RecordType.Name = &quot;PGi-RFC Task&quot;,
+ISPICKVAL( Status , &#39;Complete&#39;),
+NOT(ISPICKVAL(Related_RFC__r.Status__c, &#39;Approved&#39;)),
+NOT(ISPICKVAL( Related_RFC__r.Type__c, &#39;Unauthorized&#39;))
+)
+)</errorConditionFormula>
+    <errorMessage>Only the Assigned To &amp; Status fields may be changed while the RFC Task is Pending Approval or Approved unless your trying to mark the Status as Complete while the RFC is still pending approval then Status field is blocked from changes as well.</errorMessage>
+</ValidationRule>

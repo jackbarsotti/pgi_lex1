@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Only required for Third Party Products --></help>
+    <label><!-- Vendor --></label>
+    <name>Vendor__c</name>
+    <picklistValues>
+        <masterLabel>3C Technology</masterLabel>
+        <translation><!-- 3C Technology --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>A10</masterLabel>
+        <translation><!-- A10 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AGAT</masterLabel>
+        <translation><!-- AGAT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AVSNet</masterLabel>
+        <translation><!-- AVSNet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AVST</masterLabel>
+        <translation><!-- AVST --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Aastra</masterLabel>
+        <translation><!-- Aastra --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Acano</masterLabel>
+        <translation><!-- Acano --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Acme Packet</masterLabel>
+        <translation><!-- Acme Packet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Actiance</masterLabel>
+        <translation><!-- Actiance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AdvaTel</masterLabel>
+        <translation><!-- AdvaTel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Altigen</masterLabel>
+        <translation><!-- Altigen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anywhere 365</masterLabel>
+        <translation><!-- Anywhere 365 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ashton Bentley</masterLabel>
+        <translation><!-- Ashton Bentley --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Aspect</masterLabel>
+        <translation><!-- Aspect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AudioCodes</masterLabel>
+        <translation><!-- AudioCodes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Avaya (Scopia)</masterLabel>
+        <translation><!-- Avaya (Scopia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Busylights</masterLabel>
+        <translation><!-- Busylights --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CallTower</masterLabel>
+        <translation><!-- CallTower --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Carillion</masterLabel>
+        <translation><!-- Carillion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cisco</masterLabel>
+        <translation><!-- Cisco --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Citrix</masterLabel>
+        <translation><!-- Citrix --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Clarify</masterLabel>
+        <translation><!-- Clarify --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Code Software</masterLabel>
+        <translation><!-- Code Software --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Competella</masterLabel>
+        <translation><!-- Competella --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Content &amp; Code</masterLabel>
+        <translation><!-- Content &amp; Code --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Datac</masterLabel>
+        <translation><!-- Datac --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Direct</masterLabel>
+        <translation><!-- Direct --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enghouse</masterLabel>
+        <translation><!-- Enghouse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enghouse (Zeacom)</masterLabel>
+        <translation><!-- Enghouse (Zeacom) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Zero</masterLabel>
+        <translation><!-- Event Zero --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>F5</masterLabel>
+        <translation><!-- F5 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fenestrae</masterLabel>
+        <translation><!-- Fenestrae --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GTT</masterLabel>
+        <translation><!-- GTT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gamma</masterLabel>
+        <translation><!-- Gamma --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Genesys</masterLabel>
+        <translation><!-- Genesys --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Geomant</masterLabel>
+        <translation><!-- Geomant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HP</masterLabel>
+        <translation><!-- HP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Integrated Resource Prognosis</masterLabel>
+        <translation><!-- Integrated Resource Prognosis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Interactive Intelligence</masterLabel>
+        <translation><!-- Interactive Intelligence --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Interlepeer</masterLabel>
+        <translation><!-- Interlepeer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Interquartz</masterLabel>
+        <translation><!-- Interquartz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Iomart</masterLabel>
+        <translation><!-- Iomart --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jabra</masterLabel>
+        <translation><!-- Jabra --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kemp</masterLabel>
+        <translation><!-- Kemp --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kuando</masterLabel>
+        <translation><!-- Kuando --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Landis Computer</masterLabel>
+        <translation><!-- Landis Computer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Level 3</masterLabel>
+        <translation><!-- Level 3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LifeSze</masterLabel>
+        <translation><!-- LifeSze --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Logitech</masterLabel>
+        <translation><!-- Logitech --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Microsoft</masterLabel>
+        <translation><!-- Microsoft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mitel</masterLabel>
+        <translation><!-- Mitel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Modality</masterLabel>
+        <translation><!-- Modality --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>N/A</masterLabel>
+        <translation><!-- N/A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nectar</masterLabel>
+        <translation><!-- Nectar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nubit</masterLabel>
+        <translation><!-- Nubit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Panacast</masterLabel>
+        <translation><!-- Panacast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PexIP</masterLabel>
+        <translation><!-- PexIP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Plantronics</masterLabel>
+        <translation><!-- Plantronics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PointSharp</masterLabel>
+        <translation><!-- PointSharp --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Polycom</masterLabel>
+        <translation><!-- Polycom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Project Vision</masterLabel>
+        <translation><!-- Project Vision --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pure IP</masterLabel>
+        <translation><!-- Pure IP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Red Box</masterLabel>
+        <translation><!-- Red Box --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rightfax</masterLabel>
+        <translation><!-- Rightfax --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SMART</masterLabel>
+        <translation><!-- SMART --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ScanSource</masterLabel>
+        <translation><!-- ScanSource --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sennheiser</masterLabel>
+        <translation><!-- Sennheiser --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sey-IT</masterLabel>
+        <translation><!-- Sey-IT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sonus</masterLabel>
+        <translation><!-- Sonus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spectralink</masterLabel>
+        <translation><!-- Spectralink --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sprint</masterLabel>
+        <translation><!-- Sprint --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ThinkTel</masterLabel>
+        <translation><!-- ThinkTel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unimax</masterLabel>
+        <translation><!-- Unimax --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Verba</masterLabel>
+        <translation><!-- Verba --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Verizon</masterLabel>
+        <translation><!-- Verizon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yealink</masterLabel>
+        <translation><!-- Yealink --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sixsense__All</fullName>
+    <columns>X6Sense_Buying_Stage__c</columns>
+    <columns>sixsense__Intent_Score__c</columns>
+    <columns>sixsense__Buying_Stage__c</columns>
+    <columns>NAME</columns>
+    <columns>sixsense__Website__c</columns>
+    <columns>sixsense__Country__c</columns>
+    <columns>sixsense__Industry__c</columns>
+    <columns>sixsense__Employees__c</columns>
+    <columns>sixsense__Revenue_Range__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>sixsense__Status__c</field>
+        <operation>notEqual</operation>
+        <value>duplicate</value>
+    </filters>
+    <filters>
+        <field>sixsense__Status__c</field>
+        <operation>notEqual</operation>
+        <value>invalid</value>
+    </filters>
+    <filters>
+        <field>sixsense__Status__c</field>
+        <operation>notEqual</operation>
+        <value>imported</value>
+    </filters>
+    <filters>
+        <field>sixsense__Intent_Score__c</field>
+        <operation>notEqual</operation>
+        <value>0</value>
+    </filters>
+    <label>All</label>
+    <language>en_US</language>
+</ListView>

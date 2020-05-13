@@ -1,0 +1,4050 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Duplicate_Detected_for_Parent_Lookup_Partner</fullName>
+        <description>Duplicate Detected for Parent Lookup (Partner)</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>cody.royster@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kim.sankovich@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ruth.rhodes@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Emails/Acct_Duplicate_Detected</template>
+    </alerts>
+    <alerts>
+        <fullName>Duplicate_Detected_for_Parent_Lookup_non_Partner</fullName>
+        <ccEmails>sales.ops@pgi.com</ccEmails>
+        <description>Duplicate Detected for Parent Lookup (non-Partner)</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>cody.royster@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Emails/Acct_Duplicate_Detected</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Account_Suspended_Notify_Franca</fullName>
+        <ccEmails>franca.perna@centurylink.com</ccEmails>
+        <description>RT_Account Suspended - Notify Franca</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <recipient>laura.stern@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>shannon.markham@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Account_Suspended_Notify_Franca</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Account_Unsuspended_Notify_Franca</fullName>
+        <ccEmails>franca.perna@centurylink.com</ccEmails>
+        <description>RT_Account Unsuspended - Notify Franca</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <recipient>laura.stern@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>shannon.markham@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Account_Unsuspended_Notify_Franca</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Email_notification_to_ask_if_the_AM_wants_Quickstart_activated_for_all_active</fullName>
+        <description>RT_Email notification to ask if the AM wants Quickstart activated for all active access codes.</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Quickstart_Enabled_Notification_to_Account_Owner</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_NEW_Trial_Ending_Notification</fullName>
+        <description>RT_NEW Trial Ending Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <field>Account_Executive_Lookup__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Trial_Ending</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Passcode_Authorization_Email_Alert</fullName>
+        <description>RT_Passcode Authorization Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Passcode_Authorization_Renewal_Alert</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Account_Source_Custom_Update</fullName>
+        <field>Account_Source__c</field>
+        <literalValue>DnB_Data.com</literalValue>
+        <name>Account Source Custom Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Account_Status_Update</fullName>
+        <field>Status__c</field>
+        <literalValue>Customer</literalValue>
+        <name>Account Status Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>All_Set_Deupe_Record_Type</fullName>
+        <field>Record_Type_for_Dupe_Rules__c</field>
+        <formula>IF(CONTAINS( $RecordType.Name, &quot;PGi&quot;), &quot;PGi&quot;, 
+IF(CONTAINS( $RecordType.Name, &quot;Modality&quot;), &quot;Modality&quot;, 
+IF(CONTAINS( $RecordType.Name, &quot;ReadyTalk&quot;), &quot;ReadyTalk&quot;, 
+IF(CONTAINS( $RecordType.Name, &quot;TalkPoint&quot;), &quot;TalkPoint&quot;, 
+IF(CONTAINS( $RecordType.Name, &quot;iMC&quot;), &quot;iMC&quot;, NULL)))))</formula>
+        <name>All - Set Deupe Record Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>All_Set_MQA</fullName>
+        <field>Global_Account_MQA_Assignment_date__c</field>
+        <formula>Today()</formula>
+        <name>All-Set MQA</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>BillingCity_Update</fullName>
+        <field>BillingCity</field>
+        <formula>DandbCompany.City</formula>
+        <name>BillingCity Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>BillingCountry_Update</fullName>
+        <field>BillingCountry</field>
+        <formula>DandbCompany.Country</formula>
+        <name>BillingCountry Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>BillingPostalCode_Update</fullName>
+        <field>BillingPostalCode</field>
+        <formula>DandbCompany.PostalCode</formula>
+        <name>BillingPostalCode Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>BillingState_Update</fullName>
+        <field>BillingState</field>
+        <formula>DandbCompany.State</formula>
+        <name>BillingState Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>BillingStreet_Update</fullName>
+        <field>BillingStreet</field>
+        <formula>DandbCompany.Street</formula>
+        <name>BillingStreet Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Checks_Exclude_from_Integration</fullName>
+        <description>A field update makes Exclude_from_Integration__c TRUE when Status = Prospect OR Count of Companies = 0</description>
+        <field>Exclude_from_Integration__c</field>
+        <literalValue>1</literalValue>
+        <name>Checks Exclude from Integration</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CompanyAnnualRevenue_Update</fullName>
+        <field>Duns_Annual_Revenue__c</field>
+        <formula>DandbCompany.SalesVolume</formula>
+        <name>CompanyAnnualRevenue Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Duplicate_Prevention_Partner</fullName>
+        <field>Duplicate_Prevention__c</field>
+        <formula>&quot;Sub-Agent &amp; VAR Duplicates&quot;</formula>
+        <name>Duplicate Prevention - Partner</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Duplicate_Prevention_Top_Level</fullName>
+        <field>Duplicate_Prevention__c</field>
+        <formula>&quot;Top Level Duplicates&quot;</formula>
+        <name>Duplicate Prevention - Top Level</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Global_Region_APAC</fullName>
+        <description>Updates to APAC per Account: Billing Country</description>
+        <field>Global_Region__c</field>
+        <literalValue>APAC</literalValue>
+        <name>Global Region_APAC</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Global_Region_EMEA</fullName>
+        <field>Global_Region__c</field>
+        <literalValue>EMEA</literalValue>
+        <name>Global Region_EMEA</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Global_Region_NA</fullName>
+        <description>NA</description>
+        <field>Global_Region__c</field>
+        <literalValue>NA</literalValue>
+        <name>Global Region_NA</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Legal_Name_Indicator_Update</fullName>
+        <field>Legal_Name_Indicator__c</field>
+        <literalValue>1</literalValue>
+        <name>Legal Name Indicator Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_Australia</fullName>
+        <description>Updating territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>Australia</literalValue>
+        <name>Local Channel_Australia</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_Austria</fullName>
+        <description>Austria Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>Austria</literalValue>
+        <name>Local Channel_Austria</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_Brazil</fullName>
+        <description>Brazil Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>Brazil</literalValue>
+        <name>Local Channel_Brazil</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_Canada</fullName>
+        <description>Canada Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>Canada</literalValue>
+        <name>Local Channel_Canada</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_Central</fullName>
+        <description>Central Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>Central</literalValue>
+        <name>Local Channel_Central</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_China</fullName>
+        <description>China Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>China</literalValue>
+        <name>Local Channel_China</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_East</fullName>
+        <description>East Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>East</literalValue>
+        <name>Local Channel_East</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_France</fullName>
+        <description>France Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>France</literalValue>
+        <name>Local Channel_France</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_Germany</fullName>
+        <description>Germany Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>Germany</literalValue>
+        <name>Local Channel_Germany</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_Hong_Kong</fullName>
+        <description>Hong Kong Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>Hong Kong</literalValue>
+        <name>Local Channel_Hong Kong</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_India</fullName>
+        <description>India Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>India</literalValue>
+        <name>Local Channel_India</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_Ireland</fullName>
+        <description>Ireland Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>Ireland</literalValue>
+        <name>Local Channel_Ireland</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_Italy</fullName>
+        <description>Italy Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>Italy</literalValue>
+        <name>Local Channel_Italy</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_Japan</fullName>
+        <description>Japan Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>Japan</literalValue>
+        <name>Local Channel_Japan</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_Korea</fullName>
+        <description>Korea Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>Korea</literalValue>
+        <name>Local Channel_Korea</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_Malaysia</fullName>
+        <description>Malaysia Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>Malaysia</literalValue>
+        <name>Local Channel_Malaysia</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_Midatlantic_NY</fullName>
+        <description>Midatlantic &amp; NY Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>Midatlantic &amp; NY</literalValue>
+        <name>Local Channel_Midatlantic &amp; NY</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_Netherlands</fullName>
+        <description>Netherlands Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>Netherlands</literalValue>
+        <name>Local Channel_Netherlands</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_New_Zealand</fullName>
+        <description>New Zealand Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>New Zealand</literalValue>
+        <name>Local Channel_New Zealand</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_Nordics</fullName>
+        <description>Nordics Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>Nordics</literalValue>
+        <name>Local Channel_Nordics</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_Northeast</fullName>
+        <description>Northeast Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>Northeast</literalValue>
+        <name>Local Channel_Northeast</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_Singapore</fullName>
+        <description>Singapore Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>Singapore</literalValue>
+        <name>Local Channel_Singapore</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_Southeast</fullName>
+        <description>Southeast Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>Southeast</literalValue>
+        <name>Local Channel_Southeast</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_Switzerland</fullName>
+        <description>Switzerland Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>Switzerland</literalValue>
+        <name>Local Channel_Switzerland</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_UK</fullName>
+        <description>UK territories</description>
+        <field>Local_Region__c</field>
+        <literalValue>United Kingdom</literalValue>
+        <name>Local Channel_UK</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_West_Field</fullName>
+        <description>West Field Sales Territory</description>
+        <field>Local_Region__c</field>
+        <literalValue>West</literalValue>
+        <name>Local Channel_West_Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Local_Channel_West_Inside</fullName>
+        <description>West_Inside</description>
+        <field>Local_Region__c</field>
+        <literalValue>West</literalValue>
+        <name>Local Channel_West_Inside</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_Change_Date_Update</fullName>
+        <field>Ownership_Change_Date__c</field>
+        <formula>Today()</formula>
+        <name>Owner Change Date Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_6Sense_Conf_Decision</fullName>
+        <description>Last date &quot;Decision&quot; was assigned to an Account Conferencing Buying Stage</description>
+        <field>Collab_UC_Buying_Stage_Decision_Date__c</field>
+        <formula>Today()</formula>
+        <name>PGi-6Sense Conf Decision</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_6Sense_Conf_Purchase</fullName>
+        <description>Last date &quot;Purchase&quot; was assigned to an Account Conferencing Buying Stage</description>
+        <field>Collab_UC_Buying_Stage_Purchase_Date__c</field>
+        <formula>TODAY ()</formula>
+        <name>PGi-6Sense Conf Purchase</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_6Sense_Webinar_Decision</fullName>
+        <description>Last date &quot;Decision&quot; was assigned to an Account Webinar Buying Stage</description>
+        <field>Webcast_Webinar_Buying_Stage_Decision_Dt__c</field>
+        <formula>Today ()</formula>
+        <name>PGi-6Sense Webinar Decision</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_6Sense_Webinar_Purchase</fullName>
+        <description>Last date &quot;Purchase&quot; was assigned to an Account Webinar Buying Stage</description>
+        <field>Webcast_Webinar_Buying_Stage_Purchase_Dt__c</field>
+        <formula>TODAY ()</formula>
+        <name>PGi-6Sense Webinar Purchase</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_Set_Joint_Selling_Program</fullName>
+        <field>JointSellingProgram__c</field>
+        <literalValue>1</literalValue>
+        <name>PGi - Set Joint Selling Program</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>ParentName_Update</fullName>
+        <field>Duns_Parents_Name__c</field>
+        <formula>DandbCompany.ParentOrHqBusinessName</formula>
+        <name>ParentName Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Parent_text_only</fullName>
+        <description>Convert Parent lookup field to text field</description>
+        <field>Parent_Text_Only__c</field>
+        <formula>Parent.Name</formula>
+        <name>Parent (text only)</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Populate_Custom_Duns_Number</fullName>
+        <field>Duns_Number__c</field>
+        <formula>DunsNumber</formula>
+        <name>Populate Custom Duns Number</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Account_Type_Active</fullName>
+        <field>RT_Account_Type__c</field>
+        <literalValue>Active</literalValue>
+        <name>RT_Account Type Active</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Account_Type_Deleted</fullName>
+        <field>RT_Account_Type__c</field>
+        <literalValue>Deleted</literalValue>
+        <name>RT_Account Type Deleted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Account_Type_Error</fullName>
+        <field>RT_Account_Type__c</field>
+        <literalValue>Error</literalValue>
+        <name>RT_Account Type Error</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Account_Type_New</fullName>
+        <field>RT_Account_Type__c</field>
+        <literalValue>New</literalValue>
+        <name>RT_Account Type New</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Account_Type_Not_Provisioned</fullName>
+        <field>RT_Account_Type__c</field>
+        <literalValue>Not Provisioned</literalValue>
+        <name>RT_Account Type Not Provisioned</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Account_Type_Pending</fullName>
+        <field>RT_Account_Type__c</field>
+        <literalValue>Pending</literalValue>
+        <name>RT_Account Type Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Automated_Renewal_Email_Box_Checked</fullName>
+        <field>AutoRenewalEmail__c</field>
+        <literalValue>1</literalValue>
+        <name>RT_Automated Renewal Email Box Checked</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Automated_Renewal_Email_Box_unchecked</fullName>
+        <field>AutoRenewalEmail__c</field>
+        <literalValue>0</literalValue>
+        <name>RT_Automated Renewal Email Box unchecked</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Employees_1001_2500</fullName>
+        <description>data.com</description>
+        <field>No_of_Employees__c</field>
+        <literalValue>1001 - 2500</literalValue>
+        <name>RT_Employees 1001-2500</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Employees_101_500</fullName>
+        <description>data.com</description>
+        <field>No_of_Employees__c</field>
+        <literalValue>101 - 500</literalValue>
+        <name>RT_Employees 101-500</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Employees_11_50</fullName>
+        <description>data.com</description>
+        <field>No_of_Employees__c</field>
+        <literalValue>11 - 50</literalValue>
+        <name>RT_Employees 11-50</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Employees_1_10</fullName>
+        <description>data.com</description>
+        <field>No_of_Employees__c</field>
+        <literalValue>1 - 10</literalValue>
+        <name>RT_Employees 1-10</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Employees_2501_5000</fullName>
+        <description>data.com</description>
+        <field>No_of_Employees__c</field>
+        <literalValue>2501 - 5000</literalValue>
+        <name>RT_Employees 2501-5000</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Employees_501_1000</fullName>
+        <description>data.com</description>
+        <field>No_of_Employees__c</field>
+        <literalValue>501 - 1000</literalValue>
+        <name>RT_Employees 501-1000</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Employees_51_100</fullName>
+        <description>data.com</description>
+        <field>No_of_Employees__c</field>
+        <literalValue>51 - 100</literalValue>
+        <name>RT_Employees 51-100</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Employees_Greater_than_5000</fullName>
+        <description>data.com</description>
+        <field>No_of_Employees__c</field>
+        <literalValue>Greater than 5000</literalValue>
+        <name>RT_Employees Greater than 5000</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_For_RT_business_account</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>ReadyTalk_Account</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>RT - For RT business (account)</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_For_RT_business_status</fullName>
+        <field>Status__c</field>
+        <literalValue>New</literalValue>
+        <name>RT - For RT business (status)</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Industry_Business_Services</fullName>
+        <description>data.com</description>
+        <field>Industry</field>
+        <literalValue>Business Services</literalValue>
+        <name>RT_Industry - Business Services</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Industry_Energy</fullName>
+        <description>data.com</description>
+        <field>Industry</field>
+        <literalValue>Energy</literalValue>
+        <name>RT_Industry - Energy</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Industry_Financial_Services</fullName>
+        <description>data.com</description>
+        <field>Industry</field>
+        <literalValue>Financial Services</literalValue>
+        <name>RT_Industry - Financial Services</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Industry_Non_Profit</fullName>
+        <description>data.com</description>
+        <field>Industry</field>
+        <literalValue>Non-Profit</literalValue>
+        <name>RT_Industry - Non-Profit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Industry_Personal_Services</fullName>
+        <description>data.com</description>
+        <field>Industry</field>
+        <literalValue>Personal Services</literalValue>
+        <name>RT_Industry - Personal Services</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Industry_Retail</fullName>
+        <description>data.com</description>
+        <field>Industry</field>
+        <literalValue>Retail</literalValue>
+        <name>RT_Industry - Retail</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Industry_Technology</fullName>
+        <description>data.com</description>
+        <field>Industry</field>
+        <literalValue>Technology</literalValue>
+        <name>RT_Industry - Technology</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Industry_Transportation</fullName>
+        <description>data.com</description>
+        <field>Industry</field>
+        <literalValue>Transportation</literalValue>
+        <name>RT_Industry - Transportation</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Logo_Approved_For_Use_Checked</fullName>
+        <description>Checks the Logo Approved for Use checkbox</description>
+        <field>Logo_Approved_for_Use__c</field>
+        <literalValue>1</literalValue>
+        <name>RT_Logo Approved For Use Checked</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Passcode_AuthorizationPicklist_Date</fullName>
+        <field>Passcode_Authorization__c</field>
+        <literalValue>No</literalValue>
+        <name>RT_Passcode AuthorizationPicklist&amp;Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Set_Cohort_2012</fullName>
+        <field>Cohort2__c</field>
+        <literalValue>2012</literalValue>
+        <name>RT_Set Cohort - 2012</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Set_Cohort_2013</fullName>
+        <field>Cohort2__c</field>
+        <literalValue>2013</literalValue>
+        <name>RT_Set Cohort - 2013</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Set_Cohort_2014</fullName>
+        <field>Cohort2__c</field>
+        <literalValue>2014</literalValue>
+        <name>RT_Set Cohort - 2014</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Set_Cohort_2015</fullName>
+        <field>Cohort2__c</field>
+        <literalValue>2015</literalValue>
+        <name>RT_Set Cohort - 2015</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Set_Cohort_2016</fullName>
+        <field>Cohort2__c</field>
+        <literalValue>2016</literalValue>
+        <name>RT_Set Cohort - 2016</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Set_Cohort_2017</fullName>
+        <field>Cohort2__c</field>
+        <literalValue>2017</literalValue>
+        <name>RT_Set Cohort - 2017</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Set_Cohort_2018</fullName>
+        <field>Cohort2__c</field>
+        <literalValue>2018</literalValue>
+        <name>RT_Set Cohort - 2018</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Set_Cohort_2019</fullName>
+        <field>Cohort2__c</field>
+        <literalValue>2019</literalValue>
+        <name>RT_Set Cohort - 2019</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Set_Cohort_2020</fullName>
+        <field>Cohort2__c</field>
+        <literalValue>2020</literalValue>
+        <name>RT_Set Cohort - 2020</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Set_Cohort_None</fullName>
+        <field>Cohort2__c</field>
+        <literalValue>None</literalValue>
+        <name>RT_Set Cohort - None</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Set_Cohort_Up_To_2011</fullName>
+        <field>Cohort2__c</field>
+        <literalValue>Up To 2011</literalValue>
+        <name>RT_Set Cohort - Up To 2011</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_StatusPending</fullName>
+        <field>Status__c</field>
+        <literalValue>Pending</literalValue>
+        <name>RT_Status Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Status_is_Pending_Deleting</fullName>
+        <description>When a provisioned account is deleted, its status is pending until GX comes back.</description>
+        <field>Status__c</field>
+        <literalValue>Deleting</literalValue>
+        <name>RT_Status is Pending-Deleting</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Truncate_Account_Card_Name</fullName>
+        <description>Update the account card name field to be 30 characters max</description>
+        <field>Account_Card_Name__c</field>
+        <formula>LEFT(Account_Card_Name__c, 30)</formula>
+        <name>RT_Truncate Account Card Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Update_Event_Customer_Status</fullName>
+        <field>Event_Customer_Status__c</field>
+        <literalValue>New</literalValue>
+        <name>RT_Update Event Customer Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Update_PasscodeAuthorizationDateField</fullName>
+        <field>Passcode_Authorization_Renewal_Date__c</field>
+        <formula>TODAY()+365</formula>
+        <name>RT_Update PasscodeAuthorizationDateField</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SICDesc_Update</fullName>
+        <field>SicDesc</field>
+        <formula>DandbCompany.PrimarySicDesc</formula>
+        <name>SICDesc Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SIC_Update</fullName>
+        <field>Sic</field>
+        <formula>DandbCompany.PrimarySic</formula>
+        <name>SIC Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Exclude_from_Integration</fullName>
+        <field>Exclude_from_Integration__c</field>
+        <literalValue>1</literalValue>
+        <name>Set Exclude from Integration to True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Exclude_from_Integration_to_False</fullName>
+        <field>Exclude_from_Integration__c</field>
+        <literalValue>0</literalValue>
+        <name>Set Exclude from Integration to False</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Inactive_Reason</fullName>
+        <field>Inactive_Reason__c</field>
+        <literalValue>No Recent Activity</literalValue>
+        <name>Set Inactive Reason</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Inactive_Reason_to_NULL</fullName>
+        <field>Inactive_Reason__c</field>
+        <name>Set Inactive Reason to NULL</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Last_Mod_by_Date_by_Non_admin</fullName>
+        <field>Last_modified_Date_by_non_admin__c</field>
+        <formula>NOW()</formula>
+        <name>Set Last Mod by Date by Non-admin</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_NZL_to_True</fullName>
+        <field>NZL__c</field>
+        <literalValue>1</literalValue>
+        <name>Set NZL to True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Sub_Status_field_to_be_Assigned</fullName>
+        <field>Status_Detail__c</field>
+        <literalValue>Assigned</literalValue>
+        <name>Set Sub-Status field to be Assigned</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Sub_Status_field_to_blank</fullName>
+        <field>Status_Detail__c</field>
+        <name>Set Sub-Status field to blank</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Sub_status_to_Inactive</fullName>
+        <field>Status_Detail__c</field>
+        <literalValue>Inactive</literalValue>
+        <name>Set Sub-status to Inactive</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Type_to_E_Commerce</fullName>
+        <field>Type</field>
+        <literalValue>Unknown</literalValue>
+        <name>Set Type to Unknown</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_to_Inactive_Mgr</fullName>
+        <field>Status_Detail__c</field>
+        <literalValue>Inactive - Mgr</literalValue>
+        <name>Set to Inactive - Mgr</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SmallBusinessIndicator_Update</fullName>
+        <field>Small_Business_Indicator__c</field>
+        <literalValue>1</literalValue>
+        <name>SmallBusinessIndicator Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>TradeName_Update</fullName>
+        <field>Trade_Name__c</field>
+        <formula>DandbCompany.TradeStyle1</formula>
+        <name>TradeName Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Ultimate_Parent_Text_Only</fullName>
+        <description>Convert Ultimate Parent formula value to text value for sharing rules</description>
+        <field>Ultimate_Parent_Text_Only__c</field>
+        <formula>Ultimate_Parent__c</formula>
+        <name>Ultimate Parent (Text Only)</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_ABM_Last_PES</fullName>
+        <field>ABM_Last_PES__c</field>
+        <formula>Priorvalue( bizible2__Engagement_Score__c )</formula>
+        <name>Update ABM/Last PES</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_ABM_Last_PES_Change_Date</fullName>
+        <field>ABM_PES_Last_Change_Date__c</field>
+        <formula>Today ()</formula>
+        <name>Update ABM/Last PES Change Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Account_Name</fullName>
+        <field>Name</field>
+        <formula>DandbCompany.Name</formula>
+        <name>Update Account Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Account_Status_to_Customer</fullName>
+        <field>Status__c</field>
+        <literalValue>Prospect</literalValue>
+        <name>Update Account Status to Prospect</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Clean_Status</fullName>
+        <description>If the Lead or Account have a Clean Status = Skipped then to update the Clean Status field back to blank.</description>
+        <field>CleanStatus</field>
+        <name>Update Clean Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Clean_Status_to_Skipped</fullName>
+        <field>CleanStatus</field>
+        <literalValue>Skipped</literalValue>
+        <name>Update Clean Status to Skipped</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>X6Sense_Buying_Stage_Cold</fullName>
+        <field>Collab_UC_Acct_Buying_Stage__c</field>
+        <formula>&quot;Cold&quot;</formula>
+        <name>6Sense Buying Stage = Cold</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>X6Sense_Buying_Stage_Hot</fullName>
+        <field>Collab_UC_Acct_Buying_Stage__c</field>
+        <formula>&quot;Hot&quot;</formula>
+        <name>6Sense Buying Stage = Hot</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>X6Sense_Buying_Stage_Warm</fullName>
+        <field>Collab_UC_Acct_Buying_Stage__c</field>
+        <formula>&quot;Warm&quot;</formula>
+        <name>6Sense Buying Stage = Warm</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>X6sense_Initial_Conf_Stage</fullName>
+        <field>Collab_UC_Initial_Stage__c</field>
+        <formula>Collab_UC_Acct_Buying_Stage__c</formula>
+        <name>6sense Initial Conf Stage</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>X6sense_Initial_Conf_Time_Stamp</fullName>
+        <field>Collab_UC_Initial_Time_Stamp__c</field>
+        <formula>TODAY()</formula>
+        <name>6sense Initial Conf Time Stamp</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>X6sense_Initial_Webinar_Stage</fullName>
+        <field>Webcast_Webinar_Initial_Stage__c</field>
+        <formula>Webcast_Webinar_Acct_Buying_Stage__c</formula>
+        <name>6sense Initial Webinar Stage</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>X6sense_Initial_Webinar_Stage_Date</fullName>
+        <field>Webcast_Webinar_Initial_Time_Stamp__c</field>
+        <formula>TODAY ()</formula>
+        <name>6sense Initial Webinar Stage Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Account_Business_Level_Base</fullName>
+        <field>Business_Level__c</field>
+        <literalValue>Base</literalValue>
+        <name>iMC - Account, Business Level, Base</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Account_Business_Level_Diamond</fullName>
+        <field>Business_Level__c</field>
+        <literalValue>Diamond</literalValue>
+        <name>iMC - Account, Business Level, Diamond</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Account_Business_Level_Key</fullName>
+        <field>Business_Level__c</field>
+        <literalValue>Key</literalValue>
+        <name>iMC - Account, Business Level, Key</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Account_CSM_Carissa_Zavada</fullName>
+        <field>Customer_Success_Manager__c</field>
+        <name>iMC - Account, CSM, Carissa Zavada</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Account_CSM_Elizabeth_Bruns</fullName>
+        <field>Customer_Success_Manager__c</field>
+        <lookupValue>elizabeth.bruns@pgi.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>iMC - Account, CSM, Elizabeth Bruns</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Account_CSM_Nick_Righton</fullName>
+        <field>Customer_Success_Manager__c</field>
+        <name>iMC - Account, CSM, Nick Righton</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Account_Employees_10</fullName>
+        <field>Number_of_Employees__c</field>
+        <literalValue>Less than 10</literalValue>
+        <name>iMC - Account, Employees, &lt;10</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Account_Employees_10000</fullName>
+        <description>iMC - Acccount, Number of Employees, &gt;10,000</description>
+        <field>Number_of_Employees__c</field>
+        <literalValue>Greater than 10,0000</literalValue>
+        <name>iMC - Account, Employees, &gt;10000</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Account_Employees_1001_to_500</fullName>
+        <field>Number_of_Employees__c</field>
+        <literalValue>1,001-5,000</literalValue>
+        <name>iMC - Account, Employees, 1001 to 5000</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Account_Employees_101_to_250</fullName>
+        <field>Number_of_Employees__c</field>
+        <literalValue>101-250</literalValue>
+        <name>iMC - Account, Employees, 101 to 250</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Account_Employees_11_to_25</fullName>
+        <field>Number_of_Employees__c</field>
+        <literalValue>11-25</literalValue>
+        <name>iMC - Account, Employees, 11 to 25</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Account_Employees_251_to_500</fullName>
+        <field>Number_of_Employees__c</field>
+        <literalValue>251-500</literalValue>
+        <name>iMC - Account, Employees, 251 to 500</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Account_Employees_26_to_50</fullName>
+        <field>Number_of_Employees__c</field>
+        <literalValue>26-50</literalValue>
+        <name>iMC - Account, Employees, 26 to 50</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Account_Employees_5001_to_10000</fullName>
+        <field>Number_of_Employees__c</field>
+        <literalValue>5,001-10,000</literalValue>
+        <name>iMC - Account, Employees, 5001 to 10000</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Account_Employees_501_to_1000</fullName>
+        <field>Number_of_Employees__c</field>
+        <literalValue>501-1,000</literalValue>
+        <name>iMC - Account, Employees, 501 to 1000</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Account_Employees_51_to_100</fullName>
+        <field>Number_of_Employees__c</field>
+        <literalValue>51-100</literalValue>
+        <name>iMC - Account, Employees, 51 to 100</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Account_Gross_Annual_Opportunity</fullName>
+        <description>(Number of Employees - Licensed Internal Users) * 300</description>
+        <field>Gross_Annual_Opportunity__c</field>
+        <formula>(NumberOfEmployees - Licensed_Internal_Users__c ) * 300</formula>
+        <name>iMC - Account, Gross Annual Opportunity</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Account_Prior_Active_License_Amou</fullName>
+        <field>Prior_Active_License_Amount__c</field>
+        <formula>PRIORVALUE( Active_Order_Licensed_Amount__c )</formula>
+        <name>iMC - Account, Prior Active License Amou</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Account_Status_Customer</fullName>
+        <field>Status__c</field>
+        <literalValue>Customer</literalValue>
+        <name>iMC - Account, Status, Customer</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Account_Status_Customer_Cancel</fullName>
+        <field>Status__c</field>
+        <literalValue>Customer Cancelled</literalValue>
+        <name>iMC - Account, Status, Customer Cancel</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Account_Type_Prospect</fullName>
+        <field>Type</field>
+        <literalValue>Prospect</literalValue>
+        <name>iMC - Account, Type, Prospect</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Account_ZD_Sync_Active</fullName>
+        <field>ZenDesk_Sync__c</field>
+        <literalValue>Yes</literalValue>
+        <name>iMC - Account, ZD Sync Active</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Account_ZD_Sync_Not_Active</fullName>
+        <field>ZenDesk_Sync__c</field>
+        <literalValue>No</literalValue>
+        <name>iMC - Account, ZD Sync Not Active</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <outboundMessages>
+        <fullName>RT_BBS_Account_Outbound</fullName>
+        <apiVersion>26.0</apiVersion>
+        <description>BBS Outbound message</description>
+        <endpointUrl>https://provision.ecovate.com/bbs-provisioning/inboundGateway</endpointUrl>
+        <fields>AccountNumber</fields>
+        <fields>Account_Card_Name__c</fields>
+        <fields>Account_Executive_Name__c</fields>
+        <fields>Account_Owner_Name__c</fields>
+        <fields>Add_E_Mails__c</fields>
+        <fields>App_Share_Allowed__c</fields>
+        <fields>Archive_Period__c</fields>
+        <fields>BBS_CoreOrgId__c</fields>
+        <fields>BBS_CoreStatus__c</fields>
+        <fields>BBS_InvoiceFrequency__c</fields>
+        <fields>BBS_L3ServiceProvider__c</fields>
+        <fields>BBS_L3Status__c</fields>
+        <fields>BBS_L3WholesaleCompany__c</fields>
+        <fields>BBS_LastInvoiceDate__c</fields>
+        <fields>BBS_NextInvoiceDate__c</fields>
+        <fields>BBS_StatusMessage__c</fields>
+        <fields>BBS_Status__c</fields>
+        <fields>Biling_Contact__c</fields>
+        <fields>Bill_Account__c</fields>
+        <fields>BillingCity</fields>
+        <fields>BillingCountry</fields>
+        <fields>BillingPostalCode</fields>
+        <fields>BillingState</fields>
+        <fields>BillingStreet</fields>
+        <fields>Billing_Contact_Email__c</fields>
+        <fields>Billing_Contact_Fax__c</fields>
+        <fields>Billing_Contact_Phone_Extension__c</fields>
+        <fields>Billing_Contact_Phone__c</fields>
+        <fields>Billing_Start_Date__c</fields>
+        <fields>Billling_ID__c</fields>
+        <fields>CDR_Format__c</fields>
+        <fields>CDR_Recipient_Emails__c</fields>
+        <fields>CDR_Type__c</fields>
+        <fields>Communication_Line__c</fields>
+        <fields>Copresenter_Allowed__c</fields>
+        <fields>CreatedById</fields>
+        <fields>CreatedDate</fields>
+        <fields>Date_Deleted__c</fields>
+        <fields>Date_Provisioned__c</fields>
+        <fields>Description</fields>
+        <fields>Entry_Announcement__c</fields>
+        <fields>Event_Customer_Status__c</fields>
+        <fields>Fax</fields>
+        <fields>Id</fields>
+        <fields>Inactivated_By__c</fields>
+        <fields>Inactive__c</fields>
+        <fields>International_Dial_Out_Allowed__c</fields>
+        <fields>Invoice_Format__c</fields>
+        <fields>Invoice_Recipient_Emails__c</fields>
+        <fields>Invoice_Types__c</fields>
+        <fields>IsDeleted</fields>
+        <fields>Kit_Name__c</fields>
+        <fields>Kit_Number__c</fields>
+        <fields>LastModifiedById</fields>
+        <fields>LastModifiedDate</fields>
+        <fields>Moderator_Allowed__c</fields>
+        <fields>Name</fields>
+        <fields>NetSuite_Id__c</fields>
+        <fields>Org_ID__c</fields>
+        <fields>PO_Number__c</fields>
+        <fields>Phone</fields>
+        <fields>Phone_Extension__c</fields>
+        <fields>Podcast__c</fields>
+        <fields>Provisioned__c</fields>
+        <fields>Provisioning_Email_Template_Override__c</fields>
+        <fields>Quickstart__c</fields>
+        <fields>RecordTypeId</fields>
+        <fields>Recording_Allowed__c</fields>
+        <fields>Recording_Editing_Allowed__c</fields>
+        <fields>Remote_Control_Allowed__c</fields>
+        <fields>Reservationless_Audio__c</fields>
+        <fields>Reservationless_Web__c</fields>
+        <fields>Sales_Tax_Exempt__c</fields>
+        <fields>Security_Code__c</fields>
+        <fields>Security_Option__c</fields>
+        <fields>Send_ConfDetail_to_Contacts__c</fields>
+        <fields>Send_Provisioning_Email__c</fields>
+        <fields>Send_Welcome_Kit__c</fields>
+        <fields>Service_Fee_Exempt__c</fields>
+        <fields>ShippingCity</fields>
+        <fields>ShippingCountry</fields>
+        <fields>ShippingPostalCode</fields>
+        <fields>ShippingState</fields>
+        <fields>ShippingStreet</fields>
+        <fields>Start_Page__c</fields>
+        <fields>Status_Description__c</fields>
+        <fields>Status__c</fields>
+        <fields>Tax_Exempt_Code__c</fields>
+        <fields>Toll_Free_Number__c</fields>
+        <fields>Toll_Number__c</fields>
+        <fields>Type</fields>
+        <fields>Video_Conferencing_Allowed__c</fields>
+        <fields>Web_Conf_Allowed__c</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>rtsfsherpa@readytalk.com</integrationUser>
+        <name>RT_BBS Account Outbound</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>RT_CustomerSyncWithNS</fullName>
+        <apiVersion>8.0</apiVersion>
+        <endpointUrl>https://prd-win01.celigo.com/axon/sfdc/ws-bridge/services/notification/customerSync</endpointUrl>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>rt-netsuite@celigo.com</integrationUser>
+        <name>RT_CustomerSyncWithNS</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>ALL-Set Last Mod Date by Non_admin</fullName>
+        <actions>
+            <name>Set_Last_Mod_by_Date_by_Non_admin</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>User.ProfileId</field>
+            <operation>notContain</operation>
+            <value>System,PGi Sales Operations</value>
+        </criteriaItems>
+        <description>Sets the Last Modified Date by Non-Admin Functions</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>All - Set Deupe Record Type</fullName>
+        <actions>
+            <name>All_Set_Deupe_Record_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Sets field used in matching and duplicate rules</description>
+        <formula>ISCHANGED( RecordTypeId )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>All-Set MQA</fullName>
+        <actions>
+            <name>All_Set_MQA</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Global_Account_MQA__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Global_Account_MQA_Assignment_date__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-*Update* Set NZL Flag</fullName>
+        <actions>
+            <name>Set_NZL_to_True</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3 OR 4 OR 5)</booleanFilter>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingCountry</field>
+            <operation>equals</operation>
+            <value>NZL,New Zealand</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Territory_Code_Partner_Only__c</field>
+            <operation>equals</operation>
+            <value>AP001,APA000,APA116,APN230,APN250,APN251,APN252,APN256,APN257,APN260,APN262,D0964</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.NZL__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingCountry</field>
+            <operation>contains</operation>
+            <value>Korea</value>
+        </criteriaItems>
+        <description>Sets the NZL checkbox to be true</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-6Sense Conf Decision</fullName>
+        <actions>
+            <name>PGi_6Sense_Conf_Decision</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Last date &quot;Decision&quot; was assigned to an Account Conferencing Buying Stage</description>
+        <formula>Collab_UC_Acct_Buying_Stage__c  = &quot;Decision&quot;</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-6Sense Conf Purchase</fullName>
+        <actions>
+            <name>PGi_6Sense_Conf_Purchase</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Last date &quot;Purchase&quot; was assigned to an Account Conferencing Buying Stage</description>
+        <formula>Collab_UC_Acct_Buying_Stage__c  = &quot;Purchase&quot;</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-6Sense Webinar Decision</fullName>
+        <actions>
+            <name>PGi_6Sense_Webinar_Decision</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Last date &quot;Decision&quot; was assigned to an Account Webinar Buying Stage</description>
+        <formula>Webcast_Webinar_Acct_Buying_Stage__c = &quot;Decision&quot;</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-6Sense Webinar Purchase</fullName>
+        <actions>
+            <name>PGi_6Sense_Webinar_Purchase</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Last date &quot;Purchase&quot; was assigned to an Account Webinar Buying Stage</description>
+        <formula>Webcast_Webinar_Acct_Buying_Stage__c   = &quot;Purchase&quot;</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-6sense Conf Initial Stage and Time Stamp</fullName>
+        <actions>
+            <name>X6sense_Initial_Conf_Stage</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>X6sense_Initial_Conf_Time_Stamp</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Update the Initial Stage and Initial Time Stamp the first time an Account Conferencing is assigned a buying stage</description>
+        <formula>AND( ISBLANK(PRIORVALUE( Collab_UC_Acct_Buying_Stage__c )), NOT(ISBLANK( Collab_UC_Acct_Buying_Stage__c )))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-6sense Webinar Initial Stage and Time Stamp</fullName>
+        <actions>
+            <name>X6sense_Initial_Webinar_Stage</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>X6sense_Initial_Webinar_Stage_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Update the Initial Stage and Initial Time Stamp the first time an Account Webinar is assigned a buying stage</description>
+        <formula>AND( ISBLANK(PRIORVALUE(  Webcast_Webinar_Acct_Buying_Stage__c )), NOT(ISBLANK( Webcast_Webinar_Acct_Buying_Stage__c )))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Data%2Ecom Never Clean</fullName>
+        <actions>
+            <name>Update_Clean_Status_to_Skipped</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>These accounts should not be cleaned by Data.com</description>
+        <formula>OR( Id = &#39;001300000106U1c&#39;,  Id = &#39;001300000106U2C&#39;,  Id = &#39;001300000106U2G&#39;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Duplicate Detected for Parent Lookup %28Partner%29</fullName>
+        <actions>
+            <name>Duplicate_Detected_for_Parent_Lookup_Partner</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.DuplicateDetectedforParentLookup__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Owners_Channel_Formula__c</field>
+            <operation>equals</operation>
+            <value>Partners,Carrier</value>
+        </criteriaItems>
+        <description>Duplicate Detected for Parent Lookup (Partner).</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Duplicate Detected for Parent Lookup %28non-Partner%29</fullName>
+        <actions>
+            <name>Duplicate_Detected_for_Parent_Lookup_non_Partner</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 AND 2 AND 3</booleanFilter>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.DuplicateDetectedforParentLookup__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Owners_Channel_Formula__c</field>
+            <operation>notEqual</operation>
+            <value>Partners,Carrier</value>
+        </criteriaItems>
+        <description>Duplicate Detected for Parent Lookup (non-Partner).</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Duplicate Prevention - Partner</fullName>
+        <actions>
+            <name>Duplicate_Prevention_Partner</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Type</field>
+            <operation>equals</operation>
+            <value>Sub Agent,VAR</value>
+        </criteriaItems>
+        <description>DO NOT DELETE.  This wf populates the correct matching/duplicate process  record should follow.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Duplicate Prevention - Top Level</fullName>
+        <actions>
+            <name>Duplicate_Prevention_Top_Level</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Type</field>
+            <operation>equals</operation>
+            <value>Affinity,Budget,Carrier,Direct,Distributor,Field Sales,Commercial Accounts,Marketing Alliance,Master Agent,Partner Direct,Referral Partner,Reseller,Soundpath,Tier 1</value>
+        </criteriaItems>
+        <description>DO NOT DELETE.  This wf populates the correct matching/duplicate process  record should follow.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Global Region_APAC</fullName>
+        <actions>
+            <name>Global_Region_APAC</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingCountry</field>
+            <operation>equals</operation>
+            <value>Australia,China,Hong Kong,Philippines,Taiwan,India,Japan</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingCountry</field>
+            <operation>equals</operation>
+            <value>Korea,Malaysia,New Zealand,Indonesia,Singapore,Thailand</value>
+        </criteriaItems>
+        <description>Region field updated automatically on the account record based on the country value listed on the account record.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Global Region_EMEA</fullName>
+        <actions>
+            <name>Global_Region_EMEA</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3 OR 4 OR 5)</booleanFilter>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingCountry</field>
+            <operation>equals</operation>
+            <value>Austria,Belgium,France,Luxembourg,Portugal,Spain,Czech Republic</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingCountry</field>
+            <operation>equals</operation>
+            <value>Germany,Hungary,Poland,Romania,Slovakia,Turkey,Ireland,Italy</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingCountry</field>
+            <operation>equals</operation>
+            <value>Netherlands,Denmark,Finland,Iceland,Norway,Sweden,Switzerland</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingCountry</field>
+            <operation>equals</operation>
+            <value>Greece,Israel,Russian Federation,South Africa,United Arab Emirates</value>
+        </criteriaItems>
+        <description>Region field updated automatically on the account record based on the country value listed on the account record.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Global Region_NA</fullName>
+        <actions>
+            <name>Global_Region_NA</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3 OR 4 OR 5 OR 6 OR 7 OR 8 OR 9 OR 10 OR 11)</booleanFilter>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingState</field>
+            <operation>equals</operation>
+            <value>Alabama,Alaska,Arizona,Arkansas,California,Colorado,Connecticut</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingState</field>
+            <operation>equals</operation>
+            <value>Delaware,Florida,Georgia,Hawaii,Idaho,Illinois,Indiana,Iowa,Kansas</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingState</field>
+            <operation>equals</operation>
+            <value>Kentucky,Louisana,Maine,Maryland,Massachusetts,Mexico,Michigan</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingState</field>
+            <operation>equals</operation>
+            <value>Minnesota,Mississippi,Missouri,Montana,Nebraska,Nevada,New Hampshire</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingState</field>
+            <operation>equals</operation>
+            <value>New Jersey,New Mexico,New York,North Carolina,North Dakota,Ohio</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingState</field>
+            <operation>equals</operation>
+            <value>Oklahoma,Oregon,Pennsylvania,Rhode Island,South Carolina</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingState</field>
+            <operation>equals</operation>
+            <value>South Dakota,Tennessee,Texas,Utah,Vermont,Virginia,Washington</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingState</field>
+            <operation>equals</operation>
+            <value>Washington DC,West Virginia,Wisconsin,Wyoming</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingCountry</field>
+            <operation>equals</operation>
+            <value>Brazil,Argentina,Belize,Bolivia,Chile,Colombia,Costa Rica,Ecuador,French Polynesia</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingCountry</field>
+            <operation>equals</operation>
+            <value>United States,Guatemala,Honduras,Mexico,Paraguay,Peru,Uruguay,Canada</value>
+        </criteriaItems>
+        <description>Region field updated automatically on the account record based on the country value listed on the account record.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Parent %28Text Only%29</fullName>
+        <actions>
+            <name>Parent_text_only</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.ParentId</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Convert Parent lookup value to text value.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Populate Custom DUNS Number field</fullName>
+        <actions>
+            <name>Populate_Custom_Duns_Number</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.DunsNumber</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Populate Custom DUNS Number field. Used in PopulateParentAccount trigger</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Set Exclude from Integration back to FALSE</fullName>
+        <actions>
+            <name>Set_Exclude_from_Integration_to_False</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Exclude_from_Integration__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Name</field>
+            <operation>notContain</operation>
+            <value>American Teleconferencing Services,PGi Employees,Internal Use Only</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Tier_1_UHQ__c</field>
+            <operation>notEqual</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Name</field>
+            <operation>notContain</operation>
+            <value>Unmatch,Unidentified,PGi Zero Billers,PGi Inactive Billers,ZZZ-NAP-Premiere</value>
+        </criteriaItems>
+        <description>This is for accounts that were once TRUE but no longer meet that criteria and need to be set back as FALSE</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Set Exclude from Integration to True</fullName>
+        <actions>
+            <name>Set_Exclude_from_Integration</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3 OR 4 )</booleanFilter>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Tier_1_UHQ__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Name</field>
+            <operation>contains</operation>
+            <value>American Teleconferencing Services,PGi Employees,Internal Use Only</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Name</field>
+            <operation>contains</operation>
+            <value>Unmatch,Unidentified,PGi Zero Billers,PGi Inactive Billers,ZZZ-NAP-Premiere</value>
+        </criteriaItems>
+        <description>Where Tier 1 UHQ is true and is specific or Territory Code (Partner) is blank or Account Name is a holding account then set to True</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Set Joint Selling Program</fullName>
+        <actions>
+            <name>PGi_Set_Joint_Selling_Program</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>This workflow auto sets the Joint Selling Program to true for certain accounts</description>
+        <formula>AND(  CONTAINS(RecordType.Name, &quot;PGi&quot;),  ISPICKVAL(Type, &quot;SubAgent&quot;), Partner__c = &quot;001300000105wTDAAY&quot; )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Set Sub-Status field to Blank</fullName>
+        <actions>
+            <name>Set_Sub_Status_field_to_blank</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Status__c</field>
+            <operation>equals</operation>
+            <value>Customer</value>
+        </criteriaItems>
+        <description>When the Account becomes a Customer, set the Sub-State field to blank.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Set Sub-Status field to be Assigned</fullName>
+        <actions>
+            <name>Set_Inactive_Reason_to_NULL</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Sub_Status_field_to_be_Assigned</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Where any “Count of Recent” fields are not 0… AND
+Current Account Owner is NOT an Inactive User
+Then change to Assigned</description>
+        <formula>AND( CONTAINS(RecordType.Name, &quot;PGi&quot;),  !CONTAINS( Owner.LastName , &quot;x-&quot;), ISPICKVAL(Status__c, &quot;Prospect&quot;),  OR(   Count_of_Recent_Tasks__c  &gt; 0,     Count_of_Recent_Events__c &gt; 0,                Count_of_Recent_Attachments__c  &gt; 0, 	      Count_of_Recent_Contacts__c  &gt; 0,               Count_of_Recent_Leads__c  &gt; 0, 	      Count_of_Recent_Notes__c  &gt; 0, 	      Count_of_Recent_Opportunities__c  &gt; 0, 	      Ownership_Change_Date__c  &gt;=  TODAY()-90     )          )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Set Sub-Status field to be Inactive</fullName>
+        <actions>
+            <name>Set_Inactive_Reason</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Sub_status_to_Inactive</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Where all ‘Count of Recent’ fields are 0…. OR
+Ownership Change Date field is blank or older than the past 90 days…OR
+Current Account Owner is an Inactive User
+Then change to Inactive</description>
+        <formula>AND( CONTAINS(RecordType.Name, &quot;PGi&quot;),  ISPICKVAL(Status__c, &quot;Prospect&quot;),   OR(      CONTAINS(Owner.LastName, &quot;x-&quot;),   AND(     Count_of_Recent_Tasks__c  = 0,     Count_of_Recent_Events__c =0,                Count_of_Recent_Attachments__c  = 0, 	      Count_of_Recent_Contacts__c  = 0,               Count_of_Recent_Leads__c  = 0, 	      Count_of_Recent_Notes__c  = 0, 	      Count_of_Recent_Opportunities__c  = 0, OR( Ownership_Change_Date__c  &lt;  TODAY()-90,    ISBLANK(Ownership_Change_Date__c)  ))))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Set value of Ownership Change to Today</fullName>
+        <actions>
+            <name>Owner_Change_Date_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Set value of Ownership Change to Today</description>
+        <formula>AND( CONTAINS(RecordType.Name, &quot;PGi&quot;),  OR( ISNEW(),ISCHANGED(OwnerId)))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Ultimate Parent %28Text Only%29</fullName>
+        <actions>
+            <name>Ultimate_Parent_Text_Only</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Name</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Convert Ultimate Parent lookup field to text value for sharing rules</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Update ABM %7C Last PES and ABM Last Change Date</fullName>
+        <actions>
+            <name>Update_ABM_Last_PES</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_ABM_Last_PES_Change_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Update ABM | Last PES and ABM Last Change Date via workflow where:</description>
+        <formula>PRIORVALUE( bizible2__Engagement_Score__c ) &lt;&gt; bizible2__Engagement_Score__c</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Update Account Name</fullName>
+        <actions>
+            <name>Update_Account_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Owners_Channel_Formula__c</field>
+            <operation>notEqual</operation>
+            <value>Partners,Carrier</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DandBCompany.Name</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Alias</field>
+            <operation>notEqual</operation>
+            <value>Clegr</value>
+        </criteriaItems>
+        <description>For non-partner accounts the Account Name should always be the same as the D&amp;B Company Name if the Account is cleaned and matched to a D&amp;B record</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Update Account Status to Customer</fullName>
+        <actions>
+            <name>Account_Status_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3 OR (4 AND 5))</booleanFilter>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Billed_Revenue_Last_13_Months__c</field>
+            <operation>notEqual</operation>
+            <value>,USD 0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Territory_Code_Partner_Only__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Total_Closed_Won_Opps__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Type</field>
+            <operation>equals</operation>
+            <value>End User - Carrier,End User - Reseller</value>
+        </criteriaItems>
+        <description>Where Billed Rev is not equal to 0.... OR
+Where Territory Code (Partner) is not blank....OR
+Where Type = End User Carrier or End User Resller AND Total Closed Won Ops is 1 or greater
+Then change to Customer</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Update Account Status to Prospect</fullName>
+        <actions>
+            <name>Update_Account_Status_to_Customer</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 AND 2 AND 5 AND 6 AND 7) OR (2 AND 3 AND 4 AND 1 AND 6)</booleanFilter>
+        <criteriaItems>
+            <field>Account.Billed_Revenue_Last_13_Months__c</field>
+            <operation>equals</operation>
+            <value>,USD 0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Territory_Code_Partner_Only__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Type</field>
+            <operation>equals</operation>
+            <value>End User - Carrier,End User - Reseller</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Total_Closed_Won_Opps__c</field>
+            <operation>lessThan</operation>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Type</field>
+            <operation>notEqual</operation>
+            <value>End User - Carrier,End User - Reseller</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.For_RT_business_not_PGi__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Billed Revenue = 0 OR blank..... &amp;
+Territory Code (Partner) = blank.... &amp;
+Type &lt;&gt; End User Carrier OR End User Reseller 
+Not RT
+..OR..
+Territory Code (Partner) = blank.... &amp; 
+Type = End User Carrier OR End User Reseller…&amp;
+Total Closed Won Ops is 0</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Update Clean Status</fullName>
+        <actions>
+            <name>Update_Clean_Status</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>If the Lead or Account have a Clean Status = Skipped then to update the Clean Status field back to blank.</description>
+        <formula>AND( CONTAINS(RecordType.Name, &quot;PGi&quot;),  ISPICKVAL(CleanStatus, &quot;Skipped&quot;),  Id &lt;&gt; &#39;001300000106U1c&#39;,  Id &lt;&gt; &#39;001300000106U2C&#39;,  Id &lt;&gt; &#39;001300000106U2G&#39;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT - For RT business %28account%29</fullName>
+        <actions>
+            <name>RT_For_RT_business_account</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_For_RT_business_status</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.For_RT_business_not_PGi__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Account Deleted%2C RecordType Change</fullName>
+        <actions>
+            <name>RT_Account_Type_Deleted</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>4 and 5 and ((1 AND 3) OR 2)</booleanFilter>
+        <criteriaItems>
+            <field>Account.Inactive__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Status__c</field>
+            <operation>equals</operation>
+            <value>Delete</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Status__c</field>
+            <operation>equals</operation>
+            <value>Not Provisioned</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Admin_Exempt__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>When account is deleted, change record type</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Account Errored Out RecordType Change</fullName>
+        <actions>
+            <name>RT_Account_Type_Error</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Status__c</field>
+            <operation>equals</operation>
+            <value>AddError,SyncError,Pending,UpdateError,DeleteError</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Admin_Exempt__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>When account Errored Out, change record type &amp; email billingreports</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Account New</fullName>
+        <actions>
+            <name>RT_Account_Type_New</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Status__c</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Admin_Exempt__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Account New, change record type</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Account Not Provisioned%2C Change RT</fullName>
+        <actions>
+            <name>RT_Account_Type_Not_Provisioned</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Status__c</field>
+            <operation>equals</operation>
+            <value>Not Provisioned</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Admin_Exempt__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Change record type to not provisioned if status is not provisioned</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Account Provisioned RecordType Change</fullName>
+        <actions>
+            <name>RT_Account_Type_Active</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Admin_Exempt__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>When account is active, change record type</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Account Suspended - Notify Franca</fullName>
+        <actions>
+            <name>RT_Account_Suspended_Notify_Franca</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Suspend_Account__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Account To Be Prov%2E%2E%2EAll Fields Outbound</fullName>
+        <actions>
+            <name>RT_Account_Type_Pending</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_StatusPending</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Provisioned__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.ReadyTalk_Exempt__c</field>
+            <operation>notEqual</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Send outbound message to SOAP, set status to pending</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Account Unsuspended - Notify Franca</fullName>
+        <actions>
+            <name>RT_Account_Unsuspended_Notify_Franca</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(
+ISCHANGED(Suspend_Account__c),
+PRIORVALUE(Suspend_Account__c) = True,
+Suspend_Account__c = False,
+RecordTypeId = &quot;0121B000001q5WT&quot;
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Account%2C provisioned is deleted</fullName>
+        <actions>
+            <name>RT_Account_Type_Pending</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Status_is_Pending_Deleting</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Provisioned__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Inactive__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Admin_Exempt__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>When an account which is provisioned is deleted, set status to Pending</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Automated Renewal Email Box Checked</fullName>
+        <actions>
+            <name>RT_Automated_Renewal_Email_Box_Checked</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.OwnerId</field>
+            <operation>equals</operation>
+            <value>Assoc. Account Management Team,Account Specialist Team</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Admin_Exempt__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>A workflow that checks the Automated Renewal Email checkbox whenever the Account Owner is AST or AAM</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Automated Renewal Email Box Unchecked</fullName>
+        <actions>
+            <name>RT_Automated_Renewal_Email_Box_unchecked</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.OwnerId</field>
+            <operation>notEqual</operation>
+            <value>Assoc. Account Management Team,Account Specialist Team</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Admin_Exempt__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>A workflow that unchecks the Automated Renewal Email checkbox whenever the Account Owner switches from AST or AAM to another Account Owner</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_BBS_Fire_Outbound</fullName>
+        <actions>
+            <name>RT_BBS_Account_Outbound</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>true</active>
+        <description>BBS Fire Outbound account account message on insert/update - formula</description>
+        <formula>AND( 
+Provisioned__c  = true, 
+$User.ReadyTalk_Exempt__c = FALSE,
+RecordType.DeveloperName = &#39;ReadyTalk_Account&#39;, NOT(ISPICKVAL(Status__c, &#39;Deleting&#39;)))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Cohort - 2012</fullName>
+        <actions>
+            <name>RT_Set_Cohort_2012</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Billing_Start_Date__c</field>
+            <operation>greaterThan</operation>
+            <value>12/31/2011</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Billing_Start_Date__c</field>
+            <operation>lessThan</operation>
+            <value>1/1/2013</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>Sets the cohort for accounts with a billing start date of 2012 and earlier</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Cohort - 2013</fullName>
+        <actions>
+            <name>RT_Set_Cohort_2013</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Billing_Start_Date__c</field>
+            <operation>greaterThan</operation>
+            <value>12/31/2012</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Billing_Start_Date__c</field>
+            <operation>lessThan</operation>
+            <value>1/1/2014</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>Sets the cohort for accounts with a billing start date of 2013</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Cohort - 2014</fullName>
+        <actions>
+            <name>RT_Set_Cohort_2014</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Billing_Start_Date__c</field>
+            <operation>greaterThan</operation>
+            <value>12/31/2013</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Billing_Start_Date__c</field>
+            <operation>lessThan</operation>
+            <value>1/1/2015</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>Sets the cohort for accounts with a billing start date of 2014</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Cohort - 2015</fullName>
+        <actions>
+            <name>RT_Set_Cohort_2015</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Billing_Start_Date__c</field>
+            <operation>greaterThan</operation>
+            <value>12/31/2014</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Billing_Start_Date__c</field>
+            <operation>lessThan</operation>
+            <value>1/1/2016</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>Sets the cohort for accounts with a billing start date of 2015</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Cohort - 2016</fullName>
+        <actions>
+            <name>RT_Set_Cohort_2016</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Billing_Start_Date__c</field>
+            <operation>greaterThan</operation>
+            <value>12/31/2015</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Billing_Start_Date__c</field>
+            <operation>lessThan</operation>
+            <value>1/1/2017</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>Sets the cohort for accounts with a billing start date of 2016</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Cohort - 2017</fullName>
+        <actions>
+            <name>RT_Set_Cohort_2017</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Billing_Start_Date__c</field>
+            <operation>greaterThan</operation>
+            <value>12/31/2016</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Billing_Start_Date__c</field>
+            <operation>lessThan</operation>
+            <value>1/1/2018</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>Sets the cohort for accounts with a billing start date of 2017</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Cohort - 2018</fullName>
+        <actions>
+            <name>RT_Set_Cohort_2018</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Billing_Start_Date__c</field>
+            <operation>greaterThan</operation>
+            <value>12/31/2017</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Billing_Start_Date__c</field>
+            <operation>lessThan</operation>
+            <value>1/1/2019</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>Sets the cohort for accounts with a billing start date of 2018</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Cohort - 2019</fullName>
+        <actions>
+            <name>RT_Set_Cohort_2019</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Billing_Start_Date__c</field>
+            <operation>greaterThan</operation>
+            <value>12/31/2018</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Billing_Start_Date__c</field>
+            <operation>lessThan</operation>
+            <value>1/1/2020</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>Sets the cohort for accounts with a billing start date of 2019</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Cohort - 2020</fullName>
+        <actions>
+            <name>RT_Set_Cohort_2020</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Billing_Start_Date__c</field>
+            <operation>greaterThan</operation>
+            <value>12/31/2019</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Billing_Start_Date__c</field>
+            <operation>lessThan</operation>
+            <value>1/1/2021</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>Sets the cohort for accounts with a billing start date of 2020</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Cohort - None</fullName>
+        <actions>
+            <name>RT_Set_Cohort_None</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Billing_Start_Date__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>Sets the cohort for accounts with a null billing start date</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Cohort - Up To 2011</fullName>
+        <actions>
+            <name>RT_Set_Cohort_Up_To_2011</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Billing_Start_Date__c</field>
+            <operation>lessThan</operation>
+            <value>1/1/2012</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>Sets the cohort for accounts with a billing start date of 2011 and earlier</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_CustomerSyncWithNS</fullName>
+        <actions>
+            <name>RT_CustomerSyncWithNS</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>(1 OR 2) and 3 and 4</booleanFilter>
+        <criteriaItems>
+            <field>Account.NetSuite_Push__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.NetSuite_Pull__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Admin_Exempt__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Employees 1-10</fullName>
+        <actions>
+            <name>RT_Employees_1_10</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>greaterOrEqual</operation>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>lessThan</operation>
+            <value>11</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>data.com</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Employees 1001-2500</fullName>
+        <actions>
+            <name>RT_Employees_1001_2500</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>greaterOrEqual</operation>
+            <value>1001</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>lessThan</operation>
+            <value>2501</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>data.com</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Employees 101-500</fullName>
+        <actions>
+            <name>RT_Employees_101_500</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>greaterOrEqual</operation>
+            <value>101</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>lessThan</operation>
+            <value>501</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>data.com</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Employees 11-50</fullName>
+        <actions>
+            <name>RT_Employees_11_50</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>greaterOrEqual</operation>
+            <value>11</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>lessThan</operation>
+            <value>51</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>data.com</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Employees 2501-5000</fullName>
+        <actions>
+            <name>RT_Employees_2501_5000</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>greaterOrEqual</operation>
+            <value>2501</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>lessThan</operation>
+            <value>5001</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>data.com</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Employees 501-1000</fullName>
+        <actions>
+            <name>RT_Employees_501_1000</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>greaterOrEqual</operation>
+            <value>501</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>lessThan</operation>
+            <value>1001</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>data.com</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Employees 51-100</fullName>
+        <actions>
+            <name>RT_Employees_51_100</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>greaterOrEqual</operation>
+            <value>51</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>lessThan</operation>
+            <value>101</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>data.com</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Employees Greater than 5000</fullName>
+        <actions>
+            <name>RT_Employees_Greater_than_5000</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>greaterOrEqual</operation>
+            <value>5001</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>data.com</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Industry - Business Services</fullName>
+        <actions>
+            <name>RT_Industry_Business_Services</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Industry</field>
+            <operation>equals</operation>
+            <value>Agriculture,Communications,Media,Insurance</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>data.com</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Industry - Energy</fullName>
+        <actions>
+            <name>RT_Industry_Energy</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Industry</field>
+            <operation>equals</operation>
+            <value>Utilities</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>data.com</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Industry - Financial Services</fullName>
+        <actions>
+            <name>RT_Industry_Financial_Services</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Industry</field>
+            <operation>equals</operation>
+            <value>Banking,Finance</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>data.com</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Industry - Non-Profit</fullName>
+        <actions>
+            <name>RT_Industry_Non_Profit</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Industry</field>
+            <operation>equals</operation>
+            <value>Not for Profit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>data.com</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Industry - Personal Services</fullName>
+        <actions>
+            <name>RT_Industry_Personal_Services</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Industry</field>
+            <operation>equals</operation>
+            <value>Recreation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>data.com</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Industry - Retail</fullName>
+        <actions>
+            <name>RT_Industry_Retail</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Industry</field>
+            <operation>equals</operation>
+            <value>Apparel</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>data.com</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Industry - Technology</fullName>
+        <actions>
+            <name>RT_Industry_Technology</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Industry</field>
+            <operation>equals</operation>
+            <value>Chemicals,Electronics,Biotechnology</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>data.com</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Industry - Transportation</fullName>
+        <actions>
+            <name>RT_Industry_Transportation</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Industry</field>
+            <operation>equals</operation>
+            <value>Shipping</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <description>data.com</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Logo Approved for Use Box checked on new Accounts</fullName>
+        <actions>
+            <name>RT_Logo_Approved_For_Use_Checked</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.CreatedDate</field>
+            <operation>greaterOrEqual</operation>
+            <value>5/23/2014</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Admin_Exempt__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>A check box indicating that the client&#39;s logo is approved for use in RT&#39;s marketing materials.  Box is checked anytime a new account is created after 23 May 2014.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_NEW - Trial Ending</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Trial__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Admin_Exempt__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Sends email to AE owner prior to free trial is ending.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>RT_NEW_Trial_Ending_Notification</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Account.Trial_End_Date__c</offsetFromField>
+            <timeLength>-2</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>RT_Passcode Authorization Picklist and Date Workflow</fullName>
+        <actions>
+            <name>RT_Update_PasscodeAuthorizationDateField</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Passcode_Authorization__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Admin_Exempt__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>A workflow that will update the passcode authorization renewal date field and the passcode authorization field when the passcode authorization field value = Yes</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>RT_Passcode_AuthorizationPicklist_Date</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>365</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>RT_Passcode Authorization Renewal Alert</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Passcode_Authorization__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Admin_Exempt__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>RT_Passcode_Authorization_Email_Alert</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Account.Passcode_Authorization_Renewal_Date__c</offsetFromField>
+            <timeLength>-30</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>RT_Quickstart Enabled Notification</fullName>
+        <actions>
+            <name>RT_Email_notification_to_ask_if_the_AM_wants_Quickstart_activated_for_all_active</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>When Quickstart is checked at the account level, this workflow will trigger an email to be sent to the account owner asking if they want to apply configuration to all existing access codes.formula</description>
+        <formula>AND(  ISCHANGED( Quickstart__c ),  Quickstart__c = TRUE,  RecordType.DeveloperName = &#39;ReadyTalk_Account&#39;,  $User.Admin_Exempt__c = False)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Truncate Account Card Name</fullName>
+        <actions>
+            <name>RT_Truncate_Account_Card_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Automatically truncate the account card name to 30 characters-formula</description>
+        <formula>AND( LEN(Account_Card_Name__c) &gt; 30, RecordType.DeveloperName = &#39;ReadyTalk_Account&#39;, $User.Admin_Exempt__c = false )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Update Event Customer Status</fullName>
+        <actions>
+            <name>RT_Update_Event_Customer_Status</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Event_Customer_Status__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Active_Access_Codes__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Admin_Exempt__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Updates event customer status to new when there are more than 0 active access codes and the event status field is blank</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C Business Level%2C Base</fullName>
+        <actions>
+            <name>iMC_Account_Business_Level_Base</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.OwnerId</field>
+            <operation>equals</operation>
+            <value>Rula Marie</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Account</value>
+        </criteriaItems>
+        <description>Assign the Business Level based from Account Owner.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C Business Level%2C Diamond</fullName>
+        <actions>
+            <name>iMC_Account_Business_Level_Diamond</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.OwnerId</field>
+            <operation>equals</operation>
+            <value>Frank Nardi</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Account</value>
+        </criteriaItems>
+        <description>Assign the Business Level based from Account Owner.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C Business Level%2C Key</fullName>
+        <actions>
+            <name>iMC_Account_Business_Level_Key</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.OwnerId</field>
+            <operation>equals</operation>
+            <value>Jason Hurst,Marianna Rodriguez,Peter Quayle</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Account</value>
+        </criteriaItems>
+        <description>Assign the Business Level based from Account Owner.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C CSM%2C Carissa Zavada</fullName>
+        <actions>
+            <name>iMC_Account_CSM_Carissa_Zavada</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.OwnerId</field>
+            <operation>equals</operation>
+            <value>Frank Nardi</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Account</value>
+        </criteriaItems>
+        <description>If Frank Nardi is the Account Owner, update the CSM field to Carissa Zavada.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C CSM%2C Elizabeth Bruns</fullName>
+        <actions>
+            <name>iMC_Account_CSM_Elizabeth_Bruns</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.OwnerId</field>
+            <operation>equals</operation>
+            <value>Jason Hurst</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Account</value>
+        </criteriaItems>
+        <description>If Jason Hurst is the Account Owner, update the CSM field to Elizabeth Bruns.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C CSM%2C Nick Righton</fullName>
+        <actions>
+            <name>iMC_Account_CSM_Nick_Righton</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.OwnerId</field>
+            <operation>equals</operation>
+            <value>Marianna Rodriguez</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Account</value>
+        </criteriaItems>
+        <description>If Marianna Rodriguez is the Account Owner, update the CSM field to Nick Righton.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C Gross Annual Opportunity</fullName>
+        <actions>
+            <name>iMC_Account_Gross_Annual_Opportunity</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Licensed_Internal_Users__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Account</value>
+        </criteriaItems>
+        <description>This will populate the Gross Annual Opportunity field.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C Number of Employees%2C %3C10</fullName>
+        <actions>
+            <name>iMC_Account_Employees_10</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>lessOrEqual</operation>
+            <value>10</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>This is to map to the pick list field &quot;Number of Employees&quot;.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C Number of Employees%2C %3E10%2C000</fullName>
+        <actions>
+            <name>iMC_Account_Employees_10000</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>greaterOrEqual</operation>
+            <value>10001</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Account</value>
+        </criteriaItems>
+        <description>This is to map to the pick list field &quot;Number of Employees&quot;.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C Number of Employees%2C 1001 to 5000</fullName>
+        <actions>
+            <name>iMC_Account_Employees_1001_to_500</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>greaterOrEqual</operation>
+            <value>1001</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>lessOrEqual</operation>
+            <value>5000</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Account</value>
+        </criteriaItems>
+        <description>This is to map to the pick list field &quot;Number of Employees&quot;.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C Number of Employees%2C 101 to 250</fullName>
+        <actions>
+            <name>iMC_Account_Employees_101_to_250</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>greaterOrEqual</operation>
+            <value>101</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>lessOrEqual</operation>
+            <value>250</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Account</value>
+        </criteriaItems>
+        <description>This is to map to the pick list field &quot;Number of Employees&quot;.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C Number of Employees%2C 11 to 25</fullName>
+        <actions>
+            <name>iMC_Account_Employees_11_to_25</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>greaterOrEqual</operation>
+            <value>11</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>lessOrEqual</operation>
+            <value>25</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Account</value>
+        </criteriaItems>
+        <description>This is to map to the pick list field &quot;Number of Employees&quot;.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C Number of Employees%2C 251 to 500</fullName>
+        <actions>
+            <name>iMC_Account_Employees_251_to_500</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>greaterOrEqual</operation>
+            <value>251</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>lessOrEqual</operation>
+            <value>500</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Account</value>
+        </criteriaItems>
+        <description>This is to map to the pick list field &quot;Number of Employees&quot;.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C Number of Employees%2C 26 to 50</fullName>
+        <actions>
+            <name>iMC_Account_Employees_26_to_50</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>greaterOrEqual</operation>
+            <value>26</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>lessOrEqual</operation>
+            <value>50</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Account</value>
+        </criteriaItems>
+        <description>This is to map to the pick list field &quot;Number of Employees&quot;.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C Number of Employees%2C 5001 to 10000</fullName>
+        <actions>
+            <name>iMC_Account_Employees_5001_to_10000</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>greaterOrEqual</operation>
+            <value>5001</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>lessOrEqual</operation>
+            <value>10000</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Account</value>
+        </criteriaItems>
+        <description>This is to map to the pick list field &quot;Number of Employees&quot;.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C Number of Employees%2C 501 to 1000</fullName>
+        <actions>
+            <name>iMC_Account_Employees_501_to_1000</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>greaterOrEqual</operation>
+            <value>501</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>lessOrEqual</operation>
+            <value>1000</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Account</value>
+        </criteriaItems>
+        <description>This is to map to the pick list field &quot;Number of Employees&quot;.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C Number of Employees%2C 51 to 100</fullName>
+        <actions>
+            <name>iMC_Account_Employees_51_to_100</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>greaterOrEqual</operation>
+            <value>51</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.NumberOfEmployees</field>
+            <operation>lessOrEqual</operation>
+            <value>100</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Account</value>
+        </criteriaItems>
+        <description>This is to map to the pick list field &quot;Number of Employees&quot;.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C Prior Active License Amount</fullName>
+        <actions>
+            <name>iMC_Account_Prior_Active_License_Amou</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Active_Account__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Account</value>
+        </criteriaItems>
+        <description>Used to update &quot;Prior Active License Amount&quot; field with the last value within the &quot;Active Order License Amount&quot; field.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C Renewal Manager Assignment</fullName>
+        <active>true</active>
+        <description>This is to track the change of the Renewal Manager on the Account Team.</description>
+        <formula>AND( RecordType.DeveloperName = &quot;iMC Account&quot;, PRIORVALUE(Renewal_Manager__c) &lt;&gt; Renewal_Manager__c  ||  ISCHANGED(OwnerId ) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C Status%2C Customer</fullName>
+        <actions>
+            <name>iMC_Account_Status_Customer</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Active_Account__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Status__c</field>
+            <operation>notEqual</operation>
+            <value>Customer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Account</value>
+        </criteriaItems>
+        <description>This will change the Account Status to Customer for all Accounts that have the Active Account flag checked.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C Status%2C Customer Cancelled</fullName>
+        <actions>
+            <name>iMC_Account_Status_Customer_Cancel</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>This will change the Account Status to Customer Cancelled when the Active Account flag UNchecked and the previous value was checked.</description>
+        <formula>RecordType.Name = &quot;iMC Account&quot; &amp;&amp;
+NOT(ISPICKVAL(Status__c, &quot;Customer Cancelled&quot;))&amp;&amp;
+NOT(ISPICKVAL(Status__c, &quot;Prospect&quot;))&amp;&amp;
+Active_Account__c = False</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C Type%2C Prospect</fullName>
+        <actions>
+            <name>iMC_Account_Type_Prospect</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Type</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Account</value>
+        </criteriaItems>
+        <description>This will change the Account Type from blank to Prospect, when Type field is blank.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C ZD Sync Active</fullName>
+        <actions>
+            <name>iMC_Account_ZD_Sync_Active</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Active_Account__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Account</value>
+        </criteriaItems>
+        <description>Is Account Active field is TRUE, mark ZD Sync Active field as YES.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Account%2C ZD Sync Not Active</fullName>
+        <actions>
+            <name>iMC_Account_ZD_Sync_Not_Active</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Active_Account__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Account</value>
+        </criteriaItems>
+        <description>Is Account Active field is TRUE, mark ZD Sync Active field as NO.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

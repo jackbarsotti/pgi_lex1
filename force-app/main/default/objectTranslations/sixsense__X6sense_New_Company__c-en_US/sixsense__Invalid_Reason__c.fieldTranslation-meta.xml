@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Invalid Reason --></label>
+    <name>sixsense__Invalid_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Bad data</masterLabel>
+        <translation><!-- Bad data --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not a company size fit</masterLabel>
+        <translation><!-- Not a company size fit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not a sales region fit</masterLabel>
+        <translation><!-- Not a sales region fit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not an industry fit</masterLabel>
+        <translation><!-- Not an industry fit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

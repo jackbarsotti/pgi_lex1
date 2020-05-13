@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Monthly amount prospect is currently spending for audio &amp; web services. --></help>
+    <label><!-- Current Monthly Spend --></label>
+    <name>Current_Monthly_Spend__c</name>
+</CustomFieldTranslation>

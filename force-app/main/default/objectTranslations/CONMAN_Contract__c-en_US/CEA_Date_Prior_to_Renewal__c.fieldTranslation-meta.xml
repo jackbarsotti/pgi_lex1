@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The Contract End/Anniversary Date before the last renewal occurred. This will be set automatically when auto-renewed. *For manual renewals please set this value to the old CEA Date - Original value. --></help>
+    <label><!-- CEA Date - Prior to Renewal --></label>
+    <name>CEA_Date_Prior_to_Renewal__c</name>
+</CustomFieldTranslation>

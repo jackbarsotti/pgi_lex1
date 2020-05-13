@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If Other was chosen, please provide details --></help>
+    <label><!-- Wireless Carrier - Other --></label>
+    <name>Wireless_Carrier_Other__c</name>
+</CustomFieldTranslation>

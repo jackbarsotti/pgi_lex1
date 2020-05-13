@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If Natterbox was able to find the phone number in the Opportunity table within Saleforce, the corresponding link to that Opportunity will be placed here. --></help>
+    <label><!-- Opportunity --></label>
+    <name>Opportunity__c</name>
+    <relationshipLabel><!-- Natterbox Call Reporting Object --></relationshipLabel>
+</CustomFieldTranslation>

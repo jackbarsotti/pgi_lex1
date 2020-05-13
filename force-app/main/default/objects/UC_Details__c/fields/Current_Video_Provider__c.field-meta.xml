@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Video_Provider__c</fullName>
+    <externalId>false</externalId>
+    <label>Current Video Provider</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AAPT</fullName>
+                <default>false</default>
+                <label>AAPT</label>
+            </value>
+            <value>
+                <fullName>Acano</fullName>
+                <default>false</default>
+                <label>Acano</label>
+            </value>
+            <value>
+                <fullName>Accutel</fullName>
+                <default>false</default>
+                <label>Accutel</label>
+            </value>
+            <value>
+                <fullName>ACT Teleconferencing</fullName>
+                <default>false</default>
+                <label>ACT Teleconferencing</label>
+            </value>
+            <value>
+                <fullName>Adobe Connect</fullName>
+                <default>false</default>
+                <label>Adobe Connect</label>
+            </value>
+            <value>
+                <fullName>Aethra.net</fullName>
+                <default>false</default>
+                <label>Aethra.net</label>
+            </value>
+            <value>
+                <fullName>Allstream</fullName>
+                <default>false</default>
+                <label>Allstream</label>
+            </value>
+            <value>
+                <fullName>ArkadinAnyWhere</fullName>
+                <default>false</default>
+                <label>ArkadinAnyWhere</label>
+            </value>
+            <value>
+                <fullName>Arkadin Audio</fullName>
+                <default>false</default>
+                <label>Arkadin Audio</label>
+            </value>
+            <value>
+                <fullName>Arkadin Audio Event</fullName>
+                <default>false</default>
+                <label>Arkadin Audio Event</label>
+            </value>
+            <value>
+                <fullName>Arkadin Connect</fullName>
+                <default>false</default>
+                <label>Arkadin Connect</label>
+            </value>
+            <value>
+                <fullName>Arkadin Video</fullName>
+                <default>false</default>
+                <label>Arkadin Video</label>
+            </value>
+            <value>
+                <fullName>Arkadin Webcast</fullName>
+                <default>false</default>
+                <label>Arkadin Webcast</label>
+            </value>
+            <value>
+                <fullName>Arkadin Web Event</fullName>
+                <default>false</default>
+                <label>Arkadin Web Event</label>
+            </value>
+            <value>
+                <fullName>AT&amp;T</fullName>
+                <default>false</default>
+                <label>AT&amp;T</label>
+            </value>
+            <value>
+                <fullName>AT&amp;T Connect</fullName>
+                <default>false</default>
+                <label>AT&amp;T Connect</label>
+            </value>
+            <value>
+                <fullName>AT&amp;T Connect Web Conferencing</fullName>
+                <default>false</default>
+                <label>AT&amp;T Connect Web Conferencing</label>
+            </value>
+            <value>
+                <fullName>AT Conferencing</fullName>
+                <default>false</default>
+                <label>AT Conferencing</label>
+            </value>
+            <value>
+                <fullName>Automated Conferencing</fullName>
+                <default>false</default>
+                <label>Automated Conferencing</label>
+            </value>
+            <value>
+                <fullName>Avanade</fullName>
+                <default>false</default>
+                <label>Avanade</label>
+            </value>
+            <value>
+                <fullName>AVI-SPL</fullName>
+                <default>false</default>
+                <label>AVI-SPL</label>
+            </value>
+            <value>
+                <fullName>Avistar</fullName>
+                <default>false</default>
+                <label>Avistar</label>
+            </value>
+            <value>
+                <fullName>Basecamp</fullName>
+                <default>false</default>
+                <label>Basecamp</label>
+            </value>
+            <value>
+                <fullName>Bell Conferencing</fullName>
+                <default>false</default>
+                <label>Bell Conferencing</label>
+            </value>
+            <value>
+                <fullName>Bluejeans</fullName>
+                <default>false</default>
+                <label>Bluejeans</label>
+            </value>
+            <value>
+                <fullName>BT</fullName>
+                <default>false</default>
+                <label>BT</label>
+            </value>
+            <value>
+                <fullName>BT: WireOne</fullName>
+                <default>false</default>
+                <label>BT: WireOne</label>
+            </value>
+            <value>
+                <fullName>BudgetConference</fullName>
+                <default>false</default>
+                <label>BudgetConference</label>
+            </value>
+            <value>
+                <fullName>Canon Soft</fullName>
+                <default>false</default>
+                <label>Canon Soft</label>
+            </value>
+            <value>
+                <fullName>Carousel</fullName>
+                <default>false</default>
+                <label>Carousel</label>
+            </value>
+            <value>
+                <fullName>CenturyLink</fullName>
+                <default>false</default>
+                <label>CenturyLink</label>
+            </value>
+            <value>
+                <fullName>China Mobile</fullName>
+                <default>false</default>
+                <label>China Mobile</label>
+            </value>
+            <value>
+                <fullName>China Telecom</fullName>
+                <default>false</default>
+                <label>China Telecom</label>
+            </value>
+            <value>
+                <fullName>China Unicom</fullName>
+                <default>false</default>
+                <label>China Unicom</label>
+            </value>
+            <value>
+                <fullName>Chorus Call</fullName>
+                <default>false</default>
+                <label>Chorus Call</label>
+            </value>
+            <value>
+                <fullName>Cisco CMR</fullName>
+                <default>false</default>
+                <label>Cisco CMR</label>
+            </value>
+            <value>
+                <fullName>Citrix OpenVoice</fullName>
+                <default>false</default>
+                <label>Citrix OpenVoice</label>
+            </value>
+            <value>
+                <fullName>ConferencePlus</fullName>
+                <default>false</default>
+                <label>ConferencePlus</label>
+            </value>
+            <value>
+                <fullName>Crowdbase</fullName>
+                <default>false</default>
+                <label>Crowdbase</label>
+            </value>
+            <value>
+                <fullName>Deutsch Telekom (T-Com)</fullName>
+                <default>false</default>
+                <label>Deutsch Telekom (T-Com)</label>
+            </value>
+            <value>
+                <fullName>Dialogue Conferencing (PGi re-seller)</fullName>
+                <default>false</default>
+                <label>Dialogue Conferencing (PGi re-seller)</label>
+            </value>
+            <value>
+                <fullName>Dimension Data</fullName>
+                <default>false</default>
+                <label>Dimension Data</label>
+            </value>
+            <value>
+                <fullName>Doodle</fullName>
+                <default>false</default>
+                <label>Doodle</label>
+            </value>
+            <value>
+                <fullName>Elisa Telstra</fullName>
+                <default>false</default>
+                <label>Elisa Telstra</label>
+            </value>
+            <value>
+                <fullName>Enabling Technologies</fullName>
+                <default>false</default>
+                <label>Enabling Technologies</label>
+            </value>
+            <value>
+                <fullName>Eureka</fullName>
+                <default>false</default>
+                <label>Eureka</label>
+            </value>
+            <value>
+                <fullName>eXo</fullName>
+                <default>false</default>
+                <label>eXo</label>
+            </value>
+            <value>
+                <fullName>France Telecom (Orange)</fullName>
+                <default>false</default>
+                <label>France Telecom (Orange)</label>
+            </value>
+            <value>
+                <fullName>FreeConferenceCall</fullName>
+                <default>false</default>
+                <label>FreeConferenceCall</label>
+            </value>
+            <value>
+                <fullName>Fuze Business</fullName>
+                <default>false</default>
+                <label>Fuze Business</label>
+            </value>
+            <value>
+                <fullName>Fuze Enterprise</fullName>
+                <default>false</default>
+                <label>Fuze Enterprise</label>
+            </value>
+            <value>
+                <fullName>Fuze Pro</fullName>
+                <default>false</default>
+                <label>Fuze Pro</label>
+            </value>
+            <value>
+                <fullName>Fuze Share</fullName>
+                <default>false</default>
+                <label>Fuze Share</label>
+            </value>
+            <value>
+                <fullName>Glasscubes</fullName>
+                <default>false</default>
+                <label>Glasscubes</label>
+            </value>
+            <value>
+                <fullName>Global Crossing</fullName>
+                <default>false</default>
+                <label>Global Crossing</label>
+            </value>
+            <value>
+                <fullName>GlobalMeet</fullName>
+                <default>false</default>
+                <label>GlobalMeet</label>
+            </value>
+            <value>
+                <fullName>G-NET</fullName>
+                <default>false</default>
+                <label>G-NET</label>
+            </value>
+            <value>
+                <fullName>Google +</fullName>
+                <default>false</default>
+                <label>Google +</label>
+            </value>
+            <value>
+                <fullName>Google+ Hangout</fullName>
+                <default>false</default>
+                <label>Google+ Hangout</label>
+            </value>
+            <value>
+                <fullName>GoToMeeting</fullName>
+                <default>false</default>
+                <label>GoToMeeting</label>
+            </value>
+            <value>
+                <fullName>GoToTraining</fullName>
+                <default>false</default>
+                <label>GoToTraining</label>
+            </value>
+            <value>
+                <fullName>GoToWebinar</fullName>
+                <default>false</default>
+                <label>GoToWebinar</label>
+            </value>
+            <value>
+                <fullName>Hirer Vue</fullName>
+                <default>false</default>
+                <label>Hirer Vue</label>
+            </value>
+            <value>
+                <fullName>Hotair</fullName>
+                <default>false</default>
+                <label>Hotair</label>
+            </value>
+            <value>
+                <fullName>HP</fullName>
+                <default>false</default>
+                <label>HP</label>
+            </value>
+            <value>
+                <fullName>Huddle</fullName>
+                <default>false</default>
+                <label>Huddle</label>
+            </value>
+            <value>
+                <fullName>IBM LotusLive: Events</fullName>
+                <default>false</default>
+                <label>IBM LotusLive: Events</label>
+            </value>
+            <value>
+                <fullName>IBM LotusLive: Meetings</fullName>
+                <default>false</default>
+                <label>IBM LotusLive: Meetings</label>
+            </value>
+            <value>
+                <fullName>iMeet</fullName>
+                <default>false</default>
+                <label>iMeet</label>
+            </value>
+            <value>
+                <fullName>Infinite Conferencing</fullName>
+                <default>false</default>
+                <label>Infinite Conferencing</label>
+            </value>
+            <value>
+                <fullName>Intercall - Attended Audio</fullName>
+                <default>false</default>
+                <label>Intercall - Attended Audio</label>
+            </value>
+            <value>
+                <fullName>Intercall - Automated Audio</fullName>
+                <default>false</default>
+                <label>Intercall - Automated Audio</label>
+            </value>
+            <value>
+                <fullName>InterCall Unified Meeting (IUM)</fullName>
+                <default>false</default>
+                <label>InterCall Unified Meeting (IUM)</label>
+            </value>
+            <value>
+                <fullName>ITX-MoraVideo</fullName>
+                <default>false</default>
+                <label>ITX-MoraVideo</label>
+            </value>
+            <value>
+                <fullName>Japan Media System - LiveOn</fullName>
+                <default>false</default>
+                <label>Japan Media System - LiveOn</label>
+            </value>
+            <value>
+                <fullName>Jive</fullName>
+                <default>false</default>
+                <label>Jive</label>
+            </value>
+            <value>
+                <fullName>Join.me</fullName>
+                <default>false</default>
+                <label>Join.me</label>
+            </value>
+            <value>
+                <fullName>KDDI</fullName>
+                <default>false</default>
+                <label>KDDI</label>
+            </value>
+            <value>
+                <fullName>Korea Telecom</fullName>
+                <default>false</default>
+                <label>Korea Telecom</label>
+            </value>
+            <value>
+                <fullName>Level 3</fullName>
+                <default>false</default>
+                <label>Level 3</label>
+            </value>
+            <value>
+                <fullName>Lifesize</fullName>
+                <default>false</default>
+                <label>Lifesize</label>
+            </value>
+            <value>
+                <fullName>MediaPlatform</fullName>
+                <default>false</default>
+                <label>MediaPlatform</label>
+            </value>
+            <value>
+                <fullName>Microsoft Lync</fullName>
+                <default>false</default>
+                <label>Microsoft Lync</label>
+            </value>
+            <value>
+                <fullName>Microsoft Lync Online</fullName>
+                <default>false</default>
+                <label>Microsoft Lync Online</label>
+            </value>
+            <value>
+                <fullName>Microsoft Office Live Meeting</fullName>
+                <default>false</default>
+                <label>Microsoft Office Live Meeting</label>
+            </value>
+            <value>
+                <fullName>MobileDay</fullName>
+                <default>false</default>
+                <label>MobileDay</label>
+            </value>
+            <value>
+                <fullName>Momentum Conferencing (PGi re-seller)</fullName>
+                <default>false</default>
+                <label>Momentum Conferencing (PGi re-seller)</label>
+            </value>
+            <value>
+                <fullName>Montage Talent</fullName>
+                <default>false</default>
+                <label>Montage Talent</label>
+            </value>
+            <value>
+                <fullName>MS Sharepoint</fullName>
+                <default>false</default>
+                <label>MS Sharepoint</label>
+            </value>
+            <value>
+                <fullName>NASDAQ OMX</fullName>
+                <default>false</default>
+                <label>NASDAQ OMX</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Not Disclosed</fullName>
+                <default>false</default>
+                <label>Not Disclosed</label>
+            </value>
+            <value>
+                <fullName>NTT Communications</fullName>
+                <default>false</default>
+                <label>NTT Communications</label>
+            </value>
+            <value>
+                <fullName>NTT-IT-MeetingPlaza</fullName>
+                <default>false</default>
+                <label>NTT-IT-MeetingPlaza</label>
+            </value>
+            <value>
+                <fullName>NTT Marketing Act</fullName>
+                <default>false</default>
+                <label>NTT Marketing Act</label>
+            </value>
+            <value>
+                <fullName>OKI Electric</fullName>
+                <default>false</default>
+                <label>OKI Electric</label>
+            </value>
+            <value>
+                <fullName>ON24</fullName>
+                <default>false</default>
+                <label>ON24</label>
+            </value>
+            <value>
+                <fullName>Optus</fullName>
+                <default>false</default>
+                <label>Optus</label>
+            </value>
+            <value>
+                <fullName>Orange</fullName>
+                <default>false</default>
+                <label>Orange</label>
+            </value>
+            <value>
+                <fullName>Other Product</fullName>
+                <default>false</default>
+                <label>Other Product</label>
+            </value>
+            <value>
+                <fullName>PCCW</fullName>
+                <default>false</default>
+                <label>PCCW</label>
+            </value>
+            <value>
+                <fullName>PGi</fullName>
+                <default>false</default>
+                <label>PGi</label>
+            </value>
+            <value>
+                <fullName>Pioneer</fullName>
+                <default>false</default>
+                <label>Pioneer</label>
+            </value>
+            <value>
+                <fullName>Platform</fullName>
+                <default>false</default>
+                <label>Platform</label>
+            </value>
+            <value>
+                <fullName>Polycom</fullName>
+                <default>false</default>
+                <label>Polycom</label>
+            </value>
+            <value>
+                <fullName>Pow Wow Now</fullName>
+                <default>false</default>
+                <label>Pow Wow Now</label>
+            </value>
+            <value>
+                <fullName>Pragmatic Conferencing</fullName>
+                <default>false</default>
+                <label>Pragmatic Conferencing</label>
+            </value>
+            <value>
+                <fullName>Primus</fullName>
+                <default>false</default>
+                <label>Primus</label>
+            </value>
+            <value>
+                <fullName>Qumu</fullName>
+                <default>false</default>
+                <label>Qumu</label>
+            </value>
+            <value>
+                <fullName>Radvision</fullName>
+                <default>false</default>
+                <label>Radvision</label>
+            </value>
+            <value>
+                <fullName>Recite</fullName>
+                <default>false</default>
+                <label>Recite</label>
+            </value>
+            <value>
+                <fullName>Redback</fullName>
+                <default>false</default>
+                <label>Redback</label>
+            </value>
+            <value>
+                <fullName>Reservation-Plus Conferencing</fullName>
+                <default>false</default>
+                <label>Reservation-Plus Conferencing</label>
+            </value>
+            <value>
+                <fullName>RoboHead</fullName>
+                <default>false</default>
+                <label>RoboHead</label>
+            </value>
+            <value>
+                <fullName>Rogers (PGi re-seller)</fullName>
+                <default>false</default>
+                <label>Rogers (PGi re-seller)</label>
+            </value>
+            <value>
+                <fullName>SaskTel</fullName>
+                <default>false</default>
+                <label>SaskTel</label>
+            </value>
+            <value>
+                <fullName>Shanghai Shrine</fullName>
+                <default>false</default>
+                <label>Shanghai Shrine</label>
+            </value>
+            <value>
+                <fullName>Singtel</fullName>
+                <default>false</default>
+                <label>Singtel</label>
+            </value>
+            <value>
+                <fullName>Skype: Business</fullName>
+                <default>false</default>
+                <label>Skype: Business</label>
+            </value>
+            <value>
+                <fullName>Skype: Free</fullName>
+                <default>false</default>
+                <label>Skype: Free</label>
+            </value>
+            <value>
+                <fullName>Skype: Premium</fullName>
+                <default>false</default>
+                <label>Skype: Premium</label>
+            </value>
+            <value>
+                <fullName>SOBA Mieruka</fullName>
+                <default>false</default>
+                <label>SOBA Mieruka</label>
+            </value>
+            <value>
+                <fullName>SoftBank</fullName>
+                <default>false</default>
+                <label>SoftBank</label>
+            </value>
+            <value>
+                <fullName>Sonic Foundry</fullName>
+                <default>false</default>
+                <label>Sonic Foundry</label>
+            </value>
+            <value>
+                <fullName>Soundpath</fullName>
+                <default>false</default>
+                <label>Soundpath</label>
+            </value>
+            <value>
+                <fullName>StarConferencing</fullName>
+                <default>false</default>
+                <label>StarConferencing</label>
+            </value>
+            <value>
+                <fullName>Talkpoint</fullName>
+                <default>false</default>
+                <label>Talkpoint</label>
+            </value>
+            <value>
+                <fullName>Tandberg (Cisco)</fullName>
+                <default>false</default>
+                <label>Tandberg (Cisco)</label>
+            </value>
+            <value>
+                <fullName>Telecom Malaysia</fullName>
+                <default>false</default>
+                <label>Telecom Malaysia</label>
+            </value>
+            <value>
+                <fullName>Telestream</fullName>
+                <default>false</default>
+                <label>Telestream</label>
+            </value>
+            <value>
+                <fullName>Telstra</fullName>
+                <default>false</default>
+                <label>Telstra</label>
+            </value>
+            <value>
+                <fullName>Telus</fullName>
+                <default>false</default>
+                <label>Telus</label>
+            </value>
+            <value>
+                <fullName>Tempo</fullName>
+                <default>false</default>
+                <label>Tempo</label>
+            </value>
+            <value>
+                <fullName>Überconference</fullName>
+                <default>false</default>
+                <label>Überconference</label>
+            </value>
+            <value>
+                <fullName>Unify Square</fullName>
+                <default>false</default>
+                <label>Unify Square</label>
+            </value>
+            <value>
+                <fullName>VBrick</fullName>
+                <default>false</default>
+                <label>VBrick</label>
+            </value>
+            <value>
+                <fullName>V-CUBE</fullName>
+                <default>false</default>
+                <label>V-CUBE</label>
+            </value>
+            <value>
+                <fullName>Verizon Business Net Conferencing</fullName>
+                <default>false</default>
+                <label>Verizon Business Net Conferencing</label>
+            </value>
+            <value>
+                <fullName>Verizon Conferencing</fullName>
+                <default>false</default>
+                <label>Verizon Conferencing</label>
+            </value>
+            <value>
+                <fullName>Vesta Networks</fullName>
+                <default>false</default>
+                <label>Vesta Networks</label>
+            </value>
+            <value>
+                <fullName>Vidyo</fullName>
+                <default>false</default>
+                <label>Vidyo</label>
+            </value>
+            <value>
+                <fullName>Vyte.in</fullName>
+                <default>false</default>
+                <label>Vyte.in</label>
+            </value>
+            <value>
+                <fullName>WebEx EC (Event Center)</fullName>
+                <default>false</default>
+                <label>WebEx EC (Event Center)</label>
+            </value>
+            <value>
+                <fullName>WebEx EE (Enterprise Edition)</fullName>
+                <default>false</default>
+                <label>WebEx EE (Enterprise Edition)</label>
+            </value>
+            <value>
+                <fullName>WebEx MC (Meeting Center)</fullName>
+                <default>false</default>
+                <label>WebEx MC (Meeting Center)</label>
+            </value>
+            <value>
+                <fullName>WebEx SC (Support Center)</fullName>
+                <default>false</default>
+                <label>WebEx SC (Support Center)</label>
+            </value>
+            <value>
+                <fullName>WebEx TC (Training Center)</fullName>
+                <default>false</default>
+                <label>WebEx TC (Training Center)</label>
+            </value>
+            <value>
+                <fullName>WindStream</fullName>
+                <default>false</default>
+                <label>WindStream</label>
+            </value>
+            <value>
+                <fullName>Workamajig</fullName>
+                <default>false</default>
+                <label>Workamajig</label>
+            </value>
+            <value>
+                <fullName>Workfront (formally AtTask)</fullName>
+                <default>false</default>
+                <label>Workfront (formally AtTask)</label>
+            </value>
+            <value>
+                <fullName>Wrike</fullName>
+                <default>false</default>
+                <label>Wrike</label>
+            </value>
+            <value>
+                <fullName>Yammer</fullName>
+                <default>false</default>
+                <label>Yammer</label>
+            </value>
+            <value>
+                <fullName>Zoom</fullName>
+                <default>false</default>
+                <label>Zoom</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

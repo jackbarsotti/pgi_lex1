@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tracking Root Category --></label>
+    <name>Tracking_Root_Category__c</name>
+    <picklistValues>
+        <masterLabel>Account</masterLabel>
+        <translation><!-- Account --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Active Directory</masterLabel>
+        <translation><!-- Active Directory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Application</masterLabel>
+        <translation><!-- Application --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Application - Other</masterLabel>
+        <translation><!-- Application - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Application - PGi</masterLabel>
+        <translation><!-- Application - PGi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Billing</masterLabel>
+        <translation><!-- Billing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Carrier</masterLabel>
+        <translation><!-- Carrier --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client Transport Issue</masterLabel>
+        <translation><!-- Client Transport Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cloud Vendor</masterLabel>
+        <translation><!-- Cloud Vendor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Collaboration Services</masterLabel>
+        <translation><!-- Collaboration Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DHCP</masterLabel>
+        <translation><!-- DHCP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DNS</masterLabel>
+        <translation><!-- DNS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deskside Systems</masterLabel>
+        <translation><!-- Deskside Systems --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Desktop</masterLabel>
+        <translation><!-- Desktop --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Duplicate Ticket</masterLabel>
+        <translation><!-- Duplicate Ticket --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email Services</masterLabel>
+        <translation><!-- Email Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>End User Device</masterLabel>
+        <translation><!-- End User Device --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>End User Education/Request</masterLabel>
+        <translation><!-- End User Education/Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>End User Error</masterLabel>
+        <translation><!-- End User Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FTP</masterLabel>
+        <translation><!-- FTP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>File &amp; Print Services</masterLabel>
+        <translation><!-- File &amp; Print Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fraud</masterLabel>
+        <translation><!-- Fraud --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Instant Messaging</masterLabel>
+        <translation><!-- Instant Messaging --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Laptop</masterLabel>
+        <translation><!-- Laptop --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MVAS</masterLabel>
+        <translation><!-- MVAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mobile/Smartphone</masterLabel>
+        <translation><!-- Mobile/Smartphone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Network Interface</masterLabel>
+        <translation><!-- Network Interface --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Action Required</masterLabel>
+        <translation><!-- No Action Required --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Common Root Cause</masterLabel>
+        <translation><!-- No Common Root Cause --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PBX</masterLabel>
+        <translation><!-- PBX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGI Human Error - Call Delivery</masterLabel>
+        <translation><!-- PGI Human Error - Call Delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGI Human Error - Enhanced Services</masterLabel>
+        <translation><!-- PGI Human Error - Enhanced Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGI Human Error - Event Productions</masterLabel>
+        <translation><!-- PGI Human Error - Event Productions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGI Human Error - Reservations</masterLabel>
+        <translation><!-- PGI Human Error - Reservations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi Human Error</masterLabel>
+        <translation><!-- PGi Human Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi Human Error - Provisioning</masterLabel>
+        <translation><!-- PGi Human Error - Provisioning --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi Human Error - Scheduling</masterLabel>
+        <translation><!-- PGi Human Error - Scheduling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi Hybrid Audio</masterLabel>
+        <translation><!-- PGi Hybrid Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi Infrastructure - Audio Bridge</masterLabel>
+        <translation><!-- PGi Infrastructure - Audio Bridge --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi Infrastructure - Back Office</masterLabel>
+        <translation><!-- PGi Infrastructure - Back Office --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi Managed Infrastructure - Video</masterLabel>
+        <translation><!-- PGi Managed Infrastructure - Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi Product</masterLabel>
+        <translation><!-- PGi Product --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PTA Not Needed</masterLabel>
+        <translation><!-- PTA Not Needed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PTA Only-Client Impact Not Caused by PGi</masterLabel>
+        <translation><!-- PTA Only-Client Impact Not Caused by PGi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partner Carrier</masterLabel>
+        <translation><!-- Partner Carrier --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partner Products</masterLabel>
+        <translation><!-- Partner Products --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending Parent Closure</masterLabel>
+        <translation><!-- Pending Parent Closure --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Peripheral</masterLabel>
+        <translation><!-- Peripheral --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Printer</masterLabel>
+        <translation><!-- Printer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Problem Opened to Normalize Service</masterLabel>
+        <translation><!-- Problem Opened to Normalize Service --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product Working As Designed</masterLabel>
+        <translation><!-- Product Working As Designed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Responsible Party Undefined</masterLabel>
+        <translation><!-- Responsible Party Undefined --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Root Category Under Review</masterLabel>
+        <translation><!-- Root Category Under Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Root Category Unknown</masterLabel>
+        <translation><!-- Root Category Unknown --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Undefinable</masterLabel>
+        <translation><!-- Undefinable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Account</masterLabel>
+        <translation><!-- User Account --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vendor Human Error</masterLabel>
+        <translation><!-- Vendor Human Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vendor Managed Element - Video</masterLabel>
+        <translation><!-- Vendor Managed Element - Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video Equipment</masterLabel>
+        <translation><!-- Video Equipment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Virtualization</masterLabel>
+        <translation><!-- Virtualization --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Virus/Malware/Anti-Virus</masterLabel>
+        <translation><!-- Virus/Malware/Anti-Virus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcast Vendor Error</masterLabel>
+        <translation><!-- Webcast Vendor Error --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

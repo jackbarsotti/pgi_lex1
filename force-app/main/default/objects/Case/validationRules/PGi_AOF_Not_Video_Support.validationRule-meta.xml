@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_AOF_Not_Video_Support</fullName>
+    <active>false</active>
+    <description>NOTE - THIS RULE DID NOT WORK AS INTENDED. DO NOT ACTIVATE. If Area of Focus is anything other than Video Support, then the following fields are required:  Conference ID, Bridge Name, Moderator Passcode, and Participant Passcode</description>
+    <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+$Profile.Name &lt;&gt; &quot;Zendesk Profile&quot;,
+RecordType.Name = &quot;PGi-Client External Support&quot;,
+(
+ISPICKVAL(Area_of_Focus__c,&#39;Audio Integration&#39;) ||
+ISPICKVAL(Area_of_Focus__c,&#39;Audio Integration Support&#39;) ||
+ISPICKVAL(Area_of_Focus__c,&#39;Audio Support&#39;) ||
+ISPICKVAL(Area_of_Focus__c,&#39;Client Education/Request&#39;) || 
+ISPICKVAL(Area_of_Focus__c,&#39;General Tech Support&#39;) ||
+ISPICKVAL(Area_of_Focus__c,&#39;Mobile Support&#39;) ||
+ISPICKVAL(Area_of_Focus__c,&#39;Recording Support&#39;) ||
+ISPICKVAL(Area_of_Focus__c,&#39;Toolbar Support&#39;) ||
+ISPICKVAL(Area_of_Focus__c,&#39;Web Support&#39;)
+),
+ISBLANK ( PGi_Conference__c  )||
+ISBLANK ( PGi_Conference__r.Bridge_Name__c  )||
+ISBLANK ( PGi_Conference__r.Moderator_Passcode__c )||
+ISBLANK ( PGi_Conference__r.Listen_Only_Passcode__c )
+)</errorConditionFormula>
+    <errorMessage>If Area of Focus is anything other than Video Support, you must populate the following fields: PGi Conference, Bridge Name, Moderator Passcode, and Participant Passcode</errorMessage>
+</ValidationRule>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Functional Organization --></label>
+    <name>Functional_Organization__c</name>
+    <picklistValues>
+        <masterLabel>Care - Attended Conferencing Systems</masterLabel>
+        <translation><!-- Care - Attended Conferencing Systems --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Care - Call Delivery</masterLabel>
+        <translation><!-- Care - Call Delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Care - Call Delivery Systems</masterLabel>
+        <translation><!-- Care - Call Delivery Systems --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Care - Carrier/Partner Onboarding</masterLabel>
+        <translation><!-- Care - Carrier/Partner Onboarding --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Care - Enhanced Services</masterLabel>
+        <translation><!-- Care - Enhanced Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Care - Event Production Managers</masterLabel>
+        <translation><!-- Care - Event Production Managers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Care - Other</masterLabel>
+        <translation><!-- Care - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Care - Quality Assurance</masterLabel>
+        <translation><!-- Care - Quality Assurance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Care - Reservations</masterLabel>
+        <translation><!-- Care - Reservations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Care - Revenue Assurance</masterLabel>
+        <translation><!-- Care - Revenue Assurance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Care - Service Experience Management</masterLabel>
+        <translation><!-- Care - Service Experience Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Care - Tier 1</masterLabel>
+        <translation><!-- Care - Tier 1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Care - Tier 2</masterLabel>
+        <translation><!-- Care - Tier 2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Care - Training</masterLabel>
+        <translation><!-- Care - Training --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Care - Webcast Production</masterLabel>
+        <translation><!-- Care - Webcast Production --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Care - Workforce Management</masterLabel>
+        <translation><!-- Care - Workforce Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Executive - Admin</masterLabel>
+        <translation><!-- Executive - Admin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Executive - Executive</masterLabel>
+        <translation><!-- Executive - Executive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Executive - Other</masterLabel>
+        <translation><!-- Executive - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Finance - Accounts Payable</masterLabel>
+        <translation><!-- Finance - Accounts Payable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Finance - Accounts Receivable</masterLabel>
+        <translation><!-- Finance - Accounts Receivable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Finance - Audit</masterLabel>
+        <translation><!-- Finance - Audit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Finance - Billing Helpdesk</masterLabel>
+        <translation><!-- Finance - Billing Helpdesk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Finance - FP&amp;A</masterLabel>
+        <translation><!-- Finance - FP&amp;A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Finance - Other</masterLabel>
+        <translation><!-- Finance - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Finance - Procurement</masterLabel>
+        <translation><!-- Finance - Procurement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Finance - Tax</masterLabel>
+        <translation><!-- Finance - Tax --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Finance - Telco</masterLabel>
+        <translation><!-- Finance - Telco --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HR - Benefits</masterLabel>
+        <translation><!-- HR - Benefits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HR - Generalist</masterLabel>
+        <translation><!-- HR - Generalist --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HR - Operation Specialist</masterLabel>
+        <translation><!-- HR - Operation Specialist --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HR - Other</masterLabel>
+        <translation><!-- HR - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HR - Recruiting</masterLabel>
+        <translation><!-- HR - Recruiting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Legal - Counsel</masterLabel>
+        <translation><!-- Legal - Counsel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Legal - Other</masterLabel>
+        <translation><!-- Legal - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Legal - Paralegal</masterLabel>
+        <translation><!-- Legal - Paralegal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing - Communications</masterLabel>
+        <translation><!-- Marketing - Communications --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing - Demand Generation</masterLabel>
+        <translation><!-- Marketing - Demand Generation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing - Ireland</masterLabel>
+        <translation><!-- Marketing - Ireland --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing - Other</masterLabel>
+        <translation><!-- Marketing - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing - Sales Enablement &amp; Analytics</masterLabel>
+        <translation><!-- Marketing - Sales Enablement &amp; Analytics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing - Solutions</masterLabel>
+        <translation><!-- Marketing - Solutions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales - Carrier Partners</masterLabel>
+        <translation><!-- Sales - Carrier Partners --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales - Field Sales</masterLabel>
+        <translation><!-- Sales - Field Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales - GSM</masterLabel>
+        <translation><!-- Sales - GSM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales - IST</masterLabel>
+        <translation><!-- Sales - IST --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales - Inside Sales</masterLabel>
+        <translation><!-- Sales - Inside Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales - Other</masterLabel>
+        <translation><!-- Sales - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales - Partner Sales</masterLabel>
+        <translation><!-- Sales - Partner Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales - SaaS Sales</masterLabel>
+        <translation><!-- Sales - SaaS Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales - Sales Eng</masterLabel>
+        <translation><!-- Sales - Sales Eng --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales - Sales Ops</masterLabel>
+        <translation><!-- Sales - Sales Ops --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales - Sales Rep</masterLabel>
+        <translation><!-- Sales - Sales Rep --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technology - Corp IT</masterLabel>
+        <translation><!-- Technology - Corp IT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technology - Global Ops</masterLabel>
+        <translation><!-- Technology - Global Ops --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technology - Other</masterLabel>
+        <translation><!-- Technology - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technology - R&amp;D (includes Product, QA, SaaS Ops, Dev)</masterLabel>
+        <translation><!-- Technology - R&amp;D (includes Product, QA, SaaS Ops, Dev) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

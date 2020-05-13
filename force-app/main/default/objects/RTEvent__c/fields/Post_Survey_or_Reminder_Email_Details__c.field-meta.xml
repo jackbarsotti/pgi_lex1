@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Post_Survey_or_Reminder_Email_Details__c</fullName>
+    <description>Enter details regarding a post survey or reminder emails</description>
+    <externalId>false</externalId>
+    <label>Post Survey or Reminder Email Details</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

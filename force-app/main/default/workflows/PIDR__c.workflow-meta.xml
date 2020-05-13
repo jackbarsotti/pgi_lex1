@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Personal_Information_Data_Request_Alert_APAC</fullName>
+        <ccEmails>APSABilling@pgi.com</ccEmails>
+        <description>Personal Information Data Request Alert - APAC</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Emails/PIDR_PIDR_Alert</template>
+    </alerts>
+    <alerts>
+        <fullName>Personal_Information_Data_Request_Alert_EMEA</fullName>
+        <ccEmails>eubilling2@pgi.com</ccEmails>
+        <description>Personal Information Data Request Alert - EMEA</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Emails/PIDR_PIDR_Alert</template>
+    </alerts>
+    <alerts>
+        <fullName>Personal_Information_Data_Request_Alert_Hyperion_System</fullName>
+        <ccEmails>emp@pgi.com</ccEmails>
+        <description>Personal Information Data Request Alert - Hyperion System</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Emails/PIDR_PIDR_Alert</template>
+    </alerts>
+    <alerts>
+        <fullName>Personal_Information_Data_Request_Alert_Talkpoint</fullName>
+        <ccEmails>privacy@webcasts.com</ccEmails>
+        <description>Personal Information Data Request Alert - TalkPoint</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Emails/PIDR_PIDR_Alert</template>
+    </alerts>
+    <alerts>
+        <fullName>Personal_Information_Data_Request_Alert_WINS_System</fullName>
+        <description>Personal Information Data Request Alert - WINS System</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>james.boyd@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sean.keevil@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Emails/PIDR_PIDR_Alert</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>GDPR_Capture_Close_Date</fullName>
+        <description>When the GDPR Status equals &quot;Closed&quot;, capture the Date and Time.</description>
+        <field>Closed_Date__c</field>
+        <formula>NOW()</formula>
+        <name>GDPR, Capture Close Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status</fullName>
+        <description>System automatically Closes the PIDR request once all related Cases, FinReqs, and RFCs have been set to a closed status</description>
+        <field>Status__c</field>
+        <literalValue>Closed</literalValue>
+        <name>Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Update</fullName>
+        <description>Automatically Close the PIDR request once all related Cases, FinReqs, and RFCs have been set to a closed status.</description>
+        <field>Status__c</field>
+        <literalValue>Closed</literalValue>
+        <name>Status Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>PIDR Status Update</fullName>
+        <actions>
+            <name>Status_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>PIDR__c.Open_Cases_Count__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PIDR__c.Open_FinReqs_Count__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PIDR__c.Open_RFCs_Count__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PIDR__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Approved</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PIDR%2C Capture Close Date</fullName>
+        <actions>
+            <name>GDPR_Capture_Close_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>PIDR__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <description>When the PIDR Status equals &quot;Closed&quot;, capture the Date and Time.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

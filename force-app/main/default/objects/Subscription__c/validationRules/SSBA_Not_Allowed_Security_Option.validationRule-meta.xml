@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SSBA_Not_Allowed_Security_Option</fullName>
+    <active>true</active>
+    <description>Cannot save record when SBBA is checked and Security Option is Optional or Mandatory.</description>
+    <errorConditionFormula>( ssbaAllowed__c  = true) &amp;&amp; or(ispickval( Security_Passcode__c ,&quot;Optional Security&quot;),or(ispickval( Security_Passcode__c , &quot;Mandatory Security&quot;)))</errorConditionFormula>
+    <errorDisplayField>Security_Passcode__c</errorDisplayField>
+    <errorMessage>If Security Option is set to Optional or Mandatory, SSBA cannot be enabled.</errorMessage>
+</ValidationRule>

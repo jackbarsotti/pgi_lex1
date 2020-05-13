@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Status --></label>
+    <name>echosign_dev1__Status__c</name>
+    <picklistValues>
+        <masterLabel>Approved</masterLabel>
+        <translation>Approvato</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Declined</masterLabel>
+        <translation>Rifiutato</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Replaced</masterLabel>
+        <translation>Sostituito</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Signed</masterLabel>
+        <translation>Firmato</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waiting for Approval</masterLabel>
+        <translation>In attesa di approvazione</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waiting for Signature</masterLabel>
+        <translation>In attesa della firma</translation>
+    </picklistValues>
+</CustomFieldTranslation>

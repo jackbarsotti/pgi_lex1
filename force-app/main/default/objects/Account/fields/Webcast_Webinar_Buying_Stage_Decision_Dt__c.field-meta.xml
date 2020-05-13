@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Webcast_Webinar_Buying_Stage_Decision_Dt__c</fullName>
+    <description>Date of when Account Buying Stage = &quot;Decision&quot;</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Last date of when Webinar Account Buying Stage was &quot;Decision&quot;</inlineHelpText>
+    <label>Webcast/Webinar Buying Stage Decision Dt</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

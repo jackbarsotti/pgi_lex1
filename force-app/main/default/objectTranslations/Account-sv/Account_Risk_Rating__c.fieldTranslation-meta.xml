@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- SAFE:
+LOW: BAU/in a contract/no change anticipated 
+HIGH: Potential Revenue Decline/Renewal or RFP Coming or Underway 
+EXTREME: Dramatic revenue loss or customer loss probable --></help>
+    <label><!-- Account Risk Rating --></label>
+    <name>Account_Risk_Rating__c</name>
+    <picklistValues>
+        <masterLabel>EXTREME</masterLabel>
+        <translation><!-- EXTREME --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HIGH</masterLabel>
+        <translation><!-- HIGH --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LOW</masterLabel>
+        <translation><!-- LOW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SAFE</masterLabel>
+        <translation><!-- SAFE --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

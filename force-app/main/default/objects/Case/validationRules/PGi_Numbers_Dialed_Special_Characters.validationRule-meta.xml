@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Numbers_Dialed_Special_Characters</fullName>
+    <active>true</active>
+    <description>Regular expression to disallow special characters on fields Conference Number Dialed, 
+User&#39;s Number Dialed From, and User&#39;s Number Dialed</description>
+    <errorConditionFormula>AND( 
+$User.Override_Validation_Rules__c = False, 
+$User.Profile_Name_Text__c &lt;&gt; &quot;System Administrator&quot;, 
+NOT(ISCHANGED(IsUpdateFromCaseComment__c)),
+OR( 
+CONTAINS(Conference_Number_Dialed__c, &#39;(&#39;),
+CONTAINS(Conference_Number_Dialed__c, &#39;)&#39;),
+CONTAINS(Conference_Number_Dialed__c, &#39;+&#39;), 
+CONTAINS(Conference_Number_Dialed__c, &#39;-&#39;), 
+CONTAINS(Conference_Number_Dialed__c, &#39;#&#39;),
+CONTAINS(User_s_Number_Dialed_From__c, &#39;(&#39;),
+CONTAINS(User_s_Number_Dialed_From__c, &#39;)&#39;),
+CONTAINS(User_s_Number_Dialed_From__c, &#39;+&#39;), 
+CONTAINS(User_s_Number_Dialed_From__c, &#39;-&#39;), 
+CONTAINS(User_s_Number_Dialed_From__c, &#39;#&#39;),
+CONTAINS(User_s_Number_Dialed__c, &#39;(&#39;),
+CONTAINS(User_s_Number_Dialed__c, &#39;)&#39;),
+CONTAINS(User_s_Number_Dialed__c, &#39;+&#39;), 
+CONTAINS(User_s_Number_Dialed__c, &#39;-&#39;), 
+CONTAINS(User_s_Number_Dialed__c, &#39;#&#39;)
+))</errorConditionFormula>
+    <errorMessage>Conference Number Dialed, User&#39;s Number Dialed From, and User&#39;s Number Dialed fields cannot contain the following special characters: ( ) + - #</errorMessage>
+</ValidationRule>

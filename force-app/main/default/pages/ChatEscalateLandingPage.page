@@ -1,0 +1,13 @@
+<apex:page showHeader="false" sidebar="false">
+
+  <apex:form id="formId">
+      
+      <apex:pageBlock title="Escalate to Lead" id="pageBlockId">
+      <apex:pageMessages />
+      <apex:pageBlockSection columns="1">
+           <p>This chat has been successfully escalated.</p>
+      </apex:pageBlockSection>   
+            
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>

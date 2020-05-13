@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Last date of when Webinar Account Buying Stage was &quot;Decision&quot; --></help>
+    <label><!-- Webcast/Webinar Buying Stage Decision Dt --></label>
+    <name>Webcast_Webinar_Buying_Stage_Decision_Dt__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Disable the following: --></label>
+    <name>Disable_the_following__c</name>
+    <picklistValues>
+        <masterLabel>Adobe Creative Cloud License</masterLabel>
+        <translation><!-- Adobe Creative Cloud License --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Airwatch</masterLabel>
+        <translation><!-- Airwatch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fax2mail</masterLabel>
+        <translation><!-- Fax2mail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet</masterLabel>
+        <translation><!-- GlobalMeet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jira</masterLabel>
+        <translation><!-- Jira --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGiTime</masterLabel>
+        <translation><!-- PGiTime --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Premiere Login</masterLabel>
+        <translation><!-- Premiere Login --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salesforce</masterLabel>
+        <translation><!-- Salesforce --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

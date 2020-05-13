@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select any/all event products reviewed with prospect so AM can manage expectations. --></help>
+    <label><!-- Event Products Reviewed --></label>
+    <name>Events_Products_Reviewed__c</name>
+    <picklistValues>
+        <masterLabel>Add&#39;l Event Services</masterLabel>
+        <translation><!-- Add&apos;l Event Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Broadcast Audio</masterLabel>
+        <translation><!-- Broadcast Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gold Webinar</masterLabel>
+        <translation><!-- Gold Webinar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>None</masterLabel>
+        <translation><!-- None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Op-Assist Services</masterLabel>
+        <translation><!-- Op-Assist Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Platinum Webinar</masterLabel>
+        <translation><!-- Platinum Webinar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Simulive</masterLabel>
+        <translation><!-- Simulive --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

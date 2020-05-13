@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>RFP_Age_90_Days</fullName>
+        <description>RFP Age 90 Days</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Sales_Rep_Name__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Emails/RFP_Age_90_Days</template>
+    </alerts>
+    <alerts>
+        <fullName>RFP_New_Request_Alert</fullName>
+        <ccEmails>rfpalert@pgi.com</ccEmails>
+        <description>RFP New Request Alert</description>
+        <protected>false</protected>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Emails/New_RFP_Request_Notification</template>
+    </alerts>
+    <rules>
+        <fullName>RFP Age 90 Days</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>RFP_Request__c.CreatedDate</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RFP_Request__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Open - Awaiting Decision</value>
+        </criteriaItems>
+        <description>Sends email to Rep when a request ages to 90 days (due date)</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>RFP_Age_90_Days</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>RFP_Request__c.CreatedDate</offsetFromField>
+            <timeLength>90</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>RFP New Request Alert</fullName>
+        <actions>
+            <name>RFP_New_Request_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>RFP_Request__c.CreatedDate</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RFP_Request__c.CreatedById</field>
+            <operation>notContain</operation>
+            <value>CRM Support Team</value>
+        </criteriaItems>
+        <description>Sends email notifying team of a new request.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Holiday_Treatment_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Holiday Treatment Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Closed Message</fullName>
+                <default>false</default>
+                <label>Closed Message</label>
+            </value>
+            <value>
+                <fullName>Redirect</fullName>
+                <default>false</default>
+                <label>Redirect</label>
+            </value>
+            <value>
+                <fullName>Voicemail</fullName>
+                <default>false</default>
+                <label>Voicemail</label>
+            </value>
+            <value>
+                <fullName>3rd Party Transfer</fullName>
+                <default>false</default>
+                <label>3rd Party Transfer</label>
+            </value>
+            <value>
+                <fullName>Please press 1 for service in English, or press 2 to leave a voicemail</fullName>
+                <default>false</default>
+                <label>Please press 1 for service in English, or press 2 to leave a voicemail</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

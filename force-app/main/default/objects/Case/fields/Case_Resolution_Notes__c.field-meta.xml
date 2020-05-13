@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Resolution_Notes__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This is used to pass along customer notes via email and case resolution notes when closing a case.</inlineHelpText>
+    <label>Customer Facing Notes</label>
+    <length>32000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

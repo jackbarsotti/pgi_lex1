@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Natterbox will attempt to link the Natterbox user to a corresponding user in Salesforce. If this link is successful, the user in Salesforce that was responsible for the call will be listed here. If no user in Salesforce could be found, this will be blank. --></help>
+    <label><!-- User --></label>
+    <name>Owner__c</name>
+    <relationshipLabel><!-- Natterbox Call Reporting Object --></relationshipLabel>
+</CustomFieldTranslation>

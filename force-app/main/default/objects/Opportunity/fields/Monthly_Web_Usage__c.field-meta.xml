@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Monthly_Web_Usage__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicate number of web minutes prospect currently uses each month.</inlineHelpText>
+    <label>Monthly Web Usage</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

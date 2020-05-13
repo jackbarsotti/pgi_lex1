@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Current Phone System Contract Status? --></label>
+    <name>Current_Phone_System_Contract_Status__c</name>
+    <picklistValues>
+        <masterLabel>No Contract</masterLabel>
+        <translation><!-- No Contract --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unknown</masterLabel>
+        <translation><!-- Unknown --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes but end date is Unknown</masterLabel>
+        <translation><!-- Yes but end date is Unknown --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes under contract</masterLabel>
+        <translation><!-- Yes under contract --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

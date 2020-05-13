@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booked_With_Logo__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( Booked_With__c , 
+&quot;Level 3&quot;, IMAGE(&quot;/servlet/servlet.FileDownload?file=0151B000003pQfM&quot;,&quot;Level 3&quot;), 
+&quot;InterCall&quot;, IMAGE(&quot;/servlet/servlet.FileDownload?file=0151B000003pQfH&quot;, &quot;InterCall&quot;), 
+&quot;PGi&quot;, IMAGE(&quot;/servlet/servlet.FileDownload?file=0151B000003pQfb&quot;, &quot;PGi&quot;),
+&quot;Select an audio provider in Booked With to see their logo.&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Booked With Logo</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

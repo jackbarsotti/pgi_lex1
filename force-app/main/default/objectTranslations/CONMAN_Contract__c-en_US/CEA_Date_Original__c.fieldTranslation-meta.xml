@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is the Original Contract/End Anniversary Date for this Contract. This should never change once it has been entered to the system. --></help>
+    <label><!-- CEA Date - Original --></label>
+    <name>CEA_Date_Original__c</name>
+</CustomFieldTranslation>

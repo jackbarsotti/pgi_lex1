@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select web service for the access code. --></help>
+    <label><!-- Web Type --></label>
+    <name>Web_Sub_Default_Type__c</name>
+    <picklistValues>
+        <masterLabel>None (Per-Minute Rates Apply)</masterLabel>
+        <translation><!-- None (Per-Minute Rates Apply) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unlimited Webinar</masterLabel>
+        <translation><!-- Unlimited Webinar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web Meeting</masterLabel>
+        <translation><!-- Web Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web Meeting Pro (150)</masterLabel>
+        <translation><!-- Web Meeting Pro (150) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web Meeting Pro (25)</masterLabel>
+        <translation><!-- Web Meeting Pro (25) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webinar (150)</masterLabel>
+        <translation><!-- Webinar (150) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webinar (3000)</masterLabel>
+        <translation><!-- Webinar (3000) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webinar (500)</masterLabel>
+        <translation><!-- Webinar (500) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

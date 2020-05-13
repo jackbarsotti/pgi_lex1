@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Worker Conversion --></label>
+    <name>Worker_Conversion__c</name>
+    <picklistValues>
+        <masterLabel>Contractor to Employee</masterLabel>
+        <translation><!-- Contractor to Employee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Employee to Contractor</masterLabel>
+        <translation><!-- Employee to Contractor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Intern to Employee</masterLabel>
+        <translation><!-- Intern to Employee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Intern to Temporary</masterLabel>
+        <translation><!-- Intern to Temporary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Student to Contractor</masterLabel>
+        <translation><!-- Student to Contractor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Student to Employee</masterLabel>
+        <translation><!-- Student to Employee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Student to Temporary</masterLabel>
+        <translation><!-- Student to Temporary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Temporary to Contractor</masterLabel>
+        <translation><!-- Temporary to Contractor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Temporary to Employee</masterLabel>
+        <translation><!-- Temporary to Employee --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

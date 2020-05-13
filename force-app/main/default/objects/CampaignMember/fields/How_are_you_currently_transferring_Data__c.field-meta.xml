@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_are_you_currently_transferring_Data__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>How are you currently transferring data between ReadyTalk and Technology Partner today?</inlineHelpText>
+    <label>How are you currently transferring Data</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

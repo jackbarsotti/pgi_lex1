@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Contact Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bill To</fullName>
+                <default>true</default>
+                <label>Bill To</label>
+            </value>
+            <value>
+                <fullName>Admin</fullName>
+                <default>false</default>
+                <label>Admin</label>
+            </value>
+            <value>
+                <fullName>Moderator</fullName>
+                <default>false</default>
+                <label>Moderator</label>
+            </value>
+            <value>
+                <fullName>Primary Sales</fullName>
+                <default>false</default>
+                <label>Primary Sales</label>
+            </value>
+            <value>
+                <fullName>Company/Billing Administrator</fullName>
+                <default>false</default>
+                <label>Company/Billing Administrator</label>
+            </value>
+            <value>
+                <fullName>Company Administrator</fullName>
+                <default>false</default>
+                <label>Company Administrator</label>
+            </value>
+            <value>
+                <fullName>Billing Administrator</fullName>
+                <default>false</default>
+                <label>Billing Administrator</label>
+            </value>
+            <value>
+                <fullName>Support User</fullName>
+                <default>false</default>
+                <label>Support User</label>
+            </value>
+            <value>
+                <fullName>External User</fullName>
+                <default>false</default>
+                <label>External User</label>
+            </value>
+            <value>
+                <fullName>Workspace User</fullName>
+                <default>false</default>
+                <label>Workspace User</label>
+            </value>
+            <value>
+                <fullName>No Longer There</fullName>
+                <default>false</default>
+                <label>No Longer There</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

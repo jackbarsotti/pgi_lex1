@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Report Request Type --></label>
+    <name>Report_Request_Type__c</name>
+    <picklistValues>
+        <masterLabel>Ad-Hoc Report</masterLabel>
+        <translation><!-- Ad-Hoc Report --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ETL Changes</masterLabel>
+        <translation><!-- ETL Changes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lookups</masterLabel>
+        <translation><!-- Lookups --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Need a Report</masterLabel>
+        <translation><!-- Need a Report --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Reseller Feed</masterLabel>
+        <translation><!-- New Reseller Feed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi BI Permissions and Folders Access</masterLabel>
+        <translation><!-- PGi BI Permissions and Folders Access --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Problem with Existing Report</masterLabel>
+        <translation><!-- Problem with Existing Report --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resend CDR Feed Traffic to Resellers</masterLabel>
+        <translation><!-- Resend CDR Feed Traffic to Resellers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resend of Automated Report</masterLabel>
+        <translation><!-- Resend of Automated Report --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Review/Modify Report Distribution</masterLabel>
+        <translation><!-- Review/Modify Report Distribution --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

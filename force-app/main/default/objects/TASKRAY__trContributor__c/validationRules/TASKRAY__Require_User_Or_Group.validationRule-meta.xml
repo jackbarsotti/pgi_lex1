@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TASKRAY__Require_User_Or_Group</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK(TASKRAY__User__c) &amp;&amp; ISBLANK(TASKRAY__GroupId__c)</errorConditionFormula>
+    <errorMessage>Team members must be associated with a User or Group Id.</errorMessage>
+</ValidationRule>

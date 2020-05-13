@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>iMC_Credit_must_be_less_than_zero</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;,
+Credit_Amount__c   &gt;= 0
+)</errorConditionFormula>
+    <errorMessage>Credit amount must be Negative value</errorMessage>
+</ValidationRule>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_was_Outage_Detected__c</fullName>
+    <externalId>false</externalId>
+    <label>How was Outage Detected?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer Notification</fullName>
+                <default>false</default>
+                <label>Customer Notification</label>
+            </value>
+            <value>
+                <fullName>Internal Notification</fullName>
+                <default>false</default>
+                <label>Internal Notification</label>
+            </value>
+            <value>
+                <fullName>Monitoring</fullName>
+                <default>false</default>
+                <label>Monitoring</label>
+            </value>
+            <value>
+                <fullName>Vendor Notification</fullName>
+                <default>false</default>
+                <label>Vendor Notification</label>
+            </value>
+            <value>
+                <fullName>Trending</fullName>
+                <default>false</default>
+                <label>Trending</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

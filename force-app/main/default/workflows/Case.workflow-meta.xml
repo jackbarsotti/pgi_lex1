@@ -1,0 +1,3574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>ALL_Notify_Assigned_To_of_Case</fullName>
+        <description>ALL-Notify Assigned To of Case</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>WFR_Case_Notifications/New_assignment_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>ALL_Notify_Japan_Requestor_of_GM_CenturyLink_Product_Submission</fullName>
+        <description>ALL-Notify Japan Requestor of GM CenturyLink Product Submission</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Requested_For__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>RequestorsEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>donotreply@yourcenturylinkworkplace.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Emails/PGi_Japan_GM_CenturyLink_Product_Requester_Response</template>
+    </alerts>
+    <alerts>
+        <fullName>ALL_Notify_Requester_when_Closed_External</fullName>
+        <description>ALL-Notify Requester when Closed (External)</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>noreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Emails/PGi_Case_Closed_Response_External</template>
+    </alerts>
+    <alerts>
+        <fullName>ALL_Notify_Requester_when_Incident_Case_Review_is_Closed</fullName>
+        <description>ALL-Notify Requester when Incident Case Review is Closed</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Requested_For__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>RequestorsEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Emails/PGi_Incident_Review_Request_Complete</template>
+    </alerts>
+    <alerts>
+        <fullName>ALL_Notify_Requestor_of_GM_CenturyLink_Product_Submission</fullName>
+        <description>ALL-Notify Requestor of GM CenturyLink Product Submission</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Requested_For__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>RequestorsEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>donotreply@yourcenturylinkworkplace.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Emails/PGi_GM_CenturyLink_Product_Requester_Response</template>
+    </alerts>
+    <alerts>
+        <fullName>ALL_Notify_Requestor_of_Web_to_case_submission</fullName>
+        <description>ALL-Notify Requestor of Web-to-case submission</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Requested_For__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>RequestorsEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Emails/PGi_Requester_Response</template>
+    </alerts>
+    <alerts>
+        <fullName>All_Notify_Queue_for_SvsCat_New_Case</fullName>
+        <description>All - Notify Queue for SvsCat New Case</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>WFR_Case_Notifications/New_Case_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Case_Escalate_Case_Notification</fullName>
+        <description>ALL-Case-Escalate Case Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Assigned_to_Templates/Case_Escalate_Case</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_closed_Case</fullName>
+        <description>ALL-Notify Requester when Closed</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Requested_For__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>RequestorsEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Emails/PGi_Case_Closed_Response</template>
+    </alerts>
+    <alerts>
+        <fullName>Event_Production_Case_Mgmt_Notification</fullName>
+        <description>Event Production Case: Mgmt Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>adam.hurst@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>amy.collins@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>john.sparacio@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kelly.woodman@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>WFR_Case_Notifications/New_assignment_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Japan_Requestor_of_GM_Product_Submission</fullName>
+        <description>ALL-Notify Japan Requestor of GM Product Submission</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Requested_For__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>RequestorsEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>donotreplysupport@globalmeet.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Emails/PGi_Japan_GM_Product_Requester_Response</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Queue_of_Transferred_Case</fullName>
+        <description>PGi-Notify Queue of Transferred Case</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>WFR_Case_Notifications/New_Case_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Requestor_of_GM_Product_Submission</fullName>
+        <description>ALL-Notify Requestor of GM Product Submission</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Requested_For__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>RequestorsEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>donotreplysupport@globalmeet.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Emails/PGi_GM_Product_Requester_Response</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Requestor_of_PGi_SvsCatalog</fullName>
+        <description>ALL-Notify Requestor of PGi SvsCatalog</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Requested_For__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>RequestorsEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Emails/PGi_SvsCatalog_Requester_Response</template>
+    </alerts>
+    <alerts>
+        <fullName>PGI_RFC_Task_15_Min_Notification</fullName>
+        <description>PGI - RFC Task 15 Min Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/PGI_RFC_Task_15_Min_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>PGi_Case_Email_Case_Owner_GL_GlobalMeet_Support</fullName>
+        <ccEmails>chris.morgan@pgi.com</ccEmails>
+        <description>PGi Case Email-Case Owner GL-GlobalMeet Support</description>
+        <protected>false</protected>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>WFR_Case_Notifications/New_Case_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>PGi_Case_Email_Case_Owner_GL_Tier_2_Audio_SaaS</fullName>
+        <description>PGi Case Email-Case Owner GL-Tier 2-Audio-SaaS</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>WFR_Case_Notifications/New_Case_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>PGi_Case_Email_Case_Owner_GM5_Saas</fullName>
+        <description>PGi Case Email-Case Owner GM5 SaaS</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>WFR_Case_Notifications/New_Case_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>PGi_Case_Email_Case_Owner_PGi_Case_GL_Tier3_Voice_Delivery_NA_Tier_3_Network_NPD</fullName>
+        <ccEmails>productdeliveryswitching@pgi.com</ccEmails>
+        <description>PGi Case Email-Case Owner PGi-Case-GL-Tier3-Voice Delivery/NA-Tier 3-Network (NPD,IVR/ACD)</description>
+        <protected>false</protected>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>WFR_Case_Notifications/New_Case_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>PGi_Case_Email_Case_Owner_PGi_Case_GL_Tier_4_R_D_Softphone</fullName>
+        <ccEmails>rdaudio@pgi.com</ccEmails>
+        <description>PGi Case Email-Case Owner PGi-Case-GL-Tier 4-R&amp;D (Softphone)</description>
+        <protected>false</protected>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>WFR_Case_Notifications/New_Case_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>PGi_Case_Email_Case_Owner_Telco</fullName>
+        <description>PGi Case Email-Case Owner Telco</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>WFR_Case_Notifications/New_Case_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>PGi_Case_Email_Case_Owner_Tier_2_Audio_Ops</fullName>
+        <description>PGi Case Email-Case Owner Tier 2 Audio Ops</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>WFR_Case_Notifications/New_Case_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>PGi_Case_Email_Case_Owner_no_assignment_rule</fullName>
+        <description>PGi Case Email-Case Owner (no assignment rule)</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>WFR_Case_Notifications/New_Case_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>PGi_Case_Internal_Support_Send_Survey</fullName>
+        <description>PGi - Case, Internal Support, Send Survey</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Requested_For__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>pgisurveynoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/PGi_Case_Internal_Support_Survey</template>
+    </alerts>
+    <alerts>
+        <fullName>PGi_Case_status_has_changed</fullName>
+        <description>PGi-Case Status Has Changed</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Requested_For__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>RequestorsEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Emails/PGi_Case_Status_Changed</template>
+    </alerts>
+    <alerts>
+        <fullName>PGi_Notify_Incident_Mngt_when_Closed</fullName>
+        <description>PGi-Notify Incident Mngt when Closed</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>annie.santine@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>katriona.greville@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sally.oxley@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>tamra.lucente@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Emails/PGi_Incident_Review_Request_Complete</template>
+    </alerts>
+    <alerts>
+        <fullName>PGi_Notify_RFC_is_not_completed</fullName>
+        <description>PGi-Notify RFC is not completed</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Related_RFC_Assigned_To_s_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Emails/RFC_RFC_Not_Complete</template>
+    </alerts>
+    <alerts>
+        <fullName>PGi_RFC_Status_Update</fullName>
+        <description>PGi-RFC Status Update</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Emails/RFC_Task_Case_Status_Update</template>
+    </alerts>
+    <alerts>
+        <fullName>PGi_RFC_Task_Assigned_To</fullName>
+        <description>PGi-RFC Task Assigned To</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Related_RFC_Assigned_To_s_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Emails/RFC_Case_Assigned_To_Bin</template>
+    </alerts>
+    <alerts>
+        <fullName>PGi_RFC_Transferred</fullName>
+        <description>PGi-RFC Transferred</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Related_RFC_Assigned_To_s_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Emails/RFC_Task_Case_Transferred</template>
+    </alerts>
+    <alerts>
+        <fullName>PGi_Time_System_Request_CRT_Creation</fullName>
+        <description>PGi-Time System Request CRT Creation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>michael.khatchadourian@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Emails/PGi_Time_New_Case</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_AST_Notification_of_Specific_Case_Reasons</fullName>
+        <description>RT_AST Notification of Specific Case Reasons</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_AST_Notification_of_Specific_Case_Reasons</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Cancellation_Case_Aging_12_Hour_Notification</fullName>
+        <description>RT_Cancellation Case Aging - 12 Hour Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Cancellation_Case_Open_X12_Hour_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Cancellation_Case_Open_24_Hour_Notification</fullName>
+        <description>RT_Cancellation Case Open - 24 Hour Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Cancellation_Case_Open_X24_Hour_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Cancellation_Case_Open_48_Hour_Notification</fullName>
+        <description>RT_Cancellation Case Open - 48 Hour Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Cancellation_Case_Open_X48_Hour_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Cancellation_Case_Open_72_Hour_Notification</fullName>
+        <description>RT_Cancellation Case Open - 72 Hour Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Cancellation_Case_Open_X72_Hour_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Cancellation_Related_Case_Aging_24_Hour_Notification</fullName>
+        <description>RT_Cancellation Related Case Aging - 24 Hour Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Cancellation_Case_Open_24_Hour_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Cancellation_Related_Case_Aging_48_Hour_Notification</fullName>
+        <description>RT_Cancellation Related Case Aging - 48 Hour Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Cancellation_Case_Open_48_Hour_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Cancellation_Related_Case_Aging_72_Hour_Notification</fullName>
+        <description>RT_Cancellation Related Case Aging - 72 Hour Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Cancellation_Case_Open_72_Hour_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Case_24_Hour_Notification</fullName>
+        <description>RT_Case 24 Hour Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Case_Open_24_Hour_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Case_36_Hour_Notification</fullName>
+        <description>RT_Case 36 Hour Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Case_Open_36_Hour_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Case_72_Hour_Notification</fullName>
+        <description>RT_Case 72 Hour Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Case_Open_72_Hour_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Case_Aging_12_Hour_Notification</fullName>
+        <description>RT_Case Aging - 12 Hour Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Case_Open_X12_Hour_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Case_Aging_24_Hour_Notification</fullName>
+        <description>RT_Case Aging - 24 Hour Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Case_Open_X24_Hour_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Case_Aging_48_Hour_Notification</fullName>
+        <description>RT_Case Aging - 48 Hour Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Cancellation_Case_Open_X48_Hour_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Case_Aging_72_Hour_Notification</fullName>
+        <description>RT_Case Aging - 72 Hour Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Case_Open_X72_Hour_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Customer_Satisfaction_Survey</fullName>
+        <description>RT_Customer Satisfaction Survey</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>technicalsupport@readytalk.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Customer_Care_Survey</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Email_Management_when_Cancellation_Related_Case_is_Closed</fullName>
+        <description>RT_Email Management when Cancellation Related Case is Closed</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>frank.nardi@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>paul.zukauskas@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_A_New_Account_Cancellation_Case_Has_Been_Closed</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Jira_Issue_Resolved</fullName>
+        <description>RT_Jira Issue Resolved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Eng_Triage_Jira_Issue_Resolved</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_New_case_created_on_at_risk_account</fullName>
+        <description>RT_New case created on at-risk account</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Case_Created_on_At_Risk_Account</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Notify_Care_if_Assigned_To_is_Blank</fullName>
+        <description>RT - Notify Care if Assigned To is Blank</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ReadyTalk_Email_Templates/RTCaseCreatedNotification</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Notify_Team_when_Account_Cancellation_Case_is_Created</fullName>
+        <description>RT_Notify Team when Account Cancellation Case is Created</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>frank.nardi@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>paul.zukauskas@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_A_New_Account_Cancellation_Case_Has_Been_Opened</template>
+    </alerts>
+    <alerts>
+        <fullName>Release_Date_Set</fullName>
+        <description>ALL-Sprint Set</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Requested_For__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>RequestorsEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Auto_Response_Templates/SFDC_Auto_Update</template>
+    </alerts>
+    <alerts>
+        <fullName>Release_Date_Updated</fullName>
+        <description>ALL-Sprint Changed</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Requested_For__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>RequestorsEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Auto_Response_Templates/SFDC_Auto_Update_Revised</template>
+    </alerts>
+    <alerts>
+        <fullName>TSI_Notifications</fullName>
+        <ccEmails>Support@teleconferencingservices.net</ccEmails>
+        <description>PGi TSI Notifications *used in PB that sets PGi Company details*</description>
+        <protected>false</protected>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Emails/TSI_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>TalkPoint_GM_Webcast_AutoReply</fullName>
+        <description>TalkPoint - GM Webcast AutoReply</description>
+        <protected>false</protected>
+        <recipients>
+            <field>RequestorsEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>noreply@webcasts.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>TalkPoint_Software_Support/Community_Autoreply_GM_Webcast</template>
+    </alerts>
+    <alerts>
+        <fullName>TalkPoint_GM_Webinar_AutoReply</fullName>
+        <description>TalkPoint - GM Webinar AutoReply</description>
+        <protected>false</protected>
+        <recipients>
+            <field>RequestorsEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>noreply@webcasts.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>TalkPoint_Software_Support/Community_Autoreply_GM_Webinar</template>
+    </alerts>
+    <alerts>
+        <fullName>TalkPoint_GoToWebcast</fullName>
+        <description>TalkPoint - GoToWebcast</description>
+        <protected>false</protected>
+        <recipients>
+            <field>RequestorsEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>noreply@webcasts.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>TalkPoint_Software_Support/Community_Autoreply_GoToWebcast</template>
+    </alerts>
+    <alerts>
+        <fullName>TalkPoint_PWN_Webcast_AutoReply</fullName>
+        <description>TalkPoint - PWN Webcast AutoReply</description>
+        <protected>false</protected>
+        <recipients>
+            <field>RequestorsEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>noreply@webcasts.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>TalkPoint_Software_Support/Community_Autoreply_PWN_Webcast</template>
+    </alerts>
+    <alerts>
+        <fullName>TalkPoint_PWN_Webinar_AutoReply</fullName>
+        <description>TalkPoint - PWN Webinar AutoReply</description>
+        <protected>false</protected>
+        <recipients>
+            <field>RequestorsEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>noreply@webcasts.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>TalkPoint_Software_Support/Community_Autoreply_PWN_Webinar</template>
+    </alerts>
+    <alerts>
+        <fullName>TalkPoint_TalkPoint_AutoReply</fullName>
+        <description>TalkPoint - TalkPoint AutoReply</description>
+        <protected>false</protected>
+        <recipients>
+            <field>RequestorsEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>noreply@webcasts.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>TalkPoint_Software_Support/Community_Autoreply_TalkPoint</template>
+    </alerts>
+    <alerts>
+        <fullName>TalkPoint_Webcast_AutoReply</fullName>
+        <description>TalkPoint - Webcast AutoReply</description>
+        <protected>false</protected>
+        <recipients>
+            <field>RequestorsEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>noreply@webcasts.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>TalkPoint_Software_Support/Community_Autoreply_Webcast</template>
+    </alerts>
+    <alerts>
+        <fullName>iMC_Case_NPS_Case_Closed</fullName>
+        <description>iMC - Case, NPS Case Closed</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>jason.klovski@pgi.com.mainsite</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kevin.lewis@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>iMC_Unfiled_Public_Email_Templates/iMC_NPS_Survey_Case_Closed_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>iMC_Case_NPS_Case_Created</fullName>
+        <description>iMC - Case, NPS Case Created</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>jason.klovski@pgi.com.mainsite</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kevin.lewis@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>iMC_Unfiled_Public_Email_Templates/iMC_NPS_Survey_Case_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>iMC_Case_Support_Survey</fullName>
+        <description>iMC - Case, Support Survey</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>jason.klovski@pgi.com.mainsite</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kevin.lewis@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>iMC_Internal_Company_Alerts/iMC_Case_Creation_from_Support_Survey</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>ALL_Case_Type_Status_Update</fullName>
+        <description>If Case Record Type is changed, Update Case Status to &quot;New - Transferred&quot;.</description>
+        <field>Status</field>
+        <literalValue>New - Transferred</literalValue>
+        <name>ALL-Case Type Status Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>ALL_Set_Escalation_Date</fullName>
+        <field>First_Escalation__c</field>
+        <formula>NOW()</formula>
+        <name>ALL-Set Escalation Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>All_Reset_Assigned_To</fullName>
+        <field>Assigned_To__c</field>
+        <name>All-Reset Assigned To</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>All_Set_Requested_For_email</fullName>
+        <field>Requested_For__c</field>
+        <formula>Email2Case_s_Email__c</formula>
+        <name>All - Set Requested For (email)</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>All_Set_Requested_For_standard</fullName>
+        <field>Requested_For__c</field>
+        <formula>CreatedBy.Email</formula>
+        <name>All - Set Requested For (standard)</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>All_Set_Requestor_api</fullName>
+        <field>RequestorsEmail__c</field>
+        <formula>AD_User__c</formula>
+        <name>All - Set Requestor (api)</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>All_Set_Requestor_email</fullName>
+        <field>RequestorsEmail__c</field>
+        <formula>Email2Case_s_Email__c</formula>
+        <name>All - Set Requestor (email)</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>All_Set_Requestor_standard</fullName>
+        <field>RequestorsEmail__c</field>
+        <formula>CreatedBy.Email</formula>
+        <name>All - Set Requestor (standard)</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>All_Update_Search_String</fullName>
+        <field>AdminSearchString__c</field>
+        <formula>PGi_Client__r.Name  + &quot;,&quot; +
+PGi_Conference__r.Name  + &quot;,&quot; +
+PGi_Company__r.Name</formula>
+        <name>All - Update Search String</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Email_SLA_Breach</fullName>
+        <field>Email_SLA_Breached__c</field>
+        <literalValue>1</literalValue>
+        <name>Case: Email SLA Breach</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Pause_Resolve_Time</fullName>
+        <field>Resolve_Pause_Time__c</field>
+        <formula>IF(IsClosed &amp;&amp; Resolve_Pause_Time__c = &quot;&quot;, Time_to_Resolve__c, 
+IF(NOT(IsClosed) &amp;&amp; TEXT(Status) = &#39;Pending Client Info/Action&#39;, Time_to_Resolve__c, 
+IF(Resolve_Pause_Time__c = &#39;&#39;, &#39;&#39;, Resolve_Pause_Time__c)))</formula>
+        <name>Case Pause Resolve Time</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Pause_Restore_Time</fullName>
+        <description>Stamp in the Restore pause time when the case is Restored or when the case goes to Pending Client Action</description>
+        <field>Restore_Pause_Time__c</field>
+        <formula>IF((IsClosed || NOT(ISNULL(Restored__c))) &amp;&amp; Restore_Pause_Time__c = &quot;&quot;, Time_to_Restore__c, 
+IF(ISNULL(Restored__c) &amp;&amp; TEXT(Status) = &#39;Pending Client Info/Action&#39;, Time_to_Restore__c, 
+IF(Restore_Pause_Time__c = &#39;&#39;, &#39;&#39;, Restore_Pause_Time__c)))</formula>
+        <name>Case Pause Restore Time</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Case_Owner_to_Business_Admin</fullName>
+        <description>Changes the Case Owner field to PGi-Email-GL-Business Admin queue</description>
+        <field>OwnerId</field>
+        <lookupValue>PGi_Email_GL_Business_Admin</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Change Case Owner to Business Admin</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Case_Owner_to_Spam_Queue</fullName>
+        <description>Changes the Case Owner field to Junk Spam Placeholder queue</description>
+        <field>OwnerId</field>
+        <lookupValue>Junk_Spam_Placeholder</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Change Case Owner to Spam Queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Case_Owner_to_Tier_1_Signups</fullName>
+        <description>Change the case owner to PGi-Email-GL-Tier 1 Signups Queue</description>
+        <field>OwnerId</field>
+        <lookupValue>PGi_Email_GL_Tier_1_Signups</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Change Case Owner to Tier 1 Signups</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Most_Recent_Paused_Date</fullName>
+        <field>Most_Recent_Paused_Time__c</field>
+        <formula>IF(TEXT(Status) = &#39;Pending Client Info/Action&#39;, Now(), null)</formula>
+        <name>Most Recent Paused Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_Case_Agile_Status_to_Deployed</fullName>
+        <description>updates agile status to deployed</description>
+        <field>AgileStatus__c</field>
+        <literalValue>Deployed</literalValue>
+        <name>PGi-Case-Agile Status to Deployed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_Case_Assign_Formsite_email</fullName>
+        <field>Assigned_To__c</field>
+        <lookupValue>heather.johnson@pgi.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>PGi-Case-Assign Formsite email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_Case_Close_Close</fullName>
+        <field>Status</field>
+        <literalValue>Closed</literalValue>
+        <name>PGi-Case-Close Close</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_Incident_Review_PopulateCustomerNote</fullName>
+        <field>Case_Resolution_Notes__c</field>
+        <formula>&quot;The Incident Case Review Request has been completed and is attached to the case for your convenience.  Please Access the case via the link below and download the attachment.&quot;</formula>
+        <name>PGi-Incident Review-PopulateCustomerNote</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_Orange</fullName>
+        <field>Orange_Portal__c</field>
+        <literalValue>1</literalValue>
+        <name>PGi-Orange</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_SFSupport_set_Assigned_for_Enhanceme</fullName>
+        <field>Assigned_To__c</field>
+        <lookupValue>test.user@pgi.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>PGi-SFSupport set Assigned for Enhanceme</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_SFSupport_set_CRM_Level</fullName>
+        <field>CRMSupportLevel__c</field>
+        <literalValue>Operations Support</literalValue>
+        <name>PGi-SFSupport set CRM Level</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RFP_Case_Resubmitted</fullName>
+        <description>When user resubmits the case</description>
+        <field>Status</field>
+        <literalValue>Resubmitted</literalValue>
+        <name>RFP Case Resubmitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Care_Related_TRUE</fullName>
+        <field>OwnerId</field>
+        <lookupValue>ReadyTalk_Case_NA_Care</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>RT - Care Related = TRUE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_GX_Cases</fullName>
+        <field>Origin</field>
+        <literalValue>Global Crossing</literalValue>
+        <name>RT_GX Cases</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Service_Performance_Account_Related</fullName>
+        <field>Service_Performance__c</field>
+        <literalValue>Account Related</literalValue>
+        <name>RT_Service Performance - Account Related</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Service_Performance_Cancel_Related</fullName>
+        <field>Service_Performance__c</field>
+        <literalValue>Cancellation Related</literalValue>
+        <name>RT_Service Performance - Cancel Related</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Service_Performance_Feedback_FeatureR</fullName>
+        <field>Service_Performance__c</field>
+        <literalValue>Feedback and Feature Requests</literalValue>
+        <name>RT_Service Performance-Feedback/FeatureR</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Service_Performance_InternalQuestion</fullName>
+        <field>Service_Performance__c</field>
+        <literalValue>Internal RT Question</literalValue>
+        <name>RT_Service Performance-InternalQuestion</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Service_Performance_Internal_Question</fullName>
+        <field>Service_Performance__c</field>
+        <literalValue>Internal RT Question</literalValue>
+        <name>RT_Service Performance-Internal Question</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Service_Performance_Part_Questi</fullName>
+        <field>Service_Performance__c</field>
+        <literalValue>Participant Questions</literalValue>
+        <name>RT_Service Performance-Part Questi</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Service_Performance_ParticipantQuesti</fullName>
+        <field>Service_Performance__c</field>
+        <literalValue>Participant Questions</literalValue>
+        <name>RT_Service Performance-ParticipantQuesti</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Service_Performance_ProEvent_Services</fullName>
+        <field>Service_Performance__c</field>
+        <literalValue>Professional Event Services</literalValue>
+        <name>RT_Service Performance-ProEvent Services</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Service_Performance_Technical</fullName>
+        <field>Service_Performance__c</field>
+        <literalValue>Technical (ReadyTalk or other)</literalValue>
+        <name>RT_Service Performance - Technical</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Service_Performance_Uncategorized</fullName>
+        <field>Service_Performance__c</field>
+        <literalValue>Uncategorized</literalValue>
+        <name>RT_Service Performance - Uncategorized</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Service_Performance_UserEdConnectiv</fullName>
+        <field>Service_Performance__c</field>
+        <literalValue>User Education- Connectivity Tools</literalValue>
+        <name>RT_Service Performance-UserEdConnectiv</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Service_Performance_User_Ed_Connectiv</fullName>
+        <field>Service_Performance__c</field>
+        <literalValue>User Education- Connectivity Tools</literalValue>
+        <name>RT_Service Performance-User Ed Connectiv</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Service_Performance_User_Ed_Integrati</fullName>
+        <field>Service_Performance__c</field>
+        <literalValue>User Education- Integration</literalValue>
+        <name>RT_Service Performance-User Ed Integrati</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Service_Performance_User_Education</fullName>
+        <field>Service_Performance__c</field>
+        <literalValue>User Education</literalValue>
+        <name>RT_Service Performance - User Education</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Set_Priority_to_Blocker</fullName>
+        <field>Priority</field>
+        <literalValue>Blocker</literalValue>
+        <name>RT_Set Priority to Blocker</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Set_Priority_to_Critical</fullName>
+        <field>Priority</field>
+        <literalValue>Critical</literalValue>
+        <name>RT_Set Priority to Critical</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Set_RA_Master_ID</fullName>
+        <field>RA_Master_ID__c</field>
+        <formula>Access_Code__r.BBS_L3RAMaster__c</formula>
+        <name>RT_Set RA Master ID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Winback_Related_TRUE</fullName>
+        <field>OwnerId</field>
+        <lookupValue>ReadyTalk_Case_NA_Winback</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>RT - Winback Related = TRUE</name>
+        <notifyAssignee>true</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Case_Assignment_Date</fullName>
+        <field>Case_Assignment_Date_Time__c</field>
+        <formula>NOW()</formula>
+        <name>Set Case Assignment Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Case_Reason_to_Feedback</fullName>
+        <description>Used for Post GO LIVE Feedback requests Globally.</description>
+        <field>Reason</field>
+        <literalValue>Feedback</literalValue>
+        <name>Set Case Reason to Feedback</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Case_Support_Type_to_Enhancement</fullName>
+        <field>Case_Support_Type__c</field>
+        <literalValue>Enhancement Request</literalValue>
+        <name>Set Case Support Type to Enhancement</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Case_Type_to_Enhancement</fullName>
+        <field>Case_Type__c</field>
+        <literalValue>Enhancement</literalValue>
+        <name>Set Case Type to Enhancement</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Case_Type_to_Tier_1</fullName>
+        <field>Case_Type__c</field>
+        <literalValue>Tier 1</literalValue>
+        <name>Set Case Type to Tier 1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Case_Type_to_Tier_5</fullName>
+        <field>Case_Type__c</field>
+        <literalValue>Tier 5 - Large Data</literalValue>
+        <name>Set Case Type to Tier 5</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_to_Closed</fullName>
+        <description>Sets Status to Closed whenever the Subject contains Issue</description>
+        <field>Status</field>
+        <literalValue>Closed</literalValue>
+        <name>Set Status to Closed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_the_Case_Reason_to_Early_Issues</fullName>
+        <description>Sets the Case Reason to Early Issues for Subjects containing Issue.  **Likely to turn off within 2 weeks of go live**</description>
+        <field>Reason</field>
+        <literalValue>Early Issues</literalValue>
+        <name>Set the Case Reason to Early Issues</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_to_Contact_Us_Page</fullName>
+        <field>Origin</field>
+        <literalValue>iMeet.com Contact Us Page</literalValue>
+        <name>Set to Contact Us Page</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_to_UserVoice</fullName>
+        <field>Origin</field>
+        <literalValue>Live Help/Uservoice</literalValue>
+        <name>Set to UserVoice</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>TP_Assign_Ownership</fullName>
+        <field>OwnerId</field>
+        <lookupValue>TalkPoint_Case_Queue</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>TP - Assign Ownership</name>
+        <notifyAssignee>true</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Timestamp_Case_Assignment_Date</fullName>
+        <field>Case_Assignment_Date_Time__c</field>
+        <formula>Now()</formula>
+        <name>Timestamp Case Assignment Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Desc_HR_Record</fullName>
+        <field>Description</field>
+        <formula>HR_Request_Form__r.HR_Link__c &amp; &quot; ; &quot; &amp;
+&quot;Department Group:&quot; &amp; &quot; &quot; &amp;
+Text(HR_Request_Form__r.Department_Group__c ) &amp;&quot; ; &quot; &amp;
+&quot;Department Description:&quot; &amp; &quot; &quot; &amp;
+Text(HR_Request_Form__r.Department_Description__c )</formula>
+        <name>Update Desc_HR Record</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Desc_HR_Record_Separation</fullName>
+        <field>Description</field>
+        <formula>HR_Request_Form__r.HR_Link__c &amp; &quot; ; &quot; &amp;   
+Text(HR_Request_Form__r.System_Access_Separation_Date__c) &amp;&quot; ; &quot; &amp; 
+Text(HR_Request_Form__r.System_Access_Separation_Urgency__c)</formula>
+        <name>Update Desc_HR Record_Separation</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Total_Paused_Time</fullName>
+        <field>Total_Paused_Time__c</field>
+        <formula>IF(ISNULL(Total_Paused_Time__c),0,Total_Paused_Time__c) + 
+(NOW() - PRIORVALUE(Most_Recent_Paused_Time__c))*1440*60</formula>
+        <name>Update Total Paused Time</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Case_EM_Assignment_Date</fullName>
+        <field>EM_Assignment_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>iMC - Case, EM Assignment Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Case_Owner</fullName>
+        <field>OwnerId</field>
+        <lookupValue>kevin.lewis@pgi.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>iMC - Case, Owner</name>
+        <notifyAssignee>true</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Case_Status_Update</fullName>
+        <field>Status</field>
+        <literalValue>In Progress</literalValue>
+        <name>iMC - Case, Status Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Case_Subject_Line</fullName>
+        <field>Subject</field>
+        <formula>&quot;Summary of Requested Work&quot;</formula>
+        <name>iMC - Case, Subject Line</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>xiMC_Case_Status_Closed</fullName>
+        <field>Status</field>
+        <literalValue>Closed</literalValue>
+        <name>xiMC - Case, Status Closed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>ALL-CRT Change%2C Status updates to %22New - Transferred%22</fullName>
+        <actions>
+            <name>ALL_Case_Type_Status_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>When Case Record Type is changed, set the Case Status to &quot;New - Transferred&quot;.</description>
+        <formula>ISCHANGED(RecordTypeId)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>ALL-Case-Escalate Case</fullName>
+        <actions>
+            <name>Case_Escalate_Case_Notification</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>And(
+Escalated__c = true,
+RecordType.DeveloperName &lt;&gt; &#39;Inbound_Email_Support&#39;,
+RecordType.DeveloperName &lt;&gt; &#39;Outbound_Email_Support&#39;
+)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>ALL-Notify Assigned To</fullName>
+        <actions>
+            <name>ALL_Notify_Assigned_To_of_Case</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Notifies the Assigned To person of the case now being assigned to them unless they assign themselves then an email is not sent</description>
+        <formula>AND( 
+ISCHANGED(Assigned_To__c), 
+Assigned_To__c &lt;&gt; &#39;005300000063GkeAAE&#39;,
+Assigned_To__c &lt;&gt; &#39;005300000063Gke&#39;,
+$User.Id &lt;&gt; Assigned_To__c, 
+$User.Alias &lt;&gt; &#39;ecovate.reports&#39; )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>ALL-Notify Japan Requestor of GM CenturyLink Product</fullName>
+        <actions>
+            <name>ALL_Notify_Japan_Requestor_of_GM_CenturyLink_Product_Submission</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>GM CenturyLink</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Web_Application_Language__c</field>
+            <operation>equals</operation>
+            <value>Japanese</value>
+        </criteriaItems>
+        <description>To notify the Japan requestor of a submission from GM CenturyLink Product submissions</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>ALL-Notify Japan Requestor of GM Product</fullName>
+        <actions>
+            <name>Notify_Japan_Requestor_of_GM_Product_Submission</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>GM5 Email - In Product,GM5 Poor Feedback,GM Desktop,GM Mobile Android,GM Mobile iOS,GM Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Web_Application_Language__c</field>
+            <operation>equals</operation>
+            <value>Japanese</value>
+        </criteriaItems>
+        <description>To notify the Japan requestor of a submission from GM Product submissions</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>ALL-Notify Requester when Closed</fullName>
+        <actions>
+            <name>Email_closed_Case</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Do_not_email_on_Case_Closed__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Case_Resolution_Notes__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Requested_For__c</field>
+            <operation>contains</operation>
+            <value>@pgi.com</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>PGi-Incident Case Review,TalkPoint Support</value>
+        </criteriaItems>
+        <description>To notify creator when the case is closed (internal only for PGi)</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>ALL-Notify Requester when Closed %28External%29</fullName>
+        <actions>
+            <name>ALL_Notify_Requester_when_Closed_External</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+        <criteriaItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Do_not_email_on_Case_Closed__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Case_Resolution_Notes__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Inbound Email Support</value>
+        </criteriaItems>
+        <description>To notify creator when the case is closed (external facing only)</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>ALL-Notify Requester when Incident Case Review is Closed</fullName>
+        <actions>
+            <name>ALL_Notify_Requester_when_Incident_Case_Review_is_Closed</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi-Incident Case Review</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Do_not_email_on_Case_Closed__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Case_Resolution_Notes__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Notify requestor when Incident Case Review is closed</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>ALL-Notify Requestor of GM CenturyLink Product</fullName>
+        <actions>
+            <name>ALL_Notify_Requestor_of_GM_CenturyLink_Product_Submission</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>GM CenturyLink</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Web_Application_Language__c</field>
+            <operation>notEqual</operation>
+            <value>Japanese</value>
+        </criteriaItems>
+        <description>To notify the requestor of a submission from GM CenturyLink Product submissions</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>ALL-Notify Requestor of GM Product</fullName>
+        <actions>
+            <name>Notify_Requestor_of_GM_Product_Submission</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>GM5 Email - In Product,GM5 Poor Feedback,GM Desktop,GM Mobile Android,GM Mobile iOS,GM Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Web_Application_Language__c</field>
+            <operation>notEqual</operation>
+            <value>Japanese</value>
+        </criteriaItems>
+        <description>To notify the requestor of a submission from GM Product submissions</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>ALL-Notify Requestor of PGi SvsCatalog</fullName>
+        <actions>
+            <name>Notify_Requestor_of_PGi_SvsCatalog</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 AND 2 AND 3 AND 8) OR (4 AND 2 AND 5 AND 6 AND 7 AND 8)</booleanFilter>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>contains</operation>
+            <value>PGi Service Catalog</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RequestorsEmail__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Requested_For__c</field>
+            <operation>contains</operation>
+            <value>@pgi.com</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.CreatedById</field>
+            <operation>equals</operation>
+            <value>System</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Requested_For__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>notEqual</operation>
+            <value>Email,GM5 Email - In Product,GM5 Poor Feedback,GM Desktop,GM Mobile Android,GM Mobile iOS,GM Web,GM CenturyLink</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>TalkPoint Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notEqual</operation>
+            <value>New Web To Case Submission</value>
+        </criteriaItems>
+        <description>To notify the requestor of a submission from PGi Svs Catalog or an Internal + External Site Web-to-Case form</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>ALL-Notify Requestor of Web-to-case submission</fullName>
+        <actions>
+            <name>ALL_Notify_Requestor_of_Web_to_case_submission</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>External Web Case-Billing,External Web Case-Reservations,External Web Case-Technical</value>
+        </criteriaItems>
+        <description>To notify the requestor of a submission from web-to-case submissions</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>ALL-Ownership Change%2C Status updates to %22New - Transferred%22</fullName>
+        <actions>
+            <name>ALL_Case_Type_Status_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>When Ownership is changed, and prior status is NOT Resolved or Approved, set Case Status to &quot;New - Transferred&quot;.</description>
+        <formula>AND(  NOT(ISNEW()), NOT(PRIORVALUE(Auto_Generated_For_Case__c)),  RecordTypeId &lt;&gt; &#39;0121B000001q5WW&#39;, RecordTypeId &lt;&gt; &#39;0121B000001hgQS&#39;, ISCHANGED(OwnerId),  NOT(ISPICKVAL(Status,&#39;Closed&#39;)),  NOT(ISPICKVAL(Status,&#39;Resolved&#39;)), NOT(ISPICKVAL(Status,&#39;Approved&#39;)) ) &amp;&amp; LEFT(PRIORVALUE(OwnerId), 3) != &#39;005&#39;</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>ALL-Planned Release Date Set</fullName>
+        <actions>
+            <name>Release_Date_Set</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>To notify user when case is set into a Sprint plan</description>
+        <formula>NOT(ISBLANK(AgileSprint__c))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>ALL-Planned Release Date Updated</fullName>
+        <actions>
+            <name>Release_Date_Updated</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>To notify user when case has a planned re</description>
+        <formula>AND ( 
+NOT (ISBLANK(PRIORVALUE(( AgileSprint__c )))), 
+ISCHANGED( AgileSprint__c ) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>ALL-Reset Assigned To</fullName>
+        <actions>
+            <name>All_Reset_Assigned_To</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>If the Case Owner is changed, reset the &quot;Assigned To&quot; field as blank!</description>
+        <formula>AND( NOT(ISPICKVAL(Status,&#39;Closed&#39;)), ISCHANGED(OwnerId), NOT(ISBLANK(First_Escalation__c)) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>ALL-Reset Assigned To %26 Update Escalation</fullName>
+        <actions>
+            <name>ALL_Set_Escalation_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>All_Reset_Assigned_To</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>If the Case Owner is changed, reset the &quot;Assigned To&quot; field as blank and also set Escalation Date</description>
+        <formula>AND( NOT(ISNEW()), NOT(PRIORVALUE(Auto_Generated_For_Case__c)),  NOT(ISPICKVAL(Status,&#39;Closed&#39;)), ISCHANGED(OwnerId), ISBLANK(First_Escalation__c) )&amp;&amp; RecordType.Name &lt;&gt; &#39;Outbound Email Support&#39;</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Admin closure of agile case</fullName>
+        <actions>
+            <name>PGi_Case_Agile_Status_to_Deployed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.CRMSupportLevel__c</field>
+            <operation>equals</operation>
+            <value>Enhancement (assigned to release)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi-SFDC Support</value>
+        </criteriaItems>
+        <description>When closing an enhancement (assigned to a release) case, the agile status will update to deployed</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>All - Notify Queue for SvsCat New Case</fullName>
+        <actions>
+            <name>All_Notify_Queue_for_SvsCat_New_Case</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 AND 2) or (1 AND 3) or (1 and 4)</booleanFilter>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>PGi Service Catalog</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>notEqual</operation>
+            <value>PGi-Case-NA-Tier 1-CEM (BHD)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>notEqual</operation>
+            <value>PGi-Case-NA-Tier 2-CEM (Cust Exp Mgmt)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>PGi-Case-GL-InfoSec</value>
+        </criteriaItems>
+        <description>If a case comes in from SvsCatalog then notify the Case Owner</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>All - Set Requested For %28standard%29</fullName>
+        <actions>
+            <name>All_Set_Requested_For_standard</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 AND 2 AND 3 AND 5 AND 7 AND 8) OR (7 AND 6 AND 1 AND 2 AND 3 AND 4)</booleanFilter>
+        <criteriaItems>
+            <field>Case.Email2Case_s_Email__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.AD_User__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.ServiceNow_System_ID__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile_Name_Text__c</field>
+            <operation>notEqual</operation>
+            <value>PGi Global Service Desk</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>PGi-Generic Request,Webcast/Webinar Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi-Generic Request</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Requested_For__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>notContain</operation>
+            <value>GM5 Email - In Product,GM5 Poor Feedback,GM Desktop,GM Mobile Android,GM Mobile iOS,GM Web,GM CenturyLink</value>
+        </criteriaItems>
+        <description>If the case is created by user (not email2case or svscatalog)</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>All - Set Requestor %28api%29</fullName>
+        <actions>
+            <name>All_Set_Requestor_api</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.AD_User__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>If the case is created via Svs Catalog API</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>All - Set Requestor %28email%29</fullName>
+        <actions>
+            <name>All_Set_Requested_For_email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>All_Set_Requestor_email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Email2Case_s_Email__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>If the case is created via Email2Case</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>All - Set Requestor %28standard%29</fullName>
+        <actions>
+            <name>All_Set_Requestor_standard</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 AND 2 AND 3 AND 5 AND 7) OR (6 AND 1 AND 2 AND 3 AND 4)</booleanFilter>
+        <criteriaItems>
+            <field>Case.Email2Case_s_Email__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.AD_User__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.ServiceNow_System_ID__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile_Name_Text__c</field>
+            <operation>notEqual</operation>
+            <value>PGi Global Service Desk</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>PGi-Generic Request,Webcast/Webinar Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi-Generic Request</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>notEqual</operation>
+            <value>GM5 Email - In Product,GM5 Poor Feedback,GM Desktop,GM Mobile Android,GM Mobile iOS,GM Web,GM CenturyLink</value>
+        </criteriaItems>
+        <description>If the case is created by user (not email2case or svscatalog)</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>All - Update Search String</fullName>
+        <actions>
+            <name>All_Update_Search_String</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.CaseNumber</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Updates a static text area field with values from lookups so they can return on standard search screens.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>All-Update Desc_HR Record</fullName>
+        <actions>
+            <name>Update_Desc_HR_Record</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2 AND (3 OR 4)</booleanFilter>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>HR Record</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>contains</operation>
+            <value>New Worker</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>contains</operation>
+            <value>Worker Change</value>
+        </criteriaItems>
+        <description>Update case description when new cases are created via HR Forms.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>All-Update Desc_HR Record_Separation</fullName>
+        <actions>
+            <name>Update_Desc_HR_Record_Separation</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>HR Record</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>contains</operation>
+            <value>Worker Separation</value>
+        </criteriaItems>
+        <description>Update case description when new worker separation cases are created via HR Forms.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Case%3A SLA Exceeded</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Most_Recent_SLA_Start__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Case_Email_SLA_Breach</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Case.SLA_Time_to_Complete__c</offsetFromField>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Email Spam Filter</fullName>
+        <actions>
+            <name>Change_Case_Owner_to_Spam_Queue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3 or 4)</booleanFilter>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Inbound Email Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>equals</operation>
+            <value>pgispamreport@pgi.com</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>contains</operation>
+            <value>mailer-daemon</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>contains</operation>
+            <value>Do Not Reply,Automatic Reply,Auto Response,Automatische Antwort,Réponse automatique,Respuesta automática,Risposta automatica,自動応答,自動返答</value>
+        </criteriaItems>
+        <description>Change the case owner to Junk Spam Placeholder for Email-to-Case cases that get created by the Mimecast spam filter emails</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Email-CustReplied_ClosedStatus-delete Assigned to</fullName>
+        <actions>
+            <name>All_Reset_Assigned_To</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>When a closed Internal Support case changes to &quot;customer replied&quot;, clear out Assigned to field</description>
+        <formula>AND(
+    ISCHANGED(Status),
+    TEXT(PRIORVALUE(Status)) = &quot;Closed&quot;,
+    TEXT(Status) = &quot;Customer Replied&quot;,
+OR(
+RecordType.Id = &#39;0121B0000018Glj&#39;, 
+RecordType.Id = &#39;0121B000001CHE7&#39;)
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Email-Formsite close</fullName>
+        <actions>
+            <name>PGi_Case_Assign_Formsite_email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>PGi_Case_Close_Close</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>equals</operation>
+            <value>form_engine@fs22.formsite.com</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Inbound Email Support</value>
+        </criteriaItems>
+        <description>Assign emails from form_engine@fs22.formsite.com to Heather Johnson and close</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Email_Tier 1 Signup Request Requeue</fullName>
+        <actions>
+            <name>Change_Case_Owner_to_Tier_1_Signups</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>contains</operation>
+            <value>new account,account request,account setup,set up account,account set up,new webex account,new conference,sign up,signup</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>contains</operation>
+            <value>T1</value>
+        </criteriaItems>
+        <description>Requeue emails with certain phrases in the subject line to the Tier 1 Signups Email queue instead of the general Tier 1 queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Event Production Case%3A Mgmt alert</fullName>
+        <actions>
+            <name>Event_Production_Case_Mgmt_Notification</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Owner_s_Name__c</field>
+            <operation>equals</operation>
+            <value>PGi-Case-GL-Event Production</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>notContain</operation>
+            <value>close,Resolved,cancel,reject</value>
+        </criteriaItems>
+        <description>When event prod is assigned - special alert</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Most Recent Paused Time</fullName>
+        <actions>
+            <name>Case_Pause_Resolve_Time</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Case_Pause_Restore_Time</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Most_Recent_Paused_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ISNEW() ||
+ISCHANGED(Status) || 
+ISCHANGED(Service_Restored__c) || 
+ISCHANGED(Restored__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi Case Notification - InfoSec Emails</fullName>
+        <actions>
+            <name>PGi_Case_Email_Case_Owner_no_assignment_rule</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>PGi-Case-GL-InfoSec</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email - Info Sec</value>
+        </criteriaItems>
+        <description>Notifies the InfoSec when a case is submitted via email to their queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi Case Notification_PGi-Case-GL-GlobalMeet Support</fullName>
+        <actions>
+            <name>PGi_Case_Email_Case_Owner_GL_GlobalMeet_Support</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>PGi-Case-GL-GlobalMeet Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>notContain</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <description>Notifies the &quot;PGi-Case-GL-GlobalMeet Support&quot; escalation manager when a new case is assigned to their queue.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi Case Notification_PGi-Case-GL-Tier 2-Audio Ops</fullName>
+        <actions>
+            <name>PGi_Case_Email_Case_Owner_Tier_2_Audio_Ops</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>PGi-Case-GL-Tier 2-Audio Ops</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>notContain</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <description>Notifies the &quot;PGi-Case-PGi-Case-GL-Tier 2-Audio Ops&quot; queue when a new case is re-assigned to their queue.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi Case Notification_PGi-Case-GL-Tier 2-Audio-SaaS</fullName>
+        <actions>
+            <name>PGi_Case_Email_Case_Owner_GL_Tier_2_Audio_SaaS</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>PGi-Case-GL-Tier 2-Audio-SaaS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>notContain</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <description>Notifies the &quot;PGi-Case-GL-Tier 2-Audio-SaaS&quot; queue when a new case is re-assigned to their queue.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi Case Notification_PGi-Case-GL-Tier 3-Telco</fullName>
+        <actions>
+            <name>PGi_Case_Email_Case_Owner_Telco</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>PGi-Case-GL-Tier 3-Telco</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>notContain</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <description>Notifies the &quot;PGi-Case-GL-Tier 3-Telco&quot; queue when a new case is re-assigned to their queue.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi Case Notification_PGi-Case-GL-Tier 4-GM5 SaaS</fullName>
+        <actions>
+            <name>PGi_Case_Email_Case_Owner_GM5_Saas</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>PGi-Case-GL-Tier 4-GM5 SaaS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>notContain</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <description>Notifies the &quot;PGi-Case-GL-Tier 4-GM5 SaaS&quot; queue when a new case is re-assigned to their queue.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi Case Notification_PGi-Case-GL-Tier 4-R%26D %28BoB%29</fullName>
+        <actions>
+            <name>PGi_Case_Email_Case_Owner_no_assignment_rule</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>PGi-Case-GL-Tier 4-R&amp;D (BoB)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>notContain</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <description>Notifies the &quot;PGi-Case-GL-Tier 4-R&amp;D (BoB)&quot; queue when a new case is re-assigned to their queue.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi Case Notification_PGi-Case-GL-Tier 4-R%26D %28Softphone%29</fullName>
+        <actions>
+            <name>PGi_Case_Email_Case_Owner_PGi_Case_GL_Tier_4_R_D_Softphone</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>PGi-Case-GL-Tier 4-R&amp;D (Softphone)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>notContain</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <description>Notifies the &quot;PGi-Case-GL-Tier 4-R&amp;D (Softphone)&quot; queue when a new case is re-assigned to their queue.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi Case Notification_PGi-Case-GL-Tier3-Voice Delivery%28PGi-Case-NA-Tier 3-Network %28NPD%2CIVR%2FACD%29%29</fullName>
+        <actions>
+            <name>PGi_Case_Email_Case_Owner_PGi_Case_GL_Tier3_Voice_Delivery_NA_Tier_3_Network_NPD</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>PGi-Case-NA-Tier 3-Network (NPD,IVR/ACD),PGi-Case-GL-Tier3-Voice Delivery</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>notContain</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <description>Notifies the &quot;PGi-Case-GL-Tier3-Voice Delivery&quot; or the &quot;PGi-Case-NA-Tier 3-Network (NPD,IVR/ACD)&quot; queue when a new case is re-assigned to their queue.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi- Case- PGi-Time System Request</fullName>
+        <actions>
+            <name>PGi_Time_System_Request_CRT_Creation</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi-Time System Request</value>
+        </criteriaItems>
+        <description>When a new PGi - Time System Request CRT is created.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Case Notify Queue for Transferred Case</fullName>
+        <actions>
+            <name>Notify_Queue_of_Transferred_Case</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 AND 2) OR (1 AND 3) OR (1 AND 4) OR (1 AND 5) OR (1 AND 6) OR (1 AND 7)</booleanFilter>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>New - Transferred</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>PGi-Case-GL-Tier 4-R&amp;D (Dialog Engineer)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>PGi-Case-GL-Tier 3-Saas Ops</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>PGi-Case-GL-Tier 2-Modality</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>PGi-Case-NA-Tier 2-IST (Config)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>PGi-Case-GL-QA/DEV Lab</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>PGi-Case-INTL-Provisioning</value>
+        </criteriaItems>
+        <description>If a case is transferred to any of the listed queues, then send a notification email.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Incident Review-PopulateCustomerNotes</fullName>
+        <actions>
+            <name>PGi_Incident_Review_PopulateCustomerNote</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi-Incident Case Review</value>
+        </criteriaItems>
+        <description>Will automatically populate Custom Notes when Incident Case Review is set as Closed</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Notify Incident Mngt when Closed</fullName>
+        <actions>
+            <name>PGi_Notify_Incident_Mngt_when_Closed</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2 AND 3</booleanFilter>
+        <criteriaItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi-Incident Case Review</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Include_Mgr_in_Review__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>To notify Incident Mngt when record is closed and Include Mgr is TRUE</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Orange</fullName>
+        <actions>
+            <name>PGi_Orange</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(  PGi_Company__r.Orange_Portal__c = True,   RecordType.Name = &quot;PGi-Client External Support&quot;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-SFSupport set Assigned for Enhancement</fullName>
+        <actions>
+            <name>PGi_SFSupport_set_Assigned_for_Enhanceme</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.CRMSupportLevel__c</field>
+            <operation>contains</operation>
+            <value>reviewed,on hold</value>
+        </criteriaItems>
+        <description>if CRM Level is Enhancement assign to CRM Support Team</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-SFSupport set CRM Level</fullName>
+        <actions>
+            <name>PGi_SFSupport_set_CRM_Level</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PGi-SFDC Support</value>
+        </criteriaItems>
+        <description>Defaults to Operations Support for CRT of SF Support</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT - Care Related %3D TRUE</fullName>
+        <actions>
+            <name>RT_Care_Related_TRUE</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RT_Care_Related__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT - Notify Care if Assigned To is Blank</fullName>
+        <actions>
+            <name>RT_Notify_Care_if_Assigned_To_is_Blank</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk-Case-NA-Care</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Assigned_To__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.CreatedById</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Reports Workspace Integration</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT - Winback Related %3D TRUE</fullName>
+        <actions>
+            <name>RT_Winback_Related_TRUE</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RT_Winback_Related__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_AST Notification of Specific Case Reasons</fullName>
+        <actions>
+            <name>RT_AST_Notification_of_Specific_Case_Reasons</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Feedback - Chairperson,Account - Update,Service - RT outage,Service - Op-Assist or Event Inquiry,Service - Feature request,Account - Rate Inquiry</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.OwnerId</field>
+            <operation>equals</operation>
+            <value>Account Specialist Team,Janae Payton,Abigail Rosenthal,Abigail Herreman,Amorette Harrison,Travis Sowash</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RT-Client External Support</value>
+        </criteriaItems>
+        <description>Notify AST members if a case is created with one of the following case reasons: 
+Account - Update
+Account - Rate Inquiry
+Feedback - Chairperson
+Service - Feature Request
+Service - Op Assist/Event Inquiry
+Service - ReadyTalk outage</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Cancellation Related Case Aging - 12 Hour Notification</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Service_Performance__c</field>
+            <operation>equals</operation>
+            <value>Cancellation Related</value>
+        </criteriaItems>
+        <description>Sends email alert to case owner if the cancellation case is still open at intervals of 12, 24, 48 and 72 hours. Sprint Story COD-1463 was to combine the four separate WFRs into this one.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>RT_Cancellation_Case_Open_48_Hour_Notification</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Case.CreatedDate</offsetFromField>
+            <timeLength>48</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>RT_Cancellation_Case_Open_72_Hour_Notification</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Case.CreatedDate</offsetFromField>
+            <timeLength>72</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>RT_Cancellation_Case_Aging_12_Hour_Notification</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Case.CreatedDate</offsetFromField>
+            <timeLength>12</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>RT_Cancellation_Case_Open_24_Hour_Notification</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Case.CreatedDate</offsetFromField>
+            <timeLength>24</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>RT_Cancellation Related Case Aging - 24 Hour Notification</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Service_Performance__c</field>
+            <operation>equals</operation>
+            <value>Cancellation Related</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RT-Client External Support</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>RT_Cancellation_Related_Case_Aging_24_Hour_Notification</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Case.CreatedDate</offsetFromField>
+            <timeLength>24</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>RT_Cancellation Related Case Aging - 48 Hour Notification</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Service_Performance__c</field>
+            <operation>equals</operation>
+            <value>Cancellation Related</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RT-Client External Support</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>RT_Cancellation_Related_Case_Aging_48_Hour_Notification</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Case.CreatedDate</offsetFromField>
+            <timeLength>48</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>RT_Cancellation Related Case Aging - 72 Hour Notification</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Service_Performance__c</field>
+            <operation>equals</operation>
+            <value>Cancellation Related</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RT-Client External Support</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>RT_Cancellation_Related_Case_Aging_72_Hour_Notification</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Case.CreatedDate</offsetFromField>
+            <timeLength>72</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>RT_Case Aging - 12 Hour Notification</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Opened_With_GX__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Sends email alert to case owner if the case is still open with L3 at intervals of 12, 24, 48 and 72 hours. Sprint Story COD-1463 was to combine the four separate WFRs into this one.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>RT_Case_Aging_24_Hour_Notification</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Case.CreatedDate</offsetFromField>
+            <timeLength>24</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>RT_Case_Aging_48_Hour_Notification</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Case.CreatedDate</offsetFromField>
+            <timeLength>48</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>RT_Case_Aging_72_Hour_Notification</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Case.CreatedDate</offsetFromField>
+            <timeLength>72</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>RT_Case_Aging_12_Hour_Notification</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Case.CreatedDate</offsetFromField>
+            <timeLength>12</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>RT_Case Aging - 24 Hour Notification</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Opened_With_GX__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RT-Client External Support</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>RT_Case_24_Hour_Notification</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Case.CreatedDate</offsetFromField>
+            <timeLength>24</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>RT_Case Aging - 36 Hour Notification</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Opened_With_GX__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RT-Client External Support</value>
+        </criteriaItems>
+        <description>Rule name said 48 hours, but updates all said 36 hours.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>RT_Case_36_Hour_Notification</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Case.CreatedDate</offsetFromField>
+            <timeLength>36</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>RT_Case Aging - 72 Hour Notification</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Opened_With_GX__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RT-Client External Support</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>RT_Case_72_Hour_Notification</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Case.CreatedDate</offsetFromField>
+            <timeLength>72</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>RT_Case on at-risk account</fullName>
+        <actions>
+            <name>RT_New_case_created_on_at_risk_account</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.At_Risk_Account__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RT-Client External Support</value>
+        </criteriaItems>
+        <description>When a case is created on an at-risk account, the AE is sent an email notification.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_EEmail Management when Cancellation Case is Closed</fullName>
+        <actions>
+            <name>RT_Email_Management_when_Cancellation_Related_Case_is_Closed</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Service_Performance__c</field>
+            <operation>equals</operation>
+            <value>Cancellation Related</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <description>Notify the management team when a Cancellation Related case has been closed.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Email Management when Cancellation Case is Closed</fullName>
+        <actions>
+            <name>RT_Email_Management_when_Cancellation_Related_Case_is_Closed</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Service_Performance__c</field>
+            <operation>equals</operation>
+            <value>Cancellation Related</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RT-Client External Support</value>
+        </criteriaItems>
+        <description>Notify the management team when a Cancellation Related case has been closed.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_GX Cases</fullName>
+        <actions>
+            <name>RT_GX_Cases</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>notEqual</operation>
+            <value>Global Crossing</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.LastName</field>
+            <operation>equals</operation>
+            <value>Cases</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.FirstName</field>
+            <operation>equals</operation>
+            <value>GX</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RT-Client External Support</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_If Expedited then Set Priority to Blocker</fullName>
+        <actions>
+            <name>RT_Set_Priority_to_Blocker</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Expedited__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RT-Client External Support</value>
+        </criteriaItems>
+        <description>Sets the priority to blocker if the expedite checkbox is set to true</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_If Expedited then Set Priority to Critical</fullName>
+        <actions>
+            <name>RT_Set_Priority_to_Critical</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Expedited__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RT-Client External Support</value>
+        </criteriaItems>
+        <description>Sets the priority to critical if the expedite checkbox is set to true</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Notify Owner of Resolution</fullName>
+        <actions>
+            <name>RT_Jira_Issue_Resolved</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Jira_Status__c</field>
+            <operation>equals</operation>
+            <value>Resolved</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RT-Client External Support</value>
+        </criteriaItems>
+        <description>Notify the case owner that the engineering issue has been resolved.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Populate RA Master ID</fullName>
+        <actions>
+            <name>RT_Set_RA_Master_ID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>populates the RA Master ID from the associated access code</description>
+        <formula>AND(  RecordType.DeveloperName = &#39;RT_Client_External_Support&#39;, ISNULL( RA_Master_ID__c ),  NOT(ISNULL(Access_Code__c )))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Service Performance - Workflow 11 - Account Cancellation Reason</fullName>
+        <actions>
+            <name>RT_Notify_Team_when_Account_Cancellation_Case_is_Created</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>RT_Service_Performance_Cancel_Related</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Cancellation - Budget,Cancellation - Lack of features,Cancellation - No Adoption,Cancellation - Not a good fit,Cancellation - Out of business/acquired,Cancellation - Poor service experience,Cancellation - Went to competitor</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>New Case</value>
+        </criteriaItems>
+        <description>If Case Reasons equals certain values, the Service Performance field will be automatically filled in with &quot;Cancellation Related&quot;, an email will notify the owners.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Service Performance Workflow 1 - Account Related Case Reasons</fullName>
+        <actions>
+            <name>RT_Service_Performance_Account_Related</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 OR 2 OR 3 OR 4) and 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Account - Admin Portal,Account - Email returned,Account - Fraudulent activity,Account - Lost</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Audio - 150 Port request,Billing - Paysimple,Billing - Question or issue,Recording - Archive restore request,Recording - Merge request,Recording - Move request</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Account - Mail Returned,Account - New Account Transition,Account - New subscription request,Account - NO Pin change request</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Account - Passcode Inquiry,Account - Potential new lead,Account - Question,Account - Rate Inquiry,Account - Report request,Account - Update</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RT-Client External Support</value>
+        </criteriaItems>
+        <description>If Case Reasons equals certain values, the Service Performance field will be automatically filled in with &quot;Account Related&quot;</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Service Performance Workflow 10 - User Ed %28Integrations%29 Case Reasons</fullName>
+        <actions>
+            <name>RT_Service_Performance_User_Ed_Integrati</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 OR 2 OR 3 OR 4) and 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Integrations - CC API-question,Integrations - CC API-training,Integrations - Eloqua-question,Integrations - Eloqua-training</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Integrations - General,Integrations - HubSpot-question,Integrations - HubSpot-training,Integrations - Marketo-question</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Integrations - Marketo-training,Integrations - Pardot-question,Integrations - Pardot-training,Integrations - Salesforce-question,Integrations - Salesforce-setup,Integrations - Salesforce-training</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Meeting - CC API</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RT-Client External Support</value>
+        </criteriaItems>
+        <description>If Case Reasons equals certain values, the Service Performance field will be automatically filled in with &quot;User Education - Integrations&quot;</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Service Performance Workflow 2 - Feature Request Case Reasons</fullName>
+        <actions>
+            <name>RT_Service_Performance_Feedback_FeatureR</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 or 2) and 3</booleanFilter>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Feedback - Chairperson,Feedback - Participant,Feedback - Website,RT Website - Comment,RT Website - Content issue</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Service - Feature request</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RT-Client External Support</value>
+        </criteriaItems>
+        <description>If Case Reasons equals certain values, the Service Performance field will be automatically filled in with &quot;Feature Request&quot;</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Service Performance Workflow 3 - Internal RT Questions Case Reasons</fullName>
+        <actions>
+            <name>RT_Service_Performance_InternalQuestion</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Service - L3 No BOP</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RT-Client External Support</value>
+        </criteriaItems>
+        <description>If Case Reasons equals certain values, the Service Performance field will be automatically filled in with &quot;Internal RT Question&quot;</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Service Performance Workflow 4 - Participant Question Case Reasons</fullName>
+        <actions>
+            <name>RT_Service_Performance_ParticipantQuesti</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Audio - Participant dialed support #,Meeting - Participant question,Meeting - Participant registration issue,Meeting - Start time confusion,Meeting - Waiting on lobby screen,SSBA - Participant request for dial-in</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RT-Client External Support</value>
+        </criteriaItems>
+        <description>If Case Reasons equals certain values, the Service Performance field will be automatically filled in with &quot;Participant Questions&quot;</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Service Performance Workflow 5 - Professional Event Services Case Reasons</fullName>
+        <actions>
+            <name>RT_Service_Performance_ProEvent_Services</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 or 2 or 3) and 4</booleanFilter>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Event - Customer/Process-Administrative,Event - Customer/Process-Best Practices,Event - Customer/Process-No Show,Event - Customer/Process-Late Cancel,Event - Customer/Technology-Best Pract.</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Event - Customer/Technology-Equipment,Event - Provider/Process-Human Error,Event - Provider/Process-Op Protocol,Event - Provider/Process-Reservations,Event - Provider/Technology-Bridge,Event - Provider/Technology-Equipment</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Service - Op-Assist or Event Inquiry,SSBA - Request for Prof. services</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RT-Client External Support</value>
+        </criteriaItems>
+        <description>If Case Reasons equals certain values, the Service Performance field will be automatically filled in with &quot;Professional Event Services&quot;</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Service Performance Workflow 6 - Technical Case Reasons</fullName>
+        <actions>
+            <name>RT_Service_Performance_Technical</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 OR 2 OR 3 OR 4 OR 5 OR 6 OR 7 OR 8 OR 9 OR 10 OR 11 OR 12) and 13</booleanFilter>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Audio - Access code not provided,Audio - Fast busy signal,Audio - General error message,Audio - International toll free request,Audio - Invalid access code message,Audio - Line disconnected,Audio - No recording</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Audio - Op Assist issue,Audio - Op Assist panel issue,Audio - Other,Audio - Quality - background noise,Audio - Quality - choppiness,Audio - Quality - echo,Audio - Quality - other,Audio - Quality - static,Audio - Quality - volume</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Audio - reached capacity,Event - Internal/Process-Human Error,Event - Internal/Technology-Equipment,Event - Internal/Technology-Service,Meeting - Host Issue,Meeting - Invitation issue</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Other - Outlook Scheduler problem,Playback - Issue,Recording - Auto MP4 issue,Recording - Editing issue,Recording - Issue,Service - Broadcast Inquiry</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Service - Bug Request,Service - CC API,Service - GX outage,Service - GX Provisioning API,Service - RT outage,Service - Split bridge</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>SSBA - Broadcast audio issue,SSBA - International speaker request,SSBA - Recording missing,SSBA - Speaker invitation issue,SSBA - Speaker room issue</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>VC - Browser issue,VC - Camera issue,VC - Device/Grab issue,VC - Flash issue,VC - Other,VC - Participant limit reached,VC - Presenter issue,VC - Quality concerns</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>VoIP - General error,VoIP - Hardware problem,VoIP - Line disconnect,VoIP - Network / proxy,VoIP - Quality (clipping),VoIP - Quality (distortion)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>VoIP - Quality (echo),VoIP - Quality (general),VoIP - Quality (volume),VoIP - Quality - choppy,VoIP - Quality - distortion,VoIP - Quality - echo,VoIP - Quality - latency,VoIP - Quality - static,VoIP - Quality - volume</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>VoIP - Server performance,Web - Chair could not login,Web - Chair could not open web controls,Web - Collab issue,Web - Co-presenter promotion issue,Web - No sound on computer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Web - Participant kicked out of conf.,Web - Performance issue,Web - Plug-in Issue,Web - Plug-in Question,Web - PowerPoint issue,Web - Screen sharing issue,Web - Slow slide transition</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Web - Participant could not login</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RT-Client External Support</value>
+        </criteriaItems>
+        <description>If Case Reasons equals certain values, the Service Performance field will be automatically filled in with &quot;Technical (ReadyTalk or other)&quot;</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Service Performance Workflow 7 - Uncategorized Case Reasons</fullName>
+        <actions>
+            <name>RT_Service_Performance_Uncategorized</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Other - Uncategorized</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RT-Client External Support</value>
+        </criteriaItems>
+        <description>If Case Reasons equals certain values, the Service Performance field will be automatically filled in with &quot;Uncategorized&quot;</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Service Performance Workflow 8 - User Education Case Reasons</fullName>
+        <actions>
+            <name>RT_Service_Performance_User_Education</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 OR 2 OR 3 OR 4) and 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Playback - Podcasting question,Playback - Question,RT Website - Navigation issue,SSBA - Training</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Training - Admin Portal,Training - Audio controls,Training - Conference Center,Training - How do I...,Training - Invitations,Training - Join/start meeting,Training - Recordings,Training - Slides,Training - Web Controls</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>VC - Question,VC - Training,VoIP - Capacity,VoIP - Enable feature,VoIP - Enable in controls,VoIP - Training,VoIP - Training - Best tips,VoIP - Training - How to,VoIP - User config - mic,VoIP - User config - speaker</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Web - Broadcast Audio,Web - Browser check questions,Web - VCP,Training - Polling</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RT-Client External Support</value>
+        </criteriaItems>
+        <description>If Case Reasons equals certain values, the Service Performance field will be automatically filled in with &quot;User Education&quot;</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Service Performance Workflow 9 - User Ed %28Connectivity Tools%29 Case Reasons</fullName>
+        <actions>
+            <name>RT_Service_Performance_UserEdConnectiv</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 and (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RT-Client External Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Mobile - Android - Audio app,Mobile - Android - Playback,Mobile - Android - Web,Mobile - iPad - Playback,Mobile - iPad - Video,Mobile - iPad - Web,Mobile - iPhone - Audio app,Mobile - iPhone - Playback</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Mobile - iPhone - Web,Training - RT mobile audio app,Web - Web Meeting plug-in</value>
+        </criteriaItems>
+        <description>If Case Reasons equals certain values, the Service Performance field will be automatically filled in with &quot;User Education - Connectivity Tools&quot;</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>TalkPoint - GM Webcast AutoReply</fullName>
+        <actions>
+            <name>TalkPoint_GM_Webcast_AutoReply</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>GlobalMeet Webcast Community</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>TalkPoint - GM Webinar AutoReply</fullName>
+        <actions>
+            <name>TalkPoint_GM_Webinar_AutoReply</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>GlobalMeet Webinar Community</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>TalkPoint - GoToWebcast Autoreply</fullName>
+        <actions>
+            <name>TalkPoint_GoToWebcast</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>GoToWebcast Community</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>TalkPoint - PWN Webcast Autoreply</fullName>
+        <actions>
+            <name>TalkPoint_PWN_Webcast_AutoReply</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>PWN Webcast Community</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>TalkPoint - PWN Webinar Autoreply</fullName>
+        <actions>
+            <name>TalkPoint_PWN_Webinar_AutoReply</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>PWN Webinar Community</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>TalkPoint - TalkPoint Autoreply</fullName>
+        <actions>
+            <name>TalkPoint_TalkPoint_AutoReply</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>TalkPoint Community</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>TalkPoint - Webcast Autoreply</fullName>
+        <actions>
+            <name>TalkPoint_Webcast_AutoReply</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Webcasts Community</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Total Time Paused</fullName>
+        <actions>
+            <name>Update_Total_Paused_Time</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ISCHANGED(Most_Recent_Paused_Time__c) &amp;&amp; ISNULL(Most_Recent_Paused_Time__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Webcast%2FWebinar - Assign Ownership</fullName>
+        <actions>
+            <name>TP_Assign_Ownership</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Webcast/Webinar Support</value>
+        </criteriaItems>
+        <description>formally TP - Assign Ownership</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Case%2C Status Update</fullName>
+        <actions>
+            <name>iMC_Case_EM_Assignment_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>iMC_Case_Status_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>If Case Type is &quot;Engagement&quot;, update Status to &quot;In Process&quot; and EM Assignment Date to TODAY.</description>
+        <formula>AND(  RecordType.Name = &quot;iMC Case&quot;,  ISPICKVAL(Type, &quot;Engagement&quot;),  ISCHANGED( OwnerId )  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Case%2C Subject Line %26 Owner</fullName>
+        <actions>
+            <name>iMC_Case_Owner</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>iMC_Case_Subject_Line</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Case</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Engagement</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Email</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Sent out via WFR to end user.  Copy of the message is below</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Email: Action Required - Re: Your Salesforce.com Request</subject>
+    </tasks>
+</Workflow>

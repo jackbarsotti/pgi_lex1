@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicate the customer&apos;s type of event. --></help>
+    <label><!-- Call Type --></label>
+    <name>Call_Type__c</name>
+    <picklistValues>
+        <masterLabel>Information Sharing</masterLabel>
+        <translation><!-- Information Sharing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Internal Communication</masterLabel>
+        <translation><!-- Internal Communication --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing</masterLabel>
+        <translation><!-- Marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Member Benefit</masterLabel>
+        <translation><!-- Member Benefit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Public Relations</masterLabel>
+        <translation><!-- Public Relations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales</masterLabel>
+        <translation><!-- Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Training</masterLabel>
+        <translation><!-- Training --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

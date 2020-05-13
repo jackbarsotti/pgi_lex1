@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Topics --></label>
+    <name>Topics__c</name>
+    <picklistValues>
+        <masterLabel>API</masterLabel>
+        <translation><!-- API --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APIs</masterLabel>
+        <translation><!-- APIs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Account Maintenance</masterLabel>
+        <translation><!-- Account Maintenance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Acquisitions</masterLabel>
+        <translation><!-- Acquisitions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Admin/Presenter Support</masterLabel>
+        <translation><!-- Admin/Presenter Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ask An Expert (Live)</masterLabel>
+        <translation><!-- Ask An Expert (Live) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Attendance Survey</masterLabel>
+        <translation><!-- Attendance Survey --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Branding</masterLabel>
+        <translation><!-- Branding --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Certification</masterLabel>
+        <translation><!-- Certification --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Clips Library</masterLabel>
+        <translation><!-- Clips Library --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Continuing Ed</masterLabel>
+        <translation><!-- Continuing Ed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Custom Player Tabs</masterLabel>
+        <translation><!-- Custom Player Tabs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cut Heads &amp; Tails</masterLabel>
+        <translation><!-- Cut Heads &amp; Tails --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Documentation Event Setup</masterLabel>
+        <translation><!-- Documentation Event Setup --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Documentation Reporting</masterLabel>
+        <translation><!-- Documentation Reporting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Encoder &amp; VCU Events</masterLabel>
+        <translation><!-- Encoder &amp; VCU Events --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Delivery</masterLabel>
+        <translation><!-- Event Delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Details</masterLabel>
+        <translation><!-- Event Details --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Reminder</masterLabel>
+        <translation><!-- Event Reminder --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Resources</masterLabel>
+        <translation><!-- Event Resources --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Setup</masterLabel>
+        <translation><!-- Event Setup --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Setup Checklist</masterLabel>
+        <translation><!-- Event Setup Checklist --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Status</masterLabel>
+        <translation><!-- Event Status --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Summary Page Controls</masterLabel>
+        <translation><!-- Event Summary Page Controls --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Summary/Management</masterLabel>
+        <translation><!-- Event Summary/Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Timings</masterLabel>
+        <translation><!-- Event Timings --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Types</masterLabel>
+        <translation><!-- Event Types --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Feature Trainings Certification</masterLabel>
+        <translation><!-- Feature Trainings Certification --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Feature Trainings Portals</masterLabel>
+        <translation><!-- Feature Trainings Portals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Feature Trainings Screen Sharing</masterLabel>
+        <translation><!-- Feature Trainings Screen Sharing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Feature Trainings Simulated Live</masterLabel>
+        <translation><!-- Feature Trainings Simulated Live --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Feature Trainings Surveys</masterLabel>
+        <translation><!-- Feature Trainings Surveys --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Feature Trainings Templates</masterLabel>
+        <translation><!-- Feature Trainings Templates --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Feature Trainings Video Bridge (Advanced)</masterLabel>
+        <translation><!-- Feature Trainings Video Bridge (Advanced) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Feature Trainings Video Bridge (Webcam)</masterLabel>
+        <translation><!-- Feature Trainings Video Bridge (Webcam) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Follow-up Emails</masterLabel>
+        <translation><!-- Follow-up Emails --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Guest Admin</masterLabel>
+        <translation><!-- Guest Admin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Guest Admins</masterLabel>
+        <translation><!-- Guest Admins --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Headshots</masterLabel>
+        <translation><!-- Headshots --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Headshots Library</masterLabel>
+        <translation><!-- Headshots Library --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Headshots Timeline</masterLabel>
+        <translation><!-- Headshots Timeline --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Event Survey</masterLabel>
+        <translation><!-- In-Event Survey --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Integrated Audience Bridge</masterLabel>
+        <translation><!-- Integrated Audience Bridge --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Integrations</masterLabel>
+        <translation><!-- Integrations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Intro</masterLabel>
+        <translation><!-- Intro --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jump Points</masterLabel>
+        <translation><!-- Jump Points --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Landing Page Content</masterLabel>
+        <translation><!-- Landing Page Content --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>License Management</masterLabel>
+        <translation><!-- License Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Live Event Troubleshooting</masterLabel>
+        <translation><!-- Live Event Troubleshooting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Live Studio</masterLabel>
+        <translation><!-- Live Studio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Live Studio Event Details</masterLabel>
+        <translation><!-- Live Studio Event Details --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Live Studio Headshots</masterLabel>
+        <translation><!-- Live Studio Headshots --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Live Studio Messages</masterLabel>
+        <translation><!-- Live Studio Messages --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Live Studio Screen Sharing</masterLabel>
+        <translation><!-- Live Studio Screen Sharing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Live Studio Slides</masterLabel>
+        <translation><!-- Live Studio Slides --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Live Studio Surveys</masterLabel>
+        <translation><!-- Live Studio Surveys --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Live Studio Troubleshooting</masterLabel>
+        <translation><!-- Live Studio Troubleshooting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Managed Services</masterLabel>
+        <translation><!-- Managed Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Managed/Assist Services</masterLabel>
+        <translation><!-- Managed/Assist Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Managing Event Library</masterLabel>
+        <translation><!-- Managing Event Library --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing</masterLabel>
+        <translation><!-- Marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing Options</masterLabel>
+        <translation><!-- Marketing Options --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Media Clips &amp; Overlay Videos</masterLabel>
+        <translation><!-- Media Clips &amp; Overlay Videos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Media Timeline</masterLabel>
+        <translation><!-- Media Timeline --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Navigating Platform</masterLabel>
+        <translation><!-- Navigating Platform --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OD/Sim-Live Studio</masterLabel>
+        <translation><!-- OD/Sim-Live Studio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On-Demand Captions</masterLabel>
+        <translation><!-- On-Demand Captions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On-Demand Studio</masterLabel>
+        <translation><!-- On-Demand Studio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Overlay Videos</masterLabel>
+        <translation><!-- Overlay Videos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Overview</masterLabel>
+        <translation><!-- Overview --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Password Protection</masterLabel>
+        <translation><!-- Password Protection --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Platform Guide</masterLabel>
+        <translation><!-- Platform Guide --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Player Footer</masterLabel>
+        <translation><!-- Player Footer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Player Settings</masterLabel>
+        <translation><!-- Player Settings --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Portals</masterLabel>
+        <translation><!-- Portals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Post-Event Controls</masterLabel>
+        <translation><!-- Post-Event Controls --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Post-Event Survey</masterLabel>
+        <translation><!-- Post-Event Survey --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Presenter Chat</masterLabel>
+        <translation><!-- Presenter Chat --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Publishing</masterLabel>
+        <translation><!-- Publishing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Q&amp;A</masterLabel>
+        <translation><!-- Q&amp;A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quick Start</masterLabel>
+        <translation><!-- Quick Start --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Record-by-Slide Studio</masterLabel>
+        <translation><!-- Record-by-Slide Studio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Referral Checking</masterLabel>
+        <translation><!-- Referral Checking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Registration Advanced Settings</masterLabel>
+        <translation><!-- Registration Advanced Settings --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Registration Confirmation Email</masterLabel>
+        <translation><!-- Registration Confirmation Email --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Registration Form</masterLabel>
+        <translation><!-- Registration Form --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Registration Types</masterLabel>
+        <translation><!-- Registration Types --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reporting</masterLabel>
+        <translation><!-- Reporting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scheduling</masterLabel>
+        <translation><!-- Scheduling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Screen Sharing</masterLabel>
+        <translation><!-- Screen Sharing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Security Advanced Settings</masterLabel>
+        <translation><!-- Security Advanced Settings --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Security Package</masterLabel>
+        <translation><!-- Security Package --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Settings</masterLabel>
+        <translation><!-- Settings --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Simulated Live</masterLabel>
+        <translation><!-- Simulated Live --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Slide Library</masterLabel>
+        <translation><!-- Slide Library --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Slide Timeline</masterLabel>
+        <translation><!-- Slide Timeline --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Slides</masterLabel>
+        <translation><!-- Slides --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Survey Library</masterLabel>
+        <translation><!-- Survey Library --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Survey Timeline</masterLabel>
+        <translation><!-- Survey Timeline --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technical</masterLabel>
+        <translation><!-- Technical --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Troubleshooting</masterLabel>
+        <translation><!-- Troubleshooting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>URL Security Key</masterLabel>
+        <translation><!-- URL Security Key --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video Bridge (Advanced)</masterLabel>
+        <translation><!-- Video Bridge (Advanced) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video Bridge (Webcam)</masterLabel>
+        <translation><!-- Video Bridge (Webcam) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video Bridge Events</masterLabel>
+        <translation><!-- Video Bridge Events --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video Event Setup</masterLabel>
+        <translation><!-- Video Event Setup --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video Guest Admins</masterLabel>
+        <translation><!-- Video Guest Admins --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video Live Studio</masterLabel>
+        <translation><!-- Video Live Studio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video Reports</masterLabel>
+        <translation><!-- Video Reports --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Viewer Support</masterLabel>
+        <translation><!-- Viewer Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcam Events</masterLabel>
+        <translation><!-- Webcam Events --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

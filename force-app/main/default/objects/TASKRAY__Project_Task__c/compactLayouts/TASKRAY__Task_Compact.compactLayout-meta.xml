@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TASKRAY__Task_Compact</fullName>
+    <fields>Name</fields>
+    <fields>TASKRAY__Project__c</fields>
+    <fields>TASKRAY__Deadline__c</fields>
+    <fields>TASKRAY__List__c</fields>
+    <fields>OwnerId</fields>
+    <label>TaskRay Task Compact</label>
+</CompactLayout>

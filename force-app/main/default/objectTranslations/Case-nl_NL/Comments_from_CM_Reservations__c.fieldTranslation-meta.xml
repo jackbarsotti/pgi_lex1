@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Comments added to ticket created from link in Call Manager and iGLOO --></help>
+    <label><!-- Comments from CM/Reservations --></label>
+    <name>Comments_from_CM_Reservations__c</name>
+</CustomFieldTranslation>

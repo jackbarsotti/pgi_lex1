@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>On_Demand_Audio_Canada_Toll__c</fullName>
+    <defaultValue>0.1000</defaultValue>
+    <description>Rate for On-Demand Audio - Canada Toll</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Rate for On-Demand Audio - Canada Toll</inlineHelpText>
+    <label>On-Demand Audio - Canada Toll</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>4</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>High_Risk_to_False</fullName>
+        <field>IsHighRisk__c</field>
+        <literalValue>0</literalValue>
+        <name>High Risk to False</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>High_Risk_to_True</fullName>
+        <field>IsHighRisk__c</field>
+        <literalValue>1</literalValue>
+        <name>High Risk to True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_Comp_Set_Ownership_APAC_House</fullName>
+        <field>PrimarySalesRep__c</field>
+        <lookupValue>abhishek.pradhan@pgi.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>PGi Comp: Set Ownership - APAC House</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_Comp_Set_Ownership_Budget_Team</fullName>
+        <field>PrimarySalesRep__c</field>
+        <lookupValue>jason.klovski@pgi.com.mainsite</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>PGi Comp: Set Ownership - Budget Team</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_Comp_Set_Ownership_CEM_Team</fullName>
+        <field>PrimarySalesRep__c</field>
+        <lookupValue>mypgisales@pgi.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>PGi Comp: Set Ownership - CEM Team</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_Comp_Set_Ownership_EMEA_House1</fullName>
+        <field>PrimarySalesRep__c</field>
+        <lookupValue>vitor.desousa@pgi.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>PGi Comp: Set Ownership - EMEA House1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_Comp_Set_Ownership_EMEA_House2</fullName>
+        <field>PrimarySalesRep__c</field>
+        <lookupValue>nadeem.khan@pgi.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>PGi Comp: Set Ownership - EMEA House2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_Comp_Set_Ownership_EMEA_House3</fullName>
+        <field>PrimarySalesRep__c</field>
+        <lookupValue>nadeem.khan@pgi.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>PGi Comp: Set Ownership - EMEA House3</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_Comp_Set_Ownership_EMEA_House4</fullName>
+        <field>PrimarySalesRep__c</field>
+        <lookupValue>nadeem.khan@pgi.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>PGi Comp: Set Ownership - EMEA House4</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_Comp_Set_Ownership_EMEA_House6</fullName>
+        <field>PrimarySalesRep__c</field>
+        <lookupValue>kathleen.grace@pgi.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>PGi Comp: Set Ownership - EMEA House6</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_Orange_Enterprise</fullName>
+        <description>Update Orange Portal on PGi Company if Enterprise id = xyz</description>
+        <field>Orange_Portal__c</field>
+        <literalValue>1</literalValue>
+        <name>PGi-Orange Enterprise</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Ownership_EMEA_House5</fullName>
+        <field>PrimarySalesRep__c</field>
+        <name>Set Ownership - EMEA House5</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_NZL_Value</fullName>
+        <field>NZL__c</field>
+        <literalValue>1</literalValue>
+        <name>PGi Comp: Update NZL Flag</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>High Risk to False</fullName>
+        <actions>
+            <name>High_Risk_to_False</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>PGi_Company__c.Red_Flag_Date__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>High Risk to True</fullName>
+        <actions>
+            <name>High_Risk_to_True</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>PGi_Company__c.Red_Flag_Date__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi Comp%3A Set Ownership - APAC House</fullName>
+        <actions>
+            <name>PGi_Comp_Set_Ownership_APAC_House</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1</booleanFilter>
+        <criteriaItems>
+            <field>PGi_Company__c.Territory__c</field>
+            <operation>equals</operation>
+            <value>APA701</value>
+        </criteriaItems>
+        <description>For any company that is created/updated where the TESLA TC is APA701, the ownership should default to Craig Aspey.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi Comp%3A Set Ownership - Budget Team</fullName>
+        <actions>
+            <name>PGi_Comp_Set_Ownership_Budget_Team</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1</booleanFilter>
+        <criteriaItems>
+            <field>PGi_Company__c.Sales_Rep_s_Email__c</field>
+            <operation>equals</operation>
+            <value>budgetsalesteam@pgi.com</value>
+        </criteriaItems>
+        <description>For any company that is created/updated where the TESLA Owner Email = budgetsalesteam@pgi.com the ownership should default to Mark Turner who is the manager of the team. This allows all of the Budget Sales Team to see the companies/accounts as well.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi Comp%3A Set Ownership - CEM Team</fullName>
+        <actions>
+            <name>PGi_Comp_Set_Ownership_CEM_Team</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1</booleanFilter>
+        <criteriaItems>
+            <field>PGi_Company__c.Sales_Rep_s_Email__c</field>
+            <operation>equals</operation>
+            <value>mypgi@pgi.com</value>
+        </criteriaItems>
+        <description>For any company that is created/updated where the TESLA Owner Email = mypgi@pgi.com the ownership should default to the placeholder of MyPGiSales. This allows all of the CEM Team to see the companies and accounts as well.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi Comp%3A Set Ownership - EMEA House1</fullName>
+        <actions>
+            <name>PGi_Comp_Set_Ownership_EMEA_House1</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>PGi_Company__c.Territory__c</field>
+            <operation>equals</operation>
+            <value>IDE00050,IDE00077,IDE00088</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PGi_Company__c.Sales_Rep_s_Email__c</field>
+            <operation>equals</operation>
+            <value>emea.house@pgi.com</value>
+        </criteriaItems>
+        <description>For any company that is created/updated where the TESLA Owner Email = emea.house@pgi.com &amp; TC is unique the ownership should default to Vitor de Sousa who is the manager of the team.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi Comp%3A Set Ownership - EMEA House2</fullName>
+        <actions>
+            <name>PGi_Comp_Set_Ownership_EMEA_House2</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>PGi_Company__c.Territory__c</field>
+            <operation>equals</operation>
+            <value>NCDK016,NCFI009,IFR00044,IIT00013,NCNR034,NCSW014</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PGi_Company__c.Sales_Rep_s_Email__c</field>
+            <operation>equals</operation>
+            <value>emea.house@pgi.com</value>
+        </criteriaItems>
+        <description>For any company that is created/updated where the TESLA Owner Email = emea.house@pgi.com &amp; TC is unique the ownership should default to Loic Rousseau who is the manager of the team.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi Comp%3A Set Ownership - EMEA House3</fullName>
+        <actions>
+            <name>PGi_Comp_Set_Ownership_EMEA_House3</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>PGi_Company__c.Territory__c</field>
+            <operation>equals</operation>
+            <value>IDE00051</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PGi_Company__c.Sales_Rep_s_Email__c</field>
+            <operation>equals</operation>
+            <value>emea.house@pgi.com</value>
+        </criteriaItems>
+        <description>For any company that is created/updated where the TESLA Owner Email = emea.house@pgi.com &amp; TC is unique the ownership should default to Paul Wautier who is the manager of the team.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi Comp%3A Set Ownership - EMEA House4</fullName>
+        <actions>
+            <name>PGi_Comp_Set_Ownership_EMEA_House4</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>PGi_Company__c.Territory__c</field>
+            <operation>equals</operation>
+            <value>IUK00105</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PGi_Company__c.Sales_Rep_s_Email__c</field>
+            <operation>equals</operation>
+            <value>emea.house@pgi.com</value>
+        </criteriaItems>
+        <description>For any company that is created/updated where the TESLA Owner Email = emea.house@pgi.com &amp; TC is unique the ownership should default to Gavin Shaw who is the manager of the team.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi Comp%3A Set Ownership - EMEA House5</fullName>
+        <actions>
+            <name>Set_Ownership_EMEA_House5</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>(1 AND 2) OR (2 AND 4) OR (2 AND 3)</booleanFilter>
+        <criteriaItems>
+            <field>PGi_Company__c.Territory__c</field>
+            <operation>equals</operation>
+            <value>IUK00090</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PGi_Company__c.Sales_Rep_s_Email__c</field>
+            <operation>equals</operation>
+            <value>emea.house@pgi.com</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PGi_Company__c.Territory__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PGi_Company__c.Territory__c</field>
+            <operation>notEqual</operation>
+            <value>IDE00050,IDE00077,IDE00088,NCDK016,NCFI009,IFR00044,IIT00013,NCNR034,NCSW014,IDE00051,IUK00105</value>
+        </criteriaItems>
+        <description>For any company that is created/updated where the TESLA Owner Email = emea.house@pgi.com &amp; TC is unique the ownership should default to Doug Remington who is the manager of the team.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi Comp%3A Set Ownership - EMEA House6</fullName>
+        <actions>
+            <name>PGi_Comp_Set_Ownership_EMEA_House6</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>PGi_Company__c.Territory__c</field>
+            <operation>equals</operation>
+            <value>IIR00024</value>
+        </criteriaItems>
+        <description>For any company that is created/updated where the TC is unique the ownership should default to Kathleen Grace who is the manager of the team.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi Comp%3A Update NZL Flag</fullName>
+        <actions>
+            <name>Update_NZL_Value</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+        <criteriaItems>
+            <field>PGi_Company__c.Country_Code__c</field>
+            <operation>equals</operation>
+            <value>NZL,New Zealand</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PGi_Company__c.Territory__c</field>
+            <operation>equals</operation>
+            <value>AP001,APA000,APA116,APN230,APN250,APN251,APN252,APN256,APN257,APN260</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PGi_Company__c.Territory__c</field>
+            <operation>equals</operation>
+            <value>APN262,D0964</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PGi_Company__c.Enterprise_Name__c</field>
+            <operation>equals</operation>
+            <value>Premiere Customers (NZL),Digital Island NZExternal,NZL Global Accounts</value>
+        </criteriaItems>
+        <description>Reviews Country Code, Territory Code, and Enterprise fields for specific values then sets NZL flag to true</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Orange Enterprise</fullName>
+        <actions>
+            <name>PGi_Orange_Enterprise</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>If Enterprise ID is an Orange id, then auto select Orange field on PGi Comany</description>
+        <formula>OR(Enterprise_ID__c = &quot;4673&quot;, Enterprise_ID__c = &quot;4087&quot;, Enterprise_ID__c = &quot;4083&quot;, Enterprise_ID__c = &quot;4564&quot;, Enterprise_ID__c = &quot;4565&quot;, Enterprise_ID__c = &quot;4286&quot;, Enterprise_ID__c = &quot;4332&quot;, Enterprise_ID__c = &quot;4327&quot;, Enterprise_ID__c = &quot;4084&quot;, Enterprise_ID__c = &quot;4284&quot;, Enterprise_ID__c = &quot;4283&quot;, Enterprise_ID__c = &quot;4085&quot;, Enterprise_ID__c = &quot;4086&quot;, Enterprise_ID__c = &quot;2846&quot;, Enterprise_ID__c = &quot;2178&quot;, Enterprise_ID__c = &quot;2177&quot;, Enterprise_ID__c = &quot;1556&quot;, Enterprise_ID__c = &quot;1555&quot;, Enterprise_ID__c = &quot;673&quot;, Enterprise_ID__c = &quot;493&quot;, Enterprise_ID__c = &quot;913&quot;, Enterprise_ID__c = &quot;2131&quot;, Enterprise_ID__c = &quot;1052&quot;, Enterprise_ID__c = &quot;1924&quot;, Enterprise_ID__c = &quot;1496&quot;, Enterprise_ID__c = &quot;4484&quot;, Enterprise_ID__c = &quot;2133&quot;, Enterprise_ID__c = &quot;20000356&quot;, Enterprise_ID__c = &quot;4356&quot;, Enterprise_ID__c = &quot;4052&quot;, Enterprise_ID__c = &quot;4724&quot;, Enterprise_ID__c = &quot;4545&quot;, Enterprise_ID__c = &quot;20000025&quot;, Enterprise_ID__c = &quot;184&quot;, Enterprise_ID__c = &quot;3744&quot;, Enterprise_ID__c = &quot;3743&quot;, Enterprise_ID__c = &quot;441&quot;, Enterprise_ID__c = &quot;2932&quot;, Enterprise_ID__c = &quot;1688&quot;, Enterprise_ID__c = &quot;2066&quot;, Enterprise_ID__c = &quot;2213&quot;, Enterprise_ID__c = &quot;2994&quot;, Enterprise_ID__c = &quot;3644&quot;, Enterprise_ID__c = &quot;2553&quot;, Enterprise_ID__c = &quot;1869&quot;, Enterprise_ID__c = &quot;2443&quot;, Enterprise_ID__c = &quot;3839&quot;, Enterprise_ID__c = &quot;1689&quot;, Enterprise_ID__c = &quot;3685&quot;, Enterprise_ID__c = &quot;3756&quot;, Enterprise_ID__c = &quot;20000376&quot;, Enterprise_ID__c = &quot;3641&quot;, Enterprise_ID__c = &quot;3715&quot;, Enterprise_ID__c = &quot;2613&quot;, Enterprise_ID__c = &quot;35&quot;, Enterprise_ID__c = &quot;20000652&quot;, Enterprise_ID__c = &quot;20000702&quot;
+
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

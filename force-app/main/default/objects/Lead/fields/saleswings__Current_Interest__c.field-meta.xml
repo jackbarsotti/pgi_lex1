@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>saleswings__Current_Interest__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>CASE(saleswings__Temperature__c, 
+&quot;HOT&quot;,IMAGE( $Setup.saleswings__SalesWings_Internal__c.saleswings__Image_Base_URL__c &amp;&quot;1.png&quot;,&quot;Hot&quot;,20,20), 
+&quot;WARM&quot;,IMAGE($Setup.saleswings__SalesWings_Internal__c.saleswings__Image_Base_URL__c  &amp; &quot;2.png&quot;,&quot;Warm&quot;,20,20), 
+&quot;COLD&quot;,IMAGE($Setup.saleswings__SalesWings_Internal__c.saleswings__Image_Base_URL__c  &amp; &quot;4.png&quot;,&quot;Cold&quot;,20,20), 
+&quot;NORMAL&quot;,IMAGE($Setup.saleswings__SalesWings_Internal__c.saleswings__Image_Base_URL__c  &amp; &quot;3.png&quot;,&quot;Neutral&quot;,20,20), 
+&quot;WAITING&quot;,IMAGE($Setup.saleswings__SalesWings_Internal__c.saleswings__Image_Base_URL__c  &amp; &quot;6.png&quot;,&quot;Waiting&quot;,20,20), 
+&quot;ATRISK&quot;,IMAGE($Setup.saleswings__SalesWings_Internal__c.saleswings__Image_Base_URL__c  &amp; &quot;5.png&quot;,&quot;Frozen&quot;,20,20),
+&quot;FROZEN&quot;,IMAGE($Setup.saleswings__SalesWings_Internal__c.saleswings__Image_Base_URL__c  &amp; &quot;5.png&quot;,&quot;Frozen&quot;,20,20),
+&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>SW Predictive Score</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

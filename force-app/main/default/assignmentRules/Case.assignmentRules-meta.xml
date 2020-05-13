@@ -1,0 +1,1061 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>All Support</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>PGi_Email_GL_ES</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.CreatedById</field>
+                <operation>equals</operation>
+                <value>iGloo Integration</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>contains</operation>
+                <value>- ES,-ES</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Email_Night_Team_India</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.CreatedById</field>
+                <operation>equals</operation>
+                <value>iGloo Integration</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - US - India Night Team - RT - PGiBrand</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Email_GL_Attended</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR (1 AND 2)</booleanFilter>
+            <criteriaItems>
+                <field>Case.CreatedById</field>
+                <operation>equals</operation>
+                <value>iGloo Integration</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>contains</operation>
+                <value>- RES,-RES,usres_</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Email_GL_Attended</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>equals</operation>
+                <value>PGi-Email-GL-Attended</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Inbound Email Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - GL - RES - CallBack Email - PGiBrand</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Email_GL_Tier_1</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Inbound Email Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Chat,Chat - In Product</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_Tier_3_Five9</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Care Systems Support Requests</value>
+            </criteriaItems>
+            <template>WFR_Case_Notifications/New_Case_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_Tier_3_Saas_Ops</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-GMSO Customer Provisioning Request</value>
+            </criteriaItems>
+            <template>WFR_Case_Notifications/New_Case_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_BillingPlatform_Support</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-BillingPlatform Support</value>
+            </criteriaItems>
+            <template>WFR_Case_Notifications/New_Case_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>TalkPoint_Case_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Webcast/Webinar Support</value>
+            </criteriaItems>
+            <template>WFR_Case_Notifications/New_Case_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_Implementation_Support</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Implementation Support</value>
+            </criteriaItems>
+            <template>Care_IST_Email/PGi_New_Implementation_Support_Case</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>iMC_Case_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>iMC Case</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Junk_Spam_Placeholder</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR 2 OR 3</booleanFilter>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>contains</operation>
+                <value>Out of Office,Automatic Reply,AP Pricing Turnaround Time,Delivery Final Failure Notice,Email Delivery Failure,Email Delivery Warning</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.SuppliedEmail</field>
+                <operation>equals</operation>
+                <value>aws-marketing-email-replies@amazon.com,pgispamreport@pgi.com</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Description</field>
+                <operation>contains</operation>
+                <value>You are registered as a CC on this support request</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Sales_Operations_Support</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>User.Channel__c</field>
+                <operation>notEqual</operation>
+                <value>Partners</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Type</field>
+                <operation>equals</operation>
+                <value>Duplicate Override Request</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_InfoSec</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Info Sec</value>
+            </criteriaItems>
+            <template>WFR_Case_Notifications/New_Case_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_Tier_2_Integrations</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Data Integrations Request</value>
+            </criteriaItems>
+            <template>WFR_Case_Notifications/New_Case_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_NA_Tier_2_IST_Config</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND 2) OR (2 AND 3)</booleanFilter>
+            <criteriaItems>
+                <field>User.Channel__c</field>
+                <operation>contains</operation>
+                <value>Care - CEM</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Client External Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.ZD_Group_Assigned__c</field>
+                <operation>contains</operation>
+                <value>Customer Experience Specialists,Customer Experience Mgmt,NA - Tier 3 - SMB (AMs),Billing Help Desk</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_NA_RFP_Request_Team</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-RFP Help Request</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_NA_Tier_1_CARE_Res_Mgmt</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Client VIP Request</value>
+            </criteriaItems>
+            <template>WFR_Case_Notifications/New_Case_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_Tier_2_Deskside_Support</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND 2 AND 3) or (1 AND 4 AND 5)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Regions__c</field>
+                <operation>notEqual</operation>
+                <value>NA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Equipment Order Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Order_Guide__c</field>
+                <operation>notEqual</operation>
+                <value>New Worker</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>HR Record</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Human Resources Request</value>
+            </criteriaItems>
+            <template>WFR_Case_Notifications/New_Case_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_Tier_3_Systems_Admin</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Regions__c</field>
+                <operation>notEqual</operation>
+                <value>NA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Collaboration Request,PGi-Exchange Email Request</value>
+            </criteriaItems>
+            <template>WFR_Case_Notifications/New_Case_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_Tier_3_Voice_Delivery</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Data Center Access Request</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_Tier_3_Database_Operations</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Data Writer Request</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GlobalMeet_Support</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>GM5 Email - In Product,GM5 Poor Feedback,GM Desktop,GM Mobile Android,GM Mobile iOS,GM Web,GM CenturyLink</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Web_Application_Language__c</field>
+                <operation>notEqual</operation>
+                <value>Japanese</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_AP_Tier_1_Care_Japanese_Lang</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>GM5 Email - In Product,GM5 Poor Feedback,GM Desktop,GM Mobile Android,GM Mobile iOS,GM Web,GM CenturyLink</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Web_Application_Language__c</field>
+                <operation>equals</operation>
+                <value>Japanese</value>
+            </criteriaItems>
+            <template>WFR_Case_Notifications/New_Case_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_NA_Tier_2_IST_Config</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND 2 AND 3) or (3 and 4 and 5)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Profile Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Type</field>
+                <operation>notEqual</operation>
+                <value>Billing Cycle Change,Company Inactivation</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Regions__c</field>
+                <operation>equals</operation>
+                <value>NA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>HR Record</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Human Resources Request</value>
+            </criteriaItems>
+            <template>WFR_Case_Notifications/New_Case_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_EU_Branding_Conf_Email</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Client Email/Hub Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Regions__c</field>
+                <operation>equals</operation>
+                <value>EMEA</value>
+            </criteriaItems>
+            <template>WFR_Case_Notifications/New_Case_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_NA_Branding_Confirm_Email</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Client Email/Hub Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Regions__c</field>
+                <operation>notEqual</operation>
+                <value>EMEA</value>
+            </criteriaItems>
+            <template>WFR_Case_Notifications/New_Case_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_Knowledge_Base_TW</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-KnowledgeBase Artcile Request</value>
+            </criteriaItems>
+            <template>WFR_Case_Notifications/New_KB_Request</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_Tier_3_Systems_Admin</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Exchange Email Request,PGi-Collaboration Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Regions__c</field>
+                <operation>equals</operation>
+                <value>NA</value>
+            </criteriaItems>
+            <template>WFR_Case_Notifications/New_Case_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_Tier_2_Deskside_Support</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 and 2) or (1 and 3) or (2 and 3 and 4 and 5)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Equipment Order Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Regions__c</field>
+                <operation>equals</operation>
+                <value>NA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Order_Guide__c</field>
+                <operation>equals</operation>
+                <value>New Worker</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>HR Record</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Human Resources Request</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_Trending</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Parent Ticket Analysis</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_Global_HelpDesk</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Internal Support</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_Global_NOC</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Event,PGi-Parent Ticket Analysis,PGi-Parent Ticket (NOC)</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_Care_Video_Ops</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Client External Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Product__c</field>
+                <operation>equals</operation>
+                <value>Video - Hosted Services,Video - Managed Services</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.ZD_Group_Assigned__c</field>
+                <operation>contains</operation>
+                <value>Video Services</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_Business_Intelligence_BI</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Reporting Request</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_Tier_2_Audio_SaaS</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND (2 OR 3) AND 4)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Client External Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Product__c</field>
+                <operation>notEqual</operation>
+                <value>Event Conferencing,Event Conferencing - Greeted Entry,Event Conferencing - Greeted Entry Connection,Event Conferencing - Passcode Entry,Event Conferencing - Slide Assist</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Product__c</field>
+                <operation>notEqual</operation>
+                <value>PremiereCall - Assisted Meeting,PremiereCall - Auditorium,PremiereCall - Connection,PremiereCall - Event,PremiereCall - Passcode Entry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>User.Care_Team_Label__c</field>
+                <operation>equals</operation>
+                <value>INTL Audio Tier 2</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_EU_Tier_1_Care_India</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND (2 OR 3) AND 4)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Client External Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Product__c</field>
+                <operation>notEqual</operation>
+                <value>Event Conferencing,Event Conferencing - Greeted Entry,Event Conferencing - Greeted Entry Connection,Event Conferencing - Passcode Entry,Event Conferencing - Slide Assist</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Product__c</field>
+                <operation>notEqual</operation>
+                <value>PremiereCall - Assisted Meeting,PremiereCall - Auditorium,PremiereCall - Connection,PremiereCall - Event,PremiereCall - Passcode Entry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>User.Care_Team_Label__c</field>
+                <operation>equals</operation>
+                <value>India</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_AP_Tier_1_Care_Japanese_Lang</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND 2) OR (1 AND (3 OR 4) AND 5)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Client External Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.ZD_Group_Assigned__c</field>
+                <operation>contains</operation>
+                <value>AP - Tier 1- CARE (Japan)</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Product__c</field>
+                <operation>notEqual</operation>
+                <value>Event Conferencing,Event Conferencing - Greeted Entry,Event Conferencing - Greeted Entry Connection,Event Conferencing - Passcode Entry,Event Conferencing - Slide Assist</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Product__c</field>
+                <operation>notEqual</operation>
+                <value>PremiereCall - Assisted Meeting,PremiereCall - Auditorium,PremiereCall - Connection,PremiereCall - Event,PremiereCall - Passcode Entry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>User.Care_Team_Label__c</field>
+                <operation>equals</operation>
+                <value>Japan</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_EU_Tier_1_CS_Schedule_Team</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Client External Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.ZD_Group_Assigned__c</field>
+                <operation>contains</operation>
+                <value>Schedule Team</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_Tier_2_Audio_SaaS</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND 2) OR ((3 OR 5) AND 4) OR (1 AND (7 OR 8) AND 6)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Client External Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.ZD_Group_Assigned__c</field>
+                <operation>contains</operation>
+                <value>PGi-Case-GL-Tier 2-Audio-SaaS</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>GM Desktop,GM Mobile Android,GM Mobile iOS,GM Web,GM CenturyLink</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Regions__c</field>
+                <operation>notEqual</operation>
+                <value>NA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>startsWith</operation>
+                <value>GM5</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>User.Care_Team_Label__c</field>
+                <operation>equals</operation>
+                <value>INTL Web Tier 2</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Product__c</field>
+                <operation>notEqual</operation>
+                <value>Event Conferencing,GlobalMeet - Greeted Entry,GlobalMeet - Greeted Entry Connection,GlobalMeet - Passcode Entry,GlobalMeet - Slide Assist</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Product__c</field>
+                <operation>notEqual</operation>
+                <value>PremiereCall - Assisted Meeting,PremiereCall - Auditorium,PremiereCall - Connection,PremiereCall - Event,PremiereCall - Passcode Entry</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_NA_Canada_Client_Serv</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND 2) OR (1 AND (3 OR 4) AND 5)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Client External Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.ZD_Group_Assigned__c</field>
+                <operation>contains</operation>
+                <value>Canada Client Services</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Product__c</field>
+                <operation>notEqual</operation>
+                <value>Event Conferencing,Event Conferencing - Greeted Entry,Event Conferencing - Greeted Entry Connection,Event Conferencing - Passcode Entry,Event Conferencing - Slide Assist</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Product__c</field>
+                <operation>notEqual</operation>
+                <value>PremiereCall - Assisted Meeting,PremiereCall - Auditorium,PremiereCall - Connection,PremiereCall - Event,PremiereCall - Passcode Entry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>User.Care_Team_Label__c</field>
+                <operation>equals</operation>
+                <value>Canada</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_NA_Tier_2_SEM_Service_Exp_Mgmt</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND (2 OR 3 OR 7)) OR (4 AND 5) OR (1 AND 6)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Client External Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Product__c</field>
+                <operation>contains</operation>
+                <value>Event Conferencing,PremiereCall,GlobalMeet - Greeted Entry,GlobalMeet - Greeted Entry Connection,GlobalMeet - Passcode Entry,GlobalMeet - Slide Assist</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.ZD_Group_Assigned__c</field>
+                <operation>contains</operation>
+                <value>SEM (Service Experience Mgmt.)</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Operator_hosted_call__c</field>
+                <operation>equals</operation>
+                <value>Yes</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>contains</operation>
+                <value>PGi Service Catalog</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>User.Care_Team_Label__c</field>
+                <operation>equals</operation>
+                <value>AP Attended,Attended,EMEA Attended</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.ZD_Group_Assigned__c</field>
+                <operation>contains</operation>
+                <value>EU - Tier 1 - CS (Attended)</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_Event_Production</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND (2 or 3)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Client External Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.ZD_Group_Assigned__c</field>
+                <operation>contains</operation>
+                <value>Event Production</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Product__c</field>
+                <operation>contains</operation>
+                <value>GlobalMeet - Webcast,GlobalMeet - Webinar</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_Tier_2_Audio_SaaS</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND 2) OR (1 AND (3 OR 4) AND 5) or (1 and 6 and 7)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Client External Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.ZD_Group_Assigned__c</field>
+                <operation>contains</operation>
+                <value>PGi-Case-GL-Tier 2-Audio-SaaS</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Product__c</field>
+                <operation>notEqual</operation>
+                <value>Event Conferencing,GlobalMeet - Greeted Entry,GlobalMeet - Greeted Entry Connection,GlobalMeet - Passcode Entry,GlobalMeet - Slide Assist</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Product__c</field>
+                <operation>notEqual</operation>
+                <value>PremiereCall - Assisted Meeting,PremiereCall - Auditorium,PremiereCall - Connection,PremiereCall - Event,PremiereCall - Passcode Entry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>User.Care_Team_Label__c</field>
+                <operation>equals</operation>
+                <value>US Senior Expert,US Expert</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Event Production</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Product__c</field>
+                <operation>contains</operation>
+                <value>Adobe Connect,WebEx - Microsite</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_NA_Tier_1_CARE_Tier_1</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND 2) OR ((3 OR 5) AND 4)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Client External Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.ZD_Group_Assigned__c</field>
+                <operation>contains</operation>
+                <value>PGi-Case-NA-Tier 1-CARE (Tier 1)</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>GM Desktop,GM Mobile Android,GM Mobile iOS,GM Web,GM CenturyLink</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Regions__c</field>
+                <operation>equals</operation>
+                <value>NA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>startsWith</operation>
+                <value>GM5</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_NA_Tier_1_CARE_Res</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND 2 AND 3) OR (4 AND 5)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Client External Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.ZD_Group_Assigned__c</field>
+                <operation>equals</operation>
+                <value>NA - Tier 1 - CARE (Reservations)</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.ZD_Group_Assigned__c</field>
+                <operation>notContain</operation>
+                <value>Managers</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>contains</operation>
+                <value>PGi Service Catalog - Reservations</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Regions__c</field>
+                <operation>equals</operation>
+                <value>NA</value>
+            </criteriaItems>
+            <template>WFR_Case_Notifications/New_Case_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_NA_Tier_1_CARE_Res_Mgmt</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Client External Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.ZD_Group_Assigned__c</field>
+                <operation>equals</operation>
+                <value>NA - Tier 1 - CARE (Reservations) Managers</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_NA_Tier_2_CARE_Enhanced_Serv</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Client External Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.ZD_Group_Assigned__c</field>
+                <operation>contains</operation>
+                <value>Enhanced Services</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_PGiTime_Support</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Time System Request</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_NA_Tier_1_CARE_Tier_1</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND (2 OR 9) AND 3 AND 7) OR (1 AND (2 OR 9) AND 4 AND 7) OR (1 AND 5) OR (3 AND 6) OR (1 AND (2 OR 9) AND 8)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Client External Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Product__c</field>
+                <operation>notEqual</operation>
+                <value>Event Conferencing,GlobalMeet - Greeted Entry,GlobalMeet - Greeted Entry Connection,GlobalMeet - Passcode Entry,GlobalMeet - Slide Assist</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Regions__c</field>
+                <operation>equals</operation>
+                <value>NA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.User_s_Region__c</field>
+                <operation>equals</operation>
+                <value>NA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.ZD_Group_Assigned__c</field>
+                <operation>contains</operation>
+                <value>NA - Tier 1 - CARE (Tier 1)</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>contains</operation>
+                <value>PGi Service Catalog - Technical</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.ZD_Group_Assigned__c</field>
+                <operation>notContain</operation>
+                <value>EU - Tier 1 - CS (Audio),INTL - T1 - Audio,INTL - T1 - Provisioning</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>User.Care_Team_Label__c</field>
+                <operation>contains</operation>
+                <value>US Tier 1</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Product__c</field>
+                <operation>notEqual</operation>
+                <value>PremiereCall - Assisted Meeting,PremiereCall - Auditorium,PremiereCall - Connection,PremiereCall - Event,PremiereCall - Passcode Entry</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_AP_Tier_1_Care</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND (2 OR 7) AND 3) OR (1 AND (2 OR 7) AND 4) OR (3 AND 5) OR (1 AND (2 OR 7) AND 6)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Client External Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Product__c</field>
+                <operation>notEqual</operation>
+                <value>Event Conferencing,Event Conferencing - Greeted Entry,Event Conferencing - Greeted Entry Connection,Event Conferencing - Passcode Entry,Event Conferencing - Slide Assist</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Regions__c</field>
+                <operation>equals</operation>
+                <value>APAC</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.User_s_Region__c</field>
+                <operation>equals</operation>
+                <value>APAC</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>contains</operation>
+                <value>PGi Service Catalog - Reservations,PGi Service Catalog - Technical,PGi Service Catalog - Billing</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>User.Care_Team_Label__c</field>
+                <operation>equals</operation>
+                <value>AP Automated</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Product__c</field>
+                <operation>notEqual</operation>
+                <value>PremiereCall - Assisted Meeting,PremiereCall - Auditorium,PremiereCall - Connection,PremiereCall - Event,PremiereCall - Passcode Entry</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_EU_Tier_1_Care</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND (2 OR 9) AND 3 AND 7) OR (1 AND (2 OR 9) AND 4 AND 7) OR (1 AND 5) OR (3 AND 6) OR (1 AND (2 OR 9) AND 8)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Client External Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Product__c</field>
+                <operation>notEqual</operation>
+                <value>Event Conferencing,GlobalMeet - Greeted Entry,GlobalMeet - Greeted Entry Connection,GlobalMeet - Passcode Entry,GlobalMeet - Slide Assist</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Regions__c</field>
+                <operation>equals</operation>
+                <value>EMEA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.User_s_Region__c</field>
+                <operation>equals</operation>
+                <value>EMEA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.ZD_Group_Assigned__c</field>
+                <operation>contains</operation>
+                <value>EU - Tier 1 - CS (Audio),INTL - T1 - Audio,INTL - T1 - Provisioning</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>contains</operation>
+                <value>PGi Service Catalog - Reservations,PGi Service Catalog - Technical,PGi Service Catalog - Billing</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.ZD_Group_Assigned__c</field>
+                <operation>notContain</operation>
+                <value>NA - Tier 1 - CARE (Tier 1)</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>User.Care_Team_Label__c</field>
+                <operation>equals</operation>
+                <value>EMEA Audio</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Product__c</field>
+                <operation>notEqual</operation>
+                <value>PremiereCall - Assisted Meeting,PremiereCall - Auditorium,PremiereCall - Connection,PremiereCall - Event,PremiereCall - Passcode Entry</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_Vendor_Carrier</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Vendor/Carrier Request</value>
+            </criteriaItems>
+            <template>WFR_Case_Notifications/New_Case_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_Reservations</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Reservations Request</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_CaseIncidentReview</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-Incident Case Review</value>
+            </criteriaItems>
+            <template>WFR_Case_Notifications/New_Case_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Case_GL_Tier_3_Telco</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-UCaaS Number Porting Request</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Salesforce_Support</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PGi-SFDC Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.CreatedById</field>
+                <operation>notEqual</operation>
+            </criteriaItems>
+            <template>WFR_Case_Notifications/New_Case_Notification</template>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

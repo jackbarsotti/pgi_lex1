@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_RFC_GL_GM_Tools_Integration_Proj_Problem_Review_Ticket</fullName>
+    <filterScope>Queue</filterScope>
+    <label>PGi-RFC-GL-GM Tools &amp; Integration Proj</label>
+    <queue>PGi_RFC_GL_GM_Tools_Integration_Proj</queue>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Solution_Detail__c</fullName>
+    <externalId>false</externalId>
+    <label>Solution Detail</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Solution__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Additional Time</fullName>
+                <default>false</default>
+                <label>Additional Time</label>
+            </value>
+            <value>
+                <fullName>Additional Viewers</fullName>
+                <default>false</default>
+                <label>Additional Viewers</label>
+            </value>
+            <value>
+                <fullName>AV Crews / Studios</fullName>
+                <default>false</default>
+                <label>AV Crews / Studios</label>
+            </value>
+            <value>
+                <fullName>Conf. Call - Miscellaneous / Other</fullName>
+                <default>false</default>
+                <label>Conf. Call - Miscellaneous / Other</label>
+            </value>
+            <value>
+                <fullName>Development</fullName>
+                <default>false</default>
+                <label>Development</label>
+            </value>
+            <value>
+                <fullName>Digital Webcast Copy/MP4/MP3</fullName>
+                <default>false</default>
+                <label>Digital Webcast Copy/MP4/MP3</label>
+            </value>
+            <value>
+                <fullName>Edit</fullName>
+                <default>false</default>
+                <label>Edit</label>
+            </value>
+            <value>
+                <fullName>Encoding</fullName>
+                <default>false</default>
+                <label>Encoding</label>
+            </value>
+            <value>
+                <fullName>Existing Cust - Existing Svc</fullName>
+                <default>false</default>
+                <label>Existing Cust - Existing Svc</label>
+            </value>
+            <value>
+                <fullName>Existing Cust - New Svc</fullName>
+                <default>false</default>
+                <label>Existing Cust - New Svc</label>
+            </value>
+            <value>
+                <fullName>Fiber Connection</fullName>
+                <default>false</default>
+                <label>Fiber Connection</label>
+            </value>
+            <value>
+                <fullName>Hosting</fullName>
+                <default>false</default>
+                <label>Hosting</label>
+            </value>
+            <value>
+                <fullName>New Logo</fullName>
+                <default>false</default>
+                <label>New Logo</label>
+            </value>
+            <value>
+                <fullName>Onsite Broadcast Producers</fullName>
+                <default>false</default>
+                <label>Onsite Broadcast Producers</label>
+            </value>
+            <value>
+                <fullName>Onsite Encoding Technicians</fullName>
+                <default>false</default>
+                <label>Onsite Encoding Technicians</label>
+            </value>
+            <value>
+                <fullName>Onsite Webcast Producers</fullName>
+                <default>false</default>
+                <label>Onsite Webcast Producers</label>
+            </value>
+            <value>
+                <fullName>Satellite</fullName>
+                <default>false</default>
+                <label>Satellite</label>
+            </value>
+            <value>
+                <fullName>Screen Share (Desktop files and other applications)</fullName>
+                <default>false</default>
+                <label>Screen Share (Desktop files and other applications)</label>
+            </value>
+            <value>
+                <fullName>Self-Serve Video Webcast - Prepay</fullName>
+                <default>false</default>
+                <label>Self-Serve Video Webcast - Prepay</label>
+            </value>
+            <value>
+                <fullName>Set-up / Rush Fee</fullName>
+                <default>false</default>
+                <label>Set-up / Rush Fee</label>
+            </value>
+            <value>
+                <fullName>Simulated Live</fullName>
+                <default>false</default>
+                <label>Simulated Live</label>
+            </value>
+            <value>
+                <fullName>Slide Share (PowerPoint Only)</fullName>
+                <default>false</default>
+                <label>Slide Share (PowerPoint Only)</label>
+            </value>
+            <value>
+                <fullName>Streaming ONLY</fullName>
+                <default>false</default>
+                <label>Streaming ONLY</label>
+            </value>
+            <value>
+                <fullName>Testing / Certification</fullName>
+                <default>false</default>
+                <label>Testing / Certification</label>
+            </value>
+            <value>
+                <fullName>Transcription / Closed Caption</fullName>
+                <default>false</default>
+                <label>Transcription / Closed Caption</label>
+            </value>
+            <value>
+                <fullName>TSC Phone Support</fullName>
+                <default>false</default>
+                <label>TSC Phone Support</label>
+            </value>
+            <value>
+                <fullName>Video Conference Unit Bridge</fullName>
+                <default>false</default>
+                <label>Video Conference Unit Bridge</label>
+            </value>
+            <value>
+                <fullName>Video Overlay / Roll-in</fullName>
+                <default>false</default>
+                <label>Video Overlay / Roll-in</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Field Broadcast Services</controllingFieldValue>
+            <valueName>AV Crews / Studios</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Field Broadcast Services</controllingFieldValue>
+            <valueName>Fiber Connection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Field Broadcast Services</controllingFieldValue>
+            <valueName>Onsite Broadcast Producers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Field Broadcast Services</controllingFieldValue>
+            <valueName>Onsite Encoding Technicians</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Field Broadcast Services</controllingFieldValue>
+            <valueName>Onsite Webcast Producers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Field Broadcast Services</controllingFieldValue>
+            <valueName>Satellite</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Field Broadcast Services</controllingFieldValue>
+            <valueName>Video Conference Unit Bridge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Miscellaneous / Other</controllingFieldValue>
+            <valueName>Additional Time</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Miscellaneous / Other</controllingFieldValue>
+            <valueName>Additional Viewers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Miscellaneous / Other</controllingFieldValue>
+            <valueName>Conf. Call - Miscellaneous / Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Miscellaneous / Other</controllingFieldValue>
+            <valueName>Development</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Miscellaneous / Other</controllingFieldValue>
+            <valueName>Digital Webcast Copy/MP4/MP3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Miscellaneous / Other</controllingFieldValue>
+            <valueName>Edit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Miscellaneous / Other</controllingFieldValue>
+            <valueName>Encoding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Miscellaneous / Other</controllingFieldValue>
+            <valueName>Hosting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Miscellaneous / Other</controllingFieldValue>
+            <valueName>Set-up / Rush Fee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Miscellaneous / Other</controllingFieldValue>
+            <valueName>Simulated Live</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Miscellaneous / Other</controllingFieldValue>
+            <valueName>Testing / Certification</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Miscellaneous / Other</controllingFieldValue>
+            <valueName>Transcription / Closed Caption</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Miscellaneous / Other</controllingFieldValue>
+            <valueName>TSC Phone Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Miscellaneous / Other</controllingFieldValue>
+            <valueName>Video Overlay / Roll-in</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Webcast Subscription</controllingFieldValue>
+            <valueName>Existing Cust - Existing Svc</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Webcast Subscription</controllingFieldValue>
+            <valueName>Existing Cust - New Svc</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Webcast Subscription</controllingFieldValue>
+            <valueName>New Logo</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

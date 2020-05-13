@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CountofISTRecords__c</fullName>
+    <externalId>false</externalId>
+    <label>Count of IST Records</label>
+    <summaryForeignKey>Implementation_Services__c.Related_Opportunity__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

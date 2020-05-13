@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALL_Only_Admins_Can_Create_Users</fullName>
+    <active>true</active>
+    <description>Ensures that only admins are creating new users</description>
+    <errorConditionFormula>AND(
+ISNEW(),
+$User.Profile_Name_Text__c &lt;&gt; &quot;System Administrator&quot;
+)</errorConditionFormula>
+    <errorMessage>Only System Administrators are allowed to create new users.</errorMessage>
+</ValidationRule>

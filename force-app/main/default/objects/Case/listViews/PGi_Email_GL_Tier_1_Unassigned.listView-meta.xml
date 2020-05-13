@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Email_GL_Tier_1_Unassigned</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>SLA_Time_to_Complete__c</columns>
+    <columns>SLA_Time_Remaining2__c</columns>
+    <columns>SLA_Color__c</columns>
+    <columns>Purpose_of_request__c</columns>
+    <columns>CASES.ORIGIN</columns>
+    <columns>CASES.NAME</columns>
+    <columns>CASES.EMAIL</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>HasParentCase__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>CASES.CLOSED</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Assigned_To__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>CASES.ORIGIN</field>
+        <operation>notContain</operation>
+        <value>Email - US - T2 - RT CTL Support - WLBrand</value>
+    </filters>
+    <label>PGi-Email-GL-Tier 1 (Unassigned)</label>
+    <language>en_US</language>
+    <queue>PGi_Email_GL_Tier_1</queue>
+    <sharedTo>
+        <group>PGi_Case_AP_Tier_1_Care</group>
+        <group>PGi_Case_AP_Tier_1_Care_Attended_Japan</group>
+        <group>PGi_Case_EU_Tier_1_Care</group>
+        <group>PGi_Case_EU_Tier_1_Care_India</group>
+        <group>PGi_Case_NA_Tier_1_CARE_Tier_1</group>
+    </sharedTo>
+</ListView>

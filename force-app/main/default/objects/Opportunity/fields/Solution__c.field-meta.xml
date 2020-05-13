@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Solution__c</fullName>
+    <description>What solution are you proposing?</description>
+    <externalId>false</externalId>
+    <label>Solution</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Audio</fullName>
+                <default>false</default>
+                <label>Audio</label>
+            </value>
+            <value>
+                <fullName>Bank Conference Webcast</fullName>
+                <default>false</default>
+                <label>Bank Conference Webcast</label>
+            </value>
+            <value>
+                <fullName>Conf. Call</fullName>
+                <default>false</default>
+                <label>Conf. Call</label>
+            </value>
+            <value>
+                <fullName>Field Broadcast Services</fullName>
+                <default>false</default>
+                <label>Field Broadcast Services</label>
+            </value>
+            <value>
+                <fullName>Hive</fullName>
+                <default>false</default>
+                <label>Hive</label>
+            </value>
+            <value>
+                <fullName>Managed Audio Webcast</fullName>
+                <default>false</default>
+                <label>Managed Audio Webcast</label>
+            </value>
+            <value>
+                <fullName>Managed Audio Webcast - Package</fullName>
+                <default>false</default>
+                <label>Managed Audio Webcast - Package</label>
+            </value>
+            <value>
+                <fullName>Managed Video Webcast</fullName>
+                <default>false</default>
+                <label>Managed Video Webcast</label>
+            </value>
+            <value>
+                <fullName>Managed Video Webcast - Package</fullName>
+                <default>false</default>
+                <label>Managed Video Webcast - Package</label>
+            </value>
+            <value>
+                <fullName>Miscellaneous / Other</fullName>
+                <default>false</default>
+                <label>Miscellaneous / Other</label>
+            </value>
+            <value>
+                <fullName>Prepaid Webcast Subscription</fullName>
+                <default>false</default>
+                <label>Prepaid Webcast Subscription</label>
+            </value>
+            <value>
+                <fullName>Self Serve Audio Prepay</fullName>
+                <default>false</default>
+                <label>Self Serve Audio Prepay</label>
+            </value>
+            <value>
+                <fullName>Self Serve Audio Webcast - per event</fullName>
+                <default>false</default>
+                <label>Self Serve Audio Webcast - per event</label>
+            </value>
+            <value>
+                <fullName>Self Serve Video Prepay</fullName>
+                <default>false</default>
+                <label>Self Serve Video Prepay</label>
+            </value>
+            <value>
+                <fullName>Self Serve Video Webcast - per event</fullName>
+                <default>false</default>
+                <label>Self Serve Video Webcast - per event</label>
+            </value>
+            <value>
+                <fullName>Self-Serve Video Webcast - Prepay</fullName>
+                <default>false</default>
+                <label>Self-Serve Video Webcast - Prepay</label>
+            </value>
+            <value>
+                <fullName>Video</fullName>
+                <default>false</default>
+                <label>Video</label>
+            </value>
+            <value>
+                <fullName>Webcast Assist - Premium</fullName>
+                <default>false</default>
+                <label>Webcast Assist - Premium</label>
+            </value>
+            <value>
+                <fullName>Webcast Assist  - Prepaid</fullName>
+                <default>false</default>
+                <label>Webcast Assist  - Prepaid</label>
+            </value>
+            <value>
+                <fullName>Webcast Assist - Standard</fullName>
+                <default>false</default>
+                <label>Webcast Assist - Standard</label>
+            </value>
+            <value>
+                <fullName>Webcast Subscription</fullName>
+                <default>false</default>
+                <label>Webcast Subscription</label>
+            </value>
+            <value>
+                <fullName>Event Center - Slide Assist</fullName>
+                <default>false</default>
+                <label>Event Center - Slide Assist</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

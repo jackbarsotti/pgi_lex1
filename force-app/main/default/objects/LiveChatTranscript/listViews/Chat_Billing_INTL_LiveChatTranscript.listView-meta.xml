@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Chat_Billing_INTL_LiveChatTranscript</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Chat - Billing (INTL)</label>
+    <queue>Chat_Billing_INTL</queue>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

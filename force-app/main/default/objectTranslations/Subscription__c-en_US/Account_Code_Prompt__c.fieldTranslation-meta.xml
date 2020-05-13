@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Requires chairperson to enter an internal code (billing code/client matter code) on the bridge prior to starting an audio conference. --></help>
+    <label><!-- Account Code Prompt --></label>
+    <name>Account_Code_Prompt__c</name>
+</CustomFieldTranslation>

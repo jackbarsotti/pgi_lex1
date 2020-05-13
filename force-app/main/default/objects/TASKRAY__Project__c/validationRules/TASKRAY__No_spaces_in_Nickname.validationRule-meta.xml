@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TASKRAY__No_spaces_in_Nickname</fullName>
+    <active>true</active>
+    <errorConditionFormula>REGEX( TASKRAY__trNickname__c  ,&quot;.*\\s+.*&quot;)</errorConditionFormula>
+    <errorMessage>Project Nicknames cannot have spaces</errorMessage>
+</ValidationRule>

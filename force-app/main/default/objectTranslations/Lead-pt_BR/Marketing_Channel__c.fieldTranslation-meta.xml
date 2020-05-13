@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Marketing Channel --></label>
+    <name>Marketing_Channel__c</name>
+    <picklistValues>
+        <masterLabel>CANADA: Baking</masterLabel>
+        <translation><!-- CANADA: Baking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CANADA: English</masterLabel>
+        <translation><!-- CANADA: English --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CANADA: French</masterLabel>
+        <translation><!-- CANADA: French --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CANADA: Partner</masterLabel>
+        <translation><!-- CANADA: Partner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INTL: Demand Gen</masterLabel>
+        <translation><!-- INTL: Demand Gen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INTL: Field Marketing</masterLabel>
+        <translation><!-- INTL: Field Marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INTL: Online</masterLabel>
+        <translation><!-- INTL: Online --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>International</masterLabel>
+        <translation><!-- International --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NA: Base</masterLabel>
+        <translation><!-- NA: Base --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NA: Demand Gen</masterLabel>
+        <translation><!-- NA: Demand Gen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NA: Diamond</masterLabel>
+        <translation><!-- NA: Diamond --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NA: Field Marketing</masterLabel>
+        <translation><!-- NA: Field Marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NA: Field Sales</masterLabel>
+        <translation><!-- NA: Field Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NA: Online</masterLabel>
+        <translation><!-- NA: Online --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NA: Online Legacy</masterLabel>
+        <translation><!-- NA: Online Legacy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NA: Partner</masterLabel>
+        <translation><!-- NA: Partner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NA: Strat Comms</masterLabel>
+        <translation><!-- NA: Strat Comms --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ReadyTalk</masterLabel>
+        <translation><!-- ReadyTalk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TalkPoint</masterLabel>
+        <translation><!-- TalkPoint --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iMeet Central</masterLabel>
+        <translation><!-- iMeet Central --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

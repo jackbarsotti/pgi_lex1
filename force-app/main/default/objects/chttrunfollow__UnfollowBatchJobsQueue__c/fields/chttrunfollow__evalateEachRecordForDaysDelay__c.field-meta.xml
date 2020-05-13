@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>chttrunfollow__evalateEachRecordForDaysDelay__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>This determines whether there are 2 or more individual DaysDelay values for the rules in this job. If only 1 day, then recordId&#39;s will all get the same DaysDelay value in the queue.  If more than 1, each record needs to be evaluated to see which DaysDelay value it should receive.</description>
+    <externalId>false</externalId>
+    <label>evalateEachRecordForDaysDelay</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

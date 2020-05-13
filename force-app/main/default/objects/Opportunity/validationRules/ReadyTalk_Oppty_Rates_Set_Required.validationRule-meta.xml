@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReadyTalk_Oppty_Rates_Set_Required</fullName>
+    <active>true</active>
+    <description>&quot;Are Rates Sent at Account Level&quot; required to be set upon Opportunity &quot;Closed.&quot;</description>
+    <errorConditionFormula>and( 
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;,
+
+ISPICKVAL( StageName, &quot;Closed Won&quot;)&amp;&amp;
+ispickval(Rates_set_at_Account_Level__c,&quot;&quot;)&amp;&amp;
+$RecordType.Name = &quot;ReadyTalk Opportunity&quot;)</errorConditionFormula>
+    <errorDisplayField>Rates_set_at_Account_Level__c</errorDisplayField>
+    <errorMessage>This field is required when the Opportunity is Closed Won.</errorMessage>
+</ValidationRule>

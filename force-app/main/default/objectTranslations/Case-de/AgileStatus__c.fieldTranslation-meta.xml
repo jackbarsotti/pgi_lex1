@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Agile Status --></label>
+    <name>AgileStatus__c</name>
+    <picklistValues>
+        <masterLabel>Canceled</masterLabel>
+        <translation><!-- Canceled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deployed</masterLabel>
+        <translation><!-- Deployed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dev</masterLabel>
+        <translation><!-- Dev --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Peer Reviewed</masterLabel>
+        <translation><!-- Peer Reviewed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Staging</masterLabel>
+        <translation><!-- Staging --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>To Do</masterLabel>
+        <translation><!-- To Do --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Verified</masterLabel>
+        <translation><!-- Verified --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

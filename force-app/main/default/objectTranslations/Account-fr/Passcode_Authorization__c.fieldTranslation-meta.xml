@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- A field to indicate if the Account has given ReadyTalk signed authorization to release to the Account the Access Codes and Passcodes of their users. The signed authorization needs to be renewed once a year --></help>
+    <label><!-- Passcode Authorization --></label>
+    <name>Passcode_Authorization__c</name>
+    <picklistValues>
+        <masterLabel>No</masterLabel>
+        <translation><!-- No --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes</masterLabel>
+        <translation><!-- Yes --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

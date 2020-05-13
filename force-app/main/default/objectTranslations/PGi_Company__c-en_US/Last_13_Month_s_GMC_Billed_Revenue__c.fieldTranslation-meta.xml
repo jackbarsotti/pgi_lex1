@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This data is specific to GlobalMeet Collaboration revenue only --></help>
+    <label><!-- Last 13 Month&apos;s GMC Billed Revenue --></label>
+    <name>Last_13_Month_s_GMC_Billed_Revenue__c</name>
+</CustomFieldTranslation>

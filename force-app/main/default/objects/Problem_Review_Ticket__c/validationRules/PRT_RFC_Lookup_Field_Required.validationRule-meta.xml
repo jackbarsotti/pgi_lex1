@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRT_RFC_Lookup_Field_Required</fullName>
+    <active>true</active>
+    <description>If the Problem Source equals &quot;Request for Change&quot; then the &quot;Request for Change&quot; record must be selected in the &quot;Request for Change&quot; field.</description>
+    <errorConditionFormula>AND(
+ ISPICKVAL(Problem_Source__c, &quot;Request for Change&quot;),
+ ISBLANK( RFC__c )
+)</errorConditionFormula>
+    <errorDisplayField>RFC__c</errorDisplayField>
+    <errorMessage>If the Problem Source equals &quot;Request for Change&quot; then the &quot;Request for Change&quot; record must be selected in the &quot;Request for Change&quot; field.</errorMessage>
+</ValidationRule>

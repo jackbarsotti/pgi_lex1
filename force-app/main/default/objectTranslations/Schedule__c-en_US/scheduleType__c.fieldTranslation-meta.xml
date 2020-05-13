@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select the appropriate usage type for this schedule --></help>
+    <label><!-- Schedule Type --></label>
+    <name>scheduleType__c</name>
+    <picklistValues>
+        <masterLabel>Audio</masterLabel>
+        <translation><!-- Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hosting</masterLabel>
+        <translation><!-- Hosting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>System</masterLabel>
+        <translation><!-- System --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web</masterLabel>
+        <translation><!-- Web --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

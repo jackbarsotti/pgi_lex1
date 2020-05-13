@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Sales_Team_s_Pending_Approval</fullName>
+    <columns>OPPORTUNITY.RECORDTYPE</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.PROBABILITY</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>MRR_Total__c</columns>
+    <columns>Amount__c</columns>
+    <filterScope>Team</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Closed Pending Approval</value>
+    </filters>
+    <label>My Sales Team&#39;s (Pending Approval)</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>PGi_Channel_C_Level</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

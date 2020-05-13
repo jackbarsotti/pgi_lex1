@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReadyTalk_Acct_VoIP_SecurityOption</fullName>
+    <active>true</active>
+    <description>Cannot save record when VoIP is checked and Security Option is Optional or Mandatory.</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = &quot;ReadyTalk_Account&quot;,
+(voipAllowed__c = true) &amp;&amp; or(ispickval(Security_Option__c,&quot;Optional Security&quot;),or(ispickval(Security_Option__c, &quot;Mandatory Security&quot;))))</errorConditionFormula>
+    <errorDisplayField>Security_Option__c</errorDisplayField>
+    <errorMessage>If Security Option is set to Optional or Mandatory, VoIP cannot be enabled.</errorMessage>
+</ValidationRule>

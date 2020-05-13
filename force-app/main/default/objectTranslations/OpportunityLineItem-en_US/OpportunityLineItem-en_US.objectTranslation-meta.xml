@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- AP_Default --></label>
+        <name>AP_Default</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- AP_Modality_Opportunity --></label>
+        <name>AP_Modality_Opportunity</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Default --></label>
+        <name>Default</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Modality_Opportunity --></label>
+        <name>Modality_Opportunity</name>
+    </fieldSets>
+    <layouts>
+        <layout>PGi Opportunity Product Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Legacy Information --></label>
+            <section>Legacy Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>ReadyTalk Opportunity Product Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>TalkPoint Opportunity Product Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>iMC Opportunity Product Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- The Unit Type must be Licenses for the product selected. --></errorMessage>
+        <name>PGi_Cannot_set_Webinar_Bundle_NOT_Lic</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When the Billing Frequency selected is Annually, the Contract Term selected must be a multiple of 12 --></errorMessage>
+        <name>PGi_Contract_Term_Multiple_of_12</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Contract Term must be greater than zero. --></errorMessage>
+        <name>PGi_Contract_Term_greater_than_Zero</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Both Initial Bill Date and 100% Ramp Date are required for any product that is not an Existing Service before setting Stage to Purchase or Closed Won. --></errorMessage>
+        <name>PGi_GCS_Ramp_Dates_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- PGi&apos;s UCaaS Products are not allowed to be sold anymore for new business deals, please select a TPX UCaaS Product offering. --></errorMessage>
+        <name>PGi_Inhouse_UC</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This Opportunity has been closed.  No updates are permitted. --></errorMessage>
+        <name>PGi_Lock_Down_Opportunity_Line_Items</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Contract Term can only be a value of 1 when One Time Event is selected as the Billing Frequency. --></errorMessage>
+        <name>PGi_One_Time_Event_Contract_Term</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only Partners/Carrier Channel can select the Contract unit type. --></errorMessage>
+        <name>PGi_Only_Partners_Can_Select_Contract</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Unit Type for Partner BD must be Contract or if Licenses it can only have Billing Frequency of Monthly or Annually. --></errorMessage>
+        <name>PGi_Partner_BD_Contract_Unit_Type</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Following products are now auto generated after a new deal is closed:  Web:GM, Web:GM Active Host, Web:GM Web for Microsoft Lync, GM Named User Bundles, GM for Skype Server (GMSS) License, Enterprise All-In-One Bundles, Bundle:Large Deal GM, Bundle:GM --></errorMessage>
+        <name>PGi_Renewal_Opportunity_Products</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot edit the Sales Price for this product. Only products with a $0 List Price can be edited. Please enter the original List Price into this field. --></errorMessage>
+        <name>ReadyTalk_OpptyProd_Edit_Sale_Price</name>
+    </validationRules>
+</CustomObjectTranslation>

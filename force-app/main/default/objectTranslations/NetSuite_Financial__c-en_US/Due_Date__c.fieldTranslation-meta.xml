@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If invoice transaction, displays invoice due date.
+If payment transaction, field will be blank. --></help>
+    <label><!-- Due Date --></label>
+    <name>Due_Date__c</name>
+</CustomFieldTranslation>

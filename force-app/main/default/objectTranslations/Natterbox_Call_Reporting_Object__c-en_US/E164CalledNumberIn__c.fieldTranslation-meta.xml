@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is the number that the caller called to enter the Natterbox service but in E164 format. This will almost always be the same as &apos;CalledNumber&apos; which should be used instead of this macro. --></help>
+    <label><!-- E164CalledNumberIn --></label>
+    <name>E164CalledNumberIn__c</name>
+</CustomFieldTranslation>

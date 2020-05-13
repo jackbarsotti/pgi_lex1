@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Установите, чтобы данное сопоставление объединения выполнялось по умолчанию для всех отправляемых соглашений. Это сопоставление по умолчанию можно переопределить, указав другое сопоставление объединения для конкретного соглашения или шаблона соглашений.</help>
+    <label><!-- Default Merge Mapping? --></label>
+    <name>echosign_dev1__Default__c</name>
+</CustomFieldTranslation>

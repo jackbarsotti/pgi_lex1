@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- L3 Speaker Name(s) &amp; Title(s) --></label>
+    <name>L3_Speaker_Name_Title__c</name>
+</CustomFieldTranslation>

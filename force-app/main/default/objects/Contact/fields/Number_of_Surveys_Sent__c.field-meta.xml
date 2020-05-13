@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Surveys_Sent__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Used to calculate the number of times the &quot;Survey Sent&quot; box as checked. We can then use this to calculate response rates across customers using this and the roll-up field titled &quot;Surveys Completed&quot;</description>
+    <externalId>false</externalId>
+    <label>Number of Surveys Sent</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

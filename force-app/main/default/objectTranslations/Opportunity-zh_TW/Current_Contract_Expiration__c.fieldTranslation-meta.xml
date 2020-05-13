@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If applicable, insert contract end date with current Conference Servicing Provider. --></help>
+    <label><!-- Current Contract Expiration --></label>
+    <name>Current_Contract_Expiration__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Potential_New_Opportunities__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Gross_Annual_Opportunity__c =0,0,
+  IF(Gross_Annual_Opportunity__c &gt;10000000,5,
+    IF(Gross_Annual_Opportunity__c &gt;1000000,4,
+      IF(Gross_Annual_Opportunity__c &gt;500000,3,
+        IF(Gross_Annual_Opportunity__c &gt;250000,2,
+          IF(Gross_Annual_Opportunity__c &lt;250001,1,NULL)
+        )
+      )
+    )
+  )
+)</formula>
+    <inlineHelpText>The max number of Potential New Opportunities for the account based on the current active order and the number of employees</inlineHelpText>
+    <label># Potential New Opportunities</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

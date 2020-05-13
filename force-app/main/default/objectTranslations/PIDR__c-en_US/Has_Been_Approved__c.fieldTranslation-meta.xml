@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Used to determine if Status has even been set to &quot;Approved&quot;, FinReqs &amp; RFCs should only generate when setting the PIDR to Approved for the first time. --></help>
+    <label><!-- Has Been Approved --></label>
+    <name>Has_Been_Approved__c</name>
+</CustomFieldTranslation>

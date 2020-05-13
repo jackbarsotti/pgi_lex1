@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Total Cases for Customer Education --></label>
+    <name>Total_Cases_for_Customer_Education_in_Pa__c</name>
+</CustomFieldTranslation>

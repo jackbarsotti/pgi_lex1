@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DD_Migration_pending</fullName>
+    <booleanFilter>1 AND 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>Status__c</columns>
+    <columns>Historical_DD__c</columns>
+    <columns>Related_Opportunity__c</columns>
+    <columns>Description__c</columns>
+    <columns>Historical_DD_Start__c</columns>
+    <columns>Historical_DD_End__c</columns>
+    <columns>Historical_Created_By__c</columns>
+    <columns>Historical_Created_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Origin__c</field>
+        <operation>equals</operation>
+        <value>DD Migration</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Cancelled,Completed</value>
+    </filters>
+    <label>DD Migration_pending</label>
+    <sharedTo>
+        <group>PGi_Deal_Desk_Team</group>
+    </sharedTo>
+</ListView>

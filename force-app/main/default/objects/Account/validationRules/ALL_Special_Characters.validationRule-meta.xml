@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALL_Special_Characters</fullName>
+    <active>true</active>
+    <description>Certain fields should not contain special characters otherwise they can not be properly vetted and cleaned by Data.com Clean</description>
+    <errorConditionFormula>AND( 
+$User.Alias &lt;&gt; &quot;autocln&quot;, 
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;, 
+$User.Override_Validation_Rules__c = False,
+NOT(ISPICKVAL(CleanStatus, &quot;In Sync&quot;)),
+NOT(CONTAINS(BillingStreet, &quot;C/o&quot;)),
+NOT(CONTAINS(BillingStreet, &quot;C/O&quot;)),
+NOT(CONTAINS(BillingStreet, &quot;c/o&quot;)),
+OR( 
+CONTAINS(Name, &#39;\\&#39;), 
+CONTAINS(Name, &#39;;&#39;), 
+CONTAINS(Name, &#39;|&#39;), 
+CONTAINS(Name, &#39;:&#39;), 
+CONTAINS(Phone, &#39;/&#39;), 
+CONTAINS(Phone, &#39;\\&#39;), 
+CONTAINS(Phone, &#39;;&#39;), 
+CONTAINS(Phone, &#39;|&#39;), 
+CONTAINS(Phone, &#39;:&#39;), 
+CONTAINS(BillingCity, &#39;/&#39;), 
+CONTAINS(BillingCity, &#39;\\&#39;), 
+CONTAINS(BillingCity, &#39;;&#39;), 
+CONTAINS(BillingCity, &#39;|&#39;), 
+CONTAINS(BillingCity, &#39;:&#39;), 
+CONTAINS(BillingStreet, &#39;\\&#39;), 
+CONTAINS(BillingStreet, &#39;;&#39;), 
+CONTAINS(BillingStreet, &#39;|&#39;)
+))</errorConditionFormula>
+    <errorMessage>Account Name, Phone, Street Address, and City cannot contain the following special characters: / | \ ; :</errorMessage>
+</ValidationRule>

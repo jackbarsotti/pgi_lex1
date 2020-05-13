@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter the number of days until archives are deleted. Zero (0) is the default. Zero indicates that the archives will not be deleted and will be held indefinitely. --></help>
+    <label><!-- Archive Period (list # of days) --></label>
+    <name>Archive_Period__c</name>
+</CustomFieldTranslation>

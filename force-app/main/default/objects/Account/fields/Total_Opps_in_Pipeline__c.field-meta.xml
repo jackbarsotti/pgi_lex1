@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Opps_in_Pipeline__c</fullName>
+    <externalId>false</externalId>
+    <label>Total Opps in Pipeline</label>
+    <summaryFilterItems>
+        <field>Opportunity.IsClosed</field>
+        <operation>notEqual</operation>
+        <value>True</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Opportunity.CloseDate</field>
+        <operation>greaterThan</operation>
+        <value>1/1/2016</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

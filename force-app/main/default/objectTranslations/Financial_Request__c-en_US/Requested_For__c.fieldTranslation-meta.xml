@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This will default to the email of the person entering the request. If this request is for a different PGi Associate please change this to their email address. --></help>
+    <label><!-- Requested For --></label>
+    <name>Requested_For__c</name>
+</CustomFieldTranslation>

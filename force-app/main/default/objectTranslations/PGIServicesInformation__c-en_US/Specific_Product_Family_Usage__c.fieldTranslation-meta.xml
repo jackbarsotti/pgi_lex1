@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Used to filter the Contract General Content. If this is specified, the contract must have one of the product families listed in order to be added. --></help>
+    <label><!-- Specific Product Family Usage --></label>
+    <name>Specific_Product_Family_Usage__c</name>
+    <picklistValues>
+        <masterLabel>Automated Audio</masterLabel>
+        <translation><!-- Automated Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BlueBird</masterLabel>
+        <translation><!-- BlueBird --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Collaboration</masterLabel>
+        <translation><!-- Collaboration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Operator Assisted</masterLabel>
+        <translation><!-- Operator Assisted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Skype For Business</masterLabel>
+        <translation><!-- Skype For Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TPx UCaaS</masterLabel>
+        <translation><!-- TPx UCaaS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Third Party</masterLabel>
+        <translation><!-- Third Party --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UCaaS</masterLabel>
+        <translation><!-- UCaaS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcast</masterLabel>
+        <translation><!-- Webcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webinar</masterLabel>
+        <translation><!-- Webinar --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

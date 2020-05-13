@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CC_Add_l_Info__c</fullName>
+    <description>Additional info regarding Closed Captioning</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Add&#39;l info regarding Closed Captioning request</inlineHelpText>
+    <label>CC Add&#39;l Info</label>
+    <length>1000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

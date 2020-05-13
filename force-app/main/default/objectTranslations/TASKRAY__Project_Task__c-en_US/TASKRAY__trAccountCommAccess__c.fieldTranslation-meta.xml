@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Used to grant access to Customer/External Accounts (Sharing Sets only). --></help>
+    <label><!-- Account (Community Access) --></label>
+    <name>TASKRAY__trAccountCommAccess__c</name>
+    <relationshipLabel><!-- TaskRay Tasks (Account (Community Access)) --></relationshipLabel>
+</CustomFieldTranslation>

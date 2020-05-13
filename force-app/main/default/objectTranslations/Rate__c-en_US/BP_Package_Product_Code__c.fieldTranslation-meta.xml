@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- PackageProductCode for this Rate. If there&apos;s multiple PackageProductCode, they&apos;re separated with a Double-Pipe: || --></help>
+    <label><!-- BP Package Product Code --></label>
+    <name>BP_Package_Product_Code__c</name>
+</CustomFieldTranslation>

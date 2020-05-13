@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The API name of the metadata component that is referencing Data.com directly or indirectly. --></help>
+    <label><!-- Metadata API Name --></label>
+    <name>ddcdf__Metadata__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi-Pricing Support Process</fullName>
+    <description>For Pricing case record request</description>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Awaiting Response</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed - Not Needed</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>In Progress</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>New</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>New - Transferred</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>On Hold</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Pending Approval%28s%29</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Re-Opened</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Received</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Scoping</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

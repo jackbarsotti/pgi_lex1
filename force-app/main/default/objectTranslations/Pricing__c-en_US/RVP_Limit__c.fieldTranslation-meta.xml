@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Limit for which the logged-in user&apos;s RVP can approve. --></help>
+    <label><!-- RVP Limit --></label>
+    <name>RVP_Limit__c</name>
+</CustomFieldTranslation>

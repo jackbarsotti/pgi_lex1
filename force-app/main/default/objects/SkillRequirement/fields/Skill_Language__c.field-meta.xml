@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Skill_Language__c</fullName>
+    <externalId>false</externalId>
+    <formula>Skill.MasterLabel = &quot;English&quot;
+||
+Skill.MasterLabel = &quot;English (AL)&quot;
+||
+Skill.MasterLabel = &quot;English (Euro)&quot;
+||
+Skill.MasterLabel = &quot;English (Euro/NAM)&quot;
+||
+Skill.MasterLabel = &quot;English (Global)&quot;
+||
+Skill.MasterLabel = &quot;English (Irish)&quot;
+||
+Skill.MasterLabel = &quot;English (Japan)&quot;
+||
+Skill.MasterLabel = &quot;English (NAM)&quot;
+||
+Skill.MasterLabel = &quot;English (Native)&quot;
+||
+Skill.MasterLabel = &quot;French&quot;
+||
+Skill.MasterLabel = &quot;French (Native)&quot;
+||
+Skill.MasterLabel = &quot;French-Canadian&quot;
+||
+Skill.MasterLabel = &quot;French-Canadian (Native)&quot;
+||
+Skill.MasterLabel = &quot;German&quot;
+||
+Skill.MasterLabel = &quot;German (Native)&quot;
+||
+Skill.MasterLabel = &quot;Greek&quot;
+||
+Skill.MasterLabel = &quot;Italian&quot;
+||
+Skill.MasterLabel = &quot;Italian (Native)&quot;
+||
+Skill.MasterLabel = &quot;Japanese&quot;
+||
+Skill.MasterLabel = &quot;Japanese (Native)&quot;
+||
+Skill.MasterLabel = &quot;Korean&quot;
+||
+Skill.MasterLabel = &quot;Korean (Native)&quot;
+||
+Skill.MasterLabel = &quot;Mandarin&quot;
+||
+Skill.MasterLabel = &quot;Mandarin (Native)&quot;
+||
+Skill.MasterLabel = &quot;Polish&quot;
+||
+Skill.MasterLabel = &quot;Portuguese&quot;
+||
+Skill.MasterLabel = &quot;Portuguese (Native)&quot;
+||
+Skill.MasterLabel = &quot;Russian&quot;
+||
+Skill.MasterLabel = &quot;Spanish&quot;
+||
+Skill.MasterLabel = &quot;Spanish (Native)&quot;
+||
+Skill.MasterLabel = &quot;Translation&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Skill - Language</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

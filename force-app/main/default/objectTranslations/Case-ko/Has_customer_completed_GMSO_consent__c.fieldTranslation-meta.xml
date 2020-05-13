@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Required for the GMSO service to work. --></help>
+    <label><!-- Has customer completed GMSO consent? --></label>
+    <name>Has_customer_completed_GMSO_consent__c</name>
+    <picklistValues>
+        <masterLabel>No</masterLabel>
+        <translation><!-- No --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes</masterLabel>
+        <translation><!-- Yes --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

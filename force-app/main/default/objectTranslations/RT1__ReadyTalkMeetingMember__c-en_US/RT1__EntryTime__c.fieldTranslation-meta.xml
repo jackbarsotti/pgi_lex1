@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Most recent date &amp; time the meeting member entered the meeting. --></help>
+    <label><!-- Attendance Entry Time --></label>
+    <name>RT1__EntryTime__c</name>
+</CustomFieldTranslation>

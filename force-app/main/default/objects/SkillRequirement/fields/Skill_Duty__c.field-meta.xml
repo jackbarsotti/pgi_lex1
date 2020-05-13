@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Skill_Duty__c</fullName>
+    <externalId>false</externalId>
+    <formula>Skill.MasterLabel = &quot;Call Setup&quot;
+||
+Skill.MasterLabel = &quot;Email Core&quot;
+||
+Skill.MasterLabel = &quot;ES Core&quot;
+||
+Skill.MasterLabel = &quot;Legal Core&quot;
+||
+Skill.MasterLabel = &quot;Mgmt Cover&quot;
+||
+Skill.MasterLabel = &quot;OBS Core&quot;
+||
+Skill.MasterLabel = &quot;Parked&quot;
+||
+Skill.MasterLabel = &quot;Provisioning&quot;
+||
+Skill.MasterLabel = &quot;Res Core&quot;
+||
+Skill.MasterLabel = &quot;Skype Help Core&quot;
+||
+Skill.MasterLabel = &quot;Stray&quot;
+||
+Skill.MasterLabel = &quot;Tier 1 Core&quot;
+||
+Skill.MasterLabel = &quot;Tier 2 Core&quot;
+||
+Skill.MasterLabel = &quot;Tier 2 Tickets&quot;
+||
+Skill.MasterLabel = &quot;Traffic&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Skill - Duty</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

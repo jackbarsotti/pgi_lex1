@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Allows chairperson (and co-presenter) to upload/push slides and insert/push polls. --></help>
+    <label><!-- Slide Presentation Allowed --></label>
+    <name>Slide_Presentation_Allowed__c</name>
+</CustomFieldTranslation>

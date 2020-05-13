@@ -1,0 +1,484 @@
+<apex:page showHeader="true" standardStylesheets="false" controller="PublicGroupExplorer"
+    sidebar="false" docType="html-5.0">
+
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <title>Public Group Explorer</title>
+            <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+            <apex:slds />
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
+            <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+            <script src="{!URLFOR($Resource.aljs, '/jquery.aljs-init.min.js')}"></script>
+            <script src="{!URLFOR($Resource.aljs, '/jquery.aljs-picklist.min.js')}"></script>
+        </head>
+
+        <body> 
+
+            <style>
+                .ui-state-focus {
+                    outline: 0;
+                    background-color: #f4f6f9;
+                    color: #16325c;
+                    text-decoration: none;
+                }
+                .ui-helper-hidden-accessible {
+                    display: none;
+                }
+                .slds-scope .slds-picklist .slds-dropdown {
+                    width: 40rem !important;
+                }
+                .slds-scope .slds-picklist__input {
+                    width: 40rem !important;
+                }
+            </style>
+
+            
+            <div class="slds-scope">
+                <!-- PAGE HEADER -->
+                <div class="slds-page-header" role="banner">
+                    <!-- PAGE HEADER TOP ROW -->
+                    <div class="slds-grid">
+                        <!-- PAGE HEADER / ROW 1 / COLUMN 1 -->
+                        <div class="slds-col">
+                            <!-- HEADING AREA -->
+                            <!-- MEDIA OBJECT = FIGURE + BODY -->
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <svg aria-hidden="true" class="slds-icon slds-icon--large slds-icon-standard-user">
+                                        <use xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/standard-sprite/svg/symbols.svg#user')}"></use>
+                                    </svg>
+                                </div>
+
+                                <div class="slds-media__body">
+                                    <p class="slds-text-heading--label">Public Group Explorer</p>
+                                    <h1 class="slds-text-heading--medium">Public Group Explorer</h1>
+                                </div>
+                            </div>
+                            <!-- / MEDIA OBJECT -->
+                            <!-- HEADING AREA -->
+                        </div>
+                    </div>
+                    <!-- / PAGE HEADER TOP ROW -->
+                </div>
+                <!-- / PAGE HEADER -->
+                
+                <!-- Tab Panel -->
+                <div class="slds-tabs--scoped">
+                    <!-- TABS -->
+                    <ul class="slds-tabs--scoped__nav" role="tablist">
+                        <li class="slds-tabs--scoped__item slds-text-heading--label slds-active" title="Search by User" role="presentation"><a class="slds-tabs--scoped__link" href="#user" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-scoped-1" id="tab-scoped-1__item" onclick="selectTab(this);">Search by User</a></li>
+                        <li class="slds-tabs--scoped__item slds-text-heading--label" title="View Users by Group" role="presentation"><a class="slds-tabs--scoped__link" href="#group" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-scoped-2" id="tab-scoped-2__item" onclick="selectTab(this);">View Users by Group</a></li>
+                    </ul>
+                    <!-- TAB 1 -->
+                    <div id="tab-scoped-1" class="slds-tabs--scoped__content slds-show" role="tabpanel" aria-labelledby="tab-scoped-1__item">
+                        <h2>
+                            <!-- BOXED AREA -->
+                            <fieldset class="slds-theme--default slds-container--small">
+                                <!-- User Search Form -->
+                                <form class="slds-form--stacked">
+                                    
+
+                                    <div class="slds-lookup" data-select="single" data-scope="single" data-typeahead="true">
+
+                                        <div class="slds-form-element">
+                                            <label class="slds-form-element__label" for="userSearchInput">User Lookup</label>
+                                            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right">
+                                                <span class="slds-input__icon" aria-hidden="true">
+                                                    <i class="fa fa-search"></i>
+                                                </span>
+                                                <div class="slds-pill__container slds-hide"></div>
+                                                <!-- TODO: test user action to use for rendering related target fields -->
+                                                <input id="userSearchInput" placeholder="Search by user name" class="slds-input slds-show" type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </form>
+                                <!-- User Search Form -->
+
+
+                            </fieldset>
+                            <!-- / BOXED AREA -->
+
+                            <!-- Public Group Details Section -->
+                            <fieldset class="slds-box slds-form-element slds-m-top--medium">
+                                <legend id="PublicGroupTotal" class="slds-form-element__label slds-form-element__label--top">Public Groups</legend>
+                                <form class="slds-form--stacked">
+                                
+
+                                    <!-- Loading Spinner Branded -->
+                                    <div class="slds-spinner_container slds-hide">
+                                        <div role="status" class="slds-spinner slds-spinner--large slds-spinner--brand">
+                                          <span class="slds-assistive-text">Loading</span>
+                                          <div class="slds-spinner__dot-a"></div>
+                                          <div class="slds-spinner__dot-b"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- TABLE -->
+                                    <div id="publicGroupResultTable">Search for a User above</div>
+
+                                </form>
+                            </fieldset>
+
+
+                        </h2>
+                    </div>
+                    <!-- TAB 2 -->
+                    <div id="tab-scoped-2" class="slds-tabs--scoped__content slds-hide" role="tabpanel" aria-labelledby="tab-scoped-2__item">
+                        <h2>
+                            <!-- User Search Form -->
+                            <form class="slds-form--stacked">
+                                <div class="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click" data-aljs="picklist">
+                                    <div class="slds-form-element">
+                                        <label class="slds-form-element__label" for="text-input-01">Public Groups</label>
+                                        <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right slds-picklist__input">
+                                            <input type="search" id="text-input-01" class="slds-lookup__search-input slds-input" placeholder="Select a Group" aria-owns="option-list-01" role="combobox" aria-activedescendant="" aria-expanded="false" readonly="true" style="border: 1px solid #d8dde6; padding-left: 10px;"></input>
+                                            <button class="slds-button slds-input__icon slds-text-color--default" aria-expanded="false" tabindex="-1" title="settings">
+                                                <svg class="slds-button__icon slds-button__icon" aria-hidden="true">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#down')}"></use>
+                                                </svg>
+                                                <span class="slds-assistive-text">Expand category options</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="slds-dropdown slds-dropdown--left" role="listbox">
+                                        <ul id="option-list-01" class="slds-dropdown__list slds-dropdown--length-5" role="presentation">
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </form>
+
+
+                            <!-- User Section -->
+                            <fieldset class="slds-box slds-form-element slds-m-top--medium">
+                                <legend id="UsersTotal" class="slds-form-element__label slds-form-element__label--top">Users</legend>
+                                <form class="slds-form--stacked">
+                                    
+                                    <!-- Loading Spinner Branded -->
+                                    <div class="slds-spinner_container slds-hide">
+                                        <div role="status" class="slds-spinner slds-spinner--large slds-spinner--brand">
+                                          <span class="slds-assistive-text">Loading</span>
+                                          <div class="slds-spinner__dot-a"></div>
+                                          <div class="slds-spinner__dot-b"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- TABLE -->
+                                    <div id="userResultTable">Select a Public Group</div>
+                                    
+
+                                </form>
+                            </fieldset>
+                        </h2>
+                    </div>
+                    
+                </div>
+                <!-- / Tab Panel -->
+
+            </div>
+            
+            <script>
+
+                (function( $ ) {  
+
+                    $.widget( 'slds.autocomplete', $.ui.autocomplete, {
+
+                        _create: function() {
+
+                            this._super();
+
+                            this.sldsMenu = $('<div>')
+                                                .addClass('slds-lookup__menu slds-hide')
+                                                .attr('role', 'listbox')
+
+                            this.element.parentsUntil('.slds-lookup').append( this.sldsMenu );
+
+                            $('.ui-helper-hidden, .ui-helper-hidden-accessible').addClass('slds-hide');
+
+                        },
+
+                        _renderMenu: function( ul, items ) {
+
+                            var self = this;
+
+                            ul.addClass('slds-lookup__list').attr('role', 'presentation');
+                            ul.appendTo( this.sldsMenu );
+
+                            this.sldsMenu.addClass('slds-show').removeClass('slds-hide');
+
+                            $.each( items, function( index, item ) {
+                                self._renderItemData( ul, item );
+                            });
+
+                        },
+
+                        _renderItem: function( ul, item ) {
+
+                            return $('<li>')
+                                .addClass('slds-lookup__item')
+                                .append( '<a href="#" role="option">' + item.label + '</a>' )
+                                .appendTo( ul );
+
+                        },
+
+                        _close: function( event ) {
+
+                            this._super( event );
+
+                            this.sldsMenu.addClass('slds-hide').removeClass('slds-show');
+
+                        }
+
+                    });
+
+                })( jQuery );
+
+                // jquery var
+                $ = jQuery.noConflict();
+
+                $.aljsInit({
+                    assetsLocation: '.',
+                    scoped: true,
+                    scopingClass: 'slds-scope'
+                });
+
+                var userMap = new Map();
+
+                $(document).ready(function() {
+                    $('#userSearchInput').autocomplete({
+                        source: runLookup(),
+                        select: function( event, ui ) {
+                            showHideSpinner(true);
+                            queryRelatedPublicGroupsByUser(userMap.get(ui.item.label));
+                        }
+                    });
+                    populatePublicGroupDropdown();
+                });
+
+                function populatePublicGroupDropdown() {
+                    Visualforce.remoting.Manager.invokeAction(
+                        '{!$RemoteAction.PublicGroupExplorer.queryAllRegularPublicGroups}',
+                        function(result,event) {
+                            if(event.status) {
+                                buildPublicGroupPicklist(result);
+                            }
+                            else { 
+                                alert(event.message);
+                            }
+                        },{escape:false}
+                    );
+                }
+
+                function showHideSpinner(isShow) {
+                    if(isShow) {
+                        $(".slds-spinner_container").show('fast');    
+                    }
+                    else {
+                        $(".slds-spinner_container").hide('slow');       
+                    }
+                }
+
+                function buildPublicGroupPicklist(result) {
+
+                    let groupPicklistOptions = '';
+
+                    // iterate collection
+                    for(var i=0; i<result.length; i++) {
+
+                        groupPicklistOptions += '<li role="presentation">';
+                        groupPicklistOptions += '<span class="slds-lookup__item-action slds-lookup__item-action--label" role="option" tabindex="0" id="' + result[i].Id + '">';
+                        groupPicklistOptions += '<svg class="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small slds-shrink-none" aria-hidden="true">';
+                        groupPicklistOptions += '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, "/assets/icons/utility-sprite/svg/symbols.svg#check")}"></use>';
+                        groupPicklistOptions += '</svg>';
+                        groupPicklistOptions += '<span >' + result[i].Name + '</span>';
+                        groupPicklistOptions += '</span>';
+                        groupPicklistOptions += '</li>';
+                    }
+
+                    $('#option-list-01').html(groupPicklistOptions);
+
+                    $('[data-aljs="picklist"]').picklist({
+                        onChange: function(obj) {
+                            showHideSpinner(true);
+                            populateUsersByGroupId($('[data-aljs="picklist"]').picklist('getValueId'));
+                        }
+                    });
+                }
+
+                function populateUsersByGroupId(selectedGroupId) {
+                    Visualforce.remoting.Manager.invokeAction(
+                        '{!$RemoteAction.PublicGroupExplorer.queryUsersByGroupId}', selectedGroupId,
+                        function(result,event) {
+                            if(event.status == true){
+                                populateUserResultTable(result);
+                            }
+                            else{
+                                alert('Uh oh. Something broke. Reload the page and try again');
+                            } 
+                        }
+                    );
+                }
+
+                function runLookup() {
+                    var objects = new Array();
+                    
+                    Visualforce.remoting.Manager.invokeAction(
+                        '{!$RemoteAction.PublicGroupExplorer.queryUsers}',
+                        function(result,event) {
+                            if(event.status == true){
+                                for(var i = 0; i < result.length; i++){
+                                    objects[i] = result[i].Name;
+                                    userMap.set(result[i].Name, result[i].Id);
+                                }    
+                            }
+                            else{
+                                alert('Uh oh. Something broke. Reload the page and try again');
+                            } 
+                        }
+                    );
+                    
+                    return objects;
+                }
+
+                function queryRelatedPublicGroupsByUser(selectedUserId) {
+                    Visualforce.remoting.Manager.invokeAction(
+                        '{!$RemoteAction.PublicGroupExplorer.queryGroupsByUserId}', selectedUserId,
+                        function(result,event) {
+                            if(event.status) {
+                                populatePublicGroupResultTable(result);
+                            }  
+                            else {
+                                alert(event.message); 
+                            }
+                        },{escape: false}
+                    );
+                } 
+
+                
+
+                function populateUserResultTable(users) {
+                    if(users.length > 0) {
+                        var sldsUserResultTable = '';
+
+                        sldsUserResultTable += '<table class="slds-table slds-table_bordered slds-table_cell-buffer">';
+                            sldsUserResultTable += '<thead>';
+                                sldsUserResultTable += '<tr class="slds-text-title_caps">';
+                                    sldsUserResultTable += '<th scope="col"><div  title="Name">Name</div></th>';
+                                    sldsUserResultTable += '<th scope="col"><div  title="Reason For Membership">Reason For Membership</div></th>';
+                                sldsUserResultTable += '</tr>';
+                            sldsUserResultTable += '</thead>';
+
+                            
+                            sldsUserResultTable += '<tbody>'; 
+
+                            // iterate quotelines here
+                            for(var i=0; i<users.length; i++) {
+                                sldsUserResultTable += '<tr>';
+                                    sldsUserResultTable += '<th scope="row" data-label="Name">';
+                                        sldsUserResultTable += '<div  title="Group Name"><a onclick="switchTabSelectUser(\'' + users[i].userId + '\', \'' + users[i].userName + '\');" href="#user">' + users[i].userName + '</a></div>';
+                                    sldsUserResultTable += '</th>';
+                                    sldsUserResultTable += '<th scope="row" data-label="Reason For Membership">';
+                                        sldsUserResultTable += '<div  title="Group Name">' + users[i].reasonForMembership + '</div>';
+                                    sldsUserResultTable += '</th>';
+                                sldsUserResultTable += '</tr>';
+                            }
+
+                            sldsUserResultTable += '</tbody>';
+                        sldsUserResultTable += '</table>';
+
+                        $('#userResultTable').html(sldsUserResultTable);
+                    }
+                    else {
+                        $('#userResultTable').html('<span>No Users Returned for this Public Group</span>');
+                    }
+
+                    $('#UsersTotal').text(users.length + ' Users');
+
+                    showHideSpinner(false);
+                }
+
+                function populatePublicGroupResultTable(publicGroups) {
+
+                    if(publicGroups.length > 0) {
+
+                        var sldsPublicGroupResultTable = '';
+
+                        sldsPublicGroupResultTable += '<table class="slds-table slds-table_bordered slds-table_cell-buffer">';
+                            sldsPublicGroupResultTable += '<thead>';
+                                sldsPublicGroupResultTable += '<tr class="slds-text-title_caps">';
+                                    sldsPublicGroupResultTable += '<th scope="col"><div  title="Name">Name</div></th>';
+                                sldsPublicGroupResultTable += '</tr>';
+                            sldsPublicGroupResultTable += '</thead>';
+
+                            
+                            sldsPublicGroupResultTable += '<tbody>';
+                            // iterate quotelines here
+                            for(var i=0; i<publicGroups.length; i++) {
+                                sldsPublicGroupResultTable += '<tr>';
+                                    sldsPublicGroupResultTable += '<th scope="row" data-label="Name">';
+                                        sldsPublicGroupResultTable += '<div  title="Group Name"><a onclick="switchTabSelectGroup(\'' + publicGroups[i].Id + '\');" href="#group">' + publicGroups[i].Name + '</a></div>';
+                                    sldsPublicGroupResultTable += '</th>';
+                                sldsPublicGroupResultTable += '</tr>';
+                            }
+
+                            sldsPublicGroupResultTable += '</tbody>';
+                        sldsPublicGroupResultTable += '</table>';
+
+                        $('#publicGroupResultTable').html(sldsPublicGroupResultTable);
+                    }      
+                    else {
+                        $('#publicGroupResultTable').html('<span>No Public Groups Returned for User</span>');
+                    }
+
+                    $('#PublicGroupTotal').text(publicGroups.length + ' Public Groups');
+                    
+                    showHideSpinner(false);
+                }
+
+                function switchTabSelectUser(userId, userName) { 
+                    
+                    selectTab($("#tab-scoped-1__item"));
+                    $("#tab-scoped-1").addClass("slds-show");
+                    $("#tab-scoped-1").removeClass("slds-hide");
+                    $('#userSearchInput').val(userName);
+                    queryRelatedPublicGroupsByUser(userId);
+                }
+
+                function switchTabSelectGroup(group) {
+                    
+                    selectTab($("#tab-scoped-2__item"));
+                    $("#tab-scoped-2").addClass("slds-show");
+                    $("#tab-scoped-2").removeClass("slds-hide");
+                    $('[data-aljs="picklist"]').picklist('setValue', group, false);
+                }
+
+                function selectTab(elmnt) {
+                    //
+                    var href = $(elmnt).attr('href');
+
+                    // slds-active
+                    $(elmnt).parent("li").siblings(".slds-active").removeClass("slds-active");
+                    $(elmnt).parent("li").addClass("slds-active");
+                    // tabindex
+                    $(elmnt).parent("li").siblings().children("a").attr("tabindex", -1);
+                    $(elmnt).attr("tabindex", 0);
+                    // aria-selected
+                    $(elmnt).parent("li").siblings().children("a").attr("aria-selected", false);
+                    $(elmnt).attr("aria-selected", true);
+                    // hiding previouly selected tab (slds-show/slds-hide)
+                    $(elmnt).closest(".slds-tabs--scoped").children("div[role='tabpanel'].slds-show").addClass("slds-hide");
+                    $(elmnt).closest(".slds-tabs--scoped").children("div[role='tabpanel'].slds-show").removeClass("slds-show");
+                    // displaying newly selected tab (slds-show/slds-hide)
+                    $(elmnt).closest(".slds-tabs--scoped").children("div[aria-labelledby='"+elmnt.id+"']").addClass("slds-show");
+                    $(elmnt).closest(".slds-tabs--scoped").children("div[aria-labelledby='"+elmnt.id+"']").removeClass("slds-hide");
+                }
+
+                
+            </script>
+        </body>
+    </html>
+</apex:page>

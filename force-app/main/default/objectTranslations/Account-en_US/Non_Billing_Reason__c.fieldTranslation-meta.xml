@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Non Billing Reason --></label>
+    <name>Non_Billing_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Chairtable Contributions/ Partner Account</masterLabel>
+        <translation><!-- Chairtable Contributions/ Partner Account --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Events Account</masterLabel>
+        <translation><!-- Events Account --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Extended Free Trial</masterLabel>
+        <translation><!-- Extended Free Trial --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Suspended</masterLabel>
+        <translation><!-- Suspended --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Test Account</masterLabel>
+        <translation><!-- Test Account --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>na</masterLabel>
+        <translation><!-- na --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

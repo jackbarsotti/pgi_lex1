@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type Detail --></label>
+    <name>Type_Detail__c</name>
+    <picklistValues>
+        <masterLabel>Account Review</masterLabel>
+        <translation><!-- Account Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Best Practice/New Products</masterLabel>
+        <translation><!-- Best Practice/New Products --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Core Product</masterLabel>
+        <translation><!-- Core Product --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Demo/Training</masterLabel>
+        <translation><!-- Demo/Training --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Discovery</masterLabel>
+        <translation><!-- Discovery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Follow Up Meeting</masterLabel>
+        <translation><!-- Follow Up Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Follow-up</masterLabel>
+        <translation><!-- Follow-up --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FoxDen</masterLabel>
+        <translation><!-- FoxDen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FoxDen Connect</masterLabel>
+        <translation><!-- FoxDen Connect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gift</masterLabel>
+        <translation><!-- Gift --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Go Live Prep</masterLabel>
+        <translation><!-- Go Live Prep --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Handwritten Note</masterLabel>
+        <translation><!-- Handwritten Note --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Illuminate - Replay</masterLabel>
+        <translation><!-- Illuminate - Replay --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound</masterLabel>
+        <translation><!-- Inbound --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Integration</masterLabel>
+        <translation><!-- Integration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Issues to Resolve</masterLabel>
+        <translation><!-- Issues to Resolve --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LinkedIn Mail</masterLabel>
+        <translation><!-- LinkedIn Mail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LinkedIn Post</masterLabel>
+        <translation><!-- LinkedIn Post --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound - Follow-up</masterLabel>
+        <translation><!-- Outbound - Follow-up --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound - Proactive</masterLabel>
+        <translation><!-- Outbound - Proactive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound - Prospecting</masterLabel>
+        <translation><!-- Outbound - Prospecting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pricing</masterLabel>
+        <translation><!-- Pricing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Requirements Gathering</masterLabel>
+        <translation><!-- Requirements Gathering --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Response - Customer/Prosect</masterLabel>
+        <translation><!-- Response - Customer/Prosect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>S4B</masterLabel>
+        <translation><!-- S4B --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sent Collateral</masterLabel>
+        <translation><!-- Sent Collateral --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Training</masterLabel>
+        <translation><!-- Training --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transition</masterLabel>
+        <translation><!-- Transition --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trial</masterLabel>
+        <translation><!-- Trial --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Twitter Tweet</masterLabel>
+        <translation><!-- Twitter Tweet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcasting</masterLabel>
+        <translation><!-- Webcasting --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

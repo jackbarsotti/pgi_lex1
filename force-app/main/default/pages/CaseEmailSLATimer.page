@@ -1,0 +1,78 @@
+<apex:page showHeader="false" sidebar="false" standardController="Case" extensions="CaseCountdownTimer" docType="html-5.0">
+	<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <title>Case Countdown Timer</title>
+            <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+            <apex:slds />
+        </head>
+        <body> 
+            <style></style>
+        	<div class="slds-scope">
+                <!-- PAGE HEADER -->
+                <div class="slds-page-header" role="banner">
+                    <!-- PAGE HEADER TOP ROW -->
+                    <div class="slds-grid">
+                        <!-- PAGE HEADER / ROW 1 / COLUMN 1 -->
+                        <div class="slds-col">
+                            <!-- HEADING AREA -->
+                            <!-- MEDIA OBJECT = FIGURE + BODY -->
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <svg id="timeToSLAImage" aria-hidden="true" class="slds-icon slds-icon--large slds-icon-text-light">
+                                            
+                                    </svg>
+                                </div>
+
+                                <div class="slds-media__body">
+                                    <p class="slds-text-heading--label">Time to <b>SLA</b></p>
+                                    <h1 id="demo1" class="slds-text-heading--medium demo"></h1>
+                                </div>
+                            </div>
+                            <!-- / MEDIA OBJECT -->
+                            <!-- HEADING AREA -->
+                        </div>
+                        
+                    </div>
+                    <!-- / PAGE HEADER TOP ROW -->
+                </div>
+                <!-- / PAGE HEADER -->
+            </div>
+            <script> 
+                // on page init (DOM is available)
+                (function() {
+                    myTimer();
+                    var timerVar = setInterval(myTimer, 60000);
+                    // stop timer with the following method
+                    //clearInterval(timerVar);
+                })();
+
+                // time stamp method
+                function myTimer() {
+                    var d = new Date();
+                    console.log(d.toLocaleTimeString());
+                    refreshCaseTimers();
+                }
+
+                // JS Remote Actions
+                function refreshCaseTimers() {
+                    Visualforce.remoting.Manager.invokeAction(
+                        '{!$RemoteAction.CaseCountdownTimer.refreshTimers}', '{!$CurrentPage.parameters.Id}',
+                        function(result,event) {
+                            if(event.status) {
+                                document.getElementById("demo1").innerHTML = result.timeToSLA + '  ' + result.slaColor;
+
+                                var clockImage = '<use xlink:href="{!URLFOR($Asset.SLDS, "/assets/icons/utility-sprite/svg/symbols.svg#clock")}"></use>';
+
+                                document.getElementById("timeToSLAImage").innerHTML = clockImage;
+                                console.log(result);
+                            }  
+                            else {
+                                alert(event.message); 
+                            }
+                        },{escape: false}
+                    );
+                }
+            </script>
+        </body>
+    </html>
+</apex:page>

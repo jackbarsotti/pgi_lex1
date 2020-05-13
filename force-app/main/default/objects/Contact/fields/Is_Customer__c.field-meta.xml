@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Customer__c</fullName>
+    <description>Defines if the contact is under a customer (customer defined as an account with at least 1 active access code, bill account = true, and status = active)</description>
+    <externalId>false</externalId>
+    <formula>Account.Is_Customer__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Populated nightly from account level. If the account is a customer, all contacts are customers. (Customer is defined as an account with 1+ active access codes, bill account = true and status = active)</inlineHelpText>
+    <label>Is Customer?</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

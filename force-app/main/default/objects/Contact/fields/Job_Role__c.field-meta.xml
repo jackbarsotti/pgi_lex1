@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_Role__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>AKA &quot;Vertical&quot; - the role/department the contact has within the organization</inlineHelpText>
+    <label>Job Role</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Corp Comm</fullName>
+                <default>false</default>
+                <label>Corp Comm</label>
+            </value>
+            <value>
+                <fullName>Executive</fullName>
+                <default>false</default>
+                <label>Executive</label>
+            </value>
+            <value>
+                <fullName>Finance</fullName>
+                <default>false</default>
+                <label>Finance</label>
+            </value>
+            <value>
+                <fullName>HR</fullName>
+                <default>false</default>
+                <label>HR</label>
+            </value>
+            <value>
+                <fullName>Investor Relations</fullName>
+                <default>false</default>
+                <label>Investor Relations</label>
+            </value>
+            <value>
+                <fullName>IT</fullName>
+                <default>false</default>
+                <label>IT</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Meeting Planner</fullName>
+                <default>false</default>
+                <label>Meeting Planner</label>
+            </value>
+            <value>
+                <fullName>FDAAC Buyer</fullName>
+                <default>false</default>
+                <label>FDAAC Buyer</label>
+            </value>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal</label>
+            </value>
+            <value>
+                <fullName>Buyer</fullName>
+                <default>false</default>
+                <label>Buyer</label>
+            </value>
+            <value>
+                <fullName>Billing Contact</fullName>
+                <default>false</default>
+                <label>Billing Contact</label>
+            </value>
+            <value>
+                <fullName>Billing / Buyer</fullName>
+                <default>false</default>
+                <label>Billing / Buyer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

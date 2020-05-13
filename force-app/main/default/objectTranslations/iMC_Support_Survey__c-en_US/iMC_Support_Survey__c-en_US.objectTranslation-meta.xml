@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>iMC Support Survey</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>iMC Support Surveys</value>
+    </caseValues>
+    <layouts>
+        <layout>iMC Survey Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Information --></label>
+            <section>Customer Information</section>
+        </sections>
+        <sections>
+            <label><!-- General Information --></label>
+            <section>General Information</section>
+        </sections>
+        <sections>
+            <label><!-- In-Product,  Support &amp; Implementation --></label>
+            <section>In-Product,  Support &amp; Implementation</section>
+        </sections>
+        <sections>
+            <label><!-- Random --></label>
+            <section>Random</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- iMC Implementation Survey --></label>
+        <name>iMC_Implementation_Survey</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- iMC NPS Survey --></label>
+        <name>iMC_NPS_Survey</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- iMC Support Survey --></label>
+        <name>iMC_Support_Survey</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- iMC Survey --></label>
+        <name>iMC_Survey</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

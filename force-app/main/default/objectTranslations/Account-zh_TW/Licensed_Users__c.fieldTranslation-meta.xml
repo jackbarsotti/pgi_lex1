@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Sum of the  Licensed Internal Users  +  Licensed External Users --></help>
+    <label><!-- Licensed Users --></label>
+    <name>Licensed_Users__c</name>
+</CustomFieldTranslation>

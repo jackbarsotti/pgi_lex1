@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OPT_Q4_Duty__c</fullName>
+    <externalId>false</externalId>
+    <formula>!Role_Not_Needed__c
+&amp;&amp;
+ISPICKVAL(Status , &quot;New&quot;)
+&amp;&amp;
+WorkType_Category__c = &quot;Duty&quot;
+&amp;&amp;
+DueDate - (Duration / 1440) &gt; NOW() + 2
+&amp;&amp;
+DueDate - (Duration / 1440) &lt; NOW() + 10</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>OPT - Q4 Duty</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

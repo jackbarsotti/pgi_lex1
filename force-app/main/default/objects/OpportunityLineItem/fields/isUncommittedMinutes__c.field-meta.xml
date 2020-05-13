@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>isUncommittedMinutes__c</fullName>
+    <description>Used for Jeff Reese Slicer Report.  Used to exclude the 2nd Min. Commit Product that is Uncommitted from the report.  Will show as True whenever there is at least 1 OPLI that has a min. commit = True and its Unit Type is Minutes &amp; the Min. Commit for this is false and the Unit Type is minutes.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+Min_Commit__c = False &amp;&amp; CONTAINS(TEXT(Unit_Type__c), &quot;Minute&quot;) &amp;&amp;  Opportunity.Count_of_OPLI_0_TCV_Minutes__c &gt; 0, True, False
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>isUncommittedMinutes</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ETFDoesNotApply__c</fullName>
+    <externalId>false</externalId>
+    <label>If ETF Does Not Apply</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Approved to Waive</fullName>
+                <default>false</default>
+                <label>Approved to Waive</label>
+            </value>
+            <value>
+                <fullName>Customer Provided Timely Notice</fullName>
+                <default>false</default>
+                <label>Customer Provided Timely Notice</label>
+            </value>
+            <value>
+                <fullName>Month-to-Month</fullName>
+                <default>false</default>
+                <label>Month-to-Month</label>
+            </value>
+            <value>
+                <fullName>No Contract on File</fullName>
+                <default>false</default>
+                <label>No Contract on File</label>
+            </value>
+            <value>
+                <fullName>Term-to-Term</fullName>
+                <default>false</default>
+                <label>Term-to-Term</label>
+            </value>
+            <value>
+                <fullName>Bad Debt/Collections</fullName>
+                <default>false</default>
+                <label>Bad Debt/Collections</label>
+            </value>
+            <value>
+                <fullName>Prepaid</fullName>
+                <default>false</default>
+                <label>Prepaid</label>
+            </value>
+            <value>
+                <fullName>New COID Set Up</fullName>
+                <default>false</default>
+                <label>New COID Set Up</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

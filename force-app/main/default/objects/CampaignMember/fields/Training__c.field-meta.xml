@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Training__c</fullName>
+    <description>This is any additional fee paid for the event</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Any additional training or auxiliary</inlineHelpText>
+    <label>Training</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Currency</type>
+</CustomField>

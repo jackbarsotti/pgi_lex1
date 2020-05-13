@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field will be automatically updated if the TaskRay Onboarding Kickoff Flow has been completed for a given Opportunity. --></help>
+    <label><!-- Onboarding Kickoff Completed --></label>
+    <name>TASKRAY__trOnboardingKickoffCompleted__c</name>
+</CustomFieldTranslation>

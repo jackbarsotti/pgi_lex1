@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RT_Campaign_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>RT Campaign Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Campaign</fullName>
+                <default>false</default>
+                <label>Campaign</label>
+            </value>
+            <value>
+                <fullName>Campaign Follow Up</fullName>
+                <default>false</default>
+                <label>Campaign Follow Up</label>
+            </value>
+            <value>
+                <fullName>Direct Mail</fullName>
+                <default>false</default>
+                <label>Direct Mail</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Networking Event</fullName>
+                <default>false</default>
+                <label>Networking Event</label>
+            </value>
+            <value>
+                <fullName>Online Ad</fullName>
+                <default>false</default>
+                <label>Online Ad</label>
+            </value>
+            <value>
+                <fullName>ReadyTalk Event</fullName>
+                <default>false</default>
+                <label>ReadyTalk Event</label>
+            </value>
+            <value>
+                <fullName>Telemarketing</fullName>
+                <default>false</default>
+                <label>Telemarketing</label>
+            </value>
+            <value>
+                <fullName>Tradeshow</fullName>
+                <default>false</default>
+                <label>Tradeshow</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Web Seminar</fullName>
+                <default>false</default>
+                <label>Web Seminar</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

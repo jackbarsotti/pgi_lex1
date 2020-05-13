@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Timestamp tracking when Bill Review Status has been set --></help>
+    <label><!-- TS8_Bill Review Status_Set --></label>
+    <name>TS8_Bill_Review_Status_Set__c</name>
+</CustomFieldTranslation>

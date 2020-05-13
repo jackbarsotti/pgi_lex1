@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Potiential_Duplicate_via_DUNS__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Auto checked by the Account Trigger to auto match a Parent Account.  If multiple matches are found for the Parent account then they will be marked as TRUE for potential duplicate.</description>
+    <externalId>false</externalId>
+    <label>Potiential Duplicate via DUNS</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CalledRoaming__c</fullName>
+    <description>If the person being called is on a mobile phone that is roaming, this will be the short counrty code that the user is currently in.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If the person being called is on a Natterbox mobile phone that is roaming, this will be the short country code that the user is currently in. If the call recipient is not on a Natterbox mobile, this field will be left blank.</inlineHelpText>
+    <label>CalledRoaming</label>
+    <length>100</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

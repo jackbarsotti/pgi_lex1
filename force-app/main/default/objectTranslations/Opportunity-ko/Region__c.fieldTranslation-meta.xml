@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Region --></label>
+    <name>Region__c</name>
+    <picklistValues>
+        <masterLabel>AT&amp;T SHELL</masterLabel>
+        <translation><!-- AT&amp;T SHELL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Asia Pacific</masterLabel>
+        <translation><!-- Asia Pacific --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EMEA</masterLabel>
+        <translation><!-- EMEA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EMEA - TP Direct</masterLabel>
+        <translation><!-- EMEA - TP Direct --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Center - Slide Assist</masterLabel>
+        <translation><!-- Event Center - Slide Assist --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>North America</masterLabel>
+        <translation><!-- North America --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ON24 Forced Conv</masterLabel>
+        <translation><!-- ON24 Forced Conv --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi Consolidated Billing</masterLabel>
+        <translation><!-- PGi Consolidated Billing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PWN</masterLabel>
+        <translation><!-- PWN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ready Talk</masterLabel>
+        <translation><!-- Ready Talk --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

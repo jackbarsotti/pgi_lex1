@@ -1,0 +1,181 @@
+<apex:page id="page" standardController="Opportunity" extensions="eSignatureController">
+<apex:pageMessages />
+<script src="/apex/dsfs__DocuSign_JavaScript"></script>
+<script type="text/javascript">
+function sendWithDocusignLong(){
+
+//********* Option Declarations (Do not modify )*********// 
+var RC = '';var RSL='';var RSRO='';var RROS='';var CCRM='';var CCTM='';var CCNM='';var CRCL=''; var CRL='';var OCO='';var DST='';var LA='';var CEM='';var CES='';var STB='';var SSB='';var SES='';var SEM='';var SRS='';var SCS ='';var RES=''; 
+//*************************************************// 
+
+
+var RSL='4'; /* maximum recipients */ 
+var SEM= '0'; /* remove email message */ 
+var SES= '0'; /* remove email subject*/ 
+var SRS= '0'; /* remove reminders */ 
+var STB= '0'; /* remove tag button */ 
+var RROS= '1'; /* keep sequential signer order */ 
+var LA='1'; /* load from attachments */ 
+
+var OCO='Send'; /* Send or Tag */ 
+var SCS ='0'; /* to show or not show chatter information */ 
+//Custom Recipient List 
+var CRL='Email~{!JSENCODE(ConManContract.Docusign_Customer_Signer__r.Email)};FirstName~{!JSENCODE(ConManContract.Docusign_Customer_Signer__r.FirstName)};LastName~{!JSENCODE(ConManContract.Docusign_Customer_Signer__r.LastName)};Role~A;RoutingOrder~1,Email~eucontracts@pgi.com;FirstName~EU;LastName~Contracts;Role~B;RoutingOrder~2,Email~pgicontractsigners@pgi.com;FirstName~Internal;LastName~Signer;Role~C;RoutingOrder~3,Email~{!JSENCODE(Opportunity.Supervisors_Email__c)};FirstName~Rep;LastName~Manager;Role~D;RoutingOrder~4';
+
+//Custom Contact Role Map 
+var CCRM='A~Signer 1;B~Signer 2;C~Signer 3;D~Signer 4'; 
+
+//Custom Contact Map 
+var CCTM='A~Signer;B~Signer;C~Signer;D~Carbon Copy'; 
+
+var msg = 'Clicking the OK button will create a Docusign record based on the contract you attached.  The contract will be sent for eSignature to the below contact for signing.  Once they have signed the Contract it will be submitted for Contract team approval and then to be signed internally.\n\nNAME: {!ConManContract.Docusign_Customer_Signer__r.FirstName} {!ConManContract.Docusign_Customer_Signer__r.LastName}\nEMAIL: {!ConManContract.Docusign_Customer_Signer__r.Email}';
+{ 
+//********* Page Callout (Do not modify) *********//
+if(confirm(msg)){
+window.location.href ="/apex/dsfs__DocuSign_CreateEnvelope?DSEID=0&SourceID={!ConManContract.Id}&RC="+RC+"&RSL="+RSL+"&RSRO="+RSRO+"&RROS="+RROS+"&CCRM="+CCRM+"&CCTM="+CCTM+"&CRCL="+CRCL+"&CRL="+CRL+"&OCO="+OCO+"&DST="+DST+"&CCNM="+CCNM+"&LA="+LA+"&CEM="+CEM+"&CES="+CES+"&SRS="+SRS+"&STB="+STB+"&SSB="+SSB+"&SES="+SES+"&SEM="+SEM+"&SRS="+SRS+"&SCS="+SCS+"&RES="+RES;
+}
+//*******************************************// 
+}
+} 
+
+function sendWithDocusignShort(){
+
+//********* Option Declarations (Do not modify )*********// 
+var RC = '';var RSL='';var RSRO='';var RROS='';var CCRM='';var CCTM='';var CCNM='';var CRCL=''; var CRL='';var OCO='';var DST='';var LA='';var CEM='';var CES='';var STB='';var SSB='';var SES='';var SEM='';var SRS='';var SCS ='';var RES=''; 
+//*************************************************// 
+
+
+var RSL='4'; 
+var SEM= '0'; /* remove email message */ 
+var SES= '0'; /* remove email subject*/ 
+var SRS= '0'; /* remove reminders */ 
+var STB= '0'; /* remove tag button */ 
+var RROS= '1'; /* sequential signer order */ 
+var LA='1'; /* not load from attachments */ 
+
+var OCO='Send'; /* Send or Tag */ 
+var SCS ='0'; /* to show or not show chatter information */ 
+//Custom Recipient List 
+
+var CRL='Email~{!JSENCODE(ConManContract.Docusign_Customer_Signer__r.Email)};FirstName~{!JSENCODE(ConManContract.Docusign_Customer_Signer__r.FirstName)};LastName~{!JSENCODE(ConManContract.Docusign_Customer_Signer__r.LastName)};Role~A;RoutingOrder~1,Email~eucontracts@pgi.com;FirstName~EU;LastName~Contracts;Role~B;RoutingOrder~2,Email~{!JSENCODE(Opportunity.Supervisors_Email__c)};FirstName~Rep;LastName~Manager;Role~C;RoutingOrder~2'; 
+
+//Custom Contact Role Map 
+var CCRM='A~Signer 1;B~Signer 2;C~Signer 3'; 
+
+//Custom Contact Map 
+var CCTM='A~Signer;B~Carbon Copy;C~Carbon Copy';
+
+var msg = 'Clicking the OK button will create a Docusign record based on the contract you attached.  The contract will be sent for eSignature to the below contact for signing.  Once they have signed the Contract it will be considered complete.\n\nNAME: {!ConManContract.Docusign_Customer_Signer__r.FirstName} {!ConManContract.Docusign_Customer_Signer__r.LastName}\nEMAIL: {!ConManContract.Docusign_Customer_Signer__r.Email}';
+{ 
+//********* Page Callout (Do not modify) *********//
+if(confirm(msg)){
+window.location.href ="/apex/dsfs__DocuSign_CreateEnvelope?DSEID=0&SourceID={!ConManContract.Id}&RC="+RC+"&RSL="+RSL+"&RSRO="+RSRO+"&RROS="+RROS+"&CCRM="+CCRM+"&CCTM="+CCTM+"&CRCL="+CRCL+"&CRL="+CRL+"&OCO="+OCO+"&DST="+DST+"&CCNM="+CCNM+"&LA="+LA+"&CEM="+CEM+"&CES="+CES+"&SRS="+SRS+"&STB="+STB+"&SSB="+SSB+"&SES="+SES+"&SEM="+SEM+"&SRS="+SRS+"&SCS="+SCS+"&RES="+RES;
+}
+//*******************************************// 
+}
+}
+</script>
+<apex:form id="frm">
+<apex:inputHidden value="{!Opportunity.AccountId}"/>
+<apex:pageBlock rendered="{!page == 'IsContactInSFDC'}" title="eSignature" mode="detail">
+<apex:pageBlockSection columns="1">
+<apex:outputText value="Does the customer contact record that you want to sign your contract exist in SFDC?"/>
+</apex:pageBlockSection>
+<apex:pageBlockButtons location="bottom">
+<apex:commandButton action="{!yes}" id="btnYes" value="Yes"/>
+<apex:commandButton action="{!no}" id="btnNo" value="No"/>
+<apex:commandButton action="{!cancel}" id="btnCancel" value="Cancel"/>
+</apex:pageBlockButtons>
+</apex:pageBlock>
+
+<apex:pageBlock rendered="{!page == 'NewContact'}" title="eSignature" mode="edit">
+<apex:pageBlockSection id="contactFields" title="New Contact" columns="1">
+<apex:outputField id="accountName" value="{!ConManContract.Account_Name__r.Name}"/>
+<apex:inputField id="firstName" value="{!contact.FirstName}" required="true"/>
+<apex:inputField id="lastName" value="{!contact.LastName}"/>
+<apex:inputField id="email" value="{!contact.Email}" required="true"/>
+<apex:inputField id="title" value="{!contact.Title}" required="true"/>
+</apex:pageBlockSection>
+<apex:pageBlockButtons >
+<apex:commandButton id="btnSave" action="{!saveContact}" value="Save"/>
+<apex:commandButton id="btnCancel" action="{!back}" value="Cancel" immediate="true"/>
+</apex:pageBlockButtons>
+</apex:pageBlock>
+
+<apex:pageBlock rendered="{!page == 'UpdateContact'}" title="eSignature" mode="edit">
+<apex:pageBlockSection >
+<apex:outputText >Please edit or confirm contact details below:</apex:outputText><br/>
+</apex:pageBlockSection>
+<apex:pageBlockSection columns="1" title="Contact Details">
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="{!$ObjectType.CONMAN_Contract__c.fields.Docusign_Customer_Signer__c.label}"/>
+<apex:actionRegion >
+<apex:inputField id="docusignCustomerSigner" value="{!ConManContract.Docusign_Customer_Signer__c}" required="true">
+<apex:actionSupport event="onchange" action="{!PopulateContact}" rerender="contactFields"/>
+</apex:inputField>
+</apex:actionRegion>
+</apex:pageBlockSectionItem>
+</apex:pageBlockSection>
+<apex:pageBlockSection id="contactFields" columns="1">
+<apex:outputField id="dcsAccountName" value="{!ConManContract.Docusign_Customer_Signer__r.Account.Name}" />
+<apex:inputField id="dcsFirstName" value="{!ConManContract.Docusign_Customer_Signer__r.FirstName}" required="true"/>
+<apex:inputField id="dcsLastName" value="{!ConManContract.Docusign_Customer_Signer__r.LastName}"/>
+<apex:inputField id="dcsEmail" value="{!ConManContract.Docusign_Customer_Signer__r.Email}" required="true"/>
+<apex:inputField id="dcsTitle" value="{!ConManContract.Docusign_Customer_Signer__r.Title}" required="true"/>
+</apex:pageBlockSection>
+<apex:pageBlockButtons >
+<apex:commandButton id="btnSave" action="{!updateContact}" value="Save"/>
+<apex:commandButton id="btnCancel" action="{!back}" value="Cancel" immediate="true"/>
+</apex:pageBlockButtons>
+</apex:pageBlock>
+
+<apex:pageBlock rendered="{!page == 'AddAttachment'}" title="eSignature" mode="detail">
+<apex:pageBlockSection columns="1">
+<apex:outputText value="Please attach the contract you want to send for eSignature"/>
+<apex:pageBlockSectionItem />
+<apex:pageBlockSectionItem >        
+<apex:outputLabel value="File"/>         
+<apex:inputFile value="{!attachment.body}" filename="{!attachment.name}" id="file"/>      
+</apex:pageBlockSectionItem>    
+</apex:pageBlockSection>
+<apex:pageBlockButtons >
+<apex:commandButton id="btnAttach" action="{!upload}" value="Attach"/>
+<apex:commandButton id="btnCancel" action="{!back}" value="Cancel"/>
+</apex:pageBlockButtons>
+</apex:pageBlock>
+
+<apex:pageBlock rendered="{!page == 'SendWithDocusign'}" id="pbSendWithDocusign" title="eSignature" mode="edit">
+<apex:pageBlockSection columns="1" id="pbsSendWithDocusign">
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="{!$ObjectType.CONMAN_Contract__c.fields.Docusign_Contract_Type__c.label}"/>
+<apex:inputField id="contractType" value="{!ConManContract.Docusign_Contract_Type__c}" required="true">
+<apex:actionSupport event="onchange" rerender="pbSendWithDocusign" status="statusId"/>
+</apex:inputField>
+</apex:pageBlockSectionItem>
+</apex:pageBlockSection>
+<apex:pageBlockSection title="Attachments" columns="1">
+<apex:pageBlockTable value="{!attachments}" var="item">
+<apex:column headerValue="File Name">
+<apex:outputLink value="/{!item.Id}" target="_blank">{!item.Name}</apex:outputLink>
+</apex:column>
+<apex:column value="{!item.LastModifiedDate}"/>
+<apex:column headerValue="Created By">
+<apex:outputLink value="/{!item.Owner.Id}" target="_blank">{!item.Owner.Name}</apex:outputLink>
+</apex:column>
+</apex:pageBlockTable>
+</apex:pageBlockSection>
+<apex:pageBlockButtons id="pbButtons" >
+<apex:actionStatus id="statusId">
+<apex:facet name="start">
+<img src="/img/loading.gif" />
+</apex:facet>
+</apex:actionStatus>
+<apex:actionFunction name="updateConManContract" action="{!UpdateConManContract}" rerender="out"/>
+<apex:commandButton id="btnSendWithDocusignLong" onclick="updateConManContract();sendWithDocusignLong();return false;" value="Send with Docusign" rendered="{!ConManContract.Docusign_Contract_Type__c == 'Long'}"/>
+<apex:commandButton id="btnSendWithDocusignShort" onclick="updateConManContract();sendWithDocusignShort();return false;" value="Send with Docusign" rendered="{!ConManContract.Docusign_Contract_Type__c == 'Short'}"/>
+<apex:commandButton action="{!back}" value="Cancel" immediate="true"/>
+</apex:pageBlockButtons>
+</apex:pageBlock>
+
+</apex:form>
+</apex:page>

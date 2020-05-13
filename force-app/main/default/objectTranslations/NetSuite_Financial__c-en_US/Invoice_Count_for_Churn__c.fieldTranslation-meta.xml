@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Invoice Count for Churn --></label>
+    <name>Invoice_Count_for_Churn__c</name>
+</CustomFieldTranslation>

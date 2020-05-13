@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Collabosphere_Assignee__c</fullName>
+    <description>This is for service to assign a primary contact person to contact the account regarding Collabosphere</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Collabosphere service contact</inlineHelpText>
+    <label>Collabosphere Assignee</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Caitlin Giss</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Caitlin Giss</label>
+            </value>
+            <value>
+                <fullName>Chris Romero</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Chris Romero</label>
+            </value>
+            <value>
+                <fullName>Dana Fordham</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Dana Fordham</label>
+            </value>
+            <value>
+                <fullName>Daniel Borhanian</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Daniel Borhanian</label>
+            </value>
+            <value>
+                <fullName>Elizabeth Bruns</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Elizabeth Bruns</label>
+            </value>
+            <value>
+                <fullName>Habib Daof</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Habib Daof</label>
+            </value>
+            <value>
+                <fullName>James Pulliam</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>James Pulliam</label>
+            </value>
+            <value>
+                <fullName>Kate Thorne</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Kate Thorne</label>
+            </value>
+            <value>
+                <fullName>Katie Gaston</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>Katie Gaston</label>
+            </value>
+            <value>
+                <fullName>Kevin Lewis</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Kevin Lewis</label>
+            </value>
+            <value>
+                <fullName>Lauren Nunn</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>Lauren Nunn</label>
+            </value>
+            <value>
+                <fullName>Paul Zukauskas</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>Paul Zukauskas</label>
+            </value>
+            <value>
+                <fullName>Rula Marie</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>Rula Marie</label>
+            </value>
+            <value>
+                <fullName>Susan Burrows</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>Susan Burrows</label>
+            </value>
+            <value>
+                <fullName>Will Lentz</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>Will Lentz</label>
+            </value>
+            <value>
+                <fullName>Ashkan Naderi</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>Ashkan Naderi</label>
+            </value>
+            <value>
+                <fullName>Erin Brophy</fullName>
+                <color>#57F17C</color>
+                <default>false</default>
+                <label>Erin Brophy</label>
+            </value>
+            <value>
+                <fullName>Stephen Nunez</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Stephen Nunez</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

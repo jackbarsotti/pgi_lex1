@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>PGi Contract</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>PGi Contracts</value>
+    </caseValues>
+    <layouts>
+        <layout>APAC Legacy Sales Layout</layout>
+        <sections>
+            <label><!-- Additional Details --></label>
+            <section>Additional Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- License Fields --></label>
+            <section>License Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>EMEA Sales Layout</layout>
+        <sections>
+            <label><!-- Contract Preview --></label>
+            <section>Contract Preview</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Signature --></label>
+            <section>Signature</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Finance, Legal, &amp; Deal Desk Layout</layout>
+        <sections>
+            <label><!-- Contract Preview --></label>
+            <section>Contract Preview</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Deal Desk --></label>
+            <section>Deal Desk</section>
+        </sections>
+        <sections>
+            <label><!-- Legal Request Form --></label>
+            <section>Legal Request Form</section>
+        </sections>
+        <sections>
+            <label><!-- Legal Request Form: Special Provisions/Exhibits --></label>
+            <section>Legal Request Form: Special Provisions/Exhibits</section>
+        </sections>
+        <sections>
+            <label><!-- Signature --></label>
+            <section>Signature</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Sales Layout</layout>
+        <sections>
+            <label><!-- Contract Preview --></label>
+            <section>Contract Preview</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Signature --></label>
+            <section>Signature</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>System Admin Layout</layout>
+        <sections>
+            <label><!-- Admin updates only --></label>
+            <section>Admin updates only</section>
+        </sections>
+        <sections>
+            <label><!-- Contract Preview --></label>
+            <section>Contract Preview</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Deal Desk --></label>
+            <section>Deal Desk</section>
+        </sections>
+        <sections>
+            <label><!-- Legal Request Form --></label>
+            <section>Legal Request Form</section>
+        </sections>
+        <sections>
+            <label><!-- Legal Request Form: Special Provisions/Exhibits --></label>
+            <section>Legal Request Form: Special Provisions/Exhibits</section>
+        </sections>
+        <sections>
+            <label><!-- Signature --></label>
+            <section>Signature</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- EMEA Contract going through the iContract system --></description>
+        <label><!-- EMEA Contract --></label>
+        <name>EMEA_Contract</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- APAC Contract going through the iContract system --></description>
+        <label><!-- APAC Contract --></label>
+        <name>International_Contract</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- NA Contract going through the iContract system --></description>
+        <label><!-- NA Contract --></label>
+        <name>iContract</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Users in EMEA or APAC must use the International Contract record type. --></errorMessage>
+        <name>PGi_Contract_Limit_Intl_Users_to_Intl</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- BP_Rate_Export --></label>
+        <name>BP_Rate_Export</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Contract_Rate_Card_Report --></label>
+        <name>Contract_Rate_Card_Report</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Drag_Drop_Attachments --></label>
+        <name>Drag_Drop_Attachments</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_PGi_Contract --></label>
+        <name>New_PGi_Contract</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Return_to_Opp --></label>
+        <name>Return_to_Opp</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- iContract_Margin_Analysis_Export --></label>
+        <name>iContract_Margin_Analysis_Export</name>
+    </webLinks>
+</CustomObjectTranslation>

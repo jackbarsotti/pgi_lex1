@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Live_Q_A_Type__c</fullName>
+    <description>CAUTION - USED IN INTEGRATIONS</description>
+    <externalId>false</externalId>
+    <label>Live Q&amp;A Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Live_Q_A__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Chat only</fullName>
+                <default>false</default>
+                <label>Chat only</label>
+            </value>
+            <value>
+                <fullName>Audio only</fullName>
+                <default>false</default>
+                <label>Audio only</label>
+            </value>
+            <value>
+                <fullName>Chat &amp; Audio</fullName>
+                <default>false</default>
+                <label>Chat &amp; Audio</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Chat only</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Audio only</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Chat &amp; Audio</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

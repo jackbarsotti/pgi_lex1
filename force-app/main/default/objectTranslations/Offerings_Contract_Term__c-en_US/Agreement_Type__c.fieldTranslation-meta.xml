@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- These values are defined by iContract, and adding values here that iContract does not use on its own will have no effect! --></help>
+    <label><!-- Agreement Type --></label>
+    <name>Agreement_Type__c</name>
+    <picklistValues>
+        <masterLabel>Amendment</masterLabel>
+        <translation><!-- Amendment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rate Modification Amendments</masterLabel>
+        <translation><!-- Rate Modification Amendments --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service Agreement</masterLabel>
+        <translation><!-- Service Agreement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service Order</masterLabel>
+        <translation><!-- Service Order --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Subscription License Agreement</masterLabel>
+        <translation><!-- Subscription License Agreement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Subscription License Order</masterLabel>
+        <translation><!-- Subscription License Order --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TPx Service Agreement</masterLabel>
+        <translation><!-- TPx Service Agreement --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

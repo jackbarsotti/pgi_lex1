@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Original + Add-On (Co-terminus Contract) --></help>
+    <label><!-- Provisioned Licenses --></label>
+    <name>Provisioned_Licenses__c</name>
+</CustomFieldTranslation>

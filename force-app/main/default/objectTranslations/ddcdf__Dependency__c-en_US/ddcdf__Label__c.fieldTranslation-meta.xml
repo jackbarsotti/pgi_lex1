@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- A plain text version of the metadata component that was matched. --></help>
+    <label><!-- Label --></label>
+    <name>ddcdf__Label__c</name>
+</CustomFieldTranslation>

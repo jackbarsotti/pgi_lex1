@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sc1_3_admin</fullName>
+    <description>Any fields here will only show up if &quot;Use Bill-to as Admin&quot; is unchecked. 2-Columns.
+
+Note the following is in Apex Code:
+* The Admin First/Last Name, Phone, Email, Address 1, City, State, Postal Code, and Country fields are cleared if &quot;Use Bill-to as Admin&quot; is checked
+* The same information (except First/Last Name, Phone, and Email) is also used during a validation procedure</description>
+    <displayedFields>
+        <field>NCS_Admin_First_Name__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>true</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>Admin_is_Licensed_User__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>NCS_Admin_Last_Name__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>true</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>NCS_Admin_Phone__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>true</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>NCS_Admin_Email__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>true</isRequired>
+    </displayedFields>
+    <label>Section 1: Portal Admin/Cloud Control/Agenday Admin Client (admin)</label>
+</FieldSet>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ddcdf__Number__c</fullName>
+    <deprecated>false</deprecated>
+    <description>A simple counter as multiple scans may be run in an instance.</description>
+    <displayFormat>SCAN-{000}</displayFormat>
+    <externalId>true</externalId>
+    <inlineHelpText>A simple counter as multiple scans may be run in an instance.</inlineHelpText>
+    <label>Number</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>AutoNumber</type>
+</CustomField>

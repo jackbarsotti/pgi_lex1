@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Call Status --></label>
+    <name>Call_Status__c</name>
+    <picklistValues>
+        <masterLabel>Actionable (No further action required)</masterLabel>
+        <translation><!-- Actionable (No further action required) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Escalation Needed</masterLabel>
+        <translation><!-- Escalation Needed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Follow Up On Existing Case</masterLabel>
+        <translation><!-- Follow Up On Existing Case --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Follow Up On Existing FinReq</masterLabel>
+        <translation><!-- Follow Up On Existing FinReq --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other (Not actionable)</masterLabel>
+        <translation><!-- Other (Not actionable) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transferring Call</masterLabel>
+        <translation><!-- Transferring Call --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unsupported Product</masterLabel>
+        <translation><!-- Unsupported Product --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong Number</masterLabel>
+        <translation><!-- Wrong Number --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Limited_Web_Sub_Rate__c</fullName>
+    <defaultValue>49.0</defaultValue>
+    <description>Rate for a Web Meeting Subscription. In dollars per
+      billing period (ex. monthly, annual).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Flat rate for unlimited meetings (per access code) up to a specific number of web conference attendees.</inlineHelpText>
+    <label>Web Meeting Subscription Price</label>
+    <precision>12</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

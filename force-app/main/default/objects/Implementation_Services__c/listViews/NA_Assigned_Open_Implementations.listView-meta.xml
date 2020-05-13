@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NA_Assigned_Open_Implementations</fullName>
+    <booleanFilter>1 AND 2 AND 3</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Implementation_Owner__c</columns>
+    <columns>Related_Account__c</columns>
+    <columns>Related_Opportunity__c</columns>
+    <columns>IST_Status__c</columns>
+    <columns>Implementation_Stage__c</columns>
+    <columns>Technical_Specialist__c</columns>
+    <columns>Training_Specialist_Assigned__c</columns>
+    <columns>Implementation_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>IST_Completed_Status__c</field>
+        <operation>equals</operation>
+        <value>Open</value>
+    </filters>
+    <filters>
+        <field>Implementation_Owner__c</field>
+        <operation>notContain</operation>
+        <value>schade</value>
+    </filters>
+    <filters>
+        <field>Owner_Region__c</field>
+        <operation>equals</operation>
+        <value>NA</value>
+    </filters>
+    <label>NA Assigned Open Implementations</label>
+    <language>en_US</language>
+</ListView>

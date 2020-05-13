@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Historic_Message_Field__c</fullName>
+    <description>Display custom message when product line item is a legacy value.</description>
+    <externalId>false</externalId>
+    <formula>IF(Historic_Line_Item__c = TRUE, &#39;Please create new line items and delete this line item.&#39;, null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Historic Message Field</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

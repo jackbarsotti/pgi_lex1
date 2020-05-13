@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Return_to_Opp</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Return to Opp</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/{!CONMAN_Contract__c.OpportunityId__c}</url>
+</WebLink>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sc1_5</fullName>
+    <description>Fully configurable section. 2-Columns.</description>
+    <displayedFields>
+        <field>NCS_Requested_URL_IM__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>Section 1: iMeet</label>
+</FieldSet>

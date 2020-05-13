@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Logical_Access_Needs__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Check all required services</inlineHelpText>
+    <label>Logical Access Needs</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>ADP</fullName>
+                <default>false</default>
+                <label>ADP</label>
+            </value>
+            <value>
+                <fullName>Call Manager</fullName>
+                <default>false</default>
+                <label>Call Manager</label>
+            </value>
+            <value>
+                <fullName>CareToolbox</fullName>
+                <default>false</default>
+                <label>CareToolbox</label>
+            </value>
+            <value>
+                <fullName>CareToolbox access</fullName>
+                <default>false</default>
+                <label>CareToolbox access</label>
+            </value>
+            <value>
+                <fullName>Citrix</fullName>
+                <default>false</default>
+                <label>Citrix</label>
+            </value>
+            <value>
+                <fullName>Clarical TaskMgr</fullName>
+                <default>false</default>
+                <label>Clarical TaskMgr</label>
+            </value>
+            <value>
+                <fullName>DID</fullName>
+                <default>false</default>
+                <label>DID</label>
+            </value>
+            <value>
+                <fullName>ECRM</fullName>
+                <default>false</default>
+                <label>ECRM</label>
+            </value>
+            <value>
+                <fullName>Email Account</fullName>
+                <default>false</default>
+                <label>Email Account</label>
+            </value>
+            <value>
+                <fullName>Exchange Mailbox</fullName>
+                <default>false</default>
+                <label>Exchange Mailbox</label>
+            </value>
+            <value>
+                <fullName>Field Expert</fullName>
+                <default>false</default>
+                <label>Field Expert</label>
+            </value>
+            <value>
+                <fullName>Global Admin Login</fullName>
+                <default>false</default>
+                <label>Global Admin Login</label>
+            </value>
+            <value>
+                <fullName>GlobalMeet</fullName>
+                <default>false</default>
+                <label>GlobalMeet</label>
+            </value>
+            <value>
+                <fullName>GM Account</fullName>
+                <default>false</default>
+                <label>GM Account</label>
+            </value>
+            <value>
+                <fullName>GM Comments</fullName>
+                <default>false</default>
+                <label>GM Comments</label>
+            </value>
+            <value>
+                <fullName>Group Chat</fullName>
+                <default>false</default>
+                <label>Group Chat</label>
+            </value>
+            <value>
+                <fullName>Group Mailbox/DistroList</fullName>
+                <default>false</default>
+                <label>Group Mailbox/DistroList</label>
+            </value>
+            <value>
+                <fullName>Hub</fullName>
+                <default>false</default>
+                <label>Hub</label>
+            </value>
+            <value>
+                <fullName>IGLOO</fullName>
+                <default>false</default>
+                <label>IGLOO</label>
+            </value>
+            <value>
+                <fullName>iMeet</fullName>
+                <default>false</default>
+                <label>iMeet</label>
+            </value>
+            <value>
+                <fullName>iMeet Central</fullName>
+                <default>false</default>
+                <label>iMeet Central</label>
+            </value>
+            <value>
+                <fullName>MS Communicator</fullName>
+                <default>false</default>
+                <label>MS Communicator</label>
+            </value>
+            <value>
+                <fullName>MyInfo</fullName>
+                <default>false</default>
+                <label>MyInfo</label>
+            </value>
+            <value>
+                <fullName>Network/Windows Login</fullName>
+                <default>false</default>
+                <label>Network/Windows Login</label>
+            </value>
+            <value>
+                <fullName>Online Reporting Res-BI</fullName>
+                <default>false</default>
+                <label>Online Reporting Res-BI</label>
+            </value>
+            <value>
+                <fullName>Other Systems</fullName>
+                <default>false</default>
+                <label>Other Systems</label>
+            </value>
+            <value>
+                <fullName>PeopleSoft</fullName>
+                <default>false</default>
+                <label>PeopleSoft</label>
+            </value>
+            <value>
+                <fullName>PGiKNOW-All Access</fullName>
+                <default>false</default>
+                <label>PGiKNOW-All Access</label>
+            </value>
+            <value>
+                <fullName>PGiLife</fullName>
+                <default>false</default>
+                <label>PGiLife</label>
+            </value>
+            <value>
+                <fullName>PGiTime</fullName>
+                <default>false</default>
+                <label>PGiTime</label>
+            </value>
+            <value>
+                <fullName>PGiUniversity</fullName>
+                <default>false</default>
+                <label>PGiUniversity</label>
+            </value>
+            <value>
+                <fullName>Premiere Client ID_GM2 acct(notes)</fullName>
+                <default>false</default>
+                <label>Premiere ClientID_GM2 acct(notes)</label>
+            </value>
+            <value>
+                <fullName>Premiere Login</fullName>
+                <default>false</default>
+                <label>Premiere Login</label>
+            </value>
+            <value>
+                <fullName>Quality Review Site-Mgmt</fullName>
+                <default>false</default>
+                <label>Quality Review Site-Mgmt</label>
+            </value>
+            <value>
+                <fullName>RC2</fullName>
+                <default>false</default>
+                <label>RC2</label>
+            </value>
+            <value>
+                <fullName>ROC (Auditorium)</fullName>
+                <default>false</default>
+                <label>ROC (Auditorium)</label>
+            </value>
+            <value>
+                <fullName>Salesforce</fullName>
+                <default>false</default>
+                <label>Salesforce</label>
+            </value>
+            <value>
+                <fullName>SF Five9</fullName>
+                <default>false</default>
+                <label>SF Five9</label>
+            </value>
+            <value>
+                <fullName>SF Folders-Reports</fullName>
+                <default>false</default>
+                <label>SF Folders-Reports</label>
+            </value>
+            <value>
+                <fullName>Shared Drive/Folder(drivepath)</fullName>
+                <default>false</default>
+                <label>Shared Drive/Folder(drivepath)</label>
+            </value>
+            <value>
+                <fullName>Sharepoint</fullName>
+                <default>false</default>
+                <label>Sharepoint</label>
+            </value>
+            <value>
+                <fullName>Skype for Business (IM)</fullName>
+                <default>false</default>
+                <label>Skype for Business (IM)</label>
+            </value>
+            <value>
+                <fullName>Slack</fullName>
+                <default>false</default>
+                <label>Slack</label>
+            </value>
+            <value>
+                <fullName>SlideAssist</fullName>
+                <default>false</default>
+                <label>SlideAssist</label>
+            </value>
+            <value>
+                <fullName>SumoLogic</fullName>
+                <default>false</default>
+                <label>SumoLogic</label>
+            </value>
+            <value>
+                <fullName>Tesla</fullName>
+                <default>false</default>
+                <label>Tesla</label>
+            </value>
+            <value>
+                <fullName>Voipmonitor</fullName>
+                <default>false</default>
+                <label>Voipmonitor</label>
+            </value>
+            <value>
+                <fullName>VPN</fullName>
+                <default>false</default>
+                <label>VPN</label>
+            </value>
+            <value>
+                <fullName>VPN Software Install</fullName>
+                <default>false</default>
+                <label>VPN Software Install</label>
+            </value>
+            <value>
+                <fullName>VPN Software Installed (contractor/no PGi computer)</fullName>
+                <default>false</default>
+                <label>VPN Software Installed (contractor/no PGi computer)</label>
+            </value>
+            <value>
+                <fullName>WebHomer</fullName>
+                <default>false</default>
+                <label>WebHomer</label>
+            </value>
+            <value>
+                <fullName>Win$</fullName>
+                <default>false</default>
+                <label>Win$</label>
+            </value>
+            <value>
+                <fullName>WOC (Event)</fullName>
+                <default>false</default>
+                <label>WOC (Event)</label>
+            </value>
+            <value>
+                <fullName>WordPress Knowledge Site</fullName>
+                <default>false</default>
+                <label>WordPress Knowledge Site</label>
+            </value>
+            <value>
+                <fullName>Xlite</fullName>
+                <default>false</default>
+                <label>Xlite</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

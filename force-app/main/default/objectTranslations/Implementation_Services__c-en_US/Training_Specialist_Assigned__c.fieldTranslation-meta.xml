@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Lookup to the User object to select the Training Specialist --></help>
+    <label><!-- Training Specialist Assigned --></label>
+    <lookupFilter>
+        <errorMessage><!-- This user isnt part of the IST Team --></errorMessage>
+    </lookupFilter>
+    <name>Training_Specialist_Assigned__c</name>
+    <relationshipLabel><!-- Implementation Services (Training Specialist Assigned) --></relationshipLabel>
+</CustomFieldTranslation>

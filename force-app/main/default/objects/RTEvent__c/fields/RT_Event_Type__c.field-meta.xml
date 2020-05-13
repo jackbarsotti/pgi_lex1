@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RT_Event_Type__c</fullName>
+    <description>**CAUTION - USED IN INTEGRATIONS**
+Lists Op-Assist values to select for Audio Services levels for the event.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose the Audio Service Level for this Event.</inlineHelpText>
+    <label>RT Audio Service Level</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Auto</fullName>
+                <default>false</default>
+                <label>Auto</label>
+            </value>
+            <value>
+                <fullName>300 Port Call</fullName>
+                <default>false</default>
+                <label>300 Port Call</label>
+            </value>
+            <value>
+                <fullName>Operator Assisted Direct</fullName>
+                <default>false</default>
+                <label>Operator Assisted Direct</label>
+            </value>
+            <value>
+                <fullName>Operator Assisted Premium</fullName>
+                <default>false</default>
+                <label>Operator Assisted Premium</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

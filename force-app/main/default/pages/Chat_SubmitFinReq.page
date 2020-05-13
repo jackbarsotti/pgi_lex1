@@ -1,0 +1,359 @@
+<apex:page controller="SubmitFinReqController" standardStylesheets="false" showHeader="false">
+<style class="script-css">
+
+    body {
+        padding: 0px;
+        margin: 0px;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 13px;
+    }
+    
+    .chatHeader {
+        border-radius: 3px 3px 0px 0px;
+        display:inline-block;
+        background-color: #ff7110;
+        text-align: center;
+        height: 24px;
+        line-height: 24px;
+        font-weight: bold;
+        color: #ffeadb;
+        width: 100%;
+    }
+    
+     #chatSubHeader {
+        float: left;
+        margin: 8px;
+        padding-left: 4px;
+        padding-right: 4px;
+        font-weight: bold;
+        color: #666;
+    }
+    
+    .chatContainer {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-top: 4px;
+    }
+    
+     #webFields {
+        text-align: center;
+    }
+    
+    .formText {
+        text-align: left;
+        font-weight: bold;
+        color: #666;
+        width: 100%;
+    }
+    
+    input[type=text], input[type=email] {
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 13px;
+        width: 90%;
+        padding-left: 4px;
+        padding-right: 4px;
+        display: inline-block;
+        box-shadow: none;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        border: 1px solid;
+        border-radius: 4px;
+        border-color: #D3D3D3;
+        color: #4D4D4D;
+        height: 24px;
+    }
+    
+    input:hover, textarea:hover, input:focus, textarea:focus, select:hover, select:focus {
+        outline: none;
+        border-color: orange;
+    }
+    
+    textarea {
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 13px;
+        margin-right: 0px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        border: 1px solid;
+        border-radius: 4px;
+        border-color: #D3D3D3;
+        box-shadow: none;
+        text-indent: 0;
+        padding: 4px;
+        color: #4D4D4D;
+        resize: vertical;
+        overflow: auto;
+        width: 90%;
+        max-height: 140px;
+    }
+    
+    .submitBtn {
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        margin-top: 10px;
+        padding: 4px;
+        text-align: center;
+        border: 1px solid #ff8c00;
+        border-radius: 4px;
+        color: #ffffff;
+        background-color: #ff7110;
+        width: 70%;
+        height: 30px;
+        font-weight: bold;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 13px;
+        cursor: pointer;
+    }
+    
+    .submitBtn:hover {
+        cursor: pointer;
+    }
+    
+    input:-webkit-autofill, textarea:-webkit-autofill {
+        border-color: #D3D3D3;
+        -webkit-text-fill-color: #4D4D4D;
+        -webkit-box-shadow: 0 0 0px 1000px #FFF inset;
+        transition: background-color 5000s ease-in-out 0s;
+        font-family: Verdana, Geneva, sans-serif;
+    }
+    
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus {
+        border-color: orange;
+        -webkit-text-fill-color: #ff7110;
+        -webkit-box-shadow: 0 0 0px 1000px #FFF inset;
+        transition: background-color 5000s ease-in-out 0s;
+        font-family: Verdana, Geneva, sans-serif;
+    }
+    
+    select {
+        color: #4D4D4D;
+        width: 92.5%;
+        white-space: nowrap;
+        background: #fff;
+        border: 1px solid #D3D3D3;
+        border-radius: .25em;
+        box-sizing: border-box;
+        padding: .25em 0;
+        font-family: Verdana, Geneva, sans-serif;
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+    
+    select>option:hover {
+        background-color: orange;
+    }
+    
+    .input-error{
+        display: none;
+        color: red;
+    }
+
+</style>
+
+    <div class="chatHeader">
+        {!$Label.chat_Leave_a_Message}
+    </div>
+    
+    <div class="chatContainer">
+    
+    <p id="chatSubHeader"></p><br />
+    
+    <apex:form >
+    
+    <apex:actionFunction name="submitFinReq" action="{!submitFinReq}" />
+    
+        <div class="formText">
+                <div id="webFields">
+                <apex:inputHidden value="{!Name}" id="Name" /> 
+                <input type="text" id="fullName" placeholder="{!$Label.chat_Name} *" maxlength="80" onchange="document.getElementById('{!$Component.Name}').value = this.value;" onblur="checkName()" />
+                <div class="input-error"><a>{!$Label.chat_Please_provide_your_name}</a></div>      
+
+
+                <apex:inputHidden value="{!Email}" id="email" /> 
+                <input type="text" id="Email_address" placeholder="{!$Label.chat_Email} *" maxlength="80" onchange="document.getElementById('{!$Component.Email}').value = this.value;" onblur="checkEmail()" />
+                <div class="input-error"><a>{!$Label.chat_Please_provide_a_valid_email}</a></div>
+
+                      Region *
+                      <apex:inputHidden value="{!Region}" id="regionId"/> 
+                      <select id="region_select" name="region_select" onclick="disableDefault();" onchange="document.getElementById('{!$Component.regionId}').value = this.value;" onblur="checkRegion()"> 
+                              <option value="none">Select your location</option>
+                              <option value="NA">United States</option>
+                              <option value="NA">Canada</option>
+                              <option value="EMEA">Europe</option>
+                              <option value="APAC - North">Asia - North</option>
+                              <option value="APAC - South">Asia - South</option>
+                              <option value="India">India</option>
+                      </select>
+                      
+                      <div class="input-error"><a>{!$Label.chat_Complete_this_field}</a></div>
+
+                
+                    {!$Label.chat_Message} <br />
+                    <apex:inputHidden value="{!Query}" id="description" /> 
+                    <textarea name="Message" id="Message" rows="5" maxlength="254" onchange="document.getElementById('{!$Component.description}').value = this.value;" onblur="checkMessage()"></textarea><br />
+                    
+                    <div class="input-error"><a>{!$Label.chat_Complete_this_field}</a></div>
+                    
+                </div>
+                    
+                    <apex:pageMessages />
+                
+                <button class="submitBtn" id="submitBtn" onclick="submitForm(); return false;">{!$Label.chat_Submit}</button>
+
+        </div>
+    </apex:form>
+    </div>
+    
+    <script type="text/javascript">
+    
+        //mode can be unavailable or canceled
+        var mode= '{!$CurrentPage.parameters.endmode}';
+    
+        if (mode == 'canceled'){
+             document.querySelector("#chatSubHeader").innerText = "{!$Label.chat_Leave_a_message_and_we_will_get_back_to_you}";
+        }
+    
+        else {
+            document.querySelector("#chatSubHeader").innerText = "{!$Label.chat_Sorry_we_are_not_online_Leave_a_message}";
+        }
+    
+        var region = document.getElementById("region_select");
+        
+        //disable the "select your location" option
+        function disableDefault() {
+            region.options[0].disabled = true;
+        }
+        
+    //Get values from session storage from prechat
+    var fullName = sessionStorage.getItem("fullName");
+    var Email = sessionStorage.getItem("Email");
+    var RegionIndex = sessionStorage.getItem("region.selectedIndex");
+    var Description = sessionStorage.getItem("Description");
+    
+ 
+    var Name = document.getElementById("fullName");
+    var EmailAddress = document.getElementById("Email_address");
+    var Message = document.getElementById("Message");
+    
+    function setDescription (){
+       Name.value= fullName;
+       EmailAddress.value= Email;
+       region.selectedIndex= RegionIndex;
+       Message.value= Description;
+    }
+
+    setDescription();
+    
+    var inputErrors = document.getElementsByClassName("input-error");
+
+    var nameValid = false;
+    var emailValid = false;
+    var messageValid = false;
+    var inputValid = false;
+
+var submitButton = document.getElementById("{!$Component.submitBtn}");
+
+function checkValidInput() {
+    checkName();
+    checkEmail();
+    checkRegion(); //new
+    checkMessage();
+
+    if (nameValid && emailValid && regionValid && messageValid){
+        inputValid = true;
+    }
+    
+    else {
+        inputValid = false;
+    }
+}
+
+//Full Name check
+function checkName() {
+    if  (Name.value.length > 0) {
+        inputErrors[0].style.display = 'none';
+        nameValid = true;
+    }
+    
+    else {
+        inputErrors[0].style.display = 'block';
+        nameValid = false;
+    }
+}
+
+ //   if (Name){
+ //       Name.addEventListener("blur",checkName);
+ //   }
+
+ 
+
+//Email check
+function emailCheck(email) { 
+    return /^.+@.+\..+$/.test(email);
+}
+
+function checkEmail() {
+    emailValid = emailCheck(EmailAddress.value);
+        if (emailValid){
+            inputErrors[1].style.display = 'none';
+        }
+        else {
+            inputErrors[1].style.display = 'block';
+        }
+}
+if (EmailAddress){
+EmailAddress.addEventListener("blur",checkEmail);
+}
+
+//Region check
+    function checkRegion(){
+        console.log("region.selectedIndex = " + region.selectedIndex);
+        if (region.selectedIndex != 0) {
+            inputErrors[2].style.display = 'none';
+            regionValid = true;
+            
+            
+        }
+        else {
+            inputErrors[2].style.display = 'block';
+            regionValid = false;
+        }
+    }
+
+//Message check
+function checkMessage(){
+    if  (Message.value.length > 0) {
+        inputErrors[3].style.display = 'none';
+        messageValid = true;
+    }
+    
+    else {
+        inputErrors[3].style.display = 'block';
+        messageValid = false;
+    }
+};
+
+  //  if (Message){
+  //      Message.addEventListener("blur",checkMessage);
+  //  }
+ 
+    function submitForm() {
+       checkValidInput();
+       
+       if (inputValid) {
+           submitFinReq();
+       }
+    }
+
+         
+    </script>
+
+</apex:page>

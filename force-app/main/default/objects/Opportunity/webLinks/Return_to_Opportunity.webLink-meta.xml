@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Return_to_Opportunity</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Return to Opportunity</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/32.0/connection.js&quot;)} 
+var newRecords = []; 
+var o = new sforce.SObject(&quot;Opportunity&quot;); 
+o.id =&quot;{!Opportunity.Id}&quot;; 
+o.RecordTypeId = &quot;{!Opportunity.Previous_Record_Type__c}&quot;;
+newRecords.push(o); 
+result = sforce.connection.update(newRecords); 
+window.location.reload();</url>
+</WebLink>

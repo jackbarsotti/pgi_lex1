@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This setting applies only for pushed agreements sent outside of Salesforce.  Enable this setting to add a link for signed PDF to the Agreement record. --></help>
+    <label><!-- Add Signed PDF Link for Pushed Agreement --></label>
+    <name>echosign_dev1__Add_Signed_PDF_Link_to_Agreement__c</name>
+</CustomFieldTranslation>

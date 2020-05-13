@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Audio_Licenses__c</fullName>
+    <externalId>false</externalId>
+    <label>Total # Audio Licenses</label>
+    <summarizedField>OpportunityLineItem.New_Quantity__c</summarizedField>
+    <summaryFilterItems>
+        <field>OpportunityLineItem.Product_Name1__c</field>
+        <operation>contains</operation>
+        <value>RC International: Global Meet Audio (License/Packages),Audio: GlobalMeet, Audio:, American: Audio: Automated,RC Domestic: Subscription Pricing,American: Audio: GlobalMeet Audio for Lync,RC Domestic: Audio General,RC Domestic: ReadyConference Plus Audio</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>OpportunityLineItem.Unit_Type__c</field>
+        <operation>equals</operation>
+        <value>Licenses</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>OpportunityLineItem.isReportable_Text__c</field>
+        <operation>equals</operation>
+        <value>Valid</value>
+    </summaryFilterItems>
+    <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

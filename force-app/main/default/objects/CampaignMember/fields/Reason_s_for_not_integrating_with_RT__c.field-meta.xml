@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_s_for_not_integrating_with_RT__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason(s) for not integrating with RT</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not enough resources</fullName>
+                <default>false</default>
+                <label>Not enough resources</label>
+            </value>
+            <value>
+                <fullName>Connectors are not available with my sub</fullName>
+                <default>false</default>
+                <label>Connectors are not available with my sub</label>
+            </value>
+            <value>
+                <fullName>Lack of Features</fullName>
+                <default>false</default>
+                <label>Lack of Features</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

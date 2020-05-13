@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- User Notification --></label>
+    <name>User_Notification__c</name>
+    <picklistValues>
+        <masterLabel>General Maintenance Advisory</masterLabel>
+        <translation><!-- General Maintenance Advisory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ITSM Bulletin</masterLabel>
+        <translation><!-- ITSM Bulletin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>None Needed</masterLabel>
+        <translation><!-- None Needed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SFDC Bulletin</masterLabel>
+        <translation><!-- SFDC Bulletin --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

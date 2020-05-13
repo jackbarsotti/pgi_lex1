@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Web Type --></label>
+    <name>Web_Type__c</name>
+    <picklistValues>
+        <masterLabel>Web Meeting</masterLabel>
+        <translation><!-- Web Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebEx</masterLabel>
+        <translation><!-- WebEx --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

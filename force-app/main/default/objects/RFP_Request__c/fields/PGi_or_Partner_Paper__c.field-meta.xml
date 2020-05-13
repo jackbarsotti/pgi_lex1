@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_or_Partner_Paper__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>PGi paper means PGi is preparing responses/proposal on our paper and submitting the bid. Partner paper means partner is preparing responses/proposal on their paper and submitting bid.</inlineHelpText>
+    <label>PGi or Partner Paper?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PGi Paper</fullName>
+                <default>false</default>
+                <label>PGi Paper</label>
+            </value>
+            <value>
+                <fullName>Partner Paper</fullName>
+                <default>false</default>
+                <label>Partner Paper</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>One_Time_Event__c</fullName>
+    <externalId>false</externalId>
+    <label>One-Time Event</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>One-Time Broadcast Audio webinar. Unlimited reservationless VoIP, US/CAN Toll and US/CAN Dial-Out audio conferencing, subject to an audio port capacity of 150</fullName>
+                <default>false</default>
+                <label>One-Time Broadcast Audio webinar. Unlimited reservationless VoIP, US/CAN Toll and US/CAN Dial-Out audio conferencing, subject to an audio port capacity of 150</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

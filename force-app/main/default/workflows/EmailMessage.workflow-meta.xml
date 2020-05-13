@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>ALL_Case_Status_Update</fullName>
+        <description>If Case Status is not &quot;Closed&quot; or &quot;Closed-Not Needed&quot; and an email reply is received, the Case Status is automatically changed to &quot;Customer Replied&quot;.</description>
+        <field>Status</field>
+        <literalValue>Customer Replied</literalValue>
+        <name>ALL-Case Status Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <rules>
+        <fullName>ALL-Case Email Received</fullName>
+        <actions>
+            <name>ALL_Case_Status_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>EmailMessage.Incoming</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>notEqual</operation>
+            <value>New</value>
+        </criteriaItems>
+        <description>If an email reply is received to the Case record, the Case Status is automatically changed to &quot;Customer Replied&quot;.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

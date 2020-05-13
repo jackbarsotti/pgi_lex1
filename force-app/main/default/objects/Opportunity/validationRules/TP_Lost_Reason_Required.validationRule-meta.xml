@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TP_Lost_Reason_Required</fullName>
+    <active>true</active>
+    <description>If Stage is set to Closed Lost then Lost reason is required</description>
+    <errorConditionFormula>AND(
+CONTAINS(RecordType.Name, &quot;TalkPoint&quot;),
+ISPICKVAL(Opportunity_Deal_Type__c, &quot;New Customer&quot;),
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;,
+CONTAINS(TEXT(StageName), &quot;Closed Lost&quot;),
+ISPICKVAL(Lost_Reason__c ,&quot;&quot;),
+$User.Override_Validation_Rules__c = False,
+$User.ProfileId &lt;&gt; &quot;00ea0000001sYR8&quot;,
+$User.ProfileId &lt;&gt; &quot;00ea0000001sdEo&quot;,
+NOT($Setup.BypassRules__c.Disable_Validation_Rules__c)
+)</errorConditionFormula>
+    <errorDisplayField>Lost_Reason__c</errorDisplayField>
+    <errorMessage>Please select reason when setting the stage to Closed Lost.</errorMessage>
+</ValidationRule>

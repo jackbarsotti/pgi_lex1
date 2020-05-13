@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OT_Member__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Opportunity Team Member</label>
+    <referenceTo>OT_Member__c</referenceTo>
+    <relationshipLabel>Opportunity Team Rules</relationshipLabel>
+    <relationshipName>Opportunity_Team_Rules</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

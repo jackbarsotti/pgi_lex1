@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ddcdf__Parent_Dependency__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>Supports recursive matches of chained dependencies</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Supports recursive matches of chained dependencies</inlineHelpText>
+    <label>Parent Dependency</label>
+    <referenceTo>ddcdf__Dependency__c</referenceTo>
+    <relationshipLabel>Recursive Dependencies</relationshipLabel>
+    <relationshipName>Recursive_Dependencies</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

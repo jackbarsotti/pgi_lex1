@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Termination Status Reason --></label>
+    <name>Termination_Status_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Adobe-letter/email received from customer to Terminate Services</masterLabel>
+        <translation><!-- Adobe-letter/email received from customer to Terminate Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Globalmeet-letter/email received from customer to Terminate Services</masterLabel>
+        <translation><!-- Globalmeet-letter/email received from customer to Terminate Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Live Meeting-letter/email received from customer to Terminate Services</masterLabel>
+        <translation><!-- Live Meeting-letter/email received from customer to Terminate Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lync-letter/email received from customer to Terminate Services</masterLabel>
+        <translation><!-- Lync-letter/email received from customer to Terminate Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webex-letter/email received from customer to Terminate Services</masterLabel>
+        <translation><!-- Webex-letter/email received from customer to Terminate Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iMeet-letter/email received from customer to Terminate Services</masterLabel>
+        <translation><!-- iMeet-letter/email received from customer to Terminate Services --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

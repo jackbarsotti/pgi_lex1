@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Estimated rate that the customer will pay for this Audio Product&apos;s Minutes. --></help>
+    <label><!-- Estimated Rate --></label>
+    <name>Estimated_Rate__c</name>
+</CustomFieldTranslation>

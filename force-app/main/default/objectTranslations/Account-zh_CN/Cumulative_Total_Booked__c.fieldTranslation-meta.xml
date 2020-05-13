@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Cumulative amount booked by this account client --></help>
+    <label><!-- Cumulative Total Booked --></label>
+    <name>Cumulative_Total_Booked__c</name>
+</CustomFieldTranslation>

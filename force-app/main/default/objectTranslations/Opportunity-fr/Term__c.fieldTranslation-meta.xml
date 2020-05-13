@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Term --></label>
+    <name>Term__c</name>
+    <picklistValues>
+        <masterLabel>1 - Time Event</masterLabel>
+        <translation><!-- 1 - Time Event --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>12 months</masterLabel>
+        <translation><!-- 12 months --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3 months</masterLabel>
+        <translation><!-- 3 months --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>6 months</masterLabel>
+        <translation><!-- 6 months --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Annual Pre-Pay</masterLabel>
+        <translation><!-- Annual Pre-Pay --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

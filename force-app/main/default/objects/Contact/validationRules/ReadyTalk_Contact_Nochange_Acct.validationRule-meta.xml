@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReadyTalk_Contact_Nochange_Acct</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = &quot;ReadyTalk Contact&quot;,
+       ISCHANGED(AccountId),  
+        NOT(ISPICKVAL( Status__c, &quot;Not Provisioned&quot;))
+)</errorConditionFormula>
+    <errorMessage>You may not change the account that this contact is associated with.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Contract_Team_Created_iContract_Email_Alert_to_Opportunity_Owner</fullName>
+        <description>Contract Team Created iContract - Email Alert to Opportunity Owner</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Agreement_Sales_Rep__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>All/Contract_Team_Created_iContract</template>
+    </alerts>
+    <alerts>
+        <fullName>Legal_Team_Contract_Approval_Request</fullName>
+        <description>Legal Team Contract Approval Request</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>PGi_Legal_Team</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Contract_Management/Legal_Team_Contract_Submitted_for_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Legal_Team_has_completed_Approval_Process</fullName>
+        <description>Legal Team has completed Approval Process</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Contract_Management/Legal_Team_Contract_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Sales_Rep</fullName>
+        <description>Notify Sales Rep</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>All/Pricing_Approval_Email_Template_Sales_Rep</template>
+    </alerts>
+    <alerts>
+        <fullName>PGi_Contract_Renewal_60_day_notification</fullName>
+        <description>PGi Contract Renewal 60 day notification</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Agreement_Sales_Rep__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Emails/PGi_Contract_Renewal_60_days</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Accept_Email_to_Rep</fullName>
+        <description>Send Accept Email to Rep</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>All/Pricing_Approval_Email_Template_Accept_Reject</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Reject_Email_to_Rep_2</fullName>
+        <description>Send Reject Email to Rep</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>All/Pricing_Approval_Email_Template_Accept_Reject</template>
+    </alerts>
+    <alerts>
+        <fullName>iContract_Approval_Completed</fullName>
+        <description>iContract Approval Completed</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Contract_Management/iContract_Approval_Completed</template>
+    </alerts>
+    <alerts>
+        <fullName>iContract_Step_Completed</fullName>
+        <description>iContract Step Completed</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Contract_Management/iContract_Step_Completed</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Contract_Status_Approved_By_Legal</fullName>
+        <description>Contract Status field updates to Approved By Legal upon approval</description>
+        <field>Contract_Status__c</field>
+        <literalValue>Legal Approved</literalValue>
+        <name>Contract Status Approved By Legal</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Contract_Status_Rejected_By_Legal</fullName>
+        <description>Contract Status field updates to Denied by Legal upon denial</description>
+        <field>Contract_Status__c</field>
+        <literalValue>Legal Rejected</literalValue>
+        <name>Contract Status Rejected By Legal</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Deal_Desk_Approved</fullName>
+        <description>Triggers the Deal Desk Approved checkbox to update the limits.</description>
+        <field>Deal_Desk_Approved__c</field>
+        <literalValue>1</literalValue>
+        <name>Deal Desk Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_Contract_Approved_Date_Today</fullName>
+        <field>Approved_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>PGi Contract: Approved Date (Today)</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_Contract_Approved_Date_clear</fullName>
+        <field>Approved_Date__c</field>
+        <name>PGi Contract: Approved Date (clear)</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_Contract_CEA_Date_Prior_to_Renewal</fullName>
+        <description>If Auto Renewal is checked, auto pop the CEA Date Prior to Renewal with the Expiration Date (X-Copy Expiration Date Field from Quote Line Item Field update)</description>
+        <field>CEA_Date_Prior_to_Renewal__c</field>
+        <formula>Expiration_Date__c</formula>
+        <name>PGi Contract: CEA Date Prior to Renewal</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_Contract_Set_Dates_Contract_Start</fullName>
+        <field>Contract_Start_Date__c</field>
+        <formula>Service_Commencement_Date__c</formula>
+        <name>PGi Contract Set Dates - Contract Start</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PGi_Contract_Set_Dates_Renewal_Date</fullName>
+        <field>Contract_Renewal_Date__c</field>
+        <formula>ADDMONTHS(Contract_Start_Date__c, Contracted_Term__c)</formula>
+        <name>PGi Contract Set Dates - Renewal Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_CEA_Date_Active_when_no_value</fullName>
+        <description>sets this once the CEA Date Original field has a value on Active Contracts</description>
+        <field>CEA_Date_Active__c</field>
+        <formula>CEA_Date_Original__c</formula>
+        <name>Set CEA Date Active when no value</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_status_for_Contract_Mngt</fullName>
+        <field>Contract_Status__c</field>
+        <literalValue>Customer Accepted</literalValue>
+        <name>Set status for Contract Mngt</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Unrequire_ARG_Approval</fullName>
+        <field>Required_Approval_ARG__c</field>
+        <literalValue>0</literalValue>
+        <name>Unrequire ARG Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Unrequire_Billing_Approval</fullName>
+        <field>Required_Approval_Billing__c</field>
+        <literalValue>0</literalValue>
+        <name>Unrequire Billing Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Unrequire_Legal_Approval</fullName>
+        <field>Required_Approval_Legal__c</field>
+        <literalValue>0</literalValue>
+        <name>Unrequire Legal Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Unrequire_Pricing_Approval_Manager</fullName>
+        <field>Required_Approval_Pricing_Manager__c</field>
+        <literalValue>0</literalValue>
+        <name>Unrequire Pricing Approval - Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Unrequire_Pricing_Deal_Desk</fullName>
+        <field>Required_Approval_Deal_Desk__c</field>
+        <literalValue>0</literalValue>
+        <name>Unrequire Pricing - Deal Desk</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Unrequire_Pricing_RVP</fullName>
+        <field>Required_Approval_Pricing_RVP__c</field>
+        <literalValue>0</literalValue>
+        <name>Unrequire Pricing RVP</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Unrequire_Pricing_SVP</fullName>
+        <field>Required_Approval_Pricing_SVP__c</field>
+        <literalValue>0</literalValue>
+        <name>Unrequire Pricing SVP</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Contract_Status</fullName>
+        <field>Contract_Status__c</field>
+        <literalValue>Contract Pricing Approved</literalValue>
+        <name>Update Contract Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Contract_Status2</fullName>
+        <field>Contract_Status__c</field>
+        <literalValue>Contract Pricing Rejected</literalValue>
+        <name>Update Contract Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Contract_Status_to_Expired</fullName>
+        <field>Contract_Status__c</field>
+        <literalValue>Expired</literalValue>
+        <name>Update Contract Status to Expired</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Title</fullName>
+        <description>Updates the Contract title to Subscription License Agreement (SLA)</description>
+        <field>Title__c</field>
+        <formula>IF( ISPICKVAL( Contract_Type__c, &quot;Amendment&quot; ),&quot;Amendment #X&quot;, &quot;PGi Subscription License Agreement&quot;)</formula>
+        <name>Update Title</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_from_Signed_to_Customer_Accepted</fullName>
+        <field>Contract_Status__c</field>
+        <literalValue>Customer Accepted</literalValue>
+        <name>Update from Signed to Customer Accepted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iContract_Approved</fullName>
+        <field>Contract_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>iContract Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iContract_Pending_Approval</fullName>
+        <field>Contract_Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>iContract Pending Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iContract_Rejected</fullName>
+        <field>Contract_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>iContract Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Notify Contract End Date</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>CONMAN_Contract__c.Agreement_Sales_Rep__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>CONMAN_Contract__c.Expiration_Date__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>CONMAN_Contract__c.Contract_Source__c</field>
+            <operation>notEqual</operation>
+            <value>iContract</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>CONMAN_Contract__c.Contract_Document_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Cancelled,Deactivated Company/No Termination Notice,Expired,Inactive,Terminated</value>
+        </criteriaItems>
+        <description>Notify Agreement Sales Rep when Contract End Date is 60 days before its due date</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>PGi_Contract_Renewal_60_day_notification</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>CONMAN_Contract__c.Expiration_Date__c</offsetFromField>
+            <timeLength>-60</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>PGi Contract Set Dates</fullName>
+        <actions>
+            <name>PGi_Contract_Set_Dates_Contract_Start</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>PGi_Contract_Set_Dates_Renewal_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>CONMAN_Contract__c.RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>International Contract</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>CONMAN_Contract__c.Service_Commencement_Date__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>CONMAN_Contract__c.Contracted_Term__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>If the iContract creates the PGi Contract then carry over the Contract Start Date and Contract Renewal Date</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi Contract%3A Auto renewal checked</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>CONMAN_Contract__c.Auto_Renewal__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>If auto renewal is checked - auto op the CEA Date Prior to Renewal with Expiration Date</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>PGi_Contract_CEA_Date_Prior_to_Renewal</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>CONMAN_Contract__c.Expiration_Date__c</offsetFromField>
+            <timeLength>-1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>PGi Contract%3A Notification for Manual iContract Ready for Close%2FWon</fullName>
+        <actions>
+            <name>Contract_Team_Created_iContract_Email_Alert_to_Opportunity_Owner</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Triggers an email alert to the Opportunity Owner notifying them that a manual iContract record has been created by Contract Team and is ready for Closed/Won</description>
+        <formula>AND(ISPICKVAL(Contract_Status__c, &quot;Ready for Closed Won&quot;), CreatedBy.Profile.Name = &quot;PGi Contract Manager&quot; )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi Contract%3A Set CEA Active when original set</fullName>
+        <actions>
+            <name>Set_CEA_Date_Active_when_no_value</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>CONMAN_Contract__c.Contract_Document_Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>CONMAN_Contract__c.CEA_Date_Original__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>CONMAN_Contract__c.CEA_Date_Active__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <description>This WF rule is meant to set theauto renewal contract end date based on the value in the Date CEA Date to become on Auto-Renew</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Contract Status to Expired</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>CONMAN_Contract__c.Contract_Renewal_Date__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>CONMAN_Contract__c.Contract_Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </criteriaItems>
+        <description>Sets Contract Status to Expired if the Contract Status is Active and the Contract Renewal Date is in the past</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Update_Contract_Status_to_Expired</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>CONMAN_Contract__c.Contract_Renewal_Date__c</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Set status for Contract Mngt</fullName>
+        <actions>
+            <name>Set_status_for_Contract_Mngt</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>User.Profile_Name_Text__c</field>
+            <operation>contains</operation>
+            <value>Contract Manager</value>
+        </criteriaItems>
+        <description>If created by Contract Mngt, set the Contract Status field to Customer Accepted.  This is because Contract Mngt only creates contracts if they are already signed.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update from Signed to Customer Accepted</fullName>
+        <actions>
+            <name>Update_from_Signed_to_Customer_Accepted</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>CONMAN_Contract__c.Contract_Status__c</field>
+            <operation>contains</operation>
+            <value>Signed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

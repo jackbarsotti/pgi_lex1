@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- System Access Separation Urgency --></label>
+    <name>System_Access_Separation_Urgency__c</name>
+    <picklistValues>
+        <masterLabel>1-High (30 minutes)</masterLabel>
+        <translation><!-- 1-High (30 minutes) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2-Medium (End of day today)</masterLabel>
+        <translation><!-- 2-Medium (End of day today) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3-Low (Date in the future)</masterLabel>
+        <translation><!-- 3-Low (Date in the future) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

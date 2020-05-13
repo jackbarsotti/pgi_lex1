@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ddcdf__Recursive_Limit__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Formula field scanner sets this to true when more than 200 formula fields dependencies are found. All dependencies are created, but only 200 will be used on the second scan.</description>
+    <externalId>false</externalId>
+    <label>Recursive Limit</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

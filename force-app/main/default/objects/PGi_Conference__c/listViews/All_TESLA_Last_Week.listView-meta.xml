@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_TESLA_Last_Week</fullName>
+    <columns>NAME</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>Bridge_Name__c</columns>
+    <columns>Conference_Date__c</columns>
+    <columns>ConferenceTitle__c</columns>
+    <columns>ConferenceType__c</columns>
+    <columns>Moderator_Name__c</columns>
+    <columns>Client_ID__c</columns>
+    <columns>PGi_Client__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>PGi_Conference__c.TESLA_Conference</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>LAST_WEEK</value>
+    </filters>
+    <label>All TESLA Last Week</label>
+    <language>en_US</language>
+</ListView>

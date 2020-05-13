@@ -1,0 +1,47 @@
+<apex:page standardController="Contact"  extensions="ContactChangeBillingDepartmentController" showHeader="true">
+  <apex:stylesheet value="{!URLFOR($Resource.RTResources, 'css/jquery-ui.min.css')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery-ui.min.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/messaging.js')}"/>
+
+  <script>
+    var $ = jQuery.noConflict();
+    $(document).ready(function(){
+      $.createConfirmBox("Pick/Change Billing Department for {!contact.Name}", "dialog-modal", "OK", function(){
+        $(".departmentInput").each(function(index, e){
+          if(e.checked){
+            save(e.value);
+          }
+        });  
+      });
+    
+      $(".departmentInput").each(function(index, e){
+        if("{!contact.SF_Department_ID__c}"!='' && e.value.indexOf("{!contact.SF_Department_ID__c}")!=-1)
+          e.checked='true';
+        else if("{!contact.SF_Department_ID__c}"=='' && e.value=='')
+          e.checked='true';
+      });
+    });              
+  </script>
+      
+  <apex:pageMessages />
+  <apex:detail relatedListHover="true" showChatter="false"/>            
+
+  <apex:form styleClass="dialog-modal">
+    <apex:actionFunction name="save" action="{!save}" immediate="true" rerender="hiddenBlock">
+      <apex:param name="departmentId" assignTo="{!departmentId}" value=""/>
+    </apex:actionFunction>              
+      
+    <apex:pageBlock >      
+        <apex:pageBlockTable value="{!departments}" var="d" id="table">
+          <apex:column >
+            <apex:facet name="header">
+              <span>Department Name</span>
+            </apex:facet>
+            <span class="department"><input class="departmentInput" name="departmentId" value="{!d.Id}" type="radio">{!d.Name}</input></span>
+          </apex:column>          
+        </apex:pageBlockTable>      
+    </apex:pageBlock>      
+    <apex:pageBlock id="hiddenBlock" rendered="false"></apex:pageBlock>    
+  </apex:form>            
+</apex:page>

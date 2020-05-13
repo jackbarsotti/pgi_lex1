@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- A behind-the-scenes field that controls the addition/removal of the TaskRay Forms Public Site Guest User to the Project Team. --></help>
+    <label><!-- Add Forms Guest User to Project Team --></label>
+    <name>TASKRAY__trAddFormsGuestUserToProjectTeam__c</name>
+</CustomFieldTranslation>

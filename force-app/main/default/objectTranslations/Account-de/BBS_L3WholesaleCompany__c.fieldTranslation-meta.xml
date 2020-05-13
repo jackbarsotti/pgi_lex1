@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This will be the old orgId for migrated data, or the accountId on new accounts. --></help>
+    <label><!-- L3 Wholesale Company --></label>
+    <name>BBS_L3WholesaleCompany__c</name>
+</CustomFieldTranslation>

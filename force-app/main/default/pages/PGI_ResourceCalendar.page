@@ -1,0 +1,324 @@
+<apex:page StandardController="ServiceResource" Extensions="PGI_ResourceCalendar_Controller">
+    <link href="{!$Resource.ResourceCalendar_fullCalendarCSS}" rel="stylesheet" />
+    <link href="{!$Resource.ResourceCalendar_fullCalendarPrintCSS}" rel="stylesheet" media="print" />
+     
+    <script src="{!$Resource.ResourceCalendar_jqueryMin}"></script>
+    <script src="{!$Resource.ResourceCalendar_jqueryUI}"></script>
+    <script src="{!$Resource.ResourceCalendar_momentLocales}"></script>
+    <script src="{!$Resource.ResourceCalendar_fullCalendarJS}"></script>
+
+    <apex:form >
+        <apex:actionFunction reRender="lblEvents" name="refreshEvents"/>
+        
+      
+    </apex:form>
+     
+    <script>
+
+        //We need to wrap everything in a doc.ready function so that the code fires after the DOM is loaded
+        $(document).ready(function() {
+
+            var calendarOptions = {
+                slotDuration: '00:'+{!slotDuration}+':00',
+                customButtons: {
+                    refreshButton: {
+                        text: 'Refresh',
+                        click: refresh
+                    },
+                    timeSheetButton: {
+                        text: 'TimeSheet',
+                        click: timeSheet
+                    }
+                    // zoomInButton: {
+                    //     text: 'Zoom In',
+                    //     click: zoomIn
+                    // },
+                    // zoomOutButton: {
+                    //     text: 'Zoom Out',
+                    //     click: zoomOut
+                    // }
+                },
+                buttonText: {
+                    today:    'Today',
+                    month:    'Month',
+                    week:     'Week',
+                    day:      'Day'
+                },
+                header: {
+                    left: 'agendaDay,agendaWeek,month     timeSheetButton',
+                    right: 'zoomOutButton,zoomInButton refreshButton  today prev,next',
+                    center: 'title'
+                },
+                editable: false,
+                events: getAllEvents(),
+                timeFormat: 'H(:mm)',
+                allDaySlot: false,
+                height: 550,
+                firstDay: 1,
+                nowIndicator: true,
+                defaultView: 'agendaDay',
+                eventMouseover: function(calEvent, jsEvent) {
+                    var tooltip = '<div class="tooltipevent" style="display: inline-block; position:absolute;z-index:10001;">' + calEvent.tooltip + '</div>';
+                    $("body").append(tooltip);
+                    $(this).mouseover(function(e) {
+                        $(this).css('z-index', 10000);
+                        $('.tooltipevent').fadeIn('500');
+                        $('.tooltipevent').fadeTo('10', 1.9);
+                    }).mousemove(function(e) {
+                        var calendar =$('#calendar')[0];
+                        console.log('('+e.pageX+','+e.pageY+')');
+                        if(e.pageY > calendar.offsetHeight*0.8) {
+                            $('.tooltipevent').css('top', e.pageY - 120);
+                        }
+                        else {
+                            $('.tooltipevent').css('top', e.pageY + 20);
+                        }
+
+                        if(e.pageX > calendar.offsetWidth*0.8) {
+                            $('.tooltipevent').css('left', e.pageX - 220);
+                        }
+                        else {
+                            $('.tooltipevent').css('left', e.pageX + 20);
+                        }
+                    });
+                },
+
+                eventMouseout: function(calEvent, jsEvent) {
+                    $(this).css('z-index', 8);
+                    $('.tooltipevent').remove();
+                },
+
+                eventClick: function(event) {
+                    if (event.url) {
+                        window.open(event.url);
+                        return false;
+                    }
+                },
+
+                eventRender: function(event, element, view){
+                    console.log(event.start.format());
+
+                    if(event.ranges != null) {
+                        return (event.ranges.filter(function(range){
+
+                            var startTemp = event.start.clone();
+                            var endTemp = event.end.clone();
+
+                            var start = startTemp.subtract(startTemp._dateUtcOffset(),'minute');
+                            var end = endTemp.subtract(endTemp._dateUtcOffset(),'minute');
+
+                            return (start.isBefore(range.end) || start.isSame(range.end)) && 
+                            (end.isAfter(range.start) || end.isSame(range.start));
+                      }).length)>0;
+                    }
+                    else {
+                        return true;
+                    }
+                }
+            };
+
+            // setInterval(refresh, {!refreshInterval}*60000);
+            var secondsDuration = {!refreshInterval}*60;
+            var counter = setInterval(countdown, 1000); //1000 will  run it every 1 second
+
+            function getAllEvents() {
+                var testVal = document.getElementById('{!$Component.lblEvents}');
+                var eventsJson = testVal.innerHTML;
+                var events = JSON.parse(eventsJson);
+
+                return events;
+            }
+
+            function zoomIn() {
+                zoom(15);
+            }
+
+            function zoomOut() {
+                zoom(30);
+            }
+
+            function zoom(minutes) {
+                calendarOptions.slotDuration = '00:'+minutes+':00';
+
+                var view = $('#calendar').fullCalendar('getView');
+                $('#calendar').fullCalendar('destroy');
+                $('#calendar').fullCalendar(calendarOptions);
+
+                $('#calendar').fullCalendar( 'changeView', view.name );
+                $("#calendar").fullCalendar('gotoDate', view.start);
+            }
+            
+            function timeSheet() {
+                {
+                    window.open("/1ts/o");
+                    return false;
+                }
+            }
+            
+            function refresh() {
+                refreshEvents();
+
+                clearInterval(counter);
+                var refreshBtn = $('.fc-right')[0].children[0];
+                refreshBtn.disabled = true;
+                refreshBtn.className += ' fc-state-disabled';
+
+                $('#counter')[0].style.display = 'none';
+                $('#lblProcess')[0].style.display = 'block';
+
+                setTimeout(function () {
+                    var counterVal = document.getElementById("lblCountDown");
+                    counterVal.innerHTML = {!refreshInterval} + ":00";
+                    secondsDuration = {!refreshInterval}*60;
+                    counter = setInterval(countdown, 1000);
+
+                    var refreshBtn = $('.fc-right')[0].children[0];
+                    refreshBtn.disabled = false;
+                    refreshBtn.className = refreshBtn.className.replace(/\bfc-state-disabled\b/,'');
+                    $('#counter')[0].style.display = 'block';
+                    $('#lblProcess')[0].style.display = 'none';
+
+                    //window.location.reload();
+                    $('#calendar').fullCalendar( 'removeEvents');
+                    $('#calendar').fullCalendar( 'addEventSource', getAllEvents());
+                    $('#calendar').fullCalendar( 'refetchEvents' );
+        
+                }, 3000);
+            }
+
+            function countdown() {
+
+                var counterVal = document.getElementById("lblCountDown");
+
+                var minutes = Math.floor(secondsDuration/60);
+                var seconds = secondsDuration - minutes*60;
+                counterVal.innerHTML = minutes + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+                var result = counterVal.innerHTML;
+
+                if (result == "0:00") {
+                    refresh();
+                }
+
+                secondsDuration--;
+            }
+
+            //Call the fullCallendar method. You can replace the '#calendar' with the ID of the dom element where you want the calendar to go.
+            $('#calendar').fullCalendar(calendarOptions);
+             
+        });
+    </script>
+     
+    <!--some styling. Modify this to fit your needs-->
+    <style>
+        #cal-options {float:left;}
+        #cal-legend { float:right;}
+        #cal-legend ul {margin:0;padding:0;list-style:none;}
+        #cal-legend ul li {margin:0;padding:5px;float:left;}
+        #cal-legend ul li span {display:block; height:16px; width:16px; margin-right:4px; float:left; border-radius:4px;}
+        #calendar {margin-top:20px;}
+        /*#calendar a:hover {color:#fff !important;}*/
+         
+        .fc-event-inner {padding:3px;}
+        .event-assigned {background:#FFCE36;border-color:#FFCE36;}
+        .event-published {background:#92D9F7;border-color:#92D9F7;}
+        .event-inProgress {background:#B7C9EA;border-color:#B7C9EA;}
+        .event-incomplete {background:#FFCE36;border-color:#FFCE36;}
+        .event-completed {background:#CFEAB7;border-color:#CFEAB7;}
+        .event-absence {background:#808080;border-color:#808080;}
+
+        .event-published .fc-content {color: black;}
+        .event-inProgress .fc-content {color: white;}
+        .event-incomplete .fc-content {color: black;}
+        .event-completed .fc-content {color: white;}
+        .event-absence .fc-content {color: black;}
+
+        .fc-bgevent.working-hours {background:#ada9a9   ;}
+        
+
+        .fc-event .fc-content {
+            text-align: center;
+            padding: 5px;
+            font-size: 1.1em;
+        }
+
+        .fc-time-grid-event .fc-time {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .fc-time-grid-event .fc-time, .fc-time-grid-event .fc-title {
+            padding: 2px;
+        }
+
+        .tooltipevent {
+            border-left: 1px solid #CECECE;
+            border-top: 1px solid #CECECE;
+            color: #747473;
+            font-size: 12px;
+            line-height: 16px;
+            -moz-box-shadow: 3px 3px 3px #888;
+            -webkit-box-shadow: 3px 3px 3px #888;
+            -o-box-shadow: 3px 3px 3px #888;
+            box-shadow: 3px 3px 3px #888;
+            filter: progid:DXImageTransform.Microsoft.Shadow(color='#888888', Direction=135, Strength=5);
+            background-color: #fff;
+            cursor: default;
+            padding: 10px;
+            position: absolute;
+            z-index: 500;
+            font-family: Tahoma;
+            opacity: 1;
+        }
+
+        .fc-button {
+            color: #747473;
+            width: 80px;
+            padding-top: 0;
+            text-decoration: none;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+            font-weight: 700;
+            font-family: arial;
+            font-size: 12px;
+            height: 30px;
+        }
+
+        #alertCountDown {
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.37);
+            color: white;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+    </style>
+     
+    <!-- <apex:sectionHeader title="My Calendar"/> -->
+    <apex:outputPanel id="calPanel">
+        <apex:form >
+<!--             <div id="cal-options">
+                <apex:commandButton value="{!IF(includeMyEvents,'Hide My Events','Show My Events')}" action="{!toggleMyEvents}"/>
+            </div> -->
+<!--             <div id="cal-legend">
+                <ul>
+                    <li><span class="event-birthday"></span>Contact's Birthdays</li>
+                    <li><span class="event-campaign"></span>Campaigns</li>
+                    <li style="{!IF(includeMyEvents,'','display:none')}"><span class="event-personal"></span>My Events</li>
+                </ul>
+                <div style="clear:both;"></div>
+            </div> -->
+            <div style="clear:both;"><!--fix floats--></div>
+            <div id="calendar"></div>
+            <div id = "alertCountDown">
+                <div id="counter">
+                    <label id="lblCountDown">{!refreshInterval}:00</label>
+                    <label for="lblCountDown"> until next automatic refresh</label>
+                </div>
+                <label id="lblProcess" style="display: none;">Processing...</label>
+            </div>
+            
+        </apex:form>
+    </apex:outputPanel>
+    <apex:outputText id="lblEvents" value="{!allEventsJson}" escape="false" style="display: none;"/>
+</apex:page>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InactivateCheckAssignmentRuleOnLead__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This is used to inactivate CheckAssignmentRuleOnLead trigger. Please set this as True if you want to inactivate CheckAssignmentRuleOnLead trigger</description>
+    <externalId>false</externalId>
+    <label>InactivateCheckAssignmentRuleOnLead</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

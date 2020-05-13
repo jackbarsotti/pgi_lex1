@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DBsLocationType__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(DandbCompany.LocationStatus, &quot;0&quot;),&quot;Single Location. No other entities report to the business&quot;,
+IF(ISPICKVAL(DandbCompany.LocationStatus, &quot;1&quot;),&quot;Headquarters/Parent. Branches and/or subsidiaries report to the business&quot;,
+IF(ISPICKVAL(DandbCompany.LocationStatus, &quot;2&quot;),&quot;Branch. Secondary location to a headquarters location&quot;,
+&quot;Not mapped&quot;
+)
+)
+)</formula>
+    <inlineHelpText>The Location Type of the related D&amp;B company if the Account has been cleaned and matched to a D&amp;B company.</inlineHelpText>
+    <label>D&amp;B&#39;s Location Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

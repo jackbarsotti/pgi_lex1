@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Symptom_Main__c</fullName>
+    <externalId>false</externalId>
+    <label>Symptom Main</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Area_of_Focus__c</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Ancillary Services</fullName>
+                <default>false</default>
+                <label>Ancillary Services</label>
+            </value>
+            <value>
+                <fullName>Application</fullName>
+                <default>false</default>
+                <label>Application</label>
+            </value>
+            <value>
+                <fullName>Application (Dashboard)</fullName>
+                <default>false</default>
+                <label>Application (Dashboard)</label>
+            </value>
+            <value>
+                <fullName>Audio</fullName>
+                <default>false</default>
+                <label>Audio</label>
+            </value>
+            <value>
+                <fullName>Audio Integration</fullName>
+                <default>false</default>
+                <label>Audio Integration</label>
+            </value>
+            <value>
+                <fullName>Audio Visual</fullName>
+                <default>false</default>
+                <label>Audio Visual</label>
+            </value>
+            <value>
+                <fullName>Conference Delivery</fullName>
+                <default>false</default>
+                <label>Conference Delivery</label>
+            </value>
+            <value>
+                <fullName>Conference Timing</fullName>
+                <default>false</default>
+                <label>Conference Timing</label>
+            </value>
+            <value>
+                <fullName>Connectivity</fullName>
+                <default>false</default>
+                <label>Connectivity</label>
+            </value>
+            <value>
+                <fullName>Connectivity PSTN Dial Out</fullName>
+                <default>false</default>
+                <label>Connectivity PSTN Dial Out</label>
+            </value>
+            <value>
+                <fullName>Connectivity VoIP</fullName>
+                <default>false</default>
+                <label>Connectivity VoIP</label>
+            </value>
+            <value>
+                <fullName>Device</fullName>
+                <default>false</default>
+                <label>Device</label>
+            </value>
+            <value>
+                <fullName>Equipment/Environment</fullName>
+                <default>false</default>
+                <label>Equipment/Environment</label>
+            </value>
+            <value>
+                <fullName>File Presentation</fullName>
+                <default>false</default>
+                <label>File Presentation</label>
+            </value>
+            <value>
+                <fullName>Human Error</fullName>
+                <default>false</default>
+                <label>Human Error</label>
+            </value>
+            <value>
+                <fullName>Line Information/Management</fullName>
+                <default>false</default>
+                <label>Line Information/Management</label>
+            </value>
+            <value>
+                <fullName>Monitoring</fullName>
+                <default>false</default>
+                <label>Monitoring</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Product access</fullName>
+                <default>false</default>
+                <label>Product access</label>
+            </value>
+            <value>
+                <fullName>Recording</fullName>
+                <default>false</default>
+                <label>Recording</label>
+            </value>
+            <value>
+                <fullName>Scheduling</fullName>
+                <default>false</default>
+                <label>Scheduling</label>
+            </value>
+            <value>
+                <fullName>Screen Share</fullName>
+                <default>false</default>
+                <label>Screen Share</label>
+            </value>
+            <value>
+                <fullName>Security</fullName>
+                <default>false</default>
+                <label>Security</label>
+            </value>
+            <value>
+                <fullName>Voicemail</fullName>
+                <default>false</default>
+                <label>Voicemail</label>
+            </value>
+            <value>
+                <fullName>Webcam</fullName>
+                <default>false</default>
+                <label>Webcam</label>
+            </value>
+            <value>
+                <fullName>Webcast</fullName>
+                <default>false</default>
+                <label>Webcast</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Audio Integration</controllingFieldValue>
+            <controllingFieldValue>UCaaS Support</controllingFieldValue>
+            <controllingFieldValue>VRC (Video Room Connector) Support</controllingFieldValue>
+            <controllingFieldValue>Audio Support</controllingFieldValue>
+            <controllingFieldValue>Event Support</controllingFieldValue>
+            <controllingFieldValue>Mobile Support</controllingFieldValue>
+            <controllingFieldValue>Toolbar Support</controllingFieldValue>
+            <controllingFieldValue>Web Support</controllingFieldValue>
+            <valueName>Application</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Audio Integration</controllingFieldValue>
+            <controllingFieldValue>UCaaS Support</controllingFieldValue>
+            <controllingFieldValue>VRC (Video Room Connector) Support</controllingFieldValue>
+            <controllingFieldValue>Audio Support</controllingFieldValue>
+            <valueName>Audio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Audio Integration</controllingFieldValue>
+            <controllingFieldValue>Audio Integration Support</controllingFieldValue>
+            <controllingFieldValue>VRC (Video Room Connector) Support</controllingFieldValue>
+            <controllingFieldValue>Audio Support</controllingFieldValue>
+            <controllingFieldValue>Mobile Support</controllingFieldValue>
+            <controllingFieldValue>Web Support</controllingFieldValue>
+            <valueName>Audio Integration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Audio Integration</controllingFieldValue>
+            <controllingFieldValue>UCaaS Support</controllingFieldValue>
+            <controllingFieldValue>VRC (Video Room Connector) Support</controllingFieldValue>
+            <controllingFieldValue>Audio Support</controllingFieldValue>
+            <controllingFieldValue>Event Support</controllingFieldValue>
+            <controllingFieldValue>Mobile Support</controllingFieldValue>
+            <controllingFieldValue>Toolbar Support</controllingFieldValue>
+            <controllingFieldValue>Video Support</controllingFieldValue>
+            <controllingFieldValue>Web Support</controllingFieldValue>
+            <valueName>Connectivity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Audio Integration</controllingFieldValue>
+            <valueName>Connectivity PSTN Dial Out</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Audio Integration</controllingFieldValue>
+            <valueName>Connectivity VoIP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UCaaS Support</controllingFieldValue>
+            <valueName>Device</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UCaaS Support</controllingFieldValue>
+            <valueName>Voicemail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VRC (Video Room Connector) Support</controllingFieldValue>
+            <controllingFieldValue>Mobile Support</controllingFieldValue>
+            <controllingFieldValue>Web Support</controllingFieldValue>
+            <valueName>File Presentation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VRC (Video Room Connector) Support</controllingFieldValue>
+            <controllingFieldValue>Mobile Support</controllingFieldValue>
+            <controllingFieldValue>Web Support</controllingFieldValue>
+            <valueName>Screen Share</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VRC (Video Room Connector) Support</controllingFieldValue>
+            <controllingFieldValue>Web Support</controllingFieldValue>
+            <valueName>Webcam</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Audio Support</controllingFieldValue>
+            <controllingFieldValue>Event Support</controllingFieldValue>
+            <valueName>Security</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Event Support</controllingFieldValue>
+            <valueName>Ancillary Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Event Support</controllingFieldValue>
+            <valueName>Application (Dashboard)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Event Support</controllingFieldValue>
+            <valueName>Conference Delivery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Event Support</controllingFieldValue>
+            <valueName>Conference Timing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Event Support</controllingFieldValue>
+            <valueName>Human Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Event Support</controllingFieldValue>
+            <valueName>Line Information/Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Event Support</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Event Support</controllingFieldValue>
+            <controllingFieldValue>Mobile Support</controllingFieldValue>
+            <controllingFieldValue>Toolbar Support</controllingFieldValue>
+            <valueName>Scheduling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recording Support</controllingFieldValue>
+            <controllingFieldValue>Video Support</controllingFieldValue>
+            <valueName>Recording</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Video Support</controllingFieldValue>
+            <valueName>Audio Visual</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Video Support</controllingFieldValue>
+            <valueName>Equipment/Environment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Video Support</controllingFieldValue>
+            <valueName>Monitoring</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Video Support</controllingFieldValue>
+            <valueName>Product access</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Video Support</controllingFieldValue>
+            <valueName>Webcast</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

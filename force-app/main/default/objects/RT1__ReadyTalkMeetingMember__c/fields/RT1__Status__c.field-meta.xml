@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RT1__Status__c</fullName>
+    <deprecated>false</deprecated>
+    <description>ReadyTalk Meeting Member Status</description>
+    <externalId>false</externalId>
+    <label>Meeting Member Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Invited</fullName>
+                <default>false</default>
+                <label>Invited</label>
+            </value>
+            <value>
+                <fullName>Confirmed</fullName>
+                <default>false</default>
+                <label>Confirmed</label>
+            </value>
+            <value>
+                <fullName>Declined</fullName>
+                <default>false</default>
+                <label>Declined</label>
+            </value>
+            <value>
+                <fullName>Attended</fullName>
+                <default>false</default>
+                <label>Attended</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>true</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>No-Show</fullName>
+                <default>false</default>
+                <label>No-Show</label>
+            </value>
+            <value>
+                <fullName>Email Failure: Opt-Out</fullName>
+                <default>false</default>
+                <label>Email Failure: Opt-Out</label>
+            </value>
+            <value>
+                <fullName>Email Failure: Address Error</fullName>
+                <default>false</default>
+                <label>Email Failure: Address Error</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

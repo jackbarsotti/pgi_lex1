@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Uses a workflow rule to indicate Yes or No based on the Participant Report checkbox. This should eventually become the default field replacing the checkbox as this is the field used in the confirmation email template. --></help>
+    <label><!-- Participant Report Picklist --></label>
+    <name>Participant_Report_Picklist__c</name>
+    <picklistValues>
+        <masterLabel>No</masterLabel>
+        <translation><!-- No --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes</masterLabel>
+        <translation><!-- Yes --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

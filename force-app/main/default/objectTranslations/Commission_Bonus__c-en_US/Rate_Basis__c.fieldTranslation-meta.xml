@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Rate Basis --></label>
+    <name>Rate_Basis__c</name>
+    <picklistValues>
+        <masterLabel>Bonus amount</masterLabel>
+        <translation><!-- Bonus amount --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bounty per unit</masterLabel>
+        <translation><!-- Bounty per unit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gross margin</masterLabel>
+        <translation><!-- Gross margin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi Commission</masterLabel>
+        <translation><!-- PGi Commission --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi SPIF</masterLabel>
+        <translation><!-- PGi SPIF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Revenue</masterLabel>
+        <translation><!-- Revenue --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

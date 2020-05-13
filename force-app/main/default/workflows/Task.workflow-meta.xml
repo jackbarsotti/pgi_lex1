@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Copy_Activity_Type_over</fullName>
+        <field>Copy_of_Activity_Type__c</field>
+        <formula>TEXT(Type)</formula>
+        <name>Copy Activity Type over</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Admin_Center_Task_Type_Update</fullName>
+        <field>Type</field>
+        <literalValue>Admin Center Access</literalValue>
+        <name>RT_Admin Center Task Type Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Annual_Survey_Task_TYpe</fullName>
+        <field>Type</field>
+        <literalValue>Annual Survey</literalValue>
+        <name>RT_Annual Survey Task TYpe</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Annual_Survey_Task_Type2</fullName>
+        <field>Type</field>
+        <literalValue>Annual Survey</literalValue>
+        <name>RT_Annual Survey Task Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Annual_Survey_Type_Update</fullName>
+        <field>Type</field>
+        <literalValue>Annual Survey</literalValue>
+        <name>RT_Annual Survey Type Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Cost_Activity_Type_Field_Update</fullName>
+        <field>Cost_ActivityType__c</field>
+        <formula>TEXT(Type)</formula>
+        <name>RT_Cost Activity Type Field Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Gainsight_CTA_Task_Type</fullName>
+        <description>Sets task type on Gainsight CTA&#39;s</description>
+        <field>Type</field>
+        <literalValue>CTA</literalValue>
+        <name>RT_Gainsight CTA Task Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Update_Result_Completed</fullName>
+        <description>InGenius Workflow</description>
+        <field>Result__c</field>
+        <literalValue>Completed</literalValue>
+        <name>RT_Update Result: Completed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Update_Result_Left_Message</fullName>
+        <description>InGenius Workflow</description>
+        <field>Result__c</field>
+        <literalValue>Left Message</literalValue>
+        <name>RT_Update Result: Left Message</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Update_Result_No_Message</fullName>
+        <description>InGenius Workflow</description>
+        <field>Result__c</field>
+        <literalValue>No Message</literalValue>
+        <name>RT_Update Result: No Message</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Update_Result_No_Show</fullName>
+        <description>InGenius Workflow</description>
+        <field>Result__c</field>
+        <literalValue>No Show</literalValue>
+        <name>RT_Update Result: No Show</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Update_Result_Spoke_To_Advancing</fullName>
+        <description>InGenius Workflow</description>
+        <field>Result__c</field>
+        <literalValue>Spoke To - Advancing</literalValue>
+        <name>RT_Update Result: Spoke To - Advancing</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Update_Result_Spoke_To_Call_Back</fullName>
+        <description>InGenius Workflow</description>
+        <field>Result__c</field>
+        <literalValue>Spoke To - Call Back</literalValue>
+        <name>RT_Update Result: Spoke To - Call Back</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Update_Result_Spoke_To_Not_Interested</fullName>
+        <description>InGenius Workflow</description>
+        <field>Result__c</field>
+        <literalValue>Spoke To - Not Interested</literalValue>
+        <name>RT_Update Result:Spoke To-Not Interested</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Update_Result_Spoke_To_Wrong_Person</fullName>
+        <description>InGenius Workflow</description>
+        <field>Result__c</field>
+        <literalValue>Spoke To - Wrong Person</literalValue>
+        <name>RT_Update Result:Spoke To - Wrong Person</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Update_Result_Unable_to_Contact_Bad_I</fullName>
+        <description>InGenius Workflow</description>
+        <field>Result__c</field>
+        <literalValue>Unable to Contact - Bad Information</literalValue>
+        <name>RT_Update Result Unable to Contact-Bad I</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Update_Result_Unable_to_Contact_Remov</fullName>
+        <description>InGenius Workflow</description>
+        <field>Result__c</field>
+        <literalValue>Unable to Contact - Remove</literalValue>
+        <name>RT_Update Result:Unable to Contact-Remov</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Update_Type_Inbound_Call</fullName>
+        <description>Ingenius Workflow</description>
+        <field>Type</field>
+        <literalValue>Inbound Call</literalValue>
+        <name>RT_Update Type: Inbound Call</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Update_Type_Outbound_Call</fullName>
+        <description>InGenius Workflow</description>
+        <field>Type</field>
+        <literalValue>Outbound Call</literalValue>
+        <name>RT_Update Type: Outbound Call</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Last_Mod_Date_by_Non_Admin</fullName>
+        <field>Last_modified_Date_by_non_admin__c</field>
+        <formula>NOW()</formula>
+        <name>Set Last Mod Date by Non-Admin</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Type</fullName>
+        <field>Activity_Type__c</field>
+        <formula>TEXT(Type)</formula>
+        <name>Update Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Type_to_Note</fullName>
+        <field>Type</field>
+        <literalValue>Note</literalValue>
+        <name>Update Type to Note</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>X60_Day_No_Use_Email_Task_Type</fullName>
+        <field>Type</field>
+        <literalValue>Email</literalValue>
+        <name>RT_60-Day No Use Email Task Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Task_Subject_Update</fullName>
+        <field>Subject</field>
+        <formula>&quot;Discovery Call: &quot; &amp; Subject</formula>
+        <name>iMC - Task, Subject Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <outboundMessages>
+        <fullName>James_Trigger</fullName>
+        <apiVersion>28.0</apiVersion>
+        <endpointUrl>https://trigger.natterbox.com/salesforce/3640/Cti</endpointUrl>
+        <fields>Description</fields>
+        <fields>Id</fields>
+        <fields>OwnerId</fields>
+        <fields>UUID__c</fields>
+        <fields>WhatId</fields>
+        <fields>WhoId</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jessica.combs@pgi.com</integrationUser>
+        <name>CTI NB Trigger</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>All-Task Set Last Mod Date by Non-Admin</fullName>
+        <actions>
+            <name>Set_Last_Mod_Date_by_Non_Admin</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>User.ProfileId</field>
+            <operation>notContain</operation>
+            <value>System Admin</value>
+        </criteriaItems>
+        <description>Sets the Last Modified Date by Non-Admin Functions</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>CTI NB Data Merge</fullName>
+        <actions>
+            <name>James_Trigger</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.UUID__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Copy Task Activity Type</fullName>
+        <actions>
+            <name>Copy_Activity_Type_over</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(  CONTAINS(RecordType.Name, &quot;PGi&quot;),  OR(        ISNEW(),        ISCHANGED(Type) ))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PGi-Set Task Last Mod Date by Non-Admin</fullName>
+        <actions>
+            <name>Set_Last_Mod_Date_by_Non_Admin</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>User.ProfileId</field>
+            <operation>notEqual</operation>
+            <value>PGi Admin Lite,System Administrator,System Administrator (No Expires)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>contains</operation>
+            <value>PGi</value>
+        </criteriaItems>
+        <description>Sets the Last Modified Date by Non-Admin Functions</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Populate Type</fullName>
+        <actions>
+            <name>Update_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.Type</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Populate custom type field since std field is not available on customer report types.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_60-Day No Use Email Task Type</fullName>
+        <actions>
+            <name>X60_Day_No_Use_Email_Task_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.Subject</field>
+            <operation>equals</operation>
+            <value>60-Day No Use Email Sent</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Task</value>
+        </criteriaItems>
+        <description>Sets task type to email for the 60-Day No Use Email task</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Access Information for ReadyTalk%27s Administration Center Type Update</fullName>
+        <actions>
+            <name>RT_Admin_Center_Task_Type_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.Subject</field>
+            <operation>equals</operation>
+            <value>Access Information for ReadyTalk&#39;s Administration Center</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Task</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Annual Customer Survey Sent Activity Type Update</fullName>
+        <actions>
+            <name>RT_Annual_Survey_Type_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.Subject</field>
+            <operation>contains</operation>
+            <value>Annual Customer Survey Sent</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Task</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>RT_Annual_Survey_Task_TYpe</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Task.CreatedDate</offsetFromField>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>RT_Annual Survey Task Type</fullName>
+        <actions>
+            <name>RT_Annual_Survey_Task_Type2</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 or 2) and 3</booleanFilter>
+        <criteriaItems>
+            <field>Task.Subject</field>
+            <operation>equals</operation>
+            <value>Annual Customer Survey Sent</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.Subject</field>
+            <operation>equals</operation>
+            <value>GetFeedback Survey Response: Customer Satisfaction Survey</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Task</value>
+        </criteriaItems>
+        <description>Sets the task type on annual surveys</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Cost Activity Type Update</fullName>
+        <actions>
+            <name>RT_Cost_Activity_Type_Field_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.Type</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Task</value>
+        </criteriaItems>
+        <description>This workflow is used to run reports and formulas for Activity Type since current Salesforce reporting doesn&#39;t allow it. The Cost Activity Type is updated via a workflow</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Gainsight CTA task type</fullName>
+        <actions>
+            <name>RT_Gainsight_CTA_Task_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 or 2 or 3) and 4</booleanFilter>
+        <criteriaItems>
+            <field>Task.Subject</field>
+            <operation>equals</operation>
+            <value>90-Day No Touch</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.Subject</field>
+            <operation>equals</operation>
+            <value>Review Sponsor Change</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.Subject</field>
+            <operation>equals</operation>
+            <value>Utilization Increase/Decrease</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Task</value>
+        </criteriaItems>
+        <description>Sets the task type to &quot;CTA&quot; for tasks created from Gainsight CTA&#39;s</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Update Result%3A Completed</fullName>
+        <actions>
+            <name>RT_Update_Result_Completed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Task</value>
+        </criteriaItems>
+        <description>InGenius Wotkflow</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Update Result%3A Left Message</fullName>
+        <actions>
+            <name>RT_Update_Result_Left_Message</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>Left Message</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Task</value>
+        </criteriaItems>
+        <description>InGenius Wotkflow</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Update Result%3A No Message</fullName>
+        <actions>
+            <name>RT_Update_Result_No_Message</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>No Message</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Task</value>
+        </criteriaItems>
+        <description>InGenius Wotkflow</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Update Result%3A No Show</fullName>
+        <actions>
+            <name>RT_Update_Result_No_Show</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>No Show</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Task</value>
+        </criteriaItems>
+        <description>InGenius Wotkflow</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Update Result%3A Spoke To - Advancing</fullName>
+        <actions>
+            <name>RT_Update_Result_Spoke_To_Advancing</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>Spoke To - Advancing</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Task</value>
+        </criteriaItems>
+        <description>InGenius Wotkflow</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Update Result%3A Spoke To - Call Back</fullName>
+        <actions>
+            <name>RT_Update_Result_Spoke_To_Call_Back</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>Spoke To - Call Back</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Task</value>
+        </criteriaItems>
+        <description>InGenius Wotkflow</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Update Result%3A Spoke To - Not Interested</fullName>
+        <actions>
+            <name>RT_Update_Result_Spoke_To_Not_Interested</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>Spoke To - Not Interested</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Task</value>
+        </criteriaItems>
+        <description>InGenius Wotkflow</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Update Result%3A Spoke To - Wrong Person</fullName>
+        <actions>
+            <name>RT_Update_Result_Spoke_To_Wrong_Person</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>Spoke To - Wrong Person</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Task</value>
+        </criteriaItems>
+        <description>InGenius Wotkflow</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Update Result%3A Unable to Contact - Bad Information</fullName>
+        <actions>
+            <name>RT_Update_Result_Unable_to_Contact_Bad_I</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>Unable to Contact - Bad Information</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Task</value>
+        </criteriaItems>
+        <description>InGenius Wotkflow</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Update Result%3A Unable to Contact - Remove</fullName>
+        <actions>
+            <name>RT_Update_Result_Unable_to_Contact_Remov</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>Unable to Contact - Remove</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Task</value>
+        </criteriaItems>
+        <description>InGenius Wotkflow</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Update Type%3A Inbound Call</fullName>
+        <actions>
+            <name>RT_Update_Type_Inbound_Call</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>InGenius Workflow</description>
+        <formula>AND( ispickval(CallType, &quot;Inbound&quot;)&amp;&amp; not(ispickval(Type ,&quot;Meeting&quot;))&amp;&amp; not(ispickval(Type ,&quot;Demo&quot;))&amp;&amp;   RecordType.DeveloperName= &#39;ReadyTalk Task&#39;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Update Type%3A Outbound Call</fullName>
+        <actions>
+            <name>RT_Update_Type_Outbound_Call</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>InGenius Workflow</description>
+        <formula>AND( ispickval(CallType, &quot;Outbound&quot;)&amp;&amp;not(ispickval(Type ,&quot;Meeting&quot;))&amp;&amp;not(ispickval(Type ,&quot;Demo&quot;))&amp;&amp; RecordType.DeveloperName= &#39;ReadyTalk Task&#39;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Type to Note</fullName>
+        <actions>
+            <name>Update_Type_to_Note</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.Subject</field>
+            <operation>startsWith</operation>
+            <value>Note</value>
+        </criteriaItems>
+        <description>When subject begins with Note, update activity type to Note.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Task%2C Subject Update</fullName>
+        <actions>
+            <name>iMC_Task_Subject_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Updates the &quot;Subject&quot; with the &quot;Discovery Call&quot; with the &quot;Type&quot; filed is Discovery Call.</description>
+        <formula>AND(  RecordType.DeveloperName = &#39;iMC Task&#39;,  ISPICKVAL( Type , &quot;Discovery Call&quot;)&amp;&amp;  LEFT( Subject , 15) &lt;&gt; &quot;Discovery Call:&quot;  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

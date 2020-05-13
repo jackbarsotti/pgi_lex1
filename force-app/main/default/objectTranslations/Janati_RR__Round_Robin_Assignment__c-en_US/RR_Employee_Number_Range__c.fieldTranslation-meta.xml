@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- RR Employee Number Range --></label>
+    <name>RR_Employee_Number_Range__c</name>
+    <picklistValues>
+        <masterLabel>Large (250-3000)</masterLabel>
+        <translation><!-- Large (250-3000) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medium (50-250)</masterLabel>
+        <translation><!-- Medium (50-250) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Micro (&lt;10)</masterLabel>
+        <translation><!-- Micro (&lt;10) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Small (10-50)</masterLabel>
+        <translation><!-- Small (10-50) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Very Large (3000+)</masterLabel>
+        <translation><!-- Very Large (3000+) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

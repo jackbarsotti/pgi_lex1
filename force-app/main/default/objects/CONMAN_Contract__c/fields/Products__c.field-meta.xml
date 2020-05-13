@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Products__c</fullName>
+    <externalId>false</externalId>
+    <label>Products</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>License (When License fill up additional fields)</fullName>
+                <default>false</default>
+                <label>License (When License fill up additional fields)</label>
+            </value>
+            <value>
+                <fullName>Audio (Less Data Entry)</fullName>
+                <default>false</default>
+                <label>Audio (Less Data Entry)</label>
+            </value>
+            <value>
+                <fullName>License + Audio (When License Fill up additional field)</fullName>
+                <default>false</default>
+                <label>License + Audio (When License Fill up additional field)</label>
+            </value>
+            <value>
+                <fullName>Attended</fullName>
+                <default>false</default>
+                <label>Attended</label>
+            </value>
+            <value>
+                <fullName>3rd Party Products</fullName>
+                <default>false</default>
+                <label>3rd Party Products</label>
+            </value>
+            <value>
+                <fullName>GlobalMeet Audio</fullName>
+                <default>false</default>
+                <label>GlobalMeet Audio</label>
+            </value>
+            <value>
+                <fullName>GlobalMeet</fullName>
+                <default>false</default>
+                <label>GlobalMeet</label>
+            </value>
+            <value>
+                <fullName>iMeet</fullName>
+                <default>false</default>
+                <label>iMeet</label>
+            </value>
+            <value>
+                <fullName>Operator Assisted</fullName>
+                <default>false</default>
+                <label>Operator Assisted</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

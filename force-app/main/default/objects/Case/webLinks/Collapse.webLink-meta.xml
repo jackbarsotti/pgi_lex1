@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Collapse</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>+/-</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>imgs = window.top.document.getElementsByTagName(&#39;img&#39;); 
+for(var x in imgs) 
+if(imgs[x].className==&#39;hideListButton&#39; || imgs[x].className==&#39;showListButton&#39;) 
+twistSection(imgs[x])</url>
+</WebLink>

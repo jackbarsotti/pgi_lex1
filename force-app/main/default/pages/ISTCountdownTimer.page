@@ -1,0 +1,135 @@
+<apex:page showHeader="false" sidebar="false" standardController="Implementation_Services__c" extensions="ISTCountdownTimer" docType="html-5.0">
+<!--    <apex:page showHeader="false" sidebar="false" standardController="Case" extensions="CaseCountdownTimer" docType="html-5.0"> -->
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <title>IST Countdown Timer</title>
+            <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+            <apex:slds />
+        </head>
+        <body> 
+            <style></style>
+            <div class="slds-scope">
+                <!-- PAGE HEADER -->
+                <div class="slds-page-header" role="banner">
+                    <!-- PAGE HEADER TOP ROW -->
+                    <div class="slds-grid">
+                        <!-- PAGE HEADER / ROW 1 / COLUMN 1 -->
+                        <div class="slds-col">
+                            <!-- HEADING AREA -->
+                            <!-- MEDIA OBJECT = FIGURE + BODY -->
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <svg id="stage1Image" aria-hidden="true" class="slds-icon slds-icon--large slds-icon-text-light">
+                                    </svg>
+                                </div>
+
+                                <div class="slds-media__body">
+                                    <p class="slds-text-heading--label">Phase 1 (Plan)</p>
+                                    <h1 id="demo1" class="slds-text-heading--medium demo"></h1>
+                                </div>
+                            </div>
+                            <!-- / MEDIA OBJECT -->
+                            <!-- HEADING AREA -->
+                        </div>
+                        <!-- PAGE HEADER / ROW 1 / COLUMN 2 -->
+                        <div class="slds-col">
+                            <!-- HEADING AREA -->
+                            <!-- MEDIA OBJECT = FIGURE + BODY -->
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <svg id="stage2Image" aria-hidden="true" class="slds-icon slds-icon--large slds-icon-text-light">
+                                    </svg>
+                                </div>
+
+                                <div class="slds-media__body">
+                                    <p class="slds-text-heading--label">Phase 2 (Build)</p>
+                                    <h1 id="demo2" class="slds-text-heading--medium"></h1>
+                                </div>
+                            </div>
+                            <!-- / MEDIA OBJECT -->
+                            <!-- HEADING AREA -->
+                        </div>
+                        <div class="slds-col">
+                            <!-- HEADING AREA -->
+                            <!-- MEDIA OBJECT = FIGURE + BODY -->
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <svg id="stage3Image" aria-hidden="true" class="slds-icon slds-icon--large slds-icon-text-light">
+                                    </svg>
+                                </div>
+
+                                <div class="slds-media__body">
+                                    <p class="slds-text-heading--label">Phase 3 (Train)</p>
+                                    <h1 id="demo3" class="slds-text-heading--medium"></h1>
+                                </div>
+                            </div>
+                            <!-- / MEDIA OBJECT -->
+                            <!-- HEADING AREA -->
+                        </div>
+                    </div>
+                    <!-- / PAGE HEADER TOP ROW -->
+                </div>
+                <!-- / PAGE HEADER -->
+            </div>
+            <script> 
+                // JS Remote Actions
+                function refreshTimers() {
+                    Visualforce.remoting.Manager.invokeAction(
+                        '{!$RemoteAction.ISTCountdownTimer.refreshTimers}', '{!$CurrentPage.parameters.Id}',
+                        function(result,event) {
+                            if(event.status) {
+                                //result
+                                var completeImage = '<use xlink:href="{!URLFOR($Asset.SLDS, "/assets/icons/utility-sprite/svg/symbols.svg#forward")}"></use>';
+                                var pausedImage = '<use xlink:href="{!URLFOR($Asset.SLDS, "/assets/icons/utility-sprite/svg/symbols.svg#pause")}"></use>';
+                                var clockImage = '<use xlink:href="{!URLFOR($Asset.SLDS, "/assets/icons/utility-sprite/svg/symbols.svg#clock")}"></use>';
+								console.log(result);
+                                if(result.stage1Time != undefined) {
+                                    document.getElementById("demo1").innerHTML = result.stage1Time + ' days ' + result.stage1Color;
+                                    if(result.stage1Complete) {
+                                        document.getElementById("stage1Image").innerHTML = completeImage;
+                                    } else if(result.paused) {
+                                        document.getElementById("stage1Image").innerHTML = pausedImage;
+                                    } else {
+                                        document.getElementById("stage1Image").innerHTML = clockImage;
+                                    }
+                                }
+                                if(result.stage2Time != undefined) {
+                                    if(result.stage1Complete) {
+                                        document.getElementById("demo2").innerHTML = result.stage1Time + ' days ' + result.stage1Color;
+                                    }
+                                    if(result.stage2Complete) {
+                                        document.getElementById("stage2Image").innerHTML = completeImage;
+                                    } else if(result.paused) {
+                                        document.getElementById("stage2Image").innerHTML = pausedImage;
+                                    } else {
+                                        document.getElementById("stage2Image").innerHTML = clockImage;
+                                    }
+                                }
+                                if(result.stage3Time != undefined) {
+                                    if(result.stage2Complete) {
+	                                    document.getElementById("demo3").innerHTML = result.stage1Time + ' days ' + result.stage1Color;
+                                    }
+                                    if(result.stage3Complete) {
+                                        document.getElementById("stage3Image").innerHTML = completeImage;
+                                    } else if(result.paused) {
+                                        document.getElementById("stage3Image").innerHTML = pausedImage;
+                                    } else {
+                                        document.getElementById("stage3Image").innerHTML = clockImage;
+                                    }
+                                }
+                                //                              document.getElementById("demo2").innerHTML = result.stage2Time + '  ' + result.stage2Color;
+                                //                              document.getElementById("demo3").innerHTML = result.stage3Time + '  ' + result.stage3Color;
+
+
+                            }  
+                            else {
+                                alert(event.message); 
+                            }
+                        },{escape: false}
+                    );
+                }
+            refreshTimers();
+            </script>
+        </body>
+    </html>
+</apex:page>

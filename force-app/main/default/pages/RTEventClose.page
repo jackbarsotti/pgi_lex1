@@ -1,0 +1,97 @@
+<apex:page standardController="RTEventClose__c" extensions="RTEventCloseController" tabStyle="RTEvent__c">
+<apex:sectionHeader title="Close Event" subtitle="Event: {!event.Name}"/>
+<p/>
+
+<apex:outputPanel id="PreviewOtherChargeCredit">
+<apex:form >
+<apex:pageBlock title="Event Details"  mode="edit">
+  <apex:pageBlockButtons >
+    <apex:commandButton action="{!save}" value="Save"/>
+    <apex:commandButton action="{!cancel}" value="Cancel"/>
+    <apex:commandButton action="{!preview}" value="Preview" reRender="PreviewOtherChargeCredit"/>
+    <apex:commandButton action="{!post}" value="Post Charges" reRender="PreviewOtherChargeCredit,PostedOtherChargeCredit" />
+  </apex:pageBlockButtons>
+  
+  <apex:pageMessages escape="false"/>
+  <apex:pageBlockSection columns="2" title="Event Details">
+    <apex:pageBlockSection columns="1">
+      <apex:outputField value="{!event.Name}"/>
+      <apex:outputField value="{!event.RT_Event_Type__c}"/>
+      <apex:outputField value="{!event.Broadcast_Audio_Type__c}"/>
+      <apex:outputField value="{!event.Support_Type__c}"/>
+      <apex:outputField value="{!event.Int_l_Toll_Free_Booked__c}"/>
+      <apex:outputField value="{!event.First_Presenter_Event__c}" />
+      <apex:outputField value="{!event.First_Organizer_Event__c}" />
+    </apex:pageBlockSection>
+    <apex:pageBlockSection columns="1">
+      <apex:outputField value="{!event.Internal_Comments__c}"/> 
+    
+    </apex:pageBlockSection>
+    
+  </apex:pageBlockSection>
+  
+  <apex:pageBlockSection columns="2" title="Event Rates">
+  
+    <apex:inputField value="{!event.Bill_to_Access_Code__c}" required="true"/>
+    <apex:inputField value="{!RTEventClose__c.Additional_Participants_Rate__c}"/>
+    
+    <apex:inputField value="{!event.Broadcast_Audio_Event_Participants__c}"/>
+    <apex:inputField value="{!RTEventClose__c.Additional_Minutes_Rate__c}"/>
+   
+    
+    <apex:inputField value="{!event.Broadcast_Audio_Event_Duration2__c}"/>
+    <apex:inputField value="{!RTEventClose__c.ITF_Add_on_Rate__c}"/>
+    
+    <apex:inputField value="{!RTEventClose__c.Base_Event_Charge__c}"/>
+    <apex:inputField value="{!RTEventClose__c.Live_Event_Monitoring_Rate__c}"/>
+    
+    <apex:pageBlockSectionItem >&nbsp;</apex:pageBlockSectionItem>
+    <apex:inputField value="{!RTEventClose__c.Premium_Op_Assist_Rate__c}"/>
+    
+    <!-- Hidden fields so that these values are include in getRecord -->
+    <apex:outputText value="{!RTEventClose__c.RT_Event__c}" rendered="false"/>
+    <apex:outputText value="{!RTEventClose__c.Base_Event_Charge__c}" rendered="false"/>
+    <apex:outputText value="{!RTEventClose__c.RT_Event__r.Name}" rendered="false"/>
+    
+  </apex:pageBlockSection>
+  
+</apex:pageBlock>
+</apex:form>
+
+<p/>
+<apex:pageBlock mode="detail" title="Preview of Charges and Credits" >
+  <apex:pageBlockTable value="{!previewOtherChargeCredit}" var="pocc" rendered="{!AND(NOT(ISNULL(previewOtherChargeCredit)) ,NOT(previewOtherChargeCredit.empty))}">
+    <apex:column value="{!pocc.ServiceDate__c}" />
+    <apex:column value="{!pocc.RTEventName__c}" />
+    <apex:column value="{!pocc.Product__c}" />
+    <apex:column value="{!pocc.Description__c}" />
+    <apex:column value="{!pocc.ChargeOrCredit__c}" />
+  </apex:pageBlockTable>
+  
+  <apex:pageBlockSection rendered="{!OR(ISNULL(previewOtherChargeCredit) ,previewOtherChargeCredit.empty)}">
+  Click the "Preview" button to see a preview of event charges.
+  </apex:pageBlockSection>
+
+</apex:pageBlock>
+</apex:outputPanel>
+
+<p/>
+
+<apex:pageBlock mode="detail" id="PostedOtherChargeCredit" title="Posted Event Charges and Credits">
+
+  <apex:pageBlockTable value="{!postedOtherChargeCredit}" var="occ" rendered="{!AND(NOT(ISNULL(postedOtherChargeCredit)),NOT(postedOtherChargeCredit.empty))}">
+    <apex:column value="{!occ.AccessCode__c}" />
+    <apex:column value="{!occ.Product__c}" />
+    <apex:column value="{!occ.Description__c}" />
+    <apex:column value="{!occ.ChargeOrCredit__c}" />
+    <apex:column value="{!occ.BilledDate__c}" />
+    <apex:column headerValue=" ">
+      <apex:outputLink value="{!'/'+occ.id}">View</apex:outputLink>
+    </apex:column>
+  </apex:pageBlockTable>  
+  <apex:pageBlockSection rendered="{!OR(ISNULL(postedOtherChargeCredit) ,postedOtherChargeCredit.empty)}">
+  No "Other Charge or Credit" is associated with this event.
+  </apex:pageBlockSection>
+</apex:pageBlock>
+
+</apex:page>

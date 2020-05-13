@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Implementation Stage --></label>
+    <name>Implementation_Stage__c</name>
+    <picklistValues>
+        <masterLabel>Build</masterLabel>
+        <translation><!-- Build --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No IS Assigned</masterLabel>
+        <translation><!-- No IS Assigned --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On Hold</masterLabel>
+        <translation><!-- On Hold --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Plan</masterLabel>
+        <translation><!-- Plan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre-contract</masterLabel>
+        <translation><!-- Pre-contract --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Train</masterLabel>
+        <translation><!-- Train --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Retail Charge Reason --></label>
+    <name>Retail_Charge_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Annual Maintenance</masterLabel>
+        <translation><!-- Annual Maintenance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FUSF</masterLabel>
+        <translation><!-- FUSF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FoxDen</masterLabel>
+        <translation><!-- FoxDen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Meeting</masterLabel>
+        <translation><!-- Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Overage</masterLabel>
+        <translation><!-- Overage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Port Capacity Upgrade</masterLabel>
+        <translation><!-- Port Capacity Upgrade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product Change</masterLabel>
+        <translation><!-- Product Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recording</masterLabel>
+        <translation><!-- Recording --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Res+</masterLabel>
+        <translation><!-- Res+ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Returned Check Fee</masterLabel>
+        <translation><!-- Returned Check Fee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Set Up</masterLabel>
+        <translation><!-- Set Up --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcast</masterLabel>
+        <translation><!-- Webcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webinar</masterLabel>
+        <translation><!-- Webinar --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

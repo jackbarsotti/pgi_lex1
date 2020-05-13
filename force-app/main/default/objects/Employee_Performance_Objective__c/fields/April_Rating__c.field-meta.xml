@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>April_Rating__c</fullName>
+    <externalId>false</externalId>
+    <label>April Rating</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - Unsatisfactory</fullName>
+                <default>false</default>
+                <label>1 - Unsatisfactory</label>
+            </value>
+            <value>
+                <fullName>2 - Below Expectations</fullName>
+                <default>false</default>
+                <label>2 - Below Expectations</label>
+            </value>
+            <value>
+                <fullName>3 - Meets Expectations</fullName>
+                <default>false</default>
+                <label>3 - Meets Expectations</label>
+            </value>
+            <value>
+                <fullName>4 - Overachieved</fullName>
+                <default>false</default>
+                <label>4 - Overachieved</label>
+            </value>
+            <value>
+                <fullName>5 - Exceptional</fullName>
+                <default>false</default>
+                <label>5 - Exceptional</label>
+            </value>
+            <value>
+                <fullName>1 - Does Not Demonstrate</fullName>
+                <default>false</default>
+                <label>1 - Does Not Demonstrate</label>
+            </value>
+            <value>
+                <fullName>2 - Demonstrates</fullName>
+                <default>false</default>
+                <label>2 - Demonstrates</label>
+            </value>
+            <value>
+                <fullName>3 - Role Model</fullName>
+                <default>false</default>
+                <label>3 - Role Model</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

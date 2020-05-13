@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- x-Opp Stage --></label>
+    <name>Opp_Stage__c</name>
+    <picklistValues>
+        <masterLabel>Abandoned: PGi decided not to continue pursuing the business</masterLabel>
+        <translation><!-- Abandoned: PGi decided not to continue pursuing the business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Checkout</masterLabel>
+        <translation><!-- Checkout --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed Lost</masterLabel>
+        <translation><!-- Closed Lost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed Lost: PGi not awarded new business/customer did not renew existing contract</masterLabel>
+        <translation><!-- Closed Lost: PGi not awarded new business/customer did not renew existing contract --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed Won</masterLabel>
+        <translation><!-- Closed Won --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed Won - Implementation</masterLabel>
+        <translation><!-- Closed Won - Implementation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed Won - Implementation Complete</masterLabel>
+        <translation><!-- Closed Won - Implementation Complete --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed Won: Have a signed order from the customer</masterLabel>
+        <translation><!-- Closed Won: Have a signed order from the customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Develop Proposal</masterLabel>
+        <translation><!-- Develop Proposal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Develop Proposal: Create proposal to win</masterLabel>
+        <translation><!-- Develop Proposal: Create proposal to win --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Develop Solution</masterLabel>
+        <translation><!-- Develop Solution --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Develop Solution: Problem/solution definition</masterLabel>
+        <translation><!-- Develop Solution: Problem/solution definition --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gain Commitment</masterLabel>
+        <translation><!-- Gain Commitment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gain Commitment: Receive verbal/written notification that client intends to award PGi</masterLabel>
+        <translation><!-- Gain Commitment: Receive verbal/written notification that client intends to award PGi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Identify Target</masterLabel>
+        <translation><!-- Identify Target --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Identify Target: Create demand, identify the prospect problem</masterLabel>
+        <translation><!-- Identify Target: Create demand, identify the prospect problem --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Info Session/Needs Analysis</masterLabel>
+        <translation><!-- Info Session/Needs Analysis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Negotiate Contract</masterLabel>
+        <translation><!-- Negotiate Contract --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Negotiate Contract: Self-explanatory</masterLabel>
+        <translation><!-- Negotiate Contract: Self-explanatory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Negotiation/Verbal</masterLabel>
+        <translation><!-- Negotiation/Verbal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Obtain Final Approvals</masterLabel>
+        <translation><!-- Obtain Final Approvals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pilot/Trial/Evaluation</masterLabel>
+        <translation><!-- Pilot/Trial/Evaluation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Proposal/Price Quote</masterLabel>
+        <translation><!-- Proposal/Price Quote --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Qualification</masterLabel>
+        <translation><!-- Qualification --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Qualify Opportunity</masterLabel>
+        <translation><!-- Qualify Opportunity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Qualify Opportunity: Ensure Opportunity is real</masterLabel>
+        <translation><!-- Qualify Opportunity: Ensure Opportunity is real --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trial/Pilot: Client reviews solution under pre-agreed terms</masterLabel>
+        <translation><!-- Trial/Pilot: Client reviews solution under pre-agreed terms --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Win Theme: Devise strategy to win</masterLabel>
+        <translation><!-- Win Theme: Devise strategy to win --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

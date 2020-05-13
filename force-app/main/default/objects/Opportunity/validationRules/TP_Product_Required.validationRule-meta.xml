@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TP_Product_Required</fullName>
+    <active>true</active>
+    <description>Products required when Probability is &gt;= 50%.</description>
+    <errorConditionFormula>AND(
+RecordType.Id = &quot;0121B000001hgTt&quot;,
+Probability &gt;= 0.50,
+HasOpportunityLineItem = FALSE
+)</errorConditionFormula>
+    <errorDisplayField>Probability</errorDisplayField>
+    <errorMessage>You must add product to this opportunity to progress the probability to 50% or greater.</errorMessage>
+</ValidationRule>

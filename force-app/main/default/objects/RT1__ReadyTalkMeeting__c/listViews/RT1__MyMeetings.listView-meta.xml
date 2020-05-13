@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RT1__MyMeetings</fullName>
+    <columns>NAME</columns>
+    <columns>RT1__MeetingDateTime__c</columns>
+    <columns>RT1__CCMeetingStatus__c</columns>
+    <columns>RT1__InvitedMeetingMembers__c</columns>
+    <columns>RT1__ConfirmedMeetingMembers__c</columns>
+    <columns>RT1__AttendedMeetingMembers__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>My Meetings</label>
+</ListView>

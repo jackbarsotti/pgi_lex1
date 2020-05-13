@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Request Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Region__c</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Business analysis</fullName>
+                <default>false</default>
+                <label>Business analysis</label>
+            </value>
+            <value>
+                <fullName>Cancellation Fee Review / Approval</fullName>
+                <default>false</default>
+                <label>Cancellation Fee Review / Approval</label>
+            </value>
+            <value>
+                <fullName>Contract Approval Needed</fullName>
+                <default>false</default>
+                <label>Contract Approval Needed</label>
+            </value>
+            <value>
+                <fullName>Contract question</fullName>
+                <default>false</default>
+                <label>Contract question</label>
+            </value>
+            <value>
+                <fullName>Custom contract</fullName>
+                <default>false</default>
+                <label>Custom contract</label>
+            </value>
+            <value>
+                <fullName>Custom pricing</fullName>
+                <default>false</default>
+                <label>Custom pricing</label>
+            </value>
+            <value>
+                <fullName>Custom Quote</fullName>
+                <default>false</default>
+                <label>Custom Quote</label>
+            </value>
+            <value>
+                <fullName>DD Migration</fullName>
+                <default>false</default>
+                <label>DD Migration</label>
+            </value>
+            <value>
+                <fullName>DealDesk Approval</fullName>
+                <default>false</default>
+                <label>DealDesk Approval</label>
+            </value>
+            <value>
+                <fullName>Email Request</fullName>
+                <default>false</default>
+                <label>Email Request</label>
+            </value>
+            <value>
+                <fullName>Free Trial Non Standard Request</fullName>
+                <default>false</default>
+                <label>Free Trial Non Standard Request</label>
+            </value>
+            <value>
+                <fullName>GMSO Related Pricing Request</fullName>
+                <default>false</default>
+                <label>GMSO Related Pricing Request</label>
+            </value>
+            <value>
+                <fullName>GMSS Related Request</fullName>
+                <default>false</default>
+                <label>GMSS Related Request</label>
+            </value>
+            <value>
+                <fullName>HR Request</fullName>
+                <default>false</default>
+                <label>HR Request</label>
+            </value>
+            <value>
+                <fullName>MBP exemption</fullName>
+                <default>false</default>
+                <label>MBP exemption</label>
+            </value>
+            <value>
+                <fullName>MBP Related Request</fullName>
+                <default>false</default>
+                <label>MBP Related Request</label>
+            </value>
+            <value>
+                <fullName>New Business - Pricing Support Request</fullName>
+                <default>false</default>
+                <label>New Business - Pricing Support Request</label>
+            </value>
+            <value>
+                <fullName>Pricing Clarification / General Pricing Question</fullName>
+                <default>false</default>
+                <label>Pricing Clarification / General Pricing Question</label>
+            </value>
+            <value>
+                <fullName>Pricing clarification (For Sales)</fullName>
+                <default>false</default>
+                <label>Pricing clarification (For Sales)</label>
+            </value>
+            <value>
+                <fullName>Quotation or Contract Account History</fullName>
+                <default>false</default>
+                <label>Quotation or Contract Account History</label>
+            </value>
+            <value>
+                <fullName>Renewal - Non-Conversion Pricing Support Request</fullName>
+                <default>false</default>
+                <label>Renewal - Non-Conversion Pricing Support Request</label>
+            </value>
+            <value>
+                <fullName>RFI</fullName>
+                <default>false</default>
+                <label>RFI</label>
+            </value>
+            <value>
+                <fullName>RFI / Vender Questionnaire</fullName>
+                <default>false</default>
+                <label>RFI / Vender Questionnaire</label>
+            </value>
+            <value>
+                <fullName>RFP</fullName>
+                <default>false</default>
+                <label>RFP</label>
+            </value>
+            <value>
+                <fullName>SaaS Conversion Request</fullName>
+                <default>false</default>
+                <label>SaaS Conversion Request</label>
+            </value>
+            <value>
+                <fullName>Special Pricing / Contract Approval</fullName>
+                <default>false</default>
+                <label>Special Pricing / Contract Approval</label>
+            </value>
+            <value>
+                <fullName>Strategic pricing request</fullName>
+                <default>false</default>
+                <label>Strategic pricing request</label>
+            </value>
+            <value>
+                <fullName>Supplier Info form</fullName>
+                <default>false</default>
+                <label>Supplier Info form</label>
+            </value>
+            <value>
+                <fullName>Training Request</fullName>
+                <default>false</default>
+                <label>Training Request</label>
+            </value>
+            <value>
+                <fullName>UCaaS Related Request</fullName>
+                <default>false</default>
+                <label>UCaaS Related Request</label>
+            </value>
+            <value>
+                <fullName>User Account / Training request</fullName>
+                <default>false</default>
+                <label>User Account / Training request</label>
+            </value>
+            <value>
+                <fullName>WebEx Related Request</fullName>
+                <default>false</default>
+                <label>WebEx Related Request</label>
+            </value>
+            <value>
+                <fullName>WIN$ or tool error</fullName>
+                <default>false</default>
+                <label>WIN$ or tool error</label>
+            </value>
+            <value>
+                <fullName>Win$ Quote</fullName>
+                <default>false</default>
+                <label>Win$ Quote</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <valueName>Business analysis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <controllingFieldValue>NA</controllingFieldValue>
+            <valueName>Cancellation Fee Review / Approval</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <controllingFieldValue>NA</controllingFieldValue>
+            <valueName>Contract Approval Needed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <controllingFieldValue>NA</controllingFieldValue>
+            <valueName>Contract question</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Custom contract</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <valueName>Custom pricing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <controllingFieldValue>NA</controllingFieldValue>
+            <valueName>Custom Quote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <controllingFieldValue>NA</controllingFieldValue>
+            <valueName>DealDesk Approval</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <controllingFieldValue>NA</controllingFieldValue>
+            <valueName>Free Trial Non Standard Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <controllingFieldValue>NA</controllingFieldValue>
+            <valueName>MBP exemption</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <valueName>Pricing clarification (For Sales)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <valueName>Quotation or Contract Account History</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <controllingFieldValue>NA</controllingFieldValue>
+            <valueName>RFI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <controllingFieldValue>NA</controllingFieldValue>
+            <valueName>RFP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <controllingFieldValue>NA</controllingFieldValue>
+            <valueName>SaaS Conversion Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <valueName>Special Pricing / Contract Approval</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <controllingFieldValue>NA</controllingFieldValue>
+            <valueName>Strategic pricing request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <valueName>Supplier Info form</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <valueName>User Account / Training request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>WIN$ or tool error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <controllingFieldValue>NA</controllingFieldValue>
+            <valueName>Win$ Quote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>RFI / Vender Questionnaire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Training Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NA</controllingFieldValue>
+            <valueName>Email Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NA</controllingFieldValue>
+            <valueName>GMSO Related Pricing Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NA</controllingFieldValue>
+            <valueName>GMSS Related Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NA</controllingFieldValue>
+            <valueName>MBP Related Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NA</controllingFieldValue>
+            <valueName>New Business - Pricing Support Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NA</controllingFieldValue>
+            <valueName>Pricing Clarification / General Pricing Question</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NA</controllingFieldValue>
+            <valueName>Renewal - Non-Conversion Pricing Support Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NA</controllingFieldValue>
+            <valueName>UCaaS Related Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NA</controllingFieldValue>
+            <valueName>WebEx Related Request</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

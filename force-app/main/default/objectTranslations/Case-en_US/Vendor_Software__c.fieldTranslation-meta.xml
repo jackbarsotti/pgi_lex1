@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Vendor Software --></label>
+    <name>Vendor_Software__c</name>
+    <picklistValues>
+        <masterLabel>Not Applicable</masterLabel>
+        <translation><!-- Not Applicable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Uninstalled / Reinstalled</masterLabel>
+        <translation><!-- Not Uninstalled / Reinstalled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Uninstalled / Reinstalled</masterLabel>
+        <translation><!-- Uninstalled / Reinstalled --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

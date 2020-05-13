@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Business Unit --></label>
+    <name>BusinessUnit__c</name>
+    <picklistValues>
+        <masterLabel>AUS</masterLabel>
+        <translation><!-- AUS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AUS/NZL</masterLabel>
+        <translation><!-- AUS/NZL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BGT</masterLabel>
+        <translation><!-- BGT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CAN</masterLabel>
+        <translation><!-- CAN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CHN</masterLabel>
+        <translation><!-- CHN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ECT</masterLabel>
+        <translation><!-- ECT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GBR</masterLabel>
+        <translation><!-- GBR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HKG</masterLabel>
+        <translation><!-- HKG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IMT</masterLabel>
+        <translation><!-- IMT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IND</masterLabel>
+        <translation><!-- IND --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JPN</masterLabel>
+        <translation><!-- JPN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KOR</masterLabel>
+        <translation><!-- KOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MYS</masterLabel>
+        <translation><!-- MYS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NZL</masterLabel>
+        <translation><!-- NZL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SGP</masterLabel>
+        <translation><!-- SGP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SGPPC</masterLabel>
+        <translation><!-- SGPPC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TAU</masterLabel>
+        <translation><!-- TAU --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TCA</masterLabel>
+        <translation><!-- TCA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>THK</masterLabel>
+        <translation><!-- THK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TUS</masterLabel>
+        <translation><!-- TUS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>USA</masterLabel>
+        <translation><!-- USA --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Per month, 6 month minimum --></help>
+    <label><!-- Extended Archive --></label>
+    <name>Extended_Archive__c</name>
+</CustomFieldTranslation>

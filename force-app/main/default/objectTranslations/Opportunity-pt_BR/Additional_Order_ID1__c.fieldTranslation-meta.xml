@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Additional Order for a deal.  Example: new customer order is split into 3 orders.  Main subscription, implementation deposit &amp; implementation final --></help>
+    <label><!-- Additional Order ID 1 --></label>
+    <name>Additional_Order_ID1__c</name>
+</CustomFieldTranslation>

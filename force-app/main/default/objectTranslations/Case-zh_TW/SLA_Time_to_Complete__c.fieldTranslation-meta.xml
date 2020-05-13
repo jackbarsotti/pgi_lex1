@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The time the SLA should be met --></help>
+    <label><!-- SLA Time to Complete --></label>
+    <name>SLA_Time_to_Complete__c</name>
+</CustomFieldTranslation>

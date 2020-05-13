@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Inferred Person European Union Geographic Region Designation. --></help>
+    <label><!-- Person Looks Like EU --></label>
+    <name>zisf__Person_Looks_Like_EU__c</name>
+</CustomFieldTranslation>

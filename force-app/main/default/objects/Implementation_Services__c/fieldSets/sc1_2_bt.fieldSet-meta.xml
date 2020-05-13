@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sc1_2_bt</fullName>
+    <description>Any fields here will only show up if &quot;Use Existing Bill-to Client ID&quot; is unchecked. 2-Columns.
+
+Note the following is in Apex Code:
+* The Bill-to First/Last Name, Address 1, City, State, Postal Code, and Country fields are pre-populated from the Opportunity&#39;s &#39;Agreement Signer&#39; or &#39;Primary&#39; Contact, so they should always have data even if Sales did not put any in or it&#39;s not on the layout
+* The same information (except First/Last Name) is also used during a validation procedure
+* The fields in this Field Set, and the Address-related fields from above, are cleared if &quot;Use Existing Bill-To Client ID&quot; is checked</description>
+    <displayedFields>
+        <field>NCS_BillTo_First_Name__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>true</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>NCS_BillTo_Last_Name__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>true</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>NCS_BillTo_Phone__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>true</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>NCS_BillTo_Email__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>true</isRequired>
+    </displayedFields>
+    <label>Section 1: Bill-to (person)</label>
+</FieldSet>

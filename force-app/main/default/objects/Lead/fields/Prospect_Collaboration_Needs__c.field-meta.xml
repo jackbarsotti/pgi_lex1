@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prospect_Collaboration_Needs__c</fullName>
+    <externalId>false</externalId>
+    <label>Prospect Needs</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Audio Conferencing</fullName>
+                <default>false</default>
+                <label>Audio Conferencing</label>
+            </value>
+            <value>
+                <fullName>Integrated Hybrid Audio</fullName>
+                <default>false</default>
+                <label>Integrated Hybrid Audio</label>
+            </value>
+            <value>
+                <fullName>Online Project Management Software</fullName>
+                <default>false</default>
+                <label>Online Project Management Software</label>
+            </value>
+            <value>
+                <fullName>Operator Assisted Calls</fullName>
+                <default>false</default>
+                <label>Operator Assisted Calls</label>
+            </value>
+            <value>
+                <fullName>Productivity App</fullName>
+                <default>false</default>
+                <label>Productivity App</label>
+            </value>
+            <value>
+                <fullName>Sales Acceleration Tool</fullName>
+                <default>false</default>
+                <label>Sales Acceleration Tool</label>
+            </value>
+            <value>
+                <fullName>Video Conferencing</fullName>
+                <default>false</default>
+                <label>Video Conferencing</label>
+            </value>
+            <value>
+                <fullName>Webcasts/Webinars</fullName>
+                <default>false</default>
+                <label>Webcasts/Webinars</label>
+            </value>
+            <value>
+                <fullName>Web Conferencing</fullName>
+                <default>false</default>
+                <label>Web Conferencing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

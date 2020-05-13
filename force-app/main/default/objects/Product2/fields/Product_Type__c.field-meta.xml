@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Product Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Attendant Console</fullName>
+                <default>false</default>
+                <label>Attendant Console</label>
+            </value>
+            <value>
+                <fullName>Call Recording</fullName>
+                <default>false</default>
+                <label>Call Recording</label>
+            </value>
+            <value>
+                <fullName>Cloud Collective</fullName>
+                <default>false</default>
+                <label>Cloud Collective</label>
+            </value>
+            <value>
+                <fullName>Compliance Software</fullName>
+                <default>false</default>
+                <label>Compliance Software</label>
+            </value>
+            <value>
+                <fullName>Consortium</fullName>
+                <default>false</default>
+                <label>Consortium</label>
+            </value>
+            <value>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+                <label>Consulting</label>
+            </value>
+            <value>
+                <fullName>Contact Centre</fullName>
+                <default>false</default>
+                <label>Contact Centre</label>
+            </value>
+            <value>
+                <fullName>Credit</fullName>
+                <default>false</default>
+                <label>Credit</label>
+            </value>
+            <value>
+                <fullName>Custom Development</fullName>
+                <default>false</default>
+                <label>Custom Development</label>
+            </value>
+            <value>
+                <fullName>Custom Invite</fullName>
+                <default>false</default>
+                <label>Custom Invite</label>
+            </value>
+            <value>
+                <fullName>Diagnostics</fullName>
+                <default>false</default>
+                <label>Diagnostics</label>
+            </value>
+            <value>
+                <fullName>Fixed Rate</fullName>
+                <default>false</default>
+                <label>Fixed Rate</label>
+            </value>
+            <value>
+                <fullName>Gateway</fullName>
+                <default>false</default>
+                <label>Gateway</label>
+            </value>
+            <value>
+                <fullName>GMSS</fullName>
+                <default>false</default>
+                <label>GMSS</label>
+            </value>
+            <value>
+                <fullName>Handsets</fullName>
+                <default>false</default>
+                <label>Handsets</label>
+            </value>
+            <value>
+                <fullName>Headsets</fullName>
+                <default>false</default>
+                <label>Headsets</label>
+            </value>
+            <value>
+                <fullName>IBA Packages</fullName>
+                <default>false</default>
+                <label>IBA Packages</label>
+            </value>
+            <value>
+                <fullName>Impact Assessment</fullName>
+                <default>false</default>
+                <label>Impact Assessment</label>
+            </value>
+            <value>
+                <fullName>Implementation</fullName>
+                <default>false</default>
+                <label>Implementation</label>
+            </value>
+            <value>
+                <fullName>Incentive</fullName>
+                <default>false</default>
+                <label>Incentive</label>
+            </value>
+            <value>
+                <fullName>Interactive Business Apps</fullName>
+                <default>false</default>
+                <label>Interactive Business Apps</label>
+            </value>
+            <value>
+                <fullName>Licenses</fullName>
+                <default>false</default>
+                <label>Licenses</label>
+            </value>
+            <value>
+                <fullName>Load Balancer</fullName>
+                <default>false</default>
+                <label>Load Balancer</label>
+            </value>
+            <value>
+                <fullName>Lync Reporting</fullName>
+                <default>false</default>
+                <label>Lync Reporting</label>
+            </value>
+            <value>
+                <fullName>Lync Room System</fullName>
+                <default>false</default>
+                <label>Lync Room System</label>
+            </value>
+            <value>
+                <fullName>Meeting Room Devices</fullName>
+                <default>false</default>
+                <label>Meeting Room Devices</label>
+            </value>
+            <value>
+                <fullName>Modality Applications</fullName>
+                <default>false</default>
+                <label>Modality Applications</label>
+            </value>
+            <value>
+                <fullName>Node Health</fullName>
+                <default>false</default>
+                <label>Node Health</label>
+            </value>
+            <value>
+                <fullName>OneConsultation</fullName>
+                <default>false</default>
+                <label>OneConsultation</label>
+            </value>
+            <value>
+                <fullName>OneMeeting</fullName>
+                <default>false</default>
+                <label>OneMeeting</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Presence Indicators</fullName>
+                <default>false</default>
+                <label>Presence Indicators</label>
+            </value>
+            <value>
+                <fullName>Project Management</fullName>
+                <default>false</default>
+                <label>Project Management</label>
+            </value>
+            <value>
+                <fullName>Services</fullName>
+                <default>false</default>
+                <label>Services</label>
+            </value>
+            <value>
+                <fullName>SIP Trunk</fullName>
+                <default>false</default>
+                <label>SIP Trunk</label>
+            </value>
+            <value>
+                <fullName>SkypeHelp</fullName>
+                <default>false</default>
+                <label>SkypeHelp</label>
+            </value>
+            <value>
+                <fullName>Storage</fullName>
+                <default>false</default>
+                <label>Storage</label>
+            </value>
+            <value>
+                <fullName>SuperToast</fullName>
+                <default>false</default>
+                <label>SuperToast</label>
+            </value>
+            <value>
+                <fullName>Support</fullName>
+                <default>false</default>
+                <label>Support</label>
+            </value>
+            <value>
+                <fullName>Teams Accelerator</fullName>
+                <default>false</default>
+                <label>Teams Accelerator</label>
+            </value>
+            <value>
+                <fullName>Teamwork Analytics</fullName>
+                <default>false</default>
+                <label>Teamwork Analytics</label>
+            </value>
+            <value>
+                <fullName>Third Party Support</fullName>
+                <default>false</default>
+                <label>Third Party Support</label>
+            </value>
+            <value>
+                <fullName>User Adoption</fullName>
+                <default>false</default>
+                <label>User Adoption</label>
+            </value>
+            <value>
+                <fullName>Video Infrastructure</fullName>
+                <default>false</default>
+                <label>Video Infrastructure</label>
+            </value>
+            <value>
+                <fullName>Video Port Bundle</fullName>
+                <default>false</default>
+                <label>Video Port Bundle</label>
+            </value>
+            <value>
+                <fullName>Web Port Bundle</fullName>
+                <default>false</default>
+                <label>Web Port Bundle</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

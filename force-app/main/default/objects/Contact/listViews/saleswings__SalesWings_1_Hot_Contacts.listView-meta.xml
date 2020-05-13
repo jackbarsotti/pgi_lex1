@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>saleswings__SalesWings_1_Hot_Contacts</fullName>
+    <columns>saleswings__Favorite_Icon__c</columns>
+    <columns>saleswings__Current_Interest__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>saleswings__Temperature__c</field>
+        <operation>equals</operation>
+        <value>HOT</value>
+    </filters>
+    <label>SalesWings 1 - Hot Contacts</label>
+</ListView>

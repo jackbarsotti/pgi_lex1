@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Input the ID of the user or queue that you want this record assigned to by going to the record for that under setup in SFDC --></help>
+    <label><!-- Assigned Lead Owner ID --></label>
+    <name>Assigned_Lead_Owner_ID__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Escalation Record Type --></label>
+    <name>Escalation_Record_Type__c</name>
+    <picklistValues>
+        <masterLabel>Billing Support</masterLabel>
+        <translation><!-- Billing Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client External Support</masterLabel>
+        <translation><!-- Client External Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Company Credit Hold</masterLabel>
+        <translation><!-- Company Credit Hold --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit Request</masterLabel>
+        <translation><!-- Credit Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Internal Support</masterLabel>
+        <translation><!-- Internal Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Parent Ticket (NOC)</masterLabel>
+        <translation><!-- Parent Ticket (NOC) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payment Research Request</masterLabel>
+        <translation><!-- Payment Research Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pricing Help Request</masterLabel>
+        <translation><!-- Pricing Help Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Profile Request</masterLabel>
+        <translation><!-- Profile Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rate Entry Request</masterLabel>
+        <translation><!-- Rate Entry Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Request for Adjustment</masterLabel>
+        <translation><!-- Request for Adjustment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reservations Request</masterLabel>
+        <translation><!-- Reservations Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Revenue Assurance Audit Request</masterLabel>
+        <translation><!-- Revenue Assurance Audit Request --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

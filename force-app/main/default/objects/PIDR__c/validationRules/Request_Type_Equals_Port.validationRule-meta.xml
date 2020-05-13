@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Type_Equals_Port</fullName>
+    <active>false</active>
+    <description>If the Request Type equals &quot;Port&quot;, then the following fields are required. Data Type, Data Details, Notes.</description>
+    <errorConditionFormula>AND(
+ RecordType.DeveloperName = &quot;GDPR Customer Request Record Type&quot;,
+ ISPICKVAL(Request_Type__c, &quot;Port&quot;),
+ ISNULL(Data_Type__c) || 
+ ISNULL(Data_Details__c)||
+ ISNULL(Requested_Notes__c)
+)</errorConditionFormula>
+    <errorMessage>If the Request Type is &quot;Port&quot;, then the Data Type, Data Details and Notes fields are required.</errorMessage>
+</ValidationRule>

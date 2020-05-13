@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Cycle__c</fullName>
+    <externalId>false</externalId>
+    <label>Billing Cycle</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1st</fullName>
+                <default>false</default>
+                <label>1st</label>
+            </value>
+            <value>
+                <fullName>5th</fullName>
+                <default>false</default>
+                <label>5th</label>
+            </value>
+            <value>
+                <fullName>12th</fullName>
+                <default>false</default>
+                <label>12th</label>
+            </value>
+            <value>
+                <fullName>19th</fullName>
+                <default>false</default>
+                <label>19th</label>
+            </value>
+            <value>
+                <fullName>25th</fullName>
+                <default>false</default>
+                <label>25th</label>
+            </value>
+            <value>
+                <fullName>26th</fullName>
+                <default>false</default>
+                <label>26th</label>
+            </value>
+            <value>
+                <fullName>Month End</fullName>
+                <default>false</default>
+                <label>Month End</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

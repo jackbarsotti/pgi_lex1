@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please provide an updated job description that outlines increased responsibilities. --></help>
+    <label><!-- Provide Updated Job Description --></label>
+    <name>Provide_Updated_Job_Description__c</name>
+</CustomFieldTranslation>

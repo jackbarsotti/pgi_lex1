@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Start_Date_Time_Not_Satisfactory</fullName>
+    <active>true</active>
+    <description>If the Start Date/Time is not satisfactory then the user must advise why.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Expected_Work_End_Date__c, &#39;No&#39;),
+ISBLANK(Why_is_date_time_not_satisfacotry__c)  
+)</errorConditionFormula>
+    <errorDisplayField>Why_is_date_time_not_satisfacotry__c</errorDisplayField>
+    <errorMessage>Please advise why the Start Date/Time is not Satisfactory for the customer.</errorMessage>
+</ValidationRule>

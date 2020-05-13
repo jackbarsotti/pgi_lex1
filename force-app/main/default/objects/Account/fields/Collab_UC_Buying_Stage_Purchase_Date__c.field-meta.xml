@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Collab_UC_Buying_Stage_Purchase_Date__c</fullName>
+    <description>Date of when Account Buying Stage = &quot;Purchase&quot;</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Last date of when Account Buying Stage was &quot;Purchase&quot;</inlineHelpText>
+    <label>Collab/UC Buying Stage Purchase Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

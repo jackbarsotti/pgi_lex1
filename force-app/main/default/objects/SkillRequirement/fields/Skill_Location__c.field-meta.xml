@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Skill_Location__c</fullName>
+    <externalId>false</externalId>
+    <formula>Skill.MasterLabel = &quot;APAC&quot;
+||
+Skill.MasterLabel = &quot;China&quot;
+||
+Skill.MasterLabel = &quot;COS&quot;
+||
+Skill.MasterLabel = &quot;EMEA&quot;
+||
+Skill.MasterLabel = &quot;India&quot;
+||
+Skill.MasterLabel = &quot;Intl&quot;
+||
+Skill.MasterLabel = &quot;Japan&quot;
+||
+Skill.MasterLabel = &quot;KS&quot;
+||
+Skill.MasterLabel = &quot;Kuala Lumpur&quot;
+||
+Skill.MasterLabel = &quot;NAM&quot;
+||
+Skill.MasterLabel = &quot;Sydney&quot;
+||
+Skill.MasterLabel = &quot;Toronto&quot;
+||
+Skill.MasterLabel = &quot;US&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Skill - Location</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

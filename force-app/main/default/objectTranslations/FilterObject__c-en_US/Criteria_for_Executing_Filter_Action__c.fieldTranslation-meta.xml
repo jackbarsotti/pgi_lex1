@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Criteria for Executing Filter Action --></label>
+    <name>Criteria_for_Executing_Filter_Action__c</name>
+    <picklistValues>
+        <masterLabel>Conditions are met</masterLabel>
+        <translation><!-- Conditions are met --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Formula evaluates to true</masterLabel>
+        <translation><!-- Formula evaluates to true --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No criteria—just execute the actions!</masterLabel>
+        <translation><!-- No criteria—just execute the actions! --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

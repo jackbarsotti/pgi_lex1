@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This value is populated by Sales Operations or Legal when the Account has been previously contracted under a different name. --></help>
+    <label><!-- Account’s Agreement Name --></label>
+    <name>Account_s_Agreement_Name__c</name>
+</CustomFieldTranslation>

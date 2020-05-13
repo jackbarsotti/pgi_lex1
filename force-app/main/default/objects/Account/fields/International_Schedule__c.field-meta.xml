@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>International_Schedule__c</fullName>
+    <description>International Toll and Toll-Free Settings (standard rate schedule or high volume rate schedule)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Apply &quot;Standard&quot; or &quot;High Volume&quot; International Toll Free rates to this account.</inlineHelpText>
+    <label>International Schedule</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Standard</fullName>
+                <default>true</default>
+                <label>Standard</label>
+            </value>
+            <value>
+                <fullName>High Volume</fullName>
+                <default>false</default>
+                <label>High Volume</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

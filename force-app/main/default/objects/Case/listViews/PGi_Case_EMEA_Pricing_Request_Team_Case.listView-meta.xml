@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Case_EMEA_Pricing_Request_Team_Case</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Assigned_To__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.CLOSED</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>PGi-Case-EU-Pricing Request Team</label>
+    <language>en_US</language>
+    <queue>PGi_Case_EU_Pricing_Request_Team</queue>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SvsNowAdditionalComments__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Historical field for any data housed in Additional Comments field from SvsNow</inlineHelpText>
+    <label>SvsNow Additional Comments</label>
+    <length>50000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

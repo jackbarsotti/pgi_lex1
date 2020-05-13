@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TASKRAY__Feedback_Form_Restricted_to_Owner</fullName>
+    <active>false</active>
+    <description>This validation rule prevents anyone except the project owner from making a project available for external onboarding feedback.</description>
+    <errorConditionFormula>AND(ISCHANGED( TASKRAY__trGenerateOnboardingFeedbackForm__c ) ,TASKRAY__trGenerateOnboardingFeedbackForm__c == true , $User.Id != OwnerId)</errorConditionFormula>
+    <errorMessage>Only the Project Owner can make the project available for external onboarding feedback. Contact your system administrator if you would like access to this field.</errorMessage>
+</ValidationRule>

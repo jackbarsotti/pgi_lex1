@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The number of the call recipient in E164 format. If the call is answered by a Natterbox user, this field will be left blank. For details on numbers answered by Natterbox users, use the ConnectedNumber field instead. --></help>
+    <label><!-- E164ConnectedNumber --></label>
+    <name>E164ConnectedNumber__c</name>
+</CustomFieldTranslation>

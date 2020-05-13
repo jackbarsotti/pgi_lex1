@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- ID from RT&apos;s Level3 SF --></help>
+    <label><!-- RT Level3 Oppty ID --></label>
+    <name>RTLevel3OpptyID__c</name>
+</CustomFieldTranslation>

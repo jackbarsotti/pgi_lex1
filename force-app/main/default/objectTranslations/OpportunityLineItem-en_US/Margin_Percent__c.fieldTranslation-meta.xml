@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Where you require the Item Sales Price to be automatically calculated based on a cost price and a margin percentage, please leave the Sales Price 0 and enter a cost and margin percent. --></help>
+    <label><!-- Margin Percent --></label>
+    <name>Margin_Percent__c</name>
+</CustomFieldTranslation>

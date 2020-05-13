@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>totango__Leads_By_Activity</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>totango__TotangoOnlineStatusImage__c</columns>
+    <columns>totango__TotangoEngagement__c</columns>
+    <columns>totango__TotangoEngagementChange__c</columns>
+    <columns>totango__TotangoInsights__c</columns>
+    <columns>totango__Totango_Last_Update__c</columns>
+    <columns>totango__Totango_URL__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>totango__Totango_URL__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Leads By Activity</label>
+</ListView>

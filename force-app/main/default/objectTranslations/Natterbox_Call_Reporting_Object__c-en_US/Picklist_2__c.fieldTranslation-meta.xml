@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If the CTI is using picklist functionality, the value of the second picklist selection can be put here. Requires Natterbox Professional Services to setup. --></help>
+    <label><!-- Picklist 2 --></label>
+    <name>Picklist_2__c</name>
+</CustomFieldTranslation>

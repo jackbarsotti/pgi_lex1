@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- PGi Product Name --></label>
+    <name>PGi_Product_Name__c</name>
+    <picklistValues>
+        <masterLabel>ABM</masterLabel>
+        <translation><!-- ABM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ACS</masterLabel>
+        <translation><!-- ACS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ACSS</masterLabel>
+        <translation><!-- ACSS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APS</masterLabel>
+        <translation><!-- APS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APSXML.DLL</masterLabel>
+        <translation><!-- APSXML.DLL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AVS</masterLabel>
+        <translation><!-- AVS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AXIS</masterLabel>
+        <translation><!-- AXIS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Adobe Connect</masterLabel>
+        <translation><!-- Adobe Connect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BOB (Audio)</masterLabel>
+        <translation><!-- BOB (Audio) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Branding Editor</masterLabel>
+        <translation><!-- Branding Editor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CES</masterLabel>
+        <translation><!-- CES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Call Manager</masterLabel>
+        <translation><!-- Call Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Clerical</masterLabel>
+        <translation><!-- Clerical --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cloud Loader</masterLabel>
+        <translation><!-- Cloud Loader --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DDS</masterLabel>
+        <translation><!-- DDS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Desktop</masterLabel>
+        <translation><!-- Desktop --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Conferencing - Greeted Entry</masterLabel>
+        <translation><!-- Event Conferencing - Greeted Entry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Conferencing - Passcode Entry</masterLabel>
+        <translation><!-- Event Conferencing - Passcode Entry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Portal</masterLabel>
+        <translation><!-- Event Portal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Global Skype Account Provisioning Service (GAPS)</masterLabel>
+        <translation><!-- Global Skype Account Provisioning Service (GAPS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Admin Portal (Conf. HUB)</masterLabel>
+        <translation><!-- GlobalMeet - Admin Portal (Conf. HUB) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Audio</masterLabel>
+        <translation><!-- GlobalMeet - Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - My Meeting Hub</masterLabel>
+        <translation><!-- GlobalMeet - My Meeting Hub --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Web</masterLabel>
+        <translation><!-- GlobalMeet - Web --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Web 5.0</masterLabel>
+        <translation><!-- GlobalMeet - Web 5.0 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Webinar</masterLabel>
+        <translation><!-- GlobalMeet - Webinar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - for Skype for Business</masterLabel>
+        <translation><!-- GlobalMeet - for Skype for Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet Webcast</masterLabel>
+        <translation><!-- GlobalMeet Webcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet.com</masterLabel>
+        <translation><!-- GlobalMeet.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Meeting Settings</masterLabel>
+        <translation><!-- Meeting Settings --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mobile</masterLabel>
+        <translation><!-- Mobile --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outlook Toolbar</masterLabel>
+        <translation><!-- Outlook Toolbar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi Identity</masterLabel>
+        <translation><!-- PGi Identity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PIA</masterLabel>
+        <translation><!-- PIA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partner Portals (Custom Websites)</masterLabel>
+        <translation><!-- Partner Portals (Custom Websites) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Phone Controls</masterLabel>
+        <translation><!-- Phone Controls --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Premiere Lync Audio Provisioning Service (PLAP)</masterLabel>
+        <translation><!-- Premiere Lync Audio Provisioning Service (PLAP) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PremiereCall - Assisted Meeting</masterLabel>
+        <translation><!-- PremiereCall - Assisted Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Proton</masterLabel>
+        <translation><!-- Proton --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Provisioning Utility Tool</masterLabel>
+        <translation><!-- Provisioning Utility Tool --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pulsar/Gammaray</masterLabel>
+        <translation><!-- Pulsar/Gammaray --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reseller Portals (Custom Websites)</masterLabel>
+        <translation><!-- Reseller Portals (Custom Websites) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SAP</masterLabel>
+        <translation><!-- SAP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ScreenShare</masterLabel>
+        <translation><!-- ScreenShare --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Skype Auto Provisioning Tool</masterLabel>
+        <translation><!-- Skype Auto Provisioning Tool --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Skype Help</masterLabel>
+        <translation><!-- Skype Help --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Skype for Business</masterLabel>
+        <translation><!-- Skype for Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Skype for Business Online Integration</masterLabel>
+        <translation><!-- Skype for Business Online Integration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SoundByte</masterLabel>
+        <translation><!-- SoundByte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TMS</masterLabel>
+        <translation><!-- TMS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tesla</masterLabel>
+        <translation><!-- Tesla --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UAPI</masterLabel>
+        <translation><!-- UAPI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UCAAS</masterLabel>
+        <translation><!-- UCAAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video API&#39;s</masterLabel>
+        <translation><!-- Video API&apos;s --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web Services (Back Office)</masterLabel>
+        <translation><!-- Web Services (Back Office) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebEx - CMR Cloud</masterLabel>
+        <translation><!-- WebEx - CMR Cloud --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebEx - CMR Hybrid</masterLabel>
+        <translation><!-- WebEx - CMR Hybrid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebEx - Connect</masterLabel>
+        <translation><!-- WebEx - Connect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebEx - Microsite</masterLabel>
+        <translation><!-- WebEx - Microsite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebEx - PGi Hosted</masterLabel>
+        <translation><!-- WebEx - PGi Hosted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iGLOO</masterLabel>
+        <translation><!-- iGLOO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iMeet - Web</masterLabel>
+        <translation><!-- iMeet - Web --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iMeet Agenday</masterLabel>
+        <translation><!-- iMeet Agenday --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

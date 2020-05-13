@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Events_In_the_past</fullName>
+    <columns>TASK.SUBJECT</columns>
+    <columns>TASK.TYPE</columns>
+    <columns>ACTIVITY.TASK</columns>
+    <columns>TASK.WHO_NAME</columns>
+    <columns>Event_Status__c</columns>
+    <columns>TASK.WHAT_NAME</columns>
+    <columns>TASK.DUE_DATE</columns>
+    <columns>TASK.STATUS</columns>
+    <columns>TASK.PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>TASK.LAST_UPDATE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>ACTIVITY.TASK</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>EVENT.END_DATE_TIME</field>
+        <operation>lessOrEqual</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>Event_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Completed</value>
+    </filters>
+    <label>My Events Not Completed but Finished</label>
+    <language>en_US</language>
+</ListView>

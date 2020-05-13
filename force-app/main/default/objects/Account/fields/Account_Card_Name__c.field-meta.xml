@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Card_Name__c</fullName>
+    <description>CAUTION - USED IN INTEGRATIONS
+This will be the name of the company that gets printed on the card and input into Peachtree.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Account name printed on customer&#39;s wallet card (30 character limit).</inlineHelpText>
+    <label>Account Card Name</label>
+    <length>100</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

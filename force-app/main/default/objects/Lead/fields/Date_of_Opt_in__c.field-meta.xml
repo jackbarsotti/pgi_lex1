@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_of_Opt_in__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Date this record opted in to receiving CEM (commercial electronic messages) from PGi</inlineHelpText>
+    <label>Date of Opt-in</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Date</type>
+</CustomField>

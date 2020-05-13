@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Base_Package_is_Not_Free_Trial__c</fullName>
+    <description>Used to help determine the Account Type status. See more details on Account Type in Confluence under the Salesforce Documentation.</description>
+    <externalId>false</externalId>
+    <formula>IF( ( basePackage__r.Name &lt;&gt; &quot;Free Trial&quot;), 1, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Base Package is Not Free Trial</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

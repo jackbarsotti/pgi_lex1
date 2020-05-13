@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Close_Won_of_GM_Deal</fullName>
+    <active>false</active>
+    <description>When an Oppty is Closed Won and it has a GM deal then the user must complete GlobalMeet Details</description>
+    <errorConditionFormula>AND(
+RecordType.Name = &quot;PGi Opportunity&quot;,
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;,
+CONTAINS(TEXT(StageName), &quot;Closed Won&quot;)||
+ISPICKVAL( StageName , &quot;Closed Pending Approval&quot;),
+ISPICKVAL( GM_Version__c,&quot;&quot;), 
+OR(
+Opportunity_Product_Families__c = &quot;Web: GlobalMeet&quot;,
+Opportunity_Product_Families__c = &quot;Conversion Project&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>GM_Version__c</errorDisplayField>
+    <errorMessage>When closing an Opportunity with GM products, you must advise which GM Version is being sold.</errorMessage>
+</ValidationRule>

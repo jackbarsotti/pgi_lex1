@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>natterbox__Disable_wrapup_for_unknown_numbers__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Disable notes and wrap-up for numbers not found in SalesForce</description>
+    <externalId>false</externalId>
+    <label>Disable wrapup for unknown numbers</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>zisf__Known_Last_Name__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Indicates if ZoomInfo Recognizes a First Name Input Value as a Known Last Name Using Multiple Sources Including the U.S. Census.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates if ZoomInfo Recognizes a First Name Input Value as a Known Last Name Using Multiple Sources Including the U.S. Census.</inlineHelpText>
+    <label>Known Last Name</label>
+    <length>10</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

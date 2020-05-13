@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_AcctType_Cant_Be_Direct_On_Partner</fullName>
+    <active>false</active>
+    <description>Whenever the Owner&#39;s Channel of the Account is Partners, the Type field can not be set as Direct, Field Sales, or Commercial Accounts</description>
+    <errorConditionFormula>false /*AND( 
+$User.Alias &lt;&gt; &quot;autocln&quot;, 
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;, 
+CONTAINS(RecordType.Name, &quot;PGi&quot;), 
+CONTAINS(TEXT( Channel__c), &quot;Partners&quot;), ISPICKVAL(Account_Type__c, &quot;Carrier&quot;),  
+ISPICKVAL(Account_Type__c, &quot;Direct&quot;), 
+ISPICKVAL(Account_Type__c, &quot;Commercial Accounts&quot;), 
+ISPICKVAL(Account_Type__c, &quot;Field Sales&quot;), 
+$User.Override_Validation_Rules__c = False 
+)*/</errorConditionFormula>
+    <errorDisplayField>Account_Type__c</errorDisplayField>
+    <errorMessage>The Type field must be set to a value other than Direct, Field Sales, or Commercial Accounts when the value of Owner&#39;s Channel is Partners.</errorMessage>
+</ValidationRule>

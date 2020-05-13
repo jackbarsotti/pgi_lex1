@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Role__c</fullName>
+    <description>Used to identify what type of role users have; specifically to identify reps from mgmt for contract expiration emails.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to identify what type of role users have; specifically to identify reps from mgmt for contract expiration emails.</inlineHelpText>
+    <label>Business Role</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Non Sales</fullName>
+                <default>false</default>
+                <label>Non Sales</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

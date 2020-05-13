@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is the Account Tier level from the Account Record --></help>
+    <label><!-- Business Level --></label>
+    <name>Business_Level__c</name>
+</CustomFieldTranslation>

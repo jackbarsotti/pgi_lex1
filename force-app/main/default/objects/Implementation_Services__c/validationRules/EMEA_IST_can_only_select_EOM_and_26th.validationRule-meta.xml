@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_IST_can_only_select_EOM_and_26th</fullName>
+    <active>true</active>
+    <description>for Bill Cycle</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Bill_Cycle__c, &quot;5&quot;) ||
+ISPICKVAL(Bill_Cycle__c, &quot;12&quot;) ||
+ISPICKVAL(Bill_Cycle__c, &quot;19&quot;),
+ISPICKVAL($User.User_Region__c, &quot;EMEA&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Bill_Cycle__c</errorDisplayField>
+    <errorMessage>A Bill Cycle of either 26 or EOM is required for EMEA Implementations.  Please select one of these values and save the record again.</errorMessage>
+</ValidationRule>

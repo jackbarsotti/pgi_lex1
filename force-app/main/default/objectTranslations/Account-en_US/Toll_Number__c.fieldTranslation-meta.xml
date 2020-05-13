@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Toll Number --></label>
+    <name>Toll_Number__c</name>
+    <picklistValues>
+        <masterLabel>2122313834</masterLabel>
+        <translation><!-- 2122313834 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2122313858</masterLabel>
+        <translation><!-- 2122313858 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3032480285</masterLabel>
+        <translation><!-- 3032480285 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3032489658</masterLabel>
+        <translation><!-- 3032489658 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3039993333</masterLabel>
+        <translation><!-- 3039993333 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>6477233976</masterLabel>
+        <translation><!-- 6477233976 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>6477233989</masterLabel>
+        <translation><!-- 6477233989 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>6477236906</masterLabel>
+        <translation><!-- 6477236906 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>6477237255</masterLabel>
+        <translation><!-- 6477237255 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9139049321</masterLabel>
+        <translation><!-- 9139049321 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9139049338</masterLabel>
+        <translation><!-- 9139049338 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9139049364</masterLabel>
+        <translation><!-- 9139049364 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9139049392</masterLabel>
+        <translation><!-- 9139049392 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9139049397</masterLabel>
+        <translation><!-- 9139049397 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9139049398</masterLabel>
+        <translation><!-- 9139049398 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9139049824</masterLabel>
+        <translation><!-- 9139049824 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9139049834</masterLabel>
+        <translation><!-- 9139049834 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9139049837</masterLabel>
+        <translation><!-- 9139049837 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

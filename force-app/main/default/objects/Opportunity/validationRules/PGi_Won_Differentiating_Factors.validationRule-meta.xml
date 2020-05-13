@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Won_Differentiating_Factors</fullName>
+    <active>true</active>
+    <description>If Stage is set to Closed Won then Differentiating Win Factors can not be blank</description>
+    <errorConditionFormula>AND(
+RecordType.Name = &quot;PGi Opportunity&quot;, 
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;, 
+CONTAINS(TEXT(StageName), &quot;Closed Won&quot;)||  
+ISPICKVAL( StageName , &quot;Closed Pending Approval&quot;),
+ISBLANK(Differentiating_Win_Factors__c), 
+$User.Override_Validation_Rules__c = False,
+$User.ProfileId &lt;&gt; &quot;00ea0000001sYR8&quot;,
+$User.ProfileId &lt;&gt; &quot;00ea0000001sdEo&quot;,
+NOT($Setup.BypassRules__c.Disable_Validation_Rules__c) 
+)</errorConditionFormula>
+    <errorDisplayField>Differentiating_Win_Factors__c</errorDisplayField>
+    <errorMessage>Please populate the Differentiating Win Factors when setting the stage to Closed Won.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Strategic_Initiative__c</fullName>
+    <externalId>false</externalId>
+    <label>Strategic Initiative</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Address Capital Structure</fullName>
+                <default>false</default>
+                <label>Address Capital Structure</label>
+            </value>
+            <value>
+                <fullName>Drive Cloud Growth</fullName>
+                <default>false</default>
+                <label>Drive Cloud Growth</label>
+            </value>
+            <value>
+                <fullName>Enabler Model</fullName>
+                <default>false</default>
+                <label>Enabler Model</label>
+            </value>
+            <value>
+                <fullName>GTM Motion</fullName>
+                <default>false</default>
+                <label>GTM Motion</label>
+            </value>
+            <value>
+                <fullName>Online Sales</fullName>
+                <default>false</default>
+                <label>Online Sales</label>
+            </value>
+            <value>
+                <fullName>Post-Sale Transition Automation</fullName>
+                <default>false</default>
+                <label>Post-Sale Transition Automation</label>
+            </value>
+            <value>
+                <fullName>Quote to Cash</fullName>
+                <default>false</default>
+                <label>Quote to Cash</label>
+            </value>
+            <value>
+                <fullName>Self-Serve</fullName>
+                <default>false</default>
+                <label>Self-Serve</label>
+            </value>
+            <value>
+                <fullName>Simplification Process</fullName>
+                <default>false</default>
+                <label>Simplification Process</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

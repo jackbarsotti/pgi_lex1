@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Products_in_Scope__c</fullName>
+    <externalId>false</externalId>
+    <label>Products in Scope</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Audio: GlobalMeet Audio</fullName>
+                <default>false</default>
+                <label>Audio: GlobalMeet Audio</label>
+            </value>
+            <value>
+                <fullName>Audio: GlobalMeet Audio for Skype for Business</fullName>
+                <default>false</default>
+                <label>Audio: GlobalMeet Audio for Skype for Business</label>
+            </value>
+            <value>
+                <fullName>Audio: GlobalMeet Hybrid Audio for Lync Server</fullName>
+                <default>false</default>
+                <label>Audio: GlobalMeet Hybrid Audio for Lync Server</label>
+            </value>
+            <value>
+                <fullName>Audio: GlobalMeet Hybrid Audio for WebEx</fullName>
+                <default>false</default>
+                <label>Audio: GlobalMeet Hybrid Audio for WebEx</label>
+            </value>
+            <value>
+                <fullName>Audio: GlobalMeet Webinar Managed Event</fullName>
+                <default>false</default>
+                <label>Audio: GlobalMeet Webinar Managed Event</label>
+            </value>
+            <value>
+                <fullName>Audio: iMeet</fullName>
+                <default>false</default>
+                <label>Audio: iMeet</label>
+            </value>
+            <value>
+                <fullName>Audio: OnNet</fullName>
+                <default>false</default>
+                <label>Audio: OnNet</label>
+            </value>
+            <value>
+                <fullName>Audio: Op. Assisted: Premium Event</fullName>
+                <default>false</default>
+                <label>Audio: Op. Assisted: Premium Event</label>
+            </value>
+            <value>
+                <fullName>Audio: Op. Assisted: Standard Auditorium</fullName>
+                <default>false</default>
+                <label>Audio: Op. Assisted: Standard Auditorium</label>
+            </value>
+            <value>
+                <fullName>Bundle: GlobalMeet</fullName>
+                <default>false</default>
+                <label>Bundle: GlobalMeet</label>
+            </value>
+            <value>
+                <fullName>Bundle: GlobalMeet Webinar</fullName>
+                <default>false</default>
+                <label>Bundle: GlobalMeet Webinar</label>
+            </value>
+            <value>
+                <fullName>Bundle: iMeet</fullName>
+                <default>false</default>
+                <label>Bundle: iMeet</label>
+            </value>
+            <value>
+                <fullName>Bundle: iMeet Sales Accelerator</fullName>
+                <default>false</default>
+                <label>Bundle: iMeet Sales Accelerator</label>
+            </value>
+            <value>
+                <fullName>Bundle: iMeet VRC</fullName>
+                <default>false</default>
+                <label>Bundle: iMeet VRC</label>
+            </value>
+            <value>
+                <fullName>Partner: Partner BD</fullName>
+                <default>false</default>
+                <label>Partner: Partner BD</label>
+            </value>
+            <value>
+                <fullName>Professional Services: Modality Consulting</fullName>
+                <default>false</default>
+                <label>Professional Services: Modality Consulting</label>
+            </value>
+            <value>
+                <fullName>Professional Services: Modality Custom Development</fullName>
+                <default>false</default>
+                <label>Professional Services: Modality Custom Development</label>
+            </value>
+            <value>
+                <fullName>Professional Services: Modality Support &amp; Managed Services</fullName>
+                <default>false</default>
+                <label>Professional Services: Modality Support &amp; Managed Services</label>
+            </value>
+            <value>
+                <fullName>Video: Managed Conference</fullName>
+                <default>false</default>
+                <label>Video: Managed Conference</label>
+            </value>
+            <value>
+                <fullName>Video: Managed Service - Device</fullName>
+                <default>false</default>
+                <label>Video: Managed Service - Device</label>
+            </value>
+            <value>
+                <fullName>Video: Managed Service - Flat Rate</fullName>
+                <default>false</default>
+                <label>Video: Managed Service - Flat Rate</label>
+            </value>
+            <value>
+                <fullName>Video: Professional Service</fullName>
+                <default>false</default>
+                <label>Video: Professional Service</label>
+            </value>
+            <value>
+                <fullName>Web: AdobeConnect</fullName>
+                <default>false</default>
+                <label>Web: AdobeConnect</label>
+            </value>
+            <value>
+                <fullName>Web: Cisco WebEx</fullName>
+                <default>false</default>
+                <label>Web: Cisco WebEx</label>
+            </value>
+            <value>
+                <fullName>Web: GlobalMeet</fullName>
+                <default>false</default>
+                <label>Web: GlobalMeet</label>
+            </value>
+            <value>
+                <fullName>Web: GlobalMeet Active Host</fullName>
+                <default>false</default>
+                <label>Web: GlobalMeet Active Host</label>
+            </value>
+            <value>
+                <fullName>Web: GlobalMeet Web for Microsoft Lync</fullName>
+                <default>false</default>
+                <label>Web: GlobalMeet Web for Microsoft Lync</label>
+            </value>
+            <value>
+                <fullName>Web: GlobalMeet Webinar</fullName>
+                <default>false</default>
+                <label>Web: GlobalMeet Webinar</label>
+            </value>
+            <value>
+                <fullName>Web: GlobalMeet Webinar Managed Event</fullName>
+                <default>false</default>
+                <label>Web: GlobalMeet Webinar Managed Event</label>
+            </value>
+            <value>
+                <fullName>Web: iMeet</fullName>
+                <default>false</default>
+                <label>Web: iMeet</label>
+            </value>
+            <value>
+                <fullName>Web: iMeet Agenday Enterprise</fullName>
+                <default>false</default>
+                <label>Web: iMeet Agenday Enterprise</label>
+            </value>
+            <value>
+                <fullName>Web: iMeet Central</fullName>
+                <default>false</default>
+                <label>Web: iMeet Central</label>
+            </value>
+            <value>
+                <fullName>Web: Microsoft Office Live Meeting</fullName>
+                <default>false</default>
+                <label>Web: Microsoft Office Live Meeting</label>
+            </value>
+            <value>
+                <fullName>Web: Modality Software Applications</fullName>
+                <default>false</default>
+                <label>Web: Modality Software Applications</label>
+            </value>
+            <value>
+                <fullName>Web: NASDAQ</fullName>
+                <default>false</default>
+                <label>Web: NASDAQ</label>
+            </value>
+            <value>
+                <fullName>Web: ON24</fullName>
+                <default>false</default>
+                <label>Web: ON24</label>
+            </value>
+            <value>
+                <fullName>Web: UCaaS</fullName>
+                <default>false</default>
+                <label>Web: UCaaS</label>
+            </value>
+            <value>
+                <fullName>Web: vCube</fullName>
+                <default>false</default>
+                <label>Web: vCube</label>
+            </value>
+            <value>
+                <fullName>Web: Webcast</fullName>
+                <default>false</default>
+                <label>Web: Webcast</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

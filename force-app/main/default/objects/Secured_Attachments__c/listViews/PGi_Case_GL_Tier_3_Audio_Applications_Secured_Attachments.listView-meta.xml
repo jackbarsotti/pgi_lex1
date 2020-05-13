@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Case_GL_Tier_3_Audio_Applications_Secured_Attachments</fullName>
+    <filterScope>Queue</filterScope>
+    <label>PGi-Case-GL-Tier 3-Audio Applications</label>
+    <queue>PGi_Case_GL_Tier_3_Audio_Applications</queue>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

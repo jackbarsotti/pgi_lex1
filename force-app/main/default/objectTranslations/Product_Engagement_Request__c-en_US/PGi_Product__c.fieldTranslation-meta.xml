@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- PGi Product --></label>
+    <name>PGi_Product__c</name>
+    <picklistValues>
+        <masterLabel>Audio</masterLabel>
+        <translation><!-- Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BackOffice / MiddleTier</masterLabel>
+        <translation><!-- BackOffice / MiddleTier --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Billing / Reporting</masterLabel>
+        <translation><!-- Billing / Reporting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Central Desktop</masterLabel>
+        <translation><!-- Central Desktop --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Convergence</masterLabel>
+        <translation><!-- Convergence --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Conferencing</masterLabel>
+        <translation><!-- Event Conferencing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet Desktop</masterLabel>
+        <translation><!-- GlobalMeet Desktop --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet Mobile</masterLabel>
+        <translation><!-- GlobalMeet Mobile --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet Tools</masterLabel>
+        <translation><!-- GlobalMeet Tools --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet Web (5.x)</masterLabel>
+        <translation><!-- GlobalMeet Web (5.x) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet Webcast</masterLabel>
+        <translation><!-- GlobalMeet Webcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet Webinar</masterLabel>
+        <translation><!-- GlobalMeet Webinar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Identity</masterLabel>
+        <translation><!-- Identity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MS / Cisco / Adobe</masterLabel>
+        <translation><!-- MS / Cisco / Adobe --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OnNet</masterLabel>
+        <translation><!-- OnNet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Op Assist</masterLabel>
+        <translation><!-- Op Assist --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Portal/Hub/Provisioning</masterLabel>
+        <translation><!-- Portal/Hub/Provisioning --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Production Applications</masterLabel>
+        <translation><!-- Production Applications --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ReadyTalk</masterLabel>
+        <translation><!-- ReadyTalk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Systems Architecture</masterLabel>
+        <translation><!-- Systems Architecture --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UCaaS</masterLabel>
+        <translation><!-- UCaaS --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

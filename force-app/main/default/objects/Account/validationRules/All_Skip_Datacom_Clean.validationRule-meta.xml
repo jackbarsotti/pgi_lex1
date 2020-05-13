@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Skip_Datacom_Clean</fullName>
+    <active>true</active>
+    <description>This VR prevents the Data.com Clean to run against accounts who have been marked as TRUE for &quot;Skip Data.com&quot;</description>
+    <errorConditionFormula>(SkipDatacom__c = TRUE) &amp;&amp; 
+($User.Alias = &quot;autocln&quot;) &amp;&amp; 
+(
+
+ISCHANGED( DunsNumber ) || ISCHANGED( NumberOfEmployees ) || ISCHANGED( AnnualRevenue ) || ISCHANGED( TickerSymbol ) || ISCHANGED( Website ) || ISCHANGED( Industry ) || ISCHANGED( Ownership ) || ISCHANGED( BillingCity ) || ISCHANGED( BillingCountry ) || ISCHANGED( BillingState ) || ISCHANGED( BillingStreet ) || ISCHANGED( BillingPostalCode ) || ISCHANGED( Phone ) || ISCHANGED( Fax ) || ISCHANGED( Site ) || ISCHANGED( Tradestyle ) || ISCHANGED( YearStarted ) || ISCHANGED( Sic ) || ISCHANGED( SicDesc ) || ISCHANGED( NaicsCode ) || ISCHANGED( NaicsDesc ) || ISCHANGED( Description ) 
+
+)</errorConditionFormula>
+    <errorMessage>This record has been excluded from automated field updates from Data.com Clean jobs.</errorMessage>
+</ValidationRule>

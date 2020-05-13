@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Region__c</fullName>
+    <description>Used to determine what shows up in Product Select VF page</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What regions should be able to see this product when adding to Opps?</inlineHelpText>
+    <label>Region</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>APAC</fullName>
+                <default>false</default>
+                <label>APAC</label>
+            </value>
+            <value>
+                <fullName>EMEA</fullName>
+                <default>false</default>
+                <label>EMEA</label>
+            </value>
+            <value>
+                <fullName>NA</fullName>
+                <default>false</default>
+                <label>NA</label>
+            </value>
+            <value>
+                <fullName>ALL</fullName>
+                <default>false</default>
+                <label>ALL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

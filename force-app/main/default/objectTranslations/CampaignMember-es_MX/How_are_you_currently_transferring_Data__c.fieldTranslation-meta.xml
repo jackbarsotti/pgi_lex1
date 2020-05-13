@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- How are you currently transferring data between ReadyTalk and Technology Partner today? --></help>
+    <label><!-- How are you currently transferring Data --></label>
+    <name>How_are_you_currently_transferring_Data__c</name>
+</CustomFieldTranslation>

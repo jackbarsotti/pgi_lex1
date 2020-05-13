@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_Detail__c</fullName>
+    <externalId>false</externalId>
+    <label>Type Detail</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account Review</fullName>
+                <default>false</default>
+                <label>Account Review</label>
+            </value>
+            <value>
+                <fullName>Best Practice/New Products</fullName>
+                <default>false</default>
+                <label>Best Practice/New Products</label>
+            </value>
+            <value>
+                <fullName>Core Product</fullName>
+                <default>false</default>
+                <label>Core Product</label>
+            </value>
+            <value>
+                <fullName>Discovery</fullName>
+                <default>false</default>
+                <label>Discovery</label>
+            </value>
+            <value>
+                <fullName>Follow-up</fullName>
+                <default>false</default>
+                <label>Follow-up</label>
+            </value>
+            <value>
+                <fullName>FoxDen</fullName>
+                <default>false</default>
+                <label>FoxDen</label>
+            </value>
+            <value>
+                <fullName>FoxDen Connect</fullName>
+                <default>false</default>
+                <label>FoxDen Connect</label>
+            </value>
+            <value>
+                <fullName>Gift</fullName>
+                <default>false</default>
+                <label>Gift</label>
+            </value>
+            <value>
+                <fullName>Handwritten Note</fullName>
+                <default>false</default>
+                <label>Handwritten Note</label>
+            </value>
+            <value>
+                <fullName>Illuminate - Replay</fullName>
+                <default>false</default>
+                <label>Illuminate - Replay</label>
+            </value>
+            <value>
+                <fullName>Inbound</fullName>
+                <default>false</default>
+                <label>Inbound</label>
+            </value>
+            <value>
+                <fullName>Integration</fullName>
+                <default>false</default>
+                <label>Integration</label>
+            </value>
+            <value>
+                <fullName>LinkedIn Mail</fullName>
+                <default>false</default>
+                <label>LinkedIn Mail</label>
+            </value>
+            <value>
+                <fullName>LinkedIn Post</fullName>
+                <default>false</default>
+                <label>LinkedIn Post</label>
+            </value>
+            <value>
+                <fullName>Outbound - Follow-up</fullName>
+                <default>false</default>
+                <label>Outbound - Follow-up</label>
+            </value>
+            <value>
+                <fullName>Outbound - Proactive</fullName>
+                <default>false</default>
+                <label>Outbound - Proactive</label>
+            </value>
+            <value>
+                <fullName>Outbound - Prospecting</fullName>
+                <default>false</default>
+                <label>Outbound - Prospecting</label>
+            </value>
+            <value>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+                <label>Pricing</label>
+            </value>
+            <value>
+                <fullName>Response - Customer/Prosect</fullName>
+                <default>false</default>
+                <label>Response - Customer/Prosect</label>
+            </value>
+            <value>
+                <fullName>S4B</fullName>
+                <default>false</default>
+                <label>S4B</label>
+            </value>
+            <value>
+                <fullName>Sent Collateral</fullName>
+                <default>false</default>
+                <label>Sent Collateral</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Transition</fullName>
+                <default>false</default>
+                <label>Transition</label>
+            </value>
+            <value>
+                <fullName>Trial</fullName>
+                <default>false</default>
+                <label>Trial</label>
+            </value>
+            <value>
+                <fullName>Twitter Tweet</fullName>
+                <default>false</default>
+                <label>Twitter Tweet</label>
+            </value>
+            <value>
+                <fullName>Webcasting</fullName>
+                <default>false</default>
+                <label>Webcasting</label>
+            </value>
+            <value>
+                <fullName>Requirements Gathering</fullName>
+                <default>false</default>
+                <label>Requirements Gathering</label>
+            </value>
+            <value>
+                <fullName>Follow Up Meeting</fullName>
+                <default>false</default>
+                <label>Follow Up Meeting</label>
+            </value>
+            <value>
+                <fullName>Issues to Resolve</fullName>
+                <default>false</default>
+                <label>Issues to Resolve</label>
+            </value>
+            <value>
+                <fullName>Demo/Training</fullName>
+                <default>false</default>
+                <label>Demo/Training</label>
+            </value>
+            <value>
+                <fullName>Go Live Prep</fullName>
+                <default>false</default>
+                <label>Go Live Prep</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

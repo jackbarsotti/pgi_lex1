@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Based on Commission Start Date: 
+New (Current Calendar Year)
+Transition (Previous Calendar Year)
+Base (Everything Two+ Calendar Years Ago) --></help>
+    <label><!-- Revenue Category --></label>
+    <name>Revenue_Category__c</name>
+    <picklistValues>
+        <masterLabel>Base</masterLabel>
+        <translation><!-- Base --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New</masterLabel>
+        <translation><!-- New --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transition</masterLabel>
+        <translation><!-- Transition --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Provision_Subscription</fullName>
+    <availability>online</availability>
+    <description>When this button is clicked, the user is notified that the subscription will be provisioned &amp; a hidden provision checkbox is checked</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Provision Subscription</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;script src=&quot;http://www.salesforce.com/services/lib/ajax/beta3.3/sforceclient.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot;&gt;
+&lt;!---
+
+function initPage() {
+sforceClient.init(&quot;{!API.Session_ID}&quot;, &quot;{!API.Partner_Server_URL_60}&quot;);
+createAlert();
+}
+
+function createAlert() {
+
+var origLoc = parent.frames.location.href;
+var z = origLoc.toLowerCase().indexOf(&quot;&amp;eid&quot;);
+alert(z);
+
+var recordID = origLoc.substring(z+5, z+20);
+
+alert(recordID);
+
+try{
+var x = confirm(&quot;You are setting this account up to be billed. If you do not want this account to be created in the billing system, create a Quote instead. Click OK to continue.&quot;);
+
+if (x) {
+parent.frames.location.replace(&quot;https://tapp0.salesforce.com/&quot; + recordID +&quot;/e?retURL=%2F&quot;+ recordID + &quot;&amp;00N50000001ZfXa=1&quot;);
+} else {
+parent.frames.location.replace(&quot;https://tapp0.salesforce.com/&quot; + recordID +&quot;/e?retURL=%2F&quot;+ recordID + &quot;&amp;00N50000001ZfXa=0&quot;);
+}
+
+} catch(errmsg){
+alert( errmsg.toString() );
+}
+
+
+
+}
+
+--&gt;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload=&quot;javascript:initPage()&quot;&gt;
+
+&lt;p&gt;Please wait ... &lt;p&gt;
+
+&lt;br&gt;&lt;img src=&quot;http://na1.salesforce.com/img/waiting_dots.gif&quot; border=&quot;0&quot; width=156 height=34&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</url>
+</WebLink>

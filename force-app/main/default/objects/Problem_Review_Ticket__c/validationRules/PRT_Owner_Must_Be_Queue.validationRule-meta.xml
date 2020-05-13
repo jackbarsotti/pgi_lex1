@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRT_Owner_Must_Be_Queue</fullName>
+    <active>true</active>
+    <description>This is to ensure Problem Ticket owner = a queue and not a user.</description>
+    <errorConditionFormula>AND(
+ISCHANGED(OwnerId) ,
+LEFT( OwnerId , 3) = &#39;005&#39;
+)</errorConditionFormula>
+    <errorMessage>Problem Ticket Ownership must be a Queue and not a User. Users are to be assigned in the Assigned To area.</errorMessage>
+</ValidationRule>

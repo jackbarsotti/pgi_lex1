@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>FSL Master Schedule</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>FSL Master Schedules</value>
+    </caseValues>
+    <layouts>
+        <layout>FSL Master Schedule Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Shift 1 --></label>
+            <section>Shift 1</section>
+        </sections>
+        <sections>
+            <label><!-- Shift 1 Breaks --></label>
+            <section>Shift 1 Breaks</section>
+        </sections>
+        <sections>
+            <label><!-- Shift 2 --></label>
+            <section>Shift 2</section>
+        </sections>
+        <sections>
+            <label><!-- Shift 2 Breaks --></label>
+            <section>Shift 2 Breaks</section>
+        </sections>
+        <sections>
+            <label><!-- Shift 3 --></label>
+            <section>Shift 3</section>
+        </sections>
+        <sections>
+            <label><!-- Shift 3 Breaks --></label>
+            <section>Shift 3 Breaks</section>
+        </sections>
+        <sections>
+            <label><!-- Shift 4 --></label>
+            <section>Shift 4</section>
+        </sections>
+        <sections>
+            <label><!-- Shift 4 Breaks --></label>
+            <section>Shift 4 Breaks</section>
+        </sections>
+        <sections>
+            <label><!-- Shift 5 --></label>
+            <section>Shift 5</section>
+        </sections>
+        <sections>
+            <label><!-- Shift 5 Breaks --></label>
+            <section>Shift 5 Breaks</section>
+        </sections>
+        <sections>
+            <label><!-- Shift 6 --></label>
+            <section>Shift 6</section>
+        </sections>
+        <sections>
+            <label><!-- Shift 6 Breaks --></label>
+            <section>Shift 6 Breaks</section>
+        </sections>
+        <sections>
+            <label><!-- Shift 7 --></label>
+            <section>Shift 7</section>
+        </sections>
+        <sections>
+            <label><!-- Shift 7 Breaks --></label>
+            <section>Shift 7 Breaks</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <errorMessage><!-- All Break information must be included for any breaks --></errorMessage>
+        <name>FSL_Master_All_Break_Info_Required1</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- All Break information must be included for any breaks --></errorMessage>
+        <name>FSL_Master_All_Break_Info_Required2</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- All Break information must be included for any breaks --></errorMessage>
+        <name>FSL_Master_All_Break_Info_Required3</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- All Break information must be included for any breaks --></errorMessage>
+        <name>FSL_Master_All_Break_Info_Required4</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- All Break information must be included for any breaks --></errorMessage>
+        <name>FSL_Master_All_Break_Info_Required5</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- All Break information must be included for any breaks --></errorMessage>
+        <name>FSL_Master_All_Break_Info_Required6</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- All Break information must be included for any breaks --></errorMessage>
+        <name>FSL_Master_All_Break_Info_Required7</name>
+    </validationRules>
+</CustomObjectTranslation>

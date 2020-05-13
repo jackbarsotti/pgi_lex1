@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Events_Products_Reviewed__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Select any/all event products reviewed with prospect so AM can manage expectations.</inlineHelpText>
+    <label>Event Products Reviewed</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Op-Assist Services</fullName>
+                <default>false</default>
+                <label>Op-Assist Services</label>
+            </value>
+            <value>
+                <fullName>Broadcast Audio</fullName>
+                <default>false</default>
+                <label>Broadcast Audio</label>
+            </value>
+            <value>
+                <fullName>Gold Webinar</fullName>
+                <default>false</default>
+                <label>Gold Webinar</label>
+            </value>
+            <value>
+                <fullName>Platinum Webinar</fullName>
+                <default>false</default>
+                <label>Platinum Webinar</label>
+            </value>
+            <value>
+                <fullName>Simulive</fullName>
+                <default>false</default>
+                <label>Simulive</label>
+            </value>
+            <value>
+                <fullName>Add&#39;l Event Services</fullName>
+                <default>false</default>
+                <label>Add&#39;l Event Services</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

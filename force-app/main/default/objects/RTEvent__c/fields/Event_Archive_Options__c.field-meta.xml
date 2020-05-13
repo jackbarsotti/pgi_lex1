@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Archive_Options__c</fullName>
+    <externalId>false</externalId>
+    <label>Event Archive Options</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>12 Month Archive (default; included with core event)</fullName>
+                <default>false</default>
+                <label>12 Month Archive (default; included with core event)</label>
+            </value>
+            <value>
+                <fullName>No Archive</fullName>
+                <default>false</default>
+                <label>No Archive</label>
+            </value>
+            <value>
+                <fullName>Specific Shut-Down</fullName>
+                <default>false</default>
+                <label>Specific Shut-Down</label>
+            </value>
+            <value>
+                <fullName>Event on CD ($400)</fullName>
+                <default>false</default>
+                <label>Event on CD ($400)</label>
+            </value>
+            <value>
+                <fullName>Single File Archive (FLC, MPG, WMV)</fullName>
+                <default>false</default>
+                <label>Single File Archive (FLC, MPG, WMV)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

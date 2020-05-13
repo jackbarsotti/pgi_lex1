@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Card_Name_50_Char_Limit_if_SendKit_False</fullName>
+    <active>true</active>
+    <description>Subscription Card Name must be &lt; 50 characters if Send Kit Checkbox is unchecked</description>
+    <errorConditionFormula>AND(len(Card_Name__c) &gt; 50, $User.Id&lt;&gt;&#39;00550000000yfEe&#39;, Send_Kit__c =false)</errorConditionFormula>
+    <errorDisplayField>Card_Name__c</errorDisplayField>
+    <errorMessage>Subscription Card Name must be less than 50 characters.</errorMessage>
+</ValidationRule>

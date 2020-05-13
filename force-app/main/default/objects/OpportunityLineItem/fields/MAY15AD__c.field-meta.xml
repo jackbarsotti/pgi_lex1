@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MAY15AD__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( AND (MONTH (ISD__c) = 5, YEAR (ISD__c) = 2015, Quantity &gt; PricebookEntry.Product2.Scheduling_Days_per_Month__c ),PricebookEntry.Product2.Scheduling_Days_per_Month__c , Quantity )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>May 2015 - Actual Days</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

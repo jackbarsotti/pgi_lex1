@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Hours after Start of Shift. 02:00 is 2 hours after the start of the shift, Not 2 o&apos;clock. --></help>
+    <label><!-- Break 6.2 Begin Offset --></label>
+    <name>Break_6_2_Begin_Offset__c</name>
+</CustomFieldTranslation>

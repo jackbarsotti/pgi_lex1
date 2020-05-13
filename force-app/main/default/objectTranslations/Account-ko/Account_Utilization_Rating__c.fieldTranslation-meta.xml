@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- &gt;95% Overutilized
+&gt;75% Nearly utilized
+&gt;50% Partially utilized
+&lt;50% Underutilized --></help>
+    <label><!-- Account Utilization Rating --></label>
+    <name>Account_Utilization_Rating__c</name>
+</CustomFieldTranslation>

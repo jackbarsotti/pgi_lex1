@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please provide theStreet Number, Street Direction, Street Name, Street Type, Street Post Direction, Bldg/Ste, City, State, and Zip/Postal Code. --></help>
+    <label><!-- E911 Service Address, City, State, Zip --></label>
+    <name>E911_Service_Address_City_State_Zip__c</name>
+</CustomFieldTranslation>

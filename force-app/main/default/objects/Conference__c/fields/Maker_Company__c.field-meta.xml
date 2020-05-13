@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Maker_Company__c</fullName>
+    <externalId>false</externalId>
+    <formula>ISPICKVAL(Status__c, &quot;Active&quot;) 
+&amp;&amp;
+Company_Name__c != &quot;Premiere1&quot;
+&amp;&amp; 
+Company_Name__c != &quot;Premiere 1&quot;
+&amp;&amp; 
+Company_Name__c != &quot;CourtCall, LLC&quot; 
+&amp;&amp; 
+!CONTAINS(Company_Name__c, &quot;GOA &quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Maker Company</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

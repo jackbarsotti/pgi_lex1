@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Lead_UCaaS_Lead</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE_CODE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>LEAD.CONVERTED</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Q - PGi-Leads-UCaaS</label>
+    <language>en_US</language>
+    <queue>PGi_Lead_UCaaS</queue>
+    <sharedTo>
+        <roleAndSubordinatesInternal>Corporate_Marketing</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>PGi_Channel_C_Level</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

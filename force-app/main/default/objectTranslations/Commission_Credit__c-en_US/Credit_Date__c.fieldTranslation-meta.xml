@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is the date the credit record is being Created or issued.  primarily it will be the date the record is created --></help>
+    <label><!-- Credit Date --></label>
+    <name>Credit_Date__c</name>
+</CustomFieldTranslation>

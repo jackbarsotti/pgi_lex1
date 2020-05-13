@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Auditee --></label>
+    <name>Auditee__c</name>
+    <picklistValues>
+        <masterLabel>Charlene White</masterLabel>
+        <translation><!-- Charlene White --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Debbie Deegan</masterLabel>
+        <translation><!-- Debbie Deegan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Derwin Williams</masterLabel>
+        <translation><!-- Derwin Williams --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Erin Chambers</masterLabel>
+        <translation><!-- Erin Chambers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jana Brent</masterLabel>
+        <translation><!-- Jana Brent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Karla Wright</masterLabel>
+        <translation><!-- Karla Wright --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Leah Smith</masterLabel>
+        <translation><!-- Leah Smith --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Leila Welch</masterLabel>
+        <translation><!-- Leila Welch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Michael Foley</masterLabel>
+        <translation><!-- Michael Foley --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Michael Morgan</masterLabel>
+        <translation><!-- Michael Morgan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Robert Scott Bryant</masterLabel>
+        <translation><!-- Robert Scott Bryant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Steve Bodnar</masterLabel>
+        <translation><!-- Steve Bodnar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Susan Tabor</masterLabel>
+        <translation><!-- Susan Tabor --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

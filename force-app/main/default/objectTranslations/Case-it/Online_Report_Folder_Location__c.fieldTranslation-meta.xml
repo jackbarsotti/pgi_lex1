@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If this is an broken online report, in which folder is it located? --></help>
+    <label><!-- Online Report Folder Location --></label>
+    <name>Online_Report_Folder_Location__c</name>
+</CustomFieldTranslation>

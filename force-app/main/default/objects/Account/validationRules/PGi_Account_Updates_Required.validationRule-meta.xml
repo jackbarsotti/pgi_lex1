@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Account_Updates_Required</fullName>
+    <active>true</active>
+    <description>An open text-based action plan must be provided in the Account Updates field if the Account Risk rating is High or Extreme</description>
+    <errorConditionFormula>AND( 
+ISBLANK( Account_Updates__c), 
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+$User.Override_Validation_Rules__c = False,
+(
+ISPICKVAL(Account_Risk_Rating__c, &#39;HIGH&#39;)|| ISPICKVAL(Account_Risk_Rating__c, &#39;EXTREME&#39;)
+)
+)</errorConditionFormula>
+    <errorMessage>An open text-based action plan must be provided in the Account Updates field if the Account Risk rating is High or Extreme.</errorMessage>
+</ValidationRule>

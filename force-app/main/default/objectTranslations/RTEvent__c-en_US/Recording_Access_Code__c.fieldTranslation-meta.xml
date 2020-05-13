@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Recording Access Code --></label>
+    <name>Recording_Access_Code__c</name>
+    <relationshipLabel><!-- RT Events (Recording Access Code) --></relationshipLabel>
+</CustomFieldTranslation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Do you currently sell audio or web conferencing? --></help>
+    <label><!-- Currently sells audio or web conferecing --></label>
+    <name>Currently_sells_audio_or_web_conferecing__c</name>
+    <picklistValues>
+        <masterLabel>Audio</masterLabel>
+        <translation><!-- Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web</masterLabel>
+        <translation><!-- Web --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

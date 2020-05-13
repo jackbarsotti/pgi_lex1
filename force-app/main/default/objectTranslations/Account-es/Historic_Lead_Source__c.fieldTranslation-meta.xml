@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Historic Lead Source --></label>
+    <name>Historic_Lead_Source__c</name>
+    <picklistValues>
+        <masterLabel>Current Customer: Existing Contact</masterLabel>
+        <translation><!-- Current Customer: Existing Contact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Current Customer: New Division</masterLabel>
+        <translation><!-- Current Customer: New Division --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Activity: Referral From Client</masterLabel>
+        <translation><!-- Inbound Activity: Referral From Client --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Activity: Viewed Article/Media</masterLabel>
+        <translation><!-- Inbound Activity: Viewed Article/Media --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Activity: Viewed Event</masterLabel>
+        <translation><!-- Inbound Activity: Viewed Event --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Activity: Web Search - Other</masterLabel>
+        <translation><!-- Inbound Activity: Web Search - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Activty: Web Search - Google</masterLabel>
+        <translation><!-- Inbound Activty: Web Search - Google --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound Acitvity: Conference Presenter</masterLabel>
+        <translation><!-- Outbound Acitvity: Conference Presenter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound Acitvity: Previous Meeting</masterLabel>
+        <translation><!-- Outbound Acitvity: Previous Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound Acitvity: Referral From Client</masterLabel>
+        <translation><!-- Outbound Acitvity: Referral From Client --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound Acitvity: They Use A Competitor</masterLabel>
+        <translation><!-- Outbound Acitvity: They Use A Competitor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound Acitvity: Web Search</masterLabel>
+        <translation><!-- Outbound Acitvity: Web Search --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound Activity - Email Blast</masterLabel>
+        <translation><!-- Outbound Activity - Email Blast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound Activity - LexisNexis</masterLabel>
+        <translation><!-- Outbound Activity - LexisNexis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trade Show</masterLabel>
+        <translation><!-- Trade Show --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

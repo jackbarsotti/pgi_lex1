@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The URL of the Public Site used to host TaskRay Forms. --></help>
+    <label><!-- TaskRay Forms Public Site URL --></label>
+    <name>TASKRAY__trFormsPublicSiteURL__c</name>
+</CustomFieldTranslation>

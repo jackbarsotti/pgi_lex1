@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The Contract Product Verbiage that this Verbiage originated from. --></help>
+    <label><!-- Contract Product Verbiage --></label>
+    <name>Contract_Product_Verbiage__c</name>
+    <relationshipLabel><!-- PGi Contract Verbiage --></relationshipLabel>
+</CustomFieldTranslation>

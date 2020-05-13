@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rack_Room_Access_control_type__c</fullName>
+    <externalId>false</externalId>
+    <label>Rack/Room: Access control type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Card access - card issued by landlord/vendor</fullName>
+                <default>false</default>
+                <label>Card access - card issued by landlord/vendor</label>
+            </value>
+            <value>
+                <fullName>Card access - card issued by PGi</fullName>
+                <default>false</default>
+                <label>Card access - card issued by PGi</label>
+            </value>
+            <value>
+                <fullName>Escort only</fullName>
+                <default>false</default>
+                <label>Escort only</label>
+            </value>
+            <value>
+                <fullName>Guard/Escort must unlock cage, doors, and/or racks</fullName>
+                <default>false</default>
+                <label>Guard/Escort must unlock cage, doors, and/or racks</label>
+            </value>
+            <value>
+                <fullName>Sign for key with facility Security</fullName>
+                <default>false</default>
+                <label>Sign for key with facility Security</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

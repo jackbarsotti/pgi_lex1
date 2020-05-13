@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Healthcare_Segment__c</fullName>
+    <description>TP Field</description>
+    <externalId>false</externalId>
+    <label>Healthcare Segment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Clinical</fullName>
+                <default>false</default>
+                <label>Clinical</label>
+            </value>
+            <value>
+                <fullName>Communications</fullName>
+                <default>false</default>
+                <label>Communications</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Manufacturer</fullName>
+                <default>false</default>
+                <label>Manufacturer</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

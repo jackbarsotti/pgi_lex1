@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Direct_Recording_Line__c</fullName>
+    <externalId>false</externalId>
+    <formula>Operator_Assisted_Direct_Dial_Out_Rate_N__c</formula>
+    <label>Direct Recording Line</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>4</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

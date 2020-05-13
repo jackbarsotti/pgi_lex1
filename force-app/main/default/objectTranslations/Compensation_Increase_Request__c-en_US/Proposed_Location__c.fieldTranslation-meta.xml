@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Proposed Location --></label>
+    <name>Proposed_Location__c</name>
+    <relationshipLabel><!-- Compensation Increases (Proposed Location) --></relationshipLabel>
+</CustomFieldTranslation>

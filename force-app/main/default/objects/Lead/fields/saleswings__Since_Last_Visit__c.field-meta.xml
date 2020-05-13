@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>saleswings__Since_Last_Visit__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF(AND(DATEVALUE(saleswings__Last_Visit_Datetime__c) != DATE(1970,1,1),FLOOR(NOW() - saleswings__Last_Visit_Datetime__c)  = 1),TEXT( FLOOR(NOW() - saleswings__Last_Visit_Datetime__c))  &amp; &quot; day &quot;,&quot;&quot;) &amp; 
+IF(AND(DATEVALUE(saleswings__Last_Visit_Datetime__c) != DATE(1970,1,1),FLOOR(NOW() - saleswings__Last_Visit_Datetime__c)  &gt; 1),TEXT( FLOOR(NOW() - saleswings__Last_Visit_Datetime__c)) &amp; &quot; days &quot;,&quot;&quot;) 
+
+&amp; IF(AND(FLOOR(NOW() - saleswings__Last_Visit_Datetime__c) &lt; 1,FLOOR( MOD((NOW() - saleswings__Last_Visit_Datetime__c) * 24, 24 ) ) &gt; 1),TEXT( FLOOR( MOD( (NOW() - saleswings__Last_Visit_Datetime__c) * 24, 24 ) ) ) &amp; &quot; hours &quot;,&quot;&quot;) 
+&amp; IF(AND(FLOOR(NOW() - saleswings__Last_Visit_Datetime__c) &lt; 1,FLOOR( MOD( (NOW() - saleswings__Last_Visit_Datetime__c) * 24, 24 ) ) = 1),TEXT( FLOOR( MOD( (NOW() - saleswings__Last_Visit_Datetime__c) * 24, 24 ) ) ) &amp; &quot; hour &quot;,&quot;&quot;) 
+
+
+&amp; IF(AND(FLOOR( MOD((NOW() - saleswings__Last_Visit_Datetime__c) * 24, 24 ) ) &lt; 1,FLOOR( MOD( (NOW() - saleswings__Last_Visit_Datetime__c) * 24, 24 ) ) &lt; 1,ROUND( MOD( (NOW() - saleswings__Last_Visit_Datetime__c) * 24 * 60, 60 ),0) &gt; 1),TEXT( ROUND( MOD( (NOW() - saleswings__Last_Visit_Datetime__c) * 24 * 60, 60 ), 0 ) ) &amp; &quot; minutes &quot;,&quot;&quot;) 
+&amp; IF(AND(FLOOR( MOD((NOW() - saleswings__Last_Visit_Datetime__c) * 24, 24 ) ) &lt; 1,FLOOR( MOD( (NOW() - saleswings__Last_Visit_Datetime__c) * 24, 24 ) ) &lt; 1, ROUND( MOD( (NOW() - saleswings__Last_Visit_Datetime__c) * 24 * 60, 60 ),0) = 1),TEXT( ROUND( MOD( (NOW() - saleswings__Last_Visit_Datetime__c) * 24 * 60, 60 ), 0 ) ) &amp; &quot; minute &quot;,&quot;&quot;) 
+&amp;
+IF(OR(DATEVALUE(saleswings__Last_Visit_Datetime__c) = DATE(1970,1,1),saleswings__Last_Visit_Datetime__c &gt; NOW()),&quot;&quot;,&quot;ago&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>SW Since Last Visit</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

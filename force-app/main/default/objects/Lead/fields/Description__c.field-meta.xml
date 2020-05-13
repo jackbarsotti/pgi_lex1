@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description__c</fullName>
+    <description>Custom field used to map Lead Description to Opportunity Description. By default, SFDC only maps the Lead Description field to the Contact Description field. This will allow for it to also be mapped to the Opportunity via Lead Mapping. A workflow rule on Lead will update this custom field from the standard Description field.</description>
+    <externalId>false</externalId>
+    <label>Description</label>
+    <length>32000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

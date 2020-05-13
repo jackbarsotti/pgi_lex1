@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If &quot;Bill Account&quot; is unchecked, an explanation must be entered. --></help>
+    <label><!-- Account &quot;Not Billing&quot; Notes --></label>
+    <name>Account_Not_Billing_Notes__c</name>
+</CustomFieldTranslation>

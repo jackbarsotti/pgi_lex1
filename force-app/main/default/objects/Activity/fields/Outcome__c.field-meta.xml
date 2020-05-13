@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outcome__c</fullName>
+    <externalId>false</externalId>
+    <label>Outcome</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Dialogue</fullName>
+                <default>false</default>
+                <label>Dialogue</label>
+            </value>
+            <value>
+                <fullName>Left Message</fullName>
+                <default>false</default>
+                <label>Left Message</label>
+            </value>
+            <value>
+                <fullName>No Longer with Company</fullName>
+                <default>false</default>
+                <label>No Longer with Company</label>
+            </value>
+            <value>
+                <fullName>No Message Left</fullName>
+                <default>false</default>
+                <label>No Message Left</label>
+            </value>
+            <value>
+                <fullName>Non-Working Number</fullName>
+                <default>false</default>
+                <label>Non-Working Number</label>
+            </value>
+            <value>
+                <fullName>Dropped Call</fullName>
+                <default>false</default>
+                <label>Dropped Call</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Courtesy Call</fullName>
+                <default>false</default>
+                <label>Courtesy Call</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

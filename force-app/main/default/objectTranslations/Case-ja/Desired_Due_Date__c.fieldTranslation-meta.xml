@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please populate only if requesting a new process inside of the application. --></help>
+    <label><!-- Desired Due Date --></label>
+    <name>Desired_Due_Date__c</name>
+</CustomFieldTranslation>

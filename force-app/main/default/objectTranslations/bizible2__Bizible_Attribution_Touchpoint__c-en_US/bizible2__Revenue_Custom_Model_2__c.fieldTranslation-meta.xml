@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The amount distributed for this touchpoint based on your custom attribution model --></help>
+    <label><!-- Revenue - Custom Model --></label>
+    <name>bizible2__Revenue_Custom_Model_2__c</name>
+</CustomFieldTranslation>

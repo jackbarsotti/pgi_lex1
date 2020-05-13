@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>What_Requires_Review__c</fullName>
+    <externalId>false</externalId>
+    <label>What Requires Review?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>3rd Party Vendor Details Incomplete/Missing</fullName>
+                <default>false</default>
+                <label>3rd Party Vendor Details Incomplete/Missing</label>
+            </value>
+            <value>
+                <fullName>Call Example Incomplete/Incorrect</fullName>
+                <default>false</default>
+                <label>Call Example Incomplete/Incorrect</label>
+            </value>
+            <value>
+                <fullName>Case Comments Do Not Include Troubleshooting Steps</fullName>
+                <default>false</default>
+                <label>Case Comments Do Not Include Troubleshooting Steps</label>
+            </value>
+            <value>
+                <fullName>Case Comments Missing</fullName>
+                <default>false</default>
+                <label>Case Comments Missing</label>
+            </value>
+            <value>
+                <fullName>Chat/Email Interaction Transcript Missing</fullName>
+                <default>false</default>
+                <label>Chat/Email Interaction Transcript Missing</label>
+            </value>
+            <value>
+                <fullName>Client Follow Up Details Missing/Incomplete</fullName>
+                <default>false</default>
+                <label>Client Follow Up Details Missing/Incomplete</label>
+            </value>
+            <value>
+                <fullName>Closed Prematurely</fullName>
+                <default>false</default>
+                <label>Closed Prematurely</label>
+            </value>
+            <value>
+                <fullName>Defect Process Not Followed</fullName>
+                <default>false</default>
+                <label>Defect Process Not Followed</label>
+            </value>
+            <value>
+                <fullName>Did Not Follow Correct Escalation Path</fullName>
+                <default>false</default>
+                <label>Did Not Follow Correct Escalation Path</label>
+            </value>
+            <value>
+                <fullName>Exceptionally Well Executed Ticket</fullName>
+                <default>false</default>
+                <label>Exceptionally Well Executed Ticket</label>
+            </value>
+            <value>
+                <fullName>Failed to Attach Logs</fullName>
+                <default>false</default>
+                <label>Failed to Attach Logs</label>
+            </value>
+            <value>
+                <fullName>Field: Area of Focus</fullName>
+                <default>false</default>
+                <label>Field: Area of Focus</label>
+            </value>
+            <value>
+                <fullName>Field: Caller Name</fullName>
+                <default>false</default>
+                <label>Field: Caller Name</label>
+            </value>
+            <value>
+                <fullName>Field: Impact/Priority</fullName>
+                <default>false</default>
+                <label>Field: Impact/Priority</label>
+            </value>
+            <value>
+                <fullName>Field: Incident Date/Time</fullName>
+                <default>false</default>
+                <label>Field: Incident Date/Time</label>
+            </value>
+            <value>
+                <fullName>Field: Issue Description/Resolution Comments</fullName>
+                <default>false</default>
+                <label>Field: Issue Description/Resolution Comments</label>
+            </value>
+            <value>
+                <fullName>Field: PGi/Vendor at Fault</fullName>
+                <default>false</default>
+                <label>Field: PGi/Vendor at Fault</label>
+            </value>
+            <value>
+                <fullName>Field: Product</fullName>
+                <default>false</default>
+                <label>Field: Product</label>
+            </value>
+            <value>
+                <fullName>Field: Root Category/Issue/Cause</fullName>
+                <default>false</default>
+                <label>Field: Root Category/Issue/Cause</label>
+            </value>
+            <value>
+                <fullName>Field: Symptom Main/Sub Category</fullName>
+                <default>false</default>
+                <label>Field: Symptom Main/Sub Category</label>
+            </value>
+            <value>
+                <fullName>Field: Tracking Type</fullName>
+                <default>false</default>
+                <label>Field: Tracking Type</label>
+            </value>
+            <value>
+                <fullName>Focus Area Details Incomplete/Incorrect</fullName>
+                <default>false</default>
+                <label>Focus Area Details Incomplete/Incorrect</label>
+            </value>
+            <value>
+                <fullName>Incorrectly Parented</fullName>
+                <default>false</default>
+                <label>Incorrectly Parented</label>
+            </value>
+            <value>
+                <fullName>Multiple Tickets Should Have Been Created</fullName>
+                <default>false</default>
+                <label>Multiple Tickets Should Have Been Created</label>
+            </value>
+            <value>
+                <fullName>Other (Describe Below)</fullName>
+                <default>false</default>
+                <label>Other (Describe Below)</label>
+            </value>
+            <value>
+                <fullName>Pending Information Used Incorrectly</fullName>
+                <default>false</default>
+                <label>Pending Information Used Incorrectly</label>
+            </value>
+            <value>
+                <fullName>Possible Protocol Violation</fullName>
+                <default>false</default>
+                <label>Possible Protocol Violation</label>
+            </value>
+            <value>
+                <fullName>Service Identification/Conference Details Missing</fullName>
+                <default>false</default>
+                <label>Service Identification/Conference Details Missing</label>
+            </value>
+            <value>
+                <fullName>Service Not Marked as Restored at Correct Time</fullName>
+                <default>false</default>
+                <label>Service Not Marked as Restored at Correct Time</label>
+            </value>
+            <value>
+                <fullName>Should Have Been Resolved Without Escalation</fullName>
+                <default>false</default>
+                <label>Should Have Been Resolved Without Escalation</label>
+            </value>
+            <value>
+                <fullName>Template Not Used</fullName>
+                <default>false</default>
+                <label>Template Not Used</label>
+            </value>
+            <value>
+                <fullName>Ticket Logged in Error</fullName>
+                <default>false</default>
+                <label>Ticket Logged in Error</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

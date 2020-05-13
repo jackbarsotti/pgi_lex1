@@ -1,0 +1,96 @@
+<apex:page standardController="Account"  extensions="AccountCascadeSettingsController" showHeader="true">
+  <apex:stylesheet value="{!URLFOR($Resource.RTResources, 'css/jquery-ui.min.css')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery-ui.min.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/messaging.js')}"/>
+
+  <script>
+    $(document).ready(function(){
+      $.createConfirmBox("Would you like the Audio and Web Configuration change(s) to be applied to all existing access codes?", "dialog-modal", "OK", function(){
+        var args = new Array();
+        $.each($('input[class=checkBox]'), function(index,el){
+          if(el.checked)
+            args.push('true');
+          else
+            args.push('false');
+        });
+        cascadeSettings.apply(this,args);        
+      });    
+    });              
+  </script>
+  
+  <style>
+    .checkBox label{max-width: 250px; width: 250px; float: left}
+  </style>
+      
+  <apex:pageMessages />
+  <apex:detail relatedListHover="true" showChatter="false"/>            
+
+  <apex:form styleClass="dialog-modal">   
+    
+    <apex:outputPanel id="dialogPanel" layout="block">
+      <!-- Error Page Block-->
+      <apex:pageBlock rendered="{!NOT(ISNULL(errorMessages))}">      
+        <apex:pageBlockTable value="{!errorMessages}" var="e">
+          <apex:column >
+            <apex:facet name="header"><span>Access Code Update Errors:</span></apex:facet>
+            <a class="errorMessage" style="cursor: pointer" href="/{!e.id}" target="_blank">{!e.message}</a>
+          </apex:column>          
+        </apex:pageBlockTable>
+        <script>$('.dialog-modal').dialog('option', 'title', 'Errors...')</script>        
+        <script>$('.dialog-modal').dialog('option', 'buttons', [{text: 'Done', click: function(){$('.dialog-modal').dialog('close');}}]);</script>   
+      </apex:pageBlock>
+      
+      <!-- Dialog Text Page Block -->
+      <apex:pageBlock rendered="{!ISNULL(errorMessages)}">
+        <span>Select the items you wish to be applied from this account:</span>      
+        <br/>
+        <br/>
+        <div class="checkBox"><label for="accountCodePrompt">Account Code Prompt</label><input class="checkBox" id="accountCodePrompt"  type="checkbox"/></div>
+        <div class="checkBox"><label for="appShareAllowed">App Share Allowed</label><input class="checkBox" id="appShareAllowed"   type="checkbox"/></div>
+        <div class="checkBox"><label for="archivePeriod">Archive Period</label><input class="checkBox" id="archivePeriod"   type="checkbox"/></div>
+        <div class="checkBox"><label for="autoDeleteSlides">Auto Delete Slides</label><input class="checkBox" id="autoDeleteSlides"   type="checkbox"/></div>
+        <div class="checkBox"><label for="conferenceControlsAllowed">Conference Controls Allowed</label><input class="checkBox" id="conferenceControlsAllowed"   type="checkbox"/></div>
+        <div class="checkBox"><label for="coPresenterAllowed">Copresenter Allowed</label><input class="checkBox" id="coPresenterAllowed"   type="checkbox"/></div>
+        <div class="checkBox"><label for="entryAnnouncement">Entry Announcement</label><input class="checkBox" id="entryAnnouncement"   type="checkbox"/></div>
+        <div class="checkBox"><label for="internationalDialoutAllowed">International Dial Out Allowed</label><input class="checkBox" id="internationalDialoutAllowed"   type="checkbox"/></div>
+        <div class="checkBox"><label for="grantControlAllowed">Grant Control Allowed</label><input class="checkBox" id="grantControlAllowed"   type="checkbox"/></div>
+        <div class="checkBox"><label for="numberOfAudioPorts">Number of Audio Ports</label><input class="checkBox" id="numberOfAudioPorts"   type="checkbox"/></div>
+        <div class="checkBox"><label for="podcasting">Podcasting</label><input class="checkBox" id="podcasting"   type="checkbox"/></div>
+        <div class="checkBox"><label for="quickstartAllowed">Quickstart Allowed</label><input class="checkBox" id="quickstartAllowed"   type="checkbox"/></div>
+        <div class="checkBox"><label for="recordingAllowed">Recording Allowed</label><input class="checkBox" id="recordingAllowed" type="checkbox"/></div>
+        <div class="checkBox"><label for="recordingEditingAllowed">Recording Editing Allowed</label><input class="checkBox" id="recordingEditingAllowed"   type="checkbox"/></div>
+        <div class="checkBox"><label for="securityOption">Security Options</label><input class="checkBox" id="securityOption"   type="checkbox"/></div>
+        <div class="checkBox"><label for="slidePresentationAllowed">Slide Presentation Allowed</label><input class="checkBox" id="slidePresentationAllowed"   type="checkbox"/></div>
+        <div class="checkBox"><label for="voipAllowed">VoIP Allowed</label><input class="checkBox" id="voipAllowed"   type="checkbox"/></div>
+        <div class="checkBox"><label for="videoConferencingAllowed">Video Conferencing Allowed</label><input class="checkBox" id="videoConferencingAllowed"   type="checkbox"/></div>
+        <div class="checkBox"><label for="webConfAllowed">Web Conf Allowed</label><input class="checkBox" id="webConfAllowed"   type="checkbox"/></div>
+        <br/>
+        <span>Clicking OK will update <b>ALL active access codes</b> in this account!"</span>                       
+      </apex:pageBlock>   
+    </apex:outputPanel>
+    
+    <apex:actionFunction name="cascadeSettings" action="{!cascadeSettings}" immediate="true" rerender="hiddenBlock,dialogPanel">   
+      <apex:param name="accountCodePrompt" assignTo="{!accountCodePrompt}" value=""/>
+      <apex:param name="appShareAllowed" assignTo="{!appShareAllowed}" value=""/>
+      <apex:param name="archivePeriod" assignTo="{!archivePeriod}" value=""/>
+      <apex:param name="autoDeleteSlides" assignTo="{!autoDeleteSlides}" value=""/>
+      <apex:param name="conferenceControlsAllowed" assignTo="{!conferenceControlsAllowed}" value=""/>
+      <apex:param name="coPresenterAllowed" assignTo="{!coPresenterAllowed}" value=""/>
+      <apex:param name="entryAnnouncement" assignTo="{!entryAnnouncement}" value=""/>
+      <apex:param name="internationalDialoutAllowed" assignTo="{!internationalDialoutAllowed}" value=""/>
+      <apex:param name="grantControlAllowed" assignTo="{!grantControlAllowed}" value=""/>
+      <apex:param name="numberOfAudioPorts" assignTo="{!numberOfAudioPorts}" value=""/>
+      <apex:param name="podcasting" assignTo="{!podcasting}" value=""/>
+      <apex:param name="quickstartAllowed" assignTo="{!quickstartAllowed}" value=""/>
+      <apex:param name="recordingAllowed" assignTo="{!recordingAllowed}" value=""/>
+      <apex:param name="recordingEditingAllowed" assignTo="{!recordingEditingAllowed}" value=""/>
+      <apex:param name="securityOption" assignTo="{!securityOption}" value=""/>
+      <apex:param name="slidePresentationAllowed" assignTo="{!slidePresentationAllowed}" value=""/>
+      <apex:param name="voipAllowed" assignTo="{!voipAllowed}" value=""/>
+      <apex:param name="videoConferencingAllowed" assignTo="{!videoConferencingAllowed}" value=""/>
+      <apex:param name="webConfAllowed" assignTo="{!webConfAllowed}" value=""/>   
+    </apex:actionFunction>         
+    <apex:pageBlock id="hiddenBlock" rendered="false"></apex:pageBlock>    
+  </apex:form>            
+</apex:page>

@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Support Type --></label>
+    <name>Support_Type__c</name>
+    <picklistValues>
+        <masterLabel>100%</masterLabel>
+        <translation><!-- 100% --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>100% - 15 min</masterLabel>
+        <translation><!-- 100% - 15 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>100% - 30 min</masterLabel>
+        <translation><!-- 100% - 30 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>100% - 30/30</masterLabel>
+        <translation><!-- 100% - 30/30 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>100% - 30/30 - 15 min</masterLabel>
+        <translation><!-- 100% - 30/30 - 15 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>100% - 30/30 - 30 min</masterLabel>
+        <translation><!-- 100% - 30/30 - 30 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>100% - 30/30 - 45 min</masterLabel>
+        <translation><!-- 100% - 30/30 - 45 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>100% - 30/30 - 60 min</masterLabel>
+        <translation><!-- 100% - 30/30 - 60 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>100% - 45 min</masterLabel>
+        <translation><!-- 100% - 45 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>100% - 60 min</masterLabel>
+        <translation><!-- 100% - 60 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>100% - None</masterLabel>
+        <translation><!-- 100% - None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>15/15</masterLabel>
+        <translation><!-- 15/15 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>30/30</masterLabel>
+        <translation><!-- 30/30 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>30/30 - 15 min</masterLabel>
+        <translation><!-- 30/30 - 15 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>30/30 - 30 min</masterLabel>
+        <translation><!-- 30/30 - 30 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>30/30 - 45 min</masterLabel>
+        <translation><!-- 30/30 - 45 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>30/30 - 60 min</masterLabel>
+        <translation><!-- 30/30 - 60 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>30/30 - None</masterLabel>
+        <translation><!-- 30/30 - None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>30/60</masterLabel>
+        <translation><!-- 30/60 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>30/90</masterLabel>
+        <translation><!-- 30/90 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>300 Port</masterLabel>
+        <translation><!-- 300 Port --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>300 Port - None</masterLabel>
+        <translation><!-- 300 Port - None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>45/30</masterLabel>
+        <translation><!-- 45/30 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>45/60</masterLabel>
+        <translation><!-- 45/60 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>45/90</masterLabel>
+        <translation><!-- 45/90 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>60/100</masterLabel>
+        <translation><!-- 60/100 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>60/30</masterLabel>
+        <translation><!-- 60/30 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>60/60</masterLabel>
+        <translation><!-- 60/60 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>60/90</masterLabel>
+        <translation><!-- 60/90 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>90/100</masterLabel>
+        <translation><!-- 90/100 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>90/30</masterLabel>
+        <translation><!-- 90/30 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AUTO</masterLabel>
+        <translation><!-- AUTO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AUTO - 15 min</masterLabel>
+        <translation><!-- AUTO - 15 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio Only</masterLabel>
+        <translation><!-- Audio Only --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio Only - 15 min</masterLabel>
+        <translation><!-- Audio Only - 15 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio Only - 30 min</masterLabel>
+        <translation><!-- Audio Only - 30 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio Only - 45 min</masterLabel>
+        <translation><!-- Audio Only - 45 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio Only - 60 min</masterLabel>
+        <translation><!-- Audio Only - 60 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio Only - None</masterLabel>
+        <translation><!-- Audio Only - None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dry Run</masterLabel>
+        <translation><!-- Dry Run --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dry Run - None</masterLabel>
+        <translation><!-- Dry Run - None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Chat</masterLabel>
+        <translation><!-- Event Chat --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Chat - 15 min</masterLabel>
+        <translation><!-- Event Chat - 15 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Chat - 30 min</masterLabel>
+        <translation><!-- Event Chat - 30 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Chat - 45 min</masterLabel>
+        <translation><!-- Event Chat - 45 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Chat - 60 min</masterLabel>
+        <translation><!-- Event Chat - 60 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Chat - None</masterLabel>
+        <translation><!-- Event Chat - None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FEM - 100%</masterLabel>
+        <translation><!-- FEM - 100% --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FT - 100%</masterLabel>
+        <translation><!-- FT - 100% --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FT - 30 min</masterLabel>
+        <translation><!-- FT - 30 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FT - 30/30</masterLabel>
+        <translation><!-- FT - 30/30 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FT - 30/60</masterLabel>
+        <translation><!-- FT - 30/60 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FT - 45 min</masterLabel>
+        <translation><!-- FT - 45 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FT - 60 min</masterLabel>
+        <translation><!-- FT - 60 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FT - Audio</masterLabel>
+        <translation><!-- FT - Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FT - Simulive</masterLabel>
+        <translation><!-- FT - Simulive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FT AUTO</masterLabel>
+        <translation><!-- FT AUTO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FT AUTO - 15 min</masterLabel>
+        <translation><!-- FT AUTO - 15 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FT AUTO - 30 min</masterLabel>
+        <translation><!-- FT AUTO - 30 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FT AUTO - 45 min</masterLabel>
+        <translation><!-- FT AUTO - 45 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FT AUTO - 60 min</masterLabel>
+        <translation><!-- FT AUTO - 60 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FT SSBA - 100%</masterLabel>
+        <translation><!-- FT SSBA - 100% --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FT SSBA - 30/30</masterLabel>
+        <translation><!-- FT SSBA - 30/30 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>First Time</masterLabel>
+        <translation><!-- First Time --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>L3 - 100%</masterLabel>
+        <translation><!-- L3 - 100% --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>L3 - 30/30</masterLabel>
+        <translation><!-- L3 - 30/30 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>L3 - Dry Run</masterLabel>
+        <translation><!-- L3 - Dry Run --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>L3 - FT</masterLabel>
+        <translation><!-- L3 - FT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>L3 - Webex 100%</masterLabel>
+        <translation><!-- L3 - Webex 100% --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Level 3 - 15</masterLabel>
+        <translation><!-- Level 3 - 15 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Level 3 - 30</masterLabel>
+        <translation><!-- Level 3 - 30 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Level 3 - 45</masterLabel>
+        <translation><!-- Level 3 - 45 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Level 3 - 60</masterLabel>
+        <translation><!-- Level 3 - 60 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Level 3 Dry Run - None</masterLabel>
+        <translation><!-- Level 3 Dry Run - None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No EM</masterLabel>
+        <translation><!-- No EM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PLATINUM - 30 min</masterLabel>
+        <translation><!-- PLATINUM - 30 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PLATINUM - 45 min</masterLabel>
+        <translation><!-- PLATINUM - 45 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PLATINUM - 60 min</masterLabel>
+        <translation><!-- PLATINUM - 60 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Passive</masterLabel>
+        <translation><!-- Passive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Personal - Flex Time</masterLabel>
+        <translation><!-- Personal - Flex Time --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Personal - Lunch</masterLabel>
+        <translation><!-- Personal - Lunch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Personal - Meeting</masterLabel>
+        <translation><!-- Personal - Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Personal - Out of Office</masterLabel>
+        <translation><!-- Personal - Out of Office --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Personal - Working from Home</masterLabel>
+        <translation><!-- Personal - Working from Home --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Platinum - 30/60</masterLabel>
+        <translation><!-- Platinum - 30/60 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre-Record</masterLabel>
+        <translation><!-- Pre-Record --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Re-Record</masterLabel>
+        <translation><!-- Re-Record --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Re-Recording URLs</masterLabel>
+        <translation><!-- Re-Recording URLs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SSBA - 100%</masterLabel>
+        <translation><!-- SSBA - 100% --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SSBA - 15/15</masterLabel>
+        <translation><!-- SSBA - 15/15 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SSBA - 30/30</masterLabel>
+        <translation><!-- SSBA - 30/30 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SSBA - Dry Run</masterLabel>
+        <translation><!-- SSBA - Dry Run --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SSBA - FEM</masterLabel>
+        <translation><!-- SSBA - FEM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Simulive - 100%</masterLabel>
+        <translation><!-- Simulive - 100% --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Simulive - 15/15</masterLabel>
+        <translation><!-- Simulive - 15/15 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Subscription</masterLabel>
+        <translation><!-- Subscription --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Subscription - 15 min</masterLabel>
+        <translation><!-- Subscription - 15 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Subscription - 30 min</masterLabel>
+        <translation><!-- Subscription - 30 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Subscription - 45 min</masterLabel>
+        <translation><!-- Subscription - 45 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Subscription - 60 min</masterLabel>
+        <translation><!-- Subscription - 60 min --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Support</masterLabel>
+        <translation><!-- Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Training - 100%</masterLabel>
+        <translation><!-- Training - 100% --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcasting - 100%</masterLabel>
+        <translation><!-- Webcasting - 100% --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcasting - 30/30</masterLabel>
+        <translation><!-- Webcasting - 30/30 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcasting - 30/60</masterLabel>
+        <translation><!-- Webcasting - 30/60 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcasting - Dry Run</masterLabel>
+        <translation><!-- Webcasting - Dry Run --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcasting - Training</masterLabel>
+        <translation><!-- Webcasting - Training --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webinar Subscription</masterLabel>
+        <translation><!-- Webinar Subscription --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

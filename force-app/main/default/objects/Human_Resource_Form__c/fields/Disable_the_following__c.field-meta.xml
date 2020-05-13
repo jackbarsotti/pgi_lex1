@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disable_the_following__c</fullName>
+    <externalId>false</externalId>
+    <label>Disable the following:</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Adobe Creative Cloud License</fullName>
+                <default>false</default>
+                <label>Adobe Creative Cloud License</label>
+            </value>
+            <value>
+                <fullName>Airwatch</fullName>
+                <default>false</default>
+                <label>Airwatch</label>
+            </value>
+            <value>
+                <fullName>Fax2mail</fullName>
+                <default>false</default>
+                <label>Fax2mail</label>
+            </value>
+            <value>
+                <fullName>GlobalMeet</fullName>
+                <default>false</default>
+                <label>GlobalMeet</label>
+            </value>
+            <value>
+                <fullName>Jira</fullName>
+                <default>false</default>
+                <label>Jira</label>
+            </value>
+            <value>
+                <fullName>PGiTime</fullName>
+                <default>false</default>
+                <label>PGiTime</label>
+            </value>
+            <value>
+                <fullName>Premiere Login</fullName>
+                <default>false</default>
+                <label>Premiere Login</label>
+            </value>
+            <value>
+                <fullName>Salesforce</fullName>
+                <default>false</default>
+                <label>Salesforce</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

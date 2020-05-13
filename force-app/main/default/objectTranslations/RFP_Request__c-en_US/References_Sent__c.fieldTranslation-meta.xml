@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Sales is responsible for sending references to RFP Manager to include in the final response. --></help>
+    <label><!-- References Sent? --></label>
+    <name>References_Sent__c</name>
+    <picklistValues>
+        <masterLabel>No</masterLabel>
+        <translation><!-- No --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes</masterLabel>
+        <translation><!-- Yes --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

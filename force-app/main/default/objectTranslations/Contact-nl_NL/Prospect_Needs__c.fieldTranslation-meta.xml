@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Prospect Needs --></label>
+    <name>Prospect_Needs__c</name>
+    <picklistValues>
+        <masterLabel>Audio Conferencing</masterLabel>
+        <translation><!-- Audio Conferencing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Integrated Hybrid Audio</masterLabel>
+        <translation><!-- Integrated Hybrid Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Online Project Management Software</masterLabel>
+        <translation><!-- Online Project Management Software --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Operator Assisted Calls</masterLabel>
+        <translation><!-- Operator Assisted Calls --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Productivity App</masterLabel>
+        <translation><!-- Productivity App --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Acceleration Tool</masterLabel>
+        <translation><!-- Sales Acceleration Tool --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video Conferencing</masterLabel>
+        <translation><!-- Video Conferencing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web Conferencing</masterLabel>
+        <translation><!-- Web Conferencing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcasts/Webinars</masterLabel>
+        <translation><!-- Webcasts/Webinars --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

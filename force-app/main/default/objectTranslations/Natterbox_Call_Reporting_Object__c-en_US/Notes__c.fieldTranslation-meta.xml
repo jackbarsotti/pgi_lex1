@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If the user is using the Natterbox Voice Manager product, any notes entered into the CTI during the call will be placed here. --></help>
+    <label><!-- Notes --></label>
+    <name>Notes__c</name>
+</CustomFieldTranslation>

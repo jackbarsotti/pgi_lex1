@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partial_Clone</fullName>
+    <availability>online</availability>
+    <description>&amp;lea16street={!Lead.Street}&amp;lea16city={!Lead.City}&amp;lea16state={!Lead.State}&amp;lea16zip={!Lead.PostalCode}&amp;lea16country={!Lead.Country}&amp;lea5={!Lead.LeadSource}&amp;lea12={!Lead.Website}&amp;lea15={!Lead.NumberOfEmployees}&amp;00N30000008nu9T={!Lead.Referring_URL__c}&amp;00N30000008nu9d={!Lead.Omniture_Campaign_Code_Copy__c}&amp;00N30000008o6aG={!Lead.Ignore_Assignment_Rule__c}&amp;00N30000008nu8u={!Lead.Product_Interest__c}&amp;00N30000008pumh={!Lead.SFDC_18_ID__c}</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Partial Clone</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>/003/e?retURL=%2F{!Contact.Id}&amp;con4={!Account.Name}&amp;con4_lkid={!Account.Id}&amp;00N30000008oU66={!Contact.Department__c}&amp;con9={!Contact.LeadSource}&amp;00N30000008pIzg={!Contact.Contact_Department_Kanji__c}</url>
+</WebLink>

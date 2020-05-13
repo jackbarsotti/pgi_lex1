@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select 1-5 Both during pre-conf &amp; live call --></help>
+    <label><!-- Operator Pronunciation --></label>
+    <name>Operator_Pronunciation__c</name>
+</CustomFieldTranslation>

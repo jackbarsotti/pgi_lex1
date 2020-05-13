@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Event Charge Reason --></label>
+    <name>Event_Charge_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Additional Minutes</masterLabel>
+        <translation><!-- Additional Minutes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Additional Participants</masterLabel>
+        <translation><!-- Additional Participants --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio + Slides Webcast - Base Price</masterLabel>
+        <translation><!-- Audio + Slides Webcast - Base Price --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio + Slides Webcast / 150 Participants - Base Price</masterLabel>
+        <translation><!-- Audio + Slides Webcast / 150 Participants - Base Price --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Base Rate</masterLabel>
+        <translation><!-- Base Rate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Blackberry Charge - Event Manager Assisted - Recording</masterLabel>
+        <translation><!-- Blackberry Charge - Event Manager Assisted - Recording --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Blackberry Charge - Live Webinars</masterLabel>
+        <translation><!-- Blackberry Charge - Live Webinars --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Blackberry Charge - On Demand - Recording</masterLabel>
+        <translation><!-- Blackberry Charge - On Demand - Recording --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Blackberry Charge - Operator Assisted Live - Webinars</masterLabel>
+        <translation><!-- Blackberry Charge - Operator Assisted Live - Webinars --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Blackberry Charge - Vidyard Recording - Hosting</masterLabel>
+        <translation><!-- Blackberry Charge - Vidyard Recording - Hosting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Blackberry Charge - Webcasting</masterLabel>
+        <translation><!-- Blackberry Charge - Webcasting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cancellation</masterLabel>
+        <translation><!-- Cancellation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed Captioning</masterLabel>
+        <translation><!-- Closed Captioning --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Communication Line</masterLabel>
+        <translation><!-- Communication Line --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dress Rehearsal</masterLabel>
+        <translation><!-- Dress Rehearsal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dry Run</masterLabel>
+        <translation><!-- Dry Run --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Call Director</masterLabel>
+        <translation><!-- Event Call Director --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Extended Archive Hosting</masterLabel>
+        <translation><!-- Extended Archive Hosting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Full Event Moderation</masterLabel>
+        <translation><!-- Full Event Moderation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>International Toll-Free Add-On</masterLabel>
+        <translation><!-- International Toll-Free Add-On --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Platinum Elite Webcast / 150 Participants - Base Price</masterLabel>
+        <translation><!-- Platinum Elite Webcast / 150 Participants - Base Price --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Platinum Elite Webcast- Base Price</masterLabel>
+        <translation><!-- Platinum Elite Webcast- Base Price --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Platinum Plus Webcast - Base Price</masterLabel>
+        <translation><!-- Platinum Plus Webcast - Base Price --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Platinum Plus Webcast / 150 Participants - Base Price</masterLabel>
+        <translation><!-- Platinum Plus Webcast / 150 Participants - Base Price --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Premium Op-Assist Add-On</masterLabel>
+        <translation><!-- Premium Op-Assist Add-On --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Set-Up &amp; Customization</masterLabel>
+        <translation><!-- Set-Up &amp; Customization --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Support</masterLabel>
+        <translation><!-- Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transcription Services</masterLabel>
+        <translation><!-- Transcription Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unused Lines</masterLabel>
+        <translation><!-- Unused Lines --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

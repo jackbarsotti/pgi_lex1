@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Difference between the time the Service Restored check box was checked and the status was changed to Resolved (minus the time the case was in a Pending Client Action/Info Status) --></help>
+    <label><!-- Resolved OLA --></label>
+    <name>Resolved_OLA__c</name>
+</CustomFieldTranslation>

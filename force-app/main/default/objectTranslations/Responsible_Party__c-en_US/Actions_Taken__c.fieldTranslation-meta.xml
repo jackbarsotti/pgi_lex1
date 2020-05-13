@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Actions Taken --></label>
+    <name>Actions_Taken__c</name>
+    <picklistValues>
+        <masterLabel>Additional Training Complete</masterLabel>
+        <translation><!-- Additional Training Complete --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email Follow-Up with Agent Complete</masterLabel>
+        <translation><!-- Email Follow-Up with Agent Complete --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Verbal Follow-Up With Agent Complete</masterLabel>
+        <translation><!-- Verbal Follow-Up With Agent Complete --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

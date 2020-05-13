@@ -1,0 +1,71 @@
+<apex:page controller="Legacy_Reports_Control" sidebar="false"   docType="html-5.0"  id="Legacy_Reports" action="{!Page_Load}">
+
+<style type="text/css">
+
+.ams {
+border-collapse: collapse;
+border: 2px solid #007689;
+}
+
+.ams tr {
+background-color:rgb(146, 208, 80);
+
+}
+
+.ams td {
+border: 1px solid #007689;
+padding-right: 10px;
+text-align: left;
+}
+
+.red {
+background-color: #ff2222;
+
+}
+
+.blue {
+background-color: #00b0f0;
+}
+
+.yellow {
+background-color: #ffff00;
+}
+
+.orange {
+background-color: #FFA500;
+}
+
+.green {
+background-color: #c6e0b4;
+}
+
+.ams th {
+border: 1px solid #fff;
+font-weight: 300;
+background-color: #007689;
+text-align: left;
+color: #FFF;
+font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+}
+
+</style>
+
+<apex:form >    
+
+   <h1>Legacy Reports</h1><br/>
+   <apex:input type="date" value="{!ReportDate }"/><br/>
+   <apex:inputCheckbox value="{!Exclude}"  selected="false"/>Show excluded accounts<br/>
+   <apex:commandButton value="Attended Meeting Schedule" action="{!Run_Report}" />
+      <apex:commandButton value="Staffing Review" action="{!Run_Staffing_Review}" />
+       <!--     <apex:commandButton value="Unstaffed Calls Report" action="{!Run_Report}" />-->
+
+<hr/>
+
+
+
+
+<apex:outputText id="Result_Panel"  value="{!Result_Panel}" escape="false" ></apex:outputText>
+
+
+</apex:form>
+</apex:page>

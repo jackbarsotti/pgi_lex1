@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Area_of_Focus__c</fullName>
+    <description>This is for outbound prospecting</description>
+    <externalId>false</externalId>
+    <label>Area of Focus</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agency</fullName>
+                <default>false</default>
+                <label>Agency</label>
+            </value>
+            <value>
+                <fullName>Creative Services</fullName>
+                <default>false</default>
+                <label>Creative Services</label>
+            </value>
+            <value>
+                <fullName>In House Agency</fullName>
+                <default>false</default>
+                <label>In House Agency</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Industry_Cant_Be_Other_for_APAC</fullName>
+    <active>true</active>
+    <description>APAC users can not use &quot;Other&quot; value in the Industry per the Sales Mngt in that region</description>
+    <errorConditionFormula>AND(
+$User.Alias &lt;&gt; &quot;autocln&quot;,
+CONTAINS(RecordType.Name, &quot;PGi&quot;), 
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;,
+$User.Id  &lt;&gt; &quot;005300000071JU5&quot;,
+$User.Id  &lt;&gt; &quot;0051300000BBFm6&quot;,
+$User.Id  &lt;&gt; &quot;0051300000BAPRk&quot;,
+ISPICKVAL(Industry, &quot;Other&quot;),
+Owners_Region_Formula__c = &quot;APAC&quot;,
+$User.Override_Validation_Rules__c = False
+)</errorConditionFormula>
+    <errorDisplayField>Industry</errorDisplayField>
+    <errorMessage>Please select an Industry value that is not Other.</errorMessage>
+</ValidationRule>

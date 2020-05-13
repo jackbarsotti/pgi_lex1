@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Deployment - New:  New deploy&apos;t of SfB, a migration to a new version or switching on Voice from an existing deployment
+Deployment - Add Users: Expanding an existing deployment to more users
+Ad-Hoc : Deploy&apos;t has already taken place &amp; not above --></help>
+    <label><!-- Opportunity Type --></label>
+    <name>Opportunity_Type__c</name>
+    <picklistValues>
+        <masterLabel>Ad-hoc Modality Products &amp; Services</masterLabel>
+        <translation><!-- Ad-hoc Modality Products &amp; Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Applications Only</masterLabel>
+        <translation><!-- Applications Only --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deployment - Additional Users</masterLabel>
+        <translation><!-- Deployment - Additional Users --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deployment - New</masterLabel>
+        <translation><!-- Deployment - New --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deployment - Upgrade</masterLabel>
+        <translation><!-- Deployment - Upgrade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Development Only</masterLabel>
+        <translation><!-- Development Only --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Support Only</masterLabel>
+        <translation><!-- Support Only --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Third Party Only</masterLabel>
+        <translation><!-- Third Party Only --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

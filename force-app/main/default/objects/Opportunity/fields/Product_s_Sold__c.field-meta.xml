@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_s_Sold__c</fullName>
+    <externalId>false</externalId>
+    <label>Product(s) Sold</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Core - Audio</fullName>
+                <default>false</default>
+                <label>Core - Audio</label>
+            </value>
+            <value>
+                <fullName>Core - Collab</fullName>
+                <default>false</default>
+                <label>Core - Collab</label>
+            </value>
+            <value>
+                <fullName>Core - Webinar</fullName>
+                <default>false</default>
+                <label>Core - Webinar</label>
+            </value>
+            <value>
+                <fullName>FoxDen</fullName>
+                <default>false</default>
+                <label>FoxDen</label>
+            </value>
+            <value>
+                <fullName>FoxDen Connect</fullName>
+                <default>false</default>
+                <label>FoxDen Connect</label>
+            </value>
+            <value>
+                <fullName>Hosted Voice</fullName>
+                <default>false</default>
+                <label>Hosted Voice</label>
+            </value>
+            <value>
+                <fullName>Illuminate Replay</fullName>
+                <default>false</default>
+                <label>Illuminate Replay</label>
+            </value>
+            <value>
+                <fullName>S4B</fullName>
+                <default>false</default>
+                <label>S4B</label>
+            </value>
+            <value>
+                <fullName>S4B - Audio</fullName>
+                <default>false</default>
+                <label>S4B - Audio</label>
+            </value>
+            <value>
+                <fullName>Webcasting</fullName>
+                <default>false</default>
+                <label>Webcasting</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

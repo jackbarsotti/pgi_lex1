@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>iMC_Credit_Paid_is_Approved</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;,
+NOT(ISBLANK( Commission_Paid_Date__c )),
+OR( 
+ISPICKVAL( Status__c , &quot;Pending&quot;), 
+ISPICKVAL( Status__c , &quot;Approved&quot;) 
+))</errorConditionFormula>
+    <errorMessage>Status needs to be Approved &amp; Reviewed to be paid</errorMessage>
+</ValidationRule>

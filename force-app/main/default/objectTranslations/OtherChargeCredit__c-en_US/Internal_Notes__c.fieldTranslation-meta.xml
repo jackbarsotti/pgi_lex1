@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Insert details for internal review. This information is NOT printed on the invoice. --></help>
+    <label><!-- Internal Notes --></label>
+    <name>Internal_Notes__c</name>
+</CustomFieldTranslation>

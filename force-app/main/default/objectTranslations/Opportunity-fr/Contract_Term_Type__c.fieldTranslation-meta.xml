@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Contract Term Type --></label>
+    <name>Contract_Term_Type__c</name>
+    <picklistValues>
+        <masterLabel>Redlined</masterLabel>
+        <translation><!-- Redlined --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Standard Terms</masterLabel>
+        <translation><!-- Standard Terms --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

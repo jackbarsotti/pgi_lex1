@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mod_My_WonLastMonth</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>Margin__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>Sales_Region__c</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>OPPORTUNITY.LEAD_SOURCE</columns>
+    <columns>OPPORTUNITY.PROBABILITY</columns>
+    <columns>OPPORTUNITY.LAST_ACTIVITY</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>0121B000001hgIQ</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CLOSED</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CLOSE_DATE</field>
+        <operation>equals</operation>
+        <value>LAST_MONTH</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.WON</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>My Opportunities Won Last Month</label>
+    <language>en_US</language>
+    <sharedTo/>
+</ListView>

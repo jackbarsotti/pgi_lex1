@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Sum of Campaign Score and Lead Score --></help>
+    <label><!-- Total Lead Score --></label>
+    <name>leadScoring__Total_Lead_Score__c</name>
+</CustomFieldTranslation>

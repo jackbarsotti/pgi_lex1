@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Clone_As_Child</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Create a Clone Child FinReq</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>(
+{!REQUIRESCRIPT(&quot;/support/console/45.0/integration.js&quot;)}
+function() {
+let urlrecord = &quot;/{!Financial_Request__c.Id}/e?retURL=/{!Financial_Request__c.Id}&amp;clone=1&amp;CF00N1B00000BI9Xs_lkid={!Financial_Request__c.Id}&amp;CF00N1B00000BI9Xs={!Financial_Request__c.Name}&quot;;
+if (sforce.console.isInConsole()) {
+sforce.console.openPrimaryTab(null, urlrecord, true);
+} else {
+window.open(urlrecord, &quot;_self&quot;);
+}
+})();</url>
+</WebLink>

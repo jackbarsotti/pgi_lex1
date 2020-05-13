@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- You must enter the ID of the Client record, Names will not return any result. --></help>
+    <label><!-- Bill To Client --></label>
+    <name>Bill_To_Client__c</name>
+    <relationshipLabel><!-- Cases (Bill To Client) --></relationshipLabel>
+</CustomFieldTranslation>

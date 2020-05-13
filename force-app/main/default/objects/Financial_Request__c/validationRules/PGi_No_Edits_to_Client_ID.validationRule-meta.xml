@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_No_Edits_to_Client_ID</fullName>
+    <active>true</active>
+    <description>The PGi Client cannot be changed once the case is saved.</description>
+    <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+RecordType.Name = &#39;PGi-Request for Adjustment&#39;, 
+NOT( ISNEW() ),
+ISCHANGED( PGi_Client__c )
+)</errorConditionFormula>
+    <errorDisplayField>PGi_Client__c</errorDisplayField>
+    <errorMessage>The PGi Client cannot be changed once the case is saved.</errorMessage>
+</ValidationRule>

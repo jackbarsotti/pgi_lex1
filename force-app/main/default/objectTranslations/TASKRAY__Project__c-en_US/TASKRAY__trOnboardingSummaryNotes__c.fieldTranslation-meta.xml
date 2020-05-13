@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Use this field to store key information about a customer&apos;s onboarding that can be referenced throughout the customer&apos;s lifecycle. --></help>
+    <label><!-- Onboarding Summary Notes --></label>
+    <name>TASKRAY__trOnboardingSummaryNotes__c</name>
+</CustomFieldTranslation>

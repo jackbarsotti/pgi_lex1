@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>bizible2__Ad_Content__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The title, copy, and display URL from the ad</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The title, copy, and display URL from the ad</inlineHelpText>
+    <label>Ad Content</label>
+    <length>2048</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>4</visibleLines>
+</CustomField>

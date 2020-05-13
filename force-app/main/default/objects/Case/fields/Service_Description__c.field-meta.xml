@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Description__c</fullName>
+    <description>Talkpoint Support</description>
+    <externalId>false</externalId>
+    <label>Service Description</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Account - Access Issue</fullName>
+                <default>false</default>
+                <label>Account - Access Issue</label>
+            </value>
+            <value>
+                <fullName>Account - Cancellation</fullName>
+                <default>false</default>
+                <label>Account - Cancellation</label>
+            </value>
+            <value>
+                <fullName>Account - Extension</fullName>
+                <default>false</default>
+                <label>Account - Extension</label>
+            </value>
+            <value>
+                <fullName>Account - Maintenance Request</fullName>
+                <default>false</default>
+                <label>Account - Maintenance Request</label>
+            </value>
+            <value>
+                <fullName>Account Request - Internal</fullName>
+                <default>false</default>
+                <label>Account Request - Internal</label>
+            </value>
+            <value>
+                <fullName>Account Request - Paid</fullName>
+                <default>false</default>
+                <label>Account Request - Paid</label>
+            </value>
+            <value>
+                <fullName>Account Request - Trial</fullName>
+                <default>false</default>
+                <label>Account Request - Trial</label>
+            </value>
+            <value>
+                <fullName>Acquisitions - Setup/Selection</fullName>
+                <default>false</default>
+                <label>Acquisitions - Setup/Selection</label>
+            </value>
+            <value>
+                <fullName>API - Account</fullName>
+                <default>false</default>
+                <label>API - Account</label>
+            </value>
+            <value>
+                <fullName>API - Eloqua</fullName>
+                <default>false</default>
+                <label>API - Eloqua</label>
+            </value>
+            <value>
+                <fullName>API - Hubspot</fullName>
+                <default>false</default>
+                <label>API - Hubspot</label>
+            </value>
+            <value>
+                <fullName>API - Marketo</fullName>
+                <default>false</default>
+                <label>API - Marketo</label>
+            </value>
+            <value>
+                <fullName>API - Pardot</fullName>
+                <default>false</default>
+                <label>API - Pardot</label>
+            </value>
+            <value>
+                <fullName>API - Registration (Server Side)</fullName>
+                <default>false</default>
+                <label>API - Registration (Server Side)</label>
+            </value>
+            <value>
+                <fullName>API - Registration (SSO)</fullName>
+                <default>false</default>
+                <label>API - Registration (SSO)</label>
+            </value>
+            <value>
+                <fullName>API - Reporting</fullName>
+                <default>false</default>
+                <label>API - Reporting</label>
+            </value>
+            <value>
+                <fullName>API - Salesforce</fullName>
+                <default>false</default>
+                <label>API - Salesforce</label>
+            </value>
+            <value>
+                <fullName>Archive Extension</fullName>
+                <default>false</default>
+                <label>Archive Extension</label>
+            </value>
+            <value>
+                <fullName>Audience/Viewer Support</fullName>
+                <default>false</default>
+                <label>Audience/Viewer Support</label>
+            </value>
+            <value>
+                <fullName>Audience Capacity</fullName>
+                <default>false</default>
+                <label>Audience Capacity</label>
+            </value>
+            <value>
+                <fullName>Audience Chat</fullName>
+                <default>false</default>
+                <label>Audience Chat</label>
+            </value>
+            <value>
+                <fullName>Audience - Issue/Support</fullName>
+                <default>false</default>
+                <label>Audience - Issue/Support</label>
+            </value>
+            <value>
+                <fullName>Audience Phone Bridge - External</fullName>
+                <default>false</default>
+                <label>Audience Phone Bridge - External</label>
+            </value>
+            <value>
+                <fullName>Audience Phone Bridge - Integrated</fullName>
+                <default>false</default>
+                <label>Audience Phone Bridge - Integrated</label>
+            </value>
+            <value>
+                <fullName>Audience - Remove Registrant</fullName>
+                <default>false</default>
+                <label>Audience - Remove Registrant</label>
+            </value>
+            <value>
+                <fullName>Audio Quality Issue</fullName>
+                <default>false</default>
+                <label>Audio Quality Issue</label>
+            </value>
+            <value>
+                <fullName>Branding</fullName>
+                <default>false</default>
+                <label>Branding</label>
+            </value>
+            <value>
+                <fullName>Calendar Reminders</fullName>
+                <default>false</default>
+                <label>Calendar Reminders</label>
+            </value>
+            <value>
+                <fullName>Campaign Source Tracking</fullName>
+                <default>false</default>
+                <label>Campaign Source Tracking</label>
+            </value>
+            <value>
+                <fullName>Cancel/Reschedule</fullName>
+                <default>false</default>
+                <label>Cancel/Reschedule</label>
+            </value>
+            <value>
+                <fullName>Captioning</fullName>
+                <default>false</default>
+                <label>Captioning</label>
+            </value>
+            <value>
+                <fullName>Certificate</fullName>
+                <default>false</default>
+                <label>Certificate</label>
+            </value>
+            <value>
+                <fullName>Certification</fullName>
+                <default>false</default>
+                <label>Certification</label>
+            </value>
+            <value>
+                <fullName>Copy Event (Clone)</fullName>
+                <default>false</default>
+                <label>Copy Event (Clone)</label>
+            </value>
+            <value>
+                <fullName>Copy Media Files</fullName>
+                <default>false</default>
+                <label>Copy Media Files</label>
+            </value>
+            <value>
+                <fullName>Cost Center</fullName>
+                <default>false</default>
+                <label>Cost Center</label>
+            </value>
+            <value>
+                <fullName>Custom Player Tabs</fullName>
+                <default>false</default>
+                <label>Custom Player Tabs</label>
+            </value>
+            <value>
+                <fullName>Delay</fullName>
+                <default>false</default>
+                <label>Delay</label>
+            </value>
+            <value>
+                <fullName>Deleted Event</fullName>
+                <default>false</default>
+                <label>Deleted Event</label>
+            </value>
+            <value>
+                <fullName>Emails - Not Received</fullName>
+                <default>false</default>
+                <label>Emails - Not Received</label>
+            </value>
+            <value>
+                <fullName>Emails - Setup</fullName>
+                <default>false</default>
+                <label>Emails - Setup</label>
+            </value>
+            <value>
+                <fullName>Encoder - Issue</fullName>
+                <default>false</default>
+                <label>Encoder - Issue</label>
+            </value>
+            <value>
+                <fullName>Encoder - Setup</fullName>
+                <default>false</default>
+                <label>Encoder - Setup</label>
+            </value>
+            <value>
+                <fullName>Error Message</fullName>
+                <default>false</default>
+                <label>Error Message</label>
+            </value>
+            <value>
+                <fullName>Event Access</fullName>
+                <default>false</default>
+                <label>Event Access</label>
+            </value>
+            <value>
+                <fullName>Event Link/URL</fullName>
+                <default>false</default>
+                <label>Event Link/URL</label>
+            </value>
+            <value>
+                <fullName>Event Resources</fullName>
+                <default>false</default>
+                <label>Event Resources</label>
+            </value>
+            <value>
+                <fullName>Event Setup (General)</fullName>
+                <default>false</default>
+                <label>Event Setup (General)</label>
+            </value>
+            <value>
+                <fullName>Event Type - Setup/Selection</fullName>
+                <default>false</default>
+                <label>Event Type - Setup/Selection</label>
+            </value>
+            <value>
+                <fullName>Exit URL</fullName>
+                <default>false</default>
+                <label>Exit URL</label>
+            </value>
+            <value>
+                <fullName>Export to MP4</fullName>
+                <default>false</default>
+                <label>Export to MP4</label>
+            </value>
+            <value>
+                <fullName>Footer</fullName>
+                <default>false</default>
+                <label>Footer</label>
+            </value>
+            <value>
+                <fullName>GlobalMeet Collaborative Request</fullName>
+                <default>false</default>
+                <label>GlobalMeet Collaborative Request</label>
+            </value>
+            <value>
+                <fullName>GoToMeeting/Webinar Inquiry</fullName>
+                <default>false</default>
+                <label>GoToMeeting/Webinar Inquiry</label>
+            </value>
+            <value>
+                <fullName>Guest Admin Accounts - Issue</fullName>
+                <default>false</default>
+                <label>Guest Admin Accounts - Issue</label>
+            </value>
+            <value>
+                <fullName>Guest Admin Accounts - Setup</fullName>
+                <default>false</default>
+                <label>Guest Admin Accounts - Setup</label>
+            </value>
+            <value>
+                <fullName>Headshots</fullName>
+                <default>false</default>
+                <label>Headshots</label>
+            </value>
+            <value>
+                <fullName>HTML/Code</fullName>
+                <default>false</default>
+                <label>HTML/Code</label>
+            </value>
+            <value>
+                <fullName>HTML5/Flash</fullName>
+                <default>false</default>
+                <label>HTML5/Flash</label>
+            </value>
+            <value>
+                <fullName>Landing Page Content</fullName>
+                <default>false</default>
+                <label>Landing Page Content</label>
+            </value>
+            <value>
+                <fullName>Language Support</fullName>
+                <default>false</default>
+                <label>Language Support</label>
+            </value>
+            <value>
+                <fullName>Live Studio - Help</fullName>
+                <default>false</default>
+                <label>Live Studio - Help</label>
+            </value>
+            <value>
+                <fullName>Live Studio - Issue</fullName>
+                <default>false</default>
+                <label>Live Studio - Issue</label>
+            </value>
+            <value>
+                <fullName>Managed Event/Assist Services</fullName>
+                <default>false</default>
+                <label>Managed Event/Assist Services</label>
+            </value>
+            <value>
+                <fullName>Meeting Room View</fullName>
+                <default>false</default>
+                <label>Meeting Room View</label>
+            </value>
+            <value>
+                <fullName>Multicasting</fullName>
+                <default>false</default>
+                <label>Multicasting</label>
+            </value>
+            <value>
+                <fullName>Network Issue</fullName>
+                <default>false</default>
+                <label>Network Issue</label>
+            </value>
+            <value>
+                <fullName>On-Demand/Sim-Live Studio - Help</fullName>
+                <default>false</default>
+                <label>On-Demand/Sim-Live Studio - Help</label>
+            </value>
+            <value>
+                <fullName>On-Demand/Sim-Live Studio - Issue</fullName>
+                <default>false</default>
+                <label>On-Demand/Sim-Live Studio - Issue</label>
+            </value>
+            <value>
+                <fullName>Overlay Videos</fullName>
+                <default>false</default>
+                <label>Overlay Videos</label>
+            </value>
+            <value>
+                <fullName>PGi-related Inquiry</fullName>
+                <default>false</default>
+                <label>PGi-related Inquiry</label>
+            </value>
+            <value>
+                <fullName>Portal</fullName>
+                <default>false</default>
+                <label>Portal</label>
+            </value>
+            <value>
+                <fullName>Presenter Bridge - Issue</fullName>
+                <default>false</default>
+                <label>Presenter Bridge - Issue</label>
+            </value>
+            <value>
+                <fullName>Presenter Bridge - Setup</fullName>
+                <default>false</default>
+                <label>Presenter Bridge - Setup</label>
+            </value>
+            <value>
+                <fullName>Presenter Chat</fullName>
+                <default>false</default>
+                <label>Presenter Chat</label>
+            </value>
+            <value>
+                <fullName>Primary Media Clips</fullName>
+                <default>false</default>
+                <label>Primary Media Clips</label>
+            </value>
+            <value>
+                <fullName>Q&amp;A</fullName>
+                <default>false</default>
+                <label>Q&amp;A</label>
+            </value>
+            <value>
+                <fullName>Registration Admin Account</fullName>
+                <default>false</default>
+                <label>Registration Admin Account</label>
+            </value>
+            <value>
+                <fullName>Registration Setup</fullName>
+                <default>false</default>
+                <label>Registration Setup</label>
+            </value>
+            <value>
+                <fullName>Reports - Issue</fullName>
+                <default>false</default>
+                <label>Reports - Issue</label>
+            </value>
+            <value>
+                <fullName>Reports - Setup</fullName>
+                <default>false</default>
+                <label>Reports - Setup</label>
+            </value>
+            <value>
+                <fullName>Requirements - Audience</fullName>
+                <default>false</default>
+                <label>Requirements - Audience</label>
+            </value>
+            <value>
+                <fullName>Requirements - Presenters</fullName>
+                <default>false</default>
+                <label>Requirements - Presenters</label>
+            </value>
+            <value>
+                <fullName>Reset Event to Pre-Live</fullName>
+                <default>false</default>
+                <label>Reset Event to Pre-Live</label>
+            </value>
+            <value>
+                <fullName>Sales Related</fullName>
+                <default>false</default>
+                <label>Sales Related</label>
+            </value>
+            <value>
+                <fullName>Screen Sharing - Issue</fullName>
+                <default>false</default>
+                <label>Screen Sharing - Issue</label>
+            </value>
+            <value>
+                <fullName>Screen Sharing - Setup</fullName>
+                <default>false</default>
+                <label>Screen Sharing - Setup</label>
+            </value>
+            <value>
+                <fullName>Security - Issue</fullName>
+                <default>false</default>
+                <label>Security - Issue</label>
+            </value>
+            <value>
+                <fullName>Security - Setup</fullName>
+                <default>false</default>
+                <label>Security - Setup</label>
+            </value>
+            <value>
+                <fullName>Sim-Live - Issue</fullName>
+                <default>false</default>
+                <label>Sim-Live - Issue</label>
+            </value>
+            <value>
+                <fullName>Sim-Live - Setup</fullName>
+                <default>false</default>
+                <label>Sim-Live - Setup</label>
+            </value>
+            <value>
+                <fullName>Slides</fullName>
+                <default>false</default>
+                <label>Slides</label>
+            </value>
+            <value>
+                <fullName>Slides - Display Issue</fullName>
+                <default>false</default>
+                <label>Slides - Display Issue</label>
+            </value>
+            <value>
+                <fullName>Slides - Upload Issue</fullName>
+                <default>false</default>
+                <label>Slides - Upload Issue</label>
+            </value>
+            <value>
+                <fullName>Social Sharing</fullName>
+                <default>false</default>
+                <label>Social Sharing</label>
+            </value>
+            <value>
+                <fullName>Sponsor Logos</fullName>
+                <default>false</default>
+                <label>Sponsor Logos</label>
+            </value>
+            <value>
+                <fullName>Surveys</fullName>
+                <default>false</default>
+                <label>Surveys</label>
+            </value>
+            <value>
+                <fullName>Surveys - Not Displayed</fullName>
+                <default>false</default>
+                <label>Surveys - Not Displayed</label>
+            </value>
+            <value>
+                <fullName>System Test - Presenters</fullName>
+                <default>false</default>
+                <label>System Test - Presenters</label>
+            </value>
+            <value>
+                <fullName>System Test - Viewers</fullName>
+                <default>false</default>
+                <label>System Test - Viewers</label>
+            </value>
+            <value>
+                <fullName>System Update</fullName>
+                <default>false</default>
+                <label>System Update</label>
+            </value>
+            <value>
+                <fullName>Technical Support</fullName>
+                <default>false</default>
+                <label>Technical Support</label>
+            </value>
+            <value>
+                <fullName>Templates</fullName>
+                <default>false</default>
+                <label>Templates</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>VCU - Issue</fullName>
+                <default>false</default>
+                <label>VCU - Issue</label>
+            </value>
+            <value>
+                <fullName>VCU - Setup</fullName>
+                <default>false</default>
+                <label>VCU - Setup</label>
+            </value>
+            <value>
+                <fullName>Video Bridge - Issue</fullName>
+                <default>false</default>
+                <label>Video Bridge - Issue</label>
+            </value>
+            <value>
+                <fullName>Video Bridge - Setup</fullName>
+                <default>false</default>
+                <label>Video Bridge - Setup</label>
+            </value>
+            <value>
+                <fullName>Video - Playback Issue</fullName>
+                <default>false</default>
+                <label>Video - Playback Issue</label>
+            </value>
+            <value>
+                <fullName>Video - Quality Issue</fullName>
+                <default>false</default>
+                <label>Video - Quality Issue</label>
+            </value>
+            <value>
+                <fullName>Webcam - Issue</fullName>
+                <default>false</default>
+                <label>Webcam - Issue</label>
+            </value>
+            <value>
+                <fullName>Webcam - Setup</fullName>
+                <default>false</default>
+                <label>Webcam - Setup</label>
+            </value>
+            <value>
+                <fullName>Webcast Player - Issue</fullName>
+                <default>false</default>
+                <label>Webcast Player - Issue</label>
+            </value>
+            <value>
+                <fullName>Webcast Player - Setup</fullName>
+                <default>false</default>
+                <label>Webcast Player - Setup</label>
+            </value>
+            <value>
+                <fullName>WYSIWYG Editors</fullName>
+                <default>false</default>
+                <label>WYSIWYG Editors</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

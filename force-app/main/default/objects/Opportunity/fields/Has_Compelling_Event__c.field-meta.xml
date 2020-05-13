@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_Compelling_Event__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Management Criteria Met</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Management Criteria Met</inlineHelpText>
+    <label>A: Has Compelling Event</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

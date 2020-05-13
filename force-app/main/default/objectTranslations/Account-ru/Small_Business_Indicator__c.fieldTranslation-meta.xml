@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicates whether the Account is considered a small business --></help>
+    <label><!-- Small Business Indicator --></label>
+    <name>Small_Business_Indicator__c</name>
+</CustomFieldTranslation>

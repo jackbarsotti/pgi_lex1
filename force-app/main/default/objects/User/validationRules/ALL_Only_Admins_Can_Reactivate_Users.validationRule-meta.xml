@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALL_Only_Admins_Can_Reactivate_Users</fullName>
+    <active>true</active>
+    <description>Blocks any user who is not a system admin from reactivating users</description>
+    <errorConditionFormula>AND(
+IsActive = TRUE,
+PRIORVALUE(IsActive) = FALSE,
+$User.Profile_Name_Text__c &lt;&gt; &quot;System Administrator&quot;
+)</errorConditionFormula>
+    <errorMessage>Only System Administrators can reactivate a user</errorMessage>
+</ValidationRule>

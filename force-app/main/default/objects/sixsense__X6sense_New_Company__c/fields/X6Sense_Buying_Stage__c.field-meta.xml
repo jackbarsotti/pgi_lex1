@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X6Sense_Buying_Stage__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( sixsense__Buying_Stage__c  = &quot;Target&quot;, &quot;Cold&quot;,
+IF(sixsense__Buying_Stage__c = &quot;Awareness&quot;, &quot;Warm&quot;,  
+IF(sixsense__Buying_Stage__c = &quot;Consideration&quot;, &quot;Warm&quot;,  
+IF(sixsense__Buying_Stage__c = &quot;Decision&quot;, &quot;Hot&quot;,  
+IF(sixsense__Buying_Stage__c = &quot;Purchase&quot;, &quot;Hot&quot;, NULL)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>6Sense Buying Stage</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

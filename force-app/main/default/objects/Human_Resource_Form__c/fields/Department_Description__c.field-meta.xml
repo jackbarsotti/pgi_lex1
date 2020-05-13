@@ -1,0 +1,2209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Department_Description__c</fullName>
+    <externalId>false</externalId>
+    <label>Department Description</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Department_Group__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>010005-Client Services Ops COS</fullName>
+                <default>false</default>
+                <label>010005-Client Services Ops COS</label>
+            </value>
+            <value>
+                <fullName>010010-Client Services Ops KC</fullName>
+                <default>false</default>
+                <label>010010-Client Services Ops KC</label>
+            </value>
+            <value>
+                <fullName>010012-Client Services Ops-Remote</fullName>
+                <default>false</default>
+                <label>010012-Client Services Ops-Remote</label>
+            </value>
+            <value>
+                <fullName>010014-Service Support-Automated</fullName>
+                <default>false</default>
+                <label>010014-Service Support-Automated</label>
+            </value>
+            <value>
+                <fullName>010015-Service Support-Automated</fullName>
+                <default>false</default>
+                <label>010015-Service Support-Automated</label>
+            </value>
+            <value>
+                <fullName>010017-ReadyTalk Client Services</fullName>
+                <default>false</default>
+                <label>010017-ReadyTalk Client Services</label>
+            </value>
+            <value>
+                <fullName>010018-Client Services SoundPath</fullName>
+                <default>false</default>
+                <label>010018-Client Services SoundPath</label>
+            </value>
+            <value>
+                <fullName>010024-GlobalMeet Experts</fullName>
+                <default>false</default>
+                <label>010024-GlobalMeet Experts</label>
+            </value>
+            <value>
+                <fullName>010025-Service Support Attended</fullName>
+                <default>false</default>
+                <label>010025-Service Support Attended</label>
+            </value>
+            <value>
+                <fullName>010027-GlobalMeet Experts</fullName>
+                <default>false</default>
+                <label>010027-GlobalMeet Experts</label>
+            </value>
+            <value>
+                <fullName>010029-Service Support-Attended</fullName>
+                <default>false</default>
+                <label>010029-Service Support-Attended</label>
+            </value>
+            <value>
+                <fullName>010520-Client Services-Canada</fullName>
+                <default>false</default>
+                <label>010520-Client Services-Canada</label>
+            </value>
+            <value>
+                <fullName>010615-TalkPoint US Client Service</fullName>
+                <default>false</default>
+                <label>010615-TalkPoint US Client Service</label>
+            </value>
+            <value>
+                <fullName>010622-Central Desktop Client Services</fullName>
+                <default>false</default>
+                <label>010622-Central Desktop Client Services</label>
+            </value>
+            <value>
+                <fullName>011005-Client Services Reservations COS</fullName>
+                <default>false</default>
+                <label>011005-Client Services Reservations COS</label>
+            </value>
+            <value>
+                <fullName>011006-Client Services Res COS</fullName>
+                <default>false</default>
+                <label>011006-Client Services Res COS</label>
+            </value>
+            <value>
+                <fullName>011011-Client Services Res KC</fullName>
+                <default>false</default>
+                <label>011011-Client Services Res KC</label>
+            </value>
+            <value>
+                <fullName>011400-Client Svc Enhanced Svcs</fullName>
+                <default>false</default>
+                <label>011400-Client Svc Enhanced Svcs</label>
+            </value>
+            <value>
+                <fullName>011401-Clerical</fullName>
+                <default>false</default>
+                <label>011401-Clerical</label>
+            </value>
+            <value>
+                <fullName>011402-Clerical</fullName>
+                <default>false</default>
+                <label>011402-Clerical</label>
+            </value>
+            <value>
+                <fullName>011700-Event Services</fullName>
+                <default>false</default>
+                <label>011700-Event Services</label>
+            </value>
+            <value>
+                <fullName>011701-Event Services</fullName>
+                <default>false</default>
+                <label>011701-Event Services</label>
+            </value>
+            <value>
+                <fullName>011702-ReadyTalk Event Services</fullName>
+                <default>false</default>
+                <label>011702-ReadyTalk Event Services</label>
+            </value>
+            <value>
+                <fullName>011900-Client Services Management</fullName>
+                <default>false</default>
+                <label>011900-Client Services Management</label>
+            </value>
+            <value>
+                <fullName>011901-Client Services Mgmt</fullName>
+                <default>false</default>
+                <label>011901-Client Services Mgmt</label>
+            </value>
+            <value>
+                <fullName>011905-Training and Quality</fullName>
+                <default>false</default>
+                <label>011905-Training and Quality</label>
+            </value>
+            <value>
+                <fullName>011906-Training and Quality</fullName>
+                <default>false</default>
+                <label>011906-Training and Quality</label>
+            </value>
+            <value>
+                <fullName>011910-Global CS Management</fullName>
+                <default>false</default>
+                <label>011910-Global CS Management</label>
+            </value>
+            <value>
+                <fullName>011911-Global CS Management</fullName>
+                <default>false</default>
+                <label>011911-Global CS Management</label>
+            </value>
+            <value>
+                <fullName>012005-Audio Operations US</fullName>
+                <default>false</default>
+                <label>012005-Audio Operations US</label>
+            </value>
+            <value>
+                <fullName>012010-Network and System Admin</fullName>
+                <default>false</default>
+                <label>012010-Network and System Admin</label>
+            </value>
+            <value>
+                <fullName>012012-Database Operations</fullName>
+                <default>false</default>
+                <label>012012-Database Operations</label>
+            </value>
+            <value>
+                <fullName>012013-Database Operations</fullName>
+                <default>false</default>
+                <label>012013-Database Operations</label>
+            </value>
+            <value>
+                <fullName>012015-NPD and Telco and Fraud</fullName>
+                <default>false</default>
+                <label>012015-NPD and Telco and Fraud</label>
+            </value>
+            <value>
+                <fullName>012021-NOC Team</fullName>
+                <default>false</default>
+                <label>012021-NOC Team</label>
+            </value>
+            <value>
+                <fullName>012070-Tier 2 NA</fullName>
+                <default>false</default>
+                <label>012070-Tier 2 NA</label>
+            </value>
+            <value>
+                <fullName>012520-Operations-Canada</fullName>
+                <default>false</default>
+                <label>012520-Operations-Canada</label>
+            </value>
+            <value>
+                <fullName>012615-TalkPoint US Operations</fullName>
+                <default>false</default>
+                <label>012615-TalkPoint US Operations</label>
+            </value>
+            <value>
+                <fullName>014101-SaaS Operations</fullName>
+                <default>false</default>
+                <label>014101-SaaS Operations</label>
+            </value>
+            <value>
+                <fullName>014200-System Administration US</fullName>
+                <default>false</default>
+                <label>014200-System Administration US</label>
+            </value>
+            <value>
+                <fullName>030102-Customer Marketing</fullName>
+                <default>false</default>
+                <label>030102-Customer Marketing</label>
+            </value>
+            <value>
+                <fullName>030115-Commercial Accounts Managed Account</fullName>
+                <default>false</default>
+                <label>030115-Commercial Accounts Managed Account</label>
+            </value>
+            <value>
+                <fullName>030120-ReadyTalk Field Sales</fullName>
+                <default>false</default>
+                <label>030120-ReadyTalk Field Sales</label>
+            </value>
+            <value>
+                <fullName>030122-ISO-SMB Sales</fullName>
+                <default>false</default>
+                <label>030122-ISO-SMB Sales</label>
+            </value>
+            <value>
+                <fullName>030370-Global Carrier</fullName>
+                <default>false</default>
+                <label>030370-Global Carrier</label>
+            </value>
+            <value>
+                <fullName>030371-Global Carrier</fullName>
+                <default>false</default>
+                <label>030371-Global Carrier</label>
+            </value>
+            <value>
+                <fullName>030401-Commercial Accounts</fullName>
+                <default>false</default>
+                <label>030401-Commercial Accounts</label>
+            </value>
+            <value>
+                <fullName>030403-Demand Gen Marketing</fullName>
+                <default>false</default>
+                <label>030403-Demand Gen Marketing</label>
+            </value>
+            <value>
+                <fullName>030405-Commercial Accounts</fullName>
+                <default>false</default>
+                <label>030405-Commercial Accounts</label>
+            </value>
+            <value>
+                <fullName>031000-Tier One</fullName>
+                <default>false</default>
+                <label>031000-Tier One</label>
+            </value>
+            <value>
+                <fullName>031002-Strategic Project</fullName>
+                <default>false</default>
+                <label>031002-Strategic Project</label>
+            </value>
+            <value>
+                <fullName>031003-Tier One</fullName>
+                <default>false</default>
+                <label>031003-Tier One</label>
+            </value>
+            <value>
+                <fullName>031004-Strategic Project</fullName>
+                <default>false</default>
+                <label>031004-Strategic Project</label>
+            </value>
+            <value>
+                <fullName>031007-Field Sales-Soundpath</fullName>
+                <default>false</default>
+                <label>031007-Field Sales-Soundpath</label>
+            </value>
+            <value>
+                <fullName>031009-Field Sales-Southeast</fullName>
+                <default>false</default>
+                <label>031009-Field Sales-Southeast</label>
+            </value>
+            <value>
+                <fullName>031010-Field Sales-Soundpath</fullName>
+                <default>false</default>
+                <label>031010-Field Sales-Soundpath</label>
+            </value>
+            <value>
+                <fullName>031213-Customer Success Team-GSM</fullName>
+                <default>false</default>
+                <label>031213-Customer Success Team-GSM</label>
+            </value>
+            <value>
+                <fullName>031214-Customer Success Team</fullName>
+                <default>false</default>
+                <label>031214-Customer Success Team</label>
+            </value>
+            <value>
+                <fullName>031215-Customer Success Team-GSM</fullName>
+                <default>false</default>
+                <label>031215-Customer Success Team-GSM</label>
+            </value>
+            <value>
+                <fullName>031216-Customer Success Team</fullName>
+                <default>false</default>
+                <label>031216-Customer Success Team</label>
+            </value>
+            <value>
+                <fullName>031218-CST-Service Delivery Project</fullName>
+                <default>false</default>
+                <label>031218-CST-Service Delivery Project</label>
+            </value>
+            <value>
+                <fullName>031219-CST-Service Delivery Project</fullName>
+                <default>false</default>
+                <label>031219-CST-Service Delivery Project</label>
+            </value>
+            <value>
+                <fullName>031224-Business Devl-Conferencing</fullName>
+                <default>false</default>
+                <label>031224-Business Devl-Conferencing</label>
+            </value>
+            <value>
+                <fullName>031225-Field Sales-Central</fullName>
+                <default>false</default>
+                <label>031225-Field Sales-Central</label>
+            </value>
+            <value>
+                <fullName>031226-Sales Enablement</fullName>
+                <default>false</default>
+                <label>031226-Sales Enablement</label>
+            </value>
+            <value>
+                <fullName>031228-Field Sales-Central</fullName>
+                <default>false</default>
+                <label>031228-Field Sales-Central</label>
+            </value>
+            <value>
+                <fullName>031233-Mktg-Sales Enablement &amp; Train</fullName>
+                <default>false</default>
+                <label>031233-Mktg-Sales Enablement &amp; Train</label>
+            </value>
+            <value>
+                <fullName>031615-TalkPoint US Sales</fullName>
+                <default>false</default>
+                <label>031615-TalkPoint US Sales</label>
+            </value>
+            <value>
+                <fullName>031617-Central Desktop Sales</fullName>
+                <default>false</default>
+                <label>031617-Central Desktop Sales</label>
+            </value>
+            <value>
+                <fullName>032020-Commercial Accounts-Canada</fullName>
+                <default>false</default>
+                <label>032020-Commercial Accounts-Canada</label>
+            </value>
+            <value>
+                <fullName>034005-Sales Ops-Cust Intelligence</fullName>
+                <default>false</default>
+                <label>034005-Sales Ops-Cust Intelligence</label>
+            </value>
+            <value>
+                <fullName>034007-Sales Ops-Deal Desk</fullName>
+                <default>false</default>
+                <label>034007-Sales Ops-Deal Desk</label>
+            </value>
+            <value>
+                <fullName>034011-Sales Ops-Deal Desk</fullName>
+                <default>false</default>
+                <label>034011-Sales Ops-Deal Desk</label>
+            </value>
+            <value>
+                <fullName>034012-CRM Operations &amp; Technology</fullName>
+                <default>false</default>
+                <label>034012-CRM Operations &amp; Technology</label>
+            </value>
+            <value>
+                <fullName>034120-Customer Success Team-Canada</fullName>
+                <default>false</default>
+                <label>034120-Customer Success Team-Canada</label>
+            </value>
+            <value>
+                <fullName>037002-Partner Marketing</fullName>
+                <default>false</default>
+                <label>037002-Partner Marketing</label>
+            </value>
+            <value>
+                <fullName>037003-Global Partner</fullName>
+                <default>false</default>
+                <label>037003-Global Partner</label>
+            </value>
+            <value>
+                <fullName>037006-Global Partner</fullName>
+                <default>false</default>
+                <label>037006-Global Partner</label>
+            </value>
+            <value>
+                <fullName>037017-ReadyTalk Partner Sales</fullName>
+                <default>false</default>
+                <label>037017-ReadyTalk Partner Sales</label>
+            </value>
+            <value>
+                <fullName>038020-Global Partner-Canada</fullName>
+                <default>false</default>
+                <label>038020-Global Partner-Canada</label>
+            </value>
+            <value>
+                <fullName>040102-Marketing Intelligence</fullName>
+                <default>false</default>
+                <label>040102-Marketing Intelligence</label>
+            </value>
+            <value>
+                <fullName>040103-Product Marketing</fullName>
+                <default>false</default>
+                <label>040103-Product Marketing</label>
+            </value>
+            <value>
+                <fullName>040106-Product Marketing</fullName>
+                <default>false</default>
+                <label>040106-Product Marketing</label>
+            </value>
+            <value>
+                <fullName>040501-Marketing Communications</fullName>
+                <default>false</default>
+                <label>040501-Marketing Communications</label>
+            </value>
+            <value>
+                <fullName>040517-ReadyTalk Marketing</fullName>
+                <default>false</default>
+                <label>040517-ReadyTalk Marketing</label>
+            </value>
+            <value>
+                <fullName>060004-Back Office Dev</fullName>
+                <default>false</default>
+                <label>060004-Back Office Dev</label>
+            </value>
+            <value>
+                <fullName>060005-Back Office Dev</fullName>
+                <default>false</default>
+                <label>060005-Back Office Dev</label>
+            </value>
+            <value>
+                <fullName>060007-US Hub &amp; Toolbar</fullName>
+                <default>false</default>
+                <label>060007-US Hub &amp; Toolbar</label>
+            </value>
+            <value>
+                <fullName>060008-Project Management</fullName>
+                <default>false</default>
+                <label>060008-Project Management</label>
+            </value>
+            <value>
+                <fullName>060010-Audio Dev</fullName>
+                <default>false</default>
+                <label>060010-Audio Dev</label>
+            </value>
+            <value>
+                <fullName>060016-Third Party R&amp;D</fullName>
+                <default>false</default>
+                <label>060016-Third Party R&amp;D</label>
+            </value>
+            <value>
+                <fullName>060060-QA</fullName>
+                <default>false</default>
+                <label>060060-QA</label>
+            </value>
+            <value>
+                <fullName>060061-QA</fullName>
+                <default>false</default>
+                <label>060061-QA</label>
+            </value>
+            <value>
+                <fullName>060170-UCaaS R&amp;D</fullName>
+                <default>false</default>
+                <label>060170-UCaaS R&amp;D</label>
+            </value>
+            <value>
+                <fullName>060171-UCaaS R&amp;D</fullName>
+                <default>false</default>
+                <label>060171-UCaaS R&amp;D</label>
+            </value>
+            <value>
+                <fullName>060520-R&amp;D-Canada</fullName>
+                <default>false</default>
+                <label>060520-R&amp;D-Canada</label>
+            </value>
+            <value>
+                <fullName>060615-TalkPoint US R&amp;D</fullName>
+                <default>false</default>
+                <label>060615-TalkPoint US R&amp;D</label>
+            </value>
+            <value>
+                <fullName>061000-Product Mgmt</fullName>
+                <default>false</default>
+                <label>061000-Product Mgmt</label>
+            </value>
+            <value>
+                <fullName>061001-GTM</fullName>
+                <default>false</default>
+                <label>061001-GTM</label>
+            </value>
+            <value>
+                <fullName>061005-CS Dev</fullName>
+                <default>false</default>
+                <label>061005-CS Dev</label>
+            </value>
+            <value>
+                <fullName>061006-SaaS Dev</fullName>
+                <default>false</default>
+                <label>061006-SaaS Dev</label>
+            </value>
+            <value>
+                <fullName>061007-SaaS Ops</fullName>
+                <default>false</default>
+                <label>061007-SaaS Ops</label>
+            </value>
+            <value>
+                <fullName>061009-SaaS Dev</fullName>
+                <default>false</default>
+                <label>061009-SaaS Dev</label>
+            </value>
+            <value>
+                <fullName>061010-Product Mgmt</fullName>
+                <default>false</default>
+                <label>061010-Product Mgmt</label>
+            </value>
+            <value>
+                <fullName>061017-Saas Ops</fullName>
+                <default>false</default>
+                <label>061017-Saas Ops</label>
+            </value>
+            <value>
+                <fullName>061115-Systems Operations</fullName>
+                <default>false</default>
+                <label>061115-Systems Operations</label>
+            </value>
+            <value>
+                <fullName>061116-Database Development</fullName>
+                <default>false</default>
+                <label>061116-Database Development</label>
+            </value>
+            <value>
+                <fullName>061117-Architecture and Engineering</fullName>
+                <default>false</default>
+                <label>061117-Architecture and Engineering</label>
+            </value>
+            <value>
+                <fullName>061118-SaaS Architecture &amp; Support</fullName>
+                <default>false</default>
+                <label>061118-SaaS Architecture &amp; Support</label>
+            </value>
+            <value>
+                <fullName>061120-Database Development</fullName>
+                <default>false</default>
+                <label>061120-Database Development</label>
+            </value>
+            <value>
+                <fullName>061121-Architecture and Engineering</fullName>
+                <default>false</default>
+                <label>061121-Architecture and Engineering</label>
+            </value>
+            <value>
+                <fullName>069105-Design</fullName>
+                <default>false</default>
+                <label>069105-Design</label>
+            </value>
+            <value>
+                <fullName>069106-Design</fullName>
+                <default>false</default>
+                <label>069106-Design</label>
+            </value>
+            <value>
+                <fullName>070005-Corporate Finance-Accounting</fullName>
+                <default>false</default>
+                <label>070005-Corporate Finance-Accounting</label>
+            </value>
+            <value>
+                <fullName>070007-Finance &amp; Accounting</fullName>
+                <default>false</default>
+                <label>070007-Finance &amp; Accounting</label>
+            </value>
+            <value>
+                <fullName>070008-Billing-PTEKI</fullName>
+                <default>false</default>
+                <label>070008-Billing-PTEKI</label>
+            </value>
+            <value>
+                <fullName>070010-Finance &amp; Accounting-ATSLT</fullName>
+                <default>false</default>
+                <label>070010-Finance &amp; Accounting-ATSLT</label>
+            </value>
+            <value>
+                <fullName>070012-Commission G&amp;A</fullName>
+                <default>false</default>
+                <label>070012-Commission G&amp;A</label>
+            </value>
+            <value>
+                <fullName>070015-Tax</fullName>
+                <default>false</default>
+                <label>070015-Tax</label>
+            </value>
+            <value>
+                <fullName>070017-ReadyTalk Finance</fullName>
+                <default>false</default>
+                <label>070017-ReadyTalk Finance</label>
+            </value>
+            <value>
+                <fullName>070020-Treasury</fullName>
+                <default>false</default>
+                <label>070020-Treasury</label>
+            </value>
+            <value>
+                <fullName>070025-Billing Support &amp; Solutions</fullName>
+                <default>false</default>
+                <label>070025-Billing Support &amp; Solutions</label>
+            </value>
+            <value>
+                <fullName>070030-Credit Collections &amp; AR</fullName>
+                <default>false</default>
+                <label>070030-Credit Collections &amp; AR</label>
+            </value>
+            <value>
+                <fullName>070032-RollCall Collections</fullName>
+                <default>false</default>
+                <label>070032-RollCall Collections</label>
+            </value>
+            <value>
+                <fullName>070050-Internal Audit</fullName>
+                <default>false</default>
+                <label>070050-Internal Audit</label>
+            </value>
+            <value>
+                <fullName>071002-Exec Admin Allocated</fullName>
+                <default>false</default>
+                <label>071002-Exec Admin Allocated</label>
+            </value>
+            <value>
+                <fullName>071020-Corporate Procurement</fullName>
+                <default>false</default>
+                <label>071020-Corporate Procurement</label>
+            </value>
+            <value>
+                <fullName>071615-TalkPoint US G&amp;A</fullName>
+                <default>false</default>
+                <label>071615-TalkPoint US G&amp;A</label>
+            </value>
+            <value>
+                <fullName>072000-H R Allocated</fullName>
+                <default>false</default>
+                <label>072000-H R Allocated</label>
+            </value>
+            <value>
+                <fullName>073005-Investor Relations</fullName>
+                <default>false</default>
+                <label>073005-Investor Relations</label>
+            </value>
+            <value>
+                <fullName>073010-Legal</fullName>
+                <default>false</default>
+                <label>073010-Legal</label>
+            </value>
+            <value>
+                <fullName>073011-Legal Allocated</fullName>
+                <default>false</default>
+                <label>073011-Legal Allocated</label>
+            </value>
+            <value>
+                <fullName>073016-Facilities Allocated</fullName>
+                <default>false</default>
+                <label>073016-Facilities Allocated</label>
+            </value>
+            <value>
+                <fullName>073035-R&amp;D Exec</fullName>
+                <default>false</default>
+                <label>073035-R&amp;D Exec</label>
+            </value>
+            <value>
+                <fullName>073037-Global IT Development</fullName>
+                <default>false</default>
+                <label>073037-Global IT Development</label>
+            </value>
+            <value>
+                <fullName>073055-Marketing Executive</fullName>
+                <default>false</default>
+                <label>073055-Marketing Executive</label>
+            </value>
+            <value>
+                <fullName>073057-UCaaS Marketing</fullName>
+                <default>false</default>
+                <label>073057-UCaaS Marketing</label>
+            </value>
+            <value>
+                <fullName>073059-Customer Info Analytics Corporate</fullName>
+                <default>false</default>
+                <label>073059-Customer Info Analytics Corporate</label>
+            </value>
+            <value>
+                <fullName>073060-Marcom &amp; Content</fullName>
+                <default>false</default>
+                <label>073060-Marcom &amp; Content</label>
+            </value>
+            <value>
+                <fullName>073086-Telco Management-G&amp;A</fullName>
+                <default>false</default>
+                <label>073086-Telco Management-G&amp;A</label>
+            </value>
+            <value>
+                <fullName>073095-Security Allocated</fullName>
+                <default>false</default>
+                <label>073095-Security Allocated</label>
+            </value>
+            <value>
+                <fullName>073520-G&amp;A-Canada</fullName>
+                <default>false</default>
+                <label>073520-G&amp;A-Canada</label>
+            </value>
+            <value>
+                <fullName>077000-Corporate IT</fullName>
+                <default>false</default>
+                <label>077000-Corporate IT</label>
+            </value>
+            <value>
+                <fullName>077001-Corporate IT</fullName>
+                <default>false</default>
+                <label>077001-Corporate IT</label>
+            </value>
+            <value>
+                <fullName>077100-Global IT-Billing Systems</fullName>
+                <default>false</default>
+                <label>077100-Global IT-Billing Systems</label>
+            </value>
+            <value>
+                <fullName>077102-IT PMO</fullName>
+                <default>false</default>
+                <label>077102-IT PMO</label>
+            </value>
+            <value>
+                <fullName>077103-Global IT-Billing Systems</fullName>
+                <default>false</default>
+                <label>077103-Global IT-Billing Systems</label>
+            </value>
+            <value>
+                <fullName>077107-Business Intelligence Ops</fullName>
+                <default>false</default>
+                <label>077107-Business Intelligence Ops</label>
+            </value>
+            <value>
+                <fullName>077108-Security G&amp;A</fullName>
+                <default>false</default>
+                <label>077108-Security G&amp;A</label>
+            </value>
+            <value>
+                <fullName>077110-Deskside Support</fullName>
+                <default>false</default>
+                <label>077110-Deskside Support</label>
+            </value>
+            <value>
+                <fullName>077111-Business Intelligence Engineer</fullName>
+                <default>false</default>
+                <label>077111-Business Intelligence Engineer</label>
+            </value>
+            <value>
+                <fullName>077118-Business Operations ReadyTalk</fullName>
+                <default>false</default>
+                <label>077118-Business Operations ReadyTalk</label>
+            </value>
+            <value>
+                <fullName>080301-Video Plus Team</fullName>
+                <default>false</default>
+                <label>080301-Video Plus Team</label>
+            </value>
+            <value>
+                <fullName>080302-Cust Professional Service Team</fullName>
+                <default>false</default>
+                <label>080302-Cust Professional Service Team</label>
+            </value>
+            <value>
+                <fullName>080307-Cust Professional Service Team</fullName>
+                <default>false</default>
+                <label>080307-Cust Professional Service Team</label>
+            </value>
+            <value>
+                <fullName>Accounting-India</fullName>
+                <default>false</default>
+                <label>Accounting-India</label>
+            </value>
+            <value>
+                <fullName>Accounting-Ireland</fullName>
+                <default>false</default>
+                <label>Accounting-Ireland</label>
+            </value>
+            <value>
+                <fullName>Accounts Payable-Ireland</fullName>
+                <default>false</default>
+                <label>Accounts Payable-Ireland</label>
+            </value>
+            <value>
+                <fullName>Accounts Receivable-India</fullName>
+                <default>false</default>
+                <label>Accounts Receivable-India</label>
+            </value>
+            <value>
+                <fullName>Accounts Receivable-Ireland</fullName>
+                <default>false</default>
+                <label>Accounts Receivable-Ireland</label>
+            </value>
+            <value>
+                <fullName>Accounts Receivable-UK</fullName>
+                <default>false</default>
+                <label>Accounts Receivable-UK</label>
+            </value>
+            <value>
+                <fullName>Administration-Ireland</fullName>
+                <default>false</default>
+                <label>Administration-Ireland</label>
+            </value>
+            <value>
+                <fullName>Audio Architect-Ireland</fullName>
+                <default>false</default>
+                <label>Audio Architect-Ireland</label>
+            </value>
+            <value>
+                <fullName>Billing-India</fullName>
+                <default>false</default>
+                <label>Billing-India</label>
+            </value>
+            <value>
+                <fullName>Billing-Ireland</fullName>
+                <default>false</default>
+                <label>Billing-Ireland</label>
+            </value>
+            <value>
+                <fullName>Client Services 3rd party IRL</fullName>
+                <default>false</default>
+                <label>Client Services 3rd party IRL</label>
+            </value>
+            <value>
+                <fullName>Client Services Attended-IND</fullName>
+                <default>false</default>
+                <label>Client Services Attended-IND</label>
+            </value>
+            <value>
+                <fullName>Client Services Attended-IRL</fullName>
+                <default>false</default>
+                <label>Client Services Attended-IRL</label>
+            </value>
+            <value>
+                <fullName>Client Services Audio-India</fullName>
+                <default>false</default>
+                <label>Client Services Audio-India</label>
+            </value>
+            <value>
+                <fullName>Client Services Audio-Ireland</fullName>
+                <default>false</default>
+                <label>Client Services Audio-Ireland</label>
+            </value>
+            <value>
+                <fullName>Client Services Mgmt-Ireland</fullName>
+                <default>false</default>
+                <label>Client Services Mgmt-Ireland</label>
+            </value>
+            <value>
+                <fullName>Client Services Software-IRL</fullName>
+                <default>false</default>
+                <label>Client Services Software-IRL</label>
+            </value>
+            <value>
+                <fullName>Client Services Training-IRL</fullName>
+                <default>false</default>
+                <label>Client Services Training-IRL</label>
+            </value>
+            <value>
+                <fullName>Customer Marketing-INTL</fullName>
+                <default>false</default>
+                <label>Customer Marketing-INTL</label>
+            </value>
+            <value>
+                <fullName>Customer Service Spain</fullName>
+                <default>false</default>
+                <label>Customer Service Spain</label>
+            </value>
+            <value>
+                <fullName>Deal Desk-Ireland</fullName>
+                <default>false</default>
+                <label>Deal Desk-Ireland</label>
+            </value>
+            <value>
+                <fullName>Enterprise-India Acquisition</fullName>
+                <default>false</default>
+                <label>Enterprise-India Acquisition</label>
+            </value>
+            <value>
+                <fullName>Field Marketing &amp; Lead Dev-INTL</fullName>
+                <default>false</default>
+                <label>Field Marketing &amp; Lead Dev-INTL</label>
+            </value>
+            <value>
+                <fullName>G&amp;A-ACT Netherlands</fullName>
+                <default>false</default>
+                <label>G&amp;A-ACT Netherlands</label>
+            </value>
+            <value>
+                <fullName>Global IT-BI/Billing UK</fullName>
+                <default>false</default>
+                <label>Global IT-BI/Billing UK</label>
+            </value>
+            <value>
+                <fullName>HR Administration-India</fullName>
+                <default>false</default>
+                <label>HR Administration-India</label>
+            </value>
+            <value>
+                <fullName>HR Administration-Ireland</fullName>
+                <default>false</default>
+                <label>HR Administration-Ireland</label>
+            </value>
+            <value>
+                <fullName>Investor Relations</fullName>
+                <default>false</default>
+                <label>Investor Relations</label>
+            </value>
+            <value>
+                <fullName>IT Applications Support Admin</fullName>
+                <default>false</default>
+                <label>IT Applications Support Admin</label>
+            </value>
+            <value>
+                <fullName>IT Helpdesk-Ireland</fullName>
+                <default>false</default>
+                <label>IT Helpdesk-Ireland</label>
+            </value>
+            <value>
+                <fullName>Legal-Spain</fullName>
+                <default>false</default>
+                <label>Legal-Spain</label>
+            </value>
+            <value>
+                <fullName>Marketing-Ireland</fullName>
+                <default>false</default>
+                <label>Marketing-Ireland</label>
+            </value>
+            <value>
+                <fullName>Marketing Operations-UK</fullName>
+                <default>false</default>
+                <label>Marketing Operations-UK</label>
+            </value>
+            <value>
+                <fullName>Modality-Germany</fullName>
+                <default>false</default>
+                <label>Modality-Germany</label>
+            </value>
+            <value>
+                <fullName>Network Engineering-Ireland</fullName>
+                <default>false</default>
+                <label>Network Engineering-Ireland</label>
+            </value>
+            <value>
+                <fullName>Ops Corp IT-India</fullName>
+                <default>false</default>
+                <label>Ops Corp IT-India</label>
+            </value>
+            <value>
+                <fullName>Ops Corp IT-Ireland</fullName>
+                <default>false</default>
+                <label>Ops Corp IT-Ireland</label>
+            </value>
+            <value>
+                <fullName>Ops Production-India</fullName>
+                <default>false</default>
+                <label>Ops Production-India</label>
+            </value>
+            <value>
+                <fullName>Ops Production-Ireland</fullName>
+                <default>false</default>
+                <label>Ops Production-Ireland</label>
+            </value>
+            <value>
+                <fullName>Ops Production Telco-Ireland</fullName>
+                <default>false</default>
+                <label>Ops Production Telco-Ireland</label>
+            </value>
+            <value>
+                <fullName>Ops QA-Ireland</fullName>
+                <default>false</default>
+                <label>Ops QA-Ireland</label>
+            </value>
+            <value>
+                <fullName>Ops Telco Cost Mgmt-Ireland</fullName>
+                <default>false</default>
+                <label>Ops Telco Cost Mgmt-Ireland</label>
+            </value>
+            <value>
+                <fullName>Payroll-Ireland</fullName>
+                <default>false</default>
+                <label>Payroll-Ireland</label>
+            </value>
+            <value>
+                <fullName>Product-Ireland</fullName>
+                <default>false</default>
+                <label>Product-Ireland</label>
+            </value>
+            <value>
+                <fullName>Product Management-Ireland</fullName>
+                <default>false</default>
+                <label>Product Management-Ireland</label>
+            </value>
+            <value>
+                <fullName>Projects-Ireland</fullName>
+                <default>false</default>
+                <label>Projects-Ireland</label>
+            </value>
+            <value>
+                <fullName>PWN Care</fullName>
+                <default>false</default>
+                <label>PWN Care</label>
+            </value>
+            <value>
+                <fullName>PWN G&amp;A</fullName>
+                <default>false</default>
+                <label>PWN G&amp;A</label>
+            </value>
+            <value>
+                <fullName>PWN Marketing</fullName>
+                <default>false</default>
+                <label>PWN Marketing</label>
+            </value>
+            <value>
+                <fullName>PWN Operations</fullName>
+                <default>false</default>
+                <label>PWN Operations</label>
+            </value>
+            <value>
+                <fullName>PWN R&amp;D</fullName>
+                <default>false</default>
+                <label>PWN R&amp;D</label>
+            </value>
+            <value>
+                <fullName>PWN Sales</fullName>
+                <default>false</default>
+                <label>PWN Sales</label>
+            </value>
+            <value>
+                <fullName>R&amp;D UK</fullName>
+                <default>false</default>
+                <label>R&amp;D UK</label>
+            </value>
+            <value>
+                <fullName>Resource Planning-Ireland</fullName>
+                <default>false</default>
+                <label>Resource Planning-Ireland</label>
+            </value>
+            <value>
+                <fullName>SaaS Operations-Ireland</fullName>
+                <default>false</default>
+                <label>SaaS Operations-Ireland</label>
+            </value>
+            <value>
+                <fullName>Sales Enablement-INTL</fullName>
+                <default>false</default>
+                <label>Sales Enablement-INTL</label>
+            </value>
+            <value>
+                <fullName>Sales Engineering-France</fullName>
+                <default>false</default>
+                <label>Sales Engineering-France</label>
+            </value>
+            <value>
+                <fullName>Sales Engineering-Germany</fullName>
+                <default>false</default>
+                <label>Sales Engineering-Germany</label>
+            </value>
+            <value>
+                <fullName>Sales Engineering-Ireland</fullName>
+                <default>false</default>
+                <label>Sales Engineering-Ireland</label>
+            </value>
+            <value>
+                <fullName>Sales Enterprise-Denmark</fullName>
+                <default>false</default>
+                <label>Sales Enterprise-Denmark</label>
+            </value>
+            <value>
+                <fullName>Sales Enterprise-France</fullName>
+                <default>false</default>
+                <label>Sales Enterprise-France</label>
+            </value>
+            <value>
+                <fullName>Sales Enterprise-Germany</fullName>
+                <default>false</default>
+                <label>Sales Enterprise-Germany</label>
+            </value>
+            <value>
+                <fullName>Sales Enterprise-India</fullName>
+                <default>false</default>
+                <label>Sales Enterprise-India</label>
+            </value>
+            <value>
+                <fullName>Sales Enterprise-SVP-DEU</fullName>
+                <default>false</default>
+                <label>Sales Enterprise-SVP-DEU</label>
+            </value>
+            <value>
+                <fullName>Sales Enterprise-UK</fullName>
+                <default>false</default>
+                <label>Sales Enterprise-UK</label>
+            </value>
+            <value>
+                <fullName>Sales GSM-Ireland</fullName>
+                <default>false</default>
+                <label>Sales GSM-Ireland</label>
+            </value>
+            <value>
+                <fullName>Sales GSM-UK</fullName>
+                <default>false</default>
+                <label>Sales GSM-UK</label>
+            </value>
+            <value>
+                <fullName>Sales IST-Germany</fullName>
+                <default>false</default>
+                <label>Sales IST-Germany</label>
+            </value>
+            <value>
+                <fullName>Sales IST-India</fullName>
+                <default>false</default>
+                <label>Sales IST-India</label>
+            </value>
+            <value>
+                <fullName>Sales IST-Ireland</fullName>
+                <default>false</default>
+                <label>Sales IST-Ireland</label>
+            </value>
+            <value>
+                <fullName>Sales IST-UK</fullName>
+                <default>false</default>
+                <label>Sales IST-UK</label>
+            </value>
+            <value>
+                <fullName>Sales Modality-Germany</fullName>
+                <default>false</default>
+                <label>Sales Modality-Germany</label>
+            </value>
+            <value>
+                <fullName>Sales Operations-Ireland</fullName>
+                <default>false</default>
+                <label>Sales Operations-Ireland</label>
+            </value>
+            <value>
+                <fullName>Sales Operations-UK</fullName>
+                <default>false</default>
+                <label>Sales Operations-UK</label>
+            </value>
+            <value>
+                <fullName>Sales Partner-France</fullName>
+                <default>false</default>
+                <label>Sales Partner-France</label>
+            </value>
+            <value>
+                <fullName>Sales Partner-India</fullName>
+                <default>false</default>
+                <label>Sales Partner-India</label>
+            </value>
+            <value>
+                <fullName>Sales Partner-SVP-France</fullName>
+                <default>false</default>
+                <label>Sales Partner-SVP-France</label>
+            </value>
+            <value>
+                <fullName>Sales Partner-UK</fullName>
+                <default>false</default>
+                <label>Sales Partner-UK</label>
+            </value>
+            <value>
+                <fullName>SAP Sales-Ireland</fullName>
+                <default>false</default>
+                <label>SAP Sales-Ireland</label>
+            </value>
+            <value>
+                <fullName>System Administration-Ireland</fullName>
+                <default>false</default>
+                <label>System Administration-Ireland</label>
+            </value>
+            <value>
+                <fullName>TalkPoint Customer Services France</fullName>
+                <default>false</default>
+                <label>TalkPoint Customer Services France</label>
+            </value>
+            <value>
+                <fullName>TalkPoint IRL Client Services</fullName>
+                <default>false</default>
+                <label>TalkPoint IRL Client Services</label>
+            </value>
+            <value>
+                <fullName>Tax &amp; Compilance-Ireland</fullName>
+                <default>false</default>
+                <label>Tax &amp; Compilance-Ireland</label>
+            </value>
+            <value>
+                <fullName>Tier 2-India</fullName>
+                <default>false</default>
+                <label>Tier 2-India</label>
+            </value>
+            <value>
+                <fullName>Tier 2-Ireland</fullName>
+                <default>false</default>
+                <label>Tier 2-Ireland</label>
+            </value>
+            <value>
+                <fullName>UK Ops-Client/Customer Svcs/Production Services</fullName>
+                <default>false</default>
+                <label>UK Ops-Client/Customer Svcs/Production Services</label>
+            </value>
+            <value>
+                <fullName>UK Ops-Operations/Network Svcs/Network Support</fullName>
+                <default>false</default>
+                <label>UK Ops-Operations/Network Svcs/Network Support</label>
+            </value>
+            <value>
+                <fullName>UK Sales</fullName>
+                <default>false</default>
+                <label>UK Sales</label>
+            </value>
+            <value>
+                <fullName>UK Sales - Executive</fullName>
+                <default>false</default>
+                <label>UK Sales - Executive</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>NAM-Administration</controllingFieldValue>
+            <valueName>072000-H R Allocated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Administration</controllingFieldValue>
+            <valueName>073010-Legal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Administration</controllingFieldValue>
+            <valueName>073011-Legal Allocated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>010005-Client Services Ops COS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>010012-Client Services Ops-Remote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>010014-Service Support-Automated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>010015-Service Support-Automated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>010018-Client Services SoundPath</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>010024-GlobalMeet Experts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>010025-Service Support Attended</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>010027-GlobalMeet Experts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>010029-Service Support-Attended</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>010520-Client Services-Canada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>010615-TalkPoint US Client Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>011005-Client Services Reservations COS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>011006-Client Services Res COS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>011011-Client Services Res KC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>011400-Client Svc Enhanced Svcs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>011401-Clerical</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>011402-Clerical</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>011700-Event Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>011701-Event Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>011900-Client Services Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>011901-Client Services Mgmt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>011905-Training and Quality</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>011906-Training and Quality</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>011910-Global CS Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>011911-Global CS Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>012070-Tier 2 NA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Customer Care</controllingFieldValue>
+            <valueName>012520-Operations-Canada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Exec Team</controllingFieldValue>
+            <valueName>071002-Exec Admin Allocated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Finance</controllingFieldValue>
+            <valueName>034007-Sales Ops-Deal Desk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Finance</controllingFieldValue>
+            <valueName>034011-Sales Ops-Deal Desk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Finance</controllingFieldValue>
+            <valueName>070005-Corporate Finance-Accounting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Finance</controllingFieldValue>
+            <valueName>070007-Finance &amp; Accounting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Finance</controllingFieldValue>
+            <valueName>070008-Billing-PTEKI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Finance</controllingFieldValue>
+            <valueName>070010-Finance &amp; Accounting-ATSLT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Finance</controllingFieldValue>
+            <valueName>070012-Commission G&amp;A</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Finance</controllingFieldValue>
+            <valueName>070015-Tax</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Finance</controllingFieldValue>
+            <valueName>070020-Treasury</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Finance</controllingFieldValue>
+            <valueName>070025-Billing Support &amp; Solutions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Finance</controllingFieldValue>
+            <valueName>070030-Credit Collections &amp; AR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Finance</controllingFieldValue>
+            <valueName>070050-Internal Audit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Finance</controllingFieldValue>
+            <valueName>071020-Corporate Procurement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Finance</controllingFieldValue>
+            <valueName>071615-TalkPoint US G&amp;A</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Finance</controllingFieldValue>
+            <valueName>073016-Facilities Allocated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Finance</controllingFieldValue>
+            <valueName>073086-Telco Management-G&amp;A</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Finance</controllingFieldValue>
+            <valueName>080301-Video Plus Team</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>012005-Audio Operations US</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>012010-Network and System Admin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>012012-Database Operations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>012013-Database Operations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>012015-NPD and Telco and Fraud</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>012021-NOC Team</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>014101-SaaS Operations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>014200-System Administration US</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>031224-Business Devl-Conferencing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>034012-CRM Operations &amp; Technology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>061115-Systems Operations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>061116-Database Development</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>061117-Architecture and Engineering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>061118-SaaS Architecture &amp; Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>061120-Database Development</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>061121-Architecture and Engineering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>073037-Global IT Development</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>073520-G&amp;A-Canada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>077000-Corporate IT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>077001-Corporate IT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>077100-Global IT-Billing Systems</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>077102-IT PMO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>077103-Global IT-Billing Systems</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>077107-Business Intelligence Ops</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Global IT</controllingFieldValue>
+            <valueName>077110-Deskside Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Marketing</controllingFieldValue>
+            <valueName>030102-Customer Marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Marketing</controllingFieldValue>
+            <valueName>030403-Demand Gen Marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Marketing</controllingFieldValue>
+            <valueName>031004-Strategic Project</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Marketing</controllingFieldValue>
+            <valueName>031226-Sales Enablement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Marketing</controllingFieldValue>
+            <valueName>031233-Mktg-Sales Enablement &amp; Train</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Marketing</controllingFieldValue>
+            <valueName>034120-Customer Success Team-Canada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Marketing</controllingFieldValue>
+            <valueName>037002-Partner Marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Marketing</controllingFieldValue>
+            <valueName>040102-Marketing Intelligence</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Marketing</controllingFieldValue>
+            <valueName>040103-Product Marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Marketing</controllingFieldValue>
+            <valueName>040106-Product Marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Marketing</controllingFieldValue>
+            <valueName>040501-Marketing Communications</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Marketing</controllingFieldValue>
+            <valueName>073005-Investor Relations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Marketing</controllingFieldValue>
+            <valueName>073055-Marketing Executive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Marketing</controllingFieldValue>
+            <valueName>073057-UCaaS Marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Marketing</controllingFieldValue>
+            <valueName>073059-Customer Info Analytics Corporate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Marketing</controllingFieldValue>
+            <valueName>073060-Marcom &amp; Content</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-ReadyTalk</controllingFieldValue>
+            <valueName>010017-ReadyTalk Client Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-ReadyTalk</controllingFieldValue>
+            <valueName>011702-ReadyTalk Event Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-ReadyTalk</controllingFieldValue>
+            <valueName>030120-ReadyTalk Field Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-ReadyTalk</controllingFieldValue>
+            <valueName>037017-ReadyTalk Partner Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-ReadyTalk</controllingFieldValue>
+            <valueName>040517-ReadyTalk Marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-ReadyTalk</controllingFieldValue>
+            <valueName>060170-UCaaS R&amp;D</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-ReadyTalk</controllingFieldValue>
+            <valueName>060171-UCaaS R&amp;D</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-ReadyTalk</controllingFieldValue>
+            <valueName>061006-SaaS Dev</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-ReadyTalk</controllingFieldValue>
+            <valueName>070017-ReadyTalk Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-ReadyTalk</controllingFieldValue>
+            <valueName>077118-Business Operations ReadyTalk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-RollCall</controllingFieldValue>
+            <valueName>070032-RollCall Collections</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>010622-Central Desktop Client Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>030115-Commercial Accounts Managed Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>030122-ISO-SMB Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>030370-Global Carrier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>030371-Global Carrier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>030401-Commercial Accounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>030405-Commercial Accounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>031000-Tier One</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>031003-Tier One</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>031007-Field Sales-Soundpath</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>031009-Field Sales-Southeast</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>031010-Field Sales-Soundpath</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>031213-Customer Success Team-GSM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>031214-Customer Success Team</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>031215-Customer Success Team-GSM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>031216-Customer Success Team</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>031218-CST-Service Delivery Project</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>031219-CST-Service Delivery Project</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>031225-Field Sales-Central</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>031228-Field Sales-Central</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>031615-TalkPoint US Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>031617-Central Desktop Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>032020-Commercial Accounts-Canada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>034005-Sales Ops-Cust Intelligence</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>037003-Global Partner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>037006-Global Partner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>038020-Global Partner-Canada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>080302-Cust Professional Service Team</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Sales</controllingFieldValue>
+            <valueName>080307-Cust Professional Service Team</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Customer Care</controllingFieldValue>
+            <valueName>Client Services 3rd party IRL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Customer Care</controllingFieldValue>
+            <valueName>Client Services Attended-IND</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Customer Care</controllingFieldValue>
+            <valueName>Client Services Attended-IRL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Customer Care</controllingFieldValue>
+            <valueName>Client Services Audio-India</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Customer Care</controllingFieldValue>
+            <valueName>Client Services Audio-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Customer Care</controllingFieldValue>
+            <valueName>Client Services Mgmt-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Customer Care</controllingFieldValue>
+            <valueName>Client Services Software-IRL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Customer Care</controllingFieldValue>
+            <valueName>Client Services Training-IRL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Customer Care</controllingFieldValue>
+            <valueName>Customer Service Spain</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Customer Care</controllingFieldValue>
+            <valueName>TalkPoint Customer Services France</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Customer Care</controllingFieldValue>
+            <valueName>TalkPoint IRL Client Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Customer Care</controllingFieldValue>
+            <valueName>Tier 2-India</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Customer Care</controllingFieldValue>
+            <valueName>Tier 2-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Customer Care</controllingFieldValue>
+            <valueName>UK Ops-Client/Customer Svcs/Production Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Finance</controllingFieldValue>
+            <valueName>Accounting-India</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Finance</controllingFieldValue>
+            <valueName>Accounting-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Finance</controllingFieldValue>
+            <valueName>Accounts Payable-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Finance</controllingFieldValue>
+            <valueName>Accounts Receivable-India</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Finance</controllingFieldValue>
+            <valueName>Accounts Receivable-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Finance</controllingFieldValue>
+            <valueName>Accounts Receivable-UK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Finance</controllingFieldValue>
+            <valueName>Billing-India</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Finance</controllingFieldValue>
+            <valueName>Billing-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Finance</controllingFieldValue>
+            <valueName>Deal Desk-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Finance</controllingFieldValue>
+            <valueName>G&amp;A-ACT Netherlands</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Finance</controllingFieldValue>
+            <valueName>Tax &amp; Compilance-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Global IT</controllingFieldValue>
+            <valueName>Audio Architect-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Global IT</controllingFieldValue>
+            <valueName>Global IT-BI/Billing UK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Global IT</controllingFieldValue>
+            <valueName>IT Applications Support Admin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Global IT</controllingFieldValue>
+            <valueName>IT Helpdesk-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Global IT</controllingFieldValue>
+            <valueName>Network Engineering-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Global IT</controllingFieldValue>
+            <valueName>Ops Corp IT-India</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Global IT</controllingFieldValue>
+            <valueName>Ops Corp IT-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Global IT</controllingFieldValue>
+            <valueName>Ops Production-India</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Global IT</controllingFieldValue>
+            <valueName>Ops Production-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Global IT</controllingFieldValue>
+            <valueName>Ops Production Telco-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Global IT</controllingFieldValue>
+            <valueName>Ops QA-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Global IT</controllingFieldValue>
+            <valueName>Ops Telco Cost Mgmt-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Global IT</controllingFieldValue>
+            <valueName>Resource Planning-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Global IT</controllingFieldValue>
+            <valueName>SaaS Operations-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Global IT</controllingFieldValue>
+            <valueName>System Administration-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-HR</controllingFieldValue>
+            <valueName>Administration-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-HR</controllingFieldValue>
+            <valueName>HR Administration-India</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-HR</controllingFieldValue>
+            <valueName>HR Administration-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-HR</controllingFieldValue>
+            <valueName>Payroll-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Legal</controllingFieldValue>
+            <valueName>Legal-Spain</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Marketing</controllingFieldValue>
+            <valueName>Customer Marketing-INTL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Marketing</controllingFieldValue>
+            <valueName>Field Marketing &amp; Lead Dev-INTL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Marketing</controllingFieldValue>
+            <valueName>Investor Relations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Marketing</controllingFieldValue>
+            <valueName>Marketing-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Marketing</controllingFieldValue>
+            <valueName>Marketing Operations-UK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Marketing</controllingFieldValue>
+            <valueName>Sales Enablement-INTL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-NA</controllingFieldValue>
+            <valueName>Modality-Germany</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-NA</controllingFieldValue>
+            <valueName>Sales Modality-Germany</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-PWN</controllingFieldValue>
+            <valueName>PWN Care</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-PWN</controllingFieldValue>
+            <valueName>PWN G&amp;A</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-PWN</controllingFieldValue>
+            <valueName>PWN Marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-PWN</controllingFieldValue>
+            <valueName>PWN Operations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-PWN</controllingFieldValue>
+            <valueName>PWN R&amp;D</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-PWN</controllingFieldValue>
+            <valueName>PWN Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-PWN</controllingFieldValue>
+            <valueName>R&amp;D UK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>Enterprise-India Acquisition</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>Projects-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>Sales Engineering-France</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>Sales Engineering-Germany</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>Sales Engineering-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>Sales Enterprise-Denmark</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>Sales Enterprise-France</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>Sales Enterprise-Germany</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>Sales Enterprise-India</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>Sales Enterprise-SVP-DEU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>Sales Enterprise-UK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>Sales GSM-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>Sales GSM-UK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>Sales IST-Germany</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>Sales IST-India</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>Sales IST-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>Sales IST-UK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>Sales Operations-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>Sales Operations-UK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>Sales Partner-France</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>Sales Partner-India</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>Sales Partner-SVP-France</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>Sales Partner-UK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>SAP Sales-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>UK Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>UK Sales - Executive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>012615-TalkPoint US Operations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>031002-Strategic Project</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>060004-Back Office Dev</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>060005-Back Office Dev</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>060007-US Hub &amp; Toolbar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>060008-Project Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>060010-Audio Dev</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>060016-Third Party R&amp;D</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>060060-QA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>060061-QA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>060520-R&amp;D-Canada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>060615-TalkPoint US R&amp;D</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>061000-Product Mgmt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>061001-GTM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>061005-CS Dev</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>061007-SaaS Ops</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>061009-SaaS Dev</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>061010-Product Mgmt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>061017-Saas Ops</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>069105-Design</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>069106-Design</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>073035-R&amp;D Exec</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>073095-Security Allocated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>077108-Security G&amp;A</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAM-Technology</controllingFieldValue>
+            <valueName>077111-Business Intelligence Engineer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Technology</controllingFieldValue>
+            <valueName>Product-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Technology</controllingFieldValue>
+            <valueName>Product Management-Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Technology</controllingFieldValue>
+            <valueName>UK Ops-Operations/Network Svcs/Network Support</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

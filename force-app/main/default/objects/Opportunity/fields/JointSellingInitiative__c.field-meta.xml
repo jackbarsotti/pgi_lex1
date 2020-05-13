@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>JointSellingInitiative__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is only to be selected by Sales Ops at this time and is only visible for Marketing, Sales Ops, and Admins at this time.  1/16/17 - CR</description>
+    <externalId>false</externalId>
+    <label>Joint Selling Initiative</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

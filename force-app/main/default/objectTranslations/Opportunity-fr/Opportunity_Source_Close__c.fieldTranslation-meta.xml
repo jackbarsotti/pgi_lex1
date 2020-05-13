@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Opportunity Source Close --></label>
+    <name>Opportunity_Source_Close__c</name>
+    <picklistValues>
+        <masterLabel>Customer</masterLabel>
+        <translation><!-- Customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hoovers</masterLabel>
+        <translation><!-- Hoovers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LinkedIn Sales Navigator</masterLabel>
+        <translation><!-- LinkedIn Sales Navigator --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partners</masterLabel>
+        <translation><!-- Partners --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Purchased List</masterLabel>
+        <translation><!-- Purchased List --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Referral</masterLabel>
+        <translation><!-- Referral --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zoom Info</masterLabel>
+        <translation><!-- Zoom Info --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iMeet Sales Accelerator</masterLabel>
+        <translation><!-- iMeet Sales Accelerator --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

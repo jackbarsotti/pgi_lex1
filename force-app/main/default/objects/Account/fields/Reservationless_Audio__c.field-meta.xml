@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reservationless_Audio__c</fullName>
+    <defaultValue>0.10</defaultValue>
+    <description>Cost of Reservationless Audio per minute</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Per-Minute (On-Demand) US/Canada audio conferencing price.</inlineHelpText>
+    <label>On-Demand Audio</label>
+    <precision>13</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

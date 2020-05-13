@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Root_Cause_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Root Cause Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Attended</fullName>
+                <default>false</default>
+                <label>Attended</label>
+            </value>
+            <value>
+                <fullName>Biller</fullName>
+                <default>false</default>
+                <label>Biller</label>
+            </value>
+            <value>
+                <fullName>C2J</fullName>
+                <default>false</default>
+                <label>C2J</label>
+            </value>
+            <value>
+                <fullName>Call Quality</fullName>
+                <default>false</default>
+                <label>Call Quality</label>
+            </value>
+            <value>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+                <label>Cancellation</label>
+            </value>
+            <value>
+                <fullName>Conversion</fullName>
+                <default>false</default>
+                <label>Conversion</label>
+            </value>
+            <value>
+                <fullName>Customer Relations</fullName>
+                <default>false</default>
+                <label>Customer Relations</label>
+            </value>
+            <value>
+                <fullName>Fraud</fullName>
+                <default>false</default>
+                <label>Fraud</label>
+            </value>
+            <value>
+                <fullName>Internal</fullName>
+                <default>false</default>
+                <label>Internal</label>
+            </value>
+            <value>
+                <fullName>MBP</fullName>
+                <default>false</default>
+                <label>MBP</label>
+            </value>
+            <value>
+                <fullName>Metering</fullName>
+                <default>false</default>
+                <label>Metering</label>
+            </value>
+            <value>
+                <fullName>Migration</fullName>
+                <default>false</default>
+                <label>Migration</label>
+            </value>
+            <value>
+                <fullName>Not Supported in System</fullName>
+                <default>false</default>
+                <label>Not Supported in System</label>
+            </value>
+            <value>
+                <fullName>Pricing Contracts</fullName>
+                <default>false</default>
+                <label>Pricing Contracts</label>
+            </value>
+            <value>
+                <fullName>Provisioning</fullName>
+                <default>false</default>
+                <label>Provisioning</label>
+            </value>
+            <value>
+                <fullName>Rate Error</fullName>
+                <default>false</default>
+                <label>Rate Error</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

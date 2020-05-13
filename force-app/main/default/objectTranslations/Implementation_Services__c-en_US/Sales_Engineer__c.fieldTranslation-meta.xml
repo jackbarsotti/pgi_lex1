@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sales Engineer --></label>
+    <lookupFilter>
+        <errorMessage><!-- You can only select a user with channel Sales Engineers.  Please submit a case if you cannot find the person you are searching for. --></errorMessage>
+    </lookupFilter>
+    <name>Sales_Engineer__c</name>
+    <relationshipLabel><!-- Implementation Services (Sales Engineer) --></relationshipLabel>
+</CustomFieldTranslation>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Remove_From_Free_Trial_Campaign__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Remove contact from the Marketo Free Trial Nurture Campaign</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Remove contact from the Marketo Free Trial Nurture Campaign</inlineHelpText>
+    <label>Remove From Free Trial Campaign</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

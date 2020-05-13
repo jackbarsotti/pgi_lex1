@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- AKA &quot;Vertical&quot; - the role/department the contact has within the organization --></help>
+    <label><!-- Job Role --></label>
+    <name>Job_Role__c</name>
+    <picklistValues>
+        <masterLabel>Billing / Buyer</masterLabel>
+        <translation><!-- Billing / Buyer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Billing Contact</masterLabel>
+        <translation><!-- Billing Contact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Buyer</masterLabel>
+        <translation><!-- Buyer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Corp Comm</masterLabel>
+        <translation><!-- Corp Comm --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Executive</masterLabel>
+        <translation><!-- Executive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FDAAC Buyer</masterLabel>
+        <translation><!-- FDAAC Buyer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Finance</masterLabel>
+        <translation><!-- Finance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HR</masterLabel>
+        <translation><!-- HR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IT</masterLabel>
+        <translation><!-- IT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Investor Relations</masterLabel>
+        <translation><!-- Investor Relations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Legal</masterLabel>
+        <translation><!-- Legal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing</masterLabel>
+        <translation><!-- Marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Meeting Planner</masterLabel>
+        <translation><!-- Meeting Planner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales</masterLabel>
+        <translation><!-- Sales --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

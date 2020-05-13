@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Lead Life Cycle --></label>
+    <name>Lead_Life_Cycle__c</name>
+    <picklistValues>
+        <masterLabel>Marketing Qualified</masterLabel>
+        <translation><!-- Marketing Qualified --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not a Lead</masterLabel>
+        <translation><!-- Not a Lead --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prospect</masterLabel>
+        <translation><!-- Prospect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recycle</masterLabel>
+        <translation><!-- Recycle --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Accepted</masterLabel>
+        <translation><!-- Sales Accepted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Qualified</masterLabel>
+        <translation><!-- Sales Qualified --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Suspect</masterLabel>
+        <translation><!-- Suspect --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

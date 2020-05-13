@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Recording Posting Status --></label>
+    <name>Recording_Posting_Status__c</name>
+    <picklistValues>
+        <masterLabel>Not Applicable</masterLabel>
+        <translation><!-- Not Applicable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Posted to HUB</masterLabel>
+        <translation><!-- Not Posted to HUB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Posted to HUB</masterLabel>
+        <translation><!-- Posted to HUB --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

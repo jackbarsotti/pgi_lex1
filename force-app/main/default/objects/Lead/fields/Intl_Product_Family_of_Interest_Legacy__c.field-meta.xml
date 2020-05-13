@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Intl_Product_Family_of_Interest_Legacy__c</fullName>
+    <description>FORMULA FIELD: Resolves the value of the &quot;Initial Product Interest&quot; field into the appropriate product family.</description>
+    <externalId>false</externalId>
+    <formula>CASE(TEXT( Product_Interest__c ),&quot;Audio: GlobalMeet Audio&quot;,&quot;Automated&quot;,
+&quot;Audio: Attended&quot;, &quot;Operator Assisted&quot;,
+&quot;Audio: Reservationless Audio&quot;, &quot;Automated&quot;,
+&quot;Bundle: Reservationless Audio with ReadyConnect Web&quot;, &quot;Automated&quot;,
+&quot;Audio: GlobalMeet Audio for Microsoft Lync&quot;,&quot;Automated&quot;,
+&quot;Audio: GlobalMeet Hybrid Audio for Lync Server&quot;,&quot;Automated&quot;,
+&quot;Audio: GlobalMeet Hybrid Audio for WebEx&quot;,&quot;Automated&quot;,
+&quot;Audio: GlobalMeet Webcast Managed Event&quot;,&quot;Automated&quot;,
+&quot;Audio: OnNet&quot;,&quot;Web: OnNet&quot;,
+&quot;Audio: Op. Assisted: Premium Event&quot;,&quot;Operator Assisted&quot;,
+&quot;Audio: Op. Assisted: Standard Auditorium&quot;,&quot;Operator Assisted&quot;,
+&quot;Bundle: GlobalMeet&quot;,&quot;Web: GlobalMeet&quot;,
+&quot;Bundle: GlobalMeet Webinar&quot;,&quot;Web: GlobalMeet&quot;,
+&quot;Bundle: iMeet&quot;,&quot;Web: iMeet&quot;,
+&quot;Bundle: iMeet Sales Accelerator&quot;,&quot;Web: iMeet&quot;,
+&quot;Bundle: iMeet Video Room Integration&quot;,&quot;Web: iMeet&quot;,
+&quot;Partner: Partner BD&quot;,&quot;Partner BD&quot;,
+&quot;Professional Services: Modality Consulting&quot;,&quot;Professional Services&quot;,
+&quot;Professional Services:  Modality Support &amp; Managed Services&quot;,&quot;Professional Services&quot;,
+&quot;Professional Services: Modality  Custom Development&quot;,&quot;Professional Services&quot;,
+&quot;Video: Managed Conference&quot;,&quot;Video&quot;,
+&quot;Video: Managed Service - Device&quot;,&quot;Video&quot;,
+&quot;Video: Managed Service - Flat Rate&quot;,&quot;Video&quot;,
+&quot;Video: Professional Service&quot;,&quot;Video&quot;,
+&quot;Web: AdobeConnect&quot;,&quot;Web: 3rd Party&quot;,
+&quot;Web: Cisco WebEx&quot;,&quot;Web: 3rd Party&quot;,
+&quot;Web: GlobalMeet&quot;,&quot;Web: GlobalMeet&quot;,
+&quot;Web: GlobalMeet Active Host&quot;,&quot;Web: GlobalMeet&quot;,
+&quot;Web: GlobalMeet Webinar&quot;,&quot;Web: GlobalMeet&quot;,
+&quot;Web: iMeet Agenday Enterprise&quot;,&quot;Web: iMeet Agenday&quot;,
+&quot;Web: GlobalMeet Webinar&quot;,&quot;Web&quot;,
+&quot;Web: GlobalMeet Webcast Managed Event&quot;,&quot;Web: iMeetLive&quot;,
+&quot;Web: GlobalMeet Webcast&quot;,&quot;Web&quot;,
+&quot;Web: iMeet Projects&quot;,&quot;Web: iMeet Projects&quot;,
+&quot;Web: Microsoft Office Live Meeting&quot;,&quot;Web: 3rd Party&quot;,
+&quot;Web: NASDAQ&quot;,&quot;Web: 3rd Party&quot;,
+&quot;Web: ON24&quot;,&quot;Web: 3rd Party&quot;,
+&quot;Audio: iMeet&quot;,&quot;Automated&quot;,
+&quot;Web: GlobalMeet Web for Microsoft Lync&quot;,&quot;Web: GlobalMeet&quot;,
+&quot;Web: iMeet&quot;,&quot;Web: iMeet&quot;,
+&quot;Web: vCube&quot;,&quot;Web: 3rd Party&quot;,
+&quot;Web: Webcast&quot;,&quot;Web: 3rd Party&quot;,
+&quot;Operator Assisted : Services : SoundByte Basic&quot;,&quot;Operator Assisted&quot;,
+&quot;Other Services : Learning Communications Platform&quot;,&quot;Operator Assisted&quot;,
+&quot;Other Services: Learning Communications Platform&quot;,&quot;Operator Assisted&quot;,
+&quot;Web : Brainshark&quot;,&quot;Web: 3rd Party Other&quot;,
+&quot;Web : Event Center (Vcall)&quot;,&quot;Web: 3rd Party Other&quot;,
+&quot;Web : Host Controls&quot;,&quot;Web: GlobalMeet&quot;,
+&quot;Web : IBM Lotus Live Meetings&quot;,&quot;Web: 3rd Party&quot;,
+&quot;Web : ReadyConference Plus Microsite&quot;,&quot;Web: GlobalMeet&quot;,
+&quot;Web : ReadyConference Plus Web&quot;,&quot;Web: GlobalMeet&quot;,
+&quot;Web: AVI/SPL&quot;,&quot;Web: 3rd Party Other&quot;,
+&quot;Web: Brainshark&quot;,&quot;Web: 3rd Party Other&quot;,
+&quot;Web: IBM Lotus Live Meetings&quot;,&quot;Web: 3rd Party&quot;,
+&quot;Web: Outlook Toolbar&quot;,&quot;Web: GlobalMeet&quot;,
+&quot;Web: ReadyConference Plus Microsite&quot;,&quot;Web: GlobalMeet&quot;,
+&quot;Web: ReadyConference Plus Web&quot;,&quot;Web: GlobalMeet&quot;,
+&quot;Web : AVI/SPL&quot;,&quot;Web: 3rd Party Other&quot;,
+&quot;Web: Modality Software Applications&quot;, &quot;Web&quot;,
+&quot;&quot;,	&quot;&quot;,
+&quot;UNDEFINED&quot;
+)</formula>
+    <inlineHelpText>The product family that correlate to the value of the &quot;Initial Product Interest&quot; field.</inlineHelpText>
+    <label>Intl Product Family of Interest – Legacy</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

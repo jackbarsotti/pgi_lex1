@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>chttrunfollow__CriteriaMetDate__c</fullName>
+    <deprecated>false</deprecated>
+    <description>This is the date that the record was queued up for unfollowing.  It is equal to the LastUpdatedDate of the record to ensure a clean value for most cases.</description>
+    <externalId>false</externalId>
+    <label>CriteriaMetDate</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The date the Contact Last Used their subscription --></help>
+    <label><!-- Access Code Last Used Date --></label>
+    <name>Access_Code_Last_Used_Date__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booked_With__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates the audio provider the event was originally booked with.</inlineHelpText>
+    <label>Booked With</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>InterCall</fullName>
+                <default>false</default>
+                <label>InterCall</label>
+            </value>
+            <value>
+                <fullName>Level 3</fullName>
+                <default>false</default>
+                <label>Level 3</label>
+            </value>
+            <value>
+                <fullName>PGi</fullName>
+                <default>false</default>
+                <label>PGi</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

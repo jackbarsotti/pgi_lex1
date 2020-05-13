@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Advanced_Marketing_and_Portal_Package__c</fullName>
+    <description>Localization options, sponsor logos, social media, portals for multiple events, exit urls</description>
+    <externalId>false</externalId>
+    <label>Advanced Marketing and Portal Package</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

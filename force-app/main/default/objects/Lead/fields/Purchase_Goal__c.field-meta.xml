@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Purchase_Goal__c</fullName>
+    <description>This was &#39;[Custom Field: Purchase Goal]  Purchase_goal__c&#39; in Pardot-SugarCRM</description>
+    <externalId>false</externalId>
+    <label>Purchase Goal</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Plans to purchase a system now or the near future</fullName>
+                <default>false</default>
+                <label>Plans to purchase a system now or the near future</label>
+            </value>
+            <value>
+                <fullName>Has a system in place and would consider an upgrade</fullName>
+                <default>false</default>
+                <label>Has a system in place and would consider an upgrade</label>
+            </value>
+            <value>
+                <fullName>Has a system in place and not looking to upgrade</fullName>
+                <default>false</default>
+                <label>Has a system in place and not looking to upgrade</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

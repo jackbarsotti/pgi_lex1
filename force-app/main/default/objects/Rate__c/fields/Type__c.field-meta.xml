@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <description>Affects how the Rate is presented in iContract and on agreements.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Affects how the Rate is presented in iContract and on agreements.</inlineHelpText>
+    <label>Type</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Usage</fullName>
+                <default>true</default>
+                <label>Usage</label>
+            </value>
+            <value>
+                <fullName>Sub</fullName>
+                <default>false</default>
+                <label>Subscription</label>
+            </value>
+            <value>
+                <fullName>Once</fullName>
+                <default>false</default>
+                <label>One-Time</label>
+            </value>
+            <value>
+                <fullName>Commit</fullName>
+                <default>false</default>
+                <label>Minimum Commitment</label>
+            </value>
+            <value>
+                <fullName>Bundle</fullName>
+                <default>false</default>
+                <label>Bundled Rate</label>
+            </value>
+            <value>
+                <fullName>Access</fullName>
+                <default>false</default>
+                <label>Access Type</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

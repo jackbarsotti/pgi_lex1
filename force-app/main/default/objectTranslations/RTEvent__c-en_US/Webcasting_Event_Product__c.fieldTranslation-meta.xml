@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- What type of Product is this webcasting being held on --></help>
+    <label><!-- Webcasting Event Product --></label>
+    <name>Webcasting_Event_Product__c</name>
+    <picklistValues>
+        <masterLabel>Audio &amp; Slides</masterLabel>
+        <translation><!-- Audio &amp; Slides --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Managed Webcast</masterLabel>
+        <translation><!-- Managed Webcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SS15 - On-Demand Audio + Slides Webcast</masterLabel>
+        <translation><!-- SS15 - On-Demand Audio + Slides Webcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SS16 - On-Demand Platinum Elite Webcast</masterLabel>
+        <translation><!-- SS16 - On-Demand Platinum Elite Webcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SS2 - Audio + Slides Webcast</masterLabel>
+        <translation><!-- SS2 - Audio + Slides Webcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SS3 - Platinum Plus Webcast</masterLabel>
+        <translation><!-- SS3 - Platinum Plus Webcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SS4 - Platinum Elite Webcast</masterLabel>
+        <translation><!-- SS4 - Platinum Elite Webcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Self-Serve Subscription</masterLabel>
+        <translation><!-- Self-Serve Subscription --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video &amp; Slides</masterLabel>
+        <translation><!-- Video &amp; Slides --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcam &amp; Slides</masterLabel>
+        <translation><!-- Webcam &amp; Slides --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

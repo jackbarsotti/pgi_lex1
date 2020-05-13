@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inside_Sales_Staff__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>VR on license set will prevent non-Inside Sales users from adding Offerings in &quot;BlueBird&quot; Product Family in iContract</description>
+    <externalId>false</externalId>
+    <inlineHelpText>VR on license set will prevent non-Inside Sales users from adding Offerings in &quot;BlueBird&quot; Product Family in iContract</inlineHelpText>
+    <label>Inside Sales Staff</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

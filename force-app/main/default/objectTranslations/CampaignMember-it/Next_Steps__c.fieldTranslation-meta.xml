@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Next Steps --></label>
+    <name>Next_Steps__c</name>
+    <picklistValues>
+        <masterLabel>Check Back with Decision Makers</masterLabel>
+        <translation><!-- Check Back with Decision Makers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product Demo</masterLabel>
+        <translation><!-- Product Demo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waiting for Feature Release</masterLabel>
+        <translation><!-- Waiting for Feature Release --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

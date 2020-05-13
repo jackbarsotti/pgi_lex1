@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_an_EmailCase</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Send an Email</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/47.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/support/console/47.0/integration.js&quot;)}
+
+var url = &#39;/apex/SendAnEmail?id={!Case.Id}&#39;;
+console.log(url);
+
+var openSubtab = function(result){
+sforce.console.openSubtab(result.id, url, true, &#39;New Email&#39;, null);
+};
+
+if (sforce.console.isInConsole()){
+sforce.console.getEnclosingPrimaryTabId(openSubtab);
+}else{
+window.parent.location.href=url;
+}</url>
+</WebLink>

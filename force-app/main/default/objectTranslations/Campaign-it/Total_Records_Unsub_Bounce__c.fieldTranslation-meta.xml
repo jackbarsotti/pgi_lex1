@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- NumberOfLeads +  NumberOfContacts - Total_Unsubscribed__c -  Total_Bounces__c --></help>
+    <label><!-- Total Records (-Unsub &amp; Bounce) --></label>
+    <name>Total_Records_Unsub_Bounce__c</name>
+</CustomFieldTranslation>

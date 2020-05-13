@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WebEx_Selection__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked if sales rep checks WebEx on legal request form.</description>
+    <externalId>false</externalId>
+    <label>WebEx (Email Order Add-On Language)</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

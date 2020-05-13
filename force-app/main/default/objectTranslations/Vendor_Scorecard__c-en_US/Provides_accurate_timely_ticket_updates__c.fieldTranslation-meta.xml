@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Total for PATTU --></label>
+    <name>Provides_accurate_timely_ticket_updates__c</name>
+</CustomFieldTranslation>

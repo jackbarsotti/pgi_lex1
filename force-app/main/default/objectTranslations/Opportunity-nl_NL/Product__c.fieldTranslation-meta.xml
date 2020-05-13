@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Initial Product of Interest --></label>
+    <name>Product__c</name>
+    <picklistValues>
+        <masterLabel>Audio: GlobalMeet Audio</masterLabel>
+        <translation><!-- Audio: GlobalMeet Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio: GlobalMeet Audio for Skype for Business</masterLabel>
+        <translation><!-- Audio: GlobalMeet Audio for Skype for Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio: GlobalMeet Hybrid Audio for Lync Server</masterLabel>
+        <translation><!-- Audio: GlobalMeet Hybrid Audio for Lync Server --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio: GlobalMeet Hybrid Audio for WebEx</masterLabel>
+        <translation><!-- Audio: GlobalMeet Hybrid Audio for WebEx --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio: OnNet</masterLabel>
+        <translation><!-- Audio: OnNet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio: Op. Assisted: Premium Event</masterLabel>
+        <translation><!-- Audio: Op. Assisted: Premium Event --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio: Op. Assisted: Standard Auditorium</masterLabel>
+        <translation><!-- Audio: Op. Assisted: Standard Auditorium --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio: iMeet</masterLabel>
+        <translation><!-- Audio: iMeet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio: iMeetLive Managed Event</masterLabel>
+        <translation><!-- Audio: iMeetLive Managed Event --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bundle: GlobalMeet</masterLabel>
+        <translation><!-- Bundle: GlobalMeet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bundle: GlobalMeet Webinar</masterLabel>
+        <translation><!-- Bundle: GlobalMeet Webinar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bundle: iMeet</masterLabel>
+        <translation><!-- Bundle: iMeet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bundle: iMeet Sales Accelerator</masterLabel>
+        <translation><!-- Bundle: iMeet Sales Accelerator --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bundle: iMeet VRC</masterLabel>
+        <translation><!-- Bundle: iMeet VRC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partner: Partner BD</masterLabel>
+        <translation><!-- Partner: Partner BD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Professional Services:  Modality Support &amp; Managed Services</masterLabel>
+        <translation><!-- Professional Services:  Modality Support &amp; Managed Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Professional Services: Modality  Custom Development</masterLabel>
+        <translation><!-- Professional Services: Modality  Custom Development --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Professional Services: Modality Consulting</masterLabel>
+        <translation><!-- Professional Services: Modality Consulting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video: Managed Conference</masterLabel>
+        <translation><!-- Video: Managed Conference --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video: Managed Service - Device</masterLabel>
+        <translation><!-- Video: Managed Service - Device --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video: Managed Service - Flat Rate</masterLabel>
+        <translation><!-- Video: Managed Service - Flat Rate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video: Professional Service</masterLabel>
+        <translation><!-- Video: Professional Service --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web: AdobeConnect</masterLabel>
+        <translation><!-- Web: AdobeConnect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web: Cisco WebEx</masterLabel>
+        <translation><!-- Web: Cisco WebEx --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web: GlobalMeet</masterLabel>
+        <translation><!-- Web: GlobalMeet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web: GlobalMeet Active Host</masterLabel>
+        <translation><!-- Web: GlobalMeet Active Host --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web: GlobalMeet Web for Microsoft Lync</masterLabel>
+        <translation><!-- Web: GlobalMeet Web for Microsoft Lync --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web: GlobalMeet Webinar</masterLabel>
+        <translation><!-- Web: GlobalMeet Webinar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web: Microsoft Office Live Meeting</masterLabel>
+        <translation><!-- Web: Microsoft Office Live Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web: Modality Software Applications</masterLabel>
+        <translation><!-- Web: Modality Software Applications --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web: NASDAQ</masterLabel>
+        <translation><!-- Web: NASDAQ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web: ON24</masterLabel>
+        <translation><!-- Web: ON24 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web: Vcube</masterLabel>
+        <translation><!-- Web: Vcube --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web: Webcast</masterLabel>
+        <translation><!-- Web: Webcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web: iMeet</masterLabel>
+        <translation><!-- Web: iMeet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web: iMeet Agenday Enterprise</masterLabel>
+        <translation><!-- Web: iMeet Agenday Enterprise --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web: iMeet Central</masterLabel>
+        <translation><!-- Web: iMeet Central --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web: iMeetLive</masterLabel>
+        <translation><!-- Web: iMeetLive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web: iMeetLive Managed Event</masterLabel>
+        <translation><!-- Web: iMeetLive Managed Event --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

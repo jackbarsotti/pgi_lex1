@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sales Territory --></label>
+    <name>Sales_Territory__c</name>
+    <picklistValues>
+        <masterLabel>Arctic Cold Territory</masterLabel>
+        <translation><!-- Arctic Cold Territory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Beltway Territory</masterLabel>
+        <translation><!-- Beltway Territory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>California Mid</masterLabel>
+        <translation><!-- California Mid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>California North</masterLabel>
+        <translation><!-- California North --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>California South</masterLabel>
+        <translation><!-- California South --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Canada East</masterLabel>
+        <translation><!-- Canada East --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Carolina/Virginia Territory</masterLabel>
+        <translation><!-- Carolina/Virginia Territory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Colorado Territory</masterLabel>
+        <translation><!-- Colorado Territory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Illinois Territory</masterLabel>
+        <translation><!-- Illinois Territory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Midwest/Mideast Territory</masterLabel>
+        <translation><!-- Midwest/Mideast Territory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NW Territory</masterLabel>
+        <translation><!-- NW Territory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New England Territory</masterLabel>
+        <translation><!-- New England Territory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New York</masterLabel>
+        <translation><!-- New York --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Open (Inside Sales)</masterLabel>
+        <translation><!-- Open (Inside Sales) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Plains Territory</masterLabel>
+        <translation><!-- Plains Territory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SW Territory</masterLabel>
+        <translation><!-- SW Territory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Southeast Territory</masterLabel>
+        <translation><!-- Southeast Territory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sunshine Territory</masterLabel>
+        <translation><!-- Sunshine Territory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Texas</masterLabel>
+        <translation><!-- Texas --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

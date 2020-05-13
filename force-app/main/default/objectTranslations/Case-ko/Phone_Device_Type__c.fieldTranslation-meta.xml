@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- UC Connection Method --></label>
+    <name>Phone_Device_Type__c</name>
+    <picklistValues>
+        <masterLabel>GM Desktop App</masterLabel>
+        <translation><!-- GM Desktop App --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mobile App</masterLabel>
+        <translation><!-- Mobile App --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UC Desk Phone</masterLabel>
+        <translation><!-- UC Desk Phone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unknown/Not Applicable</masterLabel>
+        <translation><!-- Unknown/Not Applicable --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

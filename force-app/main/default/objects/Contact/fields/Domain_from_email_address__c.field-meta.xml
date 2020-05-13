@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Domain_from_email_address__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+AND(
+       !    CONTAINS(Email, &quot;gmail&quot;),
+       !    CONTAINS(Email, &quot;google&quot;),
+       !    CONTAINS(Email, &quot;hotmail&quot;),
+       !    CONTAINS(Email, &quot;mail.com&quot;),
+       !    CONTAINS(Email, &quot;yahoo&quot;),
+       !    CONTAINS(Email, &quot;gmx&quot;),
+       !    CONTAINS(Email, &quot;zoho&quot;),
+       !    CONTAINS(Email, &quot;gawab&quot;),
+       !    CONTAINS(Email, &quot;aol&quot;),
+       !    CONTAINS(Email, &quot;aim&quot;),
+       !    CONTAINS(Email, &quot;lavabit&quot;),
+       !    CONTAINS(Email, &quot;excite&quot;),
+       !    CONTAINS(Email, &quot;lycos&quot;),
+       !    CONTAINS(Email, &quot;sbc&quot;),
+       !    CONTAINS(Email, &quot;comcast&quot;),
+       !    CONTAINS(Email, &quot;msn.com&quot;),
+       !    CONTAINS(Email, &quot;mac.com&quot;)
+),
+RIGHT(Email, LEN(Email) - FIND(&quot;@&quot;,Email)), &quot;Not a valid Company domain&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>converts the email address to a suggested website for this contact</inlineHelpText>
+    <label>Domain (from email address)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

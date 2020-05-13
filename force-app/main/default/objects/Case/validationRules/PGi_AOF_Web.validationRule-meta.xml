@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_AOF_Web</fullName>
+    <active>true</active>
+    <description>If Area of Focus is Web Support other fields are required</description>
+    <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+NOT(ISCHANGED(IsUpdateFromCaseComment__c)),
+ISPICKVAL(Area_of_Focus__c,&#39;Web Support&#39;),
+(
+ISPICKVAL( Browser__c , &#39;&#39;) ||
+ISPICKVAL(  Browser_Test__c  , &#39;&#39;) ||
+ISBLANK( Customer_s_Operating_System__c ) ||
+ISPICKVAL(  Client_Logs_Screenshots_Attached__c  , &#39;&#39;) ||
+ISBLANK( Web_URL__c ) 
+))</errorConditionFormula>
+    <errorMessage>If your Area of Focus is Web Support, then you must populate a value in the following fields: Web URL, Browser, Browser Test, Customer&#39;s Operating System, and Client Logs/Screenshots Attached.</errorMessage>
+</ValidationRule>

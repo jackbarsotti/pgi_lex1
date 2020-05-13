@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- US States --></label>
+    <name>Janati_RR__US_States__c</name>
+    <picklistValues>
+        <masterLabel>Alabama (AL)</masterLabel>
+        <translation><!-- Alabama (AL) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alaska (AK)</masterLabel>
+        <translation><!-- Alaska (AK) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>American Samoa (AS)</masterLabel>
+        <translation><!-- American Samoa (AS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Arizona (AZ)</masterLabel>
+        <translation><!-- Arizona (AZ) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Arkansas (AR)</masterLabel>
+        <translation><!-- Arkansas (AR) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>California (CA)</masterLabel>
+        <translation><!-- California (CA) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Colorado (CO)</masterLabel>
+        <translation><!-- Colorado (CO) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Connecticut (CT)</masterLabel>
+        <translation><!-- Connecticut (CT) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Delaware (DE)</masterLabel>
+        <translation><!-- Delaware (DE) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>District of Columbia (DC)</masterLabel>
+        <translation><!-- District of Columbia (DC) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Florida (FL)</masterLabel>
+        <translation><!-- Florida (FL) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Georgia (GA)</masterLabel>
+        <translation><!-- Georgia (GA) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Guam (GU)</masterLabel>
+        <translation><!-- Guam (GU) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hawaii (HI)</masterLabel>
+        <translation><!-- Hawaii (HI) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Idaho (ID)</masterLabel>
+        <translation><!-- Idaho (ID) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Illinois (IL)</masterLabel>
+        <translation><!-- Illinois (IL) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Indiana (IN)</masterLabel>
+        <translation><!-- Indiana (IN) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Iowa (IA)</masterLabel>
+        <translation><!-- Iowa (IA) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kansas (KS)</masterLabel>
+        <translation><!-- Kansas (KS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kentucky (KY)</masterLabel>
+        <translation><!-- Kentucky (KY) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Louisiana (LA)</masterLabel>
+        <translation><!-- Louisiana (LA) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Maine (ME)</masterLabel>
+        <translation><!-- Maine (ME) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Maryland (MD)</masterLabel>
+        <translation><!-- Maryland (MD) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Massachusetts (MA)</masterLabel>
+        <translation><!-- Massachusetts (MA) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Michigan (MI)</masterLabel>
+        <translation><!-- Michigan (MI) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Minnesota (MN)</masterLabel>
+        <translation><!-- Minnesota (MN) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mississippi (MS)</masterLabel>
+        <translation><!-- Mississippi (MS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Missouri (MO)</masterLabel>
+        <translation><!-- Missouri (MO) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Montana (MT)</masterLabel>
+        <translation><!-- Montana (MT) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nebraska (NE)</masterLabel>
+        <translation><!-- Nebraska (NE) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nevada (NV)</masterLabel>
+        <translation><!-- Nevada (NV) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Hampshire (NH)</masterLabel>
+        <translation><!-- New Hampshire (NH) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Jersey (NJ)</masterLabel>
+        <translation><!-- New Jersey (NJ) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Mexico (NM)</masterLabel>
+        <translation><!-- New Mexico (NM) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New York (NY)</masterLabel>
+        <translation><!-- New York (NY) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>North Carolina (NC)</masterLabel>
+        <translation><!-- North Carolina (NC) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>North Dakota (ND)</masterLabel>
+        <translation><!-- North Dakota (ND) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Northern Mariana Islands (MP)</masterLabel>
+        <translation><!-- Northern Mariana Islands (MP) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ohio (OH)</masterLabel>
+        <translation><!-- Ohio (OH) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oklahoma (OK)</masterLabel>
+        <translation><!-- Oklahoma (OK) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oregon (OR)</masterLabel>
+        <translation><!-- Oregon (OR) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pennsylvania (PA)</masterLabel>
+        <translation><!-- Pennsylvania (PA) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Puerto Rico (PR)</masterLabel>
+        <translation><!-- Puerto Rico (PR) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rhode Island (RI)</masterLabel>
+        <translation><!-- Rhode Island (RI) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>South Carolina (SC)</masterLabel>
+        <translation><!-- South Carolina (SC) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>South Dakota (SD)</masterLabel>
+        <translation><!-- South Dakota (SD) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tennessee (TN)</masterLabel>
+        <translation><!-- Tennessee (TN) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Texas (TX)</masterLabel>
+        <translation><!-- Texas (TX) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>U.S. Minor Outlying Islands (UM)</masterLabel>
+        <translation><!-- U.S. Minor Outlying Islands (UM) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Utah (UT)</masterLabel>
+        <translation><!-- Utah (UT) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vermont (VT)</masterLabel>
+        <translation><!-- Vermont (VT) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Virgin Islands (VI)</masterLabel>
+        <translation><!-- Virgin Islands (VI) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Virginia (VA)</masterLabel>
+        <translation><!-- Virginia (VA) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Washington (WA)</masterLabel>
+        <translation><!-- Washington (WA) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>West Virginia (WV)</masterLabel>
+        <translation><!-- West Virginia (WV) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wisconsin (WI)</masterLabel>
+        <translation><!-- Wisconsin (WI) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wyoming (WY)</masterLabel>
+        <translation><!-- Wyoming (WY) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Navigate_to__c</fullName>
+    <description>If the navigate to is left blank, then the user is shown the field input, otherwise they will be directed to this url</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If the navigate to is left blank, then the user is shown the field input, otherwise they will be directed to this url</inlineHelpText>
+    <label>Navigate to</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>

@@ -1,0 +1,9 @@
+.THIS .setHeader{
+    background :cadetblue;
+    font-variant-caps: all-petite-caps;
+    font-size: 18px;
+}
+/*.THIS .disableDiv{
+    pointer-events: none; 
+    opacity: 0.4;
+}*/

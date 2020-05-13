@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Status__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates opportunity lifecycle status.</inlineHelpText>
+    <label>Opportunity Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Active</fullName>
+                <default>true</default>
+                <label>Active</label>
+            </value>
+            <value>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+                <label>Prospect</label>
+            </value>
+            <value>
+                <fullName>Nurture</fullName>
+                <default>false</default>
+                <label>Nurture</label>
+            </value>
+            <value>
+                <fullName>Closed Lost</fullName>
+                <default>false</default>
+                <label>Closed Lost</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>A - High Risk</controllingFieldValue>
+            <controllingFieldValue>B - Recovery Plan</controllingFieldValue>
+            <controllingFieldValue>C - Mutual Plan</controllingFieldValue>
+            <controllingFieldValue>D - Finalized</controllingFieldValue>
+            <controllingFieldValue>Closed Won</controllingFieldValue>
+            <controllingFieldValue>Qualify</controllingFieldValue>
+            <controllingFieldValue>01 – Opportunity Accepted</controllingFieldValue>
+            <controllingFieldValue>02 – Problem Definition</controllingFieldValue>
+            <controllingFieldValue>03 – Solution Presenting</controllingFieldValue>
+            <controllingFieldValue>04 – Proposing /Quote</controllingFieldValue>
+            <controllingFieldValue>05 – Out for Signature/Finalizing Closure</controllingFieldValue>
+            <valueName>Active</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost - Rejected</controllingFieldValue>
+            <controllingFieldValue>00 - Confirmed Cancellation</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Closed Lost</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualify</controllingFieldValue>
+            <valueName>Prospect</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

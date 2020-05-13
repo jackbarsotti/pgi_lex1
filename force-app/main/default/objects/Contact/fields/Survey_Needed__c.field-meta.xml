@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Survey_Needed__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Indicates that a survey needs to be sent. Used in conjunction with the workflow rules to generate appropriate survey actions.</description>
+    <externalId>false</externalId>
+    <label>Survey Needed</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

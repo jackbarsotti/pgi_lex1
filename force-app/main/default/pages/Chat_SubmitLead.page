@@ -1,0 +1,25 @@
+<apex:page action="{!init}" controller="SubmitLeadController" showHeader="false" sidebar="false">
+
+  <apex:form id="formId">
+      
+      <apex:pageBlock title="Escalate to Lead" id="pageBlockId">
+      <apex:pageMessages />
+      <apex:pageBlockSection columns="1">
+            <apex:inputText label="First Name" value="{!FirstName}">
+            </apex:inputText>
+            <apex:inputText label="Last Name" value="{!LastName}">
+            </apex:inputText>     
+            <apex:inputText label="Company" value="{!Company}">
+            </apex:inputText>
+            <apex:inputText label="Business Phone" value="{!Phone}">
+            </apex:inputText>   
+            <apex:outputText label="Email" value="{!Email}">
+            </apex:outputText>
+            </apex:pageBlockSection>   
+            
+          <apex:pageBlockButtons >  
+          <apex:commandButton value="Submit" action="{!submitLead}"/>
+          </apex:pageBlockButtons>
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>

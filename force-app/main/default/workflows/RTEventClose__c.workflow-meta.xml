@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>RT_Add_l_Minutes_Rate_to_Zero</fullName>
+        <description>Set the &quot;Additional Minutes Rate&quot; to 0 for Webinar subscriptions.</description>
+        <field>Additional_Minutes_Rate__c</field>
+        <formula>0</formula>
+        <name>RT_Add&#39;l Minutes Rate to Zero</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Add_l_Participants_Rate_to_Zero</fullName>
+        <description>Set &quot;Additional Participants Rate&quot; to 0 for Webinar subscriptions.</description>
+        <field>Additional_Participants_Rate__c</field>
+        <formula>0</formula>
+        <name>RT_Add&#39;l Participants Rate to Zero</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Base_Event_Charge_to_Zero</fullName>
+        <description>Set &quot;Base Event Charge&quot; to Zero for Webinar subscriptions.</description>
+        <field>Base_Event_Charge__c</field>
+        <formula>0</formula>
+        <name>RT_Base Event Charge to Zero</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>RT_Broadcast Audio Rate for Webinar Subscriptions</fullName>
+        <actions>
+            <name>RT_Add_l_Minutes_Rate_to_Zero</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Add_l_Participants_Rate_to_Zero</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Base_Event_Charge_to_Zero</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Workflow to zero out the Broadcast Audio rates for Standalone events for a Webinar subscription type.</description>
+        <formula>ISPICKVAL(RT_Event__r.Broadcast_Audio_Type__c, &quot;Stand Alone&quot;) &amp;&amp; ((RT_Event__r.Web_Sub_Type__c = &quot;Webinar (500)&quot;) || (RT_Event__r.Web_Sub_Type__c = &quot;Webinar (1000)&quot;) || (RT_Event__r.Web_Sub_Type__c = &quot;Webinar (3000)&quot;))</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

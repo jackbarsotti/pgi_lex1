@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The channel being used (ex. web, search, email), set within the UTM parameter --></help>
+    <label><!-- Medium --></label>
+    <name>bizible2__Medium__c</name>
+</CustomFieldTranslation>

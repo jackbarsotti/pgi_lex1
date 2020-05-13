@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TASKRAY__allTaskGroups</fullName>
+    <columns>NAME</columns>
+    <columns>TASKRAY__Project__c</columns>
+    <columns>TASKRAY__trStartDate__c</columns>
+    <columns>TASKRAY__trEndDate__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Task Groups</label>
+</ListView>

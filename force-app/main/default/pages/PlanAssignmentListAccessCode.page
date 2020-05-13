@@ -1,0 +1,26 @@
+<apex:page standardController="Subscription__c" extensions="PlanAssignmentController" tabStyle="Subscription__c">
+  <apex:stylesheet value="{!URLFOR($Resource.RTResources, 'css/jquery-ui.min.css')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery-ui.min.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/handlebars.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/messaging.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/remoting.js')}"/>   
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/VFResizer.js')}"/>  
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/planAssignmentListHelper.js')}"/>    
+
+  <script>    
+    var $ = jQuery.noConflict();
+    $(document).ready(function(){       
+      $.renderPlanAssignmentList({
+        id: '{!Id}',
+        templateURL: "{!URLFOR($Resource.RTResources, 'js/handlebars/planAssignmentList.hbs')}",
+        templateId: "planAssignmentList-template",        
+        planAssignmentPage: "AssignAccessCodePlan",
+        resizerURL: "{!URLFOR($Resource.RTResources, 'html/VFResizerProxy.html')}",
+        resizerName: "PlanAssignmentListAccessCode"
+      });      
+    });    
+  </script>
+
+  <script id="planAssignmentList-template" type="text/x-handlebars-template"></script>
+</apex:page>

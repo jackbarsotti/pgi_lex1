@@ -1,0 +1,281 @@
+<apex:page standardController="Case" extensions="CaseViewOverrideExtension" id="page" lightningStylesheets="true">
+    <apex:includeScript value="{!URLFOR($Resource.streaming,'cometd.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.streaming,'jquery-1.5.1.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.streaming,'json2.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.streaming,'jquery.cometd.js')}" />
+    <apex:includeScript value="/support/console/47.0/integration.js" />
+
+
+    <script>
+        var j1_5_1$ = jQuery.noConflict();
+    </script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <script>
+        var j1_12_4$ = jQuery.noConflict();
+        j1_5_1$(document).ready(function () {
+
+            j1_5_1$.cometd.init({
+                url: window.location.protocol + '//' + window.location.hostname + '/cometd/40.0/',
+                requestHeaders: {
+                    Authorization: 'OAuth {!$Api.Session_ID}'
+                }
+            });
+
+            j1_5_1$.cometd.subscribe('/topic/CaseUpdate', function (message) {
+                console.log(message);
+                console.log('{!Case.Id}');
+                console.log(message.data.sobject.Id);
+                if (!editMode() && message != null && message.data != null && message.data.sobject != null && message.data.sobject.Id == '{!Case.Id}') {
+                    reloadFocusedSubtab();
+                }
+
+            });
+            testSetTabTitle();
+        });
+        function reloadFocusedSubtab() {
+            sforce.console.getFocusedSubtabId(showTabId);
+            var pageId = '{!$Component.page}';
+            document.getElementById(pageId).addEventListener('dblclick', checkDirty);
+        }
+        var showTabId = function showTabId(result) {
+            location.reload();
+            var pageId = '{!$Component.page}';
+            document.getElementById(pageId).addEventListener('dblclick', checkDirty);
+            //sforce.console.refreshSubtabById(result.id, true);
+        };
+
+        function testSetTabTitle() {
+            sforce.console.getFocusedPrimaryTabId(function (result) {
+                sforce.console.setTabTitle('{!Case.Account.Name}', result.id);
+                sforce.console.setTabIcon('{!$Resource.case16}', result.id);
+            });
+
+            sforce.console.getFocusedSubtabId(function (result) {
+
+            });
+        }
+
+
+        //clear value
+        var productField, aofField, symptomField, subSymptomField, initialized;
+        var initializeFields = function () {
+            try {
+                productField = j1_12_4$('[id^="00N1B00000AxQDi"]').find('select');
+                productField.on("change", function () { checkPicklists(); });
+                aofField = j1_12_4$('[id^="00N1B00000AxQCX"]').find('select');
+                aofField.on("change", function () { checkPicklists(); });
+                symptomField = j1_12_4$('[id^="00N1B00000AxQE2"]').find('select');
+                symptomField.on("change", function () { checkPicklists(); });
+                subSymptomField = j1_12_4$('[id^="00N1B00000AxQE3"]').find('select');
+            } catch (exception) {
+                console.log(exception);
+            }
+        }
+        var clearCurrentValue = function (field) {
+            // j1_12_4$("[id$=00N1B00000AxQDipage_j_id9]").val("");
+            field.val("");
+        }
+        var disableField = function (field) {
+            field.prop("disabled", true);
+            // j1_12_4$("[id$=00N1B00000AxQDipage_j_id9]").prop("disabled",true);
+        }
+        var enableField = function (field) {
+            field.prop("disabled", false);
+            // j1_12_4$("[id$=00N1B00000AxQDipage_j_id9]").prop("disabled",false);
+        }
+        // var removePicklistValue = function(field, value) {
+        //    j1_12_4$('option[value="'+value+'"]', )field.remove(); 
+        //    // j1_12_4$('option[value=""]', j1_12_4$("[id$=00N1B00000AxQDipage_j_id9]")).remove();
+        // }
+
+        var removeFieldValues = function (field) {
+            field.empty();
+        }
+        var getProductField = function () {
+            // initializeFields();
+            return productField;
+        }
+        var getProductValue = function () {
+            if (getProductField() != null) {
+                return getProductField().val();
+            }
+            return null;
+        }
+        var getAreaOfFocusField = function () {
+            // initializeFields();
+            return aofField;
+        }
+        var getAreaOfFocusValue = function () {
+            if (getAreaOfFocusField() != null) {
+                // console.log(getAreaOfFocusField().value);
+                return getAreaOfFocusField().val();
+            }
+            return null;
+        }
+        var getSymptomField = function () {
+            // initializeFields();
+            return symptomField;
+        }
+        var getSymptomValue = function () {
+            if (getSymptomField() != null) {
+                return getSymptomField().val();
+            }
+            return null;
+        }
+        var getSubSymptomField = function () {
+            // initializeFields();
+            return subSymptomField;
+        }
+        var getSubSymptomValue = function () {
+            if (getSubSymptomField() != null) {
+                return getSubSymptomField().val();
+            }
+            return null;
+        }
+        /* RT-306---------Start--*/
+        var ProductSymptoms;
+        function getUpdatedProductSymptoms() {
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.CaseViewOverrideExtension.fetchProductSymptoms}',
+                function (result, event) {
+                    if (event.status) {
+                        if (result != null) {
+                            window.localStorage.setItem('ProductSymptomCache', JSON.stringify(result));
+                            ProductSymptoms = JSON.parse(window.localStorage.getItem('ProductSymptomCache'));
+                        }
+                    }
+                }
+            );
+        }
+
+
+        var localProductSorage = window.localStorage.getItem('ProductSymptomCache');
+
+        if (localProductSorage != undefined && localProductSorage != '' && localProductSorage != null) {
+            ProductSymptoms = JSON.parse(window.localStorage.getItem('ProductSymptomCache'));
+        } else {
+            getUpdatedProductSymptoms();
+        }
+
+        /* --end--*/
+        var checkPicklists = function () {
+            initializeFields();
+            //The field of Area of Focus is dependent on Product 
+
+            //The field of Main Symptom is dependent on Area of Focus 
+
+            //The field of  Sub Symptom values to be unique based off of the entire selection not just the previous controlling field,
+
+            setFieldValues(getAreaOfFocusField(), ProductSymptoms.productToAreaOfFocusMap[getProductValue()]);
+            setFieldValues(getSymptomField(), ProductSymptoms.areaOfFocusToSymptomMap[getProductValue() + '' + getAreaOfFocusValue()]);
+            setFieldValues(getSubSymptomField(), ProductSymptoms.subSymptomMap[getProductValue() + getSymptomValue() + getAreaOfFocusValue()]);
+
+        }
+        var setFieldValues = function (field, results) {
+            if (field == null || field == undefined) { return; }
+            var priorValue = field.val();
+            if (results == null || results == undefined || results.length == 0) {
+                disableField(field);
+                clearCurrentValue(field);
+                removeFieldValues(field);
+                field.append('<option value="">--None--</option>');
+                return;
+            } else {
+                results.sort();
+                enableField(field);
+                removeFieldValues(field);
+                field.append('<option value="">--None--</option>');
+                for (var i = 0; i < results.length; i++) {
+                    var loopValue = results[i];
+                    j1_12_4$(field).append('<option value="' + results[i] + '">' + results[i] + '</option>');
+
+                    if (loopValue == priorValue) {
+                        field.val(priorValue);
+                    }
+                }
+            }
+        }
+        checkPicklists();
+    </script>
+
+
+    <chatter:feedWithFollowers entityId="{!Case.Id}" />
+    <apex:Detail subject="{!Case.ID}" relatedList="true" inlineEdit="true" />
+
+    <apex:includeScript value="/soap/ajax/47.0/connection.js" />
+
+    <script type="text/javascript">
+
+
+        sforce.connection.sessionId = '{!$Api.Session_ID}';
+        //TODO - refresh when new email is sent ---> Done
+        //TODO - refresh when new case comment is added -> Done
+        //TODO - display case icon next to "New Case" / "Case ######"
+        function onPageLoad() {
+            if (sforce != undefined && sforce.console != undefined && sforce.console.isInConsole()) {
+                tabId = sforce.console.getEnclosingTabId();
+                console.log(tabId);
+                if ("{!Case.Id}" == null) {
+                    sforce.console.setTabTitle("New Case");
+                    sforce.console.setTabIcon('{!$Resource.case16}', tabId);
+
+
+                } else {
+                    sforce.console.setTabTitle("{!Case.CaseNumber}");
+                    sforce.console.setTabIcon('{!$Resource.case16}', tabId);
+
+                }
+                sforce.console.setTabUnsavedChanges(false, displayNone());
+            }
+        }
+        window.setInterval(function () {
+            if (initialized != true) {
+                initializeFields();
+                checkPicklists();
+            }
+            if (sforce != undefined && sforce.console != undefined && sforce.console.isInConsole()) {
+                window.addEventListener('mousemove', function () {
+                    if (editMode() && !dirty) {
+                        sforce.console.setTabUnsavedChanges(true, displayNone());
+                        checkPicklists();
+                        dirty = true;
+                    } else if (!editMode() && dirty) {
+                        sforce.console.setTabUnsavedChanges(false, displayNone());
+                        checkPicklists();
+                        dirty = false;
+                    }
+                });
+            }
+        }, 750);
+        var dirty = false;
+        var displayNone = function () {
+            if (document.getElementById('AppBodyHeader') != null && document.getElementById('AppBodyHeader').style != null && document.getElementById('AppBodyHeader').style.display != null) {
+                document.getElementById('AppBodyHeader').style.display = 'none';
+            }
+
+            if (document.getElementById('sidebarDiv') != null && document.getElementById('sidebarDiv').style != null && document.getElementById('sidebarDiv').style.display != null) {
+                document.getElementById('sidebarDiv').style.display = 'none';
+            }
+        }
+        var pageLoad = window.onload;
+        window.onload = function () {
+            if (pageLoad) {
+                pageLoad();
+            }
+            onPageLoad();
+        };
+        // var checkDirty = function() {
+        //     console.log('checkDirty');
+        //     if(editMode()) {
+        //         sforce.console.setTabUnsavedChanges(true, displayNone());
+        //     } else {
+        //         sforce.console.setTabUnsavedChanges(false, displayNone());
+        //     }
+        // }
+        var editMode = function () {
+            return (document.getElementsByName('inlineEditSave')[0].style.display != 'none');
+        }
+        getUpdatedProductSymptoms();
+    </script>
+</apex:page>

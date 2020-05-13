@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RT1__NextRegistrationIndex__c</fullName>
+    <deprecated>false</deprecated>
+    <description>For each registration added to the meeting that isn&#39;t associated to a lead or contact use the number in this field and increment it by 1.</description>
+    <externalId>false</externalId>
+    <label>NextRegistrationIndex</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

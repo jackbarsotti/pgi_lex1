@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>chttrunfollow__validate_operator</fullName>
+    <active>true</active>
+    <description>Note this doesn&#39;t check for hackers that try to use an invalid operator for a given field type such as &quot;boolean does not contain&quot;.  Checking for this in the trigger would create too many additional describes and hurt code coverage.</description>
+    <errorConditionFormula>NOT( ISPICKVAL(chttrunfollow__Operator__c ,&#39;equals&#39;) 
+||ISPICKVAL(chttrunfollow__Operator__c ,&#39;not equal to&#39;) 
+||ISPICKVAL(chttrunfollow__Operator__c ,&#39;greater than&#39;)
+||ISPICKVAL(chttrunfollow__Operator__c ,&#39;less than&#39;)
+||ISPICKVAL(chttrunfollow__Operator__c ,&#39;greater or equal&#39;)
+||ISPICKVAL(chttrunfollow__Operator__c ,&#39;less or equal&#39;)
+||ISPICKVAL(chttrunfollow__Operator__c ,&#39;contains&#39;)
+||ISPICKVAL(chttrunfollow__Operator__c ,&#39;does not contain&#39;)
+||ISPICKVAL(chttrunfollow__Operator__c ,&#39;starts with&#39;)
+||ISPICKVAL(chttrunfollow__Operator__c ,&#39;equals TODAY&#39;)
+)</errorConditionFormula>
+    <errorMessage>Error: Invalid operator entered.  You must select a valid operator such as &quot;equals&quot; or &quot;not equal to&quot;.</errorMessage>
+</ValidationRule>

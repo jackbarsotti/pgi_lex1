@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- $400 per first video, $100 per additional video --></help>
+    <label><!-- Overlay Video --></label>
+    <name>Overlay_Video__c</name>
+</CustomFieldTranslation>

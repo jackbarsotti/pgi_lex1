@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Support Type --></label>
+    <name>Support_Type__c</name>
+    <picklistValues>
+        <masterLabel>Non-Standard SLA</masterLabel>
+        <translation><!-- Non-Standard SLA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Paid Premium Support</masterLabel>
+        <translation><!-- Paid Premium Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Special Commitments (add. PS Hours, etc.)</masterLabel>
+        <translation><!-- Special Commitments (add. PS Hours, etc.) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Standard SLA</masterLabel>
+        <translation><!-- Standard SLA --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

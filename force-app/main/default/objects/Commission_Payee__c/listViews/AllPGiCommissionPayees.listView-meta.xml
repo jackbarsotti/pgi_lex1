@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AllPGiCommissionPayees</fullName>
+    <columns>NAME</columns>
+    <columns>Inactive__c</columns>
+    <columns>Team__c</columns>
+    <columns>Pending_Commission_Totals__c</columns>
+    <columns>Approved_Commission_Totals__c</columns>
+    <columns>Paid_Commission_Totals__c</columns>
+    <columns>Total_Commissions__c</columns>
+    <columns>Pending_Commission_Credits_Totals__c</columns>
+    <columns>Approved_Commission_Credits_Totals__c</columns>
+    <columns>Paid_Commission_Credit_Totals__c</columns>
+    <columns>Total_Commission_Credits__c</columns>
+    <columns>Commission_Base__c</columns>
+    <columns>Commission_Accelerator__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Team__c</field>
+        <operation>equals</operation>
+        <value>PGi</value>
+    </filters>
+    <label>All PGi Commission Payees</label>
+</ListView>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Contact Status Values --></label>
+    <name>Contact_Status_Values__c</name>
+    <picklistValues>
+        <masterLabel>Active Billing Account</masterLabel>
+        <translation><!-- Active Billing Account --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Criteria - No Authority</masterLabel>
+        <translation><!-- Contact Criteria - No Authority --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Criteria - No Budget</masterLabel>
+        <translation><!-- Contact Criteria - No Budget --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Unresponsive</masterLabel>
+        <translation><!-- Contact Unresponsive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incomplete / Inaccurate Information</masterLabel>
+        <translation><!-- Incomplete / Inaccurate Information --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Fit - No Match</masterLabel>
+        <translation><!-- No Fit - No Match --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Fit - Product Not Supported</masterLabel>
+        <translation><!-- No Fit - Product Not Supported --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Legitimate Interest</masterLabel>
+        <translation><!-- No Legitimate Interest --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Longer at Company</masterLabel>
+        <translation><!-- No Longer at Company --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nurture:  Interested but not ready</masterLabel>
+        <translation><!-- Nurture:  Interested but not ready --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

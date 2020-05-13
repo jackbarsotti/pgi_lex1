@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Values passed in to match to ZoomInfo data. --></help>
+    <label><!-- Match Inputs --></label>
+    <name>zisf__Match_Inputs__c</name>
+</CustomFieldTranslation>

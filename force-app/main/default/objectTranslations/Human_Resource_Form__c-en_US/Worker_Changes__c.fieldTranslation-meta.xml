@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Worker Changes --></label>
+    <name>Worker_Changes__c</name>
+    <picklistValues>
+        <masterLabel>Department</masterLabel>
+        <translation><!-- Department --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>End Date</masterLabel>
+        <translation><!-- End Date --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>First Name</masterLabel>
+        <translation><!-- First Name --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Job Title</masterLabel>
+        <translation><!-- Job Title --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Last Name</masterLabel>
+        <translation><!-- Last Name --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Location</masterLabel>
+        <translation><!-- Location --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Supervisor</masterLabel>
+        <translation><!-- Supervisor --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

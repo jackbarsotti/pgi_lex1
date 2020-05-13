@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Fee_Exempt__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check to opt the account out of service fee</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If checked, user will not be charged the service fee.</inlineHelpText>
+    <label>Service Fee Exempt</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sort_Order__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(YEAR(DATEVALUE(Start__c)) - 2017,1,&quot;a&quot;,2,&quot;b&quot;,3,&quot;c&quot;,4,&quot;d&quot;,5,&quot;e&quot;,6,&quot;f&quot;,7,&quot;g&quot;,8,&quot;h&quot;,9,&quot;i&quot;,10,&quot;j&quot;,11,&quot;k&quot;,12,&quot;l&quot;,&quot;*&quot;)
+&amp;
+CASE(MONTH(DATEVALUE(Start__c)),1,&quot;a&quot;,2,&quot;b&quot;,3,&quot;c&quot;,4,&quot;d&quot;,5,&quot;e&quot;,6,&quot;f&quot;,7,&quot;g&quot;,8,&quot;h&quot;,9,&quot;i&quot;,10,&quot;j&quot;,11,&quot;k&quot;,12,&quot;l&quot;,&quot;~&quot;)
+&amp;
+CASE(DAY(DATEVALUE(Start__c)),1,&quot;aa&quot;,2,&quot;ab&quot;,3,&quot;ac&quot;,4,&quot;ad&quot;,5,&quot;ae&quot;,6,&quot;af&quot;,7,&quot;ag&quot;,8,&quot;ah&quot;,9,&quot;ai&quot;,10,&quot;aj&quot;,11,&quot;ak&quot;,12,&quot;al&quot;,13,&quot;am&quot;,14,&quot;an&quot;,15,&quot;ao&quot;,16,&quot;ap&quot;,17,&quot;aq&quot;,18,&quot;ar&quot;,19,&quot;as&quot;,20,&quot;at&quot;,21,&quot;au&quot;,22,&quot;av&quot;,23,&quot;aw&quot;,24,&quot;ax&quot;,25,&quot;ay&quot;,26,&quot;az&quot;,27,&quot;ba&quot;,28,&quot;bb&quot;,29,&quot;bc&quot;,30,&quot;bd&quot;,31,&quot;be&quot;,&quot;|&quot;)
+&amp;
+CASE(YEAR(DATEVALUE(Request_Submitted__c)) - 2016,1,&quot;a&quot;,2,&quot;b&quot;,3,&quot;c&quot;,4,&quot;d&quot;,5,&quot;e&quot;,6,&quot;f&quot;,7,&quot;g&quot;,8,&quot;h&quot;,9,&quot;i&quot;,10,&quot;j&quot;,11,&quot;k&quot;,12,&quot;l&quot;,&quot;*&quot;)
+&amp;
+CASE(MONTH(DATEVALUE(Request_Submitted__c)),1,&quot;a&quot;,2,&quot;b&quot;,3,&quot;c&quot;,4,&quot;d&quot;,5,&quot;e&quot;,6,&quot;f&quot;,7,&quot;g&quot;,8,&quot;h&quot;,9,&quot;i&quot;,10,&quot;j&quot;,11,&quot;k&quot;,12,&quot;l&quot;,&quot;*&quot;)
+&amp;
+CASE(DAY(DATEVALUE(Request_Submitted__c)),1,&quot;aa&quot;,2,&quot;ab&quot;,3,&quot;ac&quot;,4,&quot;ad&quot;,5,&quot;ae&quot;,6,&quot;af&quot;,7,&quot;ag&quot;,8,&quot;ah&quot;,9,&quot;ai&quot;,10,&quot;aj&quot;,11,&quot;ak&quot;,12,&quot;al&quot;,13,&quot;am&quot;,14,&quot;an&quot;,15,&quot;ao&quot;,16,&quot;ap&quot;,17,&quot;aq&quot;,18,&quot;ar&quot;,19,&quot;as&quot;,20,&quot;at&quot;,21,&quot;au&quot;,22,&quot;av&quot;,23,&quot;aw&quot;,24,&quot;ax&quot;,25,&quot;ay&quot;,26,&quot;az&quot;,27,&quot;ba&quot;,28,&quot;bb&quot;,29,&quot;bc&quot;,30,&quot;bd&quot;,31,&quot;be&quot;,&quot;*&quot;)
+&amp;
+CASE(HOUR(TIMEVALUE(Request_Submitted__c)),1,&quot;a&quot;,2,&quot;b&quot;,3,&quot;c&quot;,4,&quot;d&quot;,5,&quot;e&quot;,6,&quot;f&quot;,7,&quot;g&quot;,8,&quot;h&quot;,9,&quot;i&quot;,10,&quot;j&quot;,11,&quot;k&quot;,12,&quot;l&quot;,13,&quot;m&quot;,14,&quot;n&quot;,15,&quot;o&quot;,16,&quot;p&quot;,17,&quot;q&quot;,18,&quot;r&quot;,19,&quot;s&quot;,20,&quot;t&quot;,21,&quot;u&quot;,22,&quot;v&quot;,23,&quot;w&quot;,24,&quot;x&quot;,25,&quot;y&quot;,26,&quot;z&quot;,&quot;*&quot;)
+&amp;
+RIGHT(TEXT(MINUTE(TIMEVALUE(Request_Submitted__c))+100),2)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Sort Order</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

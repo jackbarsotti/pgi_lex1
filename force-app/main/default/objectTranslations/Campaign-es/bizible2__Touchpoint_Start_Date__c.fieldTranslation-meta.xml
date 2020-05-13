@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The start date when Bizible should begin to enable Campaign Members for touchpoints --></help>
+    <label><!-- Touchpoint Start Date --></label>
+    <name>bizible2__Touchpoint_Start_Date__c</name>
+</CustomFieldTranslation>

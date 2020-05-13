@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>bizible2__Revenue_Custom_Model__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The amount distributed for this touchpoint based on a full path attribution model</description>
+    <externalId>false</externalId>
+    <formula>if($Setup.bizible2__bizibleSettings__c.bizible2__Use_Custom_Amount_Field__c, 
+bizible2__Opportunity__r.bizible2__Bizible_Opportunity_Amount__c *  bizible2__Attribution_Custom_Model__c, 
+bizible2__Opportunity__r.Amount * bizible2__Attribution_Custom_Model__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The amount distributed for this touchpoint based on a custom shaped attribution model</inlineHelpText>
+    <label>Revenue - Full Path</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

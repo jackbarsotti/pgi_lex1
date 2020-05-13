@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Department__c</fullName>
+    <externalId>false</externalId>
+    <label>Corporate Department</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Administrative Assistant</fullName>
+                <default>false</default>
+                <label>Administrative Assistant</label>
+            </value>
+            <value>
+                <fullName>Analyst</fullName>
+                <default>false</default>
+                <label>Analyst</label>
+            </value>
+            <value>
+                <fullName>C-Level/VP/Director</fullName>
+                <default>false</default>
+                <label>C-Level/VP/Director</label>
+            </value>
+            <value>
+                <fullName>Consultant</fullName>
+                <default>false</default>
+                <label>Consultant</label>
+            </value>
+            <value>
+                <fullName>Customer Service</fullName>
+                <default>false</default>
+                <label>Customer Service</label>
+            </value>
+            <value>
+                <fullName>Development</fullName>
+                <default>false</default>
+                <label>Development</label>
+            </value>
+            <value>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+                <label>Engineering</label>
+            </value>
+            <value>
+                <fullName>Finance</fullName>
+                <default>false</default>
+                <label>Finance</label>
+            </value>
+            <value>
+                <fullName>HR</fullName>
+                <default>false</default>
+                <label>HR</label>
+            </value>
+            <value>
+                <fullName>Investor Relations</fullName>
+                <default>false</default>
+                <label>Investor Relations</label>
+            </value>
+            <value>
+                <fullName>IT</fullName>
+                <default>false</default>
+                <label>IT</label>
+            </value>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Operations</fullName>
+                <default>false</default>
+                <label>Operations</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Product Marketing</fullName>
+                <default>false</default>
+                <label>Product Marketing</label>
+            </value>
+            <value>
+                <fullName>R&amp;D</fullName>
+                <default>false</default>
+                <label>R&amp;D</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Telecom</fullName>
+                <default>false</default>
+                <label>Telecom</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>HR Generalist</fullName>
+                <default>false</default>
+                <label>HR Generalist</label>
+            </value>
+            <value>
+                <fullName>HR Recruiting</fullName>
+                <default>false</default>
+                <label>HR Recruiting</label>
+            </value>
+            <value>
+                <fullName>IT/IS</fullName>
+                <default>false</default>
+                <label>IT/IS</label>
+            </value>
+            <value>
+                <fullName>Quality</fullName>
+                <default>false</default>
+                <label>Quality</label>
+            </value>
+            <value>
+                <fullName>Customer Service/Care/Support</fullName>
+                <default>false</default>
+                <label>Customer Service/Care/Support</label>
+            </value>
+            <value>
+                <fullName>Accounting/Finance</fullName>
+                <default>false</default>
+                <label>Accounting/Finance</label>
+            </value>
+            <value>
+                <fullName>Procurement</fullName>
+                <default>false</default>
+                <label>Procurement</label>
+            </value>
+            <value>
+                <fullName>Exec - &quot;C&quot; Level</fullName>
+                <default>false</default>
+                <label>Exec - &quot;C&quot; Level</label>
+            </value>
+            <value>
+                <fullName>Product Management</fullName>
+                <default>false</default>
+                <label>Product Management</label>
+            </value>
+            <value>
+                <fullName>Corporate Communications</fullName>
+                <default>false</default>
+                <label>Corporate Communications</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

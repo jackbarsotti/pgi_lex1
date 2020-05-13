@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Account Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Convey</fullName>
+                <default>false</default>
+                <label>Convey</label>
+            </value>
+            <value>
+                <fullName>CSR</fullName>
+                <default>false</default>
+                <label>CSR</label>
+            </value>
+            <value>
+                <fullName>GlobalMeet Webcast</fullName>
+                <default>false</default>
+                <label>GlobalMeet Webcast</label>
+            </value>
+            <value>
+                <fullName>GlobalMeet Webinar</fullName>
+                <default>false</default>
+                <label>GlobalMeet Webinar</label>
+            </value>
+            <value>
+                <fullName>GoToWebcast</fullName>
+                <default>false</default>
+                <label>GoToWebcast</label>
+            </value>
+            <value>
+                <fullName>Other Reseller</fullName>
+                <default>false</default>
+                <label>Other Reseller</label>
+            </value>
+            <value>
+                <fullName>PowWowNow Webcast</fullName>
+                <default>false</default>
+                <label>PowWowNow Webcast</label>
+            </value>
+            <value>
+                <fullName>PowWowNow Webinar</fullName>
+                <default>false</default>
+                <label>PowWowNow Webinar</label>
+            </value>
+            <value>
+                <fullName>ReadyTalk</fullName>
+                <default>false</default>
+                <label>ReadyTalk</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

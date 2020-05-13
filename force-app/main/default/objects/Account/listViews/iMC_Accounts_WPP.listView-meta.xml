@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>iMC_Accounts_WPP</fullName>
+    <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.SITE</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE_CODE</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>Zendesk__Notes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.iMC_Account</value>
+    </filters>
+    <filters>
+        <field>PARENT_NAME</field>
+        <operation>contains</operation>
+        <value>WPP,Y&amp;R,Young &amp; Rubicam,Ogilvy</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>contains</operation>
+        <value>Y&amp;R,Ogilvy</value>
+    </filters>
+    <label>iMC Accounts - WPP</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>iMC_All_iMC_Users</group>
+    </sharedTo>
+</ListView>

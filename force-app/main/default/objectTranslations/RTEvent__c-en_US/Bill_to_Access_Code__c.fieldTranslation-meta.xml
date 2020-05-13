@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Insert access code that should be billed for event services. --></help>
+    <label><!-- Bill to Access Code --></label>
+    <name>Bill_to_Access_Code__c</name>
+    <relationshipLabel><!-- RT Events (Bill to Access Code) --></relationshipLabel>
+</CustomFieldTranslation>

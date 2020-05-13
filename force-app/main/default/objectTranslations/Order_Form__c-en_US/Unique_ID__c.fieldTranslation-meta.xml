@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Unique ID for migrating between Sandboxes/Production --></help>
+    <label><!-- Unique ID --></label>
+    <name>Unique_ID__c</name>
+</CustomFieldTranslation>

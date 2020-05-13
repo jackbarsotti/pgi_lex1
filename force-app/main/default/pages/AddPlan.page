@@ -1,0 +1,305 @@
+<apex:page standardController="Account" extensions="AddPlanController" showHeader="true">
+  <apex:stylesheet value="{!URLFOR($Resource.RTResources, 'css/jquery-ui.min.css')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery-ui.min.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/messaging.js')}"/>  
+
+  <script>
+  	var accountStatus = '{!account.Status__c}';
+    var $ = jQuery.noConflict();
+    function setFocusOnLoad() {};   
+
+    function enableButtons(){
+      $('button').parent().find('button[role=button]').removeAttr('disabled').removeClass('ui-state-disabled');
+    }
+
+    function disableButtons() {
+      $('button').parent().find('button[role=button]').attr('disabled', 'true').addClass("ui-state-disabled");    
+    } 
+
+    //Initialize the Add a new plan dialog 
+    $(document).ready(function(){       
+
+		  if(accountStatus == 'Active'){ 
+	      $('.dialog-modal').dialog({
+	        title: 'Add a New Plan',
+	        autoOpen: true,
+	        resizable: false,
+	        draggable: true,
+	        closeOnEscape: false,
+	        open: function(event, ui) { $(".ui-dialog-titlebar-close").css('display', 'none'); },
+	        width: 740,
+	        modal: true,
+	        zIndex: 999,
+	        buttons: {
+            "Cancel": function(){
+              $.disableDialogButtons($(this));                      
+              location.href='/{!AccountId}';
+            },
+            
+	          "Add Plan": function(){
+              var button = $(this);
+              $.disableDialogButtons(button);                      
+
+	            $('#errorMessages').hide('fast');
+	            $('#warnMessage').text('Saving...');
+	            $('#warnMessages').show();
+	            
+	            var accountId = '{!AccountId}';            
+	            var packageId = $('select[id$="package"] option:selected').val();
+	            var billableType = $('span[id$="billableType"]').text();
+              var planName = $('input[id$="planName"]').val();
+	            var startDate = $('input[id$="startDate"]').val();
+	            var endDate = $('input[id$="endDate"]').val();
+	            var quantity = $('input[id$="quantity"]').val();
+	            var quantityStartDate = $('input[id$="quantityStartDate"]').val();
+	            if (quantity == null) {
+	                quantity = '';
+                }
+                if (quantityStartDate == null) {
+	                quantityStartDate = '';
+                }
+	            var planProducts = {};
+	            planProducts['products'] = new Array();                     
+	            var idArray = new Array(); 
+	            
+	            $('.productValue').each(function(index,el){
+	              var id = $(el).attr('id').split('_')[0];
+	              var field = $(el).attr('id').split('_')[1];
+	              var value = $(el).find('span[id*='+field+'_ileinner]').text();
+	              value = value=='Deleted'?'':value; 
+	              var idIndex = -1;
+	              
+	              if($.inArray(id, idArray)==-1){
+	                idArray.push(id);
+	                planProducts['products'][$.inArray(id, idArray)] = {};
+	              }              
+	              
+	              idIndex = $.inArray(id, idArray);              
+	              
+	              planProducts['products'][idIndex]['id'] = id;
+	              planProducts['products'][idIndex][field]=value.trim();            
+	            });
+	            
+	            if(console && console.log){
+	              console.log(accountId+"/"+packageId+"/"+planName+'/'+billableType+"/"+startDate+"/"+endDate+"/"+JSON.stringify(planProducts));
+	            }
+	            
+	            AddPlanController.addPlan(accountId, packageId, planName, billableType, startDate, endDate, quantity, quantityStartDate, JSON.stringify(planProducts), function(result,event){
+	              $('#warnMessages').hide();
+	              if(event.status){
+	                if(result){
+	                  $('#warnMessage').text('Saved!');
+	                  $('#warnMessages').fadeIn('fast');
+	                  location.href='/{!AccountId}';
+	                }
+	              }
+	              else {
+	                //Display errors from event.message
+	                $('#errorMessage').text(event.message);
+	                $('#errorMessages').fadeIn('fast');
+                  $.enableDialogButtons(button);
+	              }              
+	            }, {escape: true});                                     
+	          }
+	        }
+	      });
+      } 
+      else {
+        $('#account-status-error').dialog({
+   	      autoOpen: true,
+		      resizable: false,
+		      width: 740,
+		      modal: true,
+		      title: 'Cannot add Plan',
+		      buttons: {
+		        "Ok" : function () {
+              $.disableDialogButtons($(this));
+		          $(this).dialog("close");
+		          location.href='/{!AccountId}';
+		        }
+		      },
+		      closeOnEscape: false,
+   			  open: function(event, ui) { $(".ui-dialog-titlebar-close").hide(); }
+		    });
+      }
+      
+      //Utility method to get URL parameters
+      $.extend({
+        getParameterValueByName : function(name,loc){
+          name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+          var regexS = "[\\?&]" + name + "=([^&#]*)";
+          var regex = new RegExp(regexS);
+          var results = regex.exec(loc==null?window.location.search:loc);
+          if(results == null)
+            return "";
+          else{
+            results[1] = results[1].replace(/\+/g, " ");
+            results[1] = results[1].replace(/\.json/g, "");
+            return decodeURIComponent(results[1]);
+          }
+                  
+        }
+      });                               
+    });              
+  </script>
+  
+<script type="text/javascript"> 
+  function openLookup(baseURL, width, modified, searchParam){
+    var originalbaseURL = baseURL;
+    var originalwidth = width;
+    var originalmodified = modified;
+    var originalsearchParam = searchParam;
+    
+    if (modified == '1') 
+      baseURL = baseURL + searchParam;
+ 
+    var isCustomLookup = false;
+ 
+    var txtId = $.getParameterValueByName('lknm', baseURL);
+     
+    baseURL = "/apex/CustomScheduleLookup?txt=" + txtId;
+    baseURL = baseURL + "&accountId=" + "{!accountId}";
+    
+    if (modified == '1') {
+      baseURL = baseURL + "&lksearch=" + searchParam;
+    }
+ 
+    if(txtId.indexOf('schedule') > -1 ){
+      isCustomLookup = true;
+    }
+
+    if(isCustomLookup == true){
+      openPopup(baseURL, "lookup", 350, 480, "width="+width+",height=480,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+    }
+    else {
+      if (modified == '1') originalbaseURL = originalbaseURL + originalsearchParam;
+      openPopup(originalbaseURL, "lookup", 350, 480, "width="+originalwidth+",height=480,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+    } 
+  }
+</script>
+        
+  <apex:pageMessages />
+  <apex:detail relatedListHover="true" showChatter="false"/>            
+
+  <div id="account-status-error" style="display: none">
+    <div class="ui-state-error ui-corner-all errorMessages" style="padding: 0 .7em .7em .7em; margin-bottom: 5px;"> 
+      <p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span><span class="errorMessage">No Plans may be added to this Account as it is not currently active.  Please resolve this error before adding a new Plan.</span></p>
+    </div>
+	</div>
+
+  <apex:outputPanel id="dialog-panel" styleClass="dialog-modal" layout="block">                
+      <!-- Dialog Text Page Block -->
+      <apex:pageBlock tabStyle="Account">    
+      
+        <div id="errorMessages" class="ui-state-error ui-corner-all" style="padding: 0 .7em .7em .7em; margin-bottom: 5px; display: none"> 
+          <p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span><span id="errorMessage"></span></p>
+        </div>
+        
+       <div id="warnMessages" class="ui-state-highlight ui-corner-all" style="padding: 0 .7em .7em .7em; margin-bottom: 5px; display: none"> 
+          <p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span><span id="warnMessage"></span></p>
+        </div>        
+        
+        <apex:pageBlockSection columns="1" title="Select a Plan">
+          <apex:form id="package">
+            <apex:selectList id="package" value="{!assignedPackageId}" size="1" label="Package" style="margin-top: -2px" tabindex="1">
+              <apex:selectOptions value="{!packageItems}"/>   
+              <apex:actionSupport event="onchange" onsubmit="disableButtons()" oncomplete="enableButtons()" action="{!packageSelect}" rerender="productsPanel,billableType,planName,planBlock,packageDescriptionPanel"/>
+            </apex:selectList>
+          </apex:form>
+
+          <apex:outputPanel id="packageDescriptionPanel" layout="block">                          
+            <h3>Description</h3>
+            <br/>
+            <span id="packageDescription">{!assignedPackage.description__c}</span>
+          </apex:outputPanel>
+    
+          <apex:outputPanel id="productsPanel" layout="block">
+            <apex:form id="plans">   
+              <apex:inlineEditSupport />                                              
+              <apex:pageBlockTable value="{!Products}" var="product">
+                <apex:facet name="caption">            
+                  <div class="" style="width: 33%; float: left">
+                    <img src="/s.gif" alt="" width="1" height="1" class="minWidth" title=""/>
+                    <img src="/img/icon/custom51_100/shoppingCart24.png" alt="Products" title="Products" style="float: left; padding-right: 5px"/>
+                    <h3 style="margin-top: 5px; float: left">Products</h3>
+                  </div>
+                  <br style="clear: both"/>            
+                </apex:facet>                                     
+                <apex:column headerValue="Name">
+                  <span id="{!product.id}_productName" class="productValue"><apex:outputField id="productName" value="{!product.name}"/></span>
+                </apex:column>                
+                <apex:column headerValue="Single Charge">
+                  <span id="{!product.id}_singleCharge" class="productValue"><apex:outputField id="singleCharge" value="{!product.singleCharge__c}"/></span>
+                </apex:column>                
+                <apex:column headerValue="Recurring Charge">
+                  <span id="{!product.id}_recurringCharge" class="productValue"><apex:outputField id="recurringCharge" value="{!product.recurringCharge__c}"/></span>
+                </apex:column>
+                <apex:column headerValue="Frequency">
+                  <span id="{!product.id}_recurringChargeFrequency" class="productValue"><apex:outputField id="recurringChargeFrequency" value="{!product.recurringChargeFrequency__c}"/></span>
+                </apex:column>            
+                <apex:column headerValue="Rate Set">
+                  <span id="{!product.id}_schedule" class="productValue schedule">
+                    <apex:outputField id="schedule" rendered="{!ISNULL(ProductsWithCustomSchedules[product.id].customSchedule__c)}" value="{!product.schedule__c}"/>
+                    <apex:outputField id="custom_schedule" rendered="{!NOT(ISNULL(ProductsWithCustomSchedules[product.id].customSchedule__c))}" value="{!ProductsWithCustomSchedules[product.id].customSchedule__c}"/>                    
+                  </span>
+                </apex:column>                        
+              </apex:pageBlockTable>
+              <script>
+                //Initialize Start/End date inputs to use Jquery date pickers
+                $('input[id$="startDate"]').datepicker({ dateFormat: "mm/dd/yy"});
+                $('input[id$="endDate"]').datepicker({ dateFormat: "mm/dd/yy"});
+                $('input[id$="quantityStartDate"]').datepicker({ dateFormat: "mm/dd/yy"});
+                $('input[id$="startDate"]').datepicker('setDate', new Date());
+                $('input[id$="quantityStartDate"]').datepicker('setDate', new Date());
+
+                //Replace schedule anchor links with just text nodes
+                $('span[id$="schedule_ileinner"], span[id$="schedule_1_ileinner"]').each(function(){
+                  var anchor = $(this).find('a:first');
+                  if(anchor.length>0){
+                    $(this).text(anchor.text());
+                    anchor.remove();
+                  }
+                });              
+              </script>            
+            </apex:form>
+          </apex:outputPanel>
+        </apex:pageBlockSection>
+
+      </apex:pageBlock>     
+           
+    <apex:form >
+
+      <apex:pageBlock id="planBlock" mode="inlineEdit" tabStyle="Account">
+      <apex:pageBlockSection columns="1" title="Plan Properties">
+        <apex:pageBlockSectionItem >
+          <apex:outputLabel value="Name" for="planName"/>
+          <apex:inputText id="planName" value="{!assignedPlan.name}" required="true" style="width: 250px"/>
+        </apex:pageBlockSectionItem>                
+        <apex:outputText id="billableType" value="{!assignedPlan.billableType__c}" />
+        <apex:pageBlockSectionItem >
+          <apex:outputLabel value="Start Date" for="startDate"/>
+          <apex:inputText id="startDate" value="{!assignedPlan.startDate__c}" required="true" style="margin-top: -2px" />
+        </apex:pageBlockSectionItem>          
+        <apex:pageBlockSectionItem >
+          <apex:outputLabel value="End Date" for="startDate"/>
+          <apex:inputText id="endDate" value="{!assignedPlan.endDate__c}" style="margin-top: -2px" />
+        </apex:pageBlockSectionItem>
+          <apex:pageBlockSectionItem rendered="{!quantityEnabled}">
+              <apex:outputPanel >
+              <apex:outputLabel value="Quantity" for="quantity" />
+                  <div class="requiredInput">
+                      <div class="requiredBlock"></div>
+                  </div>
+              </apex:outputPanel>
+              <apex:inputText id="quantity"  style="margin-top: -2px" required="{!quantityEnabled}" label="Quantity"/>
+          </apex:pageBlockSectionItem>
+          <apex:pageBlockSectionItem rendered="{!quantityEnabled}" >
+              <apex:outputLabel value="Quantity Start Date" for="quantityStartDate" />
+              <apex:inputText id="quantityStartDate" value="{!assignedPlan.quantityStartDate__c}" style="margin-top: -2px" required="{!quantityEnabled}" />
+          </apex:pageBlockSectionItem>
+      </apex:pageBlockSection>
+      </apex:pageBlock>
+    </apex:form>                                    
+  </apex:outputPanel>              
+</apex:page>

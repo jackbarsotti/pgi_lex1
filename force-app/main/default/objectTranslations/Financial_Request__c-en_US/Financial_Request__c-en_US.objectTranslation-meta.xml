@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Financial Request</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Financial Requests</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Billing Support Request --></label>
+        <name>Billing_Support_Request</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Company Cancellation Request --></label>
+        <name>Company_Cancellation_Request</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Company Credit Hold Request --></label>
+        <name>Company_Credit_Hold_Request</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Credit Request --></label>
+        <name>Credit_Request</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Payment Research Request --></label>
+        <name>Payment_Research_Request</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Profile Request --></label>
+        <name>Profile_Request</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Rate Entry Request --></label>
+        <name>Rate_Entry_Request</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Request for Adjustment --></label>
+        <name>Request_for_Adjustment</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Revenue Assurance Audit Request --></label>
+        <name>Revenue_Assurance_Audit_Request</name>
+    </fieldSets>
+    <layouts>
+        <layout>Financial Request Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PGi-Billing Support</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description Information --></label>
+            <section>Description Information</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Historicals --></label>
+            <section>Historicals</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PGi-Company Cancellation Request</layout>
+        <sections>
+            <label><!-- Additional Cancellation Information --></label>
+            <section>Additional Cancellation Information</section>
+        </sections>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Details --></label>
+            <section>Cancellation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Client/Company Information --></label>
+            <section>Client/Company Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PGi-Company Credit Hold</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description Information --></label>
+            <section>Description Information</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Historicals --></label>
+            <section>Historicals</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PGi-Credit Request</layout>
+        <sections>
+            <label><!-- APAC Approvals --></label>
+            <section>APAC Approvals</section>
+        </sections>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description Information --></label>
+            <section>Description Information</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Historicals --></label>
+            <section>Historicals</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PGi-Payment Research Request</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description Information --></label>
+            <section>Description Information</section>
+        </sections>
+        <sections>
+            <label><!-- Historicals --></label>
+            <section>Historicals</section>
+        </sections>
+        <sections>
+            <label><!-- Information --></label>
+            <section>Information</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PGi-Personal Information Data Request</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description Information --></label>
+            <section>Description Information</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PGi-Pricing Help Request</layout>
+        <sections>
+            <label><!-- Attach Customer Documents and Requirements --></label>
+            <section>Attach Customer Documents and Requirements</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Deal Desk Information --></label>
+            <section>Deal Desk Information</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Request Information --></label>
+            <section>Request Information</section>
+        </sections>
+        <sections>
+            <label><!-- Requestor&apos;s Information --></label>
+            <section>Requestor&#39;s Information</section>
+        </sections>
+        <sections>
+            <label><!-- Resolution --></label>
+            <section>Resolution</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PGi-Profile Request</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description Information --></label>
+            <section>Description Information</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Historicals --></label>
+            <section>Historicals</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PGi-Rate Entry Request</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Audit Details --></label>
+            <section>Audit Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description Information --></label>
+            <section>Description Information</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Historicals --></label>
+            <section>Historicals</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PGi-Request for Adjustment</layout>
+        <sections>
+            <label><!-- APAC Approveres --></label>
+            <section>APAC Approveres</section>
+        </sections>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description Information --></label>
+            <section>Description Information</section>
+        </sections>
+        <sections>
+            <label><!-- Historicals --></label>
+            <section>Historicals</section>
+        </sections>
+        <sections>
+            <label><!-- Information --></label>
+            <section>Information</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PGi-Revenue Assurance Audit Request</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Audit Detail Information --></label>
+            <section>Audit Detail Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description Information --></label>
+            <section>Description Information</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Historicals --></label>
+            <section>Historicals</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>ReadyTalk Credit Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>ReadyTalk Exemption Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Change Status --></label>
+        <name>Change_Status</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- Request help with a client&apos;s billing --></description>
+        <label><!-- PGi-Billing Support --></label>
+        <name>PGi_Billing_Support</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Global request for company cancellations --></description>
+        <label><!-- PGi-Company Cancellation Request --></label>
+        <name>PGi_Company_Cancellation_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Request a hold be placed on a company&apos;s credit --></description>
+        <label><!-- PGi-Company Credit Hold --></label>
+        <name>PGi_Company_Credit_Hold</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Request for Adjustment (Credit, Credit Rebill, and Debit) --></description>
+        <label><!-- PGi-Credit Request --></label>
+        <name>PGi_Credit_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Request research on payment of a bill by a client --></description>
+        <label><!-- PGi-Payment Research Request --></label>
+        <name>PGi_Payment_Research_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- PGi-Personal Information Data Request --></label>
+        <name>PGi_Personal_Information_Data_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- PGi-Pricing Help Request --></label>
+        <name>PGi_Pricing_Help_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Request a billing/contact change --></description>
+        <label><!-- PGi-Profile Request --></label>
+        <name>PGi_Profile_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Request a Rate Entry --></description>
+        <label><!-- PGi-Rate Entry Request --></label>
+        <name>PGi_Rate_Entry_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Request for transfer or write-off for a client --></description>
+        <label><!-- PGi-Request for Adjustment --></label>
+        <name>PGi_Request_for_Adjustment</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Request an audit of a finance ticket --></description>
+        <label><!-- PGi-Revenue Assurance Audit Request --></label>
+        <name>PGi_Revenue_Assurance_Audit_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- ReadyTalk Credit Request --></label>
+        <name>ReadyTalk_Credit_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- ReadyTalk Exemption Request --></label>
+        <name>ReadyTalk_Exemption_Request</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Ownership must be a Queue and not a User. Users are to be assigned in the Assigned To area. --></errorMessage>
+        <name>All_Owner_Must_Be_a_Queue</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Use 100 characters or less as this field can be used on the customer&apos;s invoice. --></errorMessage>
+        <name>Justification_100_character_length</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Billing Cycle is required --></errorMessage>
+        <name>PGi_Billing_Cycle_not_required_for_Admin</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When the Reason for Cancellation is &quot;Changing Providers&quot;, please update the Cancelled Reason Additional Info. --></errorMessage>
+        <name>PGi_Cancel_Reason_Changing_Providers</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When the Reason for Cancellation is &quot;Other&quot;, please update the Cancelled Reason Additional Info. --></errorMessage>
+        <name>PGi_Cancel_Reason_Other</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Credit Rebill Company Name(s) is required for Credit Rebill requests. --></errorMessage>
+        <name>PGi_Credit_Rebill_requires_Rebill_Name</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must populate why the ETF does not apply --></errorMessage>
+        <name>PGi_ETF_No</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must populate who approved the ETF to be waived. --></errorMessage>
+        <name>PGi_ETF_Waived</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must populate an Invoice Date that the ETF will be applied. --></errorMessage>
+        <name>PGi_ETF_Yes</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- In order to set as Approved, the following fields must be populated: PGi Company, Effective Date, Service Plan Type, TCV, # of Licenses, Term, Date of Cancellation, Effective Termination Date, ETF Apply, Contract Renewal Term, and Reason for Cancellation --></errorMessage>
+        <name>PGi_Inactivations_Approved</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Amount Before Tax cannot be edited after the case is saved. --></errorMessage>
+        <name>PGi_No_Edits_to_Amount_Before_Tax</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Once approved, the Estimated Dollar Amount and the Amount (Before Tax) can not be changed. --></errorMessage>
+        <name>PGi_No_Edits_to_Approved_NA_Credits</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The PGi Client cannot be changed once the case is saved. --></errorMessage>
+        <name>PGi_No_Edits_to_Client_ID</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Requestor&apos;s Email is required. --></errorMessage>
+        <name>PGi_PricingReqtrEmail_notreq_PGiContract</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Sales Rep is required. --></errorMessage>
+        <name>PGi_PricingSalesRep_notreq_PGiContract</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Subject line is required. --></errorMessage>
+        <name>PGi_PricingSubject_notreq_PGiContract</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Either Related Account or Related Opportunity is required --></errorMessage>
+        <name>PGi_Pricing_reqd_OpptyorAcct</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Credit Entry must be a negative number. --></errorMessage>
+        <name>RT_Credit_Entry_must_be_Negative</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When the Duration is marked as &quot;Permanent&quot;, Exemption Removal datee should be blank. --></errorMessage>
+        <name>RT_Removal_date_not_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When the Duration is marked as &quot;Temporary&quot;, an Exemption Removal Date is required. --></errorMessage>
+        <name>RT_Removal_date_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Service Date must be within the lat 60 days. --></errorMessage>
+        <name>RT_Service_Date_within_60_days</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Anticipated Annual Revenue Loss is required. --></errorMessage>
+        <name>RT_SvcFeeExempt_Anticipated_Loss</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can not create a cancellation request against an inactive client --></errorMessage>
+        <name>Require_Active_Client</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can not create a cancellation request against an inactive Company --></errorMessage>
+        <name>Require_Active_Company</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Assign_to_Me --></label>
+        <name>Assign_to_Me</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Assign_to_Me_listbutton --></label>
+        <name>Assign_to_Me_listbutton</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Clone_As_Child --></label>
+        <name>Clone_As_Child</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_As_Child --></label>
+        <name>Create_As_Child</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Drag_Drop_Attachments --></label>
+        <name>Drag_Drop_Attachments</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Email --></label>
+        <name>Send_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Soft_Delete --></label>
+        <name>Soft_Delete</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Case Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Tier 1</fullName>
+                <default>false</default>
+                <label>Tier 1</label>
+            </value>
+            <value>
+                <fullName>Tier 2</fullName>
+                <default>false</default>
+                <label>Tier 2</label>
+            </value>
+            <value>
+                <fullName>Tier 3</fullName>
+                <default>false</default>
+                <label>Tier 3</label>
+            </value>
+            <value>
+                <fullName>Tier 4 - Small Data</fullName>
+                <default>false</default>
+                <label>Tier 4 - Small Data</label>
+            </value>
+            <value>
+                <fullName>Tier 5 - Large Data</fullName>
+                <default>false</default>
+                <label>Tier 5 - Large Data</label>
+            </value>
+            <value>
+                <fullName>Enhancement</fullName>
+                <default>false</default>
+                <label>Enhancement</label>
+            </value>
+            <value>
+                <fullName>Issues/Questions</fullName>
+                <default>false</default>
+                <label>Issues/Questions</label>
+            </value>
+            <value>
+                <fullName>Rates/Contracts</fullName>
+                <default>false</default>
+                <label>Rates/Contracts</label>
+            </value>
+            <value>
+                <fullName>Invoice Detail</fullName>
+                <default>false</default>
+                <label>Invoice Detail</label>
+            </value>
+            <value>
+                <fullName>eFile/Report</fullName>
+                <default>false</default>
+                <label>eFile/Report</label>
+            </value>
+            <value>
+                <fullName>Usage</fullName>
+                <default>false</default>
+                <label>Usage</label>
+            </value>
+            <value>
+                <fullName>Billing Configuration</fullName>
+                <default>false</default>
+                <label>Billing Configuration</label>
+            </value>
+            <value>
+                <fullName>Credit Card</fullName>
+                <default>false</default>
+                <label>Credit Card</label>
+            </value>
+            <value>
+                <fullName>Audio/Softphone Issue</fullName>
+                <default>false</default>
+                <label>Audio/Softphone Issue</label>
+            </value>
+            <value>
+                <fullName>Login/Password Issue</fullName>
+                <default>false</default>
+                <label>Login/Password Issue</label>
+            </value>
+            <value>
+                <fullName>Routing Issue</fullName>
+                <default>false</default>
+                <label>Routing Issue</label>
+            </value>
+            <value>
+                <fullName>Salesforce Screen Pop Issue</fullName>
+                <default>false</default>
+                <label>Salesforce Screen Pop Issue</label>
+            </value>
+            <value>
+                <fullName>Customer</fullName>
+                <default>false</default>
+                <label>Customer</label>
+            </value>
+            <value>
+                <fullName>Implementation</fullName>
+                <default>false</default>
+                <label>Implementation</label>
+            </value>
+            <value>
+                <fullName>Product</fullName>
+                <default>false</default>
+                <label>Product</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Sales Engineering</fullName>
+                <default>false</default>
+                <label>Sales Engineering</label>
+            </value>
+            <value>
+                <fullName>Support</fullName>
+                <default>false</default>
+                <label>Support</label>
+            </value>
+            <value>
+                <fullName>Five9 Softphone</fullName>
+                <default>false</default>
+                <label>Five9 Softphone</label>
+            </value>
+            <value>
+                <fullName>Five9 Reporting</fullName>
+                <default>false</default>
+                <label>Five9 Reporting</label>
+            </value>
+            <value>
+                <fullName>Five9 Supervisor App</fullName>
+                <default>false</default>
+                <label>Five9 Supervisor App</label>
+            </value>
+            <value>
+                <fullName>Salesforce Omni Supervisor</fullName>
+                <default>false</default>
+                <label>Salesforce Omni Supervisor</label>
+            </value>
+            <value>
+                <fullName>Salesforce Chat</fullName>
+                <default>false</default>
+                <label>Salesforce Chat</label>
+            </value>
+            <value>
+                <fullName>Salesforce Email</fullName>
+                <default>false</default>
+                <label>Salesforce Email</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

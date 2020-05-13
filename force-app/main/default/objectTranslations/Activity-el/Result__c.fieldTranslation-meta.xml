@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Result --></label>
+    <name>Result__c</name>
+    <picklistValues>
+        <masterLabel>Advancing to Next Steps</masterLabel>
+        <translation><!-- Advancing to Next Steps --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Completed</masterLabel>
+        <translation><!-- Completed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Attempted</masterLabel>
+        <translation><!-- Contact Attempted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Left Message</masterLabel>
+        <translation><!-- Left Message --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Message</masterLabel>
+        <translation><!-- No Message --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Show</masterLabel>
+        <translation><!-- No Show --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Show, Not Rescheduled</masterLabel>
+        <translation><!-- No Show, Not Rescheduled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Show, Rescheduled</masterLabel>
+        <translation><!-- No Show, Rescheduled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Enough Info Provided</masterLabel>
+        <translation><!-- Not Enough Info Provided --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Interested in Service - Bad Timing</masterLabel>
+        <translation><!-- Not Interested in Service - Bad Timing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Interested in Service - Disqualified</masterLabel>
+        <translation><!-- Not Interested in Service - Disqualified --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Interested in Service - Missing Critical Feature</masterLabel>
+        <translation><!-- Not Interested in Service - Missing Critical Feature --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spoke To - Advancing</masterLabel>
+        <translation><!-- Spoke To - Advancing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spoke To - Answered Questions</masterLabel>
+        <translation><!-- Spoke To - Answered Questions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spoke To - Bad Timing</masterLabel>
+        <translation><!-- Spoke To - Bad Timing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spoke To - Call Back</masterLabel>
+        <translation><!-- Spoke To - Call Back --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spoke To - Not Interested</masterLabel>
+        <translation><!-- Spoke To - Not Interested --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spoke To - Not Interested, No Reason</masterLabel>
+        <translation><!-- Spoke To - Not Interested, No Reason --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spoke To - Not Interested, Reason Given</masterLabel>
+        <translation><!-- Spoke To - Not Interested, Reason Given --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spoke To - Provided New Contact</masterLabel>
+        <translation><!-- Spoke To - Provided New Contact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spoke To - Provided Referral</masterLabel>
+        <translation><!-- Spoke To - Provided Referral --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spoke To - Wrong Person</masterLabel>
+        <translation><!-- Spoke To - Wrong Person --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable to Contact - Bad Information</masterLabel>
+        <translation><!-- Unable to Contact - Bad Information --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable to Contact - Remove</masterLabel>
+        <translation><!-- Unable to Contact - Remove --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Working</masterLabel>
+        <translation><!-- Working --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

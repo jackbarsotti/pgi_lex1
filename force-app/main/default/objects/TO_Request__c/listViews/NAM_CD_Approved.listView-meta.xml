@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NAM_CD_Approved</fullName>
+    <columns>NAME</columns>
+    <columns>Resource__c</columns>
+    <columns>Leave_Type__c</columns>
+    <columns>Location_Name__c</columns>
+    <columns>Start__c</columns>
+    <columns>Finish__c</columns>
+    <columns>Status__c</columns>
+    <columns>Note__c</columns>
+    <columns>Request_Submitted__c</columns>
+    <columns>Day__c</columns>
+    <columns>Sort_Order__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>TOR_Group__c</field>
+        <operation>equals</operation>
+        <value>US CD,Can CD,Can Res,Can T1,Can T2</value>
+    </filters>
+    <filters>
+        <field>Approved__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Cancellation_Requested__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Deactivated_Resource__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>NAM CD - Approved</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>FSL_Admin_Dispatch</group>
+    </sharedTo>
+</ListView>

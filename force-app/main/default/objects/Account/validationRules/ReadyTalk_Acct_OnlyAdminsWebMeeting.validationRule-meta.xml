@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReadyTalk_Acct_OnlyAdminsWebMeeting</fullName>
+    <active>true</active>
+    <description>SOAP</description>
+    <errorConditionFormula>AND(
+            ISCHANGED( Limited_Web_Sub_Size__c),
+            $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+            $User.ReadyTalk_Exempt__c &lt;&gt; TRUE,
+RecordType.DeveloperName = &quot;ReadyTalk_Account&quot;
+            )</errorConditionFormula>
+    <errorDisplayField>Limited_Web_Sub_Size__c</errorDisplayField>
+    <errorMessage>Only SF System Administrators may change this field.</errorMessage>
+</ValidationRule>

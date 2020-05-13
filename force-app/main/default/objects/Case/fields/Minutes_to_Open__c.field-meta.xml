@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Minutes_to_Open__c</fullName>
+    <description>This field is the total number of minutes from lookup in support system to case created.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Minutes spent with customer while opening case</inlineHelpText>
+    <label>Minutes to Open</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

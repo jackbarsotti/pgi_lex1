@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- All new campaign members are added to Five9 list with &apos;call now mode&apos; set to &apos;ANY&apos; --></help>
+    <label><!-- Five9 Call Now --></label>
+    <name>Five9__Five9CallNow__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Corporate_License_Web_3000__c</fullName>
+    <externalId>false</externalId>
+    <label>Corporate License - Web 3000</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Unlimited meetings w/ up to 3,000 web participants. All audio and recording hosting is charged per-minute.</fullName>
+                <default>true</default>
+                <label>Unlimited meetings w/ up to 3,000 web participants. All audio and recording hosting is charged per-minute.</label>
+            </value>
+            <value>
+                <fullName>Unlimited meetings w/ up to 25 participants. All audio and recording hosting is charged per-minute.</fullName>
+                <default>false</default>
+                <label>Unlimited meetings w/ up to 25 participants. All audio and recording hosting is charged per-minute.</label>
+            </value>
+            <value>
+                <fullName>Unlimited meetings w/ up to 150 audio participants and 3,000 web participants. All audio and recording hosting is charged per-minute.</fullName>
+                <default>false</default>
+                <label>Unlimited meetings w/ up to 150 audio participants and 3,000 web participants. All audio and recording hosting is charged per-minute.</label>
+            </value>
+            <value>
+                <fullName>Unlimited meetings w/ up to 150 audio participants and 3000 web participants including VOIP and domestic toll audio (US &amp; Canada). All other audio charges and recording archiving charged separately.</fullName>
+                <default>false</default>
+                <label>Unlimited meetings w/ up to 150 audio participants and 3000 web participants including VOIP and domestic toll audio (US &amp; Canada). All other audio charges and recording archiving charged separately.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

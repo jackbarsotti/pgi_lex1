@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Department_Group__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Region/Department</inlineHelpText>
+    <label>Department Group</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>EMEA/APAC-Customer Care</fullName>
+                <default>false</default>
+                <label>EMEA/APAC-Customer Care</label>
+            </value>
+            <value>
+                <fullName>EMEA/APAC-Finance</fullName>
+                <default>false</default>
+                <label>EMEA/APAC-Finance</label>
+            </value>
+            <value>
+                <fullName>EMEA/APAC-Global IT</fullName>
+                <default>false</default>
+                <label>EMEA/APAC-Global IT</label>
+            </value>
+            <value>
+                <fullName>EMEA/APAC-HR</fullName>
+                <default>false</default>
+                <label>EMEA/APAC-HR</label>
+            </value>
+            <value>
+                <fullName>EMEA/APAC-Legal</fullName>
+                <default>false</default>
+                <label>EMEA/APAC-Legal</label>
+            </value>
+            <value>
+                <fullName>EMEA/APAC-Marketing</fullName>
+                <default>false</default>
+                <label>EMEA/APAC-Marketing</label>
+            </value>
+            <value>
+                <fullName>EMEA/APAC-NA</fullName>
+                <default>false</default>
+                <label>EMEA/APAC-NA</label>
+            </value>
+            <value>
+                <fullName>EMEA/APAC-PWN</fullName>
+                <default>false</default>
+                <label>EMEA/APAC-PWN</label>
+            </value>
+            <value>
+                <fullName>EMEA/APAC-Sales</fullName>
+                <default>false</default>
+                <label>EMEA/APAC-Sales</label>
+            </value>
+            <value>
+                <fullName>EMEA/APAC-Technology</fullName>
+                <default>false</default>
+                <label>EMEA/APAC-Technology</label>
+            </value>
+            <value>
+                <fullName>NAM-Administration</fullName>
+                <default>false</default>
+                <label>NAM-Administration</label>
+            </value>
+            <value>
+                <fullName>NAM-Customer Care</fullName>
+                <default>false</default>
+                <label>NAM-Customer Care</label>
+            </value>
+            <value>
+                <fullName>NAM-Exec Team</fullName>
+                <default>false</default>
+                <label>NAM-Exec Team</label>
+            </value>
+            <value>
+                <fullName>NAM-Finance</fullName>
+                <default>false</default>
+                <label>NAM-Finance</label>
+            </value>
+            <value>
+                <fullName>NAM-Global IT</fullName>
+                <default>false</default>
+                <label>NAM-Global IT</label>
+            </value>
+            <value>
+                <fullName>NAM-Marketing</fullName>
+                <default>false</default>
+                <label>NAM-Marketing</label>
+            </value>
+            <value>
+                <fullName>NAM-ReadyTalk</fullName>
+                <default>false</default>
+                <label>NAM-ReadyTalk</label>
+            </value>
+            <value>
+                <fullName>NAM-RollCall</fullName>
+                <default>false</default>
+                <label>NAM-RollCall</label>
+            </value>
+            <value>
+                <fullName>NAM-Sales</fullName>
+                <default>false</default>
+                <label>NAM-Sales</label>
+            </value>
+            <value>
+                <fullName>NAM-Technology</fullName>
+                <default>false</default>
+                <label>NAM-Technology</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

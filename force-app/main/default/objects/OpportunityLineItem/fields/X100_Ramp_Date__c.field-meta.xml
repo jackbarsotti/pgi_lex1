@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X100_Ramp_Date__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Expected date (confirmed by IST or PMO) when GCS customer will be billed full MRR for this new service</inlineHelpText>
+    <label>100% Ramp Date</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

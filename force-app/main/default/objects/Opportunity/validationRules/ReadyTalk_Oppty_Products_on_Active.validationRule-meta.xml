@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReadyTalk_Oppty_Products_on_Active</fullName>
+    <active>true</active>
+    <description>When Opportunity Status is marked as Active, require at least one product of interest.</description>
+    <errorConditionFormula>AND(
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;,
+ISPICKVAL(  Opportunity_Status__c , &quot;Active&quot;),
+ISBLANK( Products_of_Interest__c ),
+(  CreatedDate  &lt;&gt;  NOW() ),
+$RecordType.Name = &quot;ReadyTalk Opportunity&quot;,
+NOT(ISPICKVAL(StageName, &quot;Closed Lost&quot;)))</errorConditionFormula>
+    <errorDisplayField>Products_of_Interest__c</errorDisplayField>
+    <errorMessage>Yahoo! This is no longer a prospect opp (congrats)! Let us know what products this company is interested in!</errorMessage>
+</ValidationRule>

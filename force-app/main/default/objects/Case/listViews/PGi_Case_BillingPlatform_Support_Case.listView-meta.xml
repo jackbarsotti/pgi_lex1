@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Case_BillingPlatform_Support_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>PGi-Case-BillingPlatform Support</label>
+    <queue>PGi_Case_BillingPlatform_Support</queue>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

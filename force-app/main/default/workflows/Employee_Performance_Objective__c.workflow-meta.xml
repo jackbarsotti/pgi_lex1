@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>EMO_Approved</fullName>
+        <description>EMO - Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Emails/EMO_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>EMO_Rejected</fullName>
+        <description>EMO - Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Emails/EMO_Rejected</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>EMO_Approved</fullName>
+        <field>Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>EMO - Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>EMO_Pending</fullName>
+        <field>Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>EMO - Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>EMO_Rejected</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>EMO - Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>EPO_Value_Assessment_Our_People_Strng</fullName>
+        <field>Objective_Detail__c</field>
+        <formula>&quot;Our People Are Our Strength - Need Definition from Francoise...&quot;</formula>
+        <name>EPO - Value Assessment, Our People/Strng</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>EPO_Value_Assessment_Own_Outcomes</fullName>
+        <description>If the Value Assessment Type field equals &quot;Own Outcomes&quot; then auto populate the Object Detail field.</description>
+        <field>Objective_Detail__c</field>
+        <formula>&quot;Own Outcomes - Need definition from Francoise...&quot;</formula>
+        <name>EPO - Value Assessment, Own Outcomes</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>EPO_Value_Assessment_PPP</fullName>
+        <field>Objective_Detail__c</field>
+        <formula>&quot;Purpose, Passion &amp; Performance - Need definition from Francoise...&quot;</formula>
+        <name>EPO - Value Assessment, PPP</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>EPO - Value Assessment%2C Our People Are Our Strength</fullName>
+        <actions>
+            <name>EPO_Value_Assessment_Our_People_Strng</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Employee_Performance_Objective__c.Type__c</field>
+            <operation>equals</operation>
+            <value>Value Assessment - Our People Are Our Strength</value>
+        </criteriaItems>
+        <description>If the Value Assessment Type equals &quot;Our People Are Our Strength&quot;, then auto populate the Objective Detail field.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>EPO - Value Assessment%2C Own Outcomes</fullName>
+        <actions>
+            <name>EPO_Value_Assessment_Own_Outcomes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Employee_Performance_Objective__c.Type__c</field>
+            <operation>equals</operation>
+            <value>Value Assessment - Own Outcomes</value>
+        </criteriaItems>
+        <description>If the Value Assessment Type equals &quot;Own Outcomes&quot;, then auto populate the Objective Detail field.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>EPO - Value Assessment%2C Purspose Passion Performance</fullName>
+        <actions>
+            <name>EPO_Value_Assessment_PPP</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Employee_Performance_Objective__c.Type__c</field>
+            <operation>equals</operation>
+            <value>&quot;Value Assessment - Purpose, Passion &amp; Performance&quot;</value>
+        </criteriaItems>
+        <description>If the Value Assessment Type equals &quot;Purpose, Passion &amp; Performance&quot;, then auto populate the Objective Detail field.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

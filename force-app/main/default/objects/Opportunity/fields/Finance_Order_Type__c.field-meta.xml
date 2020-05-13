@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Finance_Order_Type__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(Type, &quot;Renewal&quot;), &quot;Renewal&quot;,
+IF(ISPICKVAL(Type, &quot;Self Service&quot;), &quot;Self Service&quot;, 
+IF(ISPICKVAL(Type, &quot;Upgrade&quot;),&quot;Upgrade&quot;,
+IF(ISPICKVAL(Type, &quot;Upsell&quot;), &quot;Upsell&quot;, 
+&quot;New Logo&quot;
+))))</formula>
+    <inlineHelpText>Calculation based on Opportunity &quot;Type&quot; field to determine the Finance Order Type.</inlineHelpText>
+    <label>Finance Order Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

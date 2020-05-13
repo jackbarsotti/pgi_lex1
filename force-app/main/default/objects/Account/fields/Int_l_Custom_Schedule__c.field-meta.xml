@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Int_l_Custom_Schedule__c</fullName>
+    <description>Internal reference field for Int&#39;l Custom Schedule numbers.  SysAdmin view only.</description>
+    <externalId>false</externalId>
+    <label>Int&#39;l Custom Schedule #</label>
+    <length>3</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

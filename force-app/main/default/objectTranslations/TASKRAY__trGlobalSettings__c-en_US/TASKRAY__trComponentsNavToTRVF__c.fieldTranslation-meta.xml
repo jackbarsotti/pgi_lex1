@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This setting makes lightning components navigate to the TaskRay Visualforce page instead of record homes. --></help>
+    <label><!-- Components Nav to TaskRay --></label>
+    <name>TASKRAY__trComponentsNavToTRVF__c</name>
+</CustomFieldTranslation>

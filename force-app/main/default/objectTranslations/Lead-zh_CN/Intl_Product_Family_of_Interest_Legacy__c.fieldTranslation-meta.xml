@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The product family that correlate to the value of the &quot;Initial Product Interest&quot; field. --></help>
+    <label><!-- Intl Product Family of Interest – Legacy --></label>
+    <name>Intl_Product_Family_of_Interest_Legacy__c</name>
+</CustomFieldTranslation>

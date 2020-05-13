@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Churn Reason Codes(primary) --></label>
+    <name>Churn_Reason_Codes__c</name>
+    <picklistValues>
+        <masterLabel>Competitive</masterLabel>
+        <translation><!-- Competitive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Economic/market change</masterLabel>
+        <translation><!-- Economic/market change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lost compelling need</masterLabel>
+        <translation><!-- Lost compelling need --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No reason provided</masterLabel>
+        <translation><!-- No reason provided --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Price</masterLabel>
+        <translation><!-- Price --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product</masterLabel>
+        <translation><!-- Product --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service issue</masterLabel>
+        <translation><!-- Service issue --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

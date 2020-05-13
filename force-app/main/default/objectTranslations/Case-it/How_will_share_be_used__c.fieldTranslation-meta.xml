@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Example: This share will be used for the Tech department to store files. Or, this share will be used to store audio recordings. --></help>
+    <label><!-- How will share be used? --></label>
+    <name>How_will_share_be_used__c</name>
+</CustomFieldTranslation>

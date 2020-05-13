@@ -1,0 +1,5 @@
+<apex:page standardController="Department__c" extensions="Dispatcher"
+  recordSetVar="Department__c" tabStyle="Department__c"
+  showHeader="true" sidebar="false" action="{!dispatch}">
+  <apex:pageMessages />
+</apex:page>

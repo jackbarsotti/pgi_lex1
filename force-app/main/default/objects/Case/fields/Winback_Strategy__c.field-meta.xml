@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Winback_Strategy__c</fullName>
+    <externalId>false</externalId>
+    <label>Winback Strategies Used</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pricing Discount</fullName>
+                <default>false</default>
+                <label>Pricing Discount</label>
+            </value>
+            <value>
+                <fullName>One Month Extension</fullName>
+                <default>false</default>
+                <label>One Month Extension</label>
+            </value>
+            <value>
+                <fullName>Product Upgrade</fullName>
+                <default>false</default>
+                <label>Product Upgrade</label>
+            </value>
+            <value>
+                <fullName>Share Upcoming Features</fullName>
+                <default>false</default>
+                <label>Share Upcoming Features</label>
+            </value>
+            <value>
+                <fullName>Personalized Training</fullName>
+                <default>false</default>
+                <label>Personalized Training</label>
+            </value>
+            <value>
+                <fullName>Account Pause</fullName>
+                <default>false</default>
+                <label>Account Pause</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

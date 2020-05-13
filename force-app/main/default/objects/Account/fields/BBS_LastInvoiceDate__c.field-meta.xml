@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BBS_LastInvoiceDate__c</fullName>
+    <description>CAUTION - USED IN INTEGRATIONS
+Date of last invoice (plan changes may not be made prior to this date)</description>
+    <externalId>false</externalId>
+    <label>Last Invoice Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

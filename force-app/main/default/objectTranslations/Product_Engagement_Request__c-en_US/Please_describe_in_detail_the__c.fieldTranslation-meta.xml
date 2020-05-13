@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please describe in detail the description of the feature request. --></help>
+    <label><!-- Description of Feature Request --></label>
+    <name>Please_describe_in_detail_the__c</name>
+</CustomFieldTranslation>

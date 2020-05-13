@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is the hour of the day in numeric format. For example, if the call was made at 4:35pm , this will show &apos;16&apos;. --></help>
+    <label><!-- Hour of the Day --></label>
+    <name>NEW_Date__c</name>
+</CustomFieldTranslation>

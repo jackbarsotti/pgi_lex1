@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Auditee__c</fullName>
+    <externalId>false</externalId>
+    <label>Auditee</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Charlene White</fullName>
+                <default>false</default>
+                <label>Charlene White</label>
+            </value>
+            <value>
+                <fullName>Debbie Deegan</fullName>
+                <default>false</default>
+                <label>Debbie Deegan</label>
+            </value>
+            <value>
+                <fullName>Derwin Williams</fullName>
+                <default>false</default>
+                <label>Derwin Williams</label>
+            </value>
+            <value>
+                <fullName>Erin Chambers</fullName>
+                <default>false</default>
+                <label>Erin Chambers</label>
+            </value>
+            <value>
+                <fullName>Jana Brent</fullName>
+                <default>false</default>
+                <label>Jana Brent</label>
+            </value>
+            <value>
+                <fullName>Karla Wright</fullName>
+                <default>false</default>
+                <label>Karla Wright</label>
+            </value>
+            <value>
+                <fullName>Leah Smith</fullName>
+                <default>false</default>
+                <label>Leah Smith</label>
+            </value>
+            <value>
+                <fullName>Leila Welch</fullName>
+                <default>false</default>
+                <label>Leila Welch</label>
+            </value>
+            <value>
+                <fullName>Michael Foley</fullName>
+                <default>false</default>
+                <label>Michael Foley</label>
+            </value>
+            <value>
+                <fullName>Michael Morgan</fullName>
+                <default>false</default>
+                <label>Michael Morgan</label>
+            </value>
+            <value>
+                <fullName>Robert Scott Bryant</fullName>
+                <default>false</default>
+                <label>Robert Scott Bryant</label>
+            </value>
+            <value>
+                <fullName>Steve Bodnar</fullName>
+                <default>false</default>
+                <label>Steve Bodnar</label>
+            </value>
+            <value>
+                <fullName>Susan Tabor</fullName>
+                <default>false</default>
+                <label>Susan Tabor</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

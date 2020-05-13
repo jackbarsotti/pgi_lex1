@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Account</field>
+        <field>Name</field>
+        <field>BillingName</field>
+        <field>Contact</field>
+        <field>ExpirationDate</field>
+        <field>Discount</field>
+        <field>LineItemCount</field>
+        <field>Grand_Total_US__c</field>
+        <field>Status</field>
+        <field>IsSyncing</field>
+        <field>TotalPrice</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>iMC_Quote_Approved</name>
+                <type>Alert</type>
+            </action>
+            <action>
+                <name>iMC_Quote_Status_Approved</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>frank.nardi@pgi.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>All opportunity owners except for Frank, seek Frank Nardi&#39;s approval.</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Opportunity.Owner</field>
+                <operation>notEqual</operation>
+                <value>Frank Nardi</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>All AEs and AMs</label>
+        <name>All_AEs_and_AMs</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>iMC_Quote_Approved</name>
+                <type>Alert</type>
+            </action>
+            <action>
+                <name>iMC_Quote_Status_Approved</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>jason.downes@pgi.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>If Opportunity Owner equals Frank Nardi, seek Jason Downes approval.</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Opportunity.Owner</field>
+                <operation>equals</operation>
+                <value>Frank Nardi</value>
+            </criteriaItems>
+        </entryCriteria>
+        <label>Frank Nardi Quote Approval</label>
+        <name>Frank_Nardi_Quote_Approval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>4/25/2018: iMeet Central Quote Approvals only. Removing Mark Fordham and Steve Anderson.</description>
+    <emailTemplate>iMC_Internal_Company_Alerts/iMC_Quote_Approvals_Request</emailTemplate>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>Quote.RecordType</field>
+            <operation>equals</operation>
+            <value>iMC Quote</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>iMC_Quote_Status_Needs_Review</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>iMC_Quote_Service_Status_Update</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>iMC_Quote_Status_Needs_Review</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>iMC Quote Approval: COD-1281, Step 1</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>false</useApproverFieldOfRecordOwner>
+        <userHierarchyField>quote_approver__c</userHierarchyField>
+    </nextAutomatedApprover>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

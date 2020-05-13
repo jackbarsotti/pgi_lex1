@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Closed - Customer Cancelled Oppty</fullName>
+                <default>false</default>
+                <label>Closed - Customer Cancelled Oppty</label>
+            </value>
+            <value>
+                <fullName>Closed - Duplicate Request</fullName>
+                <default>false</default>
+                <label>Closed - Duplicate Request</label>
+            </value>
+            <value>
+                <fullName>Closed - Info Only</fullName>
+                <default>false</default>
+                <label>Closed - Info Only</label>
+            </value>
+            <value>
+                <fullName>Closed - Lost</fullName>
+                <default>false</default>
+                <label>Closed - Lost</label>
+            </value>
+            <value>
+                <fullName>Closed - No Bid</fullName>
+                <default>false</default>
+                <label>Closed - No Bid</label>
+            </value>
+            <value>
+                <fullName>Closed - No Support Needed</fullName>
+                <default>false</default>
+                <label>Closed - No Support Needed</label>
+            </value>
+            <value>
+                <fullName>Closed - Rejected by Proposal Team</fullName>
+                <default>false</default>
+                <label>Closed - Rejected by Proposal Team</label>
+            </value>
+            <value>
+                <fullName>Closed - Won</fullName>
+                <default>false</default>
+                <label>Closed - Won</label>
+            </value>
+            <value>
+                <fullName>On Hold - Waiting For Additional Info</fullName>
+                <default>false</default>
+                <label>Oh Hold - Waiting For Additional Info</label>
+            </value>
+            <value>
+                <fullName>Open - Awaiting Decision</fullName>
+                <default>false</default>
+                <label>Open - Awaiting Decision</label>
+            </value>
+            <value>
+                <fullName>Open - In Progress</fullName>
+                <default>false</default>
+                <label>Open - In Progress</label>
+            </value>
+            <value>
+                <fullName>Open - New Request</fullName>
+                <default>false</default>
+                <label>Open - New Request</label>
+            </value>
+            <value>
+                <fullName>Open - Received Request</fullName>
+                <default>false</default>
+                <label>Open - Received Request</label>
+            </value>
+            <value>
+                <fullName>Open - Shortlisted</fullName>
+                <default>false</default>
+                <label>Open - Shortlisted</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

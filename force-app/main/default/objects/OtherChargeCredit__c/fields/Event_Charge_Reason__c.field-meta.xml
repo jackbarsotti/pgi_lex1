@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Charge_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Event Charge Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Additional Minutes</fullName>
+                <default>false</default>
+                <label>Additional Minutes</label>
+            </value>
+            <value>
+                <fullName>Additional Participants</fullName>
+                <default>false</default>
+                <label>Additional Participants</label>
+            </value>
+            <value>
+                <fullName>Audio + Slides Webcast / 150 Participants - Base Price</fullName>
+                <default>false</default>
+                <label>Audio + Slides Webcast / 150 Participants - Base Price</label>
+            </value>
+            <value>
+                <fullName>Audio + Slides Webcast - Base Price</fullName>
+                <default>false</default>
+                <label>Audio + Slides Webcast - Base Price</label>
+            </value>
+            <value>
+                <fullName>Base Rate</fullName>
+                <default>false</default>
+                <label>Base Rate</label>
+            </value>
+            <value>
+                <fullName>Blackberry Charge - Event Manager Assisted - Recording</fullName>
+                <default>false</default>
+                <label>Blackberry Charge - Event Manager Assisted - Recording</label>
+            </value>
+            <value>
+                <fullName>Blackberry Charge - Live Webinars</fullName>
+                <default>false</default>
+                <label>Blackberry Charge - Live Webinars</label>
+            </value>
+            <value>
+                <fullName>Blackberry Charge - On Demand - Recording</fullName>
+                <default>false</default>
+                <label>Blackberry Charge - On Demand - Recording</label>
+            </value>
+            <value>
+                <fullName>Blackberry Charge - Operator Assisted Live - Webinars</fullName>
+                <default>false</default>
+                <label>Blackberry Charge - Operator Assisted Live - Webinars</label>
+            </value>
+            <value>
+                <fullName>Blackberry Charge - Vidyard Recording - Hosting</fullName>
+                <default>false</default>
+                <label>Blackberry Charge - Vidyard Recording - Hosting</label>
+            </value>
+            <value>
+                <fullName>Blackberry Charge - Webcasting</fullName>
+                <default>false</default>
+                <label>Blackberry Charge - Webcasting</label>
+            </value>
+            <value>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+                <label>Cancellation</label>
+            </value>
+            <value>
+                <fullName>Closed Captioning</fullName>
+                <default>false</default>
+                <label>Closed Captioning</label>
+            </value>
+            <value>
+                <fullName>Communication Line</fullName>
+                <default>false</default>
+                <label>Communication Line</label>
+            </value>
+            <value>
+                <fullName>Dress Rehearsal</fullName>
+                <default>false</default>
+                <label>Dress Rehearsal</label>
+            </value>
+            <value>
+                <fullName>Dry Run</fullName>
+                <default>false</default>
+                <label>Dry Run</label>
+            </value>
+            <value>
+                <fullName>Event Call Director</fullName>
+                <default>false</default>
+                <label>Event Call Director</label>
+            </value>
+            <value>
+                <fullName>Extended Archive Hosting</fullName>
+                <default>false</default>
+                <label>Extended Archive Hosting</label>
+            </value>
+            <value>
+                <fullName>Full Event Moderation</fullName>
+                <default>false</default>
+                <label>Full Event Moderation</label>
+            </value>
+            <value>
+                <fullName>International Toll-Free Add-On</fullName>
+                <default>false</default>
+                <label>International Toll-Free Add-On</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Platinum Elite Webcast / 150 Participants - Base Price</fullName>
+                <default>false</default>
+                <label>Platinum Elite Webcast / 150 Participants - Base Price</label>
+            </value>
+            <value>
+                <fullName>Platinum Elite Webcast- Base Price</fullName>
+                <default>false</default>
+                <label>Platinum Elite Webcast- Base Price</label>
+            </value>
+            <value>
+                <fullName>Platinum Plus Webcast / 150 Participants - Base Price</fullName>
+                <default>false</default>
+                <label>Platinum Plus Webcast / 150 Participants - Base Price</label>
+            </value>
+            <value>
+                <fullName>Platinum Plus Webcast - Base Price</fullName>
+                <default>false</default>
+                <label>Platinum Plus Webcast - Base Price</label>
+            </value>
+            <value>
+                <fullName>Premium Op-Assist Add-On</fullName>
+                <default>false</default>
+                <label>Premium Op-Assist Add-On</label>
+            </value>
+            <value>
+                <fullName>Set-Up &amp; Customization</fullName>
+                <default>false</default>
+                <label>Set-Up &amp; Customization</label>
+            </value>
+            <value>
+                <fullName>Support</fullName>
+                <default>false</default>
+                <label>Support</label>
+            </value>
+            <value>
+                <fullName>Transcription Services</fullName>
+                <default>false</default>
+                <label>Transcription Services</label>
+            </value>
+            <value>
+                <fullName>Unused Lines</fullName>
+                <default>false</default>
+                <label>Unused Lines</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

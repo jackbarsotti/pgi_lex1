@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- User that this task is assigned to in Totango --></help>
+    <label><!-- Totango Assignee --></label>
+    <name>totangotasks__Assigned_to_Totango_user__c</name>
+</CustomFieldTranslation>

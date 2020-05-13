@@ -1,0 +1,18 @@
+<apex:page standardController="OpportunityLineItem" extensions="OpportunityProductExtension" tabStyle="OpportunityLineItem">
+    <apex:form >
+
+	    <apex:pageblock title="Opportunity Product Edit">
+	        <apex:pageBlockButtons >
+	            <apex:commandButton action="{!save}" value="Save" />
+	            <apex:commandButton action="{!cancel}" value="Cancel" />
+	        </apex:pageBlockButtons>
+	         
+	        <apex:pageBlockSection title="Product Information" columns="1" collapsible="false">
+			    <apex:repeat value="{!fieldSet}" var="f"> 
+			        <apex:inputField value="{!OpportunityLineItem[f]}" required="{!OR(f.required, f.dbrequired)}" rendered="{!f != 'TotalPrice'}" />
+					<apex:outputField value="{!OpportunityLineItem[f]}" rendered="{!f == 'TotalPrice'}" />
+			    </apex:repeat>
+			</apex:pageBlockSection>
+	    </apex:pageblock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>bizible2__Touchpoint_Source__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The specific origin of the touchpoint</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The specific origin of the touchpoint</inlineHelpText>
+    <label>Touchpoint Source</label>
+    <length>60</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

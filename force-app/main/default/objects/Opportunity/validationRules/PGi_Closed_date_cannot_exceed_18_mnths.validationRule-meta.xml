@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Closed_date_cannot_exceed_18_mnths</fullName>
+    <active>true</active>
+    <description>Close date cannot be set to more than 18 months from today</description>
+    <errorConditionFormula>AND(
+RecordType.Name = &quot;PGi Opportunity&quot;,
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;, 
+$User.Override_Validation_Rules__c = False,
+CloseDate - TODAY () &gt; 550)</errorConditionFormula>
+    <errorDisplayField>CloseDate</errorDisplayField>
+    <errorMessage>Close Date cannot be greater than 18 months in the future.</errorMessage>
+</ValidationRule>

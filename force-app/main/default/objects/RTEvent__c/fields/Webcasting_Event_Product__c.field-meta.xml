@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Webcasting_Event_Product__c</fullName>
+    <description>The Product Type and Intercall SKU for the webcasting event</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What type of Product is this webcasting being held on</inlineHelpText>
+    <label>Webcasting Event Product</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Managed Webcast</fullName>
+                <default>false</default>
+                <label>Managed Webcast</label>
+            </value>
+            <value>
+                <fullName>Self-Serve Subscription</fullName>
+                <default>false</default>
+                <label>Self-Serve Subscription</label>
+            </value>
+            <value>
+                <fullName>SS16 - On-Demand Platinum Elite Webcast</fullName>
+                <default>false</default>
+                <label>SS16 - On-Demand Platinum Elite Webcast</label>
+            </value>
+            <value>
+                <fullName>Video &amp; Slides</fullName>
+                <default>false</default>
+                <label>Video &amp; Slides</label>
+            </value>
+            <value>
+                <fullName>Audio &amp; Slides</fullName>
+                <default>false</default>
+                <label>Audio &amp; Slides</label>
+            </value>
+            <value>
+                <fullName>SS15 - On-Demand Audio + Slides Webcast</fullName>
+                <default>false</default>
+                <label>SS15 - On-Demand Audio + Slides Webcast</label>
+            </value>
+            <value>
+                <fullName>SS2 - Audio + Slides Webcast</fullName>
+                <default>false</default>
+                <label>SS2 - Audio + Slides Webcast</label>
+            </value>
+            <value>
+                <fullName>SS3 - Platinum Plus Webcast</fullName>
+                <default>false</default>
+                <label>SS3 - Platinum Plus Webcast</label>
+            </value>
+            <value>
+                <fullName>SS4 - Platinum Elite Webcast</fullName>
+                <default>false</default>
+                <label>SS4 - Platinum Elite Webcast</label>
+            </value>
+            <value>
+                <fullName>Webcam &amp; Slides</fullName>
+                <default>false</default>
+                <label>Webcam &amp; Slides</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

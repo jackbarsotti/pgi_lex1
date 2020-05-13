@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Download to Portal Feature --></label>
+    <name>Download_to_Portal_Feature__c</name>
+    <picklistValues>
+        <masterLabel>Enabled Prior to Record Date</masterLabel>
+        <translation><!-- Enabled Prior to Record Date --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Applicable</masterLabel>
+        <translation><!-- Not Applicable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Enabled Prior to Record Date</masterLabel>
+        <translation><!-- Not Enabled Prior to Record Date --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

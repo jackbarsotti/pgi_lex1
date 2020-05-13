@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RFC_Vendor_Outage</fullName>
+    <active>false</active>
+    <description>If Vendor Outage is TRUE then Outage Duration and Description must be populated</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Vendor_Outage__c, &#39;Yes&#39;),
+OR(
+ISBLANK(  Vendor_Outage_Description__c  ), 
+ISBLANK( Outage_Duration__c )
+))</errorConditionFormula>
+    <errorMessage>If Vendor Outage is YES then please populate a value for Vendor Outage Duration and Vendor Outage Description.</errorMessage>
+</ValidationRule>

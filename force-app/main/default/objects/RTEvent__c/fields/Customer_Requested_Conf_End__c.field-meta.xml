@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Requested_Conf_End__c</fullName>
+    <description>Customer Requested (igloo form) conference end time.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the conference end time the customer requested. Represents the conference end time on OA bridge.</inlineHelpText>
+    <label>Customer Requested Conf End</label>
+    <length>250</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

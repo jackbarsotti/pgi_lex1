@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_SE_Event</fullName>
+    <active>true</active>
+    <description>RT for SE&#39;s.  Only difference in PGi Event is &quot;Type&quot;</description>
+    <label>PGi SE Event</label>
+    <picklistValues>
+        <picklist>Event_Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Waiting on Someone Else</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FSL__Event_Type__c</picklist>
+        <values>
+            <fullName>Resource Absence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Appointment</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Five9__Five9TaskType__c</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Outcome__c</picklist>
+        <values>
+            <fullName>Courtesy Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dialogue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dropped Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Left Message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Longer with Company</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Message Left</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Working Number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product__c</picklist>
+        <values>
+            <fullName>Audio%3A GlobalMeet Audio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audio%3A GlobalMeet Audio for Skype for Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audio%3A GlobalMeet Hybrid Audio for Lync Server</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audio%3A GlobalMeet Hybrid Audio for WebEx</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audio%3A OnNet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audio%3A Op%2E Assisted%3A Premium Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audio%3A Op%2E Assisted%3A Standard Auditorium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audio%3A iMeet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audio%3A iMeetLive Managed Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bundle%3A GlobalMeet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bundle%3A GlobalMeet Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bundle%3A iMeet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bundle%3A iMeet Sales Accelerator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bundle%3A iMeet VRC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner%3A Partner BD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Services%3A Modality Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Services%3A Modality Custom Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Services%3A Modality Support %26 Managed Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video%3A Managed Conference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video%3A Managed Service - Device</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video%3A Managed Service - Flat Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video%3A Professional Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web%3A AdobeConnect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web%3A Cisco WebEx</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web%3A GlobalMeet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web%3A GlobalMeet Active Host</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web%3A GlobalMeet Web for Microsoft Lync</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web%3A GlobalMeet Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web%3A Microsoft Office Live Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web%3A Modality Software Applications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web%3A NASDAQ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web%3A ON24</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web%3A Webcast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web%3A iMeet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web%3A iMeet Agenday Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web%3A iMeet Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web%3A iMeetLive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web%3A iMeetLive Managed Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web%3A vCube</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Result__c</picklist>
+        <values>
+            <fullName>Advancing to Next Steps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Attempted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Left Message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Show%2C Not Rescheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Show%2C Rescheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Enough Info Provided</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested in Service - Bad Timing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested in Service - Disqualified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested in Service - Missing Critical Feature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spoke To - Advancing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spoke To - Answered Questions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spoke To - Bad Timing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spoke To - Call Back</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spoke To - Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spoke To - Not Interested%2C No Reason</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spoke To - Not Interested%2C Reason Given</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spoke To - Provided New Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spoke To - Provided Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spoke To - Wrong Person</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to Contact - Bad Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to Contact - Remove</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Working</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subject</picklist>
+        <values>
+            <fullName>Please fill in</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Customer Meeting - Post sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Meeting - Prospecting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Meeting - Post sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Meeting - Prospecting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PGi Internal Projects</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Sale Tech Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFP%2FProposal Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solution Development</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_Detail__c</picklist>
+        <values>
+            <fullName>Account Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discovery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow-up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Illuminate - Replay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trial</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

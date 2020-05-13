@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Archive_Options_Shutdown_Date</fullName>
+    <active>true</active>
+    <description>If Event Archive Options = Specific Shut Down, Specific Shutdown Date field needs to be filled in</description>
+    <errorConditionFormula>ISPICKVAL( Event_Archive_Options__c , &quot;Specific Shut-Down&quot;)  &amp;&amp;  ISBLANK(Archive_Specific_Shut_Down_Date__c)</errorConditionFormula>
+    <errorDisplayField>Archive_Specific_Shut_Down_Date__c</errorDisplayField>
+    <errorMessage>You have selected &quot;Specific Shutdown&quot; as an archiving option, if this is correct, you need to fill in the &quot;Archive Specific Shut Down Date&quot; field with the date the archive should be deleted.  If this is incorrect, Update the &quot;Event Archive Options&quot; Field</errorMessage>
+</ValidationRule>

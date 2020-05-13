@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPxDealRegistrationSent__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Auto populates from iC when rep submits Deal Registration</description>
+    <externalId>false</externalId>
+    <label>TPx Deal Registration Sent</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

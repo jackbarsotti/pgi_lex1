@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Unlimited Web Bill Period --></label>
+    <name>Unlimited_Web_Bill_Period__c</name>
+    <picklistValues>
+        <masterLabel>Biyearly</masterLabel>
+        <translation><!-- Biyearly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Monthly</masterLabel>
+        <translation><!-- Monthly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yearly</masterLabel>
+        <translation><!-- Yearly --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

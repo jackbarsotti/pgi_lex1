@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Extended_Archive_Package_Description__c</fullName>
+    <externalId>false</externalId>
+    <label>Extended Archive Package Description</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ability to extend all event archives for up to 12 months. Avaialble with Standard subscriptions only</fullName>
+                <default>true</default>
+                <label>Ability to extend all event archives for up to 12 months. Avaialble with Standard subscriptions only</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

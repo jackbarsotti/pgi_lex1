@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renewal_Loss_Reason__c</fullName>
+    <description>These are just for closed lost renewals</description>
+    <externalId>false</externalId>
+    <label>Renewal Loss Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Product</fullName>
+                <default>false</default>
+                <label>Product</label>
+            </value>
+            <value>
+                <fullName>Bugs</fullName>
+                <default>false</default>
+                <label>Bugs</label>
+            </value>
+            <value>
+                <fullName>Lack of champion</fullName>
+                <default>false</default>
+                <label>Lack of champion</label>
+            </value>
+            <value>
+                <fullName>Lack of adoption</fullName>
+                <default>false</default>
+                <label>Lack of adoption</label>
+            </value>
+            <value>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+                <label>Pricing</label>
+            </value>
+            <value>
+                <fullName>Business change</fullName>
+                <default>false</default>
+                <label>Business change</label>
+            </value>
+            <value>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+                <label>Competitor</label>
+            </value>
+            <value>
+                <fullName>No longer need</fullName>
+                <default>false</default>
+                <label>No longer need</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

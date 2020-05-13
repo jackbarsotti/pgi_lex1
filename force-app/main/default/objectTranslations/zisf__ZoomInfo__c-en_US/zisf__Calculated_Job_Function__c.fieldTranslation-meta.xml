@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Inferred Job Function Based on the Title Input Parameter. --></help>
+    <label><!-- Calculated Job Function --></label>
+    <name>zisf__Calculated_Job_Function__c</name>
+</CustomFieldTranslation>

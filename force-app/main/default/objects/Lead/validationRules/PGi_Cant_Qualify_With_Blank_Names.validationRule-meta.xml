@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Cant_Qualify_With_Blank_Names</fullName>
+    <active>true</active>
+    <description>This rule forces reps to provide a valid first name, last name, and company name before trying to convert.</description>
+    <errorConditionFormula>AND( 
+$User.Alias &lt;&gt; &quot;autocln&quot;, 
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;, 
+CONTAINS(RecordType.Name, &quot;PGi&quot;), 
+$User.Override_Validation_Rules__c = False, 
+ISPICKVAL(Status, &quot;Qualifying&quot;), 
+OR( 
+ISBLANK(FirstName), 
+LastName = &quot;[not provided]&quot;, 
+FirstName = &quot;[not provided]&quot;, 
+Company = &quot;[not provided]&quot; )
+)</errorConditionFormula>
+    <errorMessage>The First Name, Last Name, and/or Company Name values cannot be [not provided] or blank when the Lead Status is set to Qualifying. Please update before saving the record.</errorMessage>
+</ValidationRule>

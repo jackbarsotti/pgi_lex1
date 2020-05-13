@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Current Phone System Provider --></label>
+    <name>Current_Phone_System_Provider__c</name>
+    <picklistValues>
+        <masterLabel>8x8</masterLabel>
+        <translation><!-- 8x8 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AT&amp;T</masterLabel>
+        <translation><!-- AT&amp;T --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Avaya</masterLabel>
+        <translation><!-- Avaya --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BT British Telecom</masterLabel>
+        <translation><!-- BT British Telecom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bezeq</masterLabel>
+        <translation><!-- Bezeq --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Broadsoft</masterLabel>
+        <translation><!-- Broadsoft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CenturyLink</masterLabel>
+        <translation><!-- CenturyLink --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cisco</masterLabel>
+        <translation><!-- Cisco --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Comcast</masterLabel>
+        <translation><!-- Comcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deutsche Telekom</masterLabel>
+        <translation><!-- Deutsche Telekom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Elisa</masterLabel>
+        <translation><!-- Elisa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Frontier</masterLabel>
+        <translation><!-- Frontier --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fuze</masterLabel>
+        <translation><!-- Fuze --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gamma</masterLabel>
+        <translation><!-- Gamma --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jive</masterLabel>
+        <translation><!-- Jive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KPN</masterLabel>
+        <translation><!-- KPN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kazakhtelecom</masterLabel>
+        <translation><!-- Kazakhtelecom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mitel / ShoreTel</masterLabel>
+        <translation><!-- Mitel / ShoreTel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NEC</masterLabel>
+        <translation><!-- NEC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NFON</masterLabel>
+        <translation><!-- NFON --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nextiva</masterLabel>
+        <translation><!-- Nextiva --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Orange</masterLabel>
+        <translation><!-- Orange --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Panasonic</masterLabel>
+        <translation><!-- Panasonic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RingCentral</masterLabel>
+        <translation><!-- RingCentral --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SFR</masterLabel>
+        <translation><!-- SFR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Siemens</masterLabel>
+        <translation><!-- Siemens --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Swisscom</masterLabel>
+        <translation><!-- Swisscom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T-Mobile</masterLabel>
+        <translation><!-- T-Mobile --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TDC</masterLabel>
+        <translation><!-- TDC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Telefonica</masterLabel>
+        <translation><!-- Telefonica --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Telenor</masterLabel>
+        <translation><!-- Telenor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Telia</masterLabel>
+        <translation><!-- Telia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Verizon</masterLabel>
+        <translation><!-- Verizon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vimpelcom</masterLabel>
+        <translation><!-- Vimpelcom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vodafone</masterLabel>
+        <translation><!-- Vodafone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vonage</masterLabel>
+        <translation><!-- Vonage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>West</masterLabel>
+        <translation><!-- West --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Windstream</masterLabel>
+        <translation><!-- Windstream --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

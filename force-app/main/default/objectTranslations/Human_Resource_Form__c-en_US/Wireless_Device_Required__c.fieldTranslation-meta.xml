@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Wireless Device Required --></label>
+    <name>Wireless_Device_Required__c</name>
+    <picklistValues>
+        <masterLabel>Android</masterLabel>
+        <translation><!-- Android --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Blackberry</masterLabel>
+        <translation><!-- Blackberry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>International Data Roaming</masterLabel>
+        <translation><!-- International Data Roaming --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>International Dialing</masterLabel>
+        <translation><!-- International Dialing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Windows</masterLabel>
+        <translation><!-- Windows --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iPhone</masterLabel>
+        <translation><!-- iPhone --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

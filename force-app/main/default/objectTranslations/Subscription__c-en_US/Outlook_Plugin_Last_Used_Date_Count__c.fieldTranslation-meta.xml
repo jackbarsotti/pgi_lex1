@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- A hidden field used to calculate the connectivity tool adoption for Accounts and AMs book of business.  If date field filled in, then 1 is inserted into this field.  If date field is blank, then 0 is interested to this field --></help>
+    <label><!-- Outlook Plugin Last Used Date Count --></label>
+    <name>Outlook_Plugin_Last_Used_Date_Count__c</name>
+</CustomFieldTranslation>

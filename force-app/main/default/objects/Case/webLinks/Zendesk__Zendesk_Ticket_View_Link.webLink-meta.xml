@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Zendesk__Zendesk_Ticket_View_Link</fullName>
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Zendesk Support Ticket View Link</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
+
+var pageUrl = sforce.apex.execute(&quot;Zendesk.ZendeskPageURL&quot;, &quot;getPageUrl&quot;, {ticketid:&quot;{!Case.Zendesk__Zendesk_Ticket_ID__c}&quot;});
+window.location.href =  pageUrl;</url>
+</WebLink>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Information_Request__c</fullName>
+    <description>For website form, this is where the leads enter what information they would like to receive.</description>
+    <externalId>false</externalId>
+    <label>Information Request</label>
+    <length>1000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>2</visibleLines>
+</CustomField>

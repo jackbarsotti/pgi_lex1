@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Simply_PGi_Required_Fields</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+ISBLANK( Categories ),
+LEN(Body) = 0,
+ISPICKVAL( of_Occurrences__c , &quot;&quot;),
+ISPICKVAL(  Occurrence_Frequency__c , &quot;&quot;),
+ISPICKVAL(   Time_Spent_Per_Occurrence__c  , &quot;&quot;),
+ISBLANK( How_would_you_remedy_this_issue__c ),
+ISPICKVAL(  Functional_Organization__c  , &quot;&quot;),
+ISPICKVAL(   Organization__c   , &quot;&quot;))</errorConditionFormula>
+    <errorMessage>Description, Categories, Occurrence Frequency, # of Occurrences, Time Spent Per Occurrence, Remedy, Organizational and Functional Organization fields are required fields are required</errorMessage>
+</ValidationRule>

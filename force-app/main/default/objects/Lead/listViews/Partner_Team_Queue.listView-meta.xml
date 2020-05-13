@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Team_Queue</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Q - Partner Team</label>
+    <language>en_US</language>
+    <queue>PGi_Lead_NA_Partner_Team_Queue</queue>
+    <sharedTo>
+        <group>PGi_Partner_Webform_Team</group>
+    </sharedTo>
+</ListView>

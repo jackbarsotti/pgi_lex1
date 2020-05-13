@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tax_Exempt_Code__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( INCLUDES(Tax_Exempt_Description__c , &quot;Local taxes exempt&quot;), &quot;04; &quot;,&quot;&quot;) &amp; 
+IF( INCLUDES(Tax_Exempt_Description__c , &quot;State and Local Sales Tax Exempt&quot;), &quot;32; &quot;,&quot;&quot;) &amp; 
+IF( INCLUDES(Tax_Exempt_Description__c , &quot;All State and Local Gross Receipts Tax (GRT) Exempt&quot;), &quot;21; &quot;,&quot;&quot;) &amp; 
+IF( INCLUDES(Tax_Exempt_Description__c , &quot;State Excise Tax Exempt (Includes FL CST)&quot;), &quot;26; &quot;,&quot;&quot;) &amp; 
+IF( INCLUDES(Tax_Exempt_Description__c , &quot;State Excise and Local Communications Tax Exempt&quot;), &quot;30; &quot;,&quot;&quot;) &amp; 
+IF( INCLUDES(Tax_Exempt_Description__c , &quot;Local Utility Users Tax Exempt (includes CA local UUTs)&quot;), &quot;41; &quot;,&quot;&quot;) &amp; 
+IF( INCLUDES(Tax_Exempt_Description__c , &quot;State Excise Tax Exempt and Local Surcharge Exempt&quot;), &quot;42; &quot;,&quot;&quot;) &amp; 
+IF( INCLUDES(Tax_Exempt_Description__c , &quot;City level taxes exempt&quot;), &quot;44; &quot;,&quot;&quot;) &amp; 
+IF( INCLUDES(Tax_Exempt_Description__c , &quot;County level taxes exempt&quot;), &quot;47; &quot;,&quot;&quot;) &amp; 
+IF( INCLUDES(Tax_Exempt_Description__c , &quot;State Taxes Exempt&quot;), &quot;02; &quot;,&quot;&quot;) &amp; 
+IF( INCLUDES(Tax_Exempt_Description__c , &quot;State and Local Taxes Exempt&quot;), &quot;06; &quot;,&quot;&quot;) &amp; 
+IF( INCLUDES(Tax_Exempt_Description__c , &quot;Local Right of Way Fees Exempt&quot;), &quot;13; &quot;,&quot;&quot;) &amp; 
+IF( INCLUDES(Tax_Exempt_Description__c , &quot;All State and Local E911s Exempt&quot;), &quot;14; &quot;,&quot;&quot;) &amp; 
+IF( INCLUDES(Tax_Exempt_Description__c , &quot;Only Apply Federal Universal Service Fund&quot;), &quot;19; &quot;,&quot;&quot;) &amp; 
+IF( INCLUDES(Tax_Exempt_Description__c , &quot;All PUC Fees Exempt&quot;), &quot;20; &quot;,&quot;&quot;) &amp; 
+IF( INCLUDES(Tax_Exempt_Description__c , &quot;All State Universal Service Fund Fees Exempt&quot;), &quot;22; &quot;,&quot;&quot;) &amp; 
+IF( INCLUDES(Tax_Exempt_Description__c , &quot;Federal Universal Service Fund Exempt&quot;), &quot;24; &quot;,&quot;&quot;) &amp; 
+IF( INCLUDES(Tax_Exempt_Description__c , &quot;State Level Sales Tax Exempt&quot;), &quot;31; &quot;,&quot;&quot;) &amp; 
+IF( INCLUDES(Tax_Exempt_Description__c , &quot;State Franchise Fee&quot;), &quot;45; &quot;,&quot;&quot;) &amp; 
+IF( INCLUDES(Tax_Exempt_Description__c , &quot;Local Franchise Fee&quot;), &quot;46; &quot;,&quot;&quot;) &amp; 
+IF( INCLUDES(Tax_Exempt_Description__c , &quot;Los Angeles Communications Users Tax Exempt&quot;), &quot;61; &quot;,&quot;&quot;) &amp; 
+IF( Sales_Tax_Exempt__c == false, &quot;00; &quot;,&quot;&quot;)</formula>
+    <label>Tax Exempt Code</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

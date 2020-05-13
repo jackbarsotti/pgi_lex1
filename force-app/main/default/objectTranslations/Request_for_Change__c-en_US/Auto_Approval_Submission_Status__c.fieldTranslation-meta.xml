@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Auto Approval Submission Status --></label>
+    <name>Auto_Approval_Submission_Status__c</name>
+    <picklistValues>
+        <masterLabel>RFC Approval Failed</masterLabel>
+        <translation><!-- RFC Approval Failed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RFC Tasks Rejected</masterLabel>
+        <translation><!-- RFC Tasks Rejected --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

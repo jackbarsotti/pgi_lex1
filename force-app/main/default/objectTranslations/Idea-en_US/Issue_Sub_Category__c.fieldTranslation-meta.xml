@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Issue Sub-Category --></label>
+    <name>Issue_Sub_Category__c</name>
+    <picklistValues>
+        <masterLabel>Abundance of Resources</masterLabel>
+        <translation><!-- Abundance of Resources --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bug</masterLabel>
+        <translation><!-- Bug --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Change Averse</masterLabel>
+        <translation><!-- Change Averse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credits</masterLabel>
+        <translation><!-- Credits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customization Issue</masterLabel>
+        <translation><!-- Customization Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Delegation of Responsibilities</masterLabel>
+        <translation><!-- Delegation of Responsibilities --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Demand Generation</masterLabel>
+        <translation><!-- Demand Generation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Documentation</masterLabel>
+        <translation><!-- Documentation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Feature Need / Want</masterLabel>
+        <translation><!-- Feature Need / Want --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invoice Error</masterLabel>
+        <translation><!-- Invoice Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lack of Attention to Detail</masterLabel>
+        <translation><!-- Lack of Attention to Detail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lack of Automation</masterLabel>
+        <translation><!-- Lack of Automation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lack of Education/Communication Awareness</masterLabel>
+        <translation><!-- Lack of Education/Communication Awareness --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lack of Sales Fostering Relationship</masterLabel>
+        <translation><!-- Lack of Sales Fostering Relationship --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lack of Tools</masterLabel>
+        <translation><!-- Lack of Tools --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Manual</masterLabel>
+        <translation><!-- Manual --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Migration</masterLabel>
+        <translation><!-- Migration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Multiple systems used</masterLabel>
+        <translation><!-- Multiple systems used --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Response</masterLabel>
+        <translation><!-- No Response --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>None</masterLabel>
+        <translation><!-- None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Onboarding</masterLabel>
+        <translation><!-- Onboarding --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payments</masterLabel>
+        <translation><!-- Payments --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pricing</masterLabel>
+        <translation><!-- Pricing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Processes Not Streamlined</masterLabel>
+        <translation><!-- Processes Not Streamlined --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Questions with Billing Data Provided</masterLabel>
+        <translation><!-- Questions with Billing Data Provided --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Release</masterLabel>
+        <translation><!-- Release --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reliance on Others</masterLabel>
+        <translation><!-- Reliance on Others --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resource Constraints</masterLabel>
+        <translation><!-- Resource Constraints --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Restructuring Fallout</masterLabel>
+        <translation><!-- Restructuring Fallout --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales contacted for non Sales issues</masterLabel>
+        <translation><!-- Sales contacted for non Sales issues --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Slow Response</masterLabel>
+        <translation><!-- Slow Response --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>System Issue</masterLabel>
+        <translation><!-- System Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>System Limitation</masterLabel>
+        <translation><!-- System Limitation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>System Slow</masterLabel>
+        <translation><!-- System Slow --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Too Many Options</masterLabel>
+        <translation><!-- Too Many Options --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unclear direction</masterLabel>
+        <translation><!-- Unclear direction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unknown Owner</masterLabel>
+        <translation><!-- Unknown Owner --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

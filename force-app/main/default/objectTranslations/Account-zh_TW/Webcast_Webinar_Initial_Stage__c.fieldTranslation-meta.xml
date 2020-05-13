@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- First Webinar Buying Stage assigned to account --></help>
+    <label><!-- Webcast/Webinar Initial Stage --></label>
+    <name>Webcast_Webinar_Initial_Stage__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Project Manager --></label>
+    <name>Project_Manager__c</name>
+    <picklistValues>
+        <masterLabel>Adrian Chatto</masterLabel>
+        <translation><!-- Adrian Chatto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Andy Hasenyager</masterLabel>
+        <translation><!-- Andy Hasenyager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chris Drage</masterLabel>
+        <translation><!-- Chris Drage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>James Olson</masterLabel>
+        <translation><!-- James Olson --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jenny Little</masterLabel>
+        <translation><!-- Jenny Little --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jo Sims</masterLabel>
+        <translation><!-- Jo Sims --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lynsay Ansell</masterLabel>
+        <translation><!-- Lynsay Ansell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Michael Blackburn</masterLabel>
+        <translation><!-- Michael Blackburn --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oliver Jacobs</masterLabel>
+        <translation><!-- Oliver Jacobs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PMO</masterLabel>
+        <translation><!-- PMO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Paul Taylor</masterLabel>
+        <translation><!-- Paul Taylor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Richard Amery</masterLabel>
+        <translation><!-- Richard Amery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ross Broady</masterLabel>
+        <translation><!-- Ross Broady --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stuart Price</masterLabel>
+        <translation><!-- Stuart Price --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Victoria Conway</masterLabel>
+        <translation><!-- Victoria Conway --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wayne Blezard</masterLabel>
+        <translation><!-- Wayne Blezard --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Product Customization Request</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Product Customization Requests</value>
+    </caseValues>
+    <layouts>
+        <layout>Product Customization Request Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+        <sections>
+            <label><!-- Financials --></label>
+            <section>Financials</section>
+        </sections>
+        <sections>
+            <label><!-- Related Oppty Finances --></label>
+            <section>Related Oppty Finances</section>
+        </sections>
+        <sections>
+            <label><!-- Timeline Details --></label>
+            <section>Timeline Details</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please advise why the Start Date/Time is not Satisfactory for the customer. --></errorMessage>
+        <name>Start_Date_Time_Not_Satisfactory</name>
+    </validationRules>
+</CustomObjectTranslation>

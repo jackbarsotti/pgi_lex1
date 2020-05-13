@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Must_have_Phone_or_Email</fullName>
+    <active>true</active>
+    <description>PGi requires all leads to have either a phone number or an email address</description>
+    <errorConditionFormula>AND(
+$User.Alias &lt;&gt; &quot;autocln&quot;,
+CONTAINS(RecordType.Name, &quot;PGi&quot;), 
+ISBLANK(Email),
+ISBLANK(Phone),
+ISNEW(),
+$User.Override_Validation_Rules__c = False,
+NOT($Setup.BypassRules__c.Disable_Validation_Rules__c)
+)</errorConditionFormula>
+    <errorMessage>All Leads require you to input either a phone number or email address.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,2279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RT_Event</fullName>
+    <active>true</active>
+    <description>Master for all RT Events</description>
+    <label>RT Event</label>
+    <picklistValues>
+        <picklist>APR_Pin_Entry__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Additional_Production_Engineering__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Additional_Training_Rehearsal_Session__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Addl_Live_Event_Support__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Advanced_Security2__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Audio_Broadcast__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Audio_Provider__c</picklist>
+        <values>
+            <fullName>InterCall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Level 3</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>PGi</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Audio_Q_A__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Booked_With__c</picklist>
+        <values>
+            <fullName>InterCall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Level 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PGi</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Broadcast_Audio_Event_Duration__c</picklist>
+        <values>
+            <fullName>120 minutes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>150 minutes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>180 minutes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60 minutes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>90 minutes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Broadcast_Audio_Type__c</picklist>
+        <values>
+            <fullName>Gold Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Platinum Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stand Alone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wholesale Per Participant</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Call_In_Audio_Replay__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Call_Type__c</picklist>
+        <values>
+            <fullName>Information Sharing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Member Benefit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cancellation_Charge__c</picklist>
+        <values>
+            <fullName>Fee Charged - Cancelled without 24 hours notice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fee Charged - Customer was a No Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Charge - Cancelled with 24%2B hours notice</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cancellation_Fee_Advanced_Notice2__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cancellation_Fee_Late_Notice__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Click_to_Join__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Closed_Captioning__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Conference_Language__c</picklist>
+        <values>
+            <fullName>Canadian French</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chinese%2C Mandarin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>English</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>French</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>German</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Italian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japanese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Korean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portuguese%2C Brazilian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spanish</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Custom_Script_Rec_d__c</picklist>
+        <values>
+            <fullName>No%2C TBD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Custom_Template_Branding__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Dial_Outs_Needed__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Did_the_customer_join__c</picklist>
+        <values>
+            <fullName>Did not join</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joined for a portion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joined for entire duration</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Dress_Rehearsal__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Dry_Run_Needed__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ECD_Event_Call_Director__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>EM_Role__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No EM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Passive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Archive_Options__c</picklist>
+        <values>
+            <fullName>12 Month Archive %28default%3B included with core event%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event on CD %28%24400%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Archive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single File Archive %28FLC%2C MPG%2C WMV%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Specific Shut-Down</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Booking_Origin__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Form</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Manager__c</picklist>
+        <values>
+            <fullName>1 - Ashlea Beers Testing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>300 Ports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Abigail Herreman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Abigail Wall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ali Marsden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amorette Harrison</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amy Rowlan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>April Trubell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audio Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Briana Patterson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cassidy Smock</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chrissy Kennedy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diana Dice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gabrielle Kulesza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gaines Crawford</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heather Rakestraw</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Holly Dupuis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JayJay Schenbeck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jessi Gerak</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kalie Bozich</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Karyn Conner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keith Janofski</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kevin Upton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kim Morse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laura Jackson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Margaret Thomas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missy Bleich</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rachel Gifford</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sara Schmidt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sarah McCaslin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shawn Cardinal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subscription</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toby Schrecengost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travis Sowash</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Reporting__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Type__c</picklist>
+        <values>
+            <fullName>Express</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Premium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Expedite__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Extended_Archive__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Full_Event_Moderation__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GX_Event_Type__c</picklist>
+        <values>
+            <fullName>Automated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event Plus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event Plus with Passcode</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Express</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greeted Entry with Click to Join</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operator Assisted Audio</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Introduction__c</picklist>
+        <values>
+            <fullName>Countdown Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>L3_Event_Type__c</picklist>
+        <values>
+            <fullName>Premium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Live_Introduction__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Live_Q_A_Type__c</picklist>
+        <values>
+            <fullName>Audio only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chat %26 Audio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chat only</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Live_Q_A__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MP4_Archive__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MP4_Capture__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mobile_Delivery__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Multi_Event_Registration__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>On_Site_Production__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opening_Script__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Operator_Awareness_New__c</picklist>
+        <values>
+            <fullName>Above Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Below Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Met Expectations</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Operator_Demeanor_New__c</picklist>
+        <values>
+            <fullName>Above Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Below Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Met Expectations</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Operator_Name__c</picklist>
+        <values>
+            <fullName>Aaron Walker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Abigail Navarro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alicia Villalobos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allen Rugg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allen Spencer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amelia Stark</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amy Weydert</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andrew Jennings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ann Warner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Anna Duran</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Anthony Thrash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>April Martinez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>April Omari</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ashley Tempesta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ashley Velez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audra Terrazas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bailey Sallaz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bethany Herschler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brian Isbell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Camille Losey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carolyn Fuhrmann</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cassandra Greeson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cassi Ireland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Catherine Montgomery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cathy Williams</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Celia Daniels</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chad Cantrell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chris Daniel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Christina Braden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Christy Andonie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cody Schuman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corinna Quigley</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cynthia Davis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cynthia Simpson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dana Foster</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dana Jensen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>David Ellis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Debbie Daniel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denisse Pena</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Derek Wallace</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don Francis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ebony De La Cruz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Erik Sharp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Evan Hopper</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Felicia Freisner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Geena Hughes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greg Adams</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gwen Alford</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hanna Martens</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Isaac Stockton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jake Simon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>James Battle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jennifer Gorton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jennifer Koslowsky</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jennifer Stock</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jenny Brown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jessica Cassle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jessica Mitchell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jim Tanner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>John Stumpf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Johnny Custer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Justin DeAngelo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kathryn Diedrick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kathy Arnold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Katie Planting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kayla Kratzer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kelliann Hammel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kerri Jammes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kevin Fink</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kim Bosick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kyle Oliver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lauren Peterson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lauren Rodriguez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LeeAnn Davis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Levi Coffelt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lisa Crain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lisa Sylva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lisa Williams</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lori Binder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lorie Wheeler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lynette Fleury</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mariah Wells</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Matt Fitzpatrick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Matt Holmes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Melanie Lentz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Melissa Lowe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Melissa Maczko</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Melody Neufeld</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mia Pepper</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mindy Maltsbarger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Noah Price</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paula Kimes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rebecca Knox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renee Ramsey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Richelle Britigan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rufus St%2EClair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ruth Lawrence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ryan King</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Savannah Casteel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shannon Brand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shayla Thomas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sherlon Pulliam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stephanie White</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tifanni Walker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tom Chiavaroli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toni Grieshaber</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tracie Bowen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tulare Wallace</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vickie Caron</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vicky Moon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yolonda Alfaro</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Operator_Overall_Impact__c</picklist>
+        <values>
+            <fullName>Above Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Below Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Met Expectations</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Operator_Professionalism_New__c</picklist>
+        <values>
+            <fullName>Above Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Below Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Met Expectations</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Operator_Protocol_New__c</picklist>
+        <values>
+            <fullName>Above Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Below Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Met Expectations</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Operator_Rating__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Operator_Sound_Check_New__c</picklist>
+        <values>
+            <fullName>Above Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Below Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Met Expectations</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Operator_Type__c</picklist>
+        <values>
+            <fullName>Bilingual - French</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bilingual - Spanish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Experienced Operator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operator in Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Senior%2FPreferred</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Overlay_Video__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Package_Type__c</picklist>
+        <values>
+            <fullName>Gold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Platinum</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Participant_Mode__c</picklist>
+        <values>
+            <fullName>Listen Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open%2FInteractive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Participant_Report_Picklist__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Platform__c</picklist>
+        <values>
+            <fullName>InterCall</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Podcast__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Post_Event_Certification_Exam__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pre_Conference_Duration__c</picklist>
+        <values>
+            <fullName>0 Minutes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10 Minutes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15 Minutes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20 Minutes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25 Minutes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30 Minutes</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>35 Minutes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40 Minutes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>45 Minutes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 minutes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50 Minutes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>55 Minutes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60 Minutes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>90 Minutes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Professional_Services__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Q_A__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Q_A_type__c</picklist>
+        <values>
+            <fullName>Audio Only %28Operator Facilitated%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Both Chat %26 Audio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chat Only %28Customer Facilitated%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RT_Event_Type__c</picklist>
+        <values>
+            <fullName>300 Port Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operator Assisted Direct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operator Assisted Premium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Recording_Type__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Recording__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Registration_API__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reschedule__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Restricted_List__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Screen_Sharing__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Simulated_Live_Capture__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Simulated_Live_Delivery2__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Simulive__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Single_File_Archive__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Slide_Management__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Social_Networking_Logos__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Speaker_Bio__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>CANCELLED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DUPLICATE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Reopened</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting on Recording Edits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting to Close</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Streaming_Test__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Support_Duration__c</picklist>
+        <values>
+            <fullName>100%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15%2F15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30%2F30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30%2F60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30%2F90</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>45%2F30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>45%2F60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>45%2F90</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60%2F100</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60%2F30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60%2F60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60%2F90</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>90%2F100</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>90%2F30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Support_Type__c</picklist>
+        <values>
+            <fullName>100%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15%2F15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30%2F30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>300 Port</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AUTO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audio Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dry Run</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FT - 100%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FT - 30%2F30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FT - Audio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FT - Simulive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FT AUTO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No EM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Passive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Platinum - 30%2F60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Record</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SSBA - 15%2F15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Simulive - 100%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subscription</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Supporting_Event_Manager__c</picklist>
+        <values>
+            <fullName>300 Ports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Abby</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Abby R</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>After Hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ali</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amorette</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>April</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audio Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chrissy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crystal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Erica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gaines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Holly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>James</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Janae</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Josh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kalie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Karyn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keith</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kevin U</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kim M</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Margaret</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qunicy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shawn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subscription</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toby</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tracey H</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travis</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Survey_Test__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Time_Zone__c</picklist>
+        <values>
+            <fullName>CT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ET</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PT</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Transcription_Turnaround_Time__c</picklist>
+        <values>
+            <fullName>12 - Express</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>24 - Priority</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Rush</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>48 - Regular</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>6 - Expedite</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Transcription_Type__c</picklist>
+        <values>
+            <fullName>Full Transcript</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q%26A Transcript Only</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Transcription__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Event__c</picklist>
+        <values>
+            <fullName>Video %2B Slides - Onsite Production</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Unsupported__c</picklist>
+        <values>
+            <fullName>300 Ports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audio Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subscription</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Use_of_Clearance_Line__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Use_of_Communication_Line__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Use_of_OPAL__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Video_Clips_up_to_5_minutes_in_length__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Visuals__c</picklist>
+        <values>
+            <fullName>Sharing Applications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sharing Desktop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uploading Slides</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Web_Audio__c</picklist>
+        <values>
+            <fullName>Audio Only</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Webinar and Audio</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Web_Meeting_Registration_Type__c</picklist>
+        <values>
+            <fullName>Pre-Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Register at time of event</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Web_Type__c</picklist>
+        <values>
+            <fullName>Web Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WebEx</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Webcam_Switching__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Webcasting_Event_Product__c</picklist>
+        <values>
+            <fullName>SS16 - On-Demand Platinum Elite Webcast</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Webinar_Set_Up_and_Customization__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

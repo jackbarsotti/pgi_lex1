@@ -1,0 +1,5 @@
+<apex:page standardController="Subscription__c" extensions="NewSubscription" action="{!doInit}" tabStyle="Subscription__c">
+    <p>
+        Not Allowed...
+    </p>
+</apex:page>

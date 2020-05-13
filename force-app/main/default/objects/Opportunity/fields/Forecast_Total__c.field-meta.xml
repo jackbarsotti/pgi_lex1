@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Forecast_Total__c</fullName>
+    <description>This is used in Forecasting only, it is set by a WFR whenever the oppty is created/edited based off the type of Oppty:
+PGi + iMC = Total MRR
+TalkPoint = Amount
+Modality = Amount - Third Party Support Total</description>
+    <externalId>false</externalId>
+    <label>Forecast Total</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

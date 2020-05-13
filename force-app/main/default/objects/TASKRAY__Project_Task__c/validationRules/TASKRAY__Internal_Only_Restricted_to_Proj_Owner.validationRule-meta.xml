@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TASKRAY__Internal_Only_Restricted_to_Proj_Owner</fullName>
+    <active>false</active>
+    <description>This validation rule prevents anyone except the Project Owner from changing the Internal Only field.</description>
+    <errorConditionFormula>ISCHANGED(TASKRAY__trInternalOnly__c) &amp;&amp; $User.Id &lt;&gt;  TASKRAY__Project__r.OwnerId</errorConditionFormula>
+    <errorMessage>Only the Project Owner can modify the Internal Only field on Tasks. Contact your system administrator if you would like access to this field.</errorMessage>
+</ValidationRule>

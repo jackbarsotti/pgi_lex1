@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please indicate pricing models for proposals selected. --></help>
+    <label><!-- Pricing Models - Selected --></label>
+    <name>Pricing_Models_Selected__c</name>
+</CustomFieldTranslation>

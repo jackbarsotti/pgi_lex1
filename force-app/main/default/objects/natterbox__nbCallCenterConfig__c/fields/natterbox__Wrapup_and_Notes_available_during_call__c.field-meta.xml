@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>natterbox__Wrapup_and_Notes_available_during_call__c</fullName>
+    <defaultValue>true</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Make the wrapup radio buttons and notes field available during the call instead of just when complete</description>
+    <externalId>false</externalId>
+    <label>Wrapup and Notes available during call</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

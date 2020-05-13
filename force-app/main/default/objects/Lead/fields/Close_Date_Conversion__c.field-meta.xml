@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Close_Date_Conversion__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Used in Lead Conversion process to update the Opportunity Close date from the standard month end to customized 60 days out.</description>
+    <externalId>false</externalId>
+    <label>Close Date Conversion</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

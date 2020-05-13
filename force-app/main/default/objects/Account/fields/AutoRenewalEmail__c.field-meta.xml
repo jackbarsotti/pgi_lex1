@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AutoRenewalEmail__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>For every access code subscribed to an annual plan, send the Contact an email, 30 days prior to the plan start date, indicating that their subscription will be automatically renewed.</description>
+    <externalId>false</externalId>
+    <label>Automated Renewal Email</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

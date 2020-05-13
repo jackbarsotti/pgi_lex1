@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meeting_10_w_1000_Min_TF__c</fullName>
+    <externalId>false</externalId>
+    <label>Meeting 10 w/ 1000 Min TF</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Unlimited meetings w/ up to 10 participants. Unlimited VoIP, US/CAN Toll, and US/CAN dial-out audio conferencing. 1000 min of US/CAN Toll-Free. All other audio and recording hosting charged per-minute. Subject to a max 10 participant dial-in audio port.</fullName>
+                <default>false</default>
+                <label>Unlimited meetings w/ up to 10 participants. Unlimited VoIP, US/CAN Toll, and US/CAN dial-out audio conferencing. 1000 min of US/CAN Toll-Free. All other audio and recording hosting charged per-minute. Subject to a max 10 participant dial-in audio port.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

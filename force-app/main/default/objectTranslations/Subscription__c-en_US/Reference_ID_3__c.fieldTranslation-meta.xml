@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Customer supplied reference ID for audio confs. Will export on rated/unrated CDRs. --></help>
+    <label><!-- Reference ID 3 --></label>
+    <name>Reference_ID_3__c</name>
+</CustomFieldTranslation>

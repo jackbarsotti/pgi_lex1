@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Web Meeting Registration Type --></label>
+    <name>Web_Meeting_Registration_Type__c</name>
+    <picklistValues>
+        <masterLabel>Pre-Registration</masterLabel>
+        <translation><!-- Pre-Registration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Register at time of event</masterLabel>
+        <translation><!-- Register at time of event --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sc3_1</fullName>
+    <description>Any fields added will always show up at the end. 3-Columns.</description>
+    <label>Section 3: Rate Information (end)</label>
+</FieldSet>

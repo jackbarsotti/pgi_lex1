@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Supporting Event Manager --></label>
+    <name>Supporting_Event_Manager__c</name>
+    <picklistValues>
+        <masterLabel>300 Ports</masterLabel>
+        <translation><!-- 300 Ports --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Abby</masterLabel>
+        <translation><!-- Abby --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Abby R</masterLabel>
+        <translation><!-- Abby R --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>After Hours</masterLabel>
+        <translation><!-- After Hours --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ali</masterLabel>
+        <translation><!-- Ali --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Amanda</masterLabel>
+        <translation><!-- Amanda --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Amorette</masterLabel>
+        <translation><!-- Amorette --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anthony</masterLabel>
+        <translation><!-- Anthony --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>April</masterLabel>
+        <translation><!-- April --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio Only</masterLabel>
+        <translation><!-- Audio Only --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Automated</masterLabel>
+        <translation><!-- Automated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Briana</masterLabel>
+        <translation><!-- Briana --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chrissy</masterLabel>
+        <translation><!-- Chrissy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Crystal</masterLabel>
+        <translation><!-- Crystal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Erica</masterLabel>
+        <translation><!-- Erica --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Chat</masterLabel>
+        <translation><!-- Event Chat --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gaines</masterLabel>
+        <translation><!-- Gaines --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Holly</masterLabel>
+        <translation><!-- Holly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>James</masterLabel>
+        <translation><!-- James --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Janae</masterLabel>
+        <translation><!-- Janae --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Josh</masterLabel>
+        <translation><!-- Josh --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kalie</masterLabel>
+        <translation><!-- Kalie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Karyn</masterLabel>
+        <translation><!-- Karyn --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kate</masterLabel>
+        <translation><!-- Kate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keith</masterLabel>
+        <translation><!-- Keith --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kevin U</masterLabel>
+        <translation><!-- Kevin U --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kim M</masterLabel>
+        <translation><!-- Kim M --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lori</masterLabel>
+        <translation><!-- Lori --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Margaret</masterLabel>
+        <translation><!-- Margaret --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Qunicy</masterLabel>
+        <translation><!-- Qunicy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shawn</masterLabel>
+        <translation><!-- Shawn --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Steve</masterLabel>
+        <translation><!-- Steve --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Subscription</masterLabel>
+        <translation><!-- Subscription --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Toby</masterLabel>
+        <translation><!-- Toby --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tracey H</masterLabel>
+        <translation><!-- Tracey H --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tracy K</masterLabel>
+        <translation><!-- Tracy K --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Travis</masterLabel>
+        <translation><!-- Travis --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

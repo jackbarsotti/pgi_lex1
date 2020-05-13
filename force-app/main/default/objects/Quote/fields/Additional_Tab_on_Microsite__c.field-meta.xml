@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_Tab_on_Microsite__c</fullName>
+    <defaultValue>250</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>Additional Tab on Microsite</inlineHelpText>
+    <label>Additional Tab on Microsite</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

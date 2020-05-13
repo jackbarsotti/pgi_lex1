@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please select from corresponding Referral Partner --></help>
+    <label><!-- Agent Code --></label>
+    <name>Agent_Code__c</name>
+    <picklistValues>
+        <masterLabel>3VL</masterLabel>
+        <translation><!-- 3VL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ABAG</masterLabel>
+        <translation><!-- ABAG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AGF</masterLabel>
+        <translation><!-- AGF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AGM</masterLabel>
+        <translation><!-- AGM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alabama Association of Nonprofits</masterLabel>
+        <translation><!-- Alabama Association of Nonprofits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alliance of Arizona Nonprofits</masterLabel>
+        <translation><!-- Alliance of Arizona Nonprofits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Arkansas Nonprofit Alliance</masterLabel>
+        <translation><!-- Arkansas Nonprofit Alliance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CAF</masterLabel>
+        <translation><!-- CAF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCP</masterLabel>
+        <translation><!-- CCP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CMF</masterLabel>
+        <translation><!-- CMF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CNJG</masterLabel>
+        <translation><!-- CNJG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CSF</masterLabel>
+        <translation><!-- CSF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>California Association of Nonprofits</masterLabel>
+        <translation><!-- California Association of Nonprofits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Colorado Nonprofit Association</masterLabel>
+        <translation><!-- Colorado Nonprofit Association --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Commission</masterLabel>
+        <translation><!-- Commission --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Connecticut Association of Nonprofits</masterLabel>
+        <translation><!-- Connecticut Association of Nonprofits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DF</masterLabel>
+        <translation><!-- DF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DFSF</masterLabel>
+        <translation><!-- DFSF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DFW</masterLabel>
+        <translation><!-- DFW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DVG</masterLabel>
+        <translation><!-- DVG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deleware Association of Nonprofit Agencies</masterLabel>
+        <translation><!-- Deleware Association of Nonprofit Agencies --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Donors Forum (IL)</masterLabel>
+        <translation><!-- Donors Forum (IL) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FPN</masterLabel>
+        <translation><!-- FPN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Florida Association of Nonprofit Organizations</masterLabel>
+        <translation><!-- Florida Association of Nonprofit Organizations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GCG</masterLabel>
+        <translation><!-- GCG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GCRI</masterLabel>
+        <translation><!-- GCRI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GFNY</masterLabel>
+        <translation><!-- GFNY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GOSW</masterLabel>
+        <translation><!-- GOSW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GWPA</masterLabel>
+        <translation><!-- GWPA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hawaii Alliance of Nonprofit Organizations</masterLabel>
+        <translation><!-- Hawaii Alliance of Nonprofit Organizations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ICOF</masterLabel>
+        <translation><!-- ICOF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IGA</masterLabel>
+        <translation><!-- IGA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INRC</masterLabel>
+        <translation><!-- INRC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Idaho Nonprofit Center</masterLabel>
+        <translation><!-- Idaho Nonprofit Center --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kentucky Nonprofit Network</masterLabel>
+        <translation><!-- Kentucky Nonprofit Network --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Louisiana Association of Crisis Negotiators</masterLabel>
+        <translation><!-- Louisiana Association of Crisis Negotiators --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Louisiana Association of Nonprofit Organizations</masterLabel>
+        <translation><!-- Louisiana Association of Nonprofit Organizations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MCF</masterLabel>
+        <translation><!-- MCF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MDANO</masterLabel>
+        <translation><!-- MDANO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MNCN</masterLabel>
+        <translation><!-- MNCN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MPC</masterLabel>
+        <translation><!-- MPC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Maine Association of Nonprofits</masterLabel>
+        <translation><!-- Maine Association of Nonprofits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Maryland Nonprofits</masterLabel>
+        <translation><!-- Maryland Nonprofits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Massachusetts Council of Human Services Providers</masterLabel>
+        <translation><!-- Massachusetts Council of Human Services Providers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Michigan Nonprofit Association</masterLabel>
+        <translation><!-- Michigan Nonprofit Association --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Minnesota Council of Nonprofits</masterLabel>
+        <translation><!-- Minnesota Council of Nonprofits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mississippi Center for Nonprofits</masterLabel>
+        <translation><!-- Mississippi Center for Nonprofits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Montana Nonprofit Association</masterLabel>
+        <translation><!-- Montana Nonprofit Association --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>N/A</masterLabel>
+        <translation><!-- N/A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NCG</masterLabel>
+        <translation><!-- NCG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NCNG</masterLabel>
+        <translation><!-- NCNG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NMAG</masterLabel>
+        <translation><!-- NMAG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>National Resource Center for Adoption</masterLabel>
+        <translation><!-- National Resource Center for Adoption --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Hampshire Center for Nonprofits</masterLabel>
+        <translation><!-- New Hampshire Center for Nonprofits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Jersey Center for Nonprofits</masterLabel>
+        <translation><!-- New Jersey Center for Nonprofits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New York Council of Nonprofits</masterLabel>
+        <translation><!-- New York Council of Nonprofits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Non-Commission</masterLabel>
+        <translation><!-- Non-Commission --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nonprofit Association of Oregon</masterLabel>
+        <translation><!-- Nonprofit Association of Oregon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nonprofit Association of the Midlands</masterLabel>
+        <translation><!-- Nonprofit Association of the Midlands --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nonprofit Coordinating Committee of New York</masterLabel>
+        <translation><!-- Nonprofit Coordinating Committee of New York --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>North Carolina Center for Nonprofits</masterLabel>
+        <translation><!-- North Carolina Center for Nonprofits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>North Dakota Association of Nonprofit Organizations</masterLabel>
+        <translation><!-- North Dakota Association of Nonprofit Organizations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Northwest Nonprofit Resources</masterLabel>
+        <translation><!-- Northwest Nonprofit Resources --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OANO</masterLabel>
+        <translation><!-- OANO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OGF</masterLabel>
+        <translation><!-- OGF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oklahoma Center for Nonprofits</masterLabel>
+        <translation><!-- Oklahoma Center for Nonprofits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oregon Nonprofits</masterLabel>
+        <translation><!-- Oregon Nonprofits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PNW</masterLabel>
+        <translation><!-- PNW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PNY</masterLabel>
+        <translation><!-- PNY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pennsylvania Association of Nonprofit Organizations</masterLabel>
+        <translation><!-- Pennsylvania Association of Nonprofit Organizations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SCG</masterLabel>
+        <translation><!-- SCG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SDG</masterLabel>
+        <translation><!-- SDG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SECF</masterLabel>
+        <translation><!-- SECF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>South Carolina Association of Nonprofit Associations</masterLabel>
+        <translation><!-- South Carolina Association of Nonprofit Associations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Texas Association of Nonprofit Organizations</masterLabel>
+        <translation><!-- Texas Association of Nonprofit Organizations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>The Foraker Group (AK)</masterLabel>
+        <translation><!-- The Foraker Group (AK) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Utah Nonprofits Association</masterLabel>
+        <translation><!-- Utah Nonprofits Association --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Virginia Network of Nonprofit Organizations</masterLabel>
+        <translation><!-- Virginia Network of Nonprofit Organizations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WG</masterLabel>
+        <translation><!-- WG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WNYG</masterLabel>
+        <translation><!-- WNYG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WVG</masterLabel>
+        <translation><!-- WVG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Washington DC Center for Nonprofit Advancement</masterLabel>
+        <translation><!-- Washington DC Center for Nonprofit Advancement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Washington Nonprofits</masterLabel>
+        <translation><!-- Washington Nonprofits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Washington Nonprofits Association</masterLabel>
+        <translation><!-- Washington Nonprofits Association --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

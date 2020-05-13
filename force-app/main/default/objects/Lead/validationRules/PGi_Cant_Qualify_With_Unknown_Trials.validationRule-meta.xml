@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Cant_Qualify_With_Unknown_Trials</fullName>
+    <active>true</active>
+    <description>The Company Name can not be &quot;Unknown Trials&quot; so that imeet trials do not convert into Accounts with that name.</description>
+    <errorConditionFormula>AND(
+$User.Alias &lt;&gt; &quot;autocln&quot;,
+CONTAINS(RecordType.Name, &quot;PGi&quot;), 
+ISPICKVAL(Status, &quot;Qualifying&quot;),
+Company = &quot;Unknown Trials&quot;,
+$User.Override_Validation_Rules__c = False,
+NOT($Setup.BypassRules__c.Disable_Validation_Rules__c)
+)</errorConditionFormula>
+    <errorDisplayField>Company</errorDisplayField>
+    <errorMessage>The company name cannot be Unknown Trials when the Lead Status is Qualifying.  Please change the Company Name to something else before saving.</errorMessage>
+</ValidationRule>

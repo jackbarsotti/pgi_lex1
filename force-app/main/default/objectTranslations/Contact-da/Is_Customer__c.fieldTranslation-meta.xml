@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Populated nightly from account level. If the account is a customer, all contacts are customers. (Customer is defined as an account with 1+ active access codes, bill account = true and status = active) --></help>
+    <label><!-- Is Customer? --></label>
+    <name>Is_Customer__c</name>
+</CustomFieldTranslation>

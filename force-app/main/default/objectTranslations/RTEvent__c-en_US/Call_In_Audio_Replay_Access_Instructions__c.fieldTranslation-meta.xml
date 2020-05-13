@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Call-In Audio Replay Access Instructions --></label>
+    <name>Call_In_Audio_Replay_Access_Instructions__c</name>
+</CustomFieldTranslation>

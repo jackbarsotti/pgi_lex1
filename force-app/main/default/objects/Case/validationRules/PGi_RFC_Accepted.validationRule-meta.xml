@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_RFC_Accepted</fullName>
+    <active>false</active>
+    <description>You can not set this RFC Task Case to Accepted until the Related RFC has a Risk Value generated. Return to your RFC and select &quot;Pickup RFC&quot; to complete the Risk and Impact details.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Related_RFC__r.Risk__c,&quot;Complete Risk Assessment Tab&quot;),
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+RecordType.Name = &quot;PGi-RFC Task&quot;,
+ISPICKVAL(Status,&quot;Accepted&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Related_RFC__c</errorDisplayField>
+    <errorMessage>Users cant set a Case to Accepted if the Related RFC still has the Risk to be completed</errorMessage>
+</ValidationRule>

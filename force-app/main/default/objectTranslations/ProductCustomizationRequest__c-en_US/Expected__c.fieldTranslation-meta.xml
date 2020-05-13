@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is how long PGi thinks it will take to complete, in months, which has been communicated to customer. --></help>
+    <label><!-- Estimated Months to Complete --></label>
+    <name>Expected__c</name>
+</CustomFieldTranslation>

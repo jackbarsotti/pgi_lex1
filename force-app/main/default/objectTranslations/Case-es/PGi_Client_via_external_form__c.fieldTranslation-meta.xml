@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- PGi Client (via external form) --></label>
+    <name>PGi_Client_via_external_form__c</name>
+</CustomFieldTranslation>

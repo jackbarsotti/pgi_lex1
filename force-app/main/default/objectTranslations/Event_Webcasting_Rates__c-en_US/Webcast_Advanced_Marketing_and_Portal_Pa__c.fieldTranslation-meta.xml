@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Per month --></help>
+    <label><!-- Webcast Advanced Marketing and Portal Pa --></label>
+    <name>Webcast_Advanced_Marketing_and_Portal_Pa__c</name>
+</CustomFieldTranslation>

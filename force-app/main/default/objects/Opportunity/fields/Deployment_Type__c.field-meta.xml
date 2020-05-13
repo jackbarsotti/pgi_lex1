@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deployment_Type__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select Cloud PBX/SfB Online where all users will be homed in the cloud and thus driving Microsoft&#39;s consumption targets, select On-Prem / Private Cloud where all users will be homed on Server or select Mixed Deployment if a mixture of both.</inlineHelpText>
+    <label>Deployment Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Microsoft Teams</fullName>
+                <default>false</default>
+                <label>Microsoft Teams</label>
+            </value>
+            <value>
+                <fullName>SfB Online</fullName>
+                <default>false</default>
+                <label>SfB Online</label>
+            </value>
+            <value>
+                <fullName>SfB Server</fullName>
+                <default>false</default>
+                <label>SfB Server</label>
+            </value>
+            <value>
+                <fullName>Yammer</fullName>
+                <default>false</default>
+                <label>Yammer</label>
+            </value>
+            <value>
+                <fullName>Microsoft Exchange</fullName>
+                <default>false</default>
+                <label>Microsoft Exchange</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Cloud PBX</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cloud PBX</label>
+            </value>
+            <value>
+                <fullName>Mixed Deployment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mixed Deployment</label>
+            </value>
+            <value>
+                <fullName>On-Prem / Private Cloud</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>On-Prem / Private Cloud</label>
+            </value>
+            <value>
+                <fullName>Still Undecided</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Still Undecided</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

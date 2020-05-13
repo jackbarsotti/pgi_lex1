@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- RR Initial Product of Interest --></label>
+    <name>RR_Initial_Product_of_Interest__c</name>
+    <picklistValues>
+        <masterLabel>Webcast</masterLabel>
+        <translation><!-- Webcast --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

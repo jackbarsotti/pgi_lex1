@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verification_List_Addl_Info__c</fullName>
+    <description>What is the procedure if callers are not on the restricted list?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What is the procedure if callers are not on the restricted list?</inlineHelpText>
+    <label>Verification List Add&#39;l Info</label>
+    <length>100000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RFC_Database</fullName>
+    <active>false</active>
+    <description>Require additional fields if Category = Database</description>
+    <errorConditionFormula>AND(
+$User.ProfileId &lt;&gt; &#39;00e30000001kms9&#39;, 
+ISPICKVAL( Category__c, &quot;Database&quot;),
+ISBLANK (  What_Other_Teams_Are_Involved__c  ),
+ISBLANK (   Where_is_the_Data_Located__c  ),
+ISBLANK (  What_Server_Database_will_you_need__c  )
+)</errorConditionFormula>
+    <errorMessage>Please populate the following Focus Area fields when Category of Database is present: What other teams are involved, Where is the data located, &amp; What server/database will you need</errorMessage>
+</ValidationRule>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Use Case --></label>
+    <name>Use_Case__c</name>
+    <picklistValues>
+        <masterLabel>Association / Community Forum</masterLabel>
+        <translation><!-- Association / Community Forum --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client Projects</masterLabel>
+        <translation><!-- Client Projects --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Corporate Blog</masterLabel>
+        <translation><!-- Corporate Blog --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Extranets w/ Clients</masterLabel>
+        <translation><!-- Extranets w/ Clients --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Internal Projects</masterLabel>
+        <translation><!-- Internal Projects --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Intranets</masterLabel>
+        <translation><!-- Intranets --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

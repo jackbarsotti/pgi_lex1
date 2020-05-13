@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Premium_Op_Assist_non_neg</fullName>
+    <active>true</active>
+    <errorConditionFormula>Premium_Op_Assist_Rate__c &lt; 0</errorConditionFormula>
+    <errorDisplayField>Premium_Op_Assist_Rate__c</errorDisplayField>
+    <errorMessage>Premium Op-Assist Rate must be &gt;= 0.00</errorMessage>
+</ValidationRule>

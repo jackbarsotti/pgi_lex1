@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- What HR employee is working this request? --></help>
+    <label><!-- Assigned To --></label>
+    <name>Assigned_To__c</name>
+    <relationshipLabel><!-- Human Resource Forms (Assigned To) --></relationshipLabel>
+</CustomFieldTranslation>

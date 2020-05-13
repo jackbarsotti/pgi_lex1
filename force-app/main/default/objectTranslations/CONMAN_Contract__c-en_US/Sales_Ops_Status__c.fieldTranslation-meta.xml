@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sales Ops Status --></label>
+    <name>Sales_Ops_Status__c</name>
+    <picklistValues>
+        <masterLabel>Accepted</masterLabel>
+        <translation><!-- Accepted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Approved</masterLabel>
+        <translation><!-- Approved --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed</masterLabel>
+        <translation><!-- Closed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Completed</masterLabel>
+        <translation><!-- Completed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contract Document Generated</masterLabel>
+        <translation><!-- Contract Document Generated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contract Signed by Customer</masterLabel>
+        <translation><!-- Contract Signed by Customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Denied</masterLabel>
+        <translation><!-- Denied --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Draft</masterLabel>
+        <translation><!-- Draft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Review</masterLabel>
+        <translation><!-- In Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Needs Review</masterLabel>
+        <translation><!-- Needs Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Presented</masterLabel>
+        <translation><!-- Presented --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pricing Approved - Internally Signed</masterLabel>
+        <translation><!-- Pricing Approved - Internally Signed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quote- In Progress</masterLabel>
+        <translation><!-- Quote- In Progress --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ready for Contract</masterLabel>
+        <translation><!-- Ready for Contract --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rejected</masterLabel>
+        <translation><!-- Rejected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Submitted - Price Approval</masterLabel>
+        <translation><!-- Submitted - Price Approval --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Submitted Contract- Customer Approval</masterLabel>
+        <translation><!-- Submitted Contract- Customer Approval --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Submitted Contract-Internal Approval</masterLabel>
+        <translation><!-- Submitted Contract-Internal Approval --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

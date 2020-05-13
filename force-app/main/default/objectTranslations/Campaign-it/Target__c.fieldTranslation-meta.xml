@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Target --></label>
+    <name>Target__c</name>
+    <picklistValues>
+        <masterLabel>All</masterLabel>
+        <translation><!-- All --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customers</masterLabel>
+        <translation><!-- Customers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partners</masterLabel>
+        <translation><!-- Partners --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prospects</masterLabel>
+        <translation><!-- Prospects --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Subscribers</masterLabel>
+        <translation><!-- Subscribers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Suspects</masterLabel>
+        <translation><!-- Suspects --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

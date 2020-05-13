@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Renewal_Opportunity_Products</fullName>
+    <active>false</active>
+    <description>Can&#39;t add following products if the deal type is Renewal:  Web: GM, Web: GM Active Host, Web: GM Web for Microsoft Lync, GM Named User Bundles, GM for Skype Server (GMSS) License, Enterprise All-In-One Bundles, Bundle: Large Deal GM, Bundle: GM</description>
+    <errorConditionFormula>AND(
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;, $User.Override_Validation_Rules__c = False,
+Opportunity.RecordType.Name = &quot;PGi Opportunity&quot;,
+ISPICKVAL(Opportunity.Opportunity_Deal_Type__c, &quot;Renewal (No Rev Change)&quot;), 
+OR(
+Product2.Name = &quot;Web: GlobalMeet&quot;,
+Product2.Name = &quot;Web: GlobalMeet Active Host&quot;,
+Product2.Name = &quot;Web: GlobalMeet Web for Microsoft Lync&quot;,
+Product2.Name = &quot;GlobalMeet Named User Bundles&quot;,
+Product2.Name = &quot;GlobalMeet for Skype Server (GMSS) License&quot;,
+Product2.Name = &quot;Enterprise All-In-One Bundles&quot;,
+Product2.Name = &quot;Bundle: Large Deal GlobalMeet&quot;,
+Product2.Name = &quot;Bundle: GlobalMeet&quot;
+))</errorConditionFormula>
+    <errorMessage>Following products are now auto generated after a new deal is closed:  Web:GM, Web:GM Active Host, Web:GM Web for Microsoft Lync, GM Named User Bundles, GM for Skype Server (GMSS) License, Enterprise All-In-One Bundles, Bundle:Large Deal GM, Bundle:GM</errorMessage>
+</ValidationRule>

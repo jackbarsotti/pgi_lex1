@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Trigger Name --></label>
+    <name>saleswings__Trigger_Name__c</name>
+    <picklistValues>
+        <masterLabel>PUBLISH_CONTACT_TO_SW</masterLabel>
+        <translation><!-- PUBLISH_CONTACT_TO_SW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PUBLISH_LEAD_TO_SW</masterLabel>
+        <translation><!-- PUBLISH_LEAD_TO_SW --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicates the number of times that the call was transferred. --></help>
+    <label><!-- Number of Transfers --></label>
+    <name>Number_of_Transfers__c</name>
+</CustomFieldTranslation>

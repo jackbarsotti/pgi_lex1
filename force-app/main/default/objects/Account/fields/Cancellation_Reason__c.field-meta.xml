@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancellation_Reason__c</fullName>
+    <description>Populated by ASX and users for Enterprise</description>
+    <externalId>false</externalId>
+    <label>Cancellation Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No User Adoption</fullName>
+                <default>false</default>
+                <label>No User Adoption</label>
+            </value>
+            <value>
+                <fullName>Not Enough Features</fullName>
+                <default>false</default>
+                <label>Not Enough Features</label>
+            </value>
+            <value>
+                <fullName>Too Complicated</fullName>
+                <default>false</default>
+                <label>Too Complicated</label>
+            </value>
+            <value>
+                <fullName>Too Slow</fullName>
+                <default>false</default>
+                <label>Too Slow</label>
+            </value>
+            <value>
+                <fullName>Going with Another Product</fullName>
+                <default>false</default>
+                <label>Going with Another Product</label>
+            </value>
+            <value>
+                <fullName>Too Expensive</fullName>
+                <default>false</default>
+                <label>Too Expensive</label>
+            </value>
+            <value>
+                <fullName>Project Ended - No longer needed</fullName>
+                <default>false</default>
+                <label>Project Ended - No longer needed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

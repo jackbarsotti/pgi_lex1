@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Account Type --></label>
+    <name>Account_Type__c</name>
+    <picklistValues>
+        <masterLabel>CSR</masterLabel>
+        <translation><!-- CSR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Convey</masterLabel>
+        <translation><!-- Convey --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet Webcast</masterLabel>
+        <translation><!-- GlobalMeet Webcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet Webinar</masterLabel>
+        <translation><!-- GlobalMeet Webinar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GoToWebcast</masterLabel>
+        <translation><!-- GoToWebcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other Reseller</masterLabel>
+        <translation><!-- Other Reseller --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PowWowNow Webcast</masterLabel>
+        <translation><!-- PowWowNow Webcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PowWowNow Webinar</masterLabel>
+        <translation><!-- PowWowNow Webinar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ReadyTalk</masterLabel>
+        <translation><!-- ReadyTalk --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>zisf__Company_Is_Defunct__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Flag to determine whether company is defunct.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Flag to determine whether company is defunct.</inlineHelpText>
+    <label>Company Is Defunct</label>
+    <length>25</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

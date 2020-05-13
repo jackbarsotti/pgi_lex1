@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Initial_Product_Family_of_Interest__c</fullName>
+    <externalId>false</externalId>
+    <label>Initial Product Family of Interest</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Collaboration</fullName>
+                <default>false</default>
+                <label>Collaboration</label>
+            </value>
+            <value>
+                <fullName>Unified Communications</fullName>
+                <default>false</default>
+                <label>Unified Communications</label>
+            </value>
+            <value>
+                <fullName>Webcast</fullName>
+                <default>false</default>
+                <label>Webcast</label>
+            </value>
+            <value>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+                <label>Webinar</label>
+            </value>
+            <value>
+                <fullName>Automated Audio</fullName>
+                <default>false</default>
+                <label>Automated Audio</label>
+            </value>
+            <value>
+                <fullName>Operator Assisted</fullName>
+                <default>false</default>
+                <label>Operator Assisted</label>
+            </value>
+            <value>
+                <fullName>Third Party</fullName>
+                <default>false</default>
+                <label>Third Party</label>
+            </value>
+            <value>
+                <fullName>Skype for Business</fullName>
+                <default>false</default>
+                <label>Skype for Business</label>
+            </value>
+            <value>
+                <fullName>iMeet Central</fullName>
+                <default>false</default>
+                <label>iMeet Central</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

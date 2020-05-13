@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Current Voice Network Provider --></label>
+    <name>Current_Voice_Network_Provider__c</name>
+</CustomFieldTranslation>

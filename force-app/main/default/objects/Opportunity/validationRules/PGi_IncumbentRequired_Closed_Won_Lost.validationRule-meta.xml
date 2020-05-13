@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_IncumbentRequired_Closed_Won_Lost</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+CONTAINS(RecordType.Name, &quot;PGi Opportunity&quot;),
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;, 
+OR(
+CONTAINS(TEXT(StageName), &quot;Closed Won&quot;),
+CONTAINS(TEXT(StageName), &quot;Closed Lost&quot;),
+ISPICKVAL( StageName , &quot;Closed Pending Approval&quot;)),
+ISBLANK(Incumbent__c ) , 
+$User.Override_Validation_Rules__c = False,
+$User.ProfileId &lt;&gt; &quot;00ea0000001sYR8&quot;,
+$User.ProfileId &lt;&gt; &quot;00ea0000001sdEo&quot;,
+NOT($Setup.BypassRules__c.Disable_Validation_Rules__c)
+)</errorConditionFormula>
+    <errorDisplayField>Incumbent__c</errorDisplayField>
+    <errorMessage>Incumbent cannot be blank when saving an Opportunity as Closed Won or Lost.</errorMessage>
+</ValidationRule>

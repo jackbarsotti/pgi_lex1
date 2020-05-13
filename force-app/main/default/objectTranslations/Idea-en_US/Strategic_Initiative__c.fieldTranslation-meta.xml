@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Strategic Initiative --></label>
+    <name>Strategic_Initiative__c</name>
+    <picklistValues>
+        <masterLabel>Address Capital Structure</masterLabel>
+        <translation><!-- Address Capital Structure --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Drive Cloud Growth</masterLabel>
+        <translation><!-- Drive Cloud Growth --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enabler Model</masterLabel>
+        <translation><!-- Enabler Model --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GTM Motion</masterLabel>
+        <translation><!-- GTM Motion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>None</masterLabel>
+        <translation><!-- None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Online Sales</masterLabel>
+        <translation><!-- Online Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Post-Sale Transition Automation</masterLabel>
+        <translation><!-- Post-Sale Transition Automation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quote to Cash</masterLabel>
+        <translation><!-- Quote to Cash --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Self-Serve</masterLabel>
+        <translation><!-- Self-Serve --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Simplification Process</masterLabel>
+        <translation><!-- Simplification Process --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

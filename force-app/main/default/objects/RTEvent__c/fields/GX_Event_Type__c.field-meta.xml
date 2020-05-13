@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GX_Event_Type__c</fullName>
+    <description>CAUTION - USED IN INTEGRATIONS</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Event type in Global&#39;s terms</inlineHelpText>
+    <label>Audio Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Passcode Entry</fullName>
+                <default>false</default>
+                <label>Passcode Entry</label>
+            </value>
+            <value>
+                <fullName>Greeted Entry</fullName>
+                <default>false</default>
+                <label>Greeted Entry</label>
+            </value>
+            <value>
+                <fullName>Greeted Entry with Click to Join</fullName>
+                <default>false</default>
+                <label>Greeted Entry with Click to Join</label>
+            </value>
+            <value>
+                <fullName>Automated</fullName>
+                <default>false</default>
+                <label>Automated</label>
+            </value>
+            <value>
+                <fullName>Direct</fullName>
+                <default>false</default>
+                <label>Direct</label>
+            </value>
+            <value>
+                <fullName>Event</fullName>
+                <default>false</default>
+                <label>Event</label>
+            </value>
+            <value>
+                <fullName>Event Plus</fullName>
+                <default>false</default>
+                <label>Event Plus</label>
+            </value>
+            <value>
+                <fullName>Event Plus with Passcode</fullName>
+                <default>false</default>
+                <label>Event Plus with Passcode</label>
+            </value>
+            <value>
+                <fullName>Express</fullName>
+                <default>false</default>
+                <label>Express</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Operator Assisted Audio</fullName>
+                <default>false</default>
+                <label>Operator Assisted Audio</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

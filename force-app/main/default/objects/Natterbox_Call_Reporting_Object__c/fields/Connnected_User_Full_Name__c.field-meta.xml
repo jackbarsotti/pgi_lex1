@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Connnected_User_Full_Name__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>If the call recipient is a Natterbox User, this will be their full name as it appears in the Natterbox Portal. If this is an outbound external call, this field will be left blank. NOTE This name is NOT pulled from Salesforce but from the Natterbox system.</inlineHelpText>
+    <label>Connected User Full Name</label>
+    <length>100</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

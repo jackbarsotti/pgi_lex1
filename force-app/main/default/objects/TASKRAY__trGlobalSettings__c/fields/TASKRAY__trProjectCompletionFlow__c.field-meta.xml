@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TASKRAY__trProjectCompletionFlow__c</fullName>
+    <defaultValue>&quot;TASKRAY/TaskRay_Customer_Onboarding_Completion_Flow&quot;</defaultValue>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>The API Name of the Screen Flow to run when TaskRay Projects are completed via the &#39;Complete&#39; button. Works with the &#39;Project Completion Option&#39; custom setting.</inlineHelpText>
+    <label>Project Completion Flow</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,3390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- URL to complete list of Int&apos;l numbers or select specific Int&apos;l # for customer&apos;s country of residence. --></help>
+    <label><!-- Int&apos;l Kit Number --></label>
+    <name>Kit_Number__c</name>
+    <picklistValues>
+        <masterLabel>000188 (India - Reliance)</masterLabel>
+        <translation><!-- 000188 (India - Reliance) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00040190233 (Uruguay)</masterLabel>
+        <translation><!-- 00040190233 (Uruguay) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00040190259 (Uruguay)</masterLabel>
+        <translation><!-- 00040190259 (Uruguay) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00040190260 (Uruguay)</masterLabel>
+        <translation><!-- 00040190260 (Uruguay) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00040190261 (Uruguay)</masterLabel>
+        <translation><!-- 00040190261 (Uruguay) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00040190324 (Uruguay)</masterLabel>
+        <translation><!-- 00040190324 (Uruguay) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00040190387 (Uruguay)</masterLabel>
+        <translation><!-- 00040190387 (Uruguay) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00040190389 (Uruguay)</masterLabel>
+        <translation><!-- 00040190389 (Uruguay) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00040190501 (Uruguay)</masterLabel>
+        <translation><!-- 00040190501 (Uruguay) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00040190880 (Uruguay)</masterLabel>
+        <translation><!-- 00040190880 (Uruguay) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0008001005027 (India VSNL)</masterLabel>
+        <translation><!-- 0008001005027 (India VSNL) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0008001006026 (India Bharti - Dead)</masterLabel>
+        <translation><!-- 0008001006026 (India Bharti - Dead) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0008001006152 (India Bharti)</masterLabel>
+        <translation><!-- 0008001006152 (India Bharti) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0008001006603 (India Bharti)</masterLabel>
+        <translation><!-- 0008001006603 (India Bharti) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0008001007101 (India Bharti)</masterLabel>
+        <translation><!-- 0008001007101 (India Bharti) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0008001007120 (India - Bharti)</masterLabel>
+        <translation><!-- 0008001007120 (India - Bharti) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0008001007533 (India Bharti)</masterLabel>
+        <translation><!-- 0008001007533 (India Bharti) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0008001007858 (India)</masterLabel>
+        <translation><!-- 0008001007858 (India) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0008001008507 (India Bharti)</masterLabel>
+        <translation><!-- 0008001008507 (India Bharti) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0008001008631 (India - Dead)</masterLabel>
+        <translation><!-- 0008001008631 (India - Dead) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00080018773114571 (India RELIANCE)</masterLabel>
+        <translation><!-- 00080018773114571 (India RELIANCE) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00080018774464138 (India - Reliance - Dead)</masterLabel>
+        <translation><!-- 00080018774464138 (India - Reliance - Dead) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00080018774482563 (India - Reliance)</masterLabel>
+        <translation><!-- 00080018774482563 (India - Reliance) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00080018774516902 (India - Reliance)</masterLabel>
+        <translation><!-- 00080018774516902 (India - Reliance) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0008006501488 (India)</masterLabel>
+        <translation><!-- 0008006501488 (India) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0008006501490 (India)</masterLabel>
+        <translation><!-- 0008006501490 (India) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0008006501589 (India)</masterLabel>
+        <translation><!-- 0008006501589 (India) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0018001562055997 (Thailand)</masterLabel>
+        <translation><!-- 0018001562055997 (Thailand) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0018001562075738 (Thailand)</masterLabel>
+        <translation><!-- 0018001562075738 (Thailand) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0018005147247 (Mexico)</masterLabel>
+        <translation><!-- 0018005147247 (Mexico) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0018005149968 (Mexico)</masterLabel>
+        <translation><!-- 0018005149968 (Mexico) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>001800656911 (Thailand)</masterLabel>
+        <translation><!-- 001800656911 (Thailand) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>001800656995 (Thailand)</masterLabel>
+        <translation><!-- 001800656995 (Thailand) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>001800656997 (Thailand)</masterLabel>
+        <translation><!-- 001800656997 (Thailand) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>001800658000 (Thailand)</masterLabel>
+        <translation><!-- 001800658000 (Thailand) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>001800658040 (Thailand)</masterLabel>
+        <translation><!-- 001800658040 (Thailand) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>001800658041 (Thailand)</masterLabel>
+        <translation><!-- 001800658041 (Thailand) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>001800658042 (Thailand)</masterLabel>
+        <translation><!-- 001800658042 (Thailand) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>001800658043 (Thailand)</masterLabel>
+        <translation><!-- 001800658043 (Thailand) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0018030152030067 (Indonesia)</masterLabel>
+        <translation><!-- 0018030152030067 (Indonesia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0018030152030068 (Indonesia)</masterLabel>
+        <translation><!-- 0018030152030068 (Indonesia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0018030169812 (Indonesia)</masterLabel>
+        <translation><!-- 0018030169812 (Indonesia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0018030170508 (Indonesia)</masterLabel>
+        <translation><!-- 0018030170508 (Indonesia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0018030174537 (Indonesia)</masterLabel>
+        <translation><!-- 0018030174537 (Indonesia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0018030178002 (Indonesia)</masterLabel>
+        <translation><!-- 0018030178002 (Indonesia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0018030178508 (Indonesia)</masterLabel>
+        <translation><!-- 0018030178508 (Indonesia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0018030179968 (Indonesia)</masterLabel>
+        <translation><!-- 0018030179968 (Indonesia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0018030207650 (Indonesia - PT Indosat)</masterLabel>
+        <translation><!-- 0018030207650 (Indonesia - PT Indosat) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>002698003000192 (Botswana)</masterLabel>
+        <translation><!-- 002698003000192 (Botswana) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>002698003000608 (Botswana)</masterLabel>
+        <translation><!-- 002698003000608 (Botswana) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>002698003000628 (Botswana)</masterLabel>
+        <translation><!-- 002698003000628 (Botswana) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>002698003000712 (Botswana)</masterLabel>
+        <translation><!-- 002698003000712 (Botswana) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>002698003000726 (Botswana)</masterLabel>
+        <translation><!-- 002698003000726 (Botswana) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>002698003000824 (Botswana)</masterLabel>
+        <translation><!-- 002698003000824 (Botswana) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>002698003000844 (Botswana)</masterLabel>
+        <translation><!-- 002698003000844 (Botswana) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>002698003000849 (Botswana)</masterLabel>
+        <translation><!-- 002698003000849 (Botswana) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>002698003000851 (Botswana)</masterLabel>
+        <translation><!-- 002698003000851 (Botswana) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00308131778 (South Korea)</masterLabel>
+        <translation><!-- 00308131778 (South Korea) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00308131828 (South Korea)</masterLabel>
+        <translation><!-- 00308131828 (South Korea) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00308132074 (South Korea)</masterLabel>
+        <translation><!-- 00308132074 (South Korea) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00308132120 (South Korea)</masterLabel>
+        <translation><!-- 00308132120 (South Korea) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00308132306 (South Korea)</masterLabel>
+        <translation><!-- 00308132306 (South Korea) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00308132383 (South Korea)</masterLabel>
+        <translation><!-- 00308132383 (South Korea) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00308132395 (South Korea)</masterLabel>
+        <translation><!-- 00308132395 (South Korea) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00308140433 (South Korea)</masterLabel>
+        <translation><!-- 00308140433 (South Korea) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00531122823 (Japan)</masterLabel>
+        <translation><!-- 00531122823 (Japan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00531160310 (Japan)</masterLabel>
+        <translation><!-- 00531160310 (Japan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00531160531 (Japan)</masterLabel>
+        <translation><!-- 00531160531 (Japan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00531160974 (Japan)</masterLabel>
+        <translation><!-- 00531160974 (Japan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00531161318 (Japan)</masterLabel>
+        <translation><!-- 00531161318 (Japan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00531161319 (Japan)</masterLabel>
+        <translation><!-- 00531161319 (Japan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00531190066 (Japan)</masterLabel>
+        <translation><!-- 00531190066 (Japan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00531190069 (Japan)</masterLabel>
+        <translation><!-- 00531190069 (Japan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0078030114600 (Indonesia)</masterLabel>
+        <translation><!-- 0078030114600 (Indonesia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0078030207650 (Indonesia - PT Telkom)</masterLabel>
+        <translation><!-- 0078030207650 (Indonesia - PT Telkom) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00798142075208 (South Korea)</masterLabel>
+        <translation><!-- 00798142075208 (South Korea) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00798142077650 (South Korea)</masterLabel>
+        <translation><!-- 00798142077650 (South Korea) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00798142079735 (South Korea)</masterLabel>
+        <translation><!-- 00798142079735 (South Korea) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00800100005 (Qatar)</masterLabel>
+        <translation><!-- 00800100005 (Qatar) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00800100006 (Qatar)</masterLabel>
+        <translation><!-- 00800100006 (Qatar) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00800100007 (Qatar)</masterLabel>
+        <translation><!-- 00800100007 (Qatar) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00800100027 (Qatar)</masterLabel>
+        <translation><!-- 00800100027 (Qatar) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00800100028 (Qatar)</masterLabel>
+        <translation><!-- 00800100028 (Qatar) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008001114565 (Poland)</masterLabel>
+        <translation><!-- 008001114565 (Poland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008001114686 (Poland)</masterLabel>
+        <translation><!-- 008001114686 (Poland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008001114900 (Poland)</masterLabel>
+        <translation><!-- 008001114900 (Poland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008001124023 (Poland)</masterLabel>
+        <translation><!-- 008001124023 (Poland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008001124041 (Poland)</masterLabel>
+        <translation><!-- 008001124041 (Poland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008001124123 (Poland)</masterLabel>
+        <translation><!-- 008001124123 (Poland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008001124171 (Poland)</masterLabel>
+        <translation><!-- 008001124171 (Poland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008001124176 (Poland)</masterLabel>
+        <translation><!-- 008001124176 (Poland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008001124601 (Poland)</masterLabel>
+        <translation><!-- 008001124601 (Poland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008001151099 (Bulgaria)</masterLabel>
+        <translation><!-- 008001151099 (Bulgaria) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008001151166 (Bulgaria)</masterLabel>
+        <translation><!-- 008001151166 (Bulgaria) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008001161133 (Bulgaria)</masterLabel>
+        <translation><!-- 008001161133 (Bulgaria) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008001171119 (Bulgaria)</masterLabel>
+        <translation><!-- 008001171119 (Bulgaria) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008001171121 (Bulgaria)</masterLabel>
+        <translation><!-- 008001171121 (Bulgaria) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008001171139 (Bulgaria)</masterLabel>
+        <translation><!-- 008001171139 (Bulgaria) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008001171140 (Bulgaria)</masterLabel>
+        <translation><!-- 008001171140 (Bulgaria) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008001201034 (Uzbekistan)</masterLabel>
+        <translation><!-- 008001201034 (Uzbekistan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00800142058507 (Turkey)</masterLabel>
+        <translation><!-- 00800142058507 (Turkey) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0080016122030764 (Greece)</masterLabel>
+        <translation><!-- 0080016122030764 (Greece) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0080016122038711 (Greece)</masterLabel>
+        <translation><!-- 0080016122038711 (Greece) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0080016122050508 (Greece)</masterLabel>
+        <translation><!-- 0080016122050508 (Greece) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0080016122053486 (Greece)</masterLabel>
+        <translation><!-- 0080016122053486 (Greece) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0080016122056686 (Greece)</masterLabel>
+        <translation><!-- 0080016122056686 (Greece) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0080016122057247 (Greece)</masterLabel>
+        <translation><!-- 0080016122057247 (Greece) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0080016122058002 (Greece)</masterLabel>
+        <translation><!-- 0080016122058002 (Greece) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0080016122059483 (Greece)</masterLabel>
+        <translation><!-- 0080016122059483 (Greece) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0080016122059968 (Greece)</masterLabel>
+        <translation><!-- 0080016122059968 (Greece) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0080016122075892 (Greece)</masterLabel>
+        <translation><!-- 0080016122075892 (Greece) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0080016122077650 (Greece)</masterLabel>
+        <translation><!-- 0080016122077650 (Greece) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008002261767 (Panama)</masterLabel>
+        <translation><!-- 008002261767 (Panama) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008002266228 (Panama)</masterLabel>
+        <translation><!-- 008002266228 (Panama) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008002266686 (Panama)</masterLabel>
+        <translation><!-- 008002266686 (Panama) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008002266894 (Panama)</masterLabel>
+        <translation><!-- 008002266894 (Panama) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008002266913 (Panama)</masterLabel>
+        <translation><!-- 008002266913 (Panama) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008002268002 (Panama)</masterLabel>
+        <translation><!-- 008002268002 (Panama) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008002269483 (Panama)</masterLabel>
+        <translation><!-- 008002269483 (Panama) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008002269903 (Panama)</masterLabel>
+        <translation><!-- 008002269903 (Panama) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008002269969 (Panama)</masterLabel>
+        <translation><!-- 008002269969 (Panama) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0080030022011 (Kyrgyzstan)</masterLabel>
+        <translation><!-- 0080030022011 (Kyrgyzstan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0080030022019 (Kyrgystan)</masterLabel>
+        <translation><!-- 0080030022019 (Kyrgystan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0080030022020 (Kyrgyzstan)</masterLabel>
+        <translation><!-- 0080030022020 (Kyrgyzstan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0080030022023 (Kyrgyzstan)</masterLabel>
+        <translation><!-- 0080030022023 (Kyrgyzstan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0080030022024 (Kyrgyzstan)</masterLabel>
+        <translation><!-- 0080030022024 (Kyrgyzstan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0080030022025 (Kyrgyzstan)</masterLabel>
+        <translation><!-- 0080030022025 (Kyrgyzstan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0080070077717 (Kyrgyzstan)</masterLabel>
+        <translation><!-- 0080070077717 (Kyrgyzstan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0080070077719 (Kyrgyzstan)</masterLabel>
+        <translation><!-- 0080070077719 (Kyrgyzstan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>009800110200 (Paraguay)</masterLabel>
+        <translation><!-- 009800110200 (Paraguay) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0120729548 (Japan)</masterLabel>
+        <translation><!-- 0120729548 (Japan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0120914299 (Japan)</masterLabel>
+        <translation><!-- 0120914299 (Japan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0120921630 (Japan)</masterLabel>
+        <translation><!-- 0120921630 (Japan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0120926774 (Japan)</masterLabel>
+        <translation><!-- 0120926774 (Japan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>01426801 (Lebanon)</masterLabel>
+        <translation><!-- 01426801 (Lebanon) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>01426801 + 8774400748 (Lebanon)</masterLabel>
+        <translation><!-- 01426801 + 8774400748 (Lebanon) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>01426801 + 8774400783 (Lebanon)</masterLabel>
+        <translation><!-- 01426801 + 8774400783 (Lebanon) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>01426801 + 8774400803 (Lebanon)</masterLabel>
+        <translation><!-- 01426801 + 8774400803 (Lebanon) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>01426801 + 8774400804 (Lebanon)</masterLabel>
+        <translation><!-- 01426801 + 8774400804 (Lebanon) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>01426801 + 8777987429 (Lebanon)</masterLabel>
+        <translation><!-- 01426801 + 8777987429 (Lebanon) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>018000125379 (Columbia)</masterLabel>
+        <translation><!-- 018000125379 (Columbia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>018000125380 (Columbia)</masterLabel>
+        <translation><!-- 018000125380 (Columbia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>018000125410 (Colombia)</masterLabel>
+        <translation><!-- 018000125410 (Colombia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>018000125534 (Colombia)</masterLabel>
+        <translation><!-- 018000125534 (Colombia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>018000830943 (Mexico)</masterLabel>
+        <translation><!-- 018000830943 (Mexico) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>018000830944 (Mexico)</masterLabel>
+        <translation><!-- 018000830944 (Mexico) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>018000830984 (Mexico)</masterLabel>
+        <translation><!-- 018000830984 (Mexico) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>018004360163 (Mexico)</masterLabel>
+        <translation><!-- 018004360163 (Mexico) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>018004360235 (Mexico)</masterLabel>
+        <translation><!-- 018004360235 (Mexico) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>018004360239 (Mexico)</masterLabel>
+        <translation><!-- 018004360239 (Mexico) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>018004360241 (Mexico)</masterLabel>
+        <translation><!-- 018004360241 (Mexico) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>018004360267 (Mexico)</masterLabel>
+        <translation><!-- 018004360267 (Mexico) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>018005180309 (Colombia)</masterLabel>
+        <translation><!-- 018005180309 (Colombia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>018005180679 (Colombia)</masterLabel>
+        <translation><!-- 018005180679 (Colombia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>018005180870 (Colombia)</masterLabel>
+        <translation><!-- 018005180870 (Colombia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>018005180917 (Colombia)</masterLabel>
+        <translation><!-- 018005180917 (Colombia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>018005181096 (Colombia)</masterLabel>
+        <translation><!-- 018005181096 (Colombia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>018005181297 (Colombia)</masterLabel>
+        <translation><!-- 018005181297 (Colombia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>018009198711 (Colombia)</masterLabel>
+        <translation><!-- 018009198711 (Colombia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0201400564 (Sweden)</masterLabel>
+        <translation><!-- 0201400564 (Sweden) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0201400580 (Sweden)</masterLabel>
+        <translation><!-- 0201400580 (Sweden) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0201400584 (Sweden)</masterLabel>
+        <translation><!-- 0201400584 (Sweden) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0201409700 (Sweden)</masterLabel>
+        <translation><!-- 0201409700 (Sweden) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0201708219 (Sweden)</masterLabel>
+        <translation><!-- 0201708219 (Sweden) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0201708417 (Sweden)</masterLabel>
+        <translation><!-- 0201708417 (Sweden) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0201708423 (Sweden)</masterLabel>
+        <translation><!-- 0201708423 (Sweden) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0201708429 (Sweden)</masterLabel>
+        <translation><!-- 0201708429 (Sweden) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0201708430 (Sweden)</masterLabel>
+        <translation><!-- 0201708430 (Sweden) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0201708450 (Sweden)</masterLabel>
+        <translation><!-- 0201708450 (Sweden) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0201708453 (Sweden)</masterLabel>
+        <translation><!-- 0201708453 (Sweden) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0242426004 (Ghana)</masterLabel>
+        <translation><!-- 0242426004 (Ghana) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0680013236 (Hungary)</masterLabel>
+        <translation><!-- 0680013236 (Hungary) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0680015299 (Hungary)</masterLabel>
+        <translation><!-- 0680015299 (Hungary) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0680016469 (Hungary)</masterLabel>
+        <translation><!-- 0680016469 (Hungary) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0680016574 (Hungary)</masterLabel>
+        <translation><!-- 0680016574 (Hungary) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0680016987 (Hungary)</masterLabel>
+        <translation><!-- 0680016987 (Hungary) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0680017813 (Hungary)</masterLabel>
+        <translation><!-- 0680017813 (Hungary) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0680018740 (Hungary)</masterLabel>
+        <translation><!-- 0680018740 (Hungary) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0680018751 (Hungary)</masterLabel>
+        <translation><!-- 0680018751 (Hungary) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0680109724 (Hungary)</masterLabel>
+        <translation><!-- 0680109724 (Hungary) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0680109760 (Hungary)</masterLabel>
+        <translation><!-- 0680109760 (Hungary) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08000009646 (Egypt)</masterLabel>
+        <translation><!-- 08000009646 (Egypt) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08000150543 (Costa Rica)</masterLabel>
+        <translation><!-- 08000150543 (Costa Rica) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08000200045 (Netherlands)</masterLabel>
+        <translation><!-- 08000200045 (Netherlands) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08000202061 (Netherlands)</masterLabel>
+        <translation><!-- 08000202061 (Netherlands) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08000202068 (Netherlands)</masterLabel>
+        <translation><!-- 08000202068 (Netherlands) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08000202107 (Netherlands)</masterLabel>
+        <translation><!-- 08000202107 (Netherlands) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08000202117 (Netherlands)</masterLabel>
+        <translation><!-- 08000202117 (Netherlands) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08000202119 (Netherlands)</masterLabel>
+        <translation><!-- 08000202119 (Netherlands) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08000231158 (Netherlands)</masterLabel>
+        <translation><!-- 08000231158 (Netherlands) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08001004177 (Venezuela)</masterLabel>
+        <translation><!-- 08001004177 (Venezuela) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08001004692 (Venezuela)</masterLabel>
+        <translation><!-- 08001004692 (Venezuela) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08001004879 (Venezuela)</masterLabel>
+        <translation><!-- 08001004879 (Venezuela) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08001008392 (Venezuela)</masterLabel>
+        <translation><!-- 08001008392 (Venezuela) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08001008393 (Venezuela)</masterLabel>
+        <translation><!-- 08001008393 (Venezuela) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08001008401 (Venezuela)</masterLabel>
+        <translation><!-- 08001008401 (Venezuela) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08001008423 (Venezuela)</masterLabel>
+        <translation><!-- 08001008423 (Venezuela) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08001008597 (Venezuela)</masterLabel>
+        <translation><!-- 08001008597 (Venezuela) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08001014524 (Germany)</masterLabel>
+        <translation><!-- 08001014524 (Germany) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08001014569 (Germany)</masterLabel>
+        <translation><!-- 08001014569 (Germany) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800113015 (Uganda)</masterLabel>
+        <translation><!-- 0800113015 (Uganda) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08001151122 (Bulgaria)</masterLabel>
+        <translation><!-- 08001151122 (Bulgaria) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08001341266 (Venezuela)</masterLabel>
+        <translation><!-- 08001341266 (Venezuela) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800190310 (Serbia)</masterLabel>
+        <translation><!-- 0800190310 (Serbia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800190311 (Serbia)</masterLabel>
+        <translation><!-- 0800190311 (Serbia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800190326 (Serbia)</masterLabel>
+        <translation><!-- 0800190326 (Serbia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800190328 (Serbia)</masterLabel>
+        <translation><!-- 0800190328 (Serbia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800190333 (Serbia)</masterLabel>
+        <translation><!-- 0800190333 (Serbia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800222352 (Croatia)</masterLabel>
+        <translation><!-- 0800222352 (Croatia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800222359 (Croatia)</masterLabel>
+        <translation><!-- 0800222359 (Croatia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800222392 (Croatia)</masterLabel>
+        <translation><!-- 0800222392 (Croatia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800222525 (Croatia)</masterLabel>
+        <translation><!-- 0800222525 (Croatia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800222717 (Croatia)</masterLabel>
+        <translation><!-- 0800222717 (Croatia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800222718 (Croatia)</masterLabel>
+        <translation><!-- 0800222718 (Croatia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800222719 (Croatia)</masterLabel>
+        <translation><!-- 0800222719 (Croatia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800222776 (Croatia)</masterLabel>
+        <translation><!-- 0800222776 (Croatia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08002658211 (Netherlands)</masterLabel>
+        <translation><!-- 08002658211 (Netherlands) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08002659088 (Netherlands)</masterLabel>
+        <translation><!-- 08002659088 (Netherlands) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08002659107 (Netherlands)</masterLabel>
+        <translation><!-- 08002659107 (Netherlands) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08002825757 (Brazil)</masterLabel>
+        <translation><!-- 08002825757 (Brazil) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08003304418 (Germany)</masterLabel>
+        <translation><!-- 08003304418 (Germany) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080039107 (Belgium)</masterLabel>
+        <translation><!-- 080039107 (Belgium) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080039110 (Belgium)</masterLabel>
+        <translation><!-- 080039110 (Belgium) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080039141 (Belgium)</masterLabel>
+        <translation><!-- 080039141 (Belgium) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080039185 (Belgium)</masterLabel>
+        <translation><!-- 080039185 (Belgium) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080039388 (Belgium)</masterLabel>
+        <translation><!-- 080039388 (Belgium) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080039389 (Belgium)</masterLabel>
+        <translation><!-- 080039389 (Belgium) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080039397 (Belgium)</masterLabel>
+        <translation><!-- 080039397 (Belgium) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080039411 (Belgium)</masterLabel>
+        <translation><!-- 080039411 (Belgium) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080039849 (Belgium)</masterLabel>
+        <translation><!-- 080039849 (Belgium) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800440003 (New Zealand)</masterLabel>
+        <translation><!-- 0800440003 (New Zealand) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800440007 (New Zealand)</masterLabel>
+        <translation><!-- 0800440007 (New Zealand) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800441903 (New Zealand)</masterLabel>
+        <translation><!-- 0800441903 (New Zealand) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08004446563 (Argentina)                    </masterLabel>
+        <translation><!-- 08004446563 (Argentina)                     --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08004447352 (Argentina)</masterLabel>
+        <translation><!-- 08004447352 (Argentina) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08004448630 (Argentina)</masterLabel>
+        <translation><!-- 08004448630 (Argentina) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08004449968 (Argentina)</masterLabel>
+        <translation><!-- 08004449968 (Argentina) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800450780 (New Zealand)</masterLabel>
+        <translation><!-- 0800450780 (New Zealand) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800450981 (New Zealand)</masterLabel>
+        <translation><!-- 0800450981 (New Zealand) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800451212 (New Zealand)</masterLabel>
+        <translation><!-- 0800451212 (New Zealand) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800451298 (New Zealand)</masterLabel>
+        <translation><!-- 0800451298 (New Zealand) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800456242 (New Zealand)</masterLabel>
+        <translation><!-- 0800456242 (New Zealand) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800466103 (New Zealand)</masterLabel>
+        <translation><!-- 0800466103 (New Zealand) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800466335 (New Zealand)</masterLabel>
+        <translation><!-- 0800466335 (New Zealand) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08004960062 (United Kingdom)</masterLabel>
+        <translation><!-- 08004960062 (United Kingdom) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08004960285 (United Kingdom)</masterLabel>
+        <translation><!-- 08004960285 (United Kingdom) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08004960440 (United Kingdom)</masterLabel>
+        <translation><!-- 08004960440 (United Kingdom) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08004960456 (United Kingdom)</masterLabel>
+        <translation><!-- 08004960456 (United Kingdom) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08004960572 (United Kingdom)</masterLabel>
+        <translation><!-- 08004960572 (United Kingdom) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08004960576 (United Kingdom)</masterLabel>
+        <translation><!-- 08004960576 (United Kingdom) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08004960874 (United Kingdom)</masterLabel>
+        <translation><!-- 08004960874 (United Kingdom) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08004961579 (United Kingdom)</masterLabel>
+        <translation><!-- 08004961579 (United Kingdom) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08004962076 (United Kingdom)</masterLabel>
+        <translation><!-- 08004962076 (United Kingdom) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800502744 (Ukraine)</masterLabel>
+        <translation><!-- 0800502744 (Ukraine) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080050365 (Belgium)</masterLabel>
+        <translation><!-- 080050365 (Belgium) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800504121 (Ukraine)</masterLabel>
+        <translation><!-- 0800504121 (Ukraine) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800504162 (Ukraine)</masterLabel>
+        <translation><!-- 0800504162 (Ukraine) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800504165 (Ukraine)</masterLabel>
+        <translation><!-- 0800504165 (Ukraine) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800504289 (Ukraine)</masterLabel>
+        <translation><!-- 0800504289 (Ukraine) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800504629 (Ukraine)</masterLabel>
+        <translation><!-- 0800504629 (Ukraine) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800504639 (Ukraine)</masterLabel>
+        <translation><!-- 0800504639 (Ukraine) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800504796 (Ukraine)</masterLabel>
+        <translation><!-- 0800504796 (Ukraine) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800504822 (Ukraine)</masterLabel>
+        <translation><!-- 0800504822 (Ukraine) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08005280587 (United Kingdom)</masterLabel>
+        <translation><!-- 08005280587 (United Kingdom) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08005283396 (United Kingdom)</masterLabel>
+        <translation><!-- 08005283396 (United Kingdom) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08005600000 (Netherlands)</masterLabel>
+        <translation><!-- 08005600000 (Netherlands) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080060009 (Moldova)</masterLabel>
+        <translation><!-- 080060009 (Moldova) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080060014 (Moldova)</masterLabel>
+        <translation><!-- 080060014 (Moldova) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080060015 (Moldova)</masterLabel>
+        <translation><!-- 080060015 (Moldova) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080060016 (Moldova)</masterLabel>
+        <translation><!-- 080060016 (Moldova) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080060023 (Moldova)</masterLabel>
+        <translation><!-- 080060023 (Moldova) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080060033 (Moldavia)</masterLabel>
+        <translation><!-- 080060033 (Moldavia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800606242 (Slovakia)</masterLabel>
+        <translation><!-- 0800606242 (Slovakia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800606254 (Slovakia)</masterLabel>
+        <translation><!-- 0800606254 (Slovakia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800606272 (Slovakia)</masterLabel>
+        <translation><!-- 0800606272 (Slovakia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800606353 (Slovakia)</masterLabel>
+        <translation><!-- 0800606353 (Slovakia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800606383 (Slovakia)</masterLabel>
+        <translation><!-- 0800606383 (Slovakia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800606399 (Slovakia)</masterLabel>
+        <translation><!-- 0800606399 (Slovakia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800606527 (Slovakia)</masterLabel>
+        <translation><!-- 0800606527 (Slovakia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800606581 (Slovakia)</masterLabel>
+        <translation><!-- 0800606581 (Slovakia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800606702 (Slovakia)</masterLabel>
+        <translation><!-- 0800606702 (Slovakia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080062201 (Moldova)</masterLabel>
+        <translation><!-- 080062201 (Moldova) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080062801 (Moldova)</masterLabel>
+        <translation><!-- 080062801 (Moldova) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08006645316 (Germany)</masterLabel>
+        <translation><!-- 08006645316 (Germany) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08006645332 (Germany)</masterLabel>
+        <translation><!-- 08006645332 (Germany) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08006645344 (Germany)</masterLabel>
+        <translation><!-- 08006645344 (Germany) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08006645348 (Germany)</masterLabel>
+        <translation><!-- 08006645348 (Germany) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08006660516 (Argentina)</masterLabel>
+        <translation><!-- 08006660516 (Argentina) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08006738373 (Germany)</masterLabel>
+        <translation><!-- 08006738373 (Germany) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800700300 (Switzerland)</masterLabel>
+        <translation><!-- 0800700300 (Switzerland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800705327 (Switzerland)</masterLabel>
+        <translation><!-- 0800705327 (Switzerland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800705331 (Switzerland)</masterLabel>
+        <translation><!-- 0800705331 (Switzerland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800705342 (Switzerland)</masterLabel>
+        <translation><!-- 0800705342 (Switzerland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800705343 (Switzerland)</masterLabel>
+        <translation><!-- 0800705343 (Switzerland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800705351 (Switzerland)</masterLabel>
+        <translation><!-- 0800705351 (Switzerland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080070691 (Peru)</masterLabel>
+        <translation><!-- 080070691 (Peru) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080070812 (Peru)</masterLabel>
+        <translation><!-- 080070812 (Peru) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080070816 (Peru)</masterLabel>
+        <translation><!-- 080070816 (Peru) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080070822 (Peru)</masterLabel>
+        <translation><!-- 080070822 (Peru) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080070823 (Peru)</masterLabel>
+        <translation><!-- 080070823 (Peru) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080070825 (Peru)</masterLabel>
+        <translation><!-- 080070825 (Peru) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080070827 (Peru)</masterLabel>
+        <translation><!-- 080070827 (Peru) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080070869 (Peru)</masterLabel>
+        <translation><!-- 080070869 (Peru) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800721096 (Switzerland)</masterLabel>
+        <translation><!-- 0800721096 (Switzerland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800723055 (Kenya)</masterLabel>
+        <translation><!-- 0800723055 (Kenya) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800723057 (Kenya)</masterLabel>
+        <translation><!-- 0800723057 (Kenya) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800723058 (Kenya)</masterLabel>
+        <translation><!-- 0800723058 (Kenya) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800723060 (Kenya)</masterLabel>
+        <translation><!-- 0800723060 (Kenya) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800723063 (Kenya)</masterLabel>
+        <translation><!-- 0800723063 (Kenya) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800723064 (Kenya)</masterLabel>
+        <translation><!-- 0800723064 (Kenya) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08007234397  (Germany)</masterLabel>
+        <translation><!-- 08007234397  (Germany) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08007238966 (Germany)</masterLabel>
+        <translation><!-- 08007238966 (Germany) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800740026 (Switzerland)</masterLabel>
+        <translation><!-- 0800740026 (Switzerland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800740030 (Switzerland)</masterLabel>
+        <translation><!-- 0800740030 (Switzerland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800740291 (Switzerland)</masterLabel>
+        <translation><!-- 0800740291 (Switzerland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08007618809 (Brazil)</masterLabel>
+        <translation><!-- 08007618809 (Brazil) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08007618826 (Brazil)</masterLabel>
+        <translation><!-- 08007618826 (Brazil) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800770238 (Finland)</masterLabel>
+        <translation><!-- 0800770238 (Finland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800770239 (Finland)</masterLabel>
+        <translation><!-- 0800770239 (Finland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800773133 (Finland)</masterLabel>
+        <translation><!-- 0800773133 (Finland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800773419 (Finland)</masterLabel>
+        <translation><!-- 0800773419 (Finland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800773427 (Finland)</masterLabel>
+        <translation><!-- 0800773427 (Finland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800773431 (Finland)</masterLabel>
+        <translation><!-- 0800773431 (Finland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800773447 (Finland)</masterLabel>
+        <translation><!-- 0800773447 (Finland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800773451 (Finland)</masterLabel>
+        <translation><!-- 0800773451 (Finland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800773454 (Finland)</masterLabel>
+        <translation><!-- 0800773454 (Finland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800774609 (Finland)</masterLabel>
+        <translation><!-- 0800774609 (Finland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08008000334 (Argentina)</masterLabel>
+        <translation><!-- 08008000334 (Argentina) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08008000340 (Argentina)</masterLabel>
+        <translation><!-- 08008000340 (Argentina) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08008000342 (Argentina)</masterLabel>
+        <translation><!-- 08008000342 (Argentina) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08008000344 (Argentina)</masterLabel>
+        <translation><!-- 08008000344 (Argentina) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08008000353 (Argentina)</masterLabel>
+        <translation><!-- 08008000353 (Argentina) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08008000354 (Argentina)</masterLabel>
+        <translation><!-- 08008000354 (Argentina) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08008007360 (Argentina)</masterLabel>
+        <translation><!-- 08008007360 (Argentina) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080080514 (Slovenia)</masterLabel>
+        <translation><!-- 080080514 (Slovenia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080080617 (Slovenia)</masterLabel>
+        <translation><!-- 080080617 (Slovenia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080080645 (Slovenia)</masterLabel>
+        <translation><!-- 080080645 (Slovenia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080080646 (Slovenia)</masterLabel>
+        <translation><!-- 080080646 (Slovenia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080080647 (Slovenia)</masterLabel>
+        <translation><!-- 080080647 (Slovenia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080080654 (Slovenia)</masterLabel>
+        <translation><!-- 080080654 (Slovenia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080080656 (Slovenia)</masterLabel>
+        <translation><!-- 080080656 (Slovenia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080080657 (Slovenia)</masterLabel>
+        <translation><!-- 080080657 (Slovenia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080081395 (Slovenia)</masterLabel>
+        <translation><!-- 080081395 (Slovenia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080088663209 (Austria)</masterLabel>
+        <translation><!-- 080088663209 (Austria) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080088663212 (Austria)</masterLabel>
+        <translation><!-- 080088663212 (Austria) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080088663214 (Austria)</masterLabel>
+        <translation><!-- 080088663214 (Austria) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080088663228 (Austria)</masterLabel>
+        <translation><!-- 080088663228 (Austria) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080088663240 (Austria)</masterLabel>
+        <translation><!-- 080088663240 (Austria) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080088663243 (Austria)</masterLabel>
+        <translation><!-- 080088663243 (Austria) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080088663578 (Austria)</masterLabel>
+        <translation><!-- 080088663578 (Austria) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080088665131 (Austria)</masterLabel>
+        <translation><!-- 080088665131 (Austria) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080088665152 (Austria)</masterLabel>
+        <translation><!-- 080088665152 (Austria) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>080088668351 (Austria)</masterLabel>
+        <translation><!-- 080088668351 (Austria) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800890099 (Croatia)</masterLabel>
+        <translation><!-- 0800890099 (Croatia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08008914685 (Brazil)</masterLabel>
+        <translation><!-- 08008914685 (Brazil) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08008916673 (Brazil)</masterLabel>
+        <translation><!-- 08008916673 (Brazil) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08008917000 (Brazil)</masterLabel>
+        <translation><!-- 08008917000 (Brazil) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08008917377 (Brazil)</masterLabel>
+        <translation><!-- 08008917377 (Brazil) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08008918370 (Brazil)</masterLabel>
+        <translation><!-- 08008918370 (Brazil) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08008918965 (Brazil)</masterLabel>
+        <translation><!-- 08008918965 (Brazil) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08008922075 (Brazil)</masterLabel>
+        <translation><!-- 08008922075 (Brazil) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08008922128 (Brazil)</masterLabel>
+        <translation><!-- 08008922128 (Brazil) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800895036 (Romania)</masterLabel>
+        <translation><!-- 0800895036 (Romania) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800895065 (Romania)</masterLabel>
+        <translation><!-- 0800895065 (Romania) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800895078 (Romania)</masterLabel>
+        <translation><!-- 0800895078 (Romania) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800895527 (Romania)</masterLabel>
+        <translation><!-- 0800895527 (Romania) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800895615 (Romania)</masterLabel>
+        <translation><!-- 0800895615 (Romania) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800895618 (Romania)</masterLabel>
+        <translation><!-- 0800895618 (Romania) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08008971 (Uruguay)</masterLabel>
+        <translation><!-- 08008971 (Uruguay) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800941622 (France)</masterLabel>
+        <translation><!-- 0800941622 (France) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800941629 (France)</masterLabel>
+        <translation><!-- 0800941629 (France) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800941688 (France)</masterLabel>
+        <translation><!-- 0800941688 (France) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800942408 (France)</masterLabel>
+        <translation><!-- 0800942408 (France) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800944160 (France)</masterLabel>
+        <translation><!-- 0800944160 (France) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800944162 (France)</masterLabel>
+        <translation><!-- 0800944162 (France) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800946021 (France)</masterLabel>
+        <translation><!-- 0800946021 (France) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800947246 (France)</masterLabel>
+        <translation><!-- 0800947246 (France) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800947729 (France)</masterLabel>
+        <translation><!-- 0800947729 (France) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800947731 (France)</masterLabel>
+        <translation><!-- 0800947731 (France) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08009645 (Croatia)</masterLabel>
+        <translation><!-- 08009645 (Croatia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800980433 (South Africa)</masterLabel>
+        <translation><!-- 0800980433 (South Africa) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800980579 (South Africa)</masterLabel>
+        <translation><!-- 0800980579 (South Africa) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800980583 (South Africa)</masterLabel>
+        <translation><!-- 0800980583 (South Africa) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800981286 (South Africa)</masterLabel>
+        <translation><!-- 0800981286 (South Africa) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800981415 (South Africa)</masterLabel>
+        <translation><!-- 0800981415 (South Africa) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800982012 (South Africa)</masterLabel>
+        <translation><!-- 0800982012 (South Africa) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800982431 (South Africa)</masterLabel>
+        <translation><!-- 0800982431 (South Africa) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800982443 (South Africa)</masterLabel>
+        <translation><!-- 0800982443 (South Africa) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800990940 (South Africa)</masterLabel>
+        <translation><!-- 0800990940 (South Africa) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0800992255 (South Africa)</masterLabel>
+        <translation><!-- 0800992255 (South Africa) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0805374687 (French Guiana)</masterLabel>
+        <translation><!-- 0805374687 (French Guiana) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0809071256 (Taiwan)</masterLabel>
+        <translation><!-- 0809071256 (Taiwan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0809071263 (Taiwan)</masterLabel>
+        <translation><!-- 0809071263 (Taiwan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0809081234 (Taiwan)</masterLabel>
+        <translation><!-- 0809081234 (Taiwan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0809081255 (Taiwan)</masterLabel>
+        <translation><!-- 0809081255 (Taiwan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0809081282 (Taiwan)</masterLabel>
+        <translation><!-- 0809081282 (Taiwan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0809090684 (Taiwan)</masterLabel>
+        <translation><!-- 0809090684 (Taiwan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0809090691 (Taiwan)</masterLabel>
+        <translation><!-- 0809090691 (Taiwan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0809092282 (Taiwan)</masterLabel>
+        <translation><!-- 0809092282 (Taiwan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0809097807 (Taiwan)</masterLabel>
+        <translation><!-- 0809097807 (Taiwan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>12065215 (Vietnam)</masterLabel>
+        <translation><!-- 12065215 (Vietnam) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>12065243 (Vietnam)</masterLabel>
+        <translation><!-- 12065243 (Vietnam) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>12065245 (Vietnam)</masterLabel>
+        <translation><!-- 12065245 (Vietnam) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>12065266 (Vietnam)</masterLabel>
+        <translation><!-- 12065266 (Vietnam) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>12065282 (Vietnam)</masterLabel>
+        <translation><!-- 12065282 (Vietnam) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>12300204007 (Chile)</masterLabel>
+        <translation><!-- 12300204007 (Chile) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>12300206130 (Chile)</masterLabel>
+        <translation><!-- 12300206130 (Chile) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>12300206643 (Chile)</masterLabel>
+        <translation><!-- 12300206643 (Chile) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>12300208509 (Chile)</masterLabel>
+        <translation><!-- 12300208509 (Chile) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>12300209157 (Chile)</masterLabel>
+        <translation><!-- 12300209157 (Chile) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>12300209182 (Chile)</masterLabel>
+        <translation><!-- 12300209182 (Chile) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>12300209216 (Chile)</masterLabel>
+        <translation><!-- 12300209216 (Chile) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>12300209225 (Chile)</masterLabel>
+        <translation><!-- 12300209225 (Chile) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>12300209372 (Chile)</masterLabel>
+        <translation><!-- 12300209372 (Chile) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1426801 (Lebanon)</masterLabel>
+        <translation><!-- 1426801 (Lebanon) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18000010115 (Nepal)</masterLabel>
+        <translation><!-- 18000010115 (Nepal) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18000130767 (Belize)</masterLabel>
+        <translation><!-- 18000130767 (Belize) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>180011100904 (Philippines)</masterLabel>
+        <translation><!-- 180011100904 (Philippines) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>180011100933 (Philippines)</masterLabel>
+        <translation><!-- 180011100933 (Philippines) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>180011101024 (Philippines)</masterLabel>
+        <translation><!-- 180011101024 (Philippines) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>180011101074 (Philippines)</masterLabel>
+        <translation><!-- 180011101074 (Philippines) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>180011101228 (Philippines)</masterLabel>
+        <translation><!-- 180011101228 (Philippines) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>180011101731 (Philippines)</masterLabel>
+        <translation><!-- 180011101731 (Philippines) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>180011101803 (Philippines)</masterLabel>
+        <translation><!-- 180011101803 (Philippines) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>180011101892 (Philippines)</masterLabel>
+        <translation><!-- 180011101892 (Philippines) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>180011101914 (Philippines)</masterLabel>
+        <translation><!-- 180011101914 (Philippines) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>180018580016 (Philippines)</masterLabel>
+        <translation><!-- 180018580016 (Philippines) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>180018580017 (Philippines)</masterLabel>
+        <translation><!-- 180018580017 (Philippines) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>180018580018 (Philippines)</masterLabel>
+        <translation><!-- 180018580018 (Philippines) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002030430 (Trinidad &amp; Tobago)</masterLabel>
+        <translation><!-- 18002030430 (Trinidad &amp; Tobago) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002030765 (Barbados)</masterLabel>
+        <translation><!-- 18002030765 (Barbados) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002031780 (Bermuda)</masterLabel>
+        <translation><!-- 18002031780 (Bermuda) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002035073 (Jamaica)</masterLabel>
+        <translation><!-- 18002035073 (Jamaica) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002038641 (Saint Kitts/Nevis)</masterLabel>
+        <translation><!-- 18002038641 (Saint Kitts/Nevis) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002038711 (Saint Kitts/Nevis)</masterLabel>
+        <translation><!-- 18002038711 (Saint Kitts/Nevis) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002039601 (Dominican Republic)</masterLabel>
+        <translation><!-- 18002039601 (Dominican Republic) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002056241 (Bahamas)</masterLabel>
+        <translation><!-- 18002056241 (Bahamas) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002056285 (Trinidad/Tobago)</masterLabel>
+        <translation><!-- 18002056285 (Trinidad/Tobago) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002056309 (Trinidad/Tobago)</masterLabel>
+        <translation><!-- 18002056309 (Trinidad/Tobago) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002056314 (Trinidad/Tobago)</masterLabel>
+        <translation><!-- 18002056314 (Trinidad/Tobago) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002056686 (Bahamas)</masterLabel>
+        <translation><!-- 18002056686 (Bahamas) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002056686 (Saint Kitts/Nevis)</masterLabel>
+        <translation><!-- 18002056686 (Saint Kitts/Nevis) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002056686 (Trinidad/Tobago)</masterLabel>
+        <translation><!-- 18002056686 (Trinidad/Tobago) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002056933 (Saint Kitts/Nevis)</masterLabel>
+        <translation><!-- 18002056933 (Saint Kitts/Nevis) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002057246 (Saint Kitts/Nevis)</masterLabel>
+        <translation><!-- 18002057246 (Saint Kitts/Nevis) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002057247 (Bahamas)</masterLabel>
+        <translation><!-- 18002057247 (Bahamas) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002057247 (Trinidad/Tobago)</masterLabel>
+        <translation><!-- 18002057247 (Trinidad/Tobago) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002058002 (Saint Kitts/Nevis)</masterLabel>
+        <translation><!-- 18002058002 (Saint Kitts/Nevis) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002058002 (Trinidad/Tobago)</masterLabel>
+        <translation><!-- 18002058002 (Trinidad/Tobago) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002059483 (Saint Kitts/Nevis)</masterLabel>
+        <translation><!-- 18002059483 (Saint Kitts/Nevis) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002059483 (Trinidad/Tobago)</masterLabel>
+        <translation><!-- 18002059483 (Trinidad/Tobago) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002059968 (Bahamas)</masterLabel>
+        <translation><!-- 18002059968 (Bahamas) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002059968 (Saint Kitts/Nevis)</masterLabel>
+        <translation><!-- 18002059968 (Saint Kitts/Nevis) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002059968 (Trinidad/Tobago)</masterLabel>
+        <translation><!-- 18002059968 (Trinidad/Tobago) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002072647 (Jamaica)</masterLabel>
+        <translation><!-- 18002072647 (Jamaica) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002072648 (Jamaica)</masterLabel>
+        <translation><!-- 18002072648 (Jamaica) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002072650 (Jamaica)</masterLabel>
+        <translation><!-- 18002072650 (Jamaica) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002072755 (Jamaica)</masterLabel>
+        <translation><!-- 18002072755 (Jamaica) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800207619 (Cambodia)</masterLabel>
+        <translation><!-- 1800207619 (Cambodia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002076227 (Jamaica)</masterLabel>
+        <translation><!-- 18002076227 (Jamaica) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002077650 (Bermuda)</masterLabel>
+        <translation><!-- 18002077650 (Bermuda) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800209547 (Cambodia)</masterLabel>
+        <translation><!-- 1800209547 (Cambodia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800209745 (Cambodia)</masterLabel>
+        <translation><!-- 1800209745 (Cambodia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002660803 (India)</masterLabel>
+        <translation><!-- 18002660803 (India) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002660815 (India)</masterLabel>
+        <translation><!-- 18002660815 (India) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18002661143 (India)</masterLabel>
+        <translation><!-- 18002661143 (India) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18003001508 (Saint Kitts/Nevis)</masterLabel>
+        <translation><!-- 18003001508 (Saint Kitts/Nevis) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18003004167 (Montserrat)</masterLabel>
+        <translation><!-- 18003004167 (Montserrat) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18003890351 (Bahamas)</masterLabel>
+        <translation><!-- 18003890351 (Bahamas) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18003890359 (Bahamas)</masterLabel>
+        <translation><!-- 18003890359 (Bahamas) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18003890445 (Bahamas)</masterLabel>
+        <translation><!-- 18003890445 (Bahamas) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18003890501 (Bahamas)</masterLabel>
+        <translation><!-- 18003890501 (Bahamas) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18003890514 (Bahamas)</masterLabel>
+        <translation><!-- 18003890514 (Bahamas) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18003890750 (Bahamas)</masterLabel>
+        <translation><!-- 18003890750 (Bahamas) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800420213 (Australia)</masterLabel>
+        <translation><!-- 1800420213 (Australia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18004360263 (Mexico)</masterLabel>
+        <translation><!-- 18004360263 (Mexico) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18004904967 (Singapore)</masterLabel>
+        <translation><!-- 18004904967 (Singapore) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18005792868 (Singapore)</masterLabel>
+        <translation><!-- 18005792868 (Singapore) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18005792870 (Singapore)</masterLabel>
+        <translation><!-- 18005792870 (Singapore) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800607256 (Australia)</masterLabel>
+        <translation><!-- 1800607256 (Australia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800616800 (Australia)</masterLabel>
+        <translation><!-- 1800616800 (Australia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800623340 (Australia)</masterLabel>
+        <translation><!-- 1800623340 (Australia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800642582 (Australia)</masterLabel>
+        <translation><!-- 1800642582 (Australia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18006499919 (Canada)</masterLabel>
+        <translation><!-- 18006499919 (Canada) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18006499919 (Puerto Rico)</masterLabel>
+        <translation><!-- 18006499919 (Puerto Rico) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800658700 (Australia)</masterLabel>
+        <translation><!-- 1800658700 (Australia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800703826 (Australia)</masterLabel>
+        <translation><!-- 1800703826 (Australia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800703835 (Australia)</masterLabel>
+        <translation><!-- 1800703835 (Australia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800705809 (Australia)</masterLabel>
+        <translation><!-- 1800705809 (Australia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800719941 (Ireland)</masterLabel>
+        <translation><!-- 1800719941 (Ireland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800719947 (Ireland)</masterLabel>
+        <translation><!-- 1800719947 (Ireland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800719950 (Ireland)</masterLabel>
+        <translation><!-- 1800719950 (Ireland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800780623 (Australia)</masterLabel>
+        <translation><!-- 1800780623 (Australia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800804235 (Australia)</masterLabel>
+        <translation><!-- 1800804235 (Australia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800805844 (Malaysia)</masterLabel>
+        <translation><!-- 1800805844 (Malaysia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800806696 (Malaysia)</masterLabel>
+        <translation><!-- 1800806696 (Malaysia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800807043 (Malaysia)</masterLabel>
+        <translation><!-- 1800807043 (Malaysia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800807704 (Australia)</masterLabel>
+        <translation><!-- 1800807704 (Australia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800813265 (Malaysia)</masterLabel>
+        <translation><!-- 1800813265 (Malaysia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800814025 (Malaysia)</masterLabel>
+        <translation><!-- 1800814025 (Malaysia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800814073 (Malaysia)</masterLabel>
+        <translation><!-- 1800814073 (Malaysia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800814574 (Malaysia)</masterLabel>
+        <translation><!-- 1800814574 (Malaysia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800814824 (Malaysia)</masterLabel>
+        <translation><!-- 1800814824 (Malaysia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800814845 (Malaysia)</masterLabel>
+        <translation><!-- 1800814845 (Malaysia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18008301513 (Canada)</masterLabel>
+        <translation><!-- 18008301513 (Canada) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18008301513 (Puerto Rico)</masterLabel>
+        <translation><!-- 18008301513 (Puerto Rico) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18009257671 (Canada)</masterLabel>
+        <translation><!-- 18009257671 (Canada) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18009257671 (Puerto Rico)</masterLabel>
+        <translation><!-- 18009257671 (Puerto Rico) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800947792  (Ireland)</masterLabel>
+        <translation><!-- 1800947792  (Ireland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800948406 (Ireland)</masterLabel>
+        <translation><!-- 1800948406 (Ireland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800948414 (Ireland)</masterLabel>
+        <translation><!-- 1800948414 (Ireland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800949106 (Ireland)</masterLabel>
+        <translation><!-- 1800949106 (Ireland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800949112 (Ireland)</masterLabel>
+        <translation><!-- 1800949112 (Ireland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800949115 (Ireland)</masterLabel>
+        <translation><!-- 1800949115 (Ireland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800949139 (Ireland)</masterLabel>
+        <translation><!-- 1800949139 (Ireland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1800949142 (Ireland)</masterLabel>
+        <translation><!-- 1800949142 (Ireland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1809245996 (Israel)</masterLabel>
+        <translation><!-- 1809245996 (Israel) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1809246073 (Israel)</masterLabel>
+        <translation><!-- 1809246073 (Israel) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1809246093 (Israel)</masterLabel>
+        <translation><!-- 1809246093 (Israel) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1809258002 (Israel)</masterLabel>
+        <translation><!-- 1809258002 (Israel) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1809259483 (Israel)</masterLabel>
+        <translation><!-- 1809259483 (Israel) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1809259968 (Israel)</masterLabel>
+        <translation><!-- 1809259968 (Israel) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1809450763 (Israel)</masterLabel>
+        <translation><!-- 1809450763 (Israel) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1809455740 (Israel)</masterLabel>
+        <translation><!-- 1809455740 (Israel) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1809458711 (Israel)</masterLabel>
+        <translation><!-- 1809458711 (Israel) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1809459812 (Israel)</masterLabel>
+        <translation><!-- 1809459812 (Israel) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1809467650 (Israel)</masterLabel>
+        <translation><!-- 1809467650 (Israel) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18442043719 (Cayman Islands)</masterLabel>
+        <translation><!-- 18442043719 (Cayman Islands) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18667401260 (Canada)</masterLabel>
+        <translation><!-- 18667401260 (Canada) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18667401260 (Puerto Rico)</masterLabel>
+        <translation><!-- 18667401260 (Puerto Rico) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18772948214 (Canada)</masterLabel>
+        <translation><!-- 18772948214 (Canada) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18772948214 (Puerto Rico)</masterLabel>
+        <translation><!-- 18772948214 (Puerto Rico) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18887514430 (Dominican Republic)</masterLabel>
+        <translation><!-- 18887514430 (Dominican Republic) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18887514438 (Dominican Republic)</masterLabel>
+        <translation><!-- 18887514438 (Dominican Republic) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18887514509 (Dominican Republic)</masterLabel>
+        <translation><!-- 18887514509 (Dominican Republic) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18887514514 (Dominican Republic)</masterLabel>
+        <translation><!-- 18887514514 (Dominican Republic) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18887514526 (Dominican Republic)</masterLabel>
+        <translation><!-- 18887514526 (Dominican Republic) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18887514708 (Dominican Republic)</masterLabel>
+        <translation><!-- 18887514708 (Dominican Republic) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18887514806 (Dominican Republic)</masterLabel>
+        <translation><!-- 18887514806 (Dominican Republic) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18887514818 (Dominican Republic)</masterLabel>
+        <translation><!-- 18887514818 (Dominican Republic) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18887514832 (Dominican Republic)</masterLabel>
+        <translation><!-- 18887514832 (Dominican Republic) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>201708228 (Sweden)</masterLabel>
+        <translation><!-- 201708228 (Sweden) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2475651 (Sri Lanka)</masterLabel>
+        <translation><!-- 2475651 (Sri Lanka) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2698003001450 (Botswana)</masterLabel>
+        <translation><!-- 2698003001450 (Botswana) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4006200506 (China Mobile)</masterLabel>
+        <translation><!-- 4006200506 (China Mobile) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4006200507 (China Mobile)</masterLabel>
+        <translation><!-- 4006200507 (China Mobile) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4006200510 (China Mobile)</masterLabel>
+        <translation><!-- 4006200510 (China Mobile) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4006200511 (China Mobile)</masterLabel>
+        <translation><!-- 4006200511 (China Mobile) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4006200514 (China Mobile)</masterLabel>
+        <translation><!-- 4006200514 (China Mobile) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4006860541 (China Mobile)</masterLabel>
+        <translation><!-- 4006860541 (China Mobile) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4006860557 (China Mobile)</masterLabel>
+        <translation><!-- 4006860557 (China Mobile) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4008108308 (China - Mobile)</masterLabel>
+        <translation><!-- 4008108308 (China - Mobile) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>40190847 (Uruguay)</masterLabel>
+        <translation><!-- 40190847 (Uruguay) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>680109927 (Hungary)</masterLabel>
+        <translation><!-- 680109927 (Hungary) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>7080601089 (Nigeria)</masterLabel>
+        <translation><!-- 7080601089 (Nigeria) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>78030114616 (Indonesia)</masterLabel>
+        <translation><!-- 78030114616 (Indonesia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>798142030764 (South Korea)</masterLabel>
+        <translation><!-- 798142030764 (South Korea) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80000281 (Bahrain)</masterLabel>
+        <translation><!-- 80000281 (Bahrain) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8000100257 (Estonia)</masterLabel>
+        <translation><!-- 8000100257 (Estonia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8000100270 (Estonia)</masterLabel>
+        <translation><!-- 8000100270 (Estonia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8000100294 (Estonia)</masterLabel>
+        <translation><!-- 8000100294 (Estonia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8000100306 (Estonia)</masterLabel>
+        <translation><!-- 8000100306 (Estonia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8000100307 (Estonia)</masterLabel>
+        <translation><!-- 8000100307 (Estonia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8000100308 (Estonia)</masterLabel>
+        <translation><!-- 8000100308 (Estonia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8000100309 (Estonia)</masterLabel>
+        <translation><!-- 8000100309 (Estonia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8000100609 (Estonia)</masterLabel>
+        <translation><!-- 8000100609 (Estonia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80001049 (Latvia)</masterLabel>
+        <translation><!-- 80001049 (Latvia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8000176285 (United Arab Emirates)</masterLabel>
+        <translation><!-- 8000176285 (United Arab Emirates) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8000176309 (United Arab Emirates)</masterLabel>
+        <translation><!-- 8000176309 (United Arab Emirates) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8000176314 (United Arab Emirates)</masterLabel>
+        <translation><!-- 8000176314 (United Arab Emirates) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8000176437 (United Arab Emirates)</masterLabel>
+        <translation><!-- 8000176437 (United Arab Emirates) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8000176686 (United Arab Emirates)</masterLabel>
+        <translation><!-- 8000176686 (United Arab Emirates) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8000177247 (United Arab Emirates)</masterLabel>
+        <translation><!-- 8000177247 (United Arab Emirates) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8000178002 (United Arab Emirates)</masterLabel>
+        <translation><!-- 8000178002 (United Arab Emirates) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8000179483 (United Arab Emirates)</masterLabel>
+        <translation><!-- 8000179483 (United Arab Emirates) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8000179968 (United Arab Emirates)</masterLabel>
+        <translation><!-- 8000179968 (United Arab Emirates) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80002577 (Latvia)</masterLabel>
+        <translation><!-- 80002577 (Latvia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80002673 (Latvia)</masterLabel>
+        <translation><!-- 80002673 (Latvia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80002858 (Latvia)</masterLabel>
+        <translation><!-- 80002858 (Latvia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80002951 (Latvia)</masterLabel>
+        <translation><!-- 80002951 (Latvia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80003385 (Latvia)</masterLabel>
+        <translation><!-- 80003385 (Latvia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80003580 (Latvia)</masterLabel>
+        <translation><!-- 80003580 (Latvia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80003588 (Latvia)</masterLabel>
+        <translation><!-- 80003588 (Latvia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80004748 (Latvia)</masterLabel>
+        <translation><!-- 80004748 (Latvia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80004772 (Bahrain)</masterLabel>
+        <translation><!-- 80004772 (Bahrain) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80004774 (Bahrain)</masterLabel>
+        <translation><!-- 80004774 (Bahrain) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80004775 (Bahrain)</masterLabel>
+        <translation><!-- 80004775 (Bahrain) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80004812 (Bahrain)</masterLabel>
+        <translation><!-- 80004812 (Bahrain) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80004813 (Bahrain)</masterLabel>
+        <translation><!-- 80004813 (Bahrain) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80004814 (Bahrain)</masterLabel>
+        <translation><!-- 80004814 (Bahrain) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80004825 (Bahrain)</masterLabel>
+        <translation><!-- 80004825 (Bahrain) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80005168 (Latvia)</masterLabel>
+        <translation><!-- 80005168 (Latvia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80006181 (Bahrain)</masterLabel>
+        <translation><!-- 80006181 (Bahrain) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800088619 (Spain)</masterLabel>
+        <translation><!-- 800088619 (Spain) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800090140 (Czech Republic)</masterLabel>
+        <translation><!-- 800090140 (Czech Republic) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800100026 (Qatar)</masterLabel>
+        <translation><!-- 800100026 (Qatar) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8001011441 (Singapore)</masterLabel>
+        <translation><!-- 8001011441 (Singapore) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8001011573 (Singapore)</masterLabel>
+        <translation><!-- 8001011573 (Singapore) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8001011886 (Singapore)</masterLabel>
+        <translation><!-- 8001011886 (Singapore) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8001012055 (Singapore)</masterLabel>
+        <translation><!-- 8001012055 (Singapore) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8001012108 (Singapore)</masterLabel>
+        <translation><!-- 8001012108 (Singapore) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8001012950 (Singapore)</masterLabel>
+        <translation><!-- 8001012950 (Singapore) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8001013081 (Singapore)</masterLabel>
+        <translation><!-- 8001013081 (Singapore) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8001201192 (Uzbekistan)</masterLabel>
+        <translation><!-- 8001201192 (Uzbekistan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8001205449 (Singapore)</masterLabel>
+        <translation><!-- 8001205449 (Singapore) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8001362102 (Venezuela)</masterLabel>
+        <translation><!-- 8001362102 (Venezuela) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800142343 (Czech Republic)</masterLabel>
+        <translation><!-- 800142343 (Czech Republic) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800143171 (Czech Republic)</masterLabel>
+        <translation><!-- 800143171 (Czech Republic) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800182510 (Italy)</masterLabel>
+        <translation><!-- 800182510 (Italy) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800182517 (Italy)</masterLabel>
+        <translation><!-- 800182517 (Italy) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800182562 (Italy)</masterLabel>
+        <translation><!-- 800182562 (Italy) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800182592 (Italy)</masterLabel>
+        <translation><!-- 800182592 (Italy) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800182593 (Italy)</masterLabel>
+        <translation><!-- 800182593 (Italy) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800182594 (Italy)</masterLabel>
+        <translation><!-- 800182594 (Italy) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800182731 (Italy)</masterLabel>
+        <translation><!-- 800182731 (Italy) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800182738 (Italy)</masterLabel>
+        <translation><!-- 800182738 (Italy) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800182740 (Italy)</masterLabel>
+        <translation><!-- 800182740 (Italy) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800201836 (Chile)</masterLabel>
+        <translation><!-- 800201836 (Chile) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8002100026 (Bulgaria)</masterLabel>
+        <translation><!-- 8002100026 (Bulgaria) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80023306 (Luxembourg)</masterLabel>
+        <translation><!-- 80023306 (Luxembourg) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80023471 (Luxembourg)</masterLabel>
+        <translation><!-- 80023471 (Luxembourg) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80023964 (Luxembourg)</masterLabel>
+        <translation><!-- 80023964 (Luxembourg) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80025196 (Luxembourg)</masterLabel>
+        <translation><!-- 80025196 (Luxembourg) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80025897 (Luxembourg)</masterLabel>
+        <translation><!-- 80025897 (Luxembourg) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80025973 (Luxembourg)</masterLabel>
+        <translation><!-- 80025973 (Luxembourg) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800260271 (Czech Republic)</masterLabel>
+        <translation><!-- 800260271 (Czech Republic) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80026086 (Luxembourg)</masterLabel>
+        <translation><!-- 80026086 (Luxembourg) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80026349 (Luxembourg)</masterLabel>
+        <translation><!-- 80026349 (Luxembourg) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80026531 (Luxembourg)</masterLabel>
+        <translation><!-- 80026531 (Luxembourg) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80027657 (Luxembourg)</masterLabel>
+        <translation><!-- 80027657 (Luxembourg) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8002902902 (Netherlands)</masterLabel>
+        <translation><!-- 8002902902 (Netherlands) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800363708 (Chile)</masterLabel>
+        <translation><!-- 800363708 (Chile) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80039952 (Belgium)</masterLabel>
+        <translation><!-- 80039952 (Belgium) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8004445762 (Argentina)</masterLabel>
+        <translation><!-- 8004445762 (Argentina) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800466340 (New Zealand)</masterLabel>
+        <translation><!-- 800466340 (New Zealand) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80049624444 (United Kingdom)</masterLabel>
+        <translation><!-- 80049624444 (United Kingdom) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800503135 (Ukraine)</masterLabel>
+        <translation><!-- 800503135 (Ukraine) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80051901 (Norway)</masterLabel>
+        <translation><!-- 80051901 (Norway) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80056422 (Norway)</masterLabel>
+        <translation><!-- 80056422 (Norway) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80056426 (Norway)</masterLabel>
+        <translation><!-- 80056426 (Norway) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80056434 (Norway)</masterLabel>
+        <translation><!-- 80056434 (Norway) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80056436 (Norway)</masterLabel>
+        <translation><!-- 80056436 (Norway) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80056447 (Norway)</masterLabel>
+        <translation><!-- 80056447 (Norway) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80056454 (Norway)</masterLabel>
+        <translation><!-- 80056454 (Norway) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80056457 (Norway)</masterLabel>
+        <translation><!-- 80056457 (Norway) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80057104 (Norway)</masterLabel>
+        <translation><!-- 80057104 (Norway) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80057440 (Norway)</masterLabel>
+        <translation><!-- 80057440 (Norway) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8005893512 (Germany)</masterLabel>
+        <translation><!-- 8005893512 (Germany) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8006054285 (United States)</masterLabel>
+        <translation><!-- 8006054285 (United States) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800606996 (Slovakia)</masterLabel>
+        <translation><!-- 800606996 (Slovakia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80061104 (Norway)</masterLabel>
+        <translation><!-- 80061104 (Norway) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80061105 (Moldavia)</masterLabel>
+        <translation><!-- 80061105 (Moldavia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80062659 (Malta)</masterLabel>
+        <translation><!-- 80062659 (Malta) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8006499919 (United States)</masterLabel>
+        <translation><!-- 8006499919 (United States) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8006506 (El Salvador)</masterLabel>
+        <translation><!-- 8006506 (El Salvador) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8006520 (El Salvador)</masterLabel>
+        <translation><!-- 8006520 (El Salvador) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8006521 (El Salvador)</masterLabel>
+        <translation><!-- 8006521 (El Salvador) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8006531 (El Salvador)</masterLabel>
+        <translation><!-- 8006531 (El Salvador) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8006617007 (Canada)</masterLabel>
+        <translation><!-- 8006617007 (Canada) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8006617007 (United States)</masterLabel>
+        <translation><!-- 8006617007 (United States) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8006772898 (Canada)</masterLabel>
+        <translation><!-- 8006772898 (Canada) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8006772898 (United States)</masterLabel>
+        <translation><!-- 8006772898 (United States) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8006838 (El Salvador)</masterLabel>
+        <translation><!-- 8006838 (El Salvador) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800700392 (Czech Republic)</masterLabel>
+        <translation><!-- 800700392 (Czech Republic) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800700461 (Czech Republic)</masterLabel>
+        <translation><!-- 800700461 (Czech Republic) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800700515 (Czech Republic)</masterLabel>
+        <translation><!-- 800700515 (Czech Republic) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800700612 (Czech Republic)</masterLabel>
+        <translation><!-- 800700612 (Czech Republic) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800700749 (Czech Republic)</masterLabel>
+        <translation><!-- 800700749 (Czech Republic) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800700793 (Czech Republic)</masterLabel>
+        <translation><!-- 800700793 (Czech Republic) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800740270 (Switzerland)</masterLabel>
+        <translation><!-- 800740270 (Switzerland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80074117 (Oman)</masterLabel>
+        <translation><!-- 80074117 (Oman) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8007618769 (Brazil)</masterLabel>
+        <translation><!-- 8007618769 (Brazil) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800774563 (Finland)</masterLabel>
+        <translation><!-- 800774563 (Finland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80077602 (Peru)</masterLabel>
+        <translation><!-- 80077602 (Peru) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800780608 (Portugal)</masterLabel>
+        <translation><!-- 800780608 (Portugal) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800780616 (Portugal)</masterLabel>
+        <translation><!-- 800780616 (Portugal) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800780619 (Portugal)</masterLabel>
+        <translation><!-- 800780619 (Portugal) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800780640 (Portugal)</masterLabel>
+        <translation><!-- 800780640 (Portugal) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800780644 (Portugal)</masterLabel>
+        <translation><!-- 800780644 (Portugal) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800786848 (Italy)</masterLabel>
+        <translation><!-- 800786848 (Italy) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800788384 (Portugal)</masterLabel>
+        <translation><!-- 800788384 (Portugal) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800789328 (Portugal)</masterLabel>
+        <translation><!-- 800789328 (Portugal) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800789329 (Portugal)</masterLabel>
+        <translation><!-- 800789329 (Portugal) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800789351 (Portugal)</masterLabel>
+        <translation><!-- 800789351 (Portugal) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008066 (Iceland)</masterLabel>
+        <translation><!-- 8008066 (Iceland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008079 (Iceland)</masterLabel>
+        <translation><!-- 8008079 (Iceland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80081670 (Slovenia)</masterLabel>
+        <translation><!-- 80081670 (Slovenia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008190097 (China Landline)</masterLabel>
+        <translation><!-- 8008190097 (China Landline) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008190102 (China Landline)</masterLabel>
+        <translation><!-- 8008190102 (China Landline) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008190105 (China Landline)</masterLabel>
+        <translation><!-- 8008190105 (China Landline) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008190107 (China Landline)</masterLabel>
+        <translation><!-- 8008190107 (China Landline) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008190114 (China Landline)</masterLabel>
+        <translation><!-- 8008190114 (China Landline) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008301513 (United States)</masterLabel>
+        <translation><!-- 8008301513 (United States) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008440176 (Saudi Arabia)</masterLabel>
+        <translation><!-- 8008440176 (Saudi Arabia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008440177 (Saudi Arabia)</masterLabel>
+        <translation><!-- 8008440177 (Saudi Arabia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008440183 (Saudi Arabia)</masterLabel>
+        <translation><!-- 8008440183 (Saudi Arabia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008440203 (Saudi Arabia)</masterLabel>
+        <translation><!-- 8008440203 (Saudi Arabia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008440225 (Saudi Arabia)</masterLabel>
+        <translation><!-- 8008440225 (Saudi Arabia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008440252 (Saudi Arabia)</masterLabel>
+        <translation><!-- 8008440252 (Saudi Arabia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008440255 (Saudi Arabia)</masterLabel>
+        <translation><!-- 8008440255 (Saudi Arabia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008440274 (Saudi Arabia)</masterLabel>
+        <translation><!-- 8008440274 (Saudi Arabia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008443640 (Saudi Arabia)</masterLabel>
+        <translation><!-- 8008443640 (Saudi Arabia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008700541 (China Landline)</masterLabel>
+        <translation><!-- 8008700541 (China Landline) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008700547 (China)</masterLabel>
+        <translation><!-- 8008700547 (China) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008700557 (China Landline)</masterLabel>
+        <translation><!-- 8008700557 (China Landline) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008705850 (China)</masterLabel>
+        <translation><!-- 8008705850 (China) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008850 (Iceland)</masterLabel>
+        <translation><!-- 8008850 (Iceland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80088668344 (Austria)</masterLabel>
+        <translation><!-- 80088668344 (Austria) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008887 (Iceland)</masterLabel>
+        <translation><!-- 8008887 (Iceland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8008889 (Iceland)</masterLabel>
+        <translation><!-- 8008889 (Iceland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800895066 (Romania)</masterLabel>
+        <translation><!-- 800895066 (Romania) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800901335 (Hong Kong)</masterLabel>
+        <translation><!-- 800901335 (Hong Kong) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800905885 (Hong Kong)</masterLabel>
+        <translation><!-- 800905885 (Hong Kong) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800905894 (Hong Kong)</masterLabel>
+        <translation><!-- 800905894 (Hong Kong) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800905895 (Hong Kong)</masterLabel>
+        <translation><!-- 800905895 (Hong Kong) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8009099 (Iceland)</masterLabel>
+        <translation><!-- 8009099 (Iceland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800911165 (Italy)</masterLabel>
+        <translation><!-- 800911165 (Italy) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8009123 (Iceland)</masterLabel>
+        <translation><!-- 8009123 (Iceland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8009138 (Iceland)</masterLabel>
+        <translation><!-- 8009138 (Iceland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8009257671 (United States)</masterLabel>
+        <translation><!-- 8009257671 (United States) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80093292 (Monaco)</masterLabel>
+        <translation><!-- 80093292 (Monaco) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800933077 (Hong Kong)</masterLabel>
+        <translation><!-- 800933077 (Hong Kong) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80093441 (Monaco)</masterLabel>
+        <translation><!-- 80093441 (Monaco) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80093442 (Monaco)</masterLabel>
+        <translation><!-- 80093442 (Monaco) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80093443 (Monaco)</masterLabel>
+        <translation><!-- 80093443 (Monaco) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80093462 (Monaco)</masterLabel>
+        <translation><!-- 80093462 (Monaco) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80093499 (Monaco)</masterLabel>
+        <translation><!-- 80093499 (Monaco) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80093563 (Monaco)</masterLabel>
+        <translation><!-- 80093563 (Monaco) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80093639 (Monaco)</masterLabel>
+        <translation><!-- 80093639 (Monaco) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80093662 (Monaco)</masterLabel>
+        <translation><!-- 80093662 (Monaco) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80093965 (Monaco)</masterLabel>
+        <translation><!-- 80093965 (Monaco) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80094071 (Cyprus)</masterLabel>
+        <translation><!-- 80094071 (Cyprus) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80094072 (Cyprus)</masterLabel>
+        <translation><!-- 80094072 (Cyprus) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800947211 (France)</masterLabel>
+        <translation><!-- 800947211 (France) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800960277 (Hong Kong)</masterLabel>
+        <translation><!-- 800960277 (Hong Kong) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800960407 (Hong Kong)</masterLabel>
+        <translation><!-- 800960407 (Hong Kong) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800960435 (Hong Kong)</masterLabel>
+        <translation><!-- 800960435 (Hong Kong) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800960975 (Hong Kong)</masterLabel>
+        <translation><!-- 800960975 (Hong Kong) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800961012 (Hong Kong)</masterLabel>
+        <translation><!-- 800961012 (Hong Kong) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80096143 (Cyprus)</masterLabel>
+        <translation><!-- 80096143 (Cyprus) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80096406 (Cyprus)</masterLabel>
+        <translation><!-- 80096406 (Cyprus) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80096411 (Cyprus)</masterLabel>
+        <translation><!-- 80096411 (Cyprus) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80096472 (Cyprus)</masterLabel>
+        <translation><!-- 80096472 (Cyprus) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800964954 (Hong Kong)</masterLabel>
+        <translation><!-- 800964954 (Hong Kong) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800967962 (Hong Kong)</masterLabel>
+        <translation><!-- 800967962 (Hong Kong) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800968636 (Hong Kong)</masterLabel>
+        <translation><!-- 800968636 (Hong Kong) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80096930 (Cyprus)</masterLabel>
+        <translation><!-- 80096930 (Cyprus) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80096942 (Cyprus)</masterLabel>
+        <translation><!-- 80096942 (Cyprus) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80096943 (Cyprus)</masterLabel>
+        <translation><!-- 80096943 (Cyprus) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80096944 (Cyprus)</masterLabel>
+        <translation><!-- 80096944 (Cyprus) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8009699 (Croatia)</masterLabel>
+        <translation><!-- 8009699 (Croatia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80096992 (Cyprus)</masterLabel>
+        <translation><!-- 80096992 (Cyprus) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800999892 (Czech Republic)</masterLabel>
+        <translation><!-- 800999892 (Czech Republic) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>800R707163 (Poland)</masterLabel>
+        <translation><!-- 800R707163 (Poland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8014290 (Brunei)</masterLabel>
+        <translation><!-- 8014290 (Brunei) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8020440137 (Mauritius)</masterLabel>
+        <translation><!-- 8020440137 (Mauritius) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80251163 (Denmark)</masterLabel>
+        <translation><!-- 80251163 (Denmark) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80251188 (Denmark)</masterLabel>
+        <translation><!-- 80251188 (Denmark) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80703152 (Denmark)</masterLabel>
+        <translation><!-- 80703152 (Denmark) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80703338 (Denmark)</masterLabel>
+        <translation><!-- 80703338 (Denmark) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80703341 (Denmark)</masterLabel>
+        <translation><!-- 80703341 (Denmark) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80886316 (Denmark)</masterLabel>
+        <translation><!-- 80886316 (Denmark) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80886318 (Denmark)</masterLabel>
+        <translation><!-- 80886318 (Denmark) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80886327 (Denmark)</masterLabel>
+        <translation><!-- 80886327 (Denmark) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80886688 (Denmark)</masterLabel>
+        <translation><!-- 80886688 (Denmark) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80886691 (Denmark)</masterLabel>
+        <translation><!-- 80886691 (Denmark) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>809097822 (Taiwan)</masterLabel>
+        <translation><!-- 809097822 (Taiwan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8108001201019 (Uzbekistan)</masterLabel>
+        <translation><!-- 8108001201019 (Uzbekistan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8108001201020 (Uzbekistan)</masterLabel>
+        <translation><!-- 8108001201020 (Uzbekistan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8108001201023 (Uzbekistan)</masterLabel>
+        <translation><!-- 8108001201023 (Uzbekistan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8108001201035 (Uzbekistan)</masterLabel>
+        <translation><!-- 8108001201035 (Uzbekistan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8108001201041 (Uzbekistan)</masterLabel>
+        <translation><!-- 8108001201041 (Uzbekistan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8108001201042 (Uzbekistan)</masterLabel>
+        <translation><!-- 8108001201042 (Uzbekistan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8108001201043 (Uzbekistan)</masterLabel>
+        <translation><!-- 8108001201043 (Uzbekistan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>81080022671012 (Russia)</masterLabel>
+        <translation><!-- 81080022671012 (Russia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>81080026065011 (Russia)</masterLabel>
+        <translation><!-- 81080026065011 (Russia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>81080026341012 (Russia)</masterLabel>
+        <translation><!-- 81080026341012 (Russia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>81080026355011 (Russia)</masterLabel>
+        <translation><!-- 81080026355011 (Russia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>81080026831012 (Russia)</masterLabel>
+        <translation><!-- 81080026831012 (Russia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>81080026985011 (Russia)</masterLabel>
+        <translation><!-- 81080026985011 (Russia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>81080027411012 (Russia)</masterLabel>
+        <translation><!-- 81080027411012 (Russia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>81080027851012 (Russia)</masterLabel>
+        <translation><!-- 81080027851012 (Russia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>81080028931012 (Russia)</masterLabel>
+        <translation><!-- 81080028931012 (Russia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>81080029631012 (Russia)</masterLabel>
+        <translation><!-- 81080029631012 (Russia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8108003337329 (Tajikistan)</masterLabel>
+        <translation><!-- 8108003337329 (Tajikistan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8108003337331 (Tajikistan)</masterLabel>
+        <translation><!-- 8108003337331 (Tajikistan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8108003337361 (Tajikistan)</masterLabel>
+        <translation><!-- 8108003337361 (Tajikistan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8108003337369 (Tajikistan)</masterLabel>
+        <translation><!-- 8108003337369 (Tajikistan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8108003337370 (Tajikistan)</masterLabel>
+        <translation><!-- 8108003337370 (Tajikistan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>860209230 (South Africa)</masterLabel>
+        <translation><!-- 860209230 (South Africa) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8667401260 (United States)</masterLabel>
+        <translation><!-- 8667401260 (United States) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8772948214 (United States)</masterLabel>
+        <translation><!-- 8772948214 (United States) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8775574194 (Canada)</masterLabel>
+        <translation><!-- 8775574194 (Canada) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8775574194 (United States)</masterLabel>
+        <translation><!-- 8775574194 (United States) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>88001003685 (Russia)</masterLabel>
+        <translation><!-- 88001003685 (Russia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>880030158 (Lithuania)</masterLabel>
+        <translation><!-- 880030158 (Lithuania) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>880030514 (Lithuania)</masterLabel>
+        <translation><!-- 880030514 (Lithuania) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>880030515 (Lithuania)</masterLabel>
+        <translation><!-- 880030515 (Lithuania) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>880030516 (Lithuania)</masterLabel>
+        <translation><!-- 880030516 (Lithuania) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>880030571 (Lithuania)</masterLabel>
+        <translation><!-- 880030571 (Lithuania) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>880030685 (Lithuania)</masterLabel>
+        <translation><!-- 880030685 (Lithuania) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>880030695 (Lithuania)</masterLabel>
+        <translation><!-- 880030695 (Lithuania) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>880030888 (Lithuania)</masterLabel>
+        <translation><!-- 880030888 (Lithuania) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>880031010 (Lithuania)</masterLabel>
+        <translation><!-- 880031010 (Lithuania) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>88003337329 (Kazakhstan)</masterLabel>
+        <translation><!-- 88003337329 (Kazakhstan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>88003337331 (Kazakhstan)</masterLabel>
+        <translation><!-- 88003337331 (Kazakhstan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>88003337361 (Kazakhstan)</masterLabel>
+        <translation><!-- 88003337361 (Kazakhstan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>88003337403 (Kazakhstan)</masterLabel>
+        <translation><!-- 88003337403 (Kazakhstan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>88003337405 (Kazakhstan)</masterLabel>
+        <translation><!-- 88003337405 (Kazakhstan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>88003337418 (Kazakhstan)</masterLabel>
+        <translation><!-- 88003337418 (Kazakhstan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>88003337419 (Kazakhstan)</masterLabel>
+        <translation><!-- 88003337419 (Kazakhstan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>88003337420 (Kazakhstan)</masterLabel>
+        <translation><!-- 88003337420 (Kazakhstan) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>882000110051 (Belarus)</masterLabel>
+        <translation><!-- 882000110051 (Belarus) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>882000110055 (Belarus)</masterLabel>
+        <translation><!-- 882000110055 (Belarus) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>882000110075 (Belarus)</masterLabel>
+        <translation><!-- 882000110075 (Belarus) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>882000110081 (Belarus)</masterLabel>
+        <translation><!-- 882000110081 (Belarus) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>882000110139 (Belarus)</masterLabel>
+        <translation><!-- 882000110139 (Belarus) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>882000110142 (Belarus)</masterLabel>
+        <translation><!-- 882000110142 (Belarus) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>882000110143 (Belarus)</masterLabel>
+        <translation><!-- 882000110143 (Belarus) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>882000110144 (Belarus)</masterLabel>
+        <translation><!-- 882000110144 (Belarus) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>882000110547 (Belarus)</masterLabel>
+        <translation><!-- 882000110547 (Belarus) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>882000110600 (Belarus)</masterLabel>
+        <translation><!-- 882000110600 (Belarus) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>900800233 (Spain)</masterLabel>
+        <translation><!-- 900800233 (Spain) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>900800234 (Spain)</masterLabel>
+        <translation><!-- 900800234 (Spain) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>900800315 (Spain)</masterLabel>
+        <translation><!-- 900800315 (Spain) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>900800360 (Spain)</masterLabel>
+        <translation><!-- 900800360 (Spain) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>900801208 (Spain)</masterLabel>
+        <translation><!-- 900801208 (Spain) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>900801256 (Spain)</masterLabel>
+        <translation><!-- 900801256 (Spain) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>900801639 (Spain)</masterLabel>
+        <translation><!-- 900801639 (Spain) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>900828348 (Spain)</masterLabel>
+        <translation><!-- 900828348 (Spain) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>900828382 (Spain)</masterLabel>
+        <translation><!-- 900828382 (Spain) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>900828629 (Spain)</masterLabel>
+        <translation><!-- 900828629 (Spain) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>900828630 (Spain)</masterLabel>
+        <translation><!-- 900828630 (Spain) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ciber - 8775574194</masterLabel>
+        <translation><!-- Ciber - 8775574194 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cognicion - 8007229903</masterLabel>
+        <translation><!-- Cognicion - 8007229903 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gunster - 8006617007</masterLabel>
+        <translation><!-- Gunster - 8006617007 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IT Convergence - 8772217520</masterLabel>
+        <translation><!-- IT Convergence - 8772217520 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mesirow Financial - 8553914244</masterLabel>
+        <translation><!-- Mesirow Financial - 8553914244 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>National Research Corporation - 8006772898</masterLabel>
+        <translation><!-- National Research Corporation - 8006772898 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RTGP - 8008301513</masterLabel>
+        <translation><!-- RTGP - 8008301513 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RTHW - 8772948214</masterLabel>
+        <translation><!-- RTHW - 8772948214 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RTLF - 8006499919</masterLabel>
+        <translation><!-- RTLF - 8006499919 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RTS - 8667401260</masterLabel>
+        <translation><!-- RTS - 8667401260 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RTSSD - 8009257671</masterLabel>
+        <translation><!-- RTSSD - 8009257671 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rubin Brown - 8006054285</masterLabel>
+        <translation><!-- Rubin Brown - 8006054285 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://www.readytalk.com/intl</masterLabel>
+        <translation><!-- http://www.readytalk.com/intl --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

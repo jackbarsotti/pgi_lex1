@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Technical_Lead__c</fullName>
+    <externalId>false</externalId>
+    <label>Technical Lead</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adam Tuckwell</fullName>
+                <default>false</default>
+                <label>Adam Tuckwell</label>
+            </value>
+            <value>
+                <fullName>Alex Lewis</fullName>
+                <default>false</default>
+                <label>Alex Lewis</label>
+            </value>
+            <value>
+                <fullName>Ben Cross</fullName>
+                <default>false</default>
+                <label>Ben Cross</label>
+            </value>
+            <value>
+                <fullName>Ben Lee</fullName>
+                <default>false</default>
+                <label>Ben Lee</label>
+            </value>
+            <value>
+                <fullName>Brian Blackburn</fullName>
+                <default>false</default>
+                <label>Brian Blackburn</label>
+            </value>
+            <value>
+                <fullName>Chris Irons</fullName>
+                <default>false</default>
+                <label>Chris Irons</label>
+            </value>
+            <value>
+                <fullName>Craig Jacobs</fullName>
+                <default>false</default>
+                <label>Craig Jacobs</label>
+            </value>
+            <value>
+                <fullName>Dave Simm</fullName>
+                <default>false</default>
+                <label>Dave Simm</label>
+            </value>
+            <value>
+                <fullName>Dave Wilson</fullName>
+                <default>false</default>
+                <label>Dave Wilson</label>
+            </value>
+            <value>
+                <fullName>Dean Woolgar</fullName>
+                <default>false</default>
+                <label>Dean Woolgar</label>
+            </value>
+            <value>
+                <fullName>Graham Cropley</fullName>
+                <default>false</default>
+                <label>Graham Cropley</label>
+            </value>
+            <value>
+                <fullName>Iain Smith</fullName>
+                <default>false</default>
+                <label>Iain Smith</label>
+            </value>
+            <value>
+                <fullName>Jamie Wheeldon</fullName>
+                <default>false</default>
+                <label>Jamie Wheeldon</label>
+            </value>
+            <value>
+                <fullName>John Linker</fullName>
+                <default>false</default>
+                <label>John Linker</label>
+            </value>
+            <value>
+                <fullName>Jon Quayle</fullName>
+                <default>false</default>
+                <label>Jon Quayle</label>
+            </value>
+            <value>
+                <fullName>Kelvin Chigorimbo</fullName>
+                <default>false</default>
+                <label>Kelvin Chigorimbo</label>
+            </value>
+            <value>
+                <fullName>Mahendran Suppiah</fullName>
+                <default>false</default>
+                <label>Mahendran Suppiah</label>
+            </value>
+            <value>
+                <fullName>Marc Bertasius</fullName>
+                <default>false</default>
+                <label>Marc Bertasius</label>
+            </value>
+            <value>
+                <fullName>Matthew Dobson</fullName>
+                <default>false</default>
+                <label>Matthew Dobson</label>
+            </value>
+            <value>
+                <fullName>Murali Krishnan</fullName>
+                <default>false</default>
+                <label>Murali Krishnan</label>
+            </value>
+            <value>
+                <fullName>Nick Seagrave</fullName>
+                <default>false</default>
+                <label>Nick Seagrave</label>
+            </value>
+            <value>
+                <fullName>Pat Richard</fullName>
+                <default>false</default>
+                <label>Pat Richard</label>
+            </value>
+            <value>
+                <fullName>Phil Sharp</fullName>
+                <default>false</default>
+                <label>Phil Sharp</label>
+            </value>
+            <value>
+                <fullName>Randy Whittle</fullName>
+                <default>false</default>
+                <label>Randy Whittle</label>
+            </value>
+            <value>
+                <fullName>Richard McLarney</fullName>
+                <default>false</default>
+                <label>Richard McLarney</label>
+            </value>
+            <value>
+                <fullName>Rick Eveleigh</fullName>
+                <default>false</default>
+                <label>Rick Eveleigh</label>
+            </value>
+            <value>
+                <fullName>Ron Cook</fullName>
+                <default>false</default>
+                <label>Ron Cook</label>
+            </value>
+            <value>
+                <fullName>Sean Murphy</fullName>
+                <default>false</default>
+                <label>Sean Murphy</label>
+            </value>
+            <value>
+                <fullName>Simon Gardner</fullName>
+                <default>false</default>
+                <label>Simon Gardner</label>
+            </value>
+            <value>
+                <fullName>Tom Arbuthnot</fullName>
+                <default>false</default>
+                <label>Tom Arbuthnot</label>
+            </value>
+            <value>
+                <fullName>Vikas Jaswal</fullName>
+                <default>false</default>
+                <label>Vikas Jaswal</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

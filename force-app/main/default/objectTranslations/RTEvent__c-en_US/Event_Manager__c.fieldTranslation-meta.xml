@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose the Event Manager for the event --></help>
+    <label><!-- OLD - Event Manager --></label>
+    <name>Event_Manager__c</name>
+    <picklistValues>
+        <masterLabel>1 - Ashlea Beers Testing</masterLabel>
+        <translation><!-- 1 - Ashlea Beers Testing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>300 Ports</masterLabel>
+        <translation><!-- 300 Ports --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Abigail Herreman</masterLabel>
+        <translation><!-- Abigail Herreman --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Abigail Wall</masterLabel>
+        <translation><!-- Abigail Wall --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ali Marsden</masterLabel>
+        <translation><!-- Ali Marsden --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Amorette Harrison</masterLabel>
+        <translation><!-- Amorette Harrison --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Amy Rowlan</masterLabel>
+        <translation><!-- Amy Rowlan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>April Trubell</masterLabel>
+        <translation><!-- April Trubell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio Only</masterLabel>
+        <translation><!-- Audio Only --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Automated</masterLabel>
+        <translation><!-- Automated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Briana Patterson</masterLabel>
+        <translation><!-- Briana Patterson --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cassidy Smock</masterLabel>
+        <translation><!-- Cassidy Smock --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chrissy Kennedy</masterLabel>
+        <translation><!-- Chrissy Kennedy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Diana Dice</masterLabel>
+        <translation><!-- Diana Dice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gabrielle Kulesza</masterLabel>
+        <translation><!-- Gabrielle Kulesza --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gaines Crawford</masterLabel>
+        <translation><!-- Gaines Crawford --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Heather Rakestraw</masterLabel>
+        <translation><!-- Heather Rakestraw --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Holly Dupuis</masterLabel>
+        <translation><!-- Holly Dupuis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JayJay Schenbeck</masterLabel>
+        <translation><!-- JayJay Schenbeck --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jessi Gerak</masterLabel>
+        <translation><!-- Jessi Gerak --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kalie Bozich</masterLabel>
+        <translation><!-- Kalie Bozich --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Karyn Conner</masterLabel>
+        <translation><!-- Karyn Conner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keith Janofski</masterLabel>
+        <translation><!-- Keith Janofski --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kevin Upton</masterLabel>
+        <translation><!-- Kevin Upton --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kim Morse</masterLabel>
+        <translation><!-- Kim Morse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Laura Jackson</masterLabel>
+        <translation><!-- Laura Jackson --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Margaret Thomas</masterLabel>
+        <translation><!-- Margaret Thomas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Missy Bleich</masterLabel>
+        <translation><!-- Missy Bleich --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Support</masterLabel>
+        <translation><!-- No Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Patrick Wiley</masterLabel>
+        <translation><!-- Patrick Wiley --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rachel Gifford</masterLabel>
+        <translation><!-- Rachel Gifford --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sara Schmidt</masterLabel>
+        <translation><!-- Sara Schmidt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sarah McCaslin</masterLabel>
+        <translation><!-- Sarah McCaslin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shawn Cardinal</masterLabel>
+        <translation><!-- Shawn Cardinal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Subscription</masterLabel>
+        <translation><!-- Subscription --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Toby Schrecengost</masterLabel>
+        <translation><!-- Toby Schrecengost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Travis Sowash</masterLabel>
+        <translation><!-- Travis Sowash --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

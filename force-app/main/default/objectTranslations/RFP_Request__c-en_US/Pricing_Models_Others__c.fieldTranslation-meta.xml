@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please add pricing models for other/additional services proposed. --></help>
+    <label><!-- Pricing Models - Others --></label>
+    <name>Pricing_Models_Others__c</name>
+</CustomFieldTranslation>

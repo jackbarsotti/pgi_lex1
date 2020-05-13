@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReadyTalk_Contact_OnError_nochange</fullName>
+    <active>true</active>
+    <description>Since contact name is editable once the record is &quot;On Error&quot; it needs to not be changed.</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = &quot;ReadyTalk Contact&quot;,
+ ISPICKVAL(Status__c, &quot;AddError&quot;) ,
+
+OR (ISCHANGED( FirstName ),
+  ISCHANGED(LastName)
+))</errorConditionFormula>
+    <errorMessage>The contact name may not be changed when there is an error. Fix the phone error first.</errorMessage>
+</ValidationRule>

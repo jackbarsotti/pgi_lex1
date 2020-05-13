@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bill_To_Client__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>You must enter the ID of the Client record, Names will not return any result.</inlineHelpText>
+    <label>Bill To Client</label>
+    <referenceTo>PGi_Client__c</referenceTo>
+    <relationshipLabel>Cases (Bill To Client)</relationshipLabel>
+    <relationshipName>Cases_of_Bill_To</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If a Word file has been downloaded and is in use, Salesforce&apos;s version of the PDF is inaccurate and should not be available for download. --></help>
+    <label><!-- Word File In Use --></label>
+    <name>Word_File_In_Use__c</name>
+</CustomFieldTranslation>

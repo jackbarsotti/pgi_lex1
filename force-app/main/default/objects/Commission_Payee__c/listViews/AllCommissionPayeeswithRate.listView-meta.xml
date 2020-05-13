@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AllCommissionPayeeswithRate</fullName>
+    <columns>NAME</columns>
+    <columns>Inactive__c</columns>
+    <columns>Team__c</columns>
+    <columns>Commission_Base__c</columns>
+    <columns>Commission_Accelerator__c</columns>
+    <columns>Special_Bonus_Amounts__c</columns>
+    <columns>Special_Bonus_Multipliers__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Commission Payees with Rate</label>
+</ListView>

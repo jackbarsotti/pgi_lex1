@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pick_Change_Department</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <height>400</height>
+    <linkType>page</linkType>
+    <masterLabel>Pick/Change Billing Department</masterLabel>
+    <openType>sidebar</openType>
+    <page>ContactChangeBillingDepartment</page>
+    <protected>false</protected>
+</WebLink>

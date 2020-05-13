@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Provides chairperson (and co-presenters) with access to “Share Desktop,” “Share Applications,” and “Grant Control” options. --></help>
+    <label><!-- App Share Allowed --></label>
+    <name>App_Share_Allowed__c</name>
+</CustomFieldTranslation>

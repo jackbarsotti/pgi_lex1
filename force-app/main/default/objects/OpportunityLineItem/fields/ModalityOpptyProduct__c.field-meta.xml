@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ModalityOpptyProduct__c</fullName>
+    <externalId>false</externalId>
+    <formula>CONTAINS(PricebookEntry.Product_RecordType_Name__c, &#39;Modality&#39;)</formula>
+    <label>Modality Oppty Product</label>
+    <type>Checkbox</type>
+</CustomField>

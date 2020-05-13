@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The time the called ended in seconds since 01-01-1970 --></help>
+    <label><!-- CallEndEpoch --></label>
+    <name>CallEndEpoch__c</name>
+</CustomFieldTranslation>

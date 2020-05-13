@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Simulive_Playback_URL__c</fullName>
+    <description>CAUTION - USED IN INTEGRATIONS
+Field to hold the client&#39;s Simulive Playback URL.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Insert the client&#39;s Simulive Playback URL.  ReadyTalk Recording ONLY.</inlineHelpText>
+    <label>Simulive Playback URL</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>

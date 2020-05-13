@@ -1,0 +1,310 @@
+<apex:page language="en-US" showHeader="false" standardStylesheets="false">
+<style type="text/css">
+
+    body {
+        padding: 0px;
+        margin: 0px;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 13px;
+    }
+    
+    #preChatHeader {
+        display:inline-block;
+        background-color: #6ebe47;
+        text-align: center;
+        height: 24px;
+        line-height: 24px;
+        font-weight: bold;
+        color: #ffffff;
+        width: 100%;
+    }
+    
+    #preChatContainer {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-top: 4px;
+    }
+    
+    #preChatForm {
+        display: inline-block;
+        text-align: left;
+    }
+    
+    #preChatSubHeader, #messageText {
+        float: left;
+        margin: 8px;
+        padding-left: 4px;
+        padding-right: 4px;
+        font-weight: bold;
+        color: #666;
+    }
+    
+    input[type=text], input[type=email] {
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 13px;
+        width: 90%;
+        padding-left: 4px;
+        padding-right: 4px;
+        display: inline-block;
+        box-shadow: none;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        border: 1px solid;
+        border-radius: 4px;
+        border-color: #D3D3D3;
+        color: #4D4D4D;
+        height: 24px;
+    }
+    
+    input:hover, textarea:hover, button:hover, input:focus, textarea:focus, button:focus {
+        outline: none;
+        border-color: #52a32c;
+    }
+    
+    textarea {
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 13px;
+        margin-right: 0px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        border: 1px solid;
+        border-radius: 4px;
+        border-color: #D3D3D3;
+        box-shadow: none;
+        text-indent: 0;
+        padding: 4px;
+        color: #4D4D4D;
+        resize: vertical;
+        overflow: auto;
+        width: 90%;
+        max-height: 220px;
+    }
+    
+    button {
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        margin-top: 10px;
+        padding: 4px;
+        text-align: center;
+        border: 1px solid #52a32c;
+        border-radius: 4px;
+        color: #ffffff;
+        background-color: #6ebe47;
+        width: 70%;
+        height: 30px;
+        font-weight: bold;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 13px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #7bcb53;
+        cursor: pointer;
+    }
+    
+    input:-webkit-autofill, textarea:-webkit-autofill {
+        border-color: #D3D3D3;
+        -webkit-text-fill-color: #4D4D4D;
+        -webkit-box-shadow: 0 0 0px 1000px #FFF inset;
+        transition: background-color 5000s ease-in-out 0s;
+        font-family: Verdana, Geneva, sans-serif;
+    }
+    
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus {
+        border-color: orange;
+        -webkit-text-fill-color: #52a32c;
+        -webkit-box-shadow: 0 0 0px 1000px #FFF inset;
+        transition: background-color 5000s ease-in-out 0s;
+        font-family: Verdana, Geneva, sans-serif;
+    }  
+    
+    .input-error{
+        display: none;
+        color: red;
+    }
+
+</style>
+
+
+<script type="text/javascript">
+(function() { 
+  function handlePageLoad() {
+    var endpointMatcher = new RegExp("[\\?\\&]endpoint=([^&#]*)");
+    document.getElementById('pre_chat_form').setAttribute('action',
+    decodeURIComponent(endpointMatcher.exec(document.location.search)[1]));
+  } 
+  if (window.addEventListener) {
+    window.addEventListener('load', handlePageLoad, false);
+  } else { 
+    window.attachEvent('onload', handlePageLoad, false);
+  }
+})(); 
+</script>
+
+<div id="preChatHeader">
+{!$Label.chat_live_chat}
+</div>
+
+<div id="preChatContainer">
+<form id="pre_chat_form" method="post">
+
+<p id="preChatSubHeader">{!$Label.chat_Introduce_yourself}</p>
+<br />
+
+<div id="preChatFields">
+    <input id="fullName" placeholder="{!$Label.chat_Name}" name="liveagent.prechat:Name" type="text" style="border-style: 2px solid" /><br />
+    <div class="input-error"><a>{!$Label.chat_Please_provide_your_name}</a></div>
+
+    <input id="email" placeholder="{!$Label.chat_Email}" name="liveagent.prechat:Email" type="text"  /><br />
+    <div class="input-error"><a>{!$Label.chat_Please_provide_a_valid_email}</a></div>
+
+    <p id="messageText">{!$Label.chat_Message} </p><br />
+    <textarea name="liveagent.prechat:Message" id="message" form="pre_chat_form" rows="8" cols="60" maxlength="255" ></textarea><br />
+    <div class="input-error"><a>{!$Label.chat_Complete_this_field}</a></div>
+</div>
+
+
+<input type="hidden" name= "liveagent.prechat.save:Email" value= "Email_Address__c" />
+<input type="hidden" name= "liveagent.prechat.save:Message" value= "Subject__c" />
+<input type="hidden" name= "liveagent.prechat.save:Case Number" value= "Case_Number__c" />
+<input type="hidden" name= "liveagent.prechat.save:Name" id="liveagent.prechat.save:FullName" value= "Name__c" />
+<input type="hidden" name="liveagent.prechat:Status" value="New" />
+<input type="hidden" name="liveagent.prechat:CaseOrigin" value="Chat - In Product" />
+<!-- Sets case record type for the org -->
+<input type="hidden" name="liveagent.prechat:CaseRecordType" value="0121B000001hgNaQAI" />
+
+
+<!-- Lookup client record -->
+<input type="hidden" name="liveagent.prechat.findorcreate.map:Case"
+value="Subject,Message;Origin,CaseOrigin;RecordTypeId,CaseRecordType;CaseNumber,CaseNumber;"/>
+<input type="hidden" name="liveagent.prechat.findorcreate.map:PGi_Client__c"
+value="Client_Email__c,Email;" />
+
+
+<input type="hidden" name="liveagent.prechat.findorcreate.saveToTranscript:PGi_Client__c"
+value="PGi_Client__c" />
+
+<input type="hidden" name="liveagent.prechat.findorcreate.showOnCreate:PGi_Client__c"
+value="false" />
+
+
+<input name="liveagent.prechat.findorcreate.displayToAgent:Email" type="hidden" value="true" />
+<input name="liveagent.prechat.findorcreate.displayToAgent:Message" type="hidden" value="true" />
+<input name="liveagent.prechat.findorcreate.displayToAgent:CaseOrigin" type="hidden" value="false" />
+<input name="liveagent.prechat.findorcreate.displayToAgent:CaseRecordType" type="hidden" value="false" />
+<input name="liveagent.prechat.findorcreate.displayToAgent:Status" type="hidden" value="false" />
+<input name="liveagent.prechat.findorcreate.displayToAgent:Name" type="hidden" value="true" />
+
+</form>
+
+<div id="submitButton">
+    <button id="submitBtn" onclick="submitForm()">{!$Label.chat_Start_chatting}</button>
+</div>
+
+</div>
+
+<script type="text/javascript">
+var fullName = document.getElementById("fullName");
+var email = document.getElementById("email");
+var message = document.getElementById("message");
+var inputErrors = document.getElementsByClassName("input-error");
+
+var nameValid = false;
+var emailValid = false;
+var messageValid = false;
+var inputValid = false;
+
+var submitButton = document.getElementById("submitBtn");
+
+function checkValidInput() {
+    checkName();
+    checkEmail();
+    checkMessage();
+    
+    console.log(nameValid + " " + emailValid + " " + messageValid);
+
+    if (nameValid && emailValid && messageValid){
+        inputValid = true;
+    }
+    
+    else {
+        inputValid = false;
+    }
+}
+
+//Full Name check
+function checkName() {
+    console.log(fullName.value.length);
+    if  (fullName.value.length > 0) {
+        inputErrors[0].style.display = 'none';
+        nameValid = true;
+    }
+    
+    else {
+        inputErrors[0].style.display = 'block';
+        nameValid = false;
+    }
+}
+
+fullName.addEventListener("blur",checkName);
+
+//Email check
+function emailCheck(email) { 
+    return /^.+@.+\..+$/.test(email);
+}
+
+function checkEmail() {
+    emailValid = emailCheck(email.value);
+    console.log(emailValid);
+        if (emailValid){
+            inputErrors[1].style.display = 'none';
+        }
+        else {
+            inputErrors[1].style.display = 'block';
+        }
+}
+
+email.addEventListener("blur",checkEmail);
+
+//Message check
+function checkMessage(){
+    console.log(message.value.length);
+    if  (message.value.length > 0) {
+        inputErrors[2].style.display = 'none';
+        messageValid = true;
+    }
+    
+    else {
+        inputErrors[2].style.display = 'block';
+        messageValid = false;
+    }
+};
+
+message.addEventListener("blur",checkMessage);
+
+<!-- save inputs to session storage to create case for missed chats -->    
+    function submitForm() {
+       checkValidInput();
+       
+       if (inputValid) {
+           sessionStorage.clear();
+           sessionStorage.setItem("fullName", fullName.value);
+           sessionStorage.setItem("Email", email.value);
+           sessionStorage.setItem("Description", message.value);
+           
+           document.getElementById("pre_chat_form").submit();
+       }
+    }
+    
+</script>
+
+</apex:page>

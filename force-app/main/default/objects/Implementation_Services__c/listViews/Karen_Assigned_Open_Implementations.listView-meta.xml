@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Karen_Assigned_Open_Implementations</fullName>
+    <columns>NAME</columns>
+    <columns>Related_Account__c</columns>
+    <columns>Related_Opportunity__c</columns>
+    <columns>IST_Status__c</columns>
+    <columns>Implementation_Type__c</columns>
+    <columns>Technical_Specialist__c</columns>
+    <columns>Training_Specialist_Assigned__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>IST_Completed_Status__c</field>
+        <operation>equals</operation>
+        <value>Open</value>
+    </filters>
+    <filters>
+        <field>Implementation_Owner__c</field>
+        <operation>contains</operation>
+        <value>schade</value>
+    </filters>
+    <filters>
+        <field>Owner_Region__c</field>
+        <operation>equals</operation>
+        <value>NA</value>
+    </filters>
+    <label>Karen Assigned Open Implementations</label>
+    <language>en_US</language>
+</ListView>

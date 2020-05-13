@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_to_mimic__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>For new worker&#39;s account, can you please provide the name of an example user who&#39;s permissions we should mirror?</inlineHelpText>
+    <label>User to mimic</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Human_Resource_Forms1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

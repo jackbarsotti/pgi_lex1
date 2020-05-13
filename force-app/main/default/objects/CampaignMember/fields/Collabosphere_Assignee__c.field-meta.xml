@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Collabosphere_Assignee__c</fullName>
+    <description>These are the people assigned to reach out</description>
+    <externalId>false</externalId>
+    <label>Collabosphere Assignee</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Susan Burrows</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Susan Burrows</label>
+            </value>
+            <value>
+                <fullName>Elizabeth Bruns</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Elizabeth Bruns</label>
+            </value>
+            <value>
+                <fullName>Caitlin Giss</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Caitlin Giss</label>
+            </value>
+            <value>
+                <fullName>Stephen Ellington</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Stephen Ellington</label>
+            </value>
+            <value>
+                <fullName>Lauren Nunn</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Lauren Nunn</label>
+            </value>
+            <value>
+                <fullName>Katie Gaston</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Katie Gaston</label>
+            </value>
+            <value>
+                <fullName>Kevin Lewis</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Kevin Lewis</label>
+            </value>
+            <value>
+                <fullName>James Pulliam</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>James Pulliam</label>
+            </value>
+            <value>
+                <fullName>Daniel Borhanian</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>Daniel Borhanian</label>
+            </value>
+            <value>
+                <fullName>Millie Zhou</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Millie Zhou</label>
+            </value>
+            <value>
+                <fullName>Habib Daof</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>Habib Daof</label>
+            </value>
+            <value>
+                <fullName>Rula Marie</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>Rula Marie</label>
+            </value>
+            <value>
+                <fullName>Kate Thorne</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>Kate Thorne</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

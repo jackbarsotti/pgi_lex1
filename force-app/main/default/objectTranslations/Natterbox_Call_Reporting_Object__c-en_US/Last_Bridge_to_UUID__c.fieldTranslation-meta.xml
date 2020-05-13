@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Internal Use Only. If a call is bridged. This is the unique identifier to the call leg that was handed on to Natterbox. --></help>
+    <label><!-- Last Bridge to UUID --></label>
+    <name>Last_Bridge_to_UUID__c</name>
+</CustomFieldTranslation>

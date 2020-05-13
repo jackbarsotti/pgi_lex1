@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please include Street Address, City, State/Province, Zip/Postal Code, Country --></help>
+    <label><!-- Home Office Address --></label>
+    <name>Home_Office_Address__c</name>
+</CustomFieldTranslation>

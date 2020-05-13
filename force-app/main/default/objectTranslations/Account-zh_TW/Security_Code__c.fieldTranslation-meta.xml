@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter the 3 or 4 digit security code on the credit card --></help>
+    <label><!-- Credit Card Security Code --></label>
+    <name>Security_Code__c</name>
+</CustomFieldTranslation>

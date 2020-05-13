@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Who Took Action? --></label>
+    <name>Who_Took_Action__c</name>
+    <relationshipLabel><!-- PGi CSI (Who Took Action?) --></relationshipLabel>
+</CustomFieldTranslation>

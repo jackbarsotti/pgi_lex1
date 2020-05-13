@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- RT Campaign Type --></label>
+    <name>RT_Campaign_Type__c</name>
+    <picklistValues>
+        <masterLabel>Campaign</masterLabel>
+        <translation><!-- Campaign --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Campaign Follow Up</masterLabel>
+        <translation><!-- Campaign Follow Up --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Direct Mail</masterLabel>
+        <translation><!-- Direct Mail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email</masterLabel>
+        <translation><!-- Email --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Networking Event</masterLabel>
+        <translation><!-- Networking Event --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Online Ad</masterLabel>
+        <translation><!-- Online Ad --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ReadyTalk Event</masterLabel>
+        <translation><!-- ReadyTalk Event --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Telemarketing</masterLabel>
+        <translation><!-- Telemarketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tradeshow</masterLabel>
+        <translation><!-- Tradeshow --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Training</masterLabel>
+        <translation><!-- Training --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web Seminar</masterLabel>
+        <translation><!-- Web Seminar --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

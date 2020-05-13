@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Audio_Dialout_No</fullName>
+    <active>false</active>
+    <description>If Dailout = No, then additional detail needed</description>
+    <errorConditionFormula>AND
+(
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+ISPICKVAL( Dial_Out__c , &#39;No&#39;),
+ISBLANK (  User_s_Number_Dialed_From__c ),
+ISBLANK (  Conference_Number_Dialed__c  )
+)</errorConditionFormula>
+    <errorMessage>You must provide the User&#39;s Number Dialed From &amp; Conference Number Dialed</errorMessage>
+</ValidationRule>

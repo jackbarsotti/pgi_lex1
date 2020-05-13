@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Skill_Call__c</fullName>
+    <externalId>false</externalId>
+    <formula>Skill.MasterLabel = &quot;2nd&quot;
+||
+Skill.MasterLabel = &quot;AL&quot;
+||
+Skill.MasterLabel = &quot;Comm&quot;
+||
+Skill.MasterLabel = &quot;Comm Basic&quot;
+||
+Skill.MasterLabel = &quot;DO&quot;
+||
+Skill.MasterLabel = &quot;EP Basic Support&quot;
+||
+Skill.MasterLabel = &quot;Event Lead&quot;
+||
+Skill.MasterLabel = &quot;FTNOE&quot;
+||
+Skill.MasterLabel = &quot;Lead Basic&quot;
+||
+Skill.MasterLabel = &quot;NOE&quot;
+||
+Skill.MasterLabel = &quot;Passdown&quot;
+||
+Skill.MasterLabel = &quot;PCE Lead&quot;
+||
+Skill.MasterLabel = &quot;Polling&quot;
+||
+Skill.MasterLabel = &quot;RT Commline&quot;
+||
+Skill.MasterLabel = &quot;Senior Lead&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Skill - Call</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

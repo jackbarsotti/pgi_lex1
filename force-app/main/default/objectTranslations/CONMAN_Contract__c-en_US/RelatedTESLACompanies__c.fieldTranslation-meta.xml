@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- A list of each TESLA company that is connected to this contract.  If adding or removing multiple Company IDs please ensure they are separated by a comma. --></help>
+    <label><!-- Related TESLA Companies --></label>
+    <name>RelatedTESLACompanies__c</name>
+</CustomFieldTranslation>

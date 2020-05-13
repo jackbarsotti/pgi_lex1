@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_FinReq__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>Does this relate to another FinReq</inlineHelpText>
+    <label>Related FinReq</label>
+    <referenceTo>Financial_Request__c</referenceTo>
+    <relationshipLabel>Financial Requests</relationshipLabel>
+    <relationshipName>Financial_Requests</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

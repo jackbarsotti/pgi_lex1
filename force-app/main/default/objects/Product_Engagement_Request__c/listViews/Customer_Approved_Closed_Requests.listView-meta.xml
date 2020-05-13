@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Approved_Closed_Requests</fullName>
+    <columns>NAME</columns>
+    <columns>PGi_Product__c</columns>
+    <columns>Status__c</columns>
+    <columns>Related_Account__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Customer_Approved__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Approved,Closed Completed,Closed Rejected</value>
+    </filters>
+    <label>Customer Approved, Closed Requests</label>
+    <language>en_US</language>
+</ListView>

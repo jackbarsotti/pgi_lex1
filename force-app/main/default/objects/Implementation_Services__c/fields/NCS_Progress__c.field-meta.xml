@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NCS_Progress__c</fullName>
+    <externalId>false</externalId>
+    <label>NCS Progress</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>sc1_1</fullName>
+                <default>false</default>
+                <label>Section 1: Company Info</label>
+            </value>
+            <value>
+                <fullName>sc1_p</fullName>
+                <default>false</default>
+                <label>Section 1: Partners</label>
+            </value>
+            <value>
+                <fullName>sc1_2</fullName>
+                <default>false</default>
+                <label>Section 1: Bill-to</label>
+            </value>
+            <value>
+                <fullName>sc1_3</fullName>
+                <default>false</default>
+                <label>Section 1: Portal Admin/Cloud Control/Agenday Admin Client</label>
+            </value>
+            <value>
+                <fullName>sc1_4</fullName>
+                <default>false</default>
+                <label>Section 1: Audio and GlobalMeet (includes License and Per Minute)</label>
+            </value>
+            <value>
+                <fullName>sc1_5</fullName>
+                <default>false</default>
+                <label>Section 1: iMeet</label>
+            </value>
+            <value>
+                <fullName>sc1_6</fullName>
+                <default>false</default>
+                <label>Section 1: Agenday</label>
+            </value>
+            <value>
+                <fullName>sc1_7</fullName>
+                <default>false</default>
+                <label>Section 1: Video Services</label>
+            </value>
+            <value>
+                <fullName>sc1_8</fullName>
+                <default>false</default>
+                <label>Section 1: UCaaS</label>
+            </value>
+            <value>
+                <fullName>sc1_8cpe</fullName>
+                <default>false</default>
+                <label>Section 1: UCaaS CPEs</label>
+            </value>
+            <value>
+                <fullName>sc2_1</fullName>
+                <default>false</default>
+                <label>Section 2: Invoice Format &amp; Layout Options</label>
+            </value>
+            <value>
+                <fullName>sc3_1</fullName>
+                <default>false</default>
+                <label>Section 3: Rate Information</label>
+            </value>
+            <value>
+                <fullName>sc4_1</fullName>
+                <default>false</default>
+                <label>Section 4: Sales Info</label>
+            </value>
+            <value>
+                <fullName>scA</fullName>
+                <default>false</default>
+                <label>Finale: Signed Agreement</label>
+            </value>
+            <value>
+                <fullName>Ready</fullName>
+                <default>false</default>
+                <label>Ready</label>
+            </value>
+            <value>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+                <label>Submitted</label>
+            </value>
+            <value>
+                <fullName>Pending Provisioning</fullName>
+                <default>false</default>
+                <label>Pending Provisioning</label>
+            </value>
+            <value>
+                <fullName>Provisioning: Success</fullName>
+                <default>false</default>
+                <label>Provisioning: Success</label>
+            </value>
+            <value>
+                <fullName>Provisioning: Failure</fullName>
+                <default>false</default>
+                <label>Provisioning: Failure</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

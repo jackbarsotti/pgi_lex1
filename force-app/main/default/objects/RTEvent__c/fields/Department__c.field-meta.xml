@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Department__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Department</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Department__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <filterItems>
+            <field>Department__c.Parent_Account__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Account__c</valueField>
+        </filterItems>
+        <infoMessage>Only showing active departments for the account associated with the RT Event record.</infoMessage>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Department__c</referenceTo>
+    <relationshipLabel>RT Events (Department)</relationshipLabel>
+    <relationshipName>RT_Events1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

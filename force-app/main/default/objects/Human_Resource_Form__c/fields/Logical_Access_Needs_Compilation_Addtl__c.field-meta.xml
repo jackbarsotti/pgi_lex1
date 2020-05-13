@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Logical_Access_Needs_Compilation_Addtl__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(INCLUDES(Logical_Access_Needs__c,&quot;CareToolbox&quot;),&quot;CareToolbox&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;CareToolbox access&quot;),&quot;CareToolbox access&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;Citrix&quot;),&quot;Citrix&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;Clarical TaskMgr&quot;),&quot;Clarical TaskMgr&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;DID&quot;),&quot;DID&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;ECRM&quot;),&quot;ECRM&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;Email Account&quot;),&quot;Email Account&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;Field Expert&quot;),&quot;Field Expert&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;Global Admin Login&quot;),&quot;Global Admin Login&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;GM Account&quot;),&quot;GM Account&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;GM Comments&quot;),&quot;GM Comments&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;Group Chat&quot;),&quot;Group Chat&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot; Group Mailbox/DistroList&quot;),&quot; Group Mailbox/DistroList&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;Hub&quot;),&quot;Hub&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;IGLOO&quot;),&quot;IGLOO&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;iMeet Central&quot;),&quot;iMeet Central&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;MS Communicator&quot;),&quot;MS Communicator&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;MyInfo&quot;),&quot;MyInfo&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;Online Reporting Res-BI&quot;),&quot;Online Reporting Res-BI&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;PGiLife&quot;),&quot;PGiLife&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;PGiUniversity&quot;),&quot;PGiUniversity&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;PGiKNOW-All Access&quot;),&quot;PGiKNOW-All Access&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;Premiere ClientID_GM2 acct(notes)&quot;),&quot;Premiere ClientID_GM2 acct(notes)&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;Premiere Login&quot;),&quot;Premiere Login&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;Quality Review Site-Mgmt&quot;),&quot;Quality Review Site-Mgmt&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;SF Five9&quot;),&quot;SF Five9&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;SF Folders-Reports&quot;),&quot;SF Folders-Reports&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;Shared Drive/Folder(drivepath)&quot;),&quot;Shared Drive/Folder(drivepath)&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;Sharepoint&quot;),&quot;Sharepoint&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;Slack&quot;),&quot;Slack&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;SlideAssist&quot;),&quot;SlideAssist&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;SumoLogic&quot;),&quot;SumoLogic&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;Voipmonitor&quot;),&quot;Voipmonitor&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;VPN Software Install&quot;),&quot;VPN Software Install&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;WebHomer&quot;),&quot;WebHomer&quot;+&quot;,&quot;,NULL)+
+IF(INCLUDES(Logical_Access_Needs__c,&quot;WordPress Knowledge Site&quot;),&quot;WordPress Knowledge Site&quot;+&quot;,&quot;,NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Logical Access Needs Compilation Addtl</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

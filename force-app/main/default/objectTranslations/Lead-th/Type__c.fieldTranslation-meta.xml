@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>Agency</masterLabel>
+        <translation><!-- Agency --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enterprise</masterLabel>
+        <translation><!-- Enterprise --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Free Service</masterLabel>
+        <translation><!-- Free Service --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketers</masterLabel>
+        <translation><!-- Marketers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prospect</masterLabel>
+        <translation><!-- Prospect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Self Service</masterLabel>
+        <translation><!-- Self Service --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vendor</masterLabel>
+        <translation><!-- Vendor --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

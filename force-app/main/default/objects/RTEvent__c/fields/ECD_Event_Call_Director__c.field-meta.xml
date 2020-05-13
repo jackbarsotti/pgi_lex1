@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ECD_Event_Call_Director__c</fullName>
+    <description>CAUTION - USED IN INTEGRATIONS
+Host Controls is an add-on service for Premium level Operator-Assisted audio conferences. It is an online tool that enables the meeting organizer to view who has joined the call, manage the question queue during Q&amp;A ,and chat with the conference operator.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select &quot;Yes&quot; if an ECD has been requested for this event.</inlineHelpText>
+    <label>Host Controls</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>true</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

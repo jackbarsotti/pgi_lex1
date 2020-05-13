@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_billing_id_must_exist_to_be_prov</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( Parent_Ind_ID__c=&quot;&quot;, Provision__c, $User.Id &lt;&gt; &quot;00550000000zIkL&quot;, $User.Id &lt;&gt; &quot;00550000000yfEe&quot;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot; )</errorConditionFormula>
+    <errorMessage>Subscription cannot be provisioned at this time. Please notify your system administrator.</errorMessage>
+</ValidationRule>

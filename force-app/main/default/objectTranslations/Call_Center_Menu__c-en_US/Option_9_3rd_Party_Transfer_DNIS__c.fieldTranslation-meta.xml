@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Option 9 3rd Party Transfer DNIS --></label>
+    <name>Option_9_3rd_Party_Transfer_DNIS__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>PGi Contract Verbiage</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>PGi Contract Verbiage</value>
+    </caseValues>
+    <layouts>
+        <layout>PGi Contract Verbiage Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You are not allowed to make these updates. Please contact the Legal Team. --></errorMessage>
+        <name>PGI_Pricing_Team_Changes_Allowed</name>
+    </validationRules>
+</CustomObjectTranslation>

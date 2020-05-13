@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deployment__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is to help understand and report on deployment opportunities.  So whether it is a POC, Initial Deployment or an expansion of an existing deployment.  Where the opportunity is for ad-hoc services, support or hardware, you can just select No.</inlineHelpText>
+    <label>Deployment Opportunity</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>POC</fullName>
+                <default>false</default>
+                <label>POC / Pilot</label>
+            </value>
+            <value>
+                <fullName>Initial Deployment</fullName>
+                <default>false</default>
+                <label>Initial Deployment</label>
+            </value>
+            <value>
+                <fullName>Extended User Estate</fullName>
+                <default>false</default>
+                <label>Extended User Estate</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

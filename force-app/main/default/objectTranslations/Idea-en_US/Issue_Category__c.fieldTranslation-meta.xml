@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Issue Category --></label>
+    <name>Issue_Category__c</name>
+    <picklistValues>
+        <masterLabel>Billing</masterLabel>
+        <translation><!-- Billing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cancellation process</masterLabel>
+        <translation><!-- Cancellation process --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Care</masterLabel>
+        <translation><!-- Care --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Corp IT</masterLabel>
+        <translation><!-- Corp IT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer Complaint</masterLabel>
+        <translation><!-- Customer Complaint --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customization Issue</masterLabel>
+        <translation><!-- Customization Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Education Needed</masterLabel>
+        <translation><!-- Education Needed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Executive Leadership</masterLabel>
+        <translation><!-- Executive Leadership --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Finance</masterLabel>
+        <translation><!-- Finance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Funding</masterLabel>
+        <translation><!-- Funding --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>General Concern</masterLabel>
+        <translation><!-- General Concern --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HR</masterLabel>
+        <translation><!-- HR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Legal</masterLabel>
+        <translation><!-- Legal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing</masterLabel>
+        <translation><!-- Marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>None</masterLabel>
+        <translation><!-- None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ops</masterLabel>
+        <translation><!-- Ops --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ownership of Process</masterLabel>
+        <translation><!-- Ownership of Process --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Process Bad</masterLabel>
+        <translation><!-- Process Bad --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product</masterLabel>
+        <translation><!-- Product --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Provisioning</masterLabel>
+        <translation><!-- Provisioning --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quote &amp; Ordering Process</masterLabel>
+        <translation><!-- Quote &amp; Ordering Process --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RD</masterLabel>
+        <translation><!-- RD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reporting</masterLabel>
+        <translation><!-- Reporting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales</masterLabel>
+        <translation><!-- Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>System Issues</masterLabel>
+        <translation><!-- System Issues --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tech</masterLabel>
+        <translation><!-- Tech --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tickets</masterLabel>
+        <translation><!-- Tickets --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

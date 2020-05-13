@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITF_Addon_rate_non_neg</fullName>
+    <active>true</active>
+    <errorConditionFormula>ITF_Add_on_Rate__c &lt; 0</errorConditionFormula>
+    <errorDisplayField>ITF_Add_on_Rate__c</errorDisplayField>
+    <errorMessage>ITF Add-on Rate must be &gt;= 0.00</errorMessage>
+</ValidationRule>

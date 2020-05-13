@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Source_Most_Recent__c</fullName>
+    <externalId>false</externalId>
+    <label>Lead Source Most Recent</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Contact Us</fullName>
+                <default>false</default>
+                <label>Contact Us</label>
+            </value>
+            <value>
+                <fullName>Content Download</fullName>
+                <default>false</default>
+                <label>Content Download</label>
+            </value>
+            <value>
+                <fullName>Demo Request</fullName>
+                <default>false</default>
+                <label>Demo Request</label>
+            </value>
+            <value>
+                <fullName>Freemium</fullName>
+                <default>false</default>
+                <label>Freemium</label>
+            </value>
+            <value>
+                <fullName>Free Trial - Webcast</fullName>
+                <default>false</default>
+                <label>Free Trial - Webcast</label>
+            </value>
+            <value>
+                <fullName>Lead Gen: BDR</fullName>
+                <default>false</default>
+                <label>Lead Gen: BDR</label>
+            </value>
+            <value>
+                <fullName>Lead Gen: Buyer Insights</fullName>
+                <default>false</default>
+                <label>Lead Gen: Buyer Insights</label>
+            </value>
+            <value>
+                <fullName>Lead Gen: Content Syndication</fullName>
+                <default>false</default>
+                <label>Lead Gen: Content Syndication</label>
+            </value>
+            <value>
+                <fullName>Lead Gen: Events</fullName>
+                <default>false</default>
+                <label>Lead Gen: Events</label>
+            </value>
+            <value>
+                <fullName>Lead Gen: HQL</fullName>
+                <default>false</default>
+                <label>Lead Gen: HQL</label>
+            </value>
+            <value>
+                <fullName>Lead Gen: Other</fullName>
+                <default>false</default>
+                <label>Lead Gen: Other</label>
+            </value>
+            <value>
+                <fullName>Lead Gen: Referral</fullName>
+                <default>false</default>
+                <label>Lead Gen: Referral</label>
+            </value>
+            <value>
+                <fullName>Lead Gen: Webinar</fullName>
+                <default>false</default>
+                <label>Lead Gen: Webinar</label>
+            </value>
+            <value>
+                <fullName>Web: Press Release</fullName>
+                <default>false</default>
+                <label>Web: Press Release</label>
+            </value>
+            <value>
+                <fullName>Web Chat</fullName>
+                <default>false</default>
+                <label>Web Chat</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

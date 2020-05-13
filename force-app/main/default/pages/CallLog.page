@@ -1,0 +1,128 @@
+<apex:page showHeader="true" sidebar="true" standardController="Call_Log__c" extensions="CallLogExtension">
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.1.js"></script>
+	<apex:stylesheet value="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+	<style>
+		textarea {
+			font-family: 'Arial', 'Helvetica', sans-serif;
+			font-size: 100%;
+			width: 85%;
+		}
+
+		.call-script {
+			font-family: 'Arial', 'Helvetica', sans-serif;
+			font-size: 16px;
+
+		}
+
+		.bold {
+			font-weight: bold;
+		}
+
+		.wide {
+			width: 50% !important;
+		}
+
+		.narrow {
+			width: 25%;
+		}
+	</style>
+
+	<apex:pageMessages id="pm" />
+	<apex:form id="form">
+		<apex:pageBlock >
+
+			<apex:pageBlockButtons >
+				<apex:commandButton title="Save" action="{!createCallLog}" value="Save" reRender="pm" />
+			</apex:pageBlockButtons>
+			<div class="call-script">
+				Call Script:
+				<span class="bold">{!Call_Log__c.Call_Script__c}</span>
+			</div>
+			<br/>
+
+			<apex:repeat id="r1" value="{!layoutSections}" var="section">
+				<apex:pageBlockSection title="{!section.Name}" collapsible="{!section.allowCollapse}" columns="{!section.columns}" id="pbs">
+					<apex:repeat value="{!section.layoutFields}" var="lf">
+						<apex:pageblocksectionitem helpText="{!IF(not(lf.isPlaceholder), $ObjectType.Call_Log__c.fields[lf.ApiName].InlineHelpText, '')}"
+						 rendered="{!IF(lf.ApiName == '' || LOWER(lf.ApiName) == 'call_script__c', false, true)}">
+							<apex:outputLabel value="{!lf.Label}" for="fInput" />
+							<apex:outputPanel styleClass="{!IF(lf.required, 'requiredInput', 'notarequiredinput')}" layout="block">
+								<apex:outputPanel styleClass="{!IF(lf.required, 'requiredBlock', 'notarequiredinput')}" layout="block" />
+								<!--  {!lf.editableForNew}
+		                        {!lf.ApiName}
+		                        {!lf.isPlaceholder} -->
+
+								<apex:inputField value="{!Call_Log__c[lf.ApiName]}" rendered="{!IF(lf.ApiName != '' && !lf.editableForNew && !lf.isPlaceholder, false, true)}"
+								 id="fInput" html-inputName="{!lf.ApiName}__input" required="{!IF(lf.required, true, false)}">
+									<apex:actionSupport event="onchange" onsubmit="setClientInfo();return false;" rendered="{!lf.ApiName == 'PGi_Client__c'}"
+									/>
+								</apex:inputField>
+
+								<apex:outputField value="{!Call_Log__c[lf.ApiName]}" rendered="{!lf.ApiName != '' && (lf.isPlaceholder || !lf.editableForNew)}"
+								/>
+							</apex:outputPanel>
+						</apex:pageblocksectionitem>
+
+					</apex:repeat>
+				</apex:pageBlockSection>
+			</apex:repeat>
+
+		</apex:pageBlock>
+	</apex:form>
+	<!--RT-228-->
+	<script>
+
+		var j$ = jQuery.noConflict();
+		var clientFieldId, companyFieldId;
+		var getFieldIds = function () {
+			try {
+				clientFieldId = j$('[inputname="PGi_Client__c__input"]')[0].id;
+				companyFieldId = j$('[inputname="PGi_Company__c__input"]')[0].id;
+			} catch (exception) {
+
+			}
+		}
+		var setClientInfo = function () {
+			var clientId = j$('[id="' + clientFieldId + '_lkid"]').val();
+			if (clientId == undefined) {
+				clientId = '';
+			}
+			var clientValue = j$('[id="' + clientFieldId + '"]').val();
+			if (clientValue == undefined) {
+				clientValue = '';
+			}
+			Visualforce.remoting.Manager.invokeAction(
+				'{!$RemoteAction.CallLogExtension.getClientInfo}', clientValue, clientId,
+				function (result, event) {
+					if (event.status) {
+						if (result != null) {
+							result.PGi_Company__c = result.PGi_Company__c || '';
+							if (result.PGi_Company__c != '') {
+								j$('[id="' + companyFieldId + '"]').val(result.PGi_Company__r.Name);
+								j$('[id="' + companyFieldId + '_lkid"]').val(result.PGi_Company__c);
+							}
+						}
+					}
+				}, { escape: true }
+			);
+		}
+
+		var pageLoad = window.onload;
+		try {
+			window.onload = function () {
+				if (pageLoad && typeof pageLoad == 'function') {
+					getFieldIds(); //store IDs
+					setClientInfo();
+					pageLoad();
+				} else {
+					getFieldIds();
+					setClientInfo();
+				}
+
+			}
+		} catch (e) {
+			console.log('ERROR: ', e);
+		}
+	</script>
+</apex:page>

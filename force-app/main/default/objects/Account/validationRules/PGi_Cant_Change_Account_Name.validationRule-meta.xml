@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Cant_Change_Account_Name</fullName>
+    <active>true</active>
+    <description>Cannot change the Account Name on unmatched or unidentified regional accounts. These are read only accounts.</description>
+    <errorConditionFormula>/* DO NOT ever add the override validation rule*/
+
+AND(
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;, 
+CONTAINS(RecordType.Name, &quot;PGi&quot;), 
+OR(
+AND(
+ISCHANGED(Name),
+NOT( $Setup.BypassRules__c.Disable_Validation_Rules__c),
+OR(
+UPPER(PRIORVALUE(Name)) = &quot;NA UNMATCH&quot;,
+UPPER(PRIORVALUE(Name)) = &quot;APAC UNMATCH&quot;,
+UPPER(PRIORVALUE(Name)) = &quot;EMEA UNMATCH&quot;,
+UPPER(PRIORVALUE(Name)) = &quot;UNIDENTIFIED REGION ACCOUNT&quot;,
+UPPER(Name) = &quot;NA UNMATCH&quot;,
+UPPER(Name) = &quot;APAC UNMATCH&quot;,
+UPPER(Name) = &quot;EMEA UNMATCH&quot;,
+UPPER(Name) = &quot;UNIDENTIFIED REGION ACCOUNT&quot;
+)
+),
+AND(
+ISNEW(),
+OR(
+UPPER(Name) = &quot;NA UNMATCH&quot;,
+UPPER(Name) = &quot;APAC UNMATCH&quot;,
+UPPER(Name) = &quot;EMEA UNMATCH&quot;,
+UPPER(Name) = &quot;UNIDENTIFIED REGION ACCOUNT&quot;
+)
+)
+)
+)</errorConditionFormula>
+    <errorMessage>We are not allowed to Create/Modify the exceptional account buckets with name starts with &#39;NA Unmatch&#39;, &#39;APAC Unmatch&#39;, &#39;EMEA Unmatch&#39;, &#39;Unidentified Region Account&#39;. These are read only accounts.</errorMessage>
+</ValidationRule>

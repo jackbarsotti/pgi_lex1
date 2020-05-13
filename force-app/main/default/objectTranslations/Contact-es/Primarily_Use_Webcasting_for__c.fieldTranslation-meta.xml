@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Primarily Use Webcasting for: --></label>
+    <name>Primarily_Use_Webcasting_for__c</name>
+    <picklistValues>
+        <masterLabel>Crisis Communications</masterLabel>
+        <translation><!-- Crisis Communications --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>External Communication</masterLabel>
+        <translation><!-- External Communication --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Internal Communication</masterLabel>
+        <translation><!-- Internal Communication --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Investor Relations, Continuing Education</masterLabel>
+        <translation><!-- Investor Relations, Continuing Education --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lead Generation</masterLabel>
+        <translation><!-- Lead Generation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product Marketing</masterLabel>
+        <translation><!-- Product Marketing --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

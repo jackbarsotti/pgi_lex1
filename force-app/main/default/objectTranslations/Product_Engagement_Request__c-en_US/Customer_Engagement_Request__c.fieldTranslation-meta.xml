@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Customer Engagement Request --></label>
+    <name>Customer_Engagement_Request__c</name>
+    <picklistValues>
+        <masterLabel>Customer Specific Request</masterLabel>
+        <translation><!-- Customer Specific Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Feature Acceleration Request</masterLabel>
+        <translation><!-- Feature Acceleration Request --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Base amount charged for 100 participants, 60 minutes. --></help>
+    <label><!-- Broadcast Audio Base Amount --></label>
+    <name>Broadcast_Audio_Base_Amount__c</name>
+</CustomFieldTranslation>

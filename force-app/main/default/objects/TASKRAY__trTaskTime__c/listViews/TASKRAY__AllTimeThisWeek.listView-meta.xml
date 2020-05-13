@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TASKRAY__AllTimeThisWeek</fullName>
+    <columns>NAME</columns>
+    <columns>TASKRAY__Task__c</columns>
+    <columns>TASKRAY__Date__c</columns>
+    <columns>TASKRAY__Hours__c</columns>
+    <columns>TASKRAY__Billable__c</columns>
+    <columns>TASKRAY__Owner__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>TASKRAY__Date__c</field>
+        <operation>equals</operation>
+        <value>THIS_WEEK</value>
+    </filters>
+    <label>All Time (This Week)</label>
+</ListView>

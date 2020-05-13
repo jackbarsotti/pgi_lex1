@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Purchase Goal --></label>
+    <name>Purchase_Goal__c</name>
+    <picklistValues>
+        <masterLabel>Has a system in place and not looking to upgrade</masterLabel>
+        <translation><!-- Has a system in place and not looking to upgrade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Has a system in place and would consider an upgrade</masterLabel>
+        <translation><!-- Has a system in place and would consider an upgrade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Plans to purchase a system now or the near future</masterLabel>
+        <translation><!-- Plans to purchase a system now or the near future --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

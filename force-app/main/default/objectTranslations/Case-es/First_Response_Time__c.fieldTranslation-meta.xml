@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The time the first email is sent to the customer from an agent --></help>
+    <label><!-- First Response Time --></label>
+    <name>First_Response_Time__c</name>
+</CustomFieldTranslation>

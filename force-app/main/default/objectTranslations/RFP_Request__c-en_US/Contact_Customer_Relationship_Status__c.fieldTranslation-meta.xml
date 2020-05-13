@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Are they happy with our services? If unhappy, please describe issues and resolutions. --></help>
+    <label><!-- Contact/Customer Relationship Status --></label>
+    <name>Contact_Customer_Relationship_Status__c</name>
+</CustomFieldTranslation>

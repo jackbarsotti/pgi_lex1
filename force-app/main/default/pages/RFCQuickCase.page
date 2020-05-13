@@ -1,0 +1,11 @@
+<!-- DEPRECATED 5-14-19 
+<apex:page standardController="Case" recordSetVar="cases" tabStyle="Case" extensions="RFCQuickCaseController" action="{!init}">
+	<apex:pageMessages />
+	<apex:form >
+		<apex:commandButton title="Go Back" action="{!goBack}" value="Go Back" />
+	</apex:form>
+</apex:page>
+-->
+<apex:page showHeader="true" sidebar="false" >
+	
+</apex:page>

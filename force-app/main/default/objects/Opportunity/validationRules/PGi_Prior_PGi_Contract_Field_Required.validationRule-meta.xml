@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Prior_PGi_Contract_Field_Required</fullName>
+    <active>true</active>
+    <description>If Record Type &lt;&gt; Renewal and Opportunity Deal Type &lt;&gt; New Business, then the Prior PGi Contract field is required.</description>
+    <errorConditionFormula>AND(
+ $User.ProfileId != &quot;00e30000001kms9&quot;,
+ RecordType.Id = &quot;01213000001NeTgAAK&quot;,
+ NOT(ISPICKVAL(Opportunity_Deal_Type__c, &quot;New Business&quot;)),
+ ISBLANK(Prior_PGi_Contract__c) = TRUE
+)</errorConditionFormula>
+    <errorDisplayField>Prior_PGi_Contract__c</errorDisplayField>
+    <errorMessage>The &quot;Prior PGi Contract&quot; field is required.</errorMessage>
+</ValidationRule>

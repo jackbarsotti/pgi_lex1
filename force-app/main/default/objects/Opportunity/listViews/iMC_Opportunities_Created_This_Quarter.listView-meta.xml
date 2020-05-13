@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>iMC_Opportunities_Created_This_Quarter</fullName>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.PROBABILITY</columns>
+    <columns>OPPORTUNITY.FORECAST_CATEGORY</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>OPPORTUNITY.TYPE</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.iMC_Opportunity,Opportunity.iMC_Renewal_Opportunity</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CLOSE_DATE</field>
+        <operation>equals</operation>
+        <value>THIS_QUARTER</value>
+    </filters>
+    <label>iMC Opportunities Created This Quarter</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>iMC_All_iMC_Users</group>
+    </sharedTo>
+</ListView>

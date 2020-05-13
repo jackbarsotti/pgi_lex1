@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Webcast Essentials Overage Fee that is assessed on a per participant/per webcast basis --></help>
+    <label><!-- Webcast Essentials Overage Per Person --></label>
+    <name>Webcast_Essentials_Overage_Per_Person__c</name>
+</CustomFieldTranslation>

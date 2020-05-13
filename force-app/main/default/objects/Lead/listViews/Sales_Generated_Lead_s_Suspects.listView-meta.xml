@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Generated_Lead_s_Suspects</fullName>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>LEAD.RATING</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.TITLE</columns>
+    <columns>Department__c</columns>
+    <columns>LEAD.EMPLOYEES</columns>
+    <columns>LEAD.ANNUAL_REVENUE</columns>
+    <columns>LEAD.INDUSTRY</columns>
+    <columns>Role__c</columns>
+    <columns>LEAD.STATE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Disqualified,Active Opportunity</value>
+    </filters>
+    <filters>
+        <field>Global_MQL__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>My Leads (Sales Generated)</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinates>PGi_Channel_C_Level</roleAndSubordinates>
+    </sharedTo>
+</ListView>

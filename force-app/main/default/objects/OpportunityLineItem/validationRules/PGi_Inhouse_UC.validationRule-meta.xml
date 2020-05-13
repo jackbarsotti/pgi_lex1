@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Inhouse_UC</fullName>
+    <active>true</active>
+    <description>If a rep trys to sell PGi UC products on a deal that is not UpSell and was created after 1/20/20 then they will be blocked, they must sell TPC UC products.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Product2.Family,&quot;Unified Communications&quot;),
+DATEVALUE(Opportunity.CreatedDate) &gt;= DATE (2020,01,20),
+NOT(ISPICKVAL(Opportunity.Opportunity_Deal_Type__c,&quot;Up-Sell (Rev Increase)&quot;)),
+Opportunity.RecordType.Name = &quot;PGi Opportunity&quot;
+)</errorConditionFormula>
+    <errorMessage>PGi&#39;s UCaaS Products are not allowed to be sold anymore for new business deals, please select a TPX UCaaS Product offering.</errorMessage>
+</ValidationRule>

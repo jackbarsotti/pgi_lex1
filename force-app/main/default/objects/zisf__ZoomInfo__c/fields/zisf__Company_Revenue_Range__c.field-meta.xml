@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>zisf__Company_Revenue_Range__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Revenue range associated with Company.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Revenue range associated with Company.</inlineHelpText>
+    <label>Company Revenue Range</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

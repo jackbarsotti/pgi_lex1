@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Cant_Qualify_Without_Product</fullName>
+    <active>false</active>
+    <description>Requires leads to have the Initial Product Interest field populated before the status can be set to Qualifying</description>
+    <errorConditionFormula>AND(
+$User.Alias &lt;&gt; &quot;autocln&quot;,
+CONTAINS(RecordType.Name, &quot;PGi&quot;), 
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;, 
+ISBLANK(TEXT(Product_Interest__c)),
+ISPICKVAL(Status, &quot;Qualifying&quot;), 
+$User.Override_Validation_Rules__c = False,
+NOT($Setup.BypassRules__c.Disable_Validation_Rules__c),
+!ISPICKVAL(Z_Source__c, &quot;Salesgateway&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Product_Interest__c</errorDisplayField>
+    <errorMessage>An Initial Product of Interest value is required to save the lead with a Status as Qualifying.</errorMessage>
+</ValidationRule>

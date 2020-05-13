@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Additional DD Engagement --></label>
+    <name>Additional_DD_Engagement__c</name>
+    <picklistValues>
+        <masterLabel>Contract</masterLabel>
+        <translation><!-- Contract --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contract Approval Needed</masterLabel>
+        <translation><!-- Contract Approval Needed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Custom Quote</masterLabel>
+        <translation><!-- Custom Quote --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MBP Exemption</masterLabel>
+        <translation><!-- MBP Exemption --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RFI</masterLabel>
+        <translation><!-- RFI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RFP</masterLabel>
+        <translation><!-- RFP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SaaS Conversion Request</masterLabel>
+        <translation><!-- SaaS Conversion Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Win$ Quote #</masterLabel>
+        <translation><!-- Win$ Quote # --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

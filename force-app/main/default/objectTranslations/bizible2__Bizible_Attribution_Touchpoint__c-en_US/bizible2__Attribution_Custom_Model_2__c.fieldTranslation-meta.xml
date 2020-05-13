@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The percentage distributed for this touchpoint based on your custom attribution model --></help>
+    <label><!-- Attribution % Custom Model --></label>
+    <name>bizible2__Attribution_Custom_Model_2__c</name>
+</CustomFieldTranslation>

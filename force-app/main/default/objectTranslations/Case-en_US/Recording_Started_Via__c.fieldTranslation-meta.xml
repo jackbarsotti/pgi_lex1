@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Recording Started Via --></label>
+    <name>Recording_Started_Via__c</name>
+    <picklistValues>
+        <masterLabel>*22</masterLabel>
+        <translation><!-- *22 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web Application</masterLabel>
+        <translation><!-- Web Application --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

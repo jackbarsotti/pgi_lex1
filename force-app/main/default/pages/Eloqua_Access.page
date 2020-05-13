@@ -1,0 +1,11 @@
+<apex:page standardController="Lead">
+
+<apex:outputPanel rendered="{! If($User.Eloqua_User__c==True ,true,false) }">
+<apex:include pageName="EloquaProfilerLead"/>
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{! If($User.Eloqua_User__c==False ,true,false) }">
+This tool is not available for your department at this time
+</apex:outputPanel>
+
+</apex:page>

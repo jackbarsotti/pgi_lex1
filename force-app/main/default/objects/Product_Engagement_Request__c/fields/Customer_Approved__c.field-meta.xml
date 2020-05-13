@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Approved__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used after the PM approves initial request. Once approved, the SE will seek customer approval and use this field.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select this checkbox only AFTER your submission is approved AND your customer agrees to the timeline.</inlineHelpText>
+    <label>Customer Approved</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

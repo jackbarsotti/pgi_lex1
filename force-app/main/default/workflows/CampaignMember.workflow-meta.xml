@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>RT_Update_Attended_Field</fullName>
+        <field>Attended__c</field>
+        <literalValue>1</literalValue>
+        <name>RT_Update Attended Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Update_Demo_Status</fullName>
+        <field>Status</field>
+        <literalValue>Demo</literalValue>
+        <name>RT_Update Demo Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Update_Status_Installed</fullName>
+        <field>Status</field>
+        <literalValue>Installed</literalValue>
+        <name>RT_Update Status - Installed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Update_Training_Date</fullName>
+        <field>Date_of_Training__c</field>
+        <formula>today()</formula>
+        <name>RT_Update Training Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>RT_Update Attended Field</fullName>
+        <actions>
+            <name>RT_Update_Attended_Field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>CampaignMember.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Campaign</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>CampaignMember.Duration_of_Stay__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Updates Campaign Member &quot;Attended&quot; field when duration of stay is greater than zero.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Update Member Status - Demo</fullName>
+        <actions>
+            <name>RT_Update_Demo_Status</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>startsWith</operation>
+            <value>SFDC-dup-DM,SFDC-DM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign.Name</field>
+            <operation>equals</operation>
+            <value>ON | Salesforce Integration Install | All</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>CampaignMember.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Campaign</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Update Member Status - Install</fullName>
+        <actions>
+            <name>RT_Update_Status_Installed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>startsWith</operation>
+            <value>SFDC-IN,SFDC-dup-IN,Package</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign.Name</field>
+            <operation>equals</operation>
+            <value>ON | Salesforce Integration Install | All</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>CampaignMember.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Campaign</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Update Training Date</fullName>
+        <actions>
+            <name>RT_Update_Training_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>CampaignMember.FirstRespondedDate</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign.Name</field>
+            <operation>startsWith</operation>
+            <value>TR</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>CampaignMember.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ReadyTalk Campaign</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

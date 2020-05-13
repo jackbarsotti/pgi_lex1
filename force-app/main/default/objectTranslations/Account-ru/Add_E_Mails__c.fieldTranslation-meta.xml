@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If inserting multiple email addresses, use the SAME delimiter between email address (either commas, semi-colons or line-breaks). Do not mix-match delimiters. --></help>
+    <label><!-- Add&apos;l Provisioning Email Addresses --></label>
+    <name>Add_E_Mails__c</name>
+</CustomFieldTranslation>

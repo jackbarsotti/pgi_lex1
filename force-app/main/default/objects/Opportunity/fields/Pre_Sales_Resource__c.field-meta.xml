@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_Sales_Resource__c</fullName>
+    <externalId>false</externalId>
+    <label>Pre-Sales Resource</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Chris Drage</fullName>
+                <default>false</default>
+                <label>Chris Drage</label>
+            </value>
+            <value>
+                <fullName>Dalmir Montagna</fullName>
+                <default>false</default>
+                <label>Dalmir Montagna</label>
+            </value>
+            <value>
+                <fullName>Jon Quayle</fullName>
+                <default>false</default>
+                <label>Jon Quayle</label>
+            </value>
+            <value>
+                <fullName>Justin Morris</fullName>
+                <default>false</default>
+                <label>Justin Morris</label>
+            </value>
+            <value>
+                <fullName>Kieron Sykes</fullName>
+                <default>false</default>
+                <label>Kieron Sykes</label>
+            </value>
+            <value>
+                <fullName>Martin Waghorn</fullName>
+                <default>false</default>
+                <label>Martin Waghorn</label>
+            </value>
+            <value>
+                <fullName>Not Pre-Sales</fullName>
+                <default>false</default>
+                <label>Not Pre-Sales</label>
+            </value>
+            <value>
+                <fullName>Peter Vasey</fullName>
+                <default>false</default>
+                <label>Peter Vasey</label>
+            </value>
+            <value>
+                <fullName>Pre-Sales Team</fullName>
+                <default>false</default>
+                <label>Pre-Sales Team</label>
+            </value>
+            <value>
+                <fullName>Scott Middlebrooks</fullName>
+                <default>false</default>
+                <label>Scott Middlebrooks</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReadyTalk_Acct_Enter_Acct_Suspend_Reason</fullName>
+    <active>true</active>
+    <description>If the account is suspended or unsuspended, an explanation as to why this is must be entered. SOAP</description>
+    <errorConditionFormula>AND(
+ $User.ReadyTalk_Exempt__c &lt;&gt; TRUE,
+RecordType.DeveloperName = &quot;ReadyTalk_Account&quot;,
+ OR(
+  AND(
+   Suspend_Account__c,
+   Account_Suspended_Notes__c = &quot;&quot;),
+  AND(
+   NOT(ISNEW()),
+   Suspend_Account__c = false,
+   ISCHANGED(Suspend_Account__c),
+   OR(
+    Account_Suspended_Notes__c =&quot;&quot;,
+    NOT(ISCHANGED(Account_Suspended_Notes__c))
+   )
+  )
+ )
+)</errorConditionFormula>
+    <errorDisplayField>Account_Suspended_Notes__c</errorDisplayField>
+    <errorMessage>If suspending this account an explanation as to why this account is suspended must be entered. If unsuspending an account you must update the Account Suspended Notes with information on why it is being unsuspended.</errorMessage>
+</ValidationRule>

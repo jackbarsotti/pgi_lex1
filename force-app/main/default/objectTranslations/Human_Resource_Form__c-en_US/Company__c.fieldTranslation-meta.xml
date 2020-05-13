@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Company --></label>
+    <name>Company__c</name>
+    <picklistValues>
+        <masterLabel>Central Desktop</masterLabel>
+        <translation><!-- Central Desktop --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi</masterLabel>
+        <translation><!-- PGi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PowWowNow</masterLabel>
+        <translation><!-- PowWowNow --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ReadyTalk</masterLabel>
+        <translation><!-- ReadyTalk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TalkPoint</masterLabel>
+        <translation><!-- TalkPoint --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

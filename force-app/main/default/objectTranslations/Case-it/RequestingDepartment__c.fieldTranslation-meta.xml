@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Requesting Department --></label>
+    <name>RequestingDepartment__c</name>
+    <picklistValues>
+        <masterLabel>CRM Operations (SELF)</masterLabel>
+        <translation><!-- CRM Operations (SELF) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Care (Care System Admins)</masterLabel>
+        <translation><!-- Care (Care System Admins) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Care (Quality Control)</masterLabel>
+        <translation><!-- Care (Quality Control) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client Success Managers</masterLabel>
+        <translation><!-- Client Success Managers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Finance/Billing</masterLabel>
+        <translation><!-- Finance/Billing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Human Resources</masterLabel>
+        <translation><!-- Human Resources --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IST/Provisioning</masterLabel>
+        <translation><!-- IST/Provisioning --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IT Support Groups</masterLabel>
+        <translation><!-- IT Support Groups --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing</masterLabel>
+        <translation><!-- Marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pricing/Deal Desk</masterLabel>
+        <translation><!-- Pricing/Deal Desk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product/Solutions</masterLabel>
+        <translation><!-- Product/Solutions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales</masterLabel>
+        <translation><!-- Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Ops</masterLabel>
+        <translation><!-- Sales Ops --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Detail__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Determines if the Prospect Account is being actively worked on or not worked on by the assigned Sales user.  The Sub-Status is based on activities and related records against the Account over the past 90 days.</inlineHelpText>
+    <label>Prospect Sub-Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+                <label>Inactive</label>
+            </value>
+            <value>
+                <fullName>Assigned</fullName>
+                <default>true</default>
+                <label>Assigned</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Prospect</controllingFieldValue>
+            <valueName>Inactive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Prospect</controllingFieldValue>
+            <valueName>Assigned</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

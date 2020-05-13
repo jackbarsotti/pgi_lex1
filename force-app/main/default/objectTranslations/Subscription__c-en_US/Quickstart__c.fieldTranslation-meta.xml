@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Provides chairperson with the OPTION to enable/disable Quickstart via the bridge. If enabled, participants will be placed directly into an audio conference without the chairperson logging in. --></help>
+    <label><!-- Quickstart Allowed --></label>
+    <name>Quickstart__c</name>
+</CustomFieldTranslation>

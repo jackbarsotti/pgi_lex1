@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- SF Root Cause --></label>
+    <name>Root_Cause__c</name>
+    <picklistValues>
+        <masterLabel>Bug</masterLabel>
+        <translation><!-- Bug --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data: D&amp;B Request</masterLabel>
+        <translation><!-- Data: D&amp;B Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data: Employee Setup/Separation</masterLabel>
+        <translation><!-- Data: Employee Setup/Separation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data: Mass Create</masterLabel>
+        <translation><!-- Data: Mass Create --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data: Mass Update</masterLabel>
+        <translation><!-- Data: Mass Update --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data: Merge Request</masterLabel>
+        <translation><!-- Data: Merge Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data: Ownership Change</masterLabel>
+        <translation><!-- Data: Ownership Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data: Territory Code Change</masterLabel>
+        <translation><!-- Data: Territory Code Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data: User Entry Issue</masterLabel>
+        <translation><!-- Data: User Entry Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enhancement: Non-Sprint Configuration</masterLabel>
+        <translation><!-- Enhancement: Non-Sprint Configuration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enhancement: Sprint Configuration</masterLabel>
+        <translation><!-- Enhancement: Sprint Configuration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Integration/Plugin Related</masterLabel>
+        <translation><!-- Integration/Plugin Related --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Non-Issue</masterLabel>
+        <translation><!-- Non-Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reporting: Building New Report/DB</masterLabel>
+        <translation><!-- Reporting: Building New Report/DB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reporting: Troubleshooting Report/DB</masterLabel>
+        <translation><!-- Reporting: Troubleshooting Report/DB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Security: Data Access</masterLabel>
+        <translation><!-- Security: Data Access --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Security: Object Access</masterLabel>
+        <translation><!-- Security: Object Access --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Security: User Login/Reset</masterLabel>
+        <translation><!-- Security: User Login/Reset --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Training/User Knowledge</masterLabel>
+        <translation><!-- Training/User Knowledge --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

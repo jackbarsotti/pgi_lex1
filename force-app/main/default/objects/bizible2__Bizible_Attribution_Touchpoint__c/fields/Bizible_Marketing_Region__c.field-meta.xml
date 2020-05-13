@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bizible_Marketing_Region__c</fullName>
+    <externalId>false</externalId>
+    <formula>If(Contains(bizible2__Landing_Page_Raw__c , &quot;blog.pgi.com&quot;),&quot;NA&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;in.pgi.com&quot;),&quot;APAC&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;cn.pgi.com&quot;),&quot;APAC&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;jp.pgi.com&quot;),&quot;Japan&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;kr.pgi.com&quot;),&quot;APAC&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;au.pgi.com&quot;),&quot;APAC&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;hk.pgi.com&quot;),&quot;APAC&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;my.pgi.com&quot;),&quot;APAC&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;nz.pgi.com&quot;),&quot;APAC&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;sg.pgi.com&quot;),&quot;APAC&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;pgi.ca&quot;),&quot;NA&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;pgi.ca/fr&quot;),&quot;NA&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;uk.pgi.com&quot;),&quot;EMEA&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;de.pgi.com&quot;),&quot;EMEA&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;es.pgi.com&quot;),&quot;EMEA&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;fr.pgi.com&quot;),&quot;EMEA&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;it.pgi.com&quot;),&quot;EMEA&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;be.pgi.com&quot;),&quot;EMEA&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;at.pgi.com&quot;),&quot;EMEA&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;dk.pgi.com&quot;),&quot;EMEA&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;ch.pgi.com&quot;),&quot;EMEA&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;go.pgi.com/partner&quot;),&quot;Partner&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;ie.pgi.com&quot;),&quot;EMEA&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;nl.pgi.com&quot;),&quot;EMEA&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;no.pgi.com&quot;),&quot;EMEA&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;fi.pgi.com&quot;),&quot;EMEA&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;se.pgi.com&quot;),&quot;EMEA&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;br.pgi.com&quot;),&quot;NA&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;latam.pgi.com&quot;),&quot;NA&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;premiere-marketing.jp&quot;),&quot;Japan&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;Meetcollaborate.com&quot;),&quot;Partner&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;www.pgi.com/contact-partner&quot;),&quot;Partner&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;www.pgi.com/solutions/partners/&quot;),&quot;Partner&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;pgipartnerconnect&quot;),&quot;Partner&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;pages.vrtlmeetings.com&quot;),&quot;Partner&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;go.pgi.com&quot;),&quot;NA&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;imeet.pgi.com&quot;),&quot;NA&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;globalmeet.pgi.com&quot;),&quot;NA&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;imeetlive.pgi.com&quot;),&quot;NA&quot;,
+If(Contains(bizible2__Landing_Page_Raw__c , &quot;www.pgi.com&quot;),&quot;NA&quot;,
+If(bizible2__Landing_Page_Raw__c = &quot;&quot;,&quot;NULL&quot;, &quot;Other&quot;)))))))))))))))))))))))))))))))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Bizible Marketing Region</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

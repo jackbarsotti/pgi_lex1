@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If Natterbox was able to find the phone number in the lead table within Saleforce, the corresponding link to that lead will be placed here. --></help>
+    <label><!-- Lead --></label>
+    <name>Lead__c</name>
+    <relationshipLabel><!-- Natterbox Call Reporting Object --></relationshipLabel>
+</CustomFieldTranslation>

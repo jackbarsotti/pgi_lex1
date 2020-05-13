@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Security_Passcode__c</fullName>
+    <description>CAUTION - USED IN INTEGRATIONS</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Requires chairperson and participants to enter a security code on the bridge to gain access to an audio conference.</inlineHelpText>
+    <label>Security Option</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No security</fullName>
+                <default>false</default>
+                <label>No security</label>
+            </value>
+            <value>
+                <fullName>Optional security</fullName>
+                <default>false</default>
+                <label>Optional security</label>
+            </value>
+            <value>
+                <fullName>Mandatory security</fullName>
+                <default>false</default>
+                <label>Mandatory security</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

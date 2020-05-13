@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RT1__CampaignSyncStarted__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Indicates that a campaign sync has started. This field is not intended to be visible to users.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates that a campaign sync has started. This field is not intended to be visible to users.</inlineHelpText>
+    <label>Campaign Sync Started</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

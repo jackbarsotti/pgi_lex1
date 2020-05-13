@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Full Event Moderation Add&apos;l Min --></label>
+    <name>Full_Event_Moderation_Add_l_Min__c</name>
+</CustomFieldTranslation>

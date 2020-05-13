@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This value is auto populated based off the Account that the Related Opportunity belongs to. This ID will be used for manual provisioning of customers to be populated as the SF Account ID within TESLA. --></help>
+    <label><!-- SFDC Account ID --></label>
+    <name>NCS_SFDC_Account_ID__c</name>
+</CustomFieldTranslation>

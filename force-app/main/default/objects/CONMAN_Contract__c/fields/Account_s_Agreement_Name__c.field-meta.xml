@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_s_Agreement_Name__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This value is populated by Sales Operations or Legal when the Account has been previously contracted under a different name.</inlineHelpText>
+    <label>Account’s Agreement Name</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

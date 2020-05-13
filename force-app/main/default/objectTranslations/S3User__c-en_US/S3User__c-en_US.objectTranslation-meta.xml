@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Replay User</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Replay Users</value>
+    </caseValues>
+    <layouts>
+        <layout>Replay User Layout</layout>
+        <sections>
+            <label><!-- Administrator Information --></label>
+            <section>Administrator Information</section>
+        </sections>
+        <sections>
+            <label><!-- BBS --></label>
+            <section>BBS</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Plans --></label>
+        <name>Plans</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Number of days it took the equipment to arrive at prem after project was accepted. --></help>
+    <label><!-- Time to Equipment --></label>
+    <name>Time_to_Equipment__c</name>
+</CustomFieldTranslation>

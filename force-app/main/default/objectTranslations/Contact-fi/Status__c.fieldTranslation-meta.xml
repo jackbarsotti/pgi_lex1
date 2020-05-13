@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Status --></label>
+    <name>Status__c</name>
+    <picklistValues>
+        <masterLabel>Active</masterLabel>
+        <translation><!-- Active --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AddError</masterLabel>
+        <translation><!-- AddError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BillingError</masterLabel>
+        <translation><!-- BillingError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Delete</masterLabel>
+        <translation><!-- Delete --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DeleteError</masterLabel>
+        <translation><!-- DeleteError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deleting</masterLabel>
+        <translation><!-- Deleting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Provisioned</masterLabel>
+        <translation><!-- Not Provisioned --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending</masterLabel>
+        <translation><!-- Pending --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Provisioned</masterLabel>
+        <translation><!-- Provisioned --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RestoreError</masterLabel>
+        <translation><!-- RestoreError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Restoring</masterLabel>
+        <translation><!-- Restoring --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SyncError</masterLabel>
+        <translation><!-- SyncError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UpdateError</masterLabel>
+        <translation><!-- UpdateError --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

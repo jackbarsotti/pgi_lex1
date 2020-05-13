@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- What company/acquisition does this person work under? --></help>
+    <label><!-- Company --></label>
+    <name>Company__c</name>
+    <picklistValues>
+        <masterLabel>Modality</masterLabel>
+        <translation><!-- Modality --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi</masterLabel>
+        <translation><!-- PGi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Portal User</masterLabel>
+        <translation><!-- Portal User --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PowWowNow</masterLabel>
+        <translation><!-- PowWowNow --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ReadyTalk</masterLabel>
+        <translation><!-- ReadyTalk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TalkPoint</masterLabel>
+        <translation><!-- TalkPoint --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iMeetCentral</masterLabel>
+        <translation><!-- iMeetCentral --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

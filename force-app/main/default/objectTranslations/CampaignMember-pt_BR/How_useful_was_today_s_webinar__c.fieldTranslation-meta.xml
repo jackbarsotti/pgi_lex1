@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select 1-5 --></help>
+    <label><!-- How useful was today&apos;s webinar? --></label>
+    <name>How_useful_was_today_s_webinar__c</name>
+</CustomFieldTranslation>

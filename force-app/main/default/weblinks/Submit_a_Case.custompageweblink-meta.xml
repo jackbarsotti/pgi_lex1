@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPageWebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <availability>online</availability>
+    <description>old link:
+
+/setup/ui/recordtypeselect.jsp?ent=Case&amp;retURL=%2F500%2Fo&amp;save_new_url=%2F500%2Fe%3FretURL%3D%252F500%252Fo</description>
+    <displayType>link</displayType>
+    <linkType>page</linkType>
+    <masterLabel>PGi Service Catalog</masterLabel>
+    <openType>replace</openType>
+    <page>PGi_ServiceCatalogPage</page>
+    <protected>false</protected>
+</CustomPageWebLink>

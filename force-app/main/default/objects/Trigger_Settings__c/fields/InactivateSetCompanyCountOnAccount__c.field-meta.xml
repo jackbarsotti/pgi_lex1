@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InactivateSetCompanyCountOnAccount__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This is used to inactivate InactivateSetCompanyCountOnAccount trigger. Please set this as True if you want to inactivate InactivateSetCompanyCountOnAccount trigger</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is used to inactivate InactivateSetCompanyCountOnAccount trigger. Please set this as True if you want to inactivate InactivateSetCompanyCountOnAccount trigger</inlineHelpText>
+    <label>InactivateSetCompanyCountOnAccount</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

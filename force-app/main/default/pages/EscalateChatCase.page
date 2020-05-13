@@ -1,0 +1,51 @@
+<apex:page showHeader="false" sidebar="false" action="{!init}" standardController="LiveChatTranscript" extensions="EscalateChatController">
+    <apex:includeScript value="/support/console/45.0/integration.js" />
+    <apex:includeScript value="/soap/ajax/26.0/connection.js" />
+    <script>
+        function handleMethod(recordId,selectedEscalationRecordType) {
+            if (recordId){
+                var closeId = 'close ' + recordId + ' ' + selectedEscalationRecordType;
+                window.parent.postMessage(closeId, '*');
+            }
+        }
+        function closeWindow() {
+            window.parent.postMessage('close', '*');
+        }
+    </script>
+    
+    <style>
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+    
+
+    <apex:outputPanel rendered="{!OR(isEscalatedToCase,isEscalatedToFinReq,isEscalatedToLead)}">
+        <apex:pageMessage summary="Some Escalation Types are unavailable for this Chat as it has existing Related Records." severity="info" />
+        <apex:pageMessages />
+    </apex:outputPanel>
+    
+        <apex:form rendered="{!AND(
+                                NOT(AND(isEscalatedToLead,CONTAINS(currentUserProfile,'Sales'))),
+                                NOT(AND(isEscalatedToCase,isEscalatedToFinReq,NOT(CONTAINS(currentUserProfile,'Sales')))),
+                                NOT(AND(isEscalatedToCase,isEscalatedToFinReq,isEscalatedToLead))
+                                )}">
+        <p class="title">Escalation Type:</p>
+        <apex:selectList value="{!selectedEscalationType}" size="1">
+            <apex:selectOptions value="{!EscalationType}" />
+            <apex:actionSupport event="onchange" reRender="EscalateRecordType,Continue" />
+        </apex:selectList>
+        <p/>
+        
+        <p class="title">Escalation Record Type:</p>
+        <apex:selectList id="EscalateRecordType" value="{!selectedEscalationRecordType}" size="1">
+            <apex:selectOptions value="{!EscalationRecordType}" />
+            <apex:actionSupport event="onchange" action="{!handleRecordButton}" reRender="Continue" />
+        </apex:selectList>
+        <p/>
+        
+        <apex:commandButton id="Continue" value="Continue" disabled="{!isContinue}" onclick="this.onclick=function(){return false;}" action="{!handleRecord}" oncomplete="handleMethod('{!returnId}','{!selectedEscalationType}');" />
+    </apex:form>
+
+</apex:page>

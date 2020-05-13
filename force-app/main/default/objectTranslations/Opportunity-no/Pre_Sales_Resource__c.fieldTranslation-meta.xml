@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Pre-Sales Resource --></label>
+    <name>Pre_Sales_Resource__c</name>
+    <picklistValues>
+        <masterLabel>Chris Drage</masterLabel>
+        <translation><!-- Chris Drage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dalmir Montagna</masterLabel>
+        <translation><!-- Dalmir Montagna --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jon Quayle</masterLabel>
+        <translation><!-- Jon Quayle --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Justin Morris</masterLabel>
+        <translation><!-- Justin Morris --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kieron Sykes</masterLabel>
+        <translation><!-- Kieron Sykes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Martin Waghorn</masterLabel>
+        <translation><!-- Martin Waghorn --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Pre-Sales</masterLabel>
+        <translation><!-- Not Pre-Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Peter Vasey</masterLabel>
+        <translation><!-- Peter Vasey --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre-Sales Team</masterLabel>
+        <translation><!-- Pre-Sales Team --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scott Middlebrooks</masterLabel>
+        <translation><!-- Scott Middlebrooks --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

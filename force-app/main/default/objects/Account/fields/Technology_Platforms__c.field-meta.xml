@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Technology_Platforms__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicate account&#39;s primary technology platforms for IM, Calendaring, CRM, Email and Marketing Automation systems.</inlineHelpText>
+    <label>Technology Platforms</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Collaboration - Google Docs</fullName>
+                <default>false</default>
+                <label>Collaboration - Google Docs</label>
+            </value>
+            <value>
+                <fullName>Collaboration - Other</fullName>
+                <default>false</default>
+                <label>Collaboration - Other</label>
+            </value>
+            <value>
+                <fullName>Content Marketing - Kapost</fullName>
+                <default>false</default>
+                <label>Content Marketing - Kapost</label>
+            </value>
+            <value>
+                <fullName>CRM - FranConnect</fullName>
+                <default>false</default>
+                <label>CRM - FranConnect</label>
+            </value>
+            <value>
+                <fullName>CRM - InfusionSoft</fullName>
+                <default>false</default>
+                <label>CRM - InfusionSoft</label>
+            </value>
+            <value>
+                <fullName>CRM - Microsoft Dynamics</fullName>
+                <default>false</default>
+                <label>CRM - Microsoft Dynamics</label>
+            </value>
+            <value>
+                <fullName>CRM - NetSuite</fullName>
+                <default>false</default>
+                <label>CRM - NetSuite</label>
+            </value>
+            <value>
+                <fullName>CRM - None</fullName>
+                <default>false</default>
+                <label>CRM - None</label>
+            </value>
+            <value>
+                <fullName>CRM - Oracle</fullName>
+                <default>false</default>
+                <label>CRM - Oracle</label>
+            </value>
+            <value>
+                <fullName>CRM - Other</fullName>
+                <default>false</default>
+                <label>CRM - Other</label>
+            </value>
+            <value>
+                <fullName>CRM - Salesforce.com</fullName>
+                <default>false</default>
+                <label>CRM - Salesforce.com</label>
+            </value>
+            <value>
+                <fullName>CRM - Sugar</fullName>
+                <default>false</default>
+                <label>CRM - Sugar</label>
+            </value>
+            <value>
+                <fullName>e-commerce - Acteva</fullName>
+                <default>false</default>
+                <label>e-commerce - Acteva</label>
+            </value>
+            <value>
+                <fullName>e-commerce - Constant Contact/EventSpot</fullName>
+                <default>false</default>
+                <label>e-commerce - Constant Contact/EventSpot</label>
+            </value>
+            <value>
+                <fullName>e-commerce - EventBrite</fullName>
+                <default>false</default>
+                <label>e-commerce - EventBrite</label>
+            </value>
+            <value>
+                <fullName>e-commerce - Other</fullName>
+                <default>false</default>
+                <label>e-commerce - Other</label>
+            </value>
+            <value>
+                <fullName>e-commerce - PayPal</fullName>
+                <default>false</default>
+                <label>e-commerce - PayPal</label>
+            </value>
+            <value>
+                <fullName>e-commerce - RegOnline</fullName>
+                <default>false</default>
+                <label>e-commerce - RegOnline</label>
+            </value>
+            <value>
+                <fullName>Email - Gmail</fullName>
+                <default>false</default>
+                <label>Email - Gmail</label>
+            </value>
+            <value>
+                <fullName>Email - Lotus Notes</fullName>
+                <default>false</default>
+                <label>Email - Lotus Notes</label>
+            </value>
+            <value>
+                <fullName>Email - None</fullName>
+                <default>false</default>
+                <label>Email - None</label>
+            </value>
+            <value>
+                <fullName>Email -  Office365</fullName>
+                <default>false</default>
+                <label>Email -  Office365</label>
+            </value>
+            <value>
+                <fullName>Email - Other</fullName>
+                <default>false</default>
+                <label>Email - Other</label>
+            </value>
+            <value>
+                <fullName>Email - Outlook</fullName>
+                <default>false</default>
+                <label>Email - Outlook</label>
+            </value>
+            <value>
+                <fullName>ESP - Constant Contact</fullName>
+                <default>false</default>
+                <label>ESP - Constant Contact</label>
+            </value>
+            <value>
+                <fullName>ESP - Other</fullName>
+                <default>false</default>
+                <label>ESP - Other</label>
+            </value>
+            <value>
+                <fullName>ESP - Vertical Response</fullName>
+                <default>false</default>
+                <label>ESP - Vertical Response</label>
+            </value>
+            <value>
+                <fullName>Event Management – Cvent</fullName>
+                <default>false</default>
+                <label>Event Management – Cvent</label>
+            </value>
+            <value>
+                <fullName>File Sharing - Box</fullName>
+                <default>false</default>
+                <label>File Sharing - Box</label>
+            </value>
+            <value>
+                <fullName>File Sharing - Copy</fullName>
+                <default>false</default>
+                <label>File Sharing - Copy</label>
+            </value>
+            <value>
+                <fullName>File Sharing - Dropbox</fullName>
+                <default>false</default>
+                <label>File Sharing - Dropbox</label>
+            </value>
+            <value>
+                <fullName>File Sharing - Google Drive</fullName>
+                <default>false</default>
+                <label>File Sharing - Google Drive</label>
+            </value>
+            <value>
+                <fullName>File Sharing - Hightail</fullName>
+                <default>false</default>
+                <label>File Sharing - Hightail</label>
+            </value>
+            <value>
+                <fullName>File Sharing - Microsoft OneDrive</fullName>
+                <default>false</default>
+                <label>File Sharing - Microsoft OneDrive</label>
+            </value>
+            <value>
+                <fullName>File Sharing - None</fullName>
+                <default>false</default>
+                <label>File Sharing - None</label>
+            </value>
+            <value>
+                <fullName>File Sharing - Other</fullName>
+                <default>false</default>
+                <label>File Sharing - Other</label>
+            </value>
+            <value>
+                <fullName>IM - Chatter</fullName>
+                <default>false</default>
+                <label>IM - Chatter</label>
+            </value>
+            <value>
+                <fullName>IM - GoogleTalk/Hangout</fullName>
+                <default>false</default>
+                <label>IM - GoogleTalk/Hangout</label>
+            </value>
+            <value>
+                <fullName>IM - IBM Sametime</fullName>
+                <default>false</default>
+                <label>IM - IBM Sametime</label>
+            </value>
+            <value>
+                <fullName>IM - Jabber</fullName>
+                <default>false</default>
+                <label>IM - Jabber</label>
+            </value>
+            <value>
+                <fullName>IM - Lync</fullName>
+                <default>false</default>
+                <label>IM - Lync</label>
+            </value>
+            <value>
+                <fullName>IM - Other</fullName>
+                <default>false</default>
+                <label>IM - Other</label>
+            </value>
+            <value>
+                <fullName>IM - Yahoo</fullName>
+                <default>false</default>
+                <label>IM - Yahoo</label>
+            </value>
+            <value>
+                <fullName>IM - Yammer</fullName>
+                <default>false</default>
+                <label>IM - Yammer</label>
+            </value>
+            <value>
+                <fullName>LMS - Other</fullName>
+                <default>false</default>
+                <label>LMS - Other</label>
+            </value>
+            <value>
+                <fullName>MA - Act-On</fullName>
+                <default>false</default>
+                <label>MA - Act-On</label>
+            </value>
+            <value>
+                <fullName>MA - Eloqua</fullName>
+                <default>false</default>
+                <label>MA - Eloqua</label>
+            </value>
+            <value>
+                <fullName>MA - ExactTarget</fullName>
+                <default>false</default>
+                <label>MA - ExactTarget</label>
+            </value>
+            <value>
+                <fullName>MA - Hubspot</fullName>
+                <default>false</default>
+                <label>MA - Hubspot</label>
+            </value>
+            <value>
+                <fullName>MA - Lyris</fullName>
+                <default>false</default>
+                <label>MA - Lyris</label>
+            </value>
+            <value>
+                <fullName>MA - Manticore</fullName>
+                <default>false</default>
+                <label>MA - Manticore</label>
+            </value>
+            <value>
+                <fullName>MA - Marketo</fullName>
+                <default>false</default>
+                <label>MA - Marketo</label>
+            </value>
+            <value>
+                <fullName>MA - None</fullName>
+                <default>false</default>
+                <label>MA - None</label>
+            </value>
+            <value>
+                <fullName>MA - Other</fullName>
+                <default>false</default>
+                <label>MA - Other</label>
+            </value>
+            <value>
+                <fullName>MA - Pardot</fullName>
+                <default>false</default>
+                <label>MA - Pardot</label>
+            </value>
+            <value>
+                <fullName>Marketing Services - Other</fullName>
+                <default>false</default>
+                <label>Marketing Services - Other</label>
+            </value>
+            <value>
+                <fullName>Marketing Services - Unbounce</fullName>
+                <default>false</default>
+                <label>Marketing Services - Unbounce</label>
+            </value>
+            <value>
+                <fullName>MA - Silverpop</fullName>
+                <default>false</default>
+                <label>MA - Silverpop</label>
+            </value>
+            <value>
+                <fullName>MA – Unica</fullName>
+                <default>false</default>
+                <label>MA – Unica</label>
+            </value>
+            <value>
+                <fullName>Note Apps - Evernote</fullName>
+                <default>false</default>
+                <label>Note Apps - Evernote</label>
+            </value>
+            <value>
+                <fullName>Note Apps - Google Drive</fullName>
+                <default>false</default>
+                <label>Note Apps - Google Drive</label>
+            </value>
+            <value>
+                <fullName>Note Apps - Google Keep</fullName>
+                <default>false</default>
+                <label>Note Apps - Google Keep</label>
+            </value>
+            <value>
+                <fullName>Note Apps - Microsoft OneNote</fullName>
+                <default>false</default>
+                <label>Note Apps - Microsoft OneNote</label>
+            </value>
+            <value>
+                <fullName>Note Apps - Microsoft Word</fullName>
+                <default>false</default>
+                <label>Note Apps - Microsoft Word</label>
+            </value>
+            <value>
+                <fullName>Note Apps - None</fullName>
+                <default>false</default>
+                <label>Note Apps - None</label>
+            </value>
+            <value>
+                <fullName>Note Apps - Other</fullName>
+                <default>false</default>
+                <label>Note Apps - Other</label>
+            </value>
+            <value>
+                <fullName>Note Apps - Simplenote</fullName>
+                <default>false</default>
+                <label>Note Apps - Simplenote</label>
+            </value>
+            <value>
+                <fullName>OS - Chrome</fullName>
+                <default>false</default>
+                <label>OS - Chrome</label>
+            </value>
+            <value>
+                <fullName>OS - Chromebooks</fullName>
+                <default>false</default>
+                <label>OS - Chromebooks</label>
+            </value>
+            <value>
+                <fullName>OS - Linux</fullName>
+                <default>false</default>
+                <label>OS - Linux</label>
+            </value>
+            <value>
+                <fullName>OS - Mac (Apple)</fullName>
+                <default>false</default>
+                <label>OS - Mac (Apple)</label>
+            </value>
+            <value>
+                <fullName>OS - Windows</fullName>
+                <default>false</default>
+                <label>OS - Windows</label>
+            </value>
+            <value>
+                <fullName>Skype for Business</fullName>
+                <default>false</default>
+                <label>Skype for Business</label>
+            </value>
+            <value>
+                <fullName>Survey - Survey Gizmo</fullName>
+                <default>false</default>
+                <label>Survey - Survey Gizmo</label>
+            </value>
+            <value>
+                <fullName>Survey - Survey Monkey</fullName>
+                <default>false</default>
+                <label>Survey - Survey Monkey</label>
+            </value>
+            <value>
+                <fullName>Video - Blue Jeans</fullName>
+                <default>false</default>
+                <label>Video - Blue Jeans</label>
+            </value>
+            <value>
+                <fullName>Video - Room Based Video Systems</fullName>
+                <default>false</default>
+                <label>Video - Room Based Video Systems</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

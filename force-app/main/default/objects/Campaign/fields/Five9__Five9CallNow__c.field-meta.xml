@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Five9__Five9CallNow__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Sets Five9 callNowMode to &#39;ANY&#39;</description>
+    <externalId>false</externalId>
+    <inlineHelpText>All new campaign members are added to Five9 list with &#39;call now mode&#39; set to &#39;ANY&#39;</inlineHelpText>
+    <label>Five9 Call Now</label>
+    <type>Checkbox</type>
+</CustomField>

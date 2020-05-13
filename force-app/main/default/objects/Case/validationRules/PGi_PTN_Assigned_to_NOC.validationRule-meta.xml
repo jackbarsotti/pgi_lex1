@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_PTN_Assigned_to_NOC</fullName>
+    <active>true</active>
+    <description>Parent Ticket (NOC) cannot be assigned to a queue other than Global NOC until Service is Restored</description>
+    <errorConditionFormula>And( 
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+NOT(ISCHANGED(IsUpdateFromCaseComment__c)),
+Service_Restored__c = False,  
+RecordType.Name  = &quot;PGi-Parent Ticket (NOC)&quot;,
+OwnerId  &lt;&gt; $User.Id,
+ISCHANGED(OwnerId), 
+ Owner:Queue.Id   &lt;&gt; &quot;00G1B000004VDNy&quot;)</errorConditionFormula>
+    <errorMessage>Parent Ticket NOC must remain with Global NOC queue until Service has been Restored.</errorMessage>
+</ValidationRule>

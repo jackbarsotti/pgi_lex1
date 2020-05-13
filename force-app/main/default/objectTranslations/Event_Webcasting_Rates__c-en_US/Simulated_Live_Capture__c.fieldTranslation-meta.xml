@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Includes 30 Minute Test and 60 Minute Recording. $500 per first hour, $250 per additional 30 minutes --></help>
+    <label><!-- Simulated Live Capture --></label>
+    <name>Simulated_Live_Capture__c</name>
+</CustomFieldTranslation>

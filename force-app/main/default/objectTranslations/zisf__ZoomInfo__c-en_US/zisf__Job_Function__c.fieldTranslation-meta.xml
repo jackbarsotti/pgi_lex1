@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Person&apos;s organizational job function. --></help>
+    <label><!-- Job Function --></label>
+    <name>zisf__Job_Function__c</name>
+</CustomFieldTranslation>

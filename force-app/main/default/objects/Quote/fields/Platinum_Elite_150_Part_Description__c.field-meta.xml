@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Platinum_Elite_150_Part_Description__c</fullName>
+    <externalId>false</externalId>
+    <label>Platinum Elite - 150 Part - Description</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pre-, live and post-event management support for a webcast that includes integrated streaming video &amp; audio support for up to 150 participants and 60 minutes in duration. Speaker lines and unlimited on-demand viewing for 12 months included.</fullName>
+                <default>false</default>
+                <label>Pre-, live and post-event management support for a webcast that includes integrated streaming video &amp; audio support for up to 150 participants and 60 minutes in duration. Speaker lines and unlimited on-demand viewing for 12 months included.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

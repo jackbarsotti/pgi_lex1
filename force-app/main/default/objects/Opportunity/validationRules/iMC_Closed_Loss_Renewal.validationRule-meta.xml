@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>iMC_Closed_Loss_Renewal</fullName>
+    <active>true</active>
+    <description>This is to require the loss Renewal multi-select field in the opportunity.</description>
+    <errorConditionFormula>AND( 
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;,
+OR( 
+RecordType.DeveloperName = &quot;iMC Renewal Opportunity&quot;), 
+ISPICKVAL(StageName, &quot;Closed Lost&quot;), 
+ISBLANK(Renewal_Loss_Reason__c) 
+)</errorConditionFormula>
+    <errorMessage>Lost Renewal Opportunities must have at least one Renewal Loss Reason</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Case_NA_Canada_Legacy_System_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>PGi-Case-NA-Canada Legacy System</label>
+    <queue>PGi_Case_NA_Canada_Legacy_System</queue>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

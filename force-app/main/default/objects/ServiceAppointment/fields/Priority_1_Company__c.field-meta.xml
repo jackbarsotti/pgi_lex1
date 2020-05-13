@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Priority_1_Company__c</fullName>
+    <externalId>false</externalId>
+    <formula>Work_Order__r.Conference__r.Company__r.Priority_1_Account__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Priority 1 Company</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

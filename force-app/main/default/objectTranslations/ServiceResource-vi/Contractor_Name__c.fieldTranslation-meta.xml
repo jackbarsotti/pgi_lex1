@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Contractor Name --></label>
+    <name>Contractor_Name__c</name>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PPS</masterLabel>
+        <translation><!-- PPS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Streamlined</masterLabel>
+        <translation><!-- Streamlined --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

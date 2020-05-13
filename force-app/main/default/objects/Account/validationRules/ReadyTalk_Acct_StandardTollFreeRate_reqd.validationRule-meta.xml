@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReadyTalk_Acct_StandardTollFreeRate_reqd</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISNULL(  Operator_Assisted_Standard_Toll_Free__c   ),Provisioned__c,
+RecordType.DeveloperName = &quot;ReadyTalk_Account&quot;)</errorConditionFormula>
+    <errorDisplayField>Operator_Assisted_Standard_Toll_Free__c</errorDisplayField>
+    <errorMessage>Value required to be provisioned</errorMessage>
+</ValidationRule>

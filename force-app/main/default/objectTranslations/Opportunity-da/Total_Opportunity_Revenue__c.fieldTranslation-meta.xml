@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Calculated from the sum of all Opportunity Products. Those that contribute to TCV and those that do not. (does include existing services) --></help>
+    <label><!-- Total Opportunity Revenue --></label>
+    <name>Total_Opportunity_Revenue__c</name>
+</CustomFieldTranslation>

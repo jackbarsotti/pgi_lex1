@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Order_Licensed_Amount__c</fullName>
+    <description>Active Order 1st year amount rolled up to be used to calculate Business Level</description>
+    <externalId>false</externalId>
+    <inlineHelpText>&#39;Active Order&#39; &#39;1st Year License Amount&#39; rolled up to be used to calculate Business Level</inlineHelpText>
+    <label>Active Order Licensed Amount</label>
+    <summarizedField>Opportunity.First_Year_License_Amount__c</summarizedField>
+    <summaryFilterItems>
+        <field>Opportunity.Active_Order__c</field>
+        <operation>equals</operation>
+        <value>True</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

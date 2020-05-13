@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Podcast_Creation__c</fullName>
+    <defaultValue>315</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>Turn on podcasts and allow users to download a webcast from the console. Billed per event.</inlineHelpText>
+    <label>Podcast Creation</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

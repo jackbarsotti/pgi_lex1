@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Check if the Opportunity Amount is not a monthly recurring number. --></help>
+    <label><!-- One Time Revenue --></label>
+    <name>One_Time_Revenue__c</name>
+</CustomFieldTranslation>

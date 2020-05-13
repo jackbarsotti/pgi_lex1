@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Tier 1 = 11 or more points
+Tier 2 = 9 to 10 points
+Tier 3 = 8 points
+Tier 4 = 7 points
+Tier 5 = Less than 7 points --></help>
+    <label><!-- Growth Rating --></label>
+    <name>Growth_Rating__c</name>
+</CustomFieldTranslation>

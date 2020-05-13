@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RT_Event_ref_required</fullName>
+    <active>true</active>
+    <description>Make sure the RT_Event__c is populated with a value</description>
+    <errorConditionFormula>LEN(TRIM(RT_Event__c)) = 0</errorConditionFormula>
+    <errorMessage>RTEventClose record must be associated with a RTEvent.</errorMessage>
+</ValidationRule>

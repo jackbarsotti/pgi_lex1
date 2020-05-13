@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Edit_Sales_Price__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>IF checked, the user can edit the Opportunity Product Sales Price.</description>
+    <externalId>false</externalId>
+    <label>Edit Sales Price?</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

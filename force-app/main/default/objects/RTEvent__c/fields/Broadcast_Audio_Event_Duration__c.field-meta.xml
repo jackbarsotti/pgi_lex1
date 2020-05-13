@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Broadcast_Audio_Event_Duration__c</fullName>
+    <description>Broadcast Audio Event Duration options.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select duration increment for BA event.</inlineHelpText>
+    <label>Broadcast Audio Event Duration</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>60 minutes</fullName>
+                <default>false</default>
+                <label>60 minutes</label>
+            </value>
+            <value>
+                <fullName>90 minutes</fullName>
+                <default>false</default>
+                <label>90 minutes</label>
+            </value>
+            <value>
+                <fullName>120 minutes</fullName>
+                <default>false</default>
+                <label>120 minutes</label>
+            </value>
+            <value>
+                <fullName>150 minutes</fullName>
+                <default>false</default>
+                <label>150 minutes</label>
+            </value>
+            <value>
+                <fullName>180 minutes</fullName>
+                <default>false</default>
+                <label>180 minutes</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

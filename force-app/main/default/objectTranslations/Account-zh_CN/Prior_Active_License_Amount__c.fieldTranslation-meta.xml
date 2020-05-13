@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Prior Active License Amount --></label>
+    <name>Prior_Active_License_Amount__c</name>
+</CustomFieldTranslation>

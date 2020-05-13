@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sign_By_Hand__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked when customers want to skip Docusign and sign by hand.</description>
+    <externalId>false</externalId>
+    <label>Sign By Hand</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Engineering_Issues</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Internal_Bug_Number__c</columns>
+    <columns>Jira_Status__c</columns>
+    <columns>Product_Team__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Create_Eng_Issue__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Jira_Status__c</field>
+        <operation>equals</operation>
+        <value>New,Working,In QA</value>
+    </filters>
+    <label>ReadyTalk (Open Engineering Issues)</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>ReadyTalk_Channel</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>ReadyTalk_Service</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

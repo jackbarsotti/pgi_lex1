@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Pre-Conference Duration --></label>
+    <name>Pre_Conference_Duration__c</name>
+    <picklistValues>
+        <masterLabel>0 Minutes</masterLabel>
+        <translation><!-- 0 Minutes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>10 Minutes</masterLabel>
+        <translation><!-- 10 Minutes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>15 Minutes</masterLabel>
+        <translation><!-- 15 Minutes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>20 Minutes</masterLabel>
+        <translation><!-- 20 Minutes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>25 Minutes</masterLabel>
+        <translation><!-- 25 Minutes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>30 Minutes</masterLabel>
+        <translation><!-- 30 Minutes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>35 Minutes</masterLabel>
+        <translation><!-- 35 Minutes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>40 Minutes</masterLabel>
+        <translation><!-- 40 Minutes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>45 Minutes</masterLabel>
+        <translation><!-- 45 Minutes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5 minutes</masterLabel>
+        <translation><!-- 5 minutes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>50 Minutes</masterLabel>
+        <translation><!-- 50 Minutes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>55 Minutes</masterLabel>
+        <translation><!-- 55 Minutes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>60 Minutes</masterLabel>
+        <translation><!-- 60 Minutes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>90 Minutes</masterLabel>
+        <translation><!-- 90 Minutes --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

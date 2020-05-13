@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Workspace_Admin__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This is to support product announcements being sent from SFDC and Marketo.  This will be populated via an API from ASX</description>
+    <externalId>false</externalId>
+    <label>Customer Workspace Admin</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pricing_Document_Sent__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>For Document Requirements, Reference the Contracts Policy Manual.</inlineHelpText>
+    <label>Pricing Document Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Addendum (Signed)</fullName>
+                <default>false</default>
+                <label>Addendum (Signed)</label>
+            </value>
+            <value>
+                <fullName>Contract (Sign/Counter-Sign)</fullName>
+                <default>false</default>
+                <label>Contract (Sign/Counter-Sign)</label>
+            </value>
+            <value>
+                <fullName>Pricing Agreement (Signed)</fullName>
+                <default>false</default>
+                <label>Pricing Agreement (Signed)</label>
+            </value>
+            <value>
+                <fullName>Quote (No Signature)</fullName>
+                <default>false</default>
+                <label>Quote (No Signature)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- TS1_Build Status_UnSelected --></label>
+    <name>TS1_Build_Status_UnSelected__c</name>
+</CustomFieldTranslation>

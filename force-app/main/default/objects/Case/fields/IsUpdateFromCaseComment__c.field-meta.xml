@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsUpdateFromCaseComment__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used by apex to allow the page to refresh after saving the case from adding related items (such as case comments) since we currently have a Case VF Override for New, Edits, and View.</description>
+    <externalId>false</externalId>
+    <label>IsUpdateFromCaseComment</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

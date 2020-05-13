@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Call_Type__c</fullName>
+    <description>Denotes type of customer event (marketing, PR, demo, etc...)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicate the customer&#39;s type of event.</inlineHelpText>
+    <label>Call Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Information Sharing</fullName>
+                <default>false</default>
+                <label>Information Sharing</label>
+            </value>
+            <value>
+                <fullName>Internal Communication</fullName>
+                <default>false</default>
+                <label>Internal Communication</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Member Benefit</fullName>
+                <default>false</default>
+                <label>Member Benefit</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+                <label>Public Relations</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

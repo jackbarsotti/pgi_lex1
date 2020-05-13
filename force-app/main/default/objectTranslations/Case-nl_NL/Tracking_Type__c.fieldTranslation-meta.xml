@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tracking Type --></label>
+    <name>Tracking_Type__c</name>
+    <picklistValues>
+        <masterLabel>Client Impacting</masterLabel>
+        <translation><!-- Client Impacting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client Responsible</masterLabel>
+        <translation><!-- Client Responsible --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client Transport Issue</masterLabel>
+        <translation><!-- Client Transport Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conference Impacting</masterLabel>
+        <translation><!-- Conference Impacting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Help Desk Support</masterLabel>
+        <translation><!-- Help Desk Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inquiry/Help</masterLabel>
+        <translation><!-- Inquiry/Help --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Interaction</masterLabel>
+        <translation><!-- Interaction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Defect/Outage</masterLabel>
+        <translation><!-- No Defect/Outage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi Internal Impact Only</masterLabel>
+        <translation><!-- PGi Internal Impact Only --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi Responsible</masterLabel>
+        <translation><!-- PGi Responsible --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi Vendor Responsible</masterLabel>
+        <translation><!-- PGi Vendor Responsible --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PTA ONLY</masterLabel>
+        <translation><!-- PTA ONLY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Responsible Party Undefined</masterLabel>
+        <translation><!-- Responsible Party Undefined --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

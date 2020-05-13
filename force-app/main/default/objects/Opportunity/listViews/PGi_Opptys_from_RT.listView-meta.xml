@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Opptys_from_RT</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>Channel__c</columns>
+    <columns>Owner_Region__c</columns>
+    <columns>Opp_Owner_s_Country_del__c</columns>
+    <columns>Supervisor__c</columns>
+    <columns>Owner_s_Profile__c</columns>
+    <columns>Owner_s_Role__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.PGi_Opportunity</value>
+    </filters>
+    <filters>
+        <field>Owner_s_Profile__c</field>
+        <operation>contains</operation>
+        <value>ReadyTalk</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CLOSED</field>
+        <operation>notEqual</operation>
+        <value>1</value>
+    </filters>
+    <label>PGi Opptys from RT</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>PGi_IST</group>
+    </sharedTo>
+</ListView>

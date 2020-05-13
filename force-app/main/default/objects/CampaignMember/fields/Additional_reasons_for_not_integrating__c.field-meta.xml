@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_reasons_for_not_integrating__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Add notes here if customer indicated additional features, or other reasons, were needed for company to implement ReadyTalk integration.</inlineHelpText>
+    <label>Additional reasons for not integrating</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

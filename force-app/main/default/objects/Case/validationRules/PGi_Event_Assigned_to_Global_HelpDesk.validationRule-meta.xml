@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Event_Assigned_to_Global_HelpDesk</fullName>
+    <active>true</active>
+    <description>PGi-Event cases can only be assigned to the Global HelpDesk</description>
+    <errorConditionFormula>And( 
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+NOT(ISCHANGED(IsUpdateFromCaseComment__c)),
+Owner:Queue.QueueName  &lt;&gt;   &quot;PGi_Case_GL_Global_HelpDesk&quot;,
+RecordType.Name = &quot;PGi-Event&quot;, 
+OwnerId  &lt;&gt; $User.Id,
+ISCHANGED(OwnerId)
+)</errorConditionFormula>
+    <errorMessage>PGi-Event cases must remain with Global Service Desk.</errorMessage>
+</ValidationRule>

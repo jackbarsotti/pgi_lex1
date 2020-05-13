@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_FoxDen_Users2__c</fullName>
+    <externalId>false</externalId>
+    <label>Active FoxDen Users</label>
+    <summarizedField>FoxDen_User__c.Active_FoxDen_User_Count__c</summarizedField>
+    <summaryForeignKey>FoxDen_User__c.Contact__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

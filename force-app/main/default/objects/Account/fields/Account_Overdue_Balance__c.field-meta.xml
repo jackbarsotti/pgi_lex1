@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Overdue_Balance__c</fullName>
+    <description>Overdue account balance from NetSuite</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please click &quot;Update from NetSuite&quot; button to ensure accuracy of this field.</inlineHelpText>
+    <label>Account Overdue Balance</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

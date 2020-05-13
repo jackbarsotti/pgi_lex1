@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- A flag for opportunities for Active Host - GlobalMeet Web. --></help>
+    <label><!-- Active Host --></label>
+    <name>Active_Host_NA_Only__c</name>
+</CustomFieldTranslation>

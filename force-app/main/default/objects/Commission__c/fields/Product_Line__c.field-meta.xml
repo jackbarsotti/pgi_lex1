@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Line__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( 
+	OR(Opportunity__r.Account.RecordType.Name = &quot;Customer&quot;, 
+			Opportunity__r.Account.RecordType.Name = &quot;Prospect&quot;),
+	TEXT(Opportunity__r.Account.Product__c), 
+	Opportunity__r.Account.RecordType.Name 
+)</formula>
+    <inlineHelpText>Account Record Type Name associated with the opportunity</inlineHelpText>
+    <label>Product Line</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Reason(s) for not integrating with RT --></label>
+    <name>Reason_s_for_not_integrating_with_RT__c</name>
+    <picklistValues>
+        <masterLabel>Connectors are not available with my sub</masterLabel>
+        <translation><!-- Connectors are not available with my sub --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lack of Features</masterLabel>
+        <translation><!-- Lack of Features --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not enough resources</masterLabel>
+        <translation><!-- Not enough resources --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

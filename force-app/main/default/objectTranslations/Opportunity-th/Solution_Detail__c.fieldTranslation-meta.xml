@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Solution Detail --></label>
+    <name>Solution_Detail__c</name>
+    <picklistValues>
+        <masterLabel>AV Crews / Studios</masterLabel>
+        <translation><!-- AV Crews / Studios --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Additional Time</masterLabel>
+        <translation><!-- Additional Time --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Additional Viewers</masterLabel>
+        <translation><!-- Additional Viewers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conf. Call - Miscellaneous / Other</masterLabel>
+        <translation><!-- Conf. Call - Miscellaneous / Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Development</masterLabel>
+        <translation><!-- Development --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Digital Webcast Copy/MP4/MP3</masterLabel>
+        <translation><!-- Digital Webcast Copy/MP4/MP3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Edit</masterLabel>
+        <translation><!-- Edit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Encoding</masterLabel>
+        <translation><!-- Encoding --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Existing Cust - Existing Svc</masterLabel>
+        <translation><!-- Existing Cust - Existing Svc --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Existing Cust - New Svc</masterLabel>
+        <translation><!-- Existing Cust - New Svc --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fiber Connection</masterLabel>
+        <translation><!-- Fiber Connection --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hosting</masterLabel>
+        <translation><!-- Hosting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Logo</masterLabel>
+        <translation><!-- New Logo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Onsite Broadcast Producers</masterLabel>
+        <translation><!-- Onsite Broadcast Producers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Onsite Encoding Technicians</masterLabel>
+        <translation><!-- Onsite Encoding Technicians --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Onsite Webcast Producers</masterLabel>
+        <translation><!-- Onsite Webcast Producers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Satellite</masterLabel>
+        <translation><!-- Satellite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Screen Share (Desktop files and other applications)</masterLabel>
+        <translation><!-- Screen Share (Desktop files and other applications) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Self-Serve Video Webcast - Prepay</masterLabel>
+        <translation><!-- Self-Serve Video Webcast - Prepay --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Set-up / Rush Fee</masterLabel>
+        <translation><!-- Set-up / Rush Fee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Simulated Live</masterLabel>
+        <translation><!-- Simulated Live --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Slide Share (PowerPoint Only)</masterLabel>
+        <translation><!-- Slide Share (PowerPoint Only) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Streaming ONLY</masterLabel>
+        <translation><!-- Streaming ONLY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TSC Phone Support</masterLabel>
+        <translation><!-- TSC Phone Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Testing / Certification</masterLabel>
+        <translation><!-- Testing / Certification --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transcription / Closed Caption</masterLabel>
+        <translation><!-- Transcription / Closed Caption --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video Conference Unit Bridge</masterLabel>
+        <translation><!-- Video Conference Unit Bridge --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video Overlay / Roll-in</masterLabel>
+        <translation><!-- Video Overlay / Roll-in --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

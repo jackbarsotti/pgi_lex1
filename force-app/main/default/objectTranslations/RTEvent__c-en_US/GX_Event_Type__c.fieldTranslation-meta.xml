@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Event type in Global&apos;s terms --></help>
+    <label><!-- Audio Type --></label>
+    <name>GX_Event_Type__c</name>
+    <picklistValues>
+        <masterLabel>Automated</masterLabel>
+        <translation><!-- Automated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Direct</masterLabel>
+        <translation><!-- Direct --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event</masterLabel>
+        <translation><!-- Event --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Plus</masterLabel>
+        <translation><!-- Event Plus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Plus with Passcode</masterLabel>
+        <translation><!-- Event Plus with Passcode --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Express</masterLabel>
+        <translation><!-- Express --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Greeted Entry</masterLabel>
+        <translation><!-- Greeted Entry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Greeted Entry with Click to Join</masterLabel>
+        <translation><!-- Greeted Entry with Click to Join --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>N/A</masterLabel>
+        <translation><!-- N/A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>None</masterLabel>
+        <translation><!-- None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Operator Assisted Audio</masterLabel>
+        <translation><!-- Operator Assisted Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Passcode Entry</masterLabel>
+        <translation><!-- Passcode Entry --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

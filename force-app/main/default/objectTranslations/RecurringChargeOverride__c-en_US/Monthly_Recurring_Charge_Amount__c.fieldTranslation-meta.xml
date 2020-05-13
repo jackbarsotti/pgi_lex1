@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Converts all recurring charges into the monthly amount --></help>
+    <label><!-- Monthly Recurring Charge Amount --></label>
+    <name>Monthly_Recurring_Charge_Amount__c</name>
+</CustomFieldTranslation>

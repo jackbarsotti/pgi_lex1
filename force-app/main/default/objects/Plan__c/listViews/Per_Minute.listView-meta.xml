@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Per_Minute</fullName>
+    <columns>NAME</columns>
+    <columns>account__c</columns>
+    <columns>basePackage__c</columns>
+    <columns>startDate__c</columns>
+    <columns>endDate__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>basePackage__c</field>
+        <operation>equals</operation>
+        <value>Per-Minute Conferencing</value>
+    </filters>
+    <label>Per-Minute</label>
+</ListView>

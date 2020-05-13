@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- If Othre Solution, then what? --></label>
+    <name>If_Othre_Solution_then_what__c</name>
+</CustomFieldTranslation>

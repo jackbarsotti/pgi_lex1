@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReadyTalk_Acct_ProvisionChkReq_BillEmail</fullName>
+    <active>true</active>
+    <description>When the provision checkbox is checked, require the billing email address. User is sf admin</description>
+    <errorConditionFormula>AND (
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;, 
+Provisioned__c,
+Billing_Contact_Email__c = &quot;&quot;,
+$User.ReadyTalk_Exempt__c &lt;&gt; TRUE,
+RecordType.DeveloperName = &quot;ReadyTalk_Account&quot;
+)</errorConditionFormula>
+    <errorDisplayField>Billing_Contact_Email__c</errorDisplayField>
+    <errorMessage>When provisioning an account, the billing email address is required.</errorMessage>
+</ValidationRule>

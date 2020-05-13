@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Teleservices_Compilation__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(INCLUDES( Worker_will_require__c , &quot;ACD/Aspect Phone Setup&quot;), &quot;ACD/Aspect Phone Setup&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Worker_will_require__c , &quot;Call Recording&quot;), &quot;Call Recording&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Worker_will_require__c , &quot;Direct Dial Phone&quot;), &quot;Direct Dial Phone&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Worker_will_require__c , &quot;Headset&quot;), &quot;Headset&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Worker_will_require__c , &quot;Phone Extension (No Direct Line)&quot;), &quot;Phone Extension (No Direct Line)&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Worker_will_require__c , &quot;Ring Master&quot;), &quot;Ring Master&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Worker_will_require__c , &quot;Screen Capture&quot;), &quot;Screen Capture&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Worker_will_require__c , &quot;VoiceMail&quot;), &quot;VoiceMail&quot; + &quot;,&quot; , NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Teleservices Compilation</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

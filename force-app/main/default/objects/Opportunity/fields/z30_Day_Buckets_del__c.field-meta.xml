@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>z30_Day_Buckets_del__c</fullName>
+    <description>used for RVP and SVP reporting, allowing them to group by buckets of age</description>
+    <externalId>false</externalId>
+    <formula>IF(
+      CloseDate - TODAY() &lt; 0, &quot;Close Date in Past&quot;,
+IF(
+      CloseDate - TODAY() &gt;= 0 &amp;&amp; CloseDate - TODAY() &lt; 31, &quot;0 - 30 Days&quot;,
+IF(
+      CloseDate - TODAY() &gt; 30 &amp;&amp; CloseDate - TODAY() &lt; 61, &quot;31 - 60 Days&quot;,
+IF(
+      CloseDate - TODAY() &gt; 60 &amp;&amp; CloseDate - TODAY() &lt; 91, &quot;61 - 90 Days&quot;,  
+IF(
+      CloseDate - TODAY() &gt;= 91, &quot;Close Date more than 90 Days in Future&quot;,&quot;Error in Formula Calculation, please notify salesforcecrmsupport@pgi.com with a screenshot&quot;
+)))))</formula>
+    <label>30 Day Buckets</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

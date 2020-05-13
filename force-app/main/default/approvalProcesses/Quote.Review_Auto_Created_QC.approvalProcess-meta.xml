@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>ecomm.customer@pgi.com</submitter>
+        <type>user</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>carolyn.fabre@pgi.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>howard.tidwell@pgi.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>randall.anderson@pgi.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>testing.automation_cm@pgi.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Review Auto-Created QC</label>
+        <name>Review_Auto_Created_QC</name>
+    </approvalStep>
+    <description>Process to ensure that all automatically created Q/C Records are vetted by someone before being considered done.</description>
+    <emailTemplate>Contract_Management/New_Q_C_To_Review</emailTemplate>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>Review Auto-Created QC</label>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

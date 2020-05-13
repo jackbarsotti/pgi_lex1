@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Pre-, live and post-event management support for a webcast that includes integrated streaming video &amp; audio support for up to 150 participants and 60 minutes in duration. Speaker lines and unlimited on-demand viewing for 12 months included. --></help>
+    <label><!-- Platinum Elite Webcast: 150 Participant --></label>
+    <name>Platinum_Elite_Webcast_150_Participant__c</name>
+</CustomFieldTranslation>

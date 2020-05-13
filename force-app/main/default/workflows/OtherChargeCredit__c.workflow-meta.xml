@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>RT_Credit_Notification_for_Accounting</fullName>
+        <description>RT_Credit Notification for Accounting</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>shannon.markham@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Large_Credit_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Large_Charge_Notification_Added</fullName>
+        <description>RT_Large Charge Notification Added</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>june.mccarthy@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Large_Charge_Notification</template>
+    </alerts>
+    <outboundMessages>
+        <fullName>OtherChargeCredit</fullName>
+        <apiVersion>8.0</apiVersion>
+        <description>Send Other Charge Credit to Billing</description>
+        <endpointUrl>https://provision.ecovate.com/bbs-provisioning/inboundGateway</endpointUrl>
+        <fields>AccessCode__c</fields>
+        <fields>BilledDate__c</fields>
+        <fields>ChargeOrCredit__c</fields>
+        <fields>CreatedDate</fields>
+        <fields>Description__c</fields>
+        <fields>Id</fields>
+        <fields>Inactive__c</fields>
+        <fields>IsDeleted</fields>
+        <fields>LastModifiedById</fields>
+        <fields>LastModifiedDate</fields>
+        <fields>Name</fields>
+        <fields>OtherChargeCreditId__c</fields>
+        <fields>Product__c</fields>
+        <fields>RTEventName__c</fields>
+        <fields>ServiceDate__c</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>rtsfsherpa@readytalk.com</integrationUser>
+        <name>OtherChargeCredit</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>RT_Credit Notification for Accounting</fullName>
+        <actions>
+            <name>RT_Credit_Notification_for_Accounting</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 and 2</booleanFilter>
+        <criteriaItems>
+            <field>OtherChargeCredit__c.CreatedById</field>
+            <operation>notEqual</operation>
+            <value>sf admin,Ernie Jones,Jamie Mackey</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>OtherChargeCredit__c.ChargeOrCredit__c</field>
+            <operation>lessThan</operation>
+            <value>USD 0</value>
+        </criteriaItems>
+        <description>Email sent to Accounting when a credit is issued</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Large Charge Notification</fullName>
+        <actions>
+            <name>RT_Large_Charge_Notification_Added</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 and 2</booleanFilter>
+        <criteriaItems>
+            <field>OtherChargeCredit__c.ChargeOrCredit__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>USD 500</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>OtherChargeCredit__c.CreatedById</field>
+            <operation>notEqual</operation>
+            <value>sf admin,Ernie Jones,Jamie Mackey</value>
+        </criteriaItems>
+        <description>Email sent when a Misc Charge is created &gt; $500.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_SendOtherChargeCredit</fullName>
+        <actions>
+            <name>OtherChargeCredit</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>User.ReadyTalk_Exempt__c</field>
+            <operation>notEqual</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

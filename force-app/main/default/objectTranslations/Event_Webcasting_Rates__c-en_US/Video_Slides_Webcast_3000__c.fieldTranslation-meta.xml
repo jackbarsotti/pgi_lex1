@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Per event. Includes webcam or VCU and slides for 3000 attendees for 60 minutes, 12 month archive --></help>
+    <label><!-- Video &amp; Slides Webcast (3000) --></label>
+    <name>Video_Slides_Webcast_3000__c</name>
+</CustomFieldTranslation>

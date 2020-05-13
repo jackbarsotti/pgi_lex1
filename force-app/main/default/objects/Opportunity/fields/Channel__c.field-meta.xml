@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Channel__c</fullName>
+    <description>Channel from Opportunity Owner&#39;s user record</description>
+    <externalId>false</externalId>
+    <label>Owner&#39;s Channel</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>APAC</fullName>
+                <default>false</default>
+                <label>APAC</label>
+            </value>
+            <value>
+                <fullName>Carrier</fullName>
+                <default>false</default>
+                <label>Carrier</label>
+            </value>
+            <value>
+                <fullName>Cloud</fullName>
+                <default>false</default>
+                <label>Cloud</label>
+            </value>
+            <value>
+                <fullName>iMeetCentral</fullName>
+                <default>false</default>
+                <label>iMeetCentral</label>
+            </value>
+            <value>
+                <fullName>Information Systems</fullName>
+                <default>false</default>
+                <label>Information Systems</label>
+            </value>
+            <value>
+                <fullName>Japan</fullName>
+                <default>false</default>
+                <label>Japan</label>
+            </value>
+            <value>
+                <fullName>Major Accounts</fullName>
+                <default>false</default>
+                <label>Major Accounts</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Modality</fullName>
+                <default>false</default>
+                <label>Modality</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Partners</fullName>
+                <default>false</default>
+                <label>Partners</label>
+            </value>
+            <value>
+                <fullName>ReadyTalk</fullName>
+                <default>false</default>
+                <label>ReadyTalk</label>
+            </value>
+            <value>
+                <fullName>Sales Engineers</fullName>
+                <default>false</default>
+                <label>Sales Engineers</label>
+            </value>
+            <value>
+                <fullName>Sales Operations</fullName>
+                <default>false</default>
+                <label>Sales Operations</label>
+            </value>
+            <value>
+                <fullName>TalkPoint</fullName>
+                <default>false</default>
+                <label>TalkPoint</label>
+            </value>
+            <value>
+                <fullName>Tier One</fullName>
+                <default>false</default>
+                <label>Tier One</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

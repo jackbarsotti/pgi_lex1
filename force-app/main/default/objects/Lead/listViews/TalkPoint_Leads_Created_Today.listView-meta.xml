@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TalkPoint_Leads_Created_Today</fullName>
+    <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>Owner_s_Profile__c</field>
+        <operation>contains</operation>
+        <value>TalkPoint</value>
+    </filters>
+    <filters>
+        <field>Lead_Owner_18_SFDC_ID__c</field>
+        <operation>equals</operation>
+        <value>00G1B000003S13p,00G1B000003S3oL</value>
+    </filters>
+    <label>TalkPoint - Leads Created Today</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinates>TalkPoint_Channel_C_Level</roleAndSubordinates>
+    </sharedTo>
+</ListView>

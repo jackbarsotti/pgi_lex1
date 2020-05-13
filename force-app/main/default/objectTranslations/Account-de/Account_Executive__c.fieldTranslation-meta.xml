@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- OLD - Account Executive --></label>
+    <name>Account_Executive__c</name>
+    <picklistValues>
+        <masterLabel>3dve</masterLabel>
+        <translation><!-- 3dve --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alex Knight</masterLabel>
+        <translation><!-- Alex Knight --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Amanda DiPlacido</masterLabel>
+        <translation><!-- Amanda DiPlacido --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anne Costigan</masterLabel>
+        <translation><!-- Anne Costigan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>April Trubell</masterLabel>
+        <translation><!-- April Trubell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Basati</masterLabel>
+        <translation><!-- Basati --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ben Dehner</masterLabel>
+        <translation><!-- Ben Dehner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BestDefense</masterLabel>
+        <translation><!-- BestDefense --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Betsy Wells</masterLabel>
+        <translation><!-- Betsy Wells --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BluArc</masterLabel>
+        <translation><!-- BluArc --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Brian Schlosser</masterLabel>
+        <translation><!-- Brian Schlosser --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Broadnet</masterLabel>
+        <translation><!-- Broadnet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CSG Affiliates</masterLabel>
+        <translation><!-- CSG Affiliates --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chad Small</masterLabel>
+        <translation><!-- Chad Small --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Charlie Cave</masterLabel>
+        <translation><!-- Charlie Cave --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chris Harrison</masterLabel>
+        <translation><!-- Chris Harrison --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Commpartners</masterLabel>
+        <translation><!-- Commpartners --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ConsultED</masterLabel>
+        <translation><!-- ConsultED --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Corey Geer</masterLabel>
+        <translation><!-- Corey Geer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dan King</masterLabel>
+        <translation><!-- Dan King --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dan LeFevre</masterLabel>
+        <translation><!-- Dan LeFevre --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Danny Cohen</masterLabel>
+        <translation><!-- Danny Cohen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Danny Ramos</masterLabel>
+        <translation><!-- Danny Ramos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Effusion</masterLabel>
+        <translation><!-- Effusion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Eric Veith</masterLabel>
+        <translation><!-- Eric Veith --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GROM Technologies, Inc.</masterLabel>
+        <translation><!-- GROM Technologies, Inc. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Grace Corbett</masterLabel>
+        <translation><!-- Grace Corbett --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Graham Smith</masterLabel>
+        <translation><!-- Graham Smith --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inside Sales</masterLabel>
+        <translation><!-- Inside Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>James Desmond</masterLabel>
+        <translation><!-- James Desmond --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jamie Rifkin</masterLabel>
+        <translation><!-- Jamie Rifkin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Janae Payton</masterLabel>
+        <translation><!-- Janae Payton --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jay Mills</masterLabel>
+        <translation><!-- Jay Mills --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jessica Fertik</masterLabel>
+        <translation><!-- Jessica Fertik --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>John Andrews</masterLabel>
+        <translation><!-- John Andrews --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jordan Hilgers</masterLabel>
+        <translation><!-- Jordan Hilgers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Josh White</masterLabel>
+        <translation><!-- Josh White --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Joshua Cook</masterLabel>
+        <translation><!-- Joshua Cook --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kelly King</masterLabel>
+        <translation><!-- Kelly King --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kelly Kinney</masterLabel>
+        <translation><!-- Kelly Kinney --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lauren Reese</masterLabel>
+        <translation><!-- Lauren Reese --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lisa Kim</masterLabel>
+        <translation><!-- Lisa Kim --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marian Wong</masterLabel>
+        <translation><!-- Marian Wong --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mark Brooks</masterLabel>
+        <translation><!-- Mark Brooks --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Matt Kline</masterLabel>
+        <translation><!-- Matt Kline --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Meghan Deangelis</masterLabel>
+        <translation><!-- Meghan Deangelis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Michelle McGinty</masterLabel>
+        <translation><!-- Michelle McGinty --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mike Ligon</masterLabel>
+        <translation><!-- Mike Ligon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mindful</masterLabel>
+        <translation><!-- Mindful --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nicole Qualtieri</masterLabel>
+        <translation><!-- Nicole Qualtieri --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Patrick Farley</masterLabel>
+        <translation><!-- Patrick Farley --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Patrick Wiley</masterLabel>
+        <translation><!-- Patrick Wiley --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Patrick Zeiher</masterLabel>
+        <translation><!-- Patrick Zeiher --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Paul Carollo</masterLabel>
+        <translation><!-- Paul Carollo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Peach New Media</masterLabel>
+        <translation><!-- Peach New Media --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quincy Johnston</masterLabel>
+        <translation><!-- Quincy Johnston --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RJB</masterLabel>
+        <translation><!-- RJB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rachel Stoddart</masterLabel>
+        <translation><!-- Rachel Stoddart --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ryan Dupuis</masterLabel>
+        <translation><!-- Ryan Dupuis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ryan Stearns</masterLabel>
+        <translation><!-- Ryan Stearns --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ryan Waldvogel</masterLabel>
+        <translation><!-- Ryan Waldvogel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scott King</masterLabel>
+        <translation><!-- Scott King --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scott Roosa</masterLabel>
+        <translation><!-- Scott Roosa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sean Harrington</masterLabel>
+        <translation><!-- Sean Harrington --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shannon Westmacott</masterLabel>
+        <translation><!-- Shannon Westmacott --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shawn Murry</masterLabel>
+        <translation><!-- Shawn Murry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>The Market Element</masterLabel>
+        <translation><!-- The Market Element --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tom Kirkland</masterLabel>
+        <translation><!-- Tom Kirkland --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_of_Mins__c</fullName>
+    <externalId>false</externalId>
+    <label>Total # of Mins</label>
+    <summarizedField>OpportunityLineItem.New_Quantity__c</summarizedField>
+    <summaryFilterItems>
+        <field>OpportunityLineItem.Unit_Type__c</field>
+        <operation>equals</operation>
+        <value>Minutes</value>
+    </summaryFilterItems>
+    <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

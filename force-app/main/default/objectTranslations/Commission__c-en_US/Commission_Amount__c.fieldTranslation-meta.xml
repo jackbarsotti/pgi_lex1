@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- this is the final amount that will be paid to the payee --></help>
+    <label><!-- Commission Amount --></label>
+    <name>Commission_Amount__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Base price for 60 minutes; prorate for each add&apos;l 30 min --></help>
+    <label><!-- Live Event Monitoring --></label>
+    <name>Live_Event_Monitoring__c</name>
+</CustomFieldTranslation>

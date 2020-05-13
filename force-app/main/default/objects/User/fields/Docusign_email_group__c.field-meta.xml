@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Docusign_email_group__c</fullName>
+    <description>CASE(Channel__c,
+&#39;Ent - AAE&#39;, &quot;dsnaaae@pgi.com&quot;,
+&#39;SaaS Base&#39;, &quot;dsnabase@pgi.com&quot;,
+&#39;E-Commerce&#39;, &quot;dsnaecommerce@pgi.com&quot;,
+&quot;Partners&quot;, &quot;dsnapartners@pgi.com&quot;,
+&quot;Budget Conferencing&quot;, &quot;dsnabudgetconferencing&quot;,
+&quot;dsna_test@pgi.com&quot;
+)</description>
+    <externalId>false</externalId>
+    <formula>/*CASE(Channel__c,
+&#39;Field Sales&#39;, &quot;dsnabase@pgi.com&quot;, 
+&#39;ISO Inbound&#39;, &quot;dsnaecommerce@pgi.com&quot;, 
+&quot;Partner&quot;, &quot;dsnapartners@pgi.com&quot;,
+&quot;dsna_test@pgi.com&quot;
+)
+*/
+&quot;dsna_test@pgi.com&quot;</formula>
+    <label>Docusign email group</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

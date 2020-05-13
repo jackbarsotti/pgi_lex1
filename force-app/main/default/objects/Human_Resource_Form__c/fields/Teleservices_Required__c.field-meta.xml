@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Teleservices_Required__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>If your request is to Change services, please use the Teleservices Comments field.</inlineHelpText>
+    <label>Teleservices Required</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ACD/Aspect Phone Setup</fullName>
+                <default>false</default>
+                <label>ACD/Aspect Phone Setup</label>
+            </value>
+            <value>
+                <fullName>Call Recording</fullName>
+                <default>false</default>
+                <label>Call Recording</label>
+            </value>
+            <value>
+                <fullName>Direct Dial Phone</fullName>
+                <default>false</default>
+                <label>Direct Dial Phone</label>
+            </value>
+            <value>
+                <fullName>Headset</fullName>
+                <default>false</default>
+                <label>Headset</label>
+            </value>
+            <value>
+                <fullName>Phone Extension (No Direct Line)</fullName>
+                <default>false</default>
+                <label>Phone Extension (No Direct Line)</label>
+            </value>
+            <value>
+                <fullName>Ring Master</fullName>
+                <default>false</default>
+                <label>Ring Master</label>
+            </value>
+            <value>
+                <fullName>Screen Capture</fullName>
+                <default>false</default>
+                <label>Screen Capture</label>
+            </value>
+            <value>
+                <fullName>VoiceMail</fullName>
+                <default>false</default>
+                <label>VoiceMail</label>
+            </value>
+            <value>
+                <fullName>Worker Speaks French</fullName>
+                <default>false</default>
+                <label>Worker Speaks French</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

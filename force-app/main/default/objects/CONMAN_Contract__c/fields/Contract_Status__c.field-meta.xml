@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Contract Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sent To Customer</fullName>
+                <default>false</default>
+                <label>Sent To Customer</label>
+            </value>
+            <value>
+                <fullName>Customer Accepted</fullName>
+                <default>false</default>
+                <label>Customer Accepted</label>
+            </value>
+            <value>
+                <fullName>Customer Rejected</fullName>
+                <default>false</default>
+                <label>Customer Rejected</label>
+            </value>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+                <label>Active</label>
+            </value>
+            <value>
+                <fullName>Deactivated</fullName>
+                <default>false</default>
+                <label>Deactivated</label>
+            </value>
+            <value>
+                <fullName>Expired</fullName>
+                <default>false</default>
+                <label>Expired</label>
+            </value>
+            <value>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+                <label>Inactive</label>
+            </value>
+            <value>
+                <fullName>Superseded</fullName>
+                <default>false</default>
+                <label>Superseded</label>
+            </value>
+            <value>
+                <fullName>Terminated</fullName>
+                <default>false</default>
+                <label>Terminated</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>true</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Contract Pricing Approved</fullName>
+                <default>false</default>
+                <label>Contract Pricing Approved</label>
+            </value>
+            <value>
+                <fullName>Contract Pricing Rejected</fullName>
+                <default>false</default>
+                <label>Contract Pricing Rejected</label>
+            </value>
+            <value>
+                <fullName>Awaiting Approval</fullName>
+                <default>false</default>
+                <label>Awaiting Approval</label>
+            </value>
+            <value>
+                <fullName>Awaiting Manager Approval</fullName>
+                <default>false</default>
+                <label>Awaiting Manager Approval</label>
+            </value>
+            <value>
+                <fullName>Awaiting RVP Approval</fullName>
+                <default>false</default>
+                <label>Awaiting RVP Approval</label>
+            </value>
+            <value>
+                <fullName>Awaiting SVP Approval</fullName>
+                <default>false</default>
+                <label>Awaiting SVP Approval</label>
+            </value>
+            <value>
+                <fullName>Pending Pricing Approval</fullName>
+                <default>false</default>
+                <label>Pending Pricing Approval</label>
+            </value>
+            <value>
+                <fullName>Downloaded</fullName>
+                <default>false</default>
+                <label>Downloaded</label>
+            </value>
+            <value>
+                <fullName>Pending Legal Approval</fullName>
+                <default>false</default>
+                <label>Pending Legal Approval</label>
+            </value>
+            <value>
+                <fullName>Legal Approved</fullName>
+                <default>false</default>
+                <label>Legal Approved</label>
+            </value>
+            <value>
+                <fullName>Legal Rejected</fullName>
+                <default>false</default>
+                <label>Legal Rejected</label>
+            </value>
+            <value>
+                <fullName>Pending Approval</fullName>
+                <default>false</default>
+                <label>Pending Approval</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Generated_Lead_s</fullName>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>Global_MQL_Assignment_Date__c</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>FULL_NAME</columns>
+    <columns>saleswings__Last_Visit_Datetime__c</columns>
+    <columns>saleswings__SW_Lead_Score__c</columns>
+    <columns>saleswings__Current_Interest__c</columns>
+    <columns>LEAD.TITLE</columns>
+    <columns>Product_Interest__c</columns>
+    <columns>LEAD.LAST_ACTIVITY</columns>
+    <columns>LEAD.EMPLOYEES</columns>
+    <columns>LEAD.ANNUAL_REVENUE</columns>
+    <columns>LEAD.INDUSTRY</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Disqualified</value>
+    </filters>
+    <filters>
+        <field>Global_MQL__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>LEAD.CONVERTED</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>IS - My Leads (MQL)</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinates>NA_Sales_Mgmt_Bailey</roleAndSubordinates>
+    </sharedTo>
+</ListView>

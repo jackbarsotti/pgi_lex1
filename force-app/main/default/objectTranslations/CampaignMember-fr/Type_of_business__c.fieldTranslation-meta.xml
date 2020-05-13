@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Type of business --></help>
+    <label><!-- Type of business --></label>
+    <name>Type_of_business__c</name>
+    <picklistValues>
+        <masterLabel>Business Consulting</masterLabel>
+        <translation><!-- Business Consulting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reseller</masterLabel>
+        <translation><!-- Reseller --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

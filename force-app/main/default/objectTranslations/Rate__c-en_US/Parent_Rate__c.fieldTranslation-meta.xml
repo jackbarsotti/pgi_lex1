@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- All of the child rates will be shown in a drop-down menu on the parent rate. --></help>
+    <label><!-- Parent Rate --></label>
+    <name>Parent_Rate__c</name>
+    <relationshipLabel><!-- Rates --></relationshipLabel>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Tracks the number of times the task was marked as blocked. --></help>
+    <label><!-- Number of Times Blocked --></label>
+    <name>TASKRAY__trNumberOfTimesBlocked__c</name>
+</CustomFieldTranslation>

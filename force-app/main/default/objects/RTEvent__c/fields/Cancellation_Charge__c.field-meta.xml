@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancellation_Charge__c</fullName>
+    <description>Selected when an event status is set to Cancelled.</description>
+    <externalId>false</externalId>
+    <label>Cancellation Charge</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Charge - Cancelled with 24+ hours notice</fullName>
+                <default>false</default>
+                <label>No Charge - Cancelled with 24+ hours notice</label>
+            </value>
+            <value>
+                <fullName>Fee Charged - Cancelled without 24 hours notice</fullName>
+                <default>false</default>
+                <label>Fee Charged - Cancelled without 24 hours notice</label>
+            </value>
+            <value>
+                <fullName>Fee Charged - Customer was a No Show</fullName>
+                <default>false</default>
+                <label>Fee Charged - Customer was a No Show</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>CANCELLED</controllingFieldValue>
+            <valueName>No Charge - Cancelled with 24+ hours notice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CANCELLED</controllingFieldValue>
+            <valueName>Fee Charged - Cancelled without 24 hours notice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CANCELLED</controllingFieldValue>
+            <valueName>Fee Charged - Customer was a No Show</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

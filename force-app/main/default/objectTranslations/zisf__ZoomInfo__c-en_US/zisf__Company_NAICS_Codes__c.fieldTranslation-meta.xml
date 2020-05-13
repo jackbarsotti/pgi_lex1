@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- List of NAICS codes associated with company. --></help>
+    <label><!-- Company NAICS Codes --></label>
+    <name>zisf__Company_NAICS_Codes__c</name>
+</CustomFieldTranslation>

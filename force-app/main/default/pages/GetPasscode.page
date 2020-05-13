@@ -1,0 +1,63 @@
+<apex:page standardController="Subscription__c" extensions="PasscodeController" showHeader="true">
+  <apex:stylesheet value="{!URLFOR($Resource.RTResources, 'css/jquery-ui.min.css')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery-ui.min.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/handlebars.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/messaging.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/remoting.js')}"/>    
+
+  <script>    
+    $(document).ready(function(){  
+      $.registerCommonHandlebarsHandlers();
+
+      $.showDialog('.dialog-modal', 'Synchronize Passcode', {
+        "Done": function() {
+          $.disableDialogButtons($(this));                      
+          location.href='/{!SubscriptionId}';
+        },
+      });
+
+      $('.warnMessage').html('Synchronizing passcode, please wait...');
+      $('.warnMessages').fadeIn('fast');  
+
+      //Render the plans-template
+      PasscodeController.getPasscode('{!SubscriptionId}', function(result,event){
+        if($.handleRemotingResult(result,event)){          
+          console.log(result);
+          if(result.success){
+            $('.warnMessage').html('Passcode synchronized!');
+            $('.warnMessages').fadeIn('fast');  
+          }
+          else if(result.success == false){
+            $('.errorMessage').html('An error occurred, message from server: '+result.statusMessage);
+            $('.errorMessages').fadeIn('fast');  
+          }
+          else{
+            $('.errorMessage').html('An unspecified error occured, please contact the SFB team');
+            $('.errorMessages').fadeIn('fast');              
+          }          
+        }
+        else{
+          $('.errorMessage').html('An unspecified error occured, please contact the SFB team');
+          $('.errorMessages').fadeIn('fast');              
+        }
+      }); 
+    });              
+  </script>
+  
+  <apex:detail relatedListHover="false"/>            
+
+  <apex:outputPanel id="dialog-panel" styleClass="dialog-modal" layout="block">
+    <apex:pageBlock tabStyle="Subscription__c">        
+      <div class="ui-state-error ui-corner-all errorMessages" style="padding: 0 .7em .7em .7em; margin-bottom: 5px; display: none"> 
+        <p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span><span class="errorMessage"></span></p>
+      </div>
+          
+      <div class="ui-state-highlight ui-corner-all warnMessages" style="padding: 0 .7em .7em .7em; margin-bottom: 5px; display: none"> 
+        <p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
+          <span class="warnMessage"></span>
+        </p>
+      </div>         
+    </apex:pageBlock>                
+  </apex:outputPanel>              
+</apex:page>

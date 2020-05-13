@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Job Title --></label>
+    <name>Job_Title__c</name>
+    <picklistValues>
+        <masterLabel>All Titles</masterLabel>
+        <translation><!-- All Titles --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Director</masterLabel>
+        <translation><!-- Director --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Director of Marketing</masterLabel>
+        <translation><!-- Director of Marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Director of Sales</masterLabel>
+        <translation><!-- Director of Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IT - All Titles</masterLabel>
+        <translation><!-- IT - All Titles --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IT Manager</masterLabel>
+        <translation><!-- IT Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Manager</masterLabel>
+        <translation><!-- Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing - All Titles</masterLabel>
+        <translation><!-- Marketing - All Titles --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing Manager</masterLabel>
+        <translation><!-- Marketing Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales - All Titles</masterLabel>
+        <translation><!-- Sales - All Titles --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Manager</masterLabel>
+        <translation><!-- Sales Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Supervisor</masterLabel>
+        <translation><!-- Supervisor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VP of Marketing</masterLabel>
+        <translation><!-- VP of Marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VP of Sales</masterLabel>
+        <translation><!-- VP of Sales --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

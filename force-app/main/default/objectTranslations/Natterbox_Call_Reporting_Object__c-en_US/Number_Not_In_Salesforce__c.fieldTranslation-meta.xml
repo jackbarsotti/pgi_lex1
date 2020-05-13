@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If Natterbox was unable to find the phone number in the Contact, Accounts or Lead tables, this checkbox will be ticked to indicate that this phone number could not be found in Salesforce. --></help>
+    <label><!-- Number Not In Salesforce --></label>
+    <name>Number_Not_In_Salesforce__c</name>
+</CustomFieldTranslation>

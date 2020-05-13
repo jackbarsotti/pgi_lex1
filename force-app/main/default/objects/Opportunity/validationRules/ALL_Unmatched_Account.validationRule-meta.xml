@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALL_Unmatched_Account</fullName>
+    <active>true</active>
+    <description>Cannot create opportunity against an unmatched account</description>
+    <errorConditionFormula>AND( 
+ISNEW(),
+OR(
+Account.Id = &quot;001300000106U1c&quot;,
+Account.Id = &quot;001300000106U2C&quot;,
+Account.Id = &quot;001300000106U2G&quot;))</errorConditionFormula>
+    <errorMessage>You are not allowed to create an opportunity under a unmatched account.</errorMessage>
+</ValidationRule>

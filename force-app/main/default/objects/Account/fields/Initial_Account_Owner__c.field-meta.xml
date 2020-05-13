@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Initial_Account_Owner__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Indicates Account Owner as of 9/1/2010. This field is used to measure account revenue over time while showing owner at start of measure.</description>
+    <externalId>false</externalId>
+    <label>Initial Account Owner</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Accounts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

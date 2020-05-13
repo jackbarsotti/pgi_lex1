@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Management Criteria Met --></help>
+    <label><!-- B: Has Budget --></label>
+    <name>Has_Budget__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Email invoices are automatically sent to the billing contact.  If you select &quot;email&quot; or &quot;print &amp; email,&quot; include the emails of any ADDITIONAL recipients. --></help>
+    <label><!-- Add&apos;l Invoice Recipient Email/s --></label>
+    <name>Invoice_Recipient_Emails__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Script_Text__c</fullName>
+    <defaultValue>&quot;N/A&quot;</defaultValue>
+    <description>Field used to enter in the customer&#39;s custom script for their introduction.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter in the customer&#39;s custom script text for their event introduction.</inlineHelpText>
+    <label>Custom Script Text</label>
+    <length>5000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

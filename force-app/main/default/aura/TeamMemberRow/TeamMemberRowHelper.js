@@ -1,0 +1,6 @@
+({
+	getMemberRoles: function(cmp, event) {
+
+
+    },
+})

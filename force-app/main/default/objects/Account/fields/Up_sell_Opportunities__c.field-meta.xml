@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Up_sell_Opportunities__c</fullName>
+    <description>This will calculate if an active customer is reaching capacity limits.</description>
+    <externalId>false</externalId>
+    <formula>IF( Active_Account__c = TRUE,
+  IF(Total_Storage_Used__c / Licensed_Storage__c &gt;= 0.85,&quot;Up-sell Alert&quot;, 
+    IF(Total_Internal_Users__c / Licensed_Internal_Users__c &gt;= 0.95,&quot;Up-sell Alert&quot;,
+      IF(Total_Workspaces_Used__c / Licensed_Workspaces__c &gt;= 0.85,&quot;Up-sell Alert&quot;,
+        IF(Total_Internal_Users__c / Licensed_Internal_Users__c &lt;= 0.4,&quot;Low Usge Alert&quot;,&quot;Maintenance&quot;
+          )
+        ) 
+      )
+    )
+  ,&quot;&quot;)</formula>
+    <inlineHelpText>Active Accounts with a licensed storage limit at 85% or more the licensed amount 
+or provisioned internal users are at 95% or more of the licensed amount
+or Provisioned workspaces 85% or more of the licensed amount</inlineHelpText>
+    <label>Up-sell Opportunities</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

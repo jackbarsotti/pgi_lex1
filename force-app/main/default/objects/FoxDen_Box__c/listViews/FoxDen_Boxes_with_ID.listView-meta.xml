@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FoxDen_Boxes_with_ID</fullName>
+    <columns>NAME</columns>
+    <columns>sku__c</columns>
+    <columns>Account__c</columns>
+    <columns>Beacon_Minor_Value__c</columns>
+    <columns>Status__c</columns>
+    <columns>Kiosk_Email__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Delete,Deleted</value>
+    </filters>
+    <label>FoxDen Boxes with ID</label>
+</ListView>

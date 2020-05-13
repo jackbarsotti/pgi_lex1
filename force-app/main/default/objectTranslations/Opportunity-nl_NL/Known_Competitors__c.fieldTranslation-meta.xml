@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Competitor/s that this opportunity is up against in obtaining a Closed/Won status. --></help>
+    <label><!-- xxKnown Competitors --></label>
+    <name>Known_Competitors__c</name>
+    <picklistValues>
+        <masterLabel>8x8</masterLabel>
+        <translation><!-- 8x8 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ACT</masterLabel>
+        <translation><!-- ACT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AT&amp;T</masterLabel>
+        <translation><!-- AT&amp;T --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Adobe Connect</masterLabel>
+        <translation><!-- Adobe Connect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AnyMeeting</masterLabel>
+        <translation><!-- AnyMeeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Arkadin</masterLabel>
+        <translation><!-- Arkadin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Avaya</masterLabel>
+        <translation><!-- Avaya --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BT</masterLabel>
+        <translation><!-- BT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Beacon Live</masterLabel>
+        <translation><!-- Beacon Live --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BigMarker</masterLabel>
+        <translation><!-- BigMarker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BluIP</masterLabel>
+        <translation><!-- BluIP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Blue Jeans Network</masterLabel>
+        <translation><!-- Blue Jeans Network --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BrightTalk</masterLabel>
+        <translation><!-- BrightTalk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C3 Conferencing</masterLabel>
+        <translation><!-- C3 Conferencing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cisco</masterLabel>
+        <translation><!-- Cisco --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ClearSlide</masterLabel>
+        <translation><!-- ClearSlide --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Comcast</masterLabel>
+        <translation><!-- Comcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ConvergeOne</masterLabel>
+        <translation><!-- ConvergeOne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Copper</masterLabel>
+        <translation><!-- Copper --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DialPad</masterLabel>
+        <translation><!-- DialPad --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DimDim</masterLabel>
+        <translation><!-- DimDim --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Evolve IP</masterLabel>
+        <translation><!-- Evolve IP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fonality</masterLabel>
+        <translation><!-- Fonality --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Free Conference Call</masterLabel>
+        <translation><!-- Free Conference Call --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fuze</masterLabel>
+        <translation><!-- Fuze --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fuze Meeting</masterLabel>
+        <translation><!-- Fuze Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Global Crossing</masterLabel>
+        <translation><!-- Global Crossing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GoTo Meeting/GoTo Webinar</masterLabel>
+        <translation><!-- GoTo Meeting/GoTo Webinar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Google Hangouts</masterLabel>
+        <translation><!-- Google Hangouts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HighFive</masterLabel>
+        <translation><!-- HighFive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InXpo</masterLabel>
+        <translation><!-- InXpo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InterCall</masterLabel>
+        <translation><!-- InterCall --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jive</masterLabel>
+        <translation><!-- Jive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Join.me</masterLabel>
+        <translation><!-- Join.me --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Level 3 Voice</masterLabel>
+        <translation><!-- Level 3 Voice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Level3 Web Meeting</masterLabel>
+        <translation><!-- Level3 Web Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MS Live Meeting/Lync/Live 365</masterLabel>
+        <translation><!-- MS Live Meeting/Lync/Live 365 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MegaPath</masterLabel>
+        <translation><!-- MegaPath --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MiTel</masterLabel>
+        <translation><!-- MiTel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nextiva</masterLabel>
+        <translation><!-- Nextiva --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>None</masterLabel>
+        <translation><!-- None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On 24</masterLabel>
+        <translation><!-- On 24 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ooman</masterLabel>
+        <translation><!-- Ooman --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Premiere Global</masterLabel>
+        <translation><!-- Premiere Global --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ReadyTalk</masterLabel>
+        <translation><!-- ReadyTalk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RingCentral</masterLabel>
+        <translation><!-- RingCentral --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Skype/Skype for Business</masterLabel>
+        <translation><!-- Skype/Skype for Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Uberconference</masterLabel>
+        <translation><!-- Uberconference --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unknown</masterLabel>
+        <translation><!-- Unknown --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ustream</masterLabel>
+        <translation><!-- Ustream --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Verizon</masterLabel>
+        <translation><!-- Verizon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VoIP Logic</masterLabel>
+        <translation><!-- VoIP Logic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Voyage</masterLabel>
+        <translation><!-- Voyage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webex</masterLabel>
+        <translation><!-- Webex --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zoom</masterLabel>
+        <translation><!-- Zoom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iLinc</masterLabel>
+        <translation><!-- iLinc --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

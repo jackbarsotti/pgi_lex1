@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>natterbox__Show_Features_Under_Development__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Show Features Under Development</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

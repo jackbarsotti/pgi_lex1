@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_modified_Date_by_non_admin__c</fullName>
+    <defaultValue>NOW()</defaultValue>
+    <description>Date/Time field that is set via WF Rule whenever a non-admin updates an Account in SFDC. Used to see rep neglecting account trends, etc.</description>
+    <externalId>false</externalId>
+    <label>Last modified Date by (non-admin)</label>
+    <required>false</required>
+    <type>DateTime</type>
+</CustomField>

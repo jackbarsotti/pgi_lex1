@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Audio_subscription_size__c</fullName>
+    <description>CAUTION - USED IN INTEGRATIONS</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates the number of audio ports available for this access code during an audio conference.</inlineHelpText>
+    <label>Number of Audio Ports</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>10</fullName>
+                <default>false</default>
+                <label>10</label>
+            </value>
+            <value>
+                <fullName>25</fullName>
+                <default>false</default>
+                <label>25</label>
+            </value>
+            <value>
+                <fullName>50</fullName>
+                <default>false</default>
+                <label>50</label>
+            </value>
+            <value>
+                <fullName>100</fullName>
+                <default>false</default>
+                <label>100</label>
+            </value>
+            <value>
+                <fullName>150</fullName>
+                <default>true</default>
+                <label>150</label>
+            </value>
+            <value>
+                <fullName>300</fullName>
+                <default>false</default>
+                <label>300</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

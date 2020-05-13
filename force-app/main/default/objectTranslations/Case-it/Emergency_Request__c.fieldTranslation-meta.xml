@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Request needed within an hour --></help>
+    <label><!-- Emergency Request --></label>
+    <name>Emergency_Request__c</name>
+</CustomFieldTranslation>

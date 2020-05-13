@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If Partner Opportunity, please give details. --></help>
+    <label><!-- Partner Oppty Details --></label>
+    <name>Partner_Oppty_Details__c</name>
+</CustomFieldTranslation>

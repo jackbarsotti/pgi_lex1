@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Visuals --></label>
+    <name>Visuals__c</name>
+    <picklistValues>
+        <masterLabel>Sharing Applications</masterLabel>
+        <translation><!-- Sharing Applications --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sharing Desktop</masterLabel>
+        <translation><!-- Sharing Desktop --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Slides Only</masterLabel>
+        <translation><!-- Slides Only --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Uploading Slides</masterLabel>
+        <translation><!-- Uploading Slides --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

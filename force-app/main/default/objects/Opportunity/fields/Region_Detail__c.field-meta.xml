@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Region_Detail__c</fullName>
+    <externalId>false</externalId>
+    <label>Region Detail</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Region__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>N/A</fullName>
+                <default>true</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>PWN</fullName>
+                <default>false</default>
+                <label>PWN</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>N/A</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>PWN</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

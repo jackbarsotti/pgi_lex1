@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Only to be populated in POC won records --></help>
+    <label><!-- POC Start --></label>
+    <name>POC_Start__c</name>
+</CustomFieldTranslation>

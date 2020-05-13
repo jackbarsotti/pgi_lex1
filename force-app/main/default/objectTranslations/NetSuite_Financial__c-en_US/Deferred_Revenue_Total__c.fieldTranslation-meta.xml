@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is used to defer an annual sub across the full 12 months of service --></help>
+    <label><!-- Deferred Revenue Total --></label>
+    <name>Deferred_Revenue_Total__c</name>
+</CustomFieldTranslation>

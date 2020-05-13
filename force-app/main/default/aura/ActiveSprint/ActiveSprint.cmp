@@ -1,0 +1,471 @@
+<aura:component
+  controller="kanbanActiveSprint"
+  implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,flexipage:availableForRecordHome,forceCommunity:availableForAllPageTypes"
+  access="global"
+>
+  <aura:attribute name="kanbanData" type="kanbanActiveSprint.kanbanWrap" />
+  <!-- RT559 -->
+  <aura:attribute name="fieldToSort" type="String"  />
+  <aura:attribute name="fieldOrder" type="Boolean"  />
+  <!-- Above for Ordering -->
+  <!-- to store the default value -->
+  <aura:attribute name="allSprint" type="list" />
+  <aura:attribute name="objName" type="String" default="" />
+  <aura:attribute name="objFields" type="String[]" default="" />
+  <aura:attribute name="agileStatusOnCase" type="String" default="" />
+  <aura:attribute name="isForBackLog" type="Boolean" />
+  <!-- Selected Group-->
+  <aura:attribute name="selectedGroup" type="String" />
+  <!-- Selected Group-->
+  <aura:attribute name="groupSelected" type="String" default="Mediation" />
+  <!-- get the Accociated group value-->
+  <aura:attribute name="picklistOptions" type="String[]" />
+  <!-- Map of group to AgileStatus -->
+  <aura:attribute name="groupToAgileStatus" type="Map" />
+  <!-- open and close chatter -->
+  <aura:attribute name="isForChatter" type="Boolean" />
+  <!-- check start button true or false -->
+  <aura:attribute name="isStart" type="Boolean" />
+  <!-- Map group with Status Active Or not -->
+  <aura:attribute name="checkGroupActive" type="Map" />
+  <!-- Id to send to popup and for chatter -->
+  <aura:attribute name="caseRecordId" type="String" access="global" />
+  <!-- Link to open Chatter vf-->
+  <aura:attribute name="vfHost" type="String" />
+  <!-- Map group with Status Active Or not -->
+  <aura:attribute name="checkButtonStatus" type="List" />
+  <!-- DragAnd drop ul Name -->
+  <aura:attribute name="storeAgileName" type="String" />
+
+  <!-- handlerss -->
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+  <!--Spinner-->
+  <lightning:spinner
+    aura:id="spinner"
+    class="slds-spinner_container"
+    alternativeText="Loading"
+    size="small"
+  />
+
+  <div class="slds-grid slds-gutters">
+    <div
+      class="slds-col slds-size_2-of-12 slds-p-top_large"
+      style="padding-left: 41px;"
+    >
+    </div>
+    <div class="slds-col slds-size_2-of-12" style="width:15vw">
+      <lightning:select
+        class="hideLabel"
+        label="Associated group"
+        value="{!v.groupSelected}"
+        variant="label-hidden"
+        aura:id="picklist"
+        onchange="{!c.onSelectChange}"
+      >
+        <aura:iteration items="{!v.picklistOptions}" var="option">
+          <option
+            class="slds-truncate"
+            value="{!option}"
+            selected="{!option == v.groupSelected}"
+            >{!option}</option
+          >
+        </aura:iteration>
+      </lightning:select>
+    </div>
+  </div>
+
+  <div class="slds-col slds-size_12-of-12">
+    <div style="padding:0.5rem;">
+      <aura:iteration var="pickVal" items="{!v.kanbanData.pickVals}">
+        <!-- <div class="stageContainer" style="{!'width:calc(100vw/'+(v.kanbanData.pickVals.length+0.5)+')'}"> -->
+        <!-- 'width:calc(100vw/'+(v.kanbanData.pickVals.length+1)+')' -->
+        <div
+          class="{! if(v.isForBackLog, 'slds-p-bottom_medium',' stageContainer ')}"
+          style="{! if(v.isForBackLog, '',' width:calc(100%/'+(v.kanbanData.pickVals.length+0.5)+') ')}"
+        >
+          <div
+            class="slds-grid slds-grid_vertical"
+            style="{! if(v.isForBackLog, 'margin-left: 1%;margin-right: 1%;','')}"
+          >
+            <div
+              class="{! if(v.isForBackLog, 'slds-grid slds-gutters','')}"
+              style="background-color: gainsboro;"
+            >
+              <!-- style="{!if(v.isForBackLog, '',' width:calc(100vw/'+(v.kanbanData.pickVals.length+1)+') ')}" -->
+              <div
+                class="{! if(v.isForBackLog, 'slds-col slds-size_9-of-12',' slds-media slds-no-space slds-has-divider_bottom-space slds-media_center ')}"
+              >
+                <div class="slds-media__body">
+                  <h1
+                    class="slds-page-header__title slds-align-middle slds-truncate"
+                    title="{!pickVal}"
+                    >{!pickVal}
+                  </h1>
+                </div>
+              </div>
+              <aura:if isTrue="{!v.isForBackLog}">
+                <aura:iteration
+                  var="btnStatus"
+                  items="{!v.checkButtonStatus}"
+                  indexVar="key"
+                >
+                  <aura:if isTrue="{!pickVal == btnStatus.key}">
+                    <!-- <div class="slds-grid slds-gutters slds-col slds-size_3-of-12 slds-align_absolute-center" > -->
+                    <div class="slds-col slds-size_1-of-12">
+                      <lightning:button
+                        class="btnSize"
+                        variant="brand"
+                        name="{!v.groupSelected}"
+                        label="Start"
+                        title="{!pickVal}"
+                        onclick="{! c.changeStatus }"
+                        disabled="{!v.isStart}"
+                      />
+                    </div>
+                    <div class="slds-col slds-size_1-of-12">
+                      <lightning:button
+                        class="btnSize"
+                        variant="brand"
+                        name="{!v.groupSelected}"
+                        label="Complete"
+                        title="{!pickVal}"
+                        disabled="{!if(btnStatus.value != 'Active','true','false')}"
+                        onclick="{! c.changeStatus }"
+                      />
+                    </div>
+                    <div class="slds-col slds-size_1-of-12">
+                      <lightning:button
+                        class="btnSize"
+                        variant="brand"
+                        name="{!v.groupSelected}"
+                        label="Cancel"
+                        title="{!pickVal}"
+                        disabled="{!if(btnStatus.value == 'Canceled','true','false')}"
+                        onclick="{! c.changeStatus }"
+                      />
+                    </div>
+                    <!-- </div> -->
+                  </aura:if>
+                </aura:iteration>
+              </aura:if>
+            </div>
+          </div>
+          <ul
+            ondrop="{!c.drop}"
+            ondragover="{!c.allowDrop}"
+            class="{!'slds-has-dividers_around-space'+if(v.isForBackLog,'','dropZone')}"
+            id="{!pickVal}"
+            data-Pick-Val="{!pickVal}"
+            style="{!'overflow-y:auto;overflow-x:hidden;'+if(v.isForBackLog,'min-height: 3vh;','height:70vh;')}"
+          >
+            <aura:if isTrue="{!v.isForBackLog}">
+              <!-- <li class=""  Style="font-weight: bold;">    -->
+              <div
+                class="slds-grid slds-gutters"
+                style="font-weight: bold; background: cornsilk;"
+              >
+                <div class="slds-col slds-size_.5-of-12">
+                  Chat
+                </div>
+                <div class="slds-col slds-size_1-of-12 slds-grid slds-gutters">
+                  <div class= "buutonhovers slds-grid slds-gutters" title="CaseNumber" value="{!pickval}" id ="CaseNumber" onclick="{! c.handleClickorder }" Style="padding-left: 18px;">
+                  <div>CaseNumber</div>
+                  <div class="hidden">
+                    <lightning:helptext  iconName="{!if(v.fieldOrder &amp;&amp; v.fieldToSort == 'Precision__c','utility:arrowdown','utility:arrowup')}" />
+                  </div>
+                  </div>
+                </div>
+                <div class="slds-col slds-size_4-of-12" style="margin-left: 34px">
+                  Details
+                </div>
+                <div class="slds-col slds-size_2-of-12 slds-grid slds-gutters" >
+                  <div class= "buutonhovers slds-grid slds-gutters" title="AssignedTo" value="{!pickval}" id ="AssignedTo" onclick="{! c.handleClickorder }" Style="padding-left: 18px;">
+                  <div>Assigned To</div>
+                  <div class="hidden">
+                    <lightning:helptext iconName="{!if(v.fieldOrder &amp;&amp; v.fieldToSort == 'Assigned_To__r.Name','utility:arrowdown','utility:arrowup')}" />
+                  </div>
+                  </div>
+                </div>
+                <!--div class="slds-col slds-size_2-of-12">
+                            Precision
+                          </div-->
+                <div class="slds-col slds-size_2-of-12 slds-grid slds-gutters" >
+                  <div class= "buutonhovers slds-grid slds-gutters" title="EpicName" value="{!pickval}" id ="EpicName" onclick="{! c.handleClickorder }" Style="padding-left: 18px;">
+                  <div>EpicName</div>
+                  <div class="hidden">
+                    <lightning:helptext iconName="{!if(v.fieldOrder &amp;&amp; v.fieldToSort == 'AgileEpic__r.Name','utility:arrowdown','utility:arrowup')}"/> 
+                  </div>
+                  </div>
+                </div>
+                <div class="slds-col slds-size_2-of-12 slds-grid slds-gutters" >
+                  <div class= "buutonhovers slds-grid slds-gutters" title="Tester" value="{!pickval}" id ="Tester" onclick="{! c.handleClickorder }" Style="padding-left: 18px;">
+                  <div>Tester</div>
+                  <div class="hidden">
+                    <lightning:helptext iconName="{!if(v.fieldOrder &amp;&amp; v.fieldToSort == 'AgileTester__r.Name','utility:arrowdown','utility:arrowup')}" />
+                  </div>
+                </div>
+                </div>
+              </div>
+              <!-- </li> -->
+            </aura:if>
+            <aura:iteration
+              var="objRecord"
+              items="{!v.kanbanData.records}"
+              indexVar="index"
+            >
+              <aura:if isTrue="{!v.isForBackLog}">
+                <!-- View Under Backlog Case -->
+                <aura:if isTrue="{!pickVal == objRecord.AgileSprint__r.Name}">
+                  <li
+                    class="slds-item slds-m-around_small slds-p-bottom_none slds-p-top_none"
+                    draggable="true"
+                    ondragstart="{!c.drag}"
+                    id="{!objRecord.Id}"
+                    style="-webkit-margin-top-collapse: discard;"
+                  >
+                    <div class="slds-grid slds-gutters">
+                      <div class="slds-col slds-size_.5-of-12">
+                        <lightning:buttonIcon
+                          iconName="utility:chat"
+                          variant="bare"
+                          onclick="{! c.openPopUp }"
+                          alternativeText="Chatter"
+                          title="Chatter"
+                          value="{!objRecord.Id}"
+                        />
+                      </div>
+                      <div class="slds-col slds-size_1-of-12">
+                        <span
+                          ><a href="javascript:void(0);" onclick="{!c.doView}">
+                            <span id="{!objRecord.Id}"
+                              >{!objRecord.CaseNumber}</span
+                            >
+                          </a></span
+                        >
+                      </div>
+                      <div
+                        class="slds-col slds-size_4-of-12"
+                        style="padding-left:26px"
+                      >
+                        <span>
+                          <p
+                            class="slds-truncate"
+                            title="{!objRecord.GeneralDetails__c }"
+                            >{!objRecord.GeneralDetails__c }</p
+                          ></span
+                        >
+                      </div>
+                      <div
+                        class="slds-col slds-size_2-of-12"
+                        style="padding-left:26px"
+                      >
+                        <span
+                          ><p class="slds-truncate"
+                            >{!objRecord.Assigned_To__r.Name}</p
+                          ></span
+                        >
+                      </div>
+                      <!--div class="slds-col slds-size_2-of-12" Style="padding-left:26px">
+                                            <span><p class="slds-truncate">{!objRecord.Precision__c}</p></span>
+                                          </div-->
+                      <div
+                        class="slds-col slds-size_2-of-12"
+                        
+                      >
+                        <span
+                          ><p
+                            class="slds-truncate"
+                            title="{!objRecord.AgileEpic__r.Name}"
+                          >
+                            <span
+                              ><a
+                                href="javascript:void(0);"
+                                style="{!if(objRecord.AgileEpic__r.EpicColor__c == null,'','color:'+objRecord.AgileEpic__r.EpicColor__c+';')}"
+                                onclick="{!c.doView}"
+                              >
+                                <span id="{!objRecord.AgileEpic__c}"
+                                  >{!objRecord.AgileEpic__r.Name}</span
+                                >
+                              </a></span
+                            >
+                          </p></span
+                        >
+                      </div>
+                      <div
+                        class="slds-col slds-size_2-of-12"
+                        style="padding-left:26px"
+                      >
+                        <span>
+                          <p
+                            class="slds-truncate"
+                            title="{!objRecord.AgileTester__r.Name}"
+                            >{!objRecord.AgileTester__r.Name}</p
+                          ></span
+                        >
+                      </div>
+                    </div>
+
+                    <!-- <article class="slds-tile slds-tile_board">
+                                        <h3 class="slds-truncate" title="{!objRecord.CaseNumber}">
+                                            <p class="slds-text-heading_snall slds-truncate">Assigned To:{!objRecord.Assigned_To__r.Name}</p>
+                                            <p class="slds-truncate" title="{!objRecord.AgileEpic__r.Name}" Style="{!if(objRecord.AgileEpic__r.EpicColor__c == null,'','color:'+objRecord.AgileEpic__r.EpicColor__c+';')}">
+                                                EpicName: {!objRecord.AgileEpic__r.Name}
+                                            </p>
+                                            <p class="slds-truncate" title="{!objRecord.AgileTester__r.Name}">Tester :{!objRecord.AgileTester__r.Name}</p>
+                                            <a href="javascript:void(0);" onclick="{!c.doView}">
+                                                <span class="slds-truncate" id="{!objRecord.Id}">{!objRecord.CaseNumber}</span>
+                                            </a>
+                                        </h3>
+                                        <div class="slds-tile__detail slds-text-body_small">
+                                            
+                                        </div>
+                                    </article> -->
+                  </li>
+                </aura:if>
+                <aura:set attribute="else">
+                  <!-- View Under Active Sprint Case -->
+                  <aura:if isTrue="{!pickVal == objRecord.AgileStatus__c}">
+                    <li
+                      class="slds-item slds-m-around_small"
+                      draggable="true"
+                      ondragstart="{!c.drag}"
+                      id="{!objRecord.Id}"
+                      style=""
+                    >
+                      <article class="slds-tile slds-tile_board">
+                        <h3
+                          class="slds-truncate"
+                          title="{!objRecord.CaseNumber}"
+                        >
+                          <lightning:buttonIcon
+                            iconName="utility:chat"
+                            variant="bare"
+                            onclick="{! c.openPopUp }"
+                            alternativeText="Chatter"
+                            title="Chatter"
+                            value="{!objRecord.Id}"
+                          />
+                          <a href="javascript:void(0);" onclick="{!c.doView}">
+                            <span class="slds-truncate" id="{!objRecord.Id}"
+                              >{!objRecord.CaseNumber}</span
+                            >
+                          </a>
+                        </h3>
+                        <div>
+                          <p
+                            class="pLines"
+                            title="{!objRecord.GeneralDetails__c }"
+                            >Details:{!objRecord.GeneralDetails__c }</p
+                          >
+                        </div>
+                        <div class="slds-tile__detail slds-text-body_small">
+                          <p class="slds-text-heading_snall slds-truncate"
+                            >Assigned To:{!objRecord.Assigned_To__r.Name}</p
+                          >
+
+                          <p
+                            class="slds-truncate"
+                            title="{!objRecord.AgileEpic__r.Name}"
+                          >
+                            EpicName:
+                            <span
+                              ><a
+                                href="javascript:void(0);"
+                                style="{!if(objRecord.AgileEpic__r.EpicColor__c == null,'','color:'+objRecord.AgileEpic__r.EpicColor__c+';')}"
+                                onclick="{!c.doView}"
+                              >
+                                <span id="{!objRecord.AgileEpic__c}"
+                                  >{!objRecord.AgileEpic__r.Name}</span
+                                >
+                              </a></span
+                            >
+                          </p>
+                          <p
+                            class="slds-truncate"
+                            title="{!objRecord.AgileTester__r.Name}"
+                            >Tester :{!objRecord.AgileTester__r.Name}</p
+                          >
+                        </div>
+                      </article>
+                    </li>
+                  </aura:if>
+                </aura:set>
+              </aura:if>
+            </aura:iteration>
+          </ul>
+        </div>
+      </aura:iteration>
+      
+    </div>
+  </div>
+  <div
+    class="demo-only slds-hide"
+    aura:id="modelId"
+    style="height: 640px;position: absolute;"
+  >
+    <section
+      role="dialog"
+      tabindex="-1"
+      aria-labelledby="modal-heading-01"
+      aria-modal="true"
+      aria-describedby="modal-content-id-1"
+      class="slds-modal slds-fade-in-open slds-modal_large"
+    >
+      <div class="slds-modal__container" style="width:0%">
+        <header class="slds-modal__header">
+          <lightning:buttonIcon
+            iconName="utility:close"
+            onclick="{! c.handleCloseModel }"
+            alternativeText="close"
+            variant="bare-inverse"
+            class="slds-modal__close"
+          />
+          <h2
+            id="modal-heading-01"
+            class="slds-text-heading_medium slds-hyphenate"
+            >Chatter Comment</h2
+          >
+        </header>
+        <div
+          class="slds-modal__content slds-p-around_medium"
+          id="modal-content-id-1"
+        >
+          <!-- <aura:iteration var="objRecord" items="{!v.kanbanData.records}">
+                    <aura:if isTrue="{!v.caseRecordId == objRecord.Id}">
+                       
+                        <h1 class="slds-truncate" title="{!objRecord.CaseNumber}">
+                            <a href="javascript:void(0);" onclick="{!c.doView}">
+                                <span class="slds-truncate" id="{!objRecord.Id}">{!objRecord.CaseNumber}</span>
+                            </a>
+                        </h1>
+                        <div class="slds-tile__detail slds-text-body_small">
+                            <p class="slds-text-heading_snall slds-truncate">Assigned To:{!objRecord.Assigned_To__r.Name}</p>
+                            <p class="slds-truncate" title="{!objRecord.AgileEpic__r.Name}" Style="{!if(objRecord.AgileEpic__r.EpicColor__c == null,'','color:'+objRecord.AgileEpic__r.EpicColor__c+';')}">
+                                {!objRecord.AgileEpic__r.Name}
+                            </p>
+                            <p class="slds-truncate" title="{!objRecord.AgileTester__r.Name}">Tester :{!objRecord.AgileTester__r.Name}</p>
+                        </div> 
+                       
+                    </aura:if>  
+                </aura:iteration> -->
+
+          <iframe
+            style="overflow-y: hidden;"
+            aura:id="vfFrame"
+            src="{!v.vfHost}"
+            frameborder="0"
+            scrolling="no"
+            height="500rem"
+            width="100%"
+          />
+          <!-- <aura:if isTrue="{!v.caseRecordId}">
+                    <forceChatter:publisher context="RECORD" recordId="{!v.caseRecordId}" />
+                    <forceChatter:feed type="Record" subjectId="{!v.caseRecordId}"/>
+                    </aura:if> -->
+        </div>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </div>
+</aura:component>

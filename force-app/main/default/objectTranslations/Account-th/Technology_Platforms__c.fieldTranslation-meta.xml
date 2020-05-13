@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicate account&apos;s primary technology platforms for IM, Calendaring, CRM, Email and Marketing Automation systems. --></help>
+    <label><!-- Technology Platforms --></label>
+    <name>Technology_Platforms__c</name>
+    <picklistValues>
+        <masterLabel>CRM - FranConnect</masterLabel>
+        <translation><!-- CRM - FranConnect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CRM - InfusionSoft</masterLabel>
+        <translation><!-- CRM - InfusionSoft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CRM - Microsoft Dynamics</masterLabel>
+        <translation><!-- CRM - Microsoft Dynamics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CRM - NetSuite</masterLabel>
+        <translation><!-- CRM - NetSuite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CRM - None</masterLabel>
+        <translation><!-- CRM - None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CRM - Oracle</masterLabel>
+        <translation><!-- CRM - Oracle --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CRM - Other</masterLabel>
+        <translation><!-- CRM - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CRM - Salesforce.com</masterLabel>
+        <translation><!-- CRM - Salesforce.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CRM - Sugar</masterLabel>
+        <translation><!-- CRM - Sugar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Collaboration - Google Docs</masterLabel>
+        <translation><!-- Collaboration - Google Docs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Collaboration - Other</masterLabel>
+        <translation><!-- Collaboration - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Content Marketing - Kapost</masterLabel>
+        <translation><!-- Content Marketing - Kapost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ESP - Constant Contact</masterLabel>
+        <translation><!-- ESP - Constant Contact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ESP - Other</masterLabel>
+        <translation><!-- ESP - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ESP - Vertical Response</masterLabel>
+        <translation><!-- ESP - Vertical Response --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email -  Office365</masterLabel>
+        <translation><!-- Email -  Office365 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email - Gmail</masterLabel>
+        <translation><!-- Email - Gmail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email - Lotus Notes</masterLabel>
+        <translation><!-- Email - Lotus Notes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email - None</masterLabel>
+        <translation><!-- Email - None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email - Other</masterLabel>
+        <translation><!-- Email - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email - Outlook</masterLabel>
+        <translation><!-- Email - Outlook --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Management – Cvent</masterLabel>
+        <translation><!-- Event Management – Cvent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>File Sharing - Box</masterLabel>
+        <translation><!-- File Sharing - Box --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>File Sharing - Copy</masterLabel>
+        <translation><!-- File Sharing - Copy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>File Sharing - Dropbox</masterLabel>
+        <translation><!-- File Sharing - Dropbox --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>File Sharing - Google Drive</masterLabel>
+        <translation><!-- File Sharing - Google Drive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>File Sharing - Hightail</masterLabel>
+        <translation><!-- File Sharing - Hightail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>File Sharing - Microsoft OneDrive</masterLabel>
+        <translation><!-- File Sharing - Microsoft OneDrive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>File Sharing - None</masterLabel>
+        <translation><!-- File Sharing - None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>File Sharing - Other</masterLabel>
+        <translation><!-- File Sharing - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IM - Chatter</masterLabel>
+        <translation><!-- IM - Chatter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IM - GoogleTalk/Hangout</masterLabel>
+        <translation><!-- IM - GoogleTalk/Hangout --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IM - IBM Sametime</masterLabel>
+        <translation><!-- IM - IBM Sametime --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IM - Jabber</masterLabel>
+        <translation><!-- IM - Jabber --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IM - Lync</masterLabel>
+        <translation><!-- IM - Lync --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IM - Other</masterLabel>
+        <translation><!-- IM - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IM - Yahoo</masterLabel>
+        <translation><!-- IM - Yahoo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IM - Yammer</masterLabel>
+        <translation><!-- IM - Yammer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LMS - Other</masterLabel>
+        <translation><!-- LMS - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MA - Act-On</masterLabel>
+        <translation><!-- MA - Act-On --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MA - Eloqua</masterLabel>
+        <translation><!-- MA - Eloqua --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MA - ExactTarget</masterLabel>
+        <translation><!-- MA - ExactTarget --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MA - Hubspot</masterLabel>
+        <translation><!-- MA - Hubspot --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MA - Lyris</masterLabel>
+        <translation><!-- MA - Lyris --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MA - Manticore</masterLabel>
+        <translation><!-- MA - Manticore --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MA - Marketo</masterLabel>
+        <translation><!-- MA - Marketo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MA - None</masterLabel>
+        <translation><!-- MA - None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MA - Other</masterLabel>
+        <translation><!-- MA - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MA - Pardot</masterLabel>
+        <translation><!-- MA - Pardot --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MA - Silverpop</masterLabel>
+        <translation><!-- MA - Silverpop --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MA – Unica</masterLabel>
+        <translation><!-- MA – Unica --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing Services - Other</masterLabel>
+        <translation><!-- Marketing Services - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing Services - Unbounce</masterLabel>
+        <translation><!-- Marketing Services - Unbounce --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Note Apps - Evernote</masterLabel>
+        <translation><!-- Note Apps - Evernote --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Note Apps - Google Drive</masterLabel>
+        <translation><!-- Note Apps - Google Drive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Note Apps - Google Keep</masterLabel>
+        <translation><!-- Note Apps - Google Keep --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Note Apps - Microsoft OneNote</masterLabel>
+        <translation><!-- Note Apps - Microsoft OneNote --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Note Apps - Microsoft Word</masterLabel>
+        <translation><!-- Note Apps - Microsoft Word --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Note Apps - None</masterLabel>
+        <translation><!-- Note Apps - None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Note Apps - Other</masterLabel>
+        <translation><!-- Note Apps - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Note Apps - Simplenote</masterLabel>
+        <translation><!-- Note Apps - Simplenote --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OS - Chrome</masterLabel>
+        <translation><!-- OS - Chrome --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OS - Chromebooks</masterLabel>
+        <translation><!-- OS - Chromebooks --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OS - Linux</masterLabel>
+        <translation><!-- OS - Linux --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OS - Mac (Apple)</masterLabel>
+        <translation><!-- OS - Mac (Apple) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OS - Windows</masterLabel>
+        <translation><!-- OS - Windows --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Skype for Business</masterLabel>
+        <translation><!-- Skype for Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Survey - Survey Gizmo</masterLabel>
+        <translation><!-- Survey - Survey Gizmo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Survey - Survey Monkey</masterLabel>
+        <translation><!-- Survey - Survey Monkey --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video - Blue Jeans</masterLabel>
+        <translation><!-- Video - Blue Jeans --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video - Room Based Video Systems</masterLabel>
+        <translation><!-- Video - Room Based Video Systems --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>e-commerce - Acteva</masterLabel>
+        <translation><!-- e-commerce - Acteva --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>e-commerce - Constant Contact/EventSpot</masterLabel>
+        <translation><!-- e-commerce - Constant Contact/EventSpot --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>e-commerce - EventBrite</masterLabel>
+        <translation><!-- e-commerce - EventBrite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>e-commerce - Other</masterLabel>
+        <translation><!-- e-commerce - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>e-commerce - PayPal</masterLabel>
+        <translation><!-- e-commerce - PayPal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>e-commerce - RegOnline</masterLabel>
+        <translation><!-- e-commerce - RegOnline --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

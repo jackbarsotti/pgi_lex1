@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TP_MRR_Required</fullName>
+    <active>true</active>
+    <description>The MRR field is required in order to use the &quot;Event or Services Completed&quot; Stage.</description>
+    <errorConditionFormula>AND(
+RecordType.Id = &quot;0121B000001hgTt&quot;,
+ISPICKVAL(StageName, &quot;Closed Won&quot;),
+ISBLANK(TEXT(MRR__c))
+)</errorConditionFormula>
+    <errorDisplayField>MRR__c</errorDisplayField>
+    <errorMessage>You must complete the MRR field in order to close this record.</errorMessage>
+</ValidationRule>

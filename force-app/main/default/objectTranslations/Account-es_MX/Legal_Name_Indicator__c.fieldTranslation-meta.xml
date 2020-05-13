@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicates that the Account has been matched to Dun &amp; Bradstreet and represents a legal Entity --></help>
+    <label><!-- DnB Legal Entity --></label>
+    <name>Legal_Name_Indicator__c</name>
+</CustomFieldTranslation>

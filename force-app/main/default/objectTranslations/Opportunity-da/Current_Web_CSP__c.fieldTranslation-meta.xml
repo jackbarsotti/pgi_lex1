@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Current web conferencing service provider. --></help>
+    <label><!-- Current Web CSP --></label>
+    <name>Current_Web_CSP__c</name>
+    <picklistValues>
+        <masterLabel>ACT</masterLabel>
+        <translation><!-- ACT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AT&amp;T</masterLabel>
+        <translation><!-- AT&amp;T --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Adobe Connect</masterLabel>
+        <translation><!-- Adobe Connect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AnyMeeting</masterLabel>
+        <translation><!-- AnyMeeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Arkadin</masterLabel>
+        <translation><!-- Arkadin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BT</masterLabel>
+        <translation><!-- BT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Beacon Live</masterLabel>
+        <translation><!-- Beacon Live --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C3 Conferencing</masterLabel>
+        <translation><!-- C3 Conferencing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ClearSlide</masterLabel>
+        <translation><!-- ClearSlide --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Copper</masterLabel>
+        <translation><!-- Copper --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Free conference call</masterLabel>
+        <translation><!-- Free conference call --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fuze Meeting</masterLabel>
+        <translation><!-- Fuze Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GoToMeeting/GoTo Webinar</masterLabel>
+        <translation><!-- GoToMeeting/GoTo Webinar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Great American Conferencing</masterLabel>
+        <translation><!-- Great American Conferencing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InXpo</masterLabel>
+        <translation><!-- InXpo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InterCall</masterLabel>
+        <translation><!-- InterCall --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Join.me</masterLabel>
+        <translation><!-- Join.me --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Level3 Web Meeting</masterLabel>
+        <translation><!-- Level3 Web Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MS Live Meeting/Lync/Live 365</masterLabel>
+        <translation><!-- MS Live Meeting/Lync/Live 365 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>None</masterLabel>
+        <translation><!-- None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ON24</masterLabel>
+        <translation><!-- ON24 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Premiere Global</masterLabel>
+        <translation><!-- Premiere Global --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ReadyTalk</masterLabel>
+        <translation><!-- ReadyTalk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unknown</masterLabel>
+        <translation><!-- Unknown --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Verizon</masterLabel>
+        <translation><!-- Verizon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webex</masterLabel>
+        <translation><!-- Webex --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iLinc</masterLabel>
+        <translation><!-- iLinc --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

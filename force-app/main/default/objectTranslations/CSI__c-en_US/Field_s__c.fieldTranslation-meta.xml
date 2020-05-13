@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Required for Poor Ticket Quality/Incorrect or Missing Information --></help>
+    <label><!-- Field(s) --></label>
+    <name>Field_s__c</name>
+    <picklistValues>
+        <masterLabel>Area of Focus</masterLabel>
+        <translation><!-- Area of Focus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Call Examples</masterLabel>
+        <translation><!-- Call Examples --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client Credentials</masterLabel>
+        <translation><!-- Client Credentials --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client Viewable: Description/Resolutions</masterLabel>
+        <translation><!-- Client Viewable: Description/Resolutions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Failed to Attach Logs</masterLabel>
+        <translation><!-- Failed to Attach Logs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incident Date/Time</masterLabel>
+        <translation><!-- Incident Date/Time --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Missing Client Contact Info</masterLabel>
+        <translation><!-- Missing Client Contact Info --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product/Service</masterLabel>
+        <translation><!-- Product/Service --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Root Category/Root Issue/Root Cause</masterLabel>
+        <translation><!-- Root Category/Root Issue/Root Cause --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Symptom Main/Sub Category</masterLabel>
+        <translation><!-- Symptom Main/Sub Category --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Template Not Used</masterLabel>
+        <translation><!-- Template Not Used --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ticket Type</masterLabel>
+        <translation><!-- Ticket Type --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web Details</masterLabel>
+        <translation><!-- Web Details --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Work Notes - Other</masterLabel>
+        <translation><!-- Work Notes - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Work Notes Do Not Include Troubleshoot</masterLabel>
+        <translation><!-- Work Notes Do Not Include Troubleshoot --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

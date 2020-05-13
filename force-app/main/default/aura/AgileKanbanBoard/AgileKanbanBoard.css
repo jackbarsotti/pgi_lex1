@@ -1,0 +1,75 @@
+.THIS .slds-section-title--divider {
+    padding: 5px;
+}
+
+.THIS .slds-item {
+    border: none !important;
+    background-color: #fff;
+    border-radius: 0 !important;
+    border-left: 5px solid #56aadf !important;
+}
+
+.THIS .slds-title {
+    border-radius: 3px;
+    border: 1px solid #d8dde6;
+    cursor: move;
+}
+
+.THIS .slds-lane {
+    height: 100vh;
+    overflow-y: auto;
+    border-left: 1px solid whitesmoke;
+    flex: 1 1 0%;
+    min-width: 5rem;
+}
+
+.THIS .slds-col:first-child {
+    border-left: none;
+}
+
+.THIS .slds-item-placeholder {
+    border: 4px dashed gray !important;
+    height: 5rem;
+    background-color: rgba(255, 235, 59, 0.58);
+}
+
+.THIS .slds-item-placeholder:before {
+  	content: "Drop the Card Here!";
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.THIS .slds-lane[data-drop-enabled=false] {
+    background-color: rgba(244, 67, 54, 0.25);
+}
+
+.THIS .moving-card {
+    margin-top: -35px;
+    opacity: 0.5;
+    transform: rotate( -5deg );
+}
+
+.THIS .slds-scrollable_y::-webkit-scrollbar {
+	width: 10px;
+	background-color: transparent;
+}
+
+.THIS .slds-scrollable_y::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(0,0,0,0.1);
+  border: 1px solid #ccc;
+}
+
+.THIS .slds-scrollable_y::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(left, #fff, #e4e4e4);
+  border: 1px solid #aaa;
+}
+
+.THIS .slds-scrollable_y::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
+.THIS .slds-scrollable_y::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(left, #22ADD4, #1E98BA);
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- A: Has Compelling Event
+B: Has Budget
+C: Has Verbal Approval
+D: Docs In Review (legal) --></help>
+    <label><!-- Management Criteria Met --></label>
+    <name>Management_Criteria_Met__c</name>
+</CustomFieldTranslation>

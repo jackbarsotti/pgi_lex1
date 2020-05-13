@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This date shows when the rates for on-demand/per-minute audio and web rates, event and Custom Int&apos;l Audio Schedule rates begin to apply to this account. --></help>
+    <label><!-- Rate Start Date --></label>
+    <name>Rate_Start_Date__c</name>
+</CustomFieldTranslation>

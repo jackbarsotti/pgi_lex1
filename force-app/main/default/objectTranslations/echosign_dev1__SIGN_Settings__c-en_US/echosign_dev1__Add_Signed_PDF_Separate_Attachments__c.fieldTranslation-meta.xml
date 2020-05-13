@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This setting controls whether the signed agreement is attached to the agreement record as separate PDFs. To stop receiving the signed agreement as a merged PDF, please contact Document Cloud Support. --></help>
+    <label><!-- Add Signed PDF as Separate Attachments --></label>
+    <name>echosign_dev1__Add_Signed_PDF_Separate_Attachments__c</name>
+</CustomFieldTranslation>

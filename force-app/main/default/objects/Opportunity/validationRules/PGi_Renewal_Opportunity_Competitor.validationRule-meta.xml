@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Renewal_Opportunity_Competitor</fullName>
+    <active>true</active>
+    <description>Competitor Required</description>
+    <errorConditionFormula>AND( 
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;, $User.Override_Validation_Rules__c = False, 
+ RecordType.Name = &quot;PGi Renewal Opportunity&quot;, 
+ ISPICKVAL( StageName , &quot;00 - Confirmed Cancellation&quot;),
+ OR(
+ISBLANK(Competitor_s__c ),
+ISBLANK (TEXT( Lost_Reason__c )),
+ISBLANK (  Loss_Factors__c  )))</errorConditionFormula>
+    <errorMessage>Please populate &quot;Competitor(s)&quot;, &quot;What could we have done to WIN this opty&quot;, and &quot;Please Specify&quot; fields.</errorMessage>
+</ValidationRule>

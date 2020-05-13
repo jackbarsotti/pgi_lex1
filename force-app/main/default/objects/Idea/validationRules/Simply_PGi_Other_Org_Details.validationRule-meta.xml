@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Simply_PGi_Other_Org_Details</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(
+CONTAINS(TEXT( Functional_Organization__c), &quot;Other&quot;),
+CONTAINS(TEXT ( Organization__c), &quot;Other&quot;)),
+ ISBLANK(Organization_Details_if_Other__c))</errorConditionFormula>
+    <errorMessage>Please provide additional Organization details in the &quot;Organization Details if Other&quot; field</errorMessage>
+</ValidationRule>

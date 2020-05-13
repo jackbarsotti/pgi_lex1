@@ -1,0 +1,1978 @@
+<apex:page controller="DataRetentionManager" showHeader="true" standardStylesheets="false" sidebar="false" docType="html-5.0">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <title>Data Retention Manager</title>
+            <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+            <apex:slds />
+            <!-- <apex:stylesheet value="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" /> -->
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
+            <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script> 
+            <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+            <script src="{!URLFOR($Resource.aljs, '/jquery.aljs-init.min.js')}"></script>
+            <script src="{!URLFOR($Resource.aljs, '/jquery.aljs-picklist.min.js')}"></script>
+        </head>
+
+        <body> 
+
+            <style>
+                .ui-state-focus {
+                    outline: 0;
+                    background-color: #f4f6f9;
+                    color: #16325c;
+                    text-decoration: none;
+                }
+                .ui-helper-hidden-accessible {
+                    display: none;
+                }
+                .slds-scope .slds-picklist .slds-dropdown {
+                    width: 40rem !important;
+                }
+                .slds-scope .slds-picklist__input {
+                    width: 40rem !important;
+                }
+                .slds-scope .slds-lookup__menu {
+                    position: relative !important;
+                    z-index: 9301 !important;
+                }
+                .slds-field-index {
+                    margin: 5px 0;
+                    line-height: 1.875rem;
+                    text-align: center;
+                    background-color: rgb(0, 112, 210);
+                    border: none;
+                    border-radius: .25rem;
+                    color: rgb(255, 255, 255);
+                    font-family: 'Salesforce Sans',Arial,sans-serif;
+                }
+                .slds-field-index-modal {
+                    margin: 5px 0;
+                    line-height: 1.875rem;
+                    text-align: right;
+                    /*background-color: rgb(0, 112, 210);*/
+                    border: none;
+                    border-radius: .25rem;
+                    /*color: rgb(255, 255, 255);*/
+                    font-family: 'Salesforce Sans',Arial,sans-serif;
+                }
+                .field-lookup-base-object {
+                    font-size: 16px;
+                }
+                .dataTables_paginate span a {
+                    padding: 0 5px 0 5px !important;
+                }
+            </style>
+
+            <div class="slds-scope">
+
+                <!-- Loading Spinner Branded -->
+                <div class="slds-spinner_container filterObjectQuerySpinner">
+                    <div role="status" class="slds-spinner slds-spinner--large slds-spinner--brand">
+                      <span class="slds-assistive-text">Loading</span>
+                      <div class="slds-spinner__dot-a"></div>
+                      <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+                <!-- Loading Spinner Branded -->
+
+
+                <!-- Page Message Validation error/success/info Toast -->
+                <div id="successToast" class="slds-notify_container slds-is-absolute slds-hide">
+                    <div class="slds-notify slds-notify_toast slds-theme_success" role="alert">
+                        <span class="slds-assistive-text">success</span>
+                        <span class="slds-icon_container slds-icon-utility-success slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+                            <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#success')}" />
+
+                            </svg>
+                        </span>
+                        <div class="slds-notify__content">
+                            <h2 class="slds-text-heading_small successToastText">Filter Saved!</h2>
+                        </div>
+                        <button id="successToastCloseBtn" class="slds-button slds-button_icon slds-notify__close slds-button_icon-inverse" title="Close">
+                            <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#close')}" />
+                            </svg>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="errorToast" class="slds-notify_container slds-is-absolute slds-hide">
+                    <div class="slds-notify slds-notify_toast slds-theme_error" role="alert">
+                        <span class="slds-assistive-text">error</span>
+                        <span class="slds-icon_container slds-icon-utility-error slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+                            <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#error')}" />
+
+                            </svg>
+                        </span>
+                        <div class="slds-notify__content">
+                            <h2 class="slds-text-heading_small errorToastText">Error!</h2>
+                        </div>
+                        <button id="errorToastCloseBtn" class="slds-button slds-button_icon slds-notify__close slds-button_icon-inverse" title="Close">
+                            <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#close')}" />
+                            </svg>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="infoToast" class="slds-notify_container slds-is-absolute slds-hide">
+                    <div class="slds-notify slds-notify_toast slds-theme_info" role="alert">
+                        <span class="slds-assistive-text">info</span>
+                        <span class="slds-icon_container slds-icon-utility-info slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+                            <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#info')}" />
+
+                            </svg>
+                        </span>
+                        <div class="slds-notify__content">
+                            <h2 class="slds-text-heading_small infoToastText">Info!</h2>
+                        </div>
+                        <button id="infoToastCloseBtn" class="slds-button slds-button_icon slds-notify__close slds-button_icon-inverse" title="Close">
+                            <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#close')}" />
+                            </svg>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- / Page Message Validation error/success/info Toast -->
+
+                <!-- PAGE HEADER -->
+                <div class="slds-page-header" role="banner">
+                    <!-- PAGE HEADER TOP ROW -->
+                    <div class="slds-grid">
+                        <!-- PAGE HEADER / ROW 1 / COLUMN 1 -->
+                        <div class="slds-col">
+                            <!-- HEADING AREA -->
+                            <!-- MEDIA OBJECT = FIGURE + BODY -->
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <svg aria-hidden="true" class="slds-icon slds-icon--large slds-icon-standard-calibration">
+                                        <use xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/standard-sprite/svg/symbols.svg#calibration')}"></use>
+                                    </svg>
+                                </div> 
+
+                                <div class="slds-media__body">
+                                    <p class="slds-text-heading--label">Data Retention Manager</p>
+                                    <h1 id="retentionHeaderActiveFilterCount" class="slds-text-heading--medium">Active Filters</h1>
+                                </div>
+                            </div>
+                            <!-- / MEDIA OBJECT -->
+                            <!-- HEADING AREA -->
+                        </div>
+                        <!-- PAGE HEADER / ROW 1 / COLUMN 2 -->
+                        <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom_xx-small">
+                            <div class="slds-button-group" role="group">
+                                <button onclick="openModal();" class="new-filter-btn slds-button slds-button_brand">New Filter</button> 
+
+                                <button onclick="openSettingsModal();" class="slds-button slds-button_icon slds-button_icon-more" aria-haspopup="true" title="More Actions">
+                                    <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#settings')}" />
+                                    </svg>
+                                    <svg class="slds-button__icon slds-button__icon_x-small" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#down')}" />
+                                    </svg>
+                                    <span class="slds-assistive-text">Schedule Manager</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / PAGE HEADER TOP ROW -->
+                    <!-- PAGE HEADER DETAIL ROW -->
+                    <!-- <div class="slds-grid slds-page-header__detail-row">
+                        <div class="slds-col--padded slds-size--1-of-4">
+                            <dl>
+                                <dt>
+                                    <p class="slds-text-heading--label slds-truncate">2,230 records filtered on last run</p>
+                                </dt>
+                                <dd>
+                                    <p class="slds-text-body--regular slds-truncate">
+                                        Next Scheduled Run: 10/19/18 1:00 AM</p>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div> -->
+                    <!-- / PAGE HEADER DETAIL ROW -->
+                </div>
+                <!-- / PAGE HEADER -->
+                
+                <!-- CONFIGURE Filter Panel -->
+                <div class="tab-scoped-2 slds-hide">
+                    <div class="slds-trial-header slds-grid">
+                        <div class="slds-grid slds-grid_vertical-align-center">
+                            <a href="javascript:void(0);" id="deleteFilterBtn" class="slds-button slds-button_destructive">Delete</a>
+                        </div>
+                        <div class="slds-grid slds-grid_vertical-align-center slds-col_bump-left">
+                            <a id="viewAllFiltersBtn" href="javascript:void(0);" class="slds-button slds-button_brand">View All Filters</a>
+                            <!-- <a href="javascript:void(0);" class="slds-button slds-button_brand">Clone</a> -->
+                            <a id="editPropertiesBtn" href="javascript:void(0);" class="slds-button slds-button_brand">Edit Properties</a>
+                            <a id="activateFilterBtn" href="javascript:void(0);" class="slds-button slds-button_success">Activate</a><span id="activateReadOnlyText" class="slds-m-horizontal_x-small slds-hide">Read Only</span>
+                        </div>
+                    </div>
+
+                    <!-- (Left Panel) -->
+                    <!-- *FUTURE* Create New Visual Radio Selection Icons -->
+                    <!--
+                    <div class="showPanel ruleContainer wide" style="min-height: 700px; padding-left:30px; padding-top:15px; width: calc(100% - 832px); float: left; background-color: rgb(233, 234, 236);">
+                        <fieldset class="slds-form-element">
+                            <legend class="slds-form-element__legend slds-form-element__label" style="background-color:white;border: 1px solid #dddbda; border-radius: 0.25rem; padding:3px;">Start</legend>
+                            <div class="slds-form-element__control">
+                                <div class="slds-visual-picker slds-visual-picker_medium">
+                                    <input class="visual-picker-radio" type="radio" id="visual-picker-7" name="options" value="object" />
+                                    <label for="visual-picker-7">
+                                        <span class="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center">
+                                            <span class="slds-is-selected">
+                                                <span class="slds-icon_container">
+                                                    <svg class="slds-icon slds-icon_large slds-icon-action-check" aria-hidden="true">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/action-sprite/svg/symbols.svg#check')}" />
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                            <span class="slds-is-not-selected">
+                                                <span class="slds-icon_container">
+                                                    <svg class="slds-icon slds-icon-utility-database slds-icon_large slds-icon-text-default" aria-hidden="true">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#database')}" />
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="slds-visual-picker__body">
+                                            <span class="slds-text-title">Select Object</span>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="slds-visual-picker slds-visual-picker_medium">
+                                    <input class="visual-picker-radio" type="radio" id="visual-picker-8" name="options" value="criteria" />
+                                    <label for="visual-picker-8">
+                                        <span class="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center">
+                                            <span class="slds-is-selected">
+                                                <span class="slds-icon_container">
+                                                    <svg class="slds-icon slds-icon_large slds-icon-action-check" aria-hidden="true">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/action-sprite/svg/symbols.svg#check')}" />
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                            <span class="slds-is-not-selected">
+                                                <span class="slds-icon_container">
+                                                    <svg class="slds-icon slds-icon-utility-custom_apps slds-icon_large slds-icon-text-default" aria-hidden="true">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#custom_apps')}" />
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="slds-visual-picker__body">
+                                            <span class="slds-text-title">+Add Criteria</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    -->
+                    <!-- / *FUTURE* Create New Visual Radio Selection Icons -->
+                    <!-- /  (Left Panel) -->
+                    <!-- (Right Panel) -->
+                    <div id="configuration-panel" class="showPanel panelContainer wide"> <!--  style="width: 832px; display: none; float: left;" -->
+                        <fieldset class="slds-box slds-form-element slds-m-top--medium slds-m-left--medium">
+                            
+                            <legend id="configFilterTitle" class="slds-form-element__label slds-form-element__label--top">Filter Name</legend>
+                                
+                            <h1 id="configuration-title" class="slds-text-heading--medium">Choose Object and Define Criteria for this Data Retention Policy</h1>
+
+                            <div style="padding-top:15px; overflow:auto;height: calc(100%-100px);">
+
+                                <!-- Object Form -->
+                                <div id="object-filter-form" class="slds-form slds-form_stacked"> <!-- slds-hide -->
+                                    <div style="position:relative;" class="slds-lookup" data-select="single" data-scope="single" data-typeahead="true">
+                                        <div class="slds-form-element">
+                                            <label class="slds-form-element__label" for="objectLookupAutoComplete">Object<abbr class="slds-required" title="required"> *</abbr></label>
+                                            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right">
+                                                <span class="slds-input__icon" aria-hidden="true">
+                                                    <i class="fa fa-search"></i>
+                                                </span>
+                                                <div class="slds-pill__container slds-hide"></div>
+                                                <input id="objectLookupAutoComplete" placeholder="Find an object.." class="slds-input slds-show" type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--
+                                        FUTURE shows other filters on same object-->
+                                    <!-- Existing Filters on Object warning -->
+                                    <!--
+                                    <fieldset id="existingObjectFilterWarningSection" class="slds-form-element slds-m-top--xx-large slds-hide">
+                                        <div class="slds-page-header">
+                                            <div class="slds-page-header__row">
+                                                <div class="slds-page-header__col-title">
+                                                    <div class="slds-media">
+                                                        <div class="slds-media__figure">
+                                                            <span class="slds-icon_container slds-icon__svg--default" title="warning">
+                                                                <svg class="slds-icon slds-icon-text-default" aria-hidden="true">
+                                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#warning')}" />
+                                                                </svg>
+                                                                <span class="slds-assistive-text">warning</span>
+                                                            </span>
+                                                        </div>
+                                                        
+                                                        <div class="slds-media__body">
+                                                            <div class="slds-page-header__name">
+                                                                <div class="slds-page-header__name-title">
+                                                                    <h1>
+                                                                        <span id="existingFilterSectionTitle" class="slds-page-header__title slds-truncate" title="Account - 3 active filters">"Object" already has active filters</span>
+                                                                    </h1>
+                                                                </div>
+                                                            </div>
+                                                            <p id="existingFilterSectionItemTotal" class="slds-page-header__name-meta">"X" items</p>
+                                                        </div>
+                                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <fieldset class="slds-box slds-form-element slds-m-top--medium">
+                                            <legend class="slds-form-element__label slds-form-element__label--top">Active Filters</legend>
+                                            <form class="slds-form--stacked">
+
+                                                
+                                                <div class="slds-spinner_container slds-hide existingObjectFilterSpinner">
+                                                    <div role="status" class="slds-spinner slds-spinner--large slds-spinner--brand">
+                                                      <span class="slds-assistive-text">Loading</span>
+                                                      <div class="slds-spinner__dot-a"></div>
+                                                      <div class="slds-spinner__dot-b"></div>
+                                                    </div>
+                                                </div>
+
+                                                
+                                                <div id="existingFiltersResults"></div>
+
+                                            </form>
+                                        </fieldset>
+                                    </fieldset>
+                                -->
+                                    <!-- / Existing Filters on Object warning -->
+                                </div>
+                                <!-- / Object Form -->
+
+                                <!-- Criteria Form -->
+                                <!-- FUTURE
+                                <div class="criteria-filter-form slds-hide slds-form slds-form_stacked">
+                                    <div class="slds-form-element">
+                                        <label class="slds-form-element__label" for="input-criteria-name">Criteria Name<abbr class="slds-required" title="required"> *</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <input type="text" id="input-criteria-name" class="slds-input" />
+                                        </div>
+                                    </div>
+                                    <fieldset class="slds-form-element">
+                                        <legend class="slds-form-element__legend slds-form-element__label">Criteria for Executing Filter Action<abbr class="slds-required" title="required"> *</abbr></legend>
+                                        <div class="slds-form-element__control">
+                                            <span class="slds-radio">
+                                                <input type="radio" id="radio-3" value="radio-3" name="options" />
+                                                <label class="slds-radio__label" for="radio-3">
+                                                    <span class="slds-radio_faux"></span>
+                                                    <span class="slds-form-element__label">Conditions are met</span>
+                                                </label>
+                                            </span>
+                                            <span class="slds-radio">
+                                                <input type="radio" id="radio-4" value="radio-4" name="options" />
+                                                <label class="slds-radio__label" for="radio-4">
+                                                <span class="slds-radio_faux"></span>
+                                                <span class="slds-form-element__label">Formula evaluates to true</span>
+                                                </label>
+                                            </span>
+                                            <span class="slds-radio">
+                                                <input type="radio" id="radio-5" value="radio-5" name="options" />
+                                                <label class="slds-radio__label" for="radio-5">
+                                                <span class="slds-radio_faux"></span>
+                                                <span class="slds-form-element__label">No criteria—just execute the actions!</span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </fieldset> 
+                                </div>
+                                -->
+                                <!-- / Criteria Form -->
+
+                                <!-- Criteria Field Selection Form -->
+                                <div class="criteria-filter-form slds-form slds-form_compound slds-m-top--medium"> <!--  slds-hide -->
+
+                                    <fieldset class="slds-form-element slds-form_compound">
+                                        <legend class="slds-form-element__legend slds-form-element__label">Any records matching this criteria will be deleted<abbr class="slds-required" title="required"> *</abbr></legend>
+
+                                        <!-- Set Conditions Field Index Row Tool -->
+                                        <div style="padding:5px 30px 10px 10px; border:1px solid #006eb3; border-radius:.25rem; background-color:rgb(242, 242, 243);" class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                                            <!-- Base Row -->
+                                            <div class="slds-form-element__group fieldIndexRowBaseGroup">
+                                                <!-- 1st 'Field Index Row' GOES HERE -->
+                                            </div>
+                                            <!-- / Base Row -->
+                                            <!-- ADD ROW -->
+                                            <div class="slds-form-element__group">
+                                              <div class="slds-form-element__row">
+                                                <div class="slds-form-element slds-size_1-of-1 addRowBlock">
+                                                    <a class="addRow" onclick="addRow();" data-aura-rendered-by="156:696;a" href="javascript:void(0);">
+                                                        <span class="slds-icon_container slds-icon__svg--default" title="Add Row">
+                                                            <svg class="slds-icon slds-icon-text-default slds-icon_x-small" aria-hidden="true">
+                                                                <use xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#add')}"></use>
+                                                            </svg>
+                                                            <span class="slds-assistive-text">Add Row</span>
+                                                        </span>
+                                                        <span style="color:rgb(107, 109, 112); font-size:.875rem; text-decoration:none;">Add Row</span>
+                                                    </a>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <!-- / ADD ROW -->
+                                        </div>
+                                        <!-- / Set Conditions Field Index Row Tool -->
+                                    </fieldset>
+                                </div>
+                                <!-- / Criteria Field Selection Form -->
+
+                                <!-- Criteria Logic Form -->
+                                <div class="criteria-filter-form slds-form slds-form_stacked slds-m-top--medium"> <!--  slds-hide -->
+                                    
+                                    <fieldset class="slds-form-element">
+                                        <legend class="slds-form-element__legend slds-form-element__label">Conditions<abbr class="slds-required" title="required"> *</abbr></legend>
+                                        <div class="slds-form-element__control">
+                                            <span class="slds-radio">
+                                                <input type="radio" disabled="true" checked="checked" id="object-filter-conditions-radio-66" value="object-filter-conditions-radio-66" name="object-filter-conditions" />
+                                                <label class="slds-radio__label" for="object-filter-conditions-radio-66">
+                                                    <span class="slds-radio_faux"></span>
+                                                    <span class="slds-form-element__label">All of the conditions are met (AND)</span>
+                                                </label>
+                                            </span>
+                                            <!-- <span class="slds-radio">
+                                                <input type="radio" id="radio-444" value="radio-444" name="options" />
+                                                <label class="slds-radio__label" for="radio-444">
+                                                    <span class="slds-radio_faux"></span>
+                                                    <span class="slds-form-element__label">Any of the conditions are met (OR)</span>
+                                                </label>
+                                            </span>
+                                            <span class="slds-radio">
+                                                <input type="radio" id="radio-4344" value="radio-4344" name="options" />
+                                                <label class="slds-radio__label" for="radio-4344">
+                                                    <span class="slds-radio_faux"></span>
+                                                    <span class="slds-form-element__label">Customize the logic</span>
+                                                </label>
+                                            </span> -->
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <!-- / Criteria Logic Form -->
+
+
+                            </div>
+                            <div style="height: 180px;">
+                                <div class="slds-docked-form-footer">
+                                    <button id="cancelConfigBtn" type="button" class="saveFilterConfigurationBtns slds-button slds-button_neutral">Cancel</button>
+                                    <button type="button" onclick="saveConfigPanel();" class="saveFilterConfigurationBtns slds-button slds-button_brand">Save</button>
+                                    <span class="saveFilterReadOnly slds-hide slds-m-horizontal_x-small"><b>*Read Only*</b> Deactivate Filter before making changes</span>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <!-- / (Right Panel) -->
+                </div>
+                <!-- / CONFIGURE Filter Panel -->
+                
+
+                <!-- LIST VIEW HOME PANEL -->
+                <div id="tab-scoped-1" class="slds-tabs--scoped__content" role="tabpanel" aria-labelledby="tab-scoped-1__item">
+                    <h2>
+                        
+
+                        <!-- Public Group Details Section -->
+                        <fieldset class="slds-box slds-form-element slds-m-top--medium">
+                            <legend id="filterObjectsTotal" class="slds-form-element__label slds-form-element__label--top">Data Filter Rules</legend>
+                            <form class="slds-form--stacked">
+
+                                <!-- TABLE -->
+                                <div id="filterObjectTable" class="slds-scrollable_x">Select 'New' to create your first filter</div>
+
+                            </form>
+                        </fieldset>
+
+
+                    </h2>
+                </div>
+                <!-- / LIST VIEW HOME PANEL -->
+
+
+                <!-- Create/Edit Filter Modal -->
+                <div>
+                    <div id="modalDiv" aria-hidden="false" role="dialog" class="slds-modal">
+
+                        <div id="modalLoading" style="transition:opacity 0.4s linear;z-index:99999; opacity:1; width:100%; height:100%; position:fixed;right:0;bottom:0;left:0;background:rgba(255,255,255,0.85);">
+                            <div class="slds-spinner--large" style="position:fixed; top:30%; left:45%;">
+                                <img src="{!URLFOR($Asset.SLDS, '/assets/images/spinners/slds_spinner_brand.gif')}" alt="Loading..." />
+                            </div>
+                        </div>
+
+                        <div class="slds-modal__container">
+                      
+                            
+                      
+                            <div class="slds-modal__header">
+
+                                <h2 id="runBatchModalHeader" class="slds-text-heading--medium">New Filter</h2>
+                        
+                                <button class="slds-button slds-button--icon-inverse slds-modal__close" onclick="closeModal();">
+                                    <svg aria-hidden="true" class="slds-button__icon slds-button__icon--large">
+                                        <use xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/action-sprite/svg/symbols.svg#close')}"></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">Close</span>
+                                </button>
+                            </div>
+                            
+                            <div class="slds-modal__content" style="padding:10px;">
+                                
+                                <!-- Success Message -->
+                                <!--
+                                <div class="slds-box slds-theme--success slds-m-bottom--x-small">
+                                    <p>This is a
+                                      <strong>success</strong> theme and here is a <a href="javascript:void(0);">link</a>.</p>
+                                </div>
+                                -->
+                                <!-- / Success Message -->
+
+                                <!-- Batch Details -->
+
+
+                                <!-- / Batch Details -->
+
+                                
+                                <!-- BOXED AREA -->
+                                <fieldset class="slds-box slds-theme--default slds-container--small" style="padding-left:20px;">
+
+                                  <legend id="newrollupform" class="slds-text-heading--medium slds-p-vertical--medium">New Filter</legend>
+
+                                  <!-- CREATE NEW ROLLUP FORM -->
+                                  <form class="slds-form--stacked">
+                      
+                                    <div class="slds-form-element">
+                                      <label class="slds-form-element__label" for="newFilterName">Filter Name<abbr class="slds-required" title="required"> *</abbr></label>
+                                      <div class="slds-form-element__control">
+                                        <input id="newFilterName" class="slds-input" type="text"/>
+                                      </div>
+                                    </div>
+                                    <div class="slds-form-element">
+                                      <label class="slds-form-element__label" for="newFilterProcessOrder">Process Order<abbr class="slds-required" title="required"> *</abbr></label>
+                                      <div class="slds-form-element__control">
+                                        <input id="newFilterProcessOrder" class="slds-input" type="text"/>
+                                      </div>
+                                    </div>
+                                    <div class="slds-form-element">
+                                      <label class="slds-form-element__label" for="newFilterDescription">Description</label>
+                                      <div class="slds-form-element__control">
+                                        <input id="newFilterDescription" class="slds-input" type="text"/>
+                                      </div>
+                                    </div>
+                                  </form>
+                                  <!-- CREATE NEW ROLLUP FORM -->
+
+                                </fieldset>
+                                <!-- / BOXED AREA -->
+
+                            </div>
+                            
+                            <div class="slds-modal__footer">
+                                <div class="slds-x-small-buttons--horizontal">
+                                    <button class="slds-button slds-button--neutral" onclick="closeModal();">Cancel</button>
+                                    <button id="saveFilterBtn" class="slds-button slds-button--neutral slds-button--brand">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    <div id="modalDivBackDrop" class="slds-backdrop"></div>
+                </div>
+                <!-- / Create/Edit Filter Modal -->
+
+                <!-- Activate Filter Modal -->
+                <div id="activateFilterModal"> 
+                    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal">
+                        <div class="slds-modal__container">
+                            <header class="slds-modal__header">
+                                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick="closeActivationModal();">
+                                    <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#close')}" />
+                                    </svg>
+                                    <span class="slds-assistive-text">Close</span>
+                                </button>
+                                <h2 id="modal-heading-01" class="activateFilterTextHeader slds-text-heading_medium slds-hyphenate">Activate Filter</h2>
+                            </header>
+                            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                <p class="activateFilterText">Activating this filter will automatically be included in the next run of Retention Manager.</p>
+                                <!-- <p class="activateFilterText2">Next Scheduled Run: 10/19/18 1:00 AM</p> -->
+                            </div> 
+                            <footer class="slds-modal__footer">
+                                <button class="slds-button slds-button_neutral" onclick="closeActivationModal();">Cancel</button>
+                                <button id="confirmActivationBtn" class="slds-button slds-button_brand">Confirm</button>
+                            </footer>
+                        </div>
+                    </section>
+                    <div id="activateFilterModalBackground" class="slds-backdrop"></div>
+                </div>
+                <!-- / Activate Filter Modal -->
+
+
+                <!-- Data Retention Manager Settings Modal -->
+                <div id="settingsModal"> 
+                    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal">
+                        <div class="slds-modal__container">
+                            <header class="slds-modal__header">
+                                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick="closeSettingsModal();">
+                                    <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#close')}" />
+                                    </svg>
+                                    <span class="slds-assistive-text">Close</span>
+                                </button>
+                                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Settings</h2>
+                            </header>
+                            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                <!-- Content -->
+                                <fieldset class="slds-box slds-theme--default slds-container--small" style="padding-left:20px;">
+
+                                    <legend id="appSettingsForm" class="slds-text-heading--medium slds-p-vertical--medium">Settings</legend>
+
+                                    <!-- Update Settings Form -->
+                                    <form class="slds-form--stacked">
+                                
+                                        <div class="slds-form-element">
+                                            <label class="slds-checkbox_toggle slds-grid">
+                                            <span class="slds-form-element__label slds-m-bottom_none">Enable Data Retention Manager</span>
+                                            <input id="settingsEnableApp" name="checkbox-toggle-2" type="checkbox" aria-describedby="checkbox-toggle-2" value="checkbox-toggle-2" />
+                                            <span id="checkbox-toggle-2" class="slds-checkbox_faux_container" aria-live="assertive">
+                                            <span class="slds-checkbox_faux"></span>
+                                            <span class="slds-checkbox_on">Enabled</span>
+                                            <span class="slds-checkbox_off">Disabled</span>
+                                            </span>
+                                            </label>
+                                        </div>
+                                        <!-- <div class="slds-form-element">
+                                            <label class="slds-checkbox_toggle slds-grid">
+                                            <span class="slds-form-element__label slds-m-bottom_none">Enable Hard Deletes</span>
+                                            <input id="settingsEnableHardDeletes" name="checkbox-toggle-2" type="checkbox" aria-describedby="checkbox-toggle-2" value="checkbox-toggle-2" />
+                                            <span id="checkbox-toggle-2" class="slds-checkbox_faux_container" aria-live="assertive">
+                                            <span class="slds-checkbox_faux"></span>
+                                            <span class="slds-checkbox_on">Enabled</span>
+                                            <span class="slds-checkbox_off">Disabled</span>
+                                            </span>
+                                            </label>
+                                        </div> -->
+                                        <!-- <div style="border-bottom: 1px solid #dddbda;" class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                                            <span class="slds-form-element__label">Next Scheduled Run: </span>
+                                            <div class="slds-form-element__control">
+                                                <div class="slds-form-element__static">10/19/18 1:00 AM</div>
+                                                <button class="slds-button slds-button_icon" title="Edit: Next Scheduled Run">
+                                                    <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                                        <use xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#edit')}"></use>
+                                                    </svg>
+                                                    <span class="slds-assistive-text">Edit: Next Scheduled Run</span>
+                                                </button>
+                                            </div>
+                                        </div> -->
+                      
+                                    </form>
+                                    <!-- Update Settings Form -->
+
+                                </fieldset>
+                                <!-- / Content -->
+                            </div> 
+                            <footer class="slds-modal__footer">
+                                <button class="slds-button slds-button_neutral" onclick="closeSettingsModal();">Cancel</button>
+                                <button id="saveSettingsBtn" onclick="updateAppSettings();" class="slds-button slds-button_brand">Save</button>
+                            </footer>
+                        </div>
+                    </section>
+                    <div id="settingsModalBackground" class="slds-backdrop"></div>
+                </div>
+                <!-- / Manager Settings Modal -->
+                
+                <!-- Field Lookup Search Meta Modal -->
+                <div id="fieldLookupMetaModal"> 
+                    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal">
+                        <div class="slds-modal__container">
+                            <header class="slds-modal__header">
+                                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick="closeFieldLookupMetaModal();">
+                                    <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#close')}" />
+                                    </svg>
+                                    <span class="slds-assistive-text">Close</span>
+                                </button>
+                                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Select a Field</h2>
+                            </header>
+                            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                <!-- Content -->
+                                <fieldset class="slds-theme--default slds-container--small" style="padding-left:20px;">
+
+                                    <!-- Field Meta Lookup Form -->
+                                    <div class="slds-form slds-form_compound slds-m-top--medium">
+
+                                        <fieldset class="slds-form-element slds-form_compound">
+
+                                            <!-- Field Meta Data Lookup Tool -->
+                                            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                                                <!-- Base Row -->
+                                                <div class="slds-form-element__group">
+                                                    <div class="slds-form-element__row">
+                                                        <div class="slds-form-element slds-size_1-of-2">
+                                                            <div class="slds-field-index-modal">
+                                                                <span class="field-lookup-base-object">FilterField__c</span>
+                                                                <span class="slds-icon_container slds-icon__svg--default" style="padding: 0 5px 0 5px;" title="Right">
+                                                                    <svg class="slds-icon slds-icon-text-default slds-icon_x-small" aria-hidden="true">
+                                                                        <use xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#right')}"></use>
+                                                                    </svg>
+                                                                    <span class="slds-assistive-text">Right</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="slds-form-element slds-size_1-of-2">
+                                                          <div class="slds-form-element__control" style="margin: 5px 0;">
+                                                            <div style="position:relative;" class="slds-lookup" data-select="single" data-scope="single" data-typeahead="true">
+                                                                <div class="slds-form-element">
+                                                                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right">
+                                                                        <span class="slds-input__icon" aria-hidden="true">
+                                                                            <i class="fa fa-search"></i>
+                                                                        </span>
+                                                                        <div class="slds-pill__container slds-hide"></div>
+                                                                        
+                                                                        <input id="fieldMetaLookup" placeholder="Type to filter list..." class="slds-input slds-show" type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- / Base Row -->
+                                                
+                                            </div>
+                                            <!-- / Field Meta Data Lookup Tool -->
+                                        </fieldset>
+                                    </div>
+                                    <!-- / Field Meta Lookup Form -->
+
+                                </fieldset>
+                                <!-- / Content -->
+                            </div> 
+                            <footer class="slds-modal__footer">
+                                <button class="slds-button slds-button_neutral" onclick="closeFieldLookupMetaModal();">Cancel</button>
+                                <button id="saveFieldLookupMetaBtn" class="slds-button slds-button_brand">Choose</button>
+                            </footer>
+                        </div>
+                    </section>
+                    <div id="fieldLookupMetaModalBackground" class="slds-backdrop"></div>
+                </div>
+                <!-- / Field Lookup Search Meta Modal -->
+            </div>
+            <!-- / SLDS PAGE SCOPE -->
+        <script>
+            // TODO: redact JS code into static resources
+
+            // auto complete
+            (function( $ ) {  
+
+                $.widget( 'slds.autocomplete', $.ui.autocomplete, {
+
+                    _create: function() {
+
+                        this._super();
+
+                        this.sldsMenu = $('<div>')
+                                            .addClass('slds-lookup__menu slds-hide')
+                                            .attr('role', 'listbox')
+
+                        this.element.parentsUntil('.slds-lookup').append( this.sldsMenu );
+
+                        $('.ui-helper-hidden, .ui-helper-hidden-accessible').addClass('slds-hide');
+
+                    },
+
+                    _renderMenu: function( ul, items ) {
+
+                        var self = this;
+
+                        ul.addClass('slds-lookup__list').attr('role', 'presentation');
+                        ul.appendTo( this.sldsMenu );
+
+                        this.sldsMenu.addClass('slds-show').removeClass('slds-hide');
+
+                        $.each( items, function( index, item ) {
+                            self._renderItemData( ul, item );
+                        });
+
+                    },
+
+                    _renderItem: function( ul, item ) {
+                        /* FUTURE shows other filters on same object     
+                        return $('<li onclick="prepareQueryAndPopulateActiveFilterObjectsByObject(\'' + item.label + '\');">')
+                        */
+                        return $('<li>')
+                            .addClass('slds-lookup__item')
+                            .append( '<a href="#" role="option">' + item.label + '</a>' )
+                            .appendTo( ul );
+
+                    },
+
+                    _close: function( event ) {
+
+                        this._super( event );
+
+                        this.sldsMenu.addClass('slds-hide').removeClass('slds-show');
+
+                    }
+
+                });
+            })( jQuery );
+
+            // jquery var
+            $ = jQuery.noConflict();
+
+            // init autocomplete plugin
+            $(function() {  
+                $('#objectLookupAutoComplete').autocomplete({
+                    source: runLookup()
+                });
+            });
+
+            $.aljsInit({
+                assetsLocation: '.',
+                scoped: true,
+                scopingClass: 'slds-scope'
+            });
+
+            // Global Variables
+            var selectedFilterObject;
+            var editPropertiesMode = false;
+
+            // ready
+            $(document).ready(function() {
+                // check for existing page parameter
+                var directURLId = '{!$CurrentPage.parameters.id}';
+                if(directURLId) {
+                    showHideSpinner(true);
+                    directURLNav(directURLId);
+                }
+                else {
+                    queryFilterObjects();   
+                }
+
+                // --------
+                // SETUP ONCLICK METHODS
+                // --------
+                $("#saveFilterBtn").click(function() {
+                    if(editPropertiesMode) {
+                        updateFilterProperties(selectedFilterObject.Id, $("#newFilterName").val(), $("#newFilterProcessOrder").val(), $("#newFilterDescription").val());
+                    }
+                    else {
+                        // insert filter and show new filter config panel
+                        insertNewFilter($("#newFilterName").val(), $("#newFilterProcessOrder").val(), $("#newFilterDescription").val());   
+                    }
+                });
+
+                $("#viewAllFiltersBtn").click(function() {
+                    showMainPanel();
+                });
+
+                $("#cancelConfigBtn").click(function() {
+                    showMainPanel();
+                });
+
+                $("#deleteFilterBtn").click(function() {
+                    var result = confirm("Want to delete?");
+                    if (result) {
+                        deleteFilter(selectedFilterObject.Id);
+                    }
+                });
+
+                $("#successToastCloseBtn").click(function() {
+                    $("#successToast").hide();
+                });
+
+                $("#errorToastCloseBtn").click(function() {
+                    $("#errorToast").hide();
+                });
+
+                $("#infoToastCloseBtn").click(function() {
+                    $("#infoToast").hide();
+                });
+            });
+
+            // -----------------------------
+            // Navigation/Toggle Visibility Methods
+            // -----------------------------
+            function showMainPanel() {
+                var currentPageFullURL = '{!$CurrentPage.URL}';
+                safeNavigateToUrl(currentPageFullURL.substring(currentPageFullURL.indexOf("/apex"), currentPageFullURL.indexOf("manager") + 7));
+                /*
+                $(".tab-scoped-2").hide();
+                // reset config panel
+                resetConfigPanel();
+                // show main panel
+                $("#tab-scoped-1").show();
+                $(".new-filter-btn").show();
+                // requery main panel data
+                showHideSpinner(true);
+                queryFilterObjects();
+                */
+            }
+
+            function directURLNav(paramId) {
+                $("#tab-scoped-1").hide();
+                $(".new-filter-btn").hide();
+                closeModal();
+                $(".tab-scoped-2").show();
+
+                var isSave = '{!$CurrentPage.parameters.save}';
+
+                if(isSave) {
+                    showSuccessToast('Success! Filter Saved!'); 
+                }
+                querySelectedFilterObject(paramId);
+            }
+
+            function safeNavigateToUrl(url) {
+                // console.log(url);
+                //classic
+                window.parent.location.href = url;
+            }
+
+            function openConfigurationPanel(filterObjectId, isSave) {
+                var currentPageFullURL = '{!$CurrentPage.URL}';
+                var newURL = currentPageFullURL.substring(currentPageFullURL.indexOf("/apex"), currentPageFullURL.indexOf("manager") + 7) + '?id=' + filterObjectId;
+                if(isSave) {
+                    newURL += '&save=true';
+                }
+                safeNavigateToUrl(newURL);
+                //querySelectedFilterObject(filterObjectId);
+                
+                //$("#tab-scoped-1").hide();
+                // $(".new-filter-btn").hide();
+                // closeModal();
+                // $(".tab-scoped-2").show();
+            }
+
+            function toggleActivateBtnStatus(status) {
+                if(status === 'Active') {
+                    isReadOnlyConfigPanel(true);
+                }
+                else {
+                    isReadOnlyConfigPanel(false);
+                }
+            }
+
+            function isReadOnlyConfigPanel(isReadOnly) {
+                if(isReadOnly) {
+                    // docked footer
+                    $(".saveFilterConfigurationBtns").hide();
+                    $(".saveFilterReadOnly").show();
+                    // Utility bar buttons
+                    $("#activateFilterBtn").text('Deactivate');
+                    $("#editPropertiesBtn").text('View Properties');
+                    $("#activateReadOnlyText").show();
+                    
+                    // Activate modal
+                    $(".activateFilterTextHeader").text('Deactivate Filter');
+                    $(".activateFilterText").text('Are you sure you want to deactivate this filter?')
+                    $(".activateFilterText2").text('');
+                }
+                else {
+                    // docked footer
+                    $(".saveFilterConfigurationBtns").show();
+                    $(".saveFilterReadOnly").hide();
+                    // Utility bar buttons
+                    $("#activateFilterBtn").text('Activate');
+                    $("#editPropertiesBtn").text('Edit Properties');
+                    $("#activateReadOnlyText").hide();
+                    
+                    // Activate modal
+                    $(".activateFilterTextHeader").text('Activate Filter');
+                    $(".activateFilterText").text('Activating this filter will automatically be included in the next run of Retention Manager.')
+                    // $(".activateFilterText2").text('Next Scheduled Run: 10/19/18 1:00 AM');
+                }
+                
+                // FilterField__c section
+                $(".fieldIndexRowBaseGroup :input").each(function(e) {
+                    // console.log('disable'); 
+                    $(this).prop('disabled', isReadOnly);
+                });
+            }
+
+            // -----------------------------
+            // JS Data Massage Methods
+            // -----------------------------
+            function prepareSelectedFilterObject(filterObject) {
+                // remove nested records FilterFields__r
+                // console.log(filterObject);
+                
+                var cleanFilterObject = { 
+                    Id: "",
+                    Object__c: "",
+                    Criteria_Name__c: "",
+                    Criteria_for_Executing_Filter_Action__c: "",
+                    Conditions__c: "",
+                    Logic__c: ""
+                };
+
+                // pull from JS var
+                if(filterObject.Id) {
+                    cleanFilterObject.Id = filterObject.Id;
+                }
+                // pull from page
+                cleanFilterObject.Object__c = $("#objectLookupAutoComplete").val();
+                // cleanFilterObject.Criteria_Name__c = $("#input-criteria-name").val();
+                // cleanFilterObject.Criteria_for_Executing_Filter_Action__c = $("#input-criteria-name").val();
+                // cleanFilterObject.Conditions__c = $("#input-criteria-name").val();
+                // cleanFilterObject.Logic__c = $("#input-criteria-name").val();
+                
+                return cleanFilterObject;
+            }
+
+            function prepareSelectedFieldFilterRecords() {
+
+                // construct new child object records
+                var cleanFilterFields = [];
+
+                var currentRow = 1;
+                $(".fieldIndexRowBaseGroup").children().each(function() {
+                    //$(this).remove(); 
+                    // console.log('new row');
+
+                    var cleanFilterField = { 
+                        Id: "",
+                        FilterObject__c: "",
+                        Field__c: "",
+                        Operator__c: "",
+                        Value__c: ""
+                    };
+                    // pull Id if existing record
+                    var rowId = $("#input-" + currentRow).attr("data-field-filter-id"); // getter
+
+                    if(rowId !== "undefined") {
+                        cleanFilterField.Id = rowId;
+                    }
+                    // pull other 3 inputs in the row
+                    cleanFilterField.FilterObject__c = selectedFilterObject.Id;
+                    cleanFilterField.Field__c = $("#input-" + currentRow).val();
+                    var test = $("#select-operator-" + currentRow + " option:selected").val();
+                    cleanFilterField.Operator__c = $("#select-operator-" + currentRow + " option:selected").val();
+                    cleanFilterField.Value__c = $("#input-value-" + currentRow).val();
+
+                    cleanFilterFields.push(cleanFilterField);
+
+                    currentRow++;
+                });
+                // alert(JSON.stringify(cleanFilterFields));
+
+                return cleanFilterFields;
+            }
+
+            // -----------------------------
+            // Query Remote Action Methods
+            // -----------------------------
+            function runLookup() {
+                var objects = new Array();
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.DataRetentionManager.describeObjects}',
+                    function(result,event) {
+                        if(event.status == true){
+                            for(var i = 0; i < result.length; i++){
+                                objects[i] = result[i];
+                            }    
+                        }
+                        else{
+                            showErrorToast('Uh oh. Something broke. Reload the page and try again');
+                        } 
+                    }
+                );
+                
+                return objects;
+            }
+
+            function runFieldLookup(selectedObject) {
+                var objects = new Array();
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.DataRetentionManager.describeRelatedFields}', selectedObject,
+                    function(result,event) {
+                        if(event.status == true){
+                            for(var i = 0; i < result.length; i++){
+                                objects[i] = result[i];
+                            }    
+                        }
+                        else{
+                            showErrorToast('Uh oh. Something broke. Reload the page and try again');
+                        } 
+                    }
+                );
+                
+                return objects;
+            }
+
+            function querySelectedFilterObject(filterObjectId) {
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.DataRetentionManager.querySelectedFilterObject}', filterObjectId,
+                    function(result,event) {
+                        if(event.status) {
+                            populateConfigPanel(result);
+                        }  
+                        else {
+                            showHideSpinner(false);
+                            showErrorModal(event.message);
+                        }
+                    },{escape: false}
+                );
+            }
+
+            function queryAppSettings() {
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.DataRetentionManager.querySettings}',
+                    function(result,event) {
+                        if(event.status) {
+                            populateSettingsModal(result);
+                        }  
+                        else {
+                            showErrorToast(event.message); 
+                        }
+                    },{escape: false}
+                );
+            }
+
+            function queryFilterObjects() {
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.DataRetentionManager.queryFilterObjects}',
+                    function(result,event) {
+                        if(event.status) {
+                            populateFilterObjectTable(result);
+                        }  
+                        else {
+                            showErrorToast(event.message); 
+                        }
+                    },{escape: false}
+                );
+            }
+
+            function queryOperators(value, rowNumber, objectName, fieldName) {
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.DataRetentionManager.determineFieldTypeOperatorValues}', objectName, fieldName,
+                    function(result,event) {
+                        if(event.status) {
+                            // console.log('result' + result); 
+                            var options = '';
+                            if(result.length > 0) {
+                                // options += '<option selected>Equals</option>';
+                                for(var i=0; i < result.length; i++) {
+                                    if(result[i] == value) {
+                                        options += '<option selected>' + result[i] + '</option>';   
+                                    } else {
+                                        options += '<option>' + result[i] + '</option>';    
+                                    }
+                                    
+                                }
+                            }
+                            $("#select-operator-" + rowNumber).html(options);
+                        }  
+                        else {
+                            showErrorToast(event.message); 
+                        }
+                    },{escape: false}
+                );
+            }
+
+            // -----------------------------
+            // DML Remote Action Methods
+            // -----------------------------
+            function deleteFilter(filterObjectId) {
+                showHideSpinner(true);
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.DataRetentionManager.deleteFilter}', filterObjectId,
+                    function(result,event) {
+                        if(event.status) {
+                            showMainPanel();
+                        }
+                        else {
+                            showErrorToast(event.message);
+                        }
+                    },{escape:false}
+                );
+            }
+
+            function deleteFieldFilter(filterFieldId) {
+                showHideSpinner(true);
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.DataRetentionManager.deleteFilterField}', filterFieldId,
+                    function(result,event) {
+                        if(event.status) {
+                            // console.log('delete row success');
+                            showHideSpinner(false);
+                        }
+                        else {
+                            showErrorToast(event.message);
+                        }
+                    },{escape:false}
+                );
+            }
+
+            function insertNewFilter(filterName, filterProcessOrder, filterDescription) {
+                showHideSpinner(true);
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.DataRetentionManager.insertNewFilter}', filterName, filterProcessOrder, filterDescription,
+                    function(result,event) {
+                        if(event.status) {
+                            openConfigurationPanel(result, true);
+                        }
+                        else {
+                            showErrorToast(event.message);
+                        }
+                    },{escape:false}
+                );
+            }
+
+            function saveConfigPanel() {
+                hideSuccessToast();
+                hideErrorToast();
+                showHideSpinner(true);
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.DataRetentionManager.saveConfigPanel}', prepareSelectedFilterObject(selectedFilterObject), prepareSelectedFieldFilterRecords(selectedFilterObject),
+                    function(result,event) {
+                        if(event.status) {
+                            if(result === 'true') {
+                                openConfigurationPanel(selectedFilterObject.Id, true);
+                            }
+                            else {
+                                showHideSpinner(false);
+                                showErrorToast(result);
+                            }
+                        }  
+                        else {
+                            showHideSpinner(false);
+                            showErrorToast(event.message);
+                        }
+                    },{escape: false}
+                );
+            }
+
+            function updateAppSettings() {
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.DataRetentionManager.updateSettings}', $("#settingsEnableApp").is( ":checked" ), //$("#settingsEnableHardDeletes").is( ":checked" ),
+                    function(result,event) {
+                        if(event.status) {
+                            closeSettingsModal();
+                        }  
+                        else {
+                            showErrorToast(event.message); 
+                        }
+                    },{escape: false}
+                );
+            }
+
+            function updateFilterActivation(filterObjectId, filterObjectStatus) {
+                showHideSpinner(true);
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.DataRetentionManager.updateFilterStatus}', filterObjectId, filterObjectStatus,
+                    function(result,event) {
+                        if(event.status) {
+                            closeActivationModal();
+                            openConfigurationPanel(filterObjectId, true);   
+                        }  
+                        else {
+                            showErrorToast(event.message); 
+                        }
+                    },{escape: false}
+                );
+            }
+
+            function updateFilterProperties(filterId, filterName, filterProcessOrder, filterDescription) {
+                showHideSpinner(true);
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.DataRetentionManager.updateFilter}', filterId, filterName, filterProcessOrder, filterDescription,
+                    function(result,event) {
+                        if(event.status) {
+                            // requery record and populate config panel with selected record property updates
+                            openConfigurationPanel(result.Id, true);
+                        }
+                        else {
+                            showErrorToast(event.message);
+                        }
+                    },{escape:false}
+                );
+            }
+
+            // -----------------------------
+            // Page Action Methods
+            // -----------------------------
+            function chooseFieldFilter() {
+                // get attr from choose button for row number
+                var selectedInputId = $('#saveFieldLookupMetaBtn').attr("data-fieldfilterid"); // getter
+                // get row number
+                var lastChar = selectedInputId[selectedInputId.length-1];
+                //TODO - issue is that it only scales to 9 criteria
+                // populate valid operators
+                var currentPicklistVal = $("#select-operator-" + lastChar).val();
+                
+                queryOperators(currentPicklistVal, lastChar, selectedFilterObject.Object__c, $('#fieldMetaLookup').val());
+                // enable other 3 inputs in the row
+                $("#select-operator-" + lastChar).prop('disabled', false);
+                $("#select-type-" + lastChar).prop('disabled', false);
+                $("#input-value-" + lastChar).prop('disabled', false);
+                // pull selected value into the row input
+                $("#" + selectedInputId).val($('#fieldMetaLookup').val());
+                // close modal
+                closeFieldLookupMetaModal();
+            }
+
+            function addRow() {
+                if(selectedFilterObject.Status__c === 'Active') {
+                    setTimeout(showInfoToast('Deactive Filter before adding rows!'), 2000);
+                }   
+                else {
+                    var rowNumber = $(".fieldIndexRowBaseGroup").children().length + 1;
+                    $(".fieldIndexRowBaseGroup").append(createNewFilterFieldRow(rowNumber, true, 'new', 'object', 'field'));    
+                }
+            }
+
+            function removeRow(rowNumber) {
+                if(selectedFilterObject.Status__c === 'Active') {
+                    showInfoToast('Deactive Filter before deleting rows!');
+                }   
+                else {
+                    // locate selected row DOM element and delete it from the DOM
+                    var currentRow = 1;
+                    $(".fieldIndexRowBaseGroup .fieldIndexRow").each(function() {
+                        if(currentRow === rowNumber) {
+                            var rowId = $(this).attr("data-field-filter-id"); // getter
+                            if(rowId !== 'new') {
+                                deleteFieldFilter(rowId);
+                            }
+                            $(this).remove();   
+                        }
+                        currentRow++;
+                    });
+
+                    // iterate re number the rows
+                    var rowNumber = 1;
+                    $(".slds-field-index").each(function() {
+                        $(this).text(rowNumber);
+                        rowNumber++;
+                    });
+                }
+            }
+
+            // -----------------------------
+            // Populate Methods
+            // -----------------------------
+            function populateFilterObjectTable(filterObjects) {
+
+                if(filterObjects.length > 0) {
+
+                    var sldsfilterObjectTable = '';
+                    var activeFilters = 0;
+
+                    sldsfilterObjectTable += '<table id="objectFilterTable" class="slds-table slds-table_bordered slds-table_cell-buffer">';
+                        sldsfilterObjectTable += '<thead>';
+                            sldsfilterObjectTable += '<tr class="slds-text-title_caps">';
+                                sldsfilterObjectTable += '<th scope="col"><div title="Filter">Filter</div></th>';
+                                sldsfilterObjectTable += '<th scope="col"><div title="Object">Object</div></th>';
+                                sldsfilterObjectTable += '<th scope="col"><div title="ProcessOrder">Process Order</div></th>';
+                                sldsfilterObjectTable += '<th scope="col"><div title="Last Modified">Last Modified</div></th>';
+                                sldsfilterObjectTable += '<th scope="col"><div title="Status">Status</div></th>';
+                                sldsfilterObjectTable += '<th scope="col"><div title="Description">Description</div></th>';
+                            sldsfilterObjectTable += '</tr>';
+                        sldsfilterObjectTable += '</thead>';
+
+                        
+                        sldsfilterObjectTable += '<tbody>';
+                        // iterate quotelines here
+                        for(var i=0; i<filterObjects.length; i++) {
+                            if(filterObjects[i].Status__c === 'Active') {
+                                activeFilters++;
+                            }
+                            sldsfilterObjectTable += '<tr>';
+                                sldsfilterObjectTable += '<th scope="row" data-label="Name">';
+                                    sldsfilterObjectTable += '<div title="Group Name"><a onclick="openConfigurationPanel(\'' + filterObjects[i].Id + '\', false);" href="#">' + filterObjects[i].Name + '</a></div>';
+                                sldsfilterObjectTable += '</th>';
+                                sldsfilterObjectTable += '<th scope="row" data-label="Object">';
+                                    sldsfilterObjectTable += '<div>' + filterObjects[i].Object__c + '</div>';
+                                sldsfilterObjectTable += '</th>';
+                                sldsfilterObjectTable += '<th scope="row" data-label="ProcessOrder">';
+                                    sldsfilterObjectTable += '<div>' + filterObjects[i].Process_Order__c + '</div>';
+                                sldsfilterObjectTable += '</th>';
+                                sldsfilterObjectTable += '<th scope="row" data-label="LastModifiedDate">';
+                                    var day = new Date(filterObjects[i].LastModifiedDate);
+                                    sldsfilterObjectTable += '<div>' + formatExpirationDate(day) + '</div>';
+                                sldsfilterObjectTable += '</th>';
+                                sldsfilterObjectTable += '<th scope="row" data-label="Status">';
+                                    sldsfilterObjectTable += '<div>' + filterObjects[i].Status__c + '</div>';
+                                sldsfilterObjectTable += '</th>';
+                                sldsfilterObjectTable += '<th scope="row" data-label="Description">';
+                                    sldsfilterObjectTable += '<div>' + filterObjects[i].Description__c + '</div>';
+                                sldsfilterObjectTable += '</th>';
+                            sldsfilterObjectTable += '</tr>';
+                        }
+
+                        sldsfilterObjectTable += '</tbody>';
+                    sldsfilterObjectTable += '</table>';
+
+                    $('#filterObjectTable').html(sldsfilterObjectTable);
+                }      
+                else {
+                    $('#filterObjectTable').html('<span>select New to create a filter</span>');
+                }
+
+                if(filterObjects.length > 1) {
+                    $('#filterObjectsTotal').text(filterObjects.length + ' Filters');
+                }
+                else {
+                    $('#filterObjectsTotal').text(filterObjects.length + ' Filter');    
+                }
+
+                if(activeFilters === 1) {
+                    $('#retentionHeaderActiveFilterCount').text(activeFilters + ' Active Filter');
+                }
+                else {
+                    $('#retentionHeaderActiveFilterCount').text(activeFilters + ' Active Filters');
+                }
+
+
+                $('#objectFilterTable').DataTable({
+                    "pageLength": 25
+                });
+                
+                showHideSpinner(false);
+            }
+
+            function createNewFilterFieldRow(rowNumber, isDisabled, record, objectName, fieldName) {
+                var recordId = record.Id;
+                var newRow = '';
+                newRow += '<div class="slds-form-element__row fieldIndexRow" data-field-filter-id="' + recordId + '">';
+                    newRow += '<div class="slds-form-element slds-size_1-of-5" style="width:20%;">';
+                      newRow += '<div class="slds-form-element__control">';
+                        newRow += '<div style="margin:0;" class="slds-field-index">' + rowNumber + '</div>';
+                      newRow += '</div>';
+                    newRow += '</div>';
+                    newRow += '<div class="slds-form-element slds-size_1-of-5">';
+                      newRow += '<div class="slds-form-element__control" style="cursor:pointer;">';
+                        newRow += '<svg class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" aria-hidden="true">';
+                            newRow += '<use xmlns:xlink="http://www.w3.org/1999/xlink"';
+                            newRow += ' xlink:href="{!URLFOR($Asset.SLDS, "/assets/icons/utility-sprite/svg/symbols.svg#search")}" />';
+                        newRow += '</svg>';
+                        newRow += '<input id="input-' + rowNumber + '" style="cursor:pointer;" class="slds-input" onclick="openFieldLookupMetaModal(\'input-' + rowNumber + '\');" type="text" value="" placeholder="Find a field..."';
+                        if(recordId != 'new') {
+                            newRow += ' data-field-filter-id="' + recordId + '"';
+                        }
+                        newRow += ' />';
+                      newRow += '</div>';
+                    newRow += '</div>';
+                    newRow += '<div class="slds-form-element slds-size_1-of-5">';
+                      newRow += '<div class="slds-form-element__control">';
+                        newRow += '<div class="slds-select_container">';
+                            newRow += '<select class="slds-select" id="select-operator-' + rowNumber + '"';
+                            if(isDisabled) {
+                                newRow += ' disabled="true"';
+                            }
+                            newRow += '>';
+                                if(recordId != 'new') {
+                                    queryOperators(record.Operator__c, rowNumber, objectName, fieldName);
+                                }
+                                else {
+                                    newRow += '<option selected>Equals</option>';
+                                    newRow += '<option>Does Not Equal</option>';
+                                    newRow += '<option>Less than</option>';
+                                    newRow += '<option>Greater than</option>';
+                                    newRow += '<option>Less than or equal</option>';
+                                    newRow += '<option>Greater than or equal</option>';
+                                    newRow += '<option>Starts with</option>';
+                                    newRow += '<option>Ends with</option>';
+                                    newRow += '<option>Contains</option>';
+                                    newRow += '<option>Is null</option>';   
+                                }
+                            newRow += '</select>';
+                        newRow += '</div>';
+                      newRow += '</div>';
+                    newRow += '</div>';
+                    /*
+                    newRow += '<div class="slds-form-element slds-size_1-of-6">';
+                      newRow += '<div class="slds-form-element__control">';
+                        newRow += '<div class="slds-select_container">';
+                            newRow += '<select class="slds-select" id="select-type-' + rowNumber + '" disabled="' + isDisabled + '">';
+                                newRow += '<option value="">String</option>';
+                                newRow += '<option>Field Reference</option>';
+                                newRow += '<option>Formula</option>';
+                            newRow += '</select>';
+                        newRow += '</div>';
+                      newRow += '</div>';
+                    newRow += '</div>';
+                    */
+
+                    newRow += '<div class="slds-form-element slds-size_1-of-5">';
+                      newRow += '<div class="slds-form-element__control">';
+                        newRow += '<input type="text" id="input-value-' + rowNumber + '" class="slds-input"';
+                        if(isDisabled) {
+                            newRow += ' disabled="true"';
+                        }
+                        newRow += ' />';
+                      newRow += '</div>';
+                    newRow += '</div>';
+
+                    newRow += '<div class="slds-form-element slds-size_1-of-5" style="width:3%;">';
+                      newRow += '<div class="slds-form-element__control" style="padding-top:4px;">';
+                        newRow += '<a href="javascript:void(0);" onclick="removeRow(' + rowNumber + ');">';
+                            newRow += '<span class="slds-icon_container slds-icon__svg--default" title="Delete Row">';
+                                newRow += '<svg class="slds-icon slds-icon-text-light slds-icon_x-small" aria-hidden="true">';
+                                    newRow += '<use xlink:href="{!URLFOR($Asset.SLDS, "/assets/icons/utility-sprite/svg/symbols.svg#close")}"></use>';
+                                newRow += '</svg>';
+                                newRow += '<span class="slds-assistive-text">Delete Row</span>';
+                            newRow += '</span>';
+                        newRow += '</a>';
+                      newRow += '</div>';
+                    newRow += '</div>';
+                newRow += '</div>';
+
+                return newRow;
+            }
+
+            function createFieldFilterFirstRow(isDisabled, record, objectName, fieldName) {
+                var recordId = record.Id;
+                var firstRow = '';
+                firstRow += '<div class="slds-form-element__row fieldIndexRow">';
+                    firstRow += '<div class="slds-form-element slds-size_1-of-5" style="width:20%;">';
+                      firstRow += '<label class="slds-form-element__label" for="input-05"></label>';
+                      firstRow += '<div class="slds-form-element__control">';
+                        firstRow += '<div class="slds-field-index">1</div>';
+                      firstRow += '</div>';
+                    firstRow += '</div>';
+                    firstRow += '<div class="slds-form-element slds-size_1-of-5">';
+                      firstRow += '<label class="slds-form-element__label" for="input-1">Field<abbr class="slds-required" title="required"> *</abbr></label>';
+                      firstRow += '<div class="slds-form-element__control" style="cursor:pointer;">';
+                        firstRow += '<svg class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" aria-hidden="true">';
+                          firstRow += '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, "/assets/icons/utility-sprite/svg/symbols.svg#search")}" />';
+                        firstRow += '</svg>';
+                        firstRow += '<input id="input-1" style="cursor:pointer;" class="slds-input" onclick="openFieldLookupMetaModal(\'input-1\');" type="text" value="" placeholder="Find a field..."';
+                        if(recordId != 'new') {
+                            firstRow += ' data-field-filter-id="' + recordId + '"';
+                        }
+                        firstRow += ' />';
+                      firstRow += '</div>';
+                    firstRow += '</div>';
+                    firstRow += '<div class="slds-form-element slds-size_1-of-5">';
+                      firstRow += '<label class="slds-form-element__label" for="select-operator-1">Operator<abbr class="slds-required" title="required"> *</abbr></label>';
+                      firstRow += '<div class="slds-form-element__control">';
+                        firstRow += '<div class="slds-select_container">';
+                            firstRow += '<select class="slds-select" id="select-operator-1"';
+                            if(isDisabled) {
+                                firstRow += ' disabled="true"';
+                            }
+                            firstRow += '>';
+                                if(recordId != 'new') {
+                                    queryOperators(record.Operator__c, 1, objectName, fieldName);
+                                }
+                                else {
+                                    firstRow += '<option selected>Equals</option>';
+                                    firstRow += '<option>Does Not Equal</option>';
+                                    firstRow += '<option>Less than</option>';
+                                    firstRow += '<option>Greater than</option>';
+                                    firstRow += '<option>Less than or equal</option>';
+                                    firstRow += '<option>Greater than or equal</option>';
+                                    firstRow += '<option>Starts with</option>';
+                                    firstRow += '<option>Ends with</option>';
+                                    firstRow += '<option>Contains</option>';
+                                    firstRow += '<option>Is null</option>'; 
+                                }
+                                
+                            firstRow += '</select>';
+                        firstRow += '</div>';
+                      firstRow += '</div>';
+                    firstRow += '</div>';
+
+                    firstRow += '<div class="slds-form-element slds-size_1-of-5">';
+                      firstRow += '<label class="slds-form-element__label" for="input-value-1">Value<abbr class="slds-required" title="required"> *</abbr></label>';
+                      firstRow += '<div class="slds-form-element__control">';
+                        firstRow += '<input type="text" id="input-value-1" class="slds-input"';
+                        if(isDisabled) {
+                            firstRow += ' disabled="true"';
+                        }
+                        firstRow += ' />';
+                      firstRow += '</div>';
+                    firstRow += '</div>';
+                    firstRow += '<div class="slds-form-element slds-size_1-of-6" style="width:6%;">';
+                      firstRow += '<div class="slds-form-element__control"></div>';
+                    firstRow += '</div>';
+                firstRow += '</div>';
+                return firstRow;
+            }
+
+            function populateConfigPanel(filterObject) {
+                // setup 
+                toggleActivateBtnStatus(filterObject.Status__c);
+
+                $("#editPropertiesBtn").click(function() {
+                    editPropertiesMode = true;
+                    // open new filter modal
+                    openModal();
+
+                    // check if Read Only, and show disabled inputs prepopulated
+                    if(filterObject.Status__c === 'Active') {
+                        $("#saveFilterBtn").prop('disabled', true);
+                        $("#newFilterName").val(filterObject.Name);
+                        $("#newFilterName").prop('disabled', true);
+                        $("#newFilterProcessOrder").val(filterObject.Process_Order__c);
+                        $("#newFilterProcessOrder").prop('disabled', true);
+                        $("#newFilterDescription").val(filterObject.Description__c);
+                        $("#newFilterDescription").prop('disabled', true);
+                        $("#runBatchModalHeader").text('Properties');
+                        $("#newrollupform").text('View Filter Properties');
+                    }
+                    else {
+                        // Not Read Only, switch modal to edit mode and prepopulate values
+                        $("#saveFilterBtn").prop('disabled', false);
+                        $("#newFilterName").val(filterObject.Name);
+                        $("#newFilterName").prop('disabled', false);
+                        $("#newFilterProcessOrder").val(filterObject.Process_Order__c);
+                        $("#newFilterProcessOrder").prop('disabled', false);
+                        $("#newFilterDescription").val(filterObject.Description__c);
+                        $("#newFilterDescription").prop('disabled', false);
+                        $("#runBatchModalHeader").text('Properties');
+                        $("#newrollupform").text('Edit Filter');    
+                    }
+                });
+                $("#activateFilterBtn").click(function() {
+                    openActivationModal();
+                });
+                // populate global var
+                selectedFilterObject = filterObject;            
+                $("#objectLookupAutoComplete").val(filterObject.Object__c);
+                // $("#input-criteria-name").val(filterObject.Criteria_Name__c);
+                $("#configFilterTitle").text(filterObject.Name + ' - ' + filterObject.Description__c);
+                
+                if(filterObject.Object__c) {
+                    // default to disabled if already selected
+                    $("#objectLookupAutoComplete").prop('disabled', true);
+                    // FUTURE shows other filters on same object     
+                    // showHideExistingFilterQuerySpinner(true);
+                    // queryAndPopulateActiveFilterObjectsByObject(filterObject.Object__c);
+                    populateFilterFieldsTable(filterObject.FilterFields__r);
+                    $(".criteria-filter-form").show();
+                }
+                else {
+                    populateFilterFieldsTable(filterObject.FilterFields__r);
+                    //$("#existingObjectFilterWarningSection").hide();
+                    $("#objectLookupAutoComplete").prop('disabled', false);
+                    // hide FilterFieldsTable section
+                    $(".criteria-filter-form").hide();
+                }
+
+                toggleActivateBtnStatus(filterObject.Status__c);    
+
+                showHideSpinner(false);
+            }
+
+            function populateFieldLookupMetaModal(fieldFilterInputId) {
+                $('#saveFieldLookupMetaBtn').attr("data-fieldfilterid", fieldFilterInputId); // setter
+                $('.field-lookup-base-object').html(selectedFilterObject.Object__c);
+                $('#saveFieldLookupMetaBtn').click(function() {
+                    chooseFieldFilter();
+                });
+
+                $('#fieldMetaLookup').val('');
+                $('#fieldMetaLookup').autocomplete({
+                    source: runFieldLookup(selectedFilterObject.Object__c)
+                });
+            }
+
+            function populateSettingsModal(settings) {
+                $("#settingsEnableApp").prop('checked', settings.Enable_DataRetentionManager__c);
+                // $("#settingsEnableHardDeletes").prop('checked', settings.Enable_Hard_Deletes__c);
+            }
+
+            function populateFilterFieldsTable(filterFields) {
+                
+                var filterFieldsTableHTML = '';
+
+                if(!filterFields) {
+                    filterFieldsTableHTML += createFieldFilterFirstRow(true, 'new', 'object', 'field');
+                    $(".fieldIndexRowBaseGroup").html(filterFieldsTableHTML);
+                }
+                else {
+                    if(filterFields.length > 0) {
+
+                        // var currentRow = 0;
+
+                        for(var i=0; i<filterFields.length; i++) {
+                            // console.log('+row ' + filterFields[i].Id);
+                            // currentRow = i + 1;
+                            // 1st row
+                            if(i===0) {
+                                filterFieldsTableHTML += createFieldFilterFirstRow(false, filterFields[i], selectedFilterObject.Object__c, filterFields[i].Field__c);
+                            }
+                            else {
+                                // additional rows  
+                                filterFieldsTableHTML += createNewFilterFieldRow(i + 1, false, filterFields[i], selectedFilterObject.Object__c, filterFields[i].Field__c);
+                            }
+                        }   
+                    }   
+                    $(".fieldIndexRowBaseGroup").html(filterFieldsTableHTML);
+                    // prepopulate rows
+                    prepopulateFieldFilterRowData(filterFields);
+                }
+            }
+
+            function prepopulateFieldFilterRowData(filterFields) {
+                if(filterFields.length > 0) {
+
+                    var currentRow = 0;
+
+                    for(var i=0; i<filterFields.length; i++) {
+                        currentRow = i + 1;
+                        
+                        // prepopulate row 
+                        $("#input-" + currentRow).val(filterFields[i].Field__c);
+                        $("#select-operator-" + currentRow).val(filterFields[i].Operator__c);
+                        $("#input-value-" + currentRow).val(filterFields[i].Value__c);
+                    }   
+                }
+            }
+
+            // -----------------------------
+            // JS Util Methods
+            // -----------------------------
+            function formatExpirationDate(day) {
+                var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "June",
+                  "July", "Aug", "Sept", "Oct", "Nov", "Dec"
+                ];
+                return monthNames[day.getMonth()] + " " + day.getDate() + " " + day.getFullYear();
+            }
+
+            // -----------------------------
+            // Loading Spinner Methods
+            // -----------------------------
+            function showHideSpinner(isShow) {
+                if(isShow) {
+                    $(".filterObjectQuerySpinner").show('fast');    
+                }
+                else {
+                    $(".filterObjectQuerySpinner").hide('slow');       
+                }
+            }
+
+            // -----------------------------
+            // Toast methods
+            // -----------------------------
+            function hideSuccessToast() {
+                //
+                $("#successToast").hide('slow');
+            }
+
+            function hideErrorToast() {
+                //
+                $("#errorToast").hide();
+            }
+
+            function showSuccessToast(msg) {
+                $("#successToast").show();
+                $(".successToastText").text(msg);
+                setTimeout(hideSuccessToast, 2000);
+            }
+
+            function showErrorToast(msg) {
+                $("#errorToast").show();
+                $(".errorToastText").text(msg);
+            }
+
+            function showErrorModal(msg) {
+                $("#errorToast").show();
+                $(".errorToastText").text('Invalid Id provided: ' + msg);
+                $("#fieldLookupMetaModalBackground").addClass('slds-backdrop_open');
+            }
+
+            function showInfoToast(msg) {
+                $("#infoToast").show();
+                $(".infoToastText").text(msg);
+                setTimeout(hideInfoToast, 2000);
+            }
+
+            function hideInfoToast() {
+                //
+                $("#infoToast").hide('slow');
+            }
+
+            // -----------------------------
+            // Modal methods
+            // -----------------------------
+            function openFieldLookupMetaModal(fieldFilterInputId) {
+                if(selectedFilterObject.Status__c !== 'Active') {
+                    populateFieldLookupMetaModal(fieldFilterInputId);
+                    $("#fieldLookupMetaModal section").addClass('slds-fade-in-open');
+                    $("#fieldLookupMetaModalBackground").addClass('slds-backdrop_open');
+                    $('#fieldMetaLookup').focus();  
+                }
+            }
+
+            function closeFieldLookupMetaModal() {
+                $("#fieldLookupMetaModal section").removeClass('slds-fade-in-open');
+                $("#fieldLookupMetaModalBackground").removeClass('slds-backdrop_open');
+            }
+
+            function openSettingsModal() {
+                queryAppSettings();
+                $("#settingsModal section").addClass('slds-fade-in-open');
+                $("#settingsModalBackground").addClass('slds-backdrop_open');
+            }
+
+            function closeSettingsModal() {
+                $("#settingsModal section").removeClass('slds-fade-in-open');
+                $("#settingsModalBackground").removeClass('slds-backdrop_open');
+            }
+
+            function openActivationModal() {
+                $("#confirmActivationBtn").click(function() {
+                    updateFilterActivation(selectedFilterObject.Id, selectedFilterObject.Status__c);
+                });
+                $("#activateFilterModal section").addClass('slds-fade-in-open');
+                $("#activateFilterModalBackground").addClass('slds-backdrop_open');
+            }
+
+            function closeActivationModal() {
+                $("#activateFilterModal section").removeClass('slds-fade-in-open');
+                $("#activateFilterModalBackground").removeClass('slds-backdrop_open');
+            }
+
+            function resetModalData() {
+                $("#runBatchModalHeader").text('New Filter');
+                $("#newrollupform").text('New Filter');
+                $("#newFilterName").val('');
+                $("#newFilterProcessOrder").val('');
+                $("#newFilterDescription").val('');
+                $("#saveFilterBtn").prop('disabled', false);
+            }
+
+            function openModal() {
+                resetModalData();
+                $("#modalLoading").addClass('slds-hide');
+                $("#modalDiv").addClass('slds-fade-in-open');
+                $("#modalDivBackDrop").addClass('slds-backdrop--open');
+            }
+
+            function closeModal() {
+                $("#modalLoading").removeClass('slds-hide');
+                $("#modalDiv").removeClass('slds-fade-in-open');
+                $("#modalDivBackDrop").removeClass('slds-backdrop--open');
+            }
+
+            // -----------------------------
+            // FUTURE functions to be leveraged for 2 panel config layout
+            // -----------------------------
+
+            /* FUTURE
+            function showHideExistingFilterQuerySpinner(isShow) {
+                if(isShow) {
+                    $(".existingObjectFilterSpinner").show('fast');
+                }
+                else {
+                    $(".existingObjectFilterSpinner").hide('slow'); 
+                }
+            }
+            */
+
+            /* FUTURE shows other filters on same object     
+            function prepareQueryAndPopulateActiveFilterObjectsByObject(objectName) {
+                showHideExistingFilterQuerySpinner(true);
+                queryAndPopulateActiveFilterObjectsByObject(objectName);
+            }
+            */
+            /* FUTURE shows other filters on same object            
+            function queryAndPopulateActiveFilterObjectsByObject(objectName) {
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.DataRetentionManager.queryActiveFilterObjectsByObject}', selectedFilterObject.Id, objectName,
+                    function(result,event) {
+                        if(event.status) {
+                            if(result.length > 0) {
+                                $("#existingFilterSectionTitle").text(objectName + ' already has active filters');
+                                $("#existingFilterSectionItemTotal").text(result.length + ' items');
+                                populateExistingObjectFiltersTable(result); 
+                            }
+                            else {
+                                $("#existingObjectFilterWarningSection").hide();
+                            }
+                        }  
+                        else {
+                            alert(event.message); 
+                        }
+                    },{escape: false}
+                );
+            }
+            */
+            /* FUTURE shows other filters on same object            
+            function populateExistingObjectFiltersTable(existingFilters) {
+
+                $("#existingObjectFilterWarningSection").show();
+
+                var sldsExistingFilterTable = '';
+
+                sldsExistingFilterTable += '<table class="slds-table slds-table_cell-buffer slds-table_bordered">';
+                    sldsExistingFilterTable += '<thead>';
+                        sldsExistingFilterTable += '<tr class="slds-line-height_reset">';
+                            sldsExistingFilterTable += '<th class="slds-text-title_caps" scope="col">';
+                                sldsExistingFilterTable += '<div class="slds-truncate" title="Filter Name">Filter</div>';
+                            sldsExistingFilterTable += '</th>';
+                        sldsExistingFilterTable += '</tr>';
+                    sldsExistingFilterTable += '</thead>';
+                    sldsExistingFilterTable += '<tbody>';
+
+                        for(var i=0; i<existingFilters.length; i++) {
+
+                            sldsExistingFilterTable += '<tr class="slds-hint-parent">';
+                                sldsExistingFilterTable += '<td data-label="Filter Name">';
+                                    sldsExistingFilterTable += '<div class="slds-truncate" title="' + existingFilters[i].Name + '">' + existingFilters[i].Name + '</div>';
+                                sldsExistingFilterTable += '</td>';
+                            sldsExistingFilterTable += '</tr>';
+                        }
+
+                    sldsExistingFilterTable += '</tbody>';
+                sldsExistingFilterTable += '</table>';
+
+                $("#existingFiltersResults").html(sldsExistingFilterTable); 
+
+                showHideExistingFilterQuerySpinner(false);
+            }
+            */
+
+            /* FUTURE
+            function resetConfigPanel() {
+                $("#existingObjectFilterWarningSection").hide();
+                // $(".visual-picker-radio").each(function(){
+                //     $(this).prop('checked', false);
+                // });
+                // $(".criteria-filter-form").hide();
+                // $("#object-filter-form").hide();
+                // $("#configuration-panel").hide();
+            }
+            */
+
+            /* FUTURE JQUERY DOCUMENT.READY()
+            $(".visual-picker-radio").change(function(){
+                if($(this).is(':checked')){
+
+                   $("#configuration-panel").show();
+                   
+                   if($(this).val() === 'object') {
+                        $(".criteria-filter-form").hide();
+                        $("#object-filter-form").show();
+                        $("#configuration-title").text('Choose Object');
+                   }
+
+                   if($(this).val() === 'criteria') {
+                        $("#object-filter-form").hide();
+                        $(".criteria-filter-form").show();
+                        $("#configuration-title").text('Define Criteria for this Filter');
+                   }
+                }
+            });
+            */
+        </script>
+        </body>
+    </html>
+</apex:page>

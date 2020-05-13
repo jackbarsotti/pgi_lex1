@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Additional Webcast Support (per hour) --></label>
+    <name>Additional_Webcast_Support_per_hour__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Web_Audio__c</fullName>
+    <description>CAUTION - USED IN INTEGRATIONS
+Denotes if the event is web &amp; audio or audio only.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select if this is a Web &amp; Audio Event OR an Audio-Only Event</inlineHelpText>
+    <label>Event Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Audio Only</fullName>
+                <default>true</default>
+                <label>Audio Only</label>
+            </value>
+            <value>
+                <fullName>Webinar and Audio</fullName>
+                <default>false</default>
+                <label>Webinar and Audio</label>
+            </value>
+            <value>
+                <fullName>Webcast and Audio</fullName>
+                <default>false</default>
+                <label>Webcast and Audio</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

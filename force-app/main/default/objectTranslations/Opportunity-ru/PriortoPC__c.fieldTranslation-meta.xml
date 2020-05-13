@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Prior to Primary Contact Rule --></label>
+    <name>PriortoPC__c</name>
+</CustomFieldTranslation>

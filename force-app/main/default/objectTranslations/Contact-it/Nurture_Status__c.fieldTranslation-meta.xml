@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Nurture Status --></label>
+    <name>Nurture_Status__c</name>
+    <picklistValues>
+        <masterLabel>1 - New</masterLabel>
+        <translation><!-- 1 - New --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4 - Nurture</masterLabel>
+        <translation><!-- 4 - Nurture --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>xx - Dead</masterLabel>
+        <translation><!-- xx - Dead --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

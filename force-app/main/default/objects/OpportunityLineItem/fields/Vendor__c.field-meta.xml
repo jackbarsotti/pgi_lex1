@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vendor__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Only required for Third Party Products</inlineHelpText>
+    <label>Vendor</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Product_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>3C Technology</fullName>
+                <default>false</default>
+                <label>3C Technology</label>
+            </value>
+            <value>
+                <fullName>A10</fullName>
+                <default>false</default>
+                <label>A10</label>
+            </value>
+            <value>
+                <fullName>Aastra</fullName>
+                <default>false</default>
+                <label>Aastra</label>
+            </value>
+            <value>
+                <fullName>Acano</fullName>
+                <default>false</default>
+                <label>Acano</label>
+            </value>
+            <value>
+                <fullName>Acme Packet</fullName>
+                <default>false</default>
+                <label>Acme Packet</label>
+            </value>
+            <value>
+                <fullName>Actiance</fullName>
+                <default>false</default>
+                <label>Actiance</label>
+            </value>
+            <value>
+                <fullName>AdvaTel</fullName>
+                <default>false</default>
+                <label>AdvaTel</label>
+            </value>
+            <value>
+                <fullName>AGAT</fullName>
+                <default>false</default>
+                <label>AGAT</label>
+            </value>
+            <value>
+                <fullName>Altigen</fullName>
+                <default>false</default>
+                <label>Altigen</label>
+            </value>
+            <value>
+                <fullName>Anywhere 365</fullName>
+                <default>false</default>
+                <label>Anywhere 365</label>
+            </value>
+            <value>
+                <fullName>Ashton Bentley</fullName>
+                <default>false</default>
+                <label>Ashton Bentley</label>
+            </value>
+            <value>
+                <fullName>Aspect</fullName>
+                <default>false</default>
+                <label>Aspect</label>
+            </value>
+            <value>
+                <fullName>AudioCodes</fullName>
+                <default>false</default>
+                <label>AudioCodes</label>
+            </value>
+            <value>
+                <fullName>Avaya (Scopia)</fullName>
+                <default>false</default>
+                <label>Avaya (Scopia)</label>
+            </value>
+            <value>
+                <fullName>AVSNet</fullName>
+                <default>false</default>
+                <label>AVSNet</label>
+            </value>
+            <value>
+                <fullName>AVST</fullName>
+                <default>false</default>
+                <label>AVST</label>
+            </value>
+            <value>
+                <fullName>Busylights</fullName>
+                <default>false</default>
+                <label>Busylights</label>
+            </value>
+            <value>
+                <fullName>CallTower</fullName>
+                <default>false</default>
+                <label>CallTower</label>
+            </value>
+            <value>
+                <fullName>Carillion</fullName>
+                <default>false</default>
+                <label>Carillion</label>
+            </value>
+            <value>
+                <fullName>Cisco</fullName>
+                <default>false</default>
+                <label>Cisco</label>
+            </value>
+            <value>
+                <fullName>Citrix</fullName>
+                <default>false</default>
+                <label>Citrix</label>
+            </value>
+            <value>
+                <fullName>Clarify</fullName>
+                <default>false</default>
+                <label>Clarify</label>
+            </value>
+            <value>
+                <fullName>Code Software</fullName>
+                <default>false</default>
+                <label>Code Software</label>
+            </value>
+            <value>
+                <fullName>Competella</fullName>
+                <default>false</default>
+                <label>Competella</label>
+            </value>
+            <value>
+                <fullName>Content &amp; Code</fullName>
+                <default>false</default>
+                <label>Content &amp; Code</label>
+            </value>
+            <value>
+                <fullName>Datac</fullName>
+                <default>false</default>
+                <label>Datac</label>
+            </value>
+            <value>
+                <fullName>Direct</fullName>
+                <default>false</default>
+                <label>Direct</label>
+            </value>
+            <value>
+                <fullName>Enghouse</fullName>
+                <default>false</default>
+                <label>Enghouse</label>
+            </value>
+            <value>
+                <fullName>Enghouse (Zeacom)</fullName>
+                <default>false</default>
+                <label>Enghouse (Zeacom)</label>
+            </value>
+            <value>
+                <fullName>Event Zero</fullName>
+                <default>false</default>
+                <label>Event Zero</label>
+            </value>
+            <value>
+                <fullName>F5</fullName>
+                <default>false</default>
+                <label>F5</label>
+            </value>
+            <value>
+                <fullName>Fenestrae</fullName>
+                <default>false</default>
+                <label>Fenestrae</label>
+            </value>
+            <value>
+                <fullName>Gamma</fullName>
+                <default>false</default>
+                <label>Gamma</label>
+            </value>
+            <value>
+                <fullName>Genesys</fullName>
+                <default>false</default>
+                <label>Genesys</label>
+            </value>
+            <value>
+                <fullName>Geomant</fullName>
+                <default>false</default>
+                <label>Geomant</label>
+            </value>
+            <value>
+                <fullName>GTT</fullName>
+                <default>false</default>
+                <label>GTT</label>
+            </value>
+            <value>
+                <fullName>HP</fullName>
+                <default>false</default>
+                <label>HP</label>
+            </value>
+            <value>
+                <fullName>Integrated Resource Prognosis</fullName>
+                <default>false</default>
+                <label>Integrated Resource Prognosis</label>
+            </value>
+            <value>
+                <fullName>Interactive Intelligence</fullName>
+                <default>false</default>
+                <label>Interactive Intelligence</label>
+            </value>
+            <value>
+                <fullName>Interlepeer</fullName>
+                <default>false</default>
+                <label>Interlepeer</label>
+            </value>
+            <value>
+                <fullName>Interquartz</fullName>
+                <default>false</default>
+                <label>Interquartz</label>
+            </value>
+            <value>
+                <fullName>Iomart</fullName>
+                <default>false</default>
+                <label>Iomart</label>
+            </value>
+            <value>
+                <fullName>Jabra</fullName>
+                <default>false</default>
+                <label>Jabra</label>
+            </value>
+            <value>
+                <fullName>Kemp</fullName>
+                <default>false</default>
+                <label>Kemp</label>
+            </value>
+            <value>
+                <fullName>Kuando</fullName>
+                <default>false</default>
+                <label>Kuando</label>
+            </value>
+            <value>
+                <fullName>Landis Computer</fullName>
+                <default>false</default>
+                <label>Landis Computer</label>
+            </value>
+            <value>
+                <fullName>Level 3</fullName>
+                <default>false</default>
+                <label>Level 3</label>
+            </value>
+            <value>
+                <fullName>LifeSze</fullName>
+                <default>false</default>
+                <label>LifeSze</label>
+            </value>
+            <value>
+                <fullName>Logitech</fullName>
+                <default>false</default>
+                <label>Logitech</label>
+            </value>
+            <value>
+                <fullName>Microsoft</fullName>
+                <default>false</default>
+                <label>Microsoft</label>
+            </value>
+            <value>
+                <fullName>Mitel</fullName>
+                <default>false</default>
+                <label>Mitel</label>
+            </value>
+            <value>
+                <fullName>Modality</fullName>
+                <default>false</default>
+                <label>Modality</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>true</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Nectar</fullName>
+                <default>false</default>
+                <label>Nectar</label>
+            </value>
+            <value>
+                <fullName>Nubit</fullName>
+                <default>false</default>
+                <label>Nubit</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Panacast</fullName>
+                <default>false</default>
+                <label>Panacast</label>
+            </value>
+            <value>
+                <fullName>PexIP</fullName>
+                <default>false</default>
+                <label>PexIP</label>
+            </value>
+            <value>
+                <fullName>Plantronics</fullName>
+                <default>false</default>
+                <label>Plantronics</label>
+            </value>
+            <value>
+                <fullName>PointSharp</fullName>
+                <default>false</default>
+                <label>PointSharp</label>
+            </value>
+            <value>
+                <fullName>Polycom</fullName>
+                <default>false</default>
+                <label>Polycom</label>
+            </value>
+            <value>
+                <fullName>Project Vision</fullName>
+                <default>false</default>
+                <label>Project Vision</label>
+            </value>
+            <value>
+                <fullName>Pure IP</fullName>
+                <default>false</default>
+                <label>Pure IP</label>
+            </value>
+            <value>
+                <fullName>Red Box</fullName>
+                <default>false</default>
+                <label>Red Box</label>
+            </value>
+            <value>
+                <fullName>Rightfax</fullName>
+                <default>false</default>
+                <label>Rightfax</label>
+            </value>
+            <value>
+                <fullName>ScanSource</fullName>
+                <default>false</default>
+                <label>ScanSource</label>
+            </value>
+            <value>
+                <fullName>Sennheiser</fullName>
+                <default>false</default>
+                <label>Sennheiser</label>
+            </value>
+            <value>
+                <fullName>Sey-IT</fullName>
+                <default>false</default>
+                <label>Sey-IT</label>
+            </value>
+            <value>
+                <fullName>SMART</fullName>
+                <default>false</default>
+                <label>SMART</label>
+            </value>
+            <value>
+                <fullName>Sonus</fullName>
+                <default>false</default>
+                <label>Sonus</label>
+            </value>
+            <value>
+                <fullName>Spectralink</fullName>
+                <default>false</default>
+                <label>Spectralink</label>
+            </value>
+            <value>
+                <fullName>Sprint</fullName>
+                <default>false</default>
+                <label>Sprint</label>
+            </value>
+            <value>
+                <fullName>ThinkTel</fullName>
+                <default>false</default>
+                <label>ThinkTel</label>
+            </value>
+            <value>
+                <fullName>Unimax</fullName>
+                <default>false</default>
+                <label>Unimax</label>
+            </value>
+            <value>
+                <fullName>Verba</fullName>
+                <default>false</default>
+                <label>Verba</label>
+            </value>
+            <value>
+                <fullName>Verizon</fullName>
+                <default>false</default>
+                <label>Verizon</label>
+            </value>
+            <value>
+                <fullName>Yealink</fullName>
+                <default>false</default>
+                <label>Yealink</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Modality</controllingFieldValue>
+            <valueName>Modality</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Devices</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Aastra</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Devices</controllingFieldValue>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>HP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Devices</controllingFieldValue>
+            <valueName>Interquartz</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Devices</controllingFieldValue>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Jabra</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Devices</controllingFieldValue>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <controllingFieldValue>Third Party Services</controllingFieldValue>
+            <valueName>Kemp</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Devices</controllingFieldValue>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>LifeSze</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Devices</controllingFieldValue>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Logitech</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Devices</controllingFieldValue>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Microsoft</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Devices</controllingFieldValue>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <controllingFieldValue>Third Party Services</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Devices</controllingFieldValue>
+            <valueName>Panacast</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Devices</controllingFieldValue>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <controllingFieldValue>Third Party Services</controllingFieldValue>
+            <valueName>Plantronics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Devices</controllingFieldValue>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <controllingFieldValue>Third Party Services</controllingFieldValue>
+            <valueName>Polycom</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Devices</controllingFieldValue>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>ScanSource</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Devices</controllingFieldValue>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Sennheiser</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Devices</controllingFieldValue>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Spectralink</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Devices</controllingFieldValue>
+            <valueName>Yealink</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>A10</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Acano</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Acme Packet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <controllingFieldValue>Third Party Services</controllingFieldValue>
+            <valueName>AudioCodes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Avaya (Scopia)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <controllingFieldValue>Third Party Services</controllingFieldValue>
+            <valueName>AVSNet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Busylights</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <controllingFieldValue>Third Party Services</controllingFieldValue>
+            <valueName>CallTower</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Cisco</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Citrix</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>F5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Gamma</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Interlepeer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <controllingFieldValue>Third Party Services</controllingFieldValue>
+            <valueName>Iomart</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <valueName>Kuando</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Level 3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>PexIP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>PointSharp</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Pure IP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <controllingFieldValue>Third Party Services</controllingFieldValue>
+            <valueName>Rightfax</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>SMART</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <controllingFieldValue>Third Party Services</controllingFieldValue>
+            <valueName>Sonus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Sprint</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>ThinkTel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Hardware</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Verizon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Actiance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>AdvaTel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <valueName>AGAT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Altigen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <controllingFieldValue>Third Party Services</controllingFieldValue>
+            <valueName>Anywhere 365</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Aspect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Clarify</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <controllingFieldValue>Third Party Services</controllingFieldValue>
+            <valueName>Code Software</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Competella</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Content &amp; Code</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <controllingFieldValue>Third Party Services</controllingFieldValue>
+            <valueName>Enghouse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Enghouse (Zeacom)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Event Zero</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Genesys</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Geomant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Integrated Resource Prognosis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Interactive Intelligence</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Landis Computer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Mitel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Nectar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Red Box</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <controllingFieldValue>Third Party Services</controllingFieldValue>
+            <valueName>Unimax</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Software</controllingFieldValue>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <controllingFieldValue>Third Party Services</controllingFieldValue>
+            <valueName>Verba</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <controllingFieldValue>Third Party Services</controllingFieldValue>
+            <valueName>3C Technology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Ashton Bentley</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <controllingFieldValue>Third Party Services</controllingFieldValue>
+            <valueName>Carillion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <controllingFieldValue>Third Party Services</controllingFieldValue>
+            <valueName>GTT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Support</controllingFieldValue>
+            <valueName>Project Vision</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Third Party Services</controllingFieldValue>
+            <valueName>Direct</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

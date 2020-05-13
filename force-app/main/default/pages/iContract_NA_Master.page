@@ -1,0 +1,721 @@
+<apex:page showHeader="false" applyBodyTag="false" standardStylesheets="{! renderingAsHTML }" standardController="CONMAN_Contract__c"
+           extensions="iContract_NA_Master_Controller" applyHtmlTag="{!if(renderingAsExcel,false,true)}" contentType="{! renderedContentType }" renderAs="{! renderingService }">
+    {!IF (renderingAsWord, "
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />", '')}
+    <!-- Added by Anup   RT-335  -->
+    <!-- End RT-335  -->
+    <apex:outputPanel layout="none" rendered="{! renderingAsExcel}">
+        <apex:composition template="iContract_TPxDeal_XLS"></apex:composition>
+    </apex:outputPanel>
+    
+    <head>
+       
+        <style type="text/css">
+            
+            <apex:outputPanel layout="none" rendered="{! renderingAsWord}">
+                <!-- Tricky stuff for Word to get the page layout correct -->
+            @page Section1 {
+            size:8.5in 11.0in;
+            margin:0.50in 0.50in 0.50in 0.50in;
+            mso-paper-source:0;
+            }
+            div.Section1 {
+            page:Section1;
+            }
+            </apex:outputPanel>
+            
+            <!-- PDF Page Layout: PDF styling and rendering -->
+            <apex:outputPanel layout="none" rendered="{! renderingAsPDF && !isTPX}">
+                @page {
+                
+                
+                @bottom-center {
+                font-size:11px;
+                font-family: Arial,Helvetica,sans-serif;
+                content: "Page " counter(page) " of " counter(pages);
+                }
+                }
+                
+            </apex:outputPanel> 
+            <!-- modified by Vijay -start for header and footer-->
+            <apex:outputPanel layout="none" rendered="{! renderingAsPDF && isTPX}">
+                @page {
+                    margin-top: 2cm;
+                    margin-bottom: 3cm;
+                    @bottom-left {
+                        margin:0in;
+                        margin-top:.0001pt;
+                        font-size:11px;
+                        tab-stops:right 3.0in right 6.0in;
+                        font-family: Arial,Helvetica,sans-serif;
+                        content:  "Quote Expires on {!expirationDate} |  Quote # {!contract.Name}"   
+                    }
+                	@bottom-right {
+                        font-size:11px;
+                        font-family: Arial,Helvetica,sans-serif;
+                        content: "Page " counter(page) " of " counter(pages);
+                	}
+                	@top-left {
+                		content: element(headerPdf);
+                	}
+                }
+                .headerPdf {
+                	position: running(headerPdf);
+                }
+            </apex:outputPanel> 
+            <!-- End-->
+            <!-- Standard CSS -->
+            body {
+            font-family: Sans-Serif;
+            font-size: {! fontSize }px;
+            background-color: #{! backgroundColor };
+            color: #{! textColor };
+            }
+            .sfdc_richtext * { <!-- Override pasted formatting -->
+            font-family: Sans-Serif !important;
+            font-size: {! fontSize }px !important;
+            }
+            h1,h2,h3,h4,h5,h6,span,a,p,li,div,table,tbody,tr,th,td {
+            background-color: {! backgroundColor };
+            color: {! textColor };
+            }
+            td.bottom-border, th.bottom-border, .sfdc_richtext{
+            background-color: {! backgroundColor };
+            color: {! textColor };
+            }
+            th.dark, td.td-header.dark, tr.dark {
+            background-color: {! tableHeaderBackgroundColor };
+            color: {! tableHeaderTextColor };
+            }
+            h1,h2,h3,h4,h5,h6 {
+            {!IF (renderingAsHTML, '', 'margin: 4px 0px;')}
+            {!IF (renderingAsHTML, 'display: block !important;', '')}
+            }
+            h1 {
+            {!IF (renderingAsHTML, 'font-size: 20px;', 'font-size: 15px;')}
+            }
+            h2 {
+            {!IF (renderingAsHTML, 'font-size: 18px;', 'font-size: 14px;')}
+            }
+            h3 {
+            {!IF (renderingAsHTML, 'font-size: 16px;', 'font-size: 13px;')}
+            }
+            h4 {
+            {!IF (renderingAsHTML, 'font-size: 14px;', 'font-size: 12px;')}
+            }
+            h5,h6 {
+            {!IF (renderingAsHTML, '', 'margin-bottom: 0px;')}
+            {!IF (renderingAsHTML, 'font-size: 13px;', 'font-size: 12px;')}
+            }
+            /* span{
+                {!IF (renderingAsHTML, 'font-size: 13px;', 'font-size: 12px;')}
+            }
+            a { padding: 4px; } */
+            
+            table {
+            border-spacing: 0px;
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 12px;
+            }
+            th {
+            text-wrap: normal;
+            word-wrap: break-word;
+            }
+            td.td-header {
+            font-weight: bold;
+            }
+            <apex:outputPanel layout="none" rendered="{!!isTPX}">
+            td,th {
+            padding: 2px;
+            border: 1px solid black;
+            }
+            </apex:outputPanel>
+            td.bottom-border,th.bottom-border {
+            padding: 2px;
+            border-size: 1px;
+            border-color: #666;
+            border-style: none;
+            border-bottom-style: dotted;
+            }
+            
+            table.rate-intl-grid-table-wrapper td,  table.rate-intl-grid-table-wrapper th {
+            border: none;
+            }
+            table.rate-intl-grid-table-wrapper td {
+            padding: 1px;
+            vertical-align: top;
+            }
+            table.rate-intl-grid-table td,  table.rate-intl-grid-table th {
+            border: 1px solid #111111;
+            }
+            table.rate-intl-grid-table tr {
+            <apex:outputPanel layout="none" rendered="{! renderingAsPDF }">
+                line-height: 9.5px;
+            </apex:outputPanel>
+            <apex:outputPanel layout="none" rendered="{! !renderingAsPDF }">
+                line-height: 14px;
+            </apex:outputPanel>
+            }
+            table.rate-intl-grid-table td {
+            text-wrap: normal;
+            word-wrap: break-word;
+            padding: 1px;
+            vertical-align: center;
+            }
+            
+            .htmlDetailElementTable td { border-style: none; }
+            
+            .highlightOverride { background-color: yellow !important; }
+            .highlightOverride input, .highlightOverride textarea { background-color: yellow !important; }
+            
+            .licensed-rate-list-header input, .nonlicensed-rate-list-header input, .rate-list-header input {
+            margin-top: 60px;
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+            }
+            
+            tr.rate-list-row > td {
+            <apex:outputPanel layout="none" rendered="{! renderingAsHTML && canEditPricing }">
+                padding-top: 10px;
+            </apex:outputPanel>
+            }
+            
+            .rate-list-name input {
+            width: 100%;
+            }
+            
+            .rate-list-rate-editable input, .rate-list-intl-row input {
+            width: 60%;
+            }
+            
+            .rate-list-description textarea {
+            height: 40px;
+            width: 100%
+            }
+            
+            #floatingButtons {
+            background-color: white;
+            padding: 2px;
+            position: fixed;
+            top: 40px;
+            left: 0px;
+            box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+            }
+            .inlineEditWriteOn {
+            background-color: #E1F3FF;
+            cursor:pointer;
+            }
+            .verbiage-comments {
+            color: #f99;
+            font-weight: bold;
+            margin: 5px 0px 5px 0px;
+            }
+            
+            .cke_contents {height:200px !important;}
+            
+            .no-border { border-style: none; }
+            .grey { color: #777; }
+            .disabled, .disabled span, .disabled input, .disabled textarea
+            {
+            color: #bbb !important;
+            }
+            
+            .left { text-align: left; }
+            .right { text-align: right; }
+            .center { text-align: center; }
+            .bold {
+            font-weight: bold;
+            }
+            
+            .indent { padding-left: 10px; }
+            .newPage {
+            page-break-before: always;
+            page-break-after: always;
+            mso-break-type: page-break;
+            mso-special-character:line-break;
+            }
+            .newPageBefore {
+            page-break-before: always;
+            page-break-after: avoid;
+            mso-break-type: page-break;
+            mso-special-character:line-break;
+            }
+            .newPageAfter {
+            page-break-before: avoid;
+            page-break-after: always;
+            mso-break-type: page-break;
+            mso-special-character:line-break;
+            <apex:outputPanel layout="none" rendered="{! renderingAsHTML }">
+                margin-bottom: 120px;
+            </apex:outputPanel>
+            }
+            .noNewPage { page-break-inside: avoid; }
+            
+            .pushIn {
+            padding-left: 60px;
+            padding-right: 20px;
+            max-width: 1080px;
+            margin-left: auto;
+            margin-right: auto;
+            }
+            
+            .non-agreement-area {
+            padding: 8px;
+            margin: 8px 0px;
+            box-shadow: 2px 2px 8px 1px #aaa;
+            }
+            
+            .hide { display: none; border-style: none; }
+            .esigntag { color:#ffffff; }
+            .esignsignature { font-size:20px; }
+            
+            .custPopup{
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding:10px;
+            position: fixed;
+            /* These are the 3 css properties you will need to change so the popup 
+            displays in the center of the screen. First set the width. Then set 
+            margin-left to negative half of what the width is. You can add 
+            the height property for a fixed size pop up if you want.*/
+            width: 500px;
+            margin-left: -250px;
+            top:100px;
+            }
+            .popupBackground{
+            background-color:black;
+            opacity: 0.20;
+            filter: alpha(opacity = 20);
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+            }
+            .border{
+            border-style: hidden;
+            }
+        </style>
+    </head>
+    
+    <!-- Push the whole body inwards to allow for persistent floating save/cancel buttons -->
+    
+    <body class="{!IF (renderingAsHTML, 'pushIn', '')}">
+        <script> 
+        
+        function closePopup() {   
+            document.getElementById('modalPopup').style.display = 'none';
+        }
+        function disableDownlodWordButton(){
+            let termsChanged =  document.getElementById('{!$component.theForm.termsChanged}').value;
+            let productDeatailsChanged = document.getElementById('{!$component.theForm.productDeatailsChanged}').value;
+            if(termsChanged == '' && productDeatailsChanged == ''){
+                document.getElementById('{!$component.theForm.cmdDownloadWordButtonEnabled}').style.display = 'none';
+                // document.getElementById('{!$component.theForm.cmdDownloadWordButton}').disabled = false;
+                document.getElementById('{!$component.theForm.cmdDownloadWordButtonDisabled}').style.display = '';
+                
+            } else {
+                document.getElementById('{!$component.theForm.cmdDownloadWordButtonEnabled}').style.display = '';
+                // document.getElementById('{!$component.theForm.cmdDownloadWordButton}').disabled = false;
+                document.getElementById('{!$component.theForm.cmdDownloadWordButtonDisabled}').style.display = 'none';                   
+            }
+        }
+        function showPopup() {    
+            document.getElementById('modalPopup').style.display = '';
+            document.getElementById('{!$component.theForm.termsChanged}').value = '';
+            document.getElementById('{!$component.theForm.productDeatailsChanged}').value='';
+            disableDownlodWordButton();
+        }
+        
+        
+        </script>
+        <apex:messages />
+        <!-- Show an error messages if one was detected -->
+        <apex:outputPanel rendered="{! IF(errormsg != '', true, false) }">
+            <h1>
+                An Error Occurred
+            </h1>
+            <p class='warning'>{! errormsg }</p>
+            <hr/>
+        </apex:outputPanel>
+        
+        <!-- Show another error message if the page cannot be rendered at all -->
+        <apex:outputPanel rendered="{! !isPageRenderable }">
+            <p class='warning'>This Contract/Amendment is either not from iContract or has not been finished by iContract. If you are working
+                in iContract, you must use the Products Page at least once to save information, even if you don't select
+                any products.</p>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{! !isAddressValid }">
+            <p class='warning'>The address for your Agreement Signer or Primary Contact is invalid.</p>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{! !isAddressNAM }">
+            <p class='warning'>iContract Mailing address cannot be empty.</p>
+        </apex:outputPanel>
+        
+        <apex:outputPanel rendered="{! isPageRenderable && isAddressValid && isAddressNAM }">
+            <!-- Show the top 'actions' area if we're not already showing a PDF -->
+            <apex:form id="theForm" rendered="{! renderingAsHTML }">
+                
+                <!-- Scripts for opening PDF, Word Or E-mail template in a new window -->
+                <script>
+                function openPdf() {
+                    window.open("{!endpointName}&pdfShow=true",
+                                "Agreement PDF", "width=800,height=700,left=50,top=50,toolbar=0,status=0,");
+                    return true;
+                }
+                function openWord() {
+                    window.open("{!endpointName}&wordShow=true",
+                                "Agreement Word", "width=800,height=700,left=50,top=50,toolbar=0,status=0,");
+                    return true;
+                }
+                function openQuoteEmail() {
+                    window.open("{!openPopupURL}",
+                                "Quote Email", "scrollbars=1,resizable=1,width=800,height=700,left=50,top=50,toolbar=0,status=0,");
+                    return true;
+                }
+                </script>
+                
+                
+                <!-- Buttons to switch between Agreement and Quote -->
+                <apex:outputPanel styleClass="non-agreement-area" layout="block" rendered="{! isPageRenderable && renderingAsHTML && (!isServiceOrder) }"
+                                  style="text-align: center; vertical-align:center; width:30%; margin: 0px auto;">
+                    <apex:outputPanel layout="none" rendered="{! !isTPX }">
+                        <strong style="margin-right:4px">
+                            View As
+                        </strong>
+                        
+                        <!-- Show a different button if it's supposed be disabled,
+because the presence of the disabled attribute at all
+is what makes it disabled -->
+                        
+                        
+                        <apex:outputPanel layout="none" rendered="{! !isQuote }">
+                            <input type='button' value='Agreement' disabled='disabled' id="showAgreement" />
+                            <apex:commandButton value="Quote" id="showQuote" action="{!showQuote}" />
+                        </apex:outputPanel>
+                        <!-- RT-561 outer outputPanel-->
+                        
+                        <apex:outputPanel layout="none" rendered="{! isQuote }">
+                            <apex:commandButton value="Agreement" id="showAgreement" action="{!showAgreement}" />
+                            <input type='button' value='Quote' disabled='disabled' id="showQuote" />
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                    <!-- //RT-518 iContract users in India (not contacts) should only be allowed to use “short form” .(Vijay) -->
+                    <apex:outputPanel rendered="{!((agreementRegion == 'EMEA') || (agreementRegion == 'APAC' && isCSA )) && !isQuote && !isUserIndia}">
+                        <strong style="margin-right:4px">
+                            <br/>Order Type
+                        </strong>
+                        <apex:outputPanel layout="none" rendered="{!!longForm}">
+                            <input type='button' value='Short Form' disabled='disabled' id="shortForm" reRender="theForm" />
+                            <apex:commandButton value="Long Form" id="longForm" action="{!toggleLongForm}" />
+                        </apex:outputPanel>
+                        
+                        <apex:outputPanel layout="none" rendered="{!longForm}">
+                            <apex:commandButton value="Short Form" id="shortForm" action="{!toggleLongForm}" />
+                            <input type='button' value='Long Form' disabled='disabled' id="shortForm" reRender="theForm" />
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+                
+                <!-- eSignature is only for Agreements, not Quotes -->
+                <apex:outputPanel styleClass="non-agreement-area" layout="block" rendered="{! !isQuote && !isPartnerSite }">
+                    <h2>
+                        Send using E-signature
+                    </h2>
+                    <apex:outputPanel layout="block" rendered="{! canDownloadPDF && canSubmitEsignature }">
+                        <apex:outputPanel layout="block" rendered="{! hasESigns }">
+                            <p class="warning">
+                                You cannot create a new eSignature Agreement until you complete or cancel all open Agreements:
+                                <ul>
+                                    <apex:repeat value="{!eSigns}" var="eS">
+                                        <li>
+                                            <a href="/{!eS.Id}" target="_blank">{!eS.Name} : {!eS.echosign_dev1__StatusVisible__c}</a>
+                                        </li>
+                                    </apex:repeat>
+                            </ul>
+                        </p>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="block" rendered="{! !hasESigns }">
+                        <p>
+                            Select a Template below to start the eSignature Process.
+                        </p>
+                        <p>
+                            <apex:repeat value="{!eSignTemplates}" var="tmpl">
+                                <apex:commandLink value="{!eSignTemplates[tmpl]}" action="{!startESignEvent}">
+                                    <apex:param name="eSignTemplate" value="{!tmpl}" assignTo="{!eSignTemplate}" />
+                                </apex:commandLink>
+                            </apex:repeat>
+                        </p>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+                <apex:outputPanel layout="block" rendered="{! !canDownloadPDF }">
+                    <p>
+                        <span class='warning' id='pdfDisabledMessage'>{! cannotDownloadPDFReason }</span>
+                    </p>
+                </apex:outputPanel>
+                <apex:outputPanel layout="block" rendered="{! !canSubmitEsignature && canDownloadPDF}">
+                    <p>
+                        <span class='warning' id='pdfDisabledMessage'>Because a successful eSignature will automatically set your Opportunity to Closed Won, you must
+                            fill out these fields before you can start the eSignature process.</span>
+                    </p>
+                    
+                    <table>
+                        <col width="17%" />
+                        <col width="17%" />
+                        <col width="17%" />
+                        <col width="17%" />
+                        <col width="17%" />
+                        <col width="17%" />
+                        <tr>
+                            <th class='right'>Primary Won Reason:</th>
+                            <td>
+                                <apex:outputField id="oppPrimaryWonReason" value="{!oppData.Primary_Won_Reason__c}">
+                                    <span class="warning">{!IF (oppData.Primary_Won_Reason__c == null, 'Required', '')}</span>
+                                    <apex:inlineEditSupport event="ondblClick" />
+                                </apex:outputField>
+                            </td>
+                            <th class='right'>Secondary Won Reason:</th>
+                            <td>
+                                <apex:outputField id="oppSecondaryWonReason" value="{!oppData.Secondary_Won_Reason__c}">
+                                    <span class="warning">{!IF (oppData.Secondary_Won_Reason__c == null, 'Required', '')}</span>
+                                    <apex:inlineEditSupport event="ondblClick" />
+                                </apex:outputField>
+                            </td>
+                            <th class='right'>Tertiary Won Reason:</th>
+                            <td>
+                                <apex:outputField id="oppTertiaryWonReason" value="{!oppData.Tertiary_Won_Reason__c}">
+                                    <apex:inlineEditSupport event="ondblClick" />
+                                </apex:outputField>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class='right'>Competitors:</th>
+                            <td>
+                                <apex:outputField id="oppCompetitors" value="{!oppData.Competitor_s__c}">
+                                    <span class="warning">{!IF (oppData.Competitor_s__c == null, 'Required', '')}</span>
+                                    <apex:inlineEditSupport event="ondblClick" />
+                                </apex:outputField>
+                            </td>
+                            <th class='right'>Incumbents:</th>
+                            <td>
+                                <apex:outputField id="oppIncumbent" value="{!oppData.Incumbent__c}">
+                                    <span class="warning">{!IF (oppData.Incumbent__c == null, 'Required', '')}</span>
+                                    <apex:inlineEditSupport event="ondblClick" />
+                                </apex:outputField>
+                            </td>
+                            <th class='right'>Differentiating Win Factors:</th>
+                            <td>
+                                <apex:outputField id="oppDifferentiatingWinFactors" value="{!oppData.Differentiating_Win_Factors__c}">
+                                    <span class="warning">{!IF (oppData.Differentiating_Win_Factors__c == null, 'Required', '')}</span>
+                                    <apex:inlineEditSupport event="ondblClick" />
+                                </apex:outputField>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class='right'>Competitors Others:</th>
+                            <td>
+                                <apex:outputField id="oppCompetitors1" value="{!oppData.Competitor_Other_Product__c}">
+                                    <span class="warning">{!IF (oppData.Competitor_s__c !=null && contains(oppData.Competitor_s__c,'Other') && oppData.Competitor_Other_Product__c == null, 'Required', '')}</span>
+                                    <apex:inlineEditSupport event="ondblClick" />
+                                </apex:outputField>
+                            </td>
+                            <th class='right'>Incumbents Others:</th>
+                            <td>
+                                <apex:outputField id="oppIncumbent2" value="{!oppData.Incumbent_Other_Product__c}">
+                                    <span class="warning">{!IF (oppData.Incumbent__c !=null && contains(oppData.Incumbent__c,'Other') && oppData.Incumbent_Other_Product__c == null, 'Required', '')}</span>
+                                    <apex:inlineEditSupport event="ondblClick" />
+                                </apex:outputField>
+                            </td>
+                        </tr>
+                    </table>
+                    <apex:commandButton value="Save" action="{!saveOpp}" id="saveOppButton" />
+                </apex:outputPanel>
+            </apex:outputPanel>
+            
+            <!-- <apex:outputPanel styleClass="non-agreement-area" layout="block" rendered="{! isPageRenderable && (!isServiceOrder)}"> -->
+            <apex:outputPanel styleClass="non-agreement-area" layout="block" rendered="{! isPageRenderable && isPdfDownloadCapability}">
+                <h2>
+                    Downloads
+                </h2>  
+                
+                <!-- Show a different button if it's supposed be disabled,
+because the presence of the disabled attribute at all
+is what makes it disabled -->
+                <apex:outputPanel layout="block" rendered="{! !isServiceOrder && ((!isQuote && canDownloadPDF) || (isQuote && canDownloadQuotePDF)) }">
+                    <p>
+                        {!!isServiceOrder} Downloading the PDF will open a PDF Window, after which you will have to select the Download or Save button
+                        to start the Download. Also, the PDF will be attached to this record with the provided Attachment
+                        Name.
+                    </p>
+                    <strong>Attachment Name:</strong>
+                    <apex:inputText value="{!pdfFilename}" size="50" />
+                    <apex:commandButton value="Download PDF" id="downloadESignPdf" action="{!downloadPdfEvent}" onclick="return openPdf();" />
+                </apex:outputPanel>
+                
+                <apex:outputPanel layout="block" rendered="{! (!isQuote && !canDownloadPDF) || (isQuote && !canDownloadQuotePDF) }">
+                    <p>
+                        <span class='warning' id='pdfDisabledMessage'>{! IF(isQuote, cannotDownloadQuotePDFReason, cannotDownloadPDFReason) }</span>
+                    </p>
+                    <input type='button' value='Download PDF' disabled='disabled' id="downloadESignPdf" />
+                </apex:outputPanel>
+            </apex:outputPanel> 
+            
+            
+            <!-- Show the Download Word section only for those who can
+edit the verbiage on a contract -->
+            <apex:outputPanel styleClass="non-agreement-area" layout="block" rendered="{! canExportWord }">
+                <h2>
+                    Word Export
+                </h2>
+                
+                <apex:outputPanel >
+                    <p>
+                        Downloading the Word Document will make it harder for Sales to make further changes to this agreement. It will also prevent
+                        any automated processes, such as provisioning and billing setups, from working with this agreement.
+                        You must upload a PDF or Word File of the Contract that you are editing when you are finished.
+                    </p>
+                    <!-- action="{!downloadWordEvent}" onclick="return openWord();" -->
+                    <apex:commandButton value="Download Word"  id="downloadWord" onclick="showPopup()" rerender="modalPopup"  />
+                    <!--  onclick="showPopup()" rerender="modalPopup" -->
+                    <apex:outputField value="{!contract.Word_File_In_Use__c}" />
+                    <span class="{! IF(contract.Word_File_In_Use__c, 'warning', '') }">
+                        This Contract/Amendment has been modified outside of Salesforce (you must attach the finished PDF in the Notes &amp; Attachments
+                        section below)
+                    </span>
+                    
+                    <p>
+                        If you have downloaded a Word version of the Contract but want to use Salesforce's version of the Contract, this button will
+                        turn off the Word Warning and let Sales Reps download a PDF of this preview.
+                    </p>
+                    <apex:commandButton value="Discard Word, Use Salesforce" id="resetWord" action="{!resetWordEvent}" disabled="{! !contract.Word_File_In_Use__c }"
+                                        />
+                </apex:outputPanel>
+                <!--   RT-335    Modal Popup opened to download word based on values      -->
+                <div id="modalPopup" style=" display: none;">
+                    <apex:outputPanel styleClass="popupBackground" layout="block" />
+                    <apex:outputPanel styleClass="custPopup" layout="block" >
+                        <table border="0">
+                            <tr>
+                                <td Class="border">
+                                    <apex:outputlabel value="T&Cs Were Manually Changed"/>
+                                </td>
+                                <td Class="border">
+                                    <apex:inputField id="termsChanged" label="T&Cs Were Manually Changed" value="{!contract.T_Cs_Were_Manually_Changed__c}" onchange="disableDownlodWordButton(); " >
+                                        <apex:actionFunction name="updateTerms" action="{!updateTerms}" immediate="true">
+                                            <apex:param name="termsValue" value="No" assignTo="{!termsManuallyChanged} "/>
+                                        </apex:actionFunction>
+                                    </apex:inputField>                                        
+                                </td>
+                            </tr>
+                            <tr>
+                                <td Class="border">
+                                    <apex:outputlabel value="Product Details Were Manually Changed"/>
+                                </td>
+                                <td Class="border">
+                                    <apex:inputField id="productDeatailsChanged" value="{!contract.Product_Details_Were_Manually_Changed__c}" onchange="disableDownlodWordButton();" />
+                                </td>
+                            </tr>
+                        </table> <br/><br/>
+                        
+                        <apex:commandButton id="cmdDownloadWordButtonDisabled" value="Download" action="{!downloadWordEvent}"
+                                            onclick="return openWord();"  disabled="true" />
+                        <apex:commandButton id="cmdDownloadWordButtonEnabled" value="Download" action="{!downloadWordEvent}"
+                                            onclick="return openWord();"  disabled="false" />
+                        <apex:commandButton value="Cancel" onclick="closePopup()"  />
+                        
+                    </apex:outputPanel>
+                </div>
+                <!--   RT-335    End      -->
+            </apex:outputPanel>
+            
+            <!-- Email Quote PDF to Customer Button -->
+            <apex:outputPanel styleClass="non-agreement-area" layout="block" rendered="{! isQuote && ((!isPartnerSite && canDownloadQuotePDF) || isTpx) }">
+                <h2>
+                    Send Documents
+                </h2>
+                <p>
+                    You can also send the PGi quote to the Customer.
+                </p>
+                <apex:commandButton value="E-mail Quote" id="emailQuote" action="{!emailQuoteEvent}" />
+                <apex:outputPanel layout="block" rendered="{!openPopupURL != null }">
+                    <script>
+                    openQuoteEmail();
+                    </script>
+                </apex:outputPanel>
+            </apex:outputPanel>
+            <apex:outputPanel styleClass="non-agreement-area" layout="block" rendered="{! isQuote && isTPX }">
+                <h2>
+                    Deal Registration with TPx
+                </h2>
+                <p>
+                    Once your deal is ready for registration with TPx, please select Submit and the system will auto send all registration information to TPx 
+                    who will register the deal, execute a contract, and capture signature
+                </p>
+                <apex:commandButton value="Submit Registration" id="DealRegistration" action="{!emailDelRegidtration}" />
+                <hr/>
+                <apex:outputPanel layout="block" rendered="{!openPopupURL != null }">
+                    <script>
+                    openQuoteEmail();
+                    </script>
+                </apex:outputPanel>
+            </apex:outputPanel>
+            
+            
+        </apex:form>
+        <!-- End downloading form -->
+        
+        <!-- Have to wrap everything in this div to get page layouts in Word -->
+        {!IF (renderingAsWord, "
+        <div class='Section1'>", '')}
+            
+            <!-- Wrap the following sections in renderable panels so that their code is not
+executed at all, which happens if you put renderable on the composition-->
+            <!-- RT-440 APAC User Added APAC-->
+            <!-- RT-561 FOR TPx -->
+            <apex:outputPanel rendered="{! !isTPX}">
+                <apex:outputPanel rendered="{!agreementRegion == 'EMEA' || (agreementRegion == 'APAC' && isCSA)}">
+                    <apex:composition template="iContract_EMEA_Quote"></apex:composition>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!agreementRegion != 'EMEA'}">
+                    <!-- Agreement (SLO, SLA, or Amendment) -->
+                    <apex:outputPanel rendered="{! !isQuote && (isSLO || isSLA || isAmendment) && isPageRenderable && (!isServiceOrder)}">
+                        <apex:composition template="iContract_NA_Agreement"></apex:composition>
+                    </apex:outputPanel>
+                    
+                    <!-- RateChange (Rate Change Amendment) -->
+                    <apex:outputPanel rendered="{! !isQuote && isRateChange && isPageRenderable && (!isServiceOrder)}">
+                        <apex:composition template="iContract_NA_RateChange"></apex:composition>
+                    </apex:outputPanel>
+                    
+                    <!-- Quote -->
+                    <!-- <apex:outputPanel rendered="{! isQuote && isPageRenderable && (!isServiceOrder) }"> -->
+                    <!-- added not isCSA for RT-440 or else if  agreementRegion == 'APAC' && isCSA and if quote is true it will enter to this condition-->
+                    <apex:outputPanel rendered="{! isQuote && isPageRenderable && (!isServiceOrder) && (!isCSA && agreementRegion != 'APAC') }">
+                        <apex:composition template="iContract_NA_Quote"></apex:composition>
+                        <!-- <apex:composition template="iContract_Quote_TpxDeal"></apex:composition> -->
+                    </apex:outputPanel>
+                    <!-- RT-281        Service Order -->
+                    <apex:outputPanel rendered="{! isServiceOrder && isPageRenderable }">
+                        <apex:composition template="iContract_NA_ServiceOrder"></apex:composition>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{! isTPX && !renderingAsExcel}" styleClass="isTpx">
+                <apex:composition template="iContract_Quote_TPxDeal"></apex:composition>
+            </apex:outputPanel> 
+            <!-- <apex:outputPanel rendered="{! isTPX && renderingAsExcel}" >
+                <apex:composition template="iContract_TpxExcel"></apex:composition>
+            </apex:outputPanel>  -->
+            {!IF (renderingAsWord, "</div>", '')}
+        <!-- End Word-specific Page Layout div -->
+        
+    </apex:outputPanel>
+</body>
+
+</apex:page>

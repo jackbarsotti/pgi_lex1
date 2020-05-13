@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Totango Overall Time Spent --></label>
+    <name>totango__Totango_Overall_Time_Spent__c</name>
+</CustomFieldTranslation>

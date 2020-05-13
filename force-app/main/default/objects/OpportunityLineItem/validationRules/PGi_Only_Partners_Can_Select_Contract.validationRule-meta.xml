@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Only_Partners_Can_Select_Contract</fullName>
+    <active>true</active>
+    <description>Only Partners/Carrier can select the Contract unit type.</description>
+    <errorConditionFormula>AND( 
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;, 
+CONTAINS(Opportunity.RecordType.Name, &quot;PGi&quot;),
+ISPICKVAL(Unit_Type__c, &quot;Contract&quot;), 
+NOT(Contains($Profile.Name , &quot;Admin&quot;)),
+NOT(ISPICKVAL($User.Channel__c , &#39;Partners&#39;)),
+NOT(ISPICKVAL($User.Channel__c , &#39;Carrier&#39;)) 
+)</errorConditionFormula>
+    <errorDisplayField>Unit_Type__c</errorDisplayField>
+    <errorMessage>Only Partners/Carrier Channel can select the Contract unit type.</errorMessage>
+</ValidationRule>

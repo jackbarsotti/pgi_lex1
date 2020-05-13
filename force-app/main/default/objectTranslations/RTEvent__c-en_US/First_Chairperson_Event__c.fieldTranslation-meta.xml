@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Check this box if this is the first event for this Chairperson. --></help>
+    <label><!-- First Chairperson Event --></label>
+    <name>First_Chairperson_Event__c</name>
+</CustomFieldTranslation>

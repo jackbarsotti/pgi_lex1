@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Opportunity Deal Type --></label>
+    <name>Opportunity_Deal_Type__c</name>
+    <picklistValues>
+        <masterLabel>Conversion</masterLabel>
+        <translation><!-- Conversion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Down-Sell (Rev Decrease)</masterLabel>
+        <translation><!-- Down-Sell (Rev Decrease) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Existing Customer - New Country</masterLabel>
+        <translation><!-- Existing Customer - New Country --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Existing Customer - New Div</masterLabel>
+        <translation><!-- Existing Customer - New Div --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Existing Customer - Run Rate</masterLabel>
+        <translation><!-- Existing Customer - Run Rate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Business</masterLabel>
+        <translation><!-- New Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Customer</masterLabel>
+        <translation><!-- New Customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Renewal (No Rev Change)</masterLabel>
+        <translation><!-- Renewal (No Rev Change) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Up-Sell (Rev Increase)</masterLabel>
+        <translation><!-- Up-Sell (Rev Increase) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Win Back</masterLabel>
+        <translation><!-- Win Back --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,241 @@
+<apex:page standardcontroller="Account" extensions="EndPlanController">   
+  <apex:stylesheet value="{!URLFOR($Resource.RTResources, 'css/jquery-ui.min.css')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery-ui.min.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/handlebars.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/messaging.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/remoting.js')}"/>  
+
+  <!--
+    NOTE: 
+    This page utilizes the Handlebars JS library (http://handlebarsjs.com/), and is an attempt to move away from having
+    to use VisualForce/Apex binding.  The data binding occurs via AJAX requests to the controller, and then through Handlebars.
+  -->
+  <script>
+    Visualforce.remoting.timeout = 120000;
+    
+    $(document).ready(function(){   
+      initialize();
+      callControllerFindNumberOnPlan();
+
+      function initialize() {
+        $.registerCommonHandlebarsHandlers();
+      }
+
+      function callControllerFindNumberOnPlan() {     
+        EndPlanController.findNumberOnPlan('{!AccountId}', '{!PlanId}', function(result,event){                              
+          if($.handleRemotingResult(result,event)){
+            if(result>0)
+              showRollToPlanDialog(result);
+            else
+              showContinueDialog();            
+          }
+        });
+      }
+
+      function showRollToPlanDialog(numberOnPlan) {
+        //Render plan, moveTo, and date Handlebars templates
+        EndPlanController.getPlan('{!PlanId}', function(result,event){
+          $.renderHandlebarsTemplate('plan-template', result, event);  
+        });  
+
+        EndPlanController.getPlans('{!AccountId}', '{!PlanId}', function(result, event) {
+          $.renderHandlebarsTemplate('moveTo-template', {numAccessCodes: numberOnPlan, plans: result}, event);          
+        });
+
+        $.renderHandlebarsTemplate('date-template', null, null);                                      
+
+        //Show the dialog
+        $.showDialog('.end-plan-dialog', 'End Account Product', {
+          "Cancel": function() {
+            $.disableDialogButtons($(this));                      
+            location.href='/{!AccountId}';
+          },
+          "Continue": function(e) {
+            var button = $(this);
+            $.disableDialogButtons(button);  
+
+            $('.errorMessages').hide()        
+            $('.warnMessage').text('Working...');
+            $('.warnMessages').show();                         
+
+            var planId = '{!PlanId}';
+            var planEndDate = $('#endDate').val();
+            var rollToPlanId = $('input[name=shouldSave]:checked').val();
+
+            if(typeof(rollToPlanId)=='undefined' || rollToPlanId==null){
+              $('.warnMessages').hide();
+              $('.errorMessage').text('Please select a Plan to move access codes into.');
+              $('.errorMessages').fadeIn('fast');  
+              $.enableDialogButtons(button);  
+              return;
+            }
+
+            EndPlanController.endPlan(planId,planEndDate,rollToPlanId, function(result, event){
+              if($.handleRemotingResult(result,event)){
+                location.href='/{!AccountId}';
+              }
+              else
+                $.enableDialogButtons(button);
+            });
+          }
+        }); 
+
+        //Show the warning message  
+        $('.warnMessage').text('Ending this account plan will affect '+numberOnPlan+' access code(s) under this account.');
+        $('.warnMessages').show();     
+
+        //Initialize the Plan End Date picker
+        $('#endDate').datepicker({ dateFormat: "mm/dd/yy"}); 
+        $('#endDate').datepicker('setDate', new Date());                    
+      }
+
+      function showContinueDialog() {
+        //Render the plan and date Handlebars templates
+        EndPlanController.getPlan('{!PlanId}', function(result,event){
+          $.renderHandlebarsTemplate('plan-template', result, event);  
+        });  
+
+        $.renderHandlebarsTemplate('date-template', null, null);
+
+        //Initialize the Plan End Date picker
+        $('#endDate').datepicker({ dateFormat: "mm/dd/yy"}); 
+        $('#endDate').datepicker('setDate', new Date());                          
+
+        //Show the dialog
+        $.showDialog('.end-plan-dialog', 'End Account Product', {
+          "Cancel": function() {
+            $.disableDialogButtons($(this));            
+            location.href='/{!AccountId}';
+          },
+          "Continue": function() {
+            var button = $(this);
+            $.disableDialogButtons(button);          
+
+            var planId = '{!PlanId}';
+            var planEndDate = $('#endDate').val();
+            var rollToPlanId = $('input[name=shouldSave]:checked').val();
+
+            EndPlanController.endPlan(planId,planEndDate,null, function(result, event){
+              if($.handleRemotingResult(result,event)){
+                location.href='/{!AccountId}';
+              }
+              else
+                $.enableDialogButtons(button);  
+            });
+          }
+        });         
+      }
+    });
+  </script>
+
+  <style>
+    .selectLabel{display: inline-block; width: 120px;}
+  </style>
+
+  <apex:detail relatedListHover="false"/>
+
+  <apex:outputPanel id="end-plan-dialog" styleClass="end-plan-dialog" layout="block">
+    <apex:pageBlock tabStyle="Account">    
+      <div class="ui-state-error ui-corner-all errorMessages" style="padding: 0 .7em .7em .7em; margin-bottom: 5px; display: none"> 
+        <p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span><span class="errorMessage"></span></p>
+      </div>
+          
+      <div class="ui-state-highlight ui-corner-all warnMessages" style="padding: 0 .7em .7em .7em; margin-bottom: 5px; display: none"> 
+        <p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
+          <span class="warnMessage"></span>
+        </p>
+      </div>   
+      <script id="plan-template" type="text/x-handlebars-template">
+        <div class="pbSubheader brandTertiaryBgr first tertiaryPalette"><h3>Plan to end...</h3></div>
+        <table class="list " id="" border="0" cellpadding="0" cellspacing="0">
+          <colgroup span="3"></colgroup>            
+          <thead class="rich-table-thead">            
+            <tr class="headerRow ">
+              <th class="headerRow " scope="col" colspan="1" id="">
+                <div id="">Product Name</div>
+              </th>                                     
+              <th class="headerRow " scope="col" colspan="1" id="">
+                <div id="">Start Date</div>
+              </th>
+              <th class="headerRow " scope="col" colspan="1" id="">
+                <div id="">End Date</div>
+              </th>
+            </tr>
+          </thead>          
+          <tbody id="">            
+            <tr class="dataRow saveablePlan" onmouseover="if (window.hiOn){hiOn(this);} " onmouseout="if (window.hiOff){hiOff(this);} " onblur="if (window.hiOff){hiOff(this);}" onfocus="if (window.hiOn){hiOn(this);}">
+              <td class="dataCell  " id="" colspan="1">
+                <span>{{Name}}</span>
+              </td>
+              <td class="dataCell  " id="" colspan="1">
+                <span>{{date startDate__c}}</span>
+              </td>              
+              <td class="dataCell  " id="" colspan="1">
+                <span>{{date endDate__c}}</span>
+              </td>
+            </tr>    
+          </tbody>          
+        </table>     
+        <br/>
+        <br/>        
+      </script>  
+
+      <script id="moveTo-template" type="text/x-handlebars-template">                
+        <div class="pbSubheader brandTertiaryBgr first tertiaryPalette"><h3>Move {{numAccessCodes}} Access Codes to...</h3></div>            
+        <div id="plans">          
+          <table class="list " id="" border="0" cellpadding="0" cellspacing="0">
+            <colgroup span="4"></colgroup>            
+            {{#if plans}}    
+            <thead class="rich-table-thead">            
+              <tr class="headerRow ">
+                <th class="headerRow " scope="col" colspan="1" id="">
+                  <div id="">Select</div>
+                </th>                                     
+                <th class="headerRow " scope="col" colspan="1" id="">
+                  <div id="">Plan Name</div>
+                </th>
+                <th class="headerRow " scope="col" colspan="1" id="">
+                  <div id="">Start Date</div>
+                </th>
+                <th class="headerRow " scope="col" colspan="1" id="">
+                  <div id="">End Date</div>
+                </th>
+              </tr>
+            </thead>         
+            {{/if}} 
+            <tbody id="">            
+              {{#each plans}}            
+              <tr class="dataRow saveablePlan" onmouseover="if (window.hiOn){hiOn(this);} " onmouseout="if (window.hiOff){hiOff(this);} " onblur="if (window.hiOff){hiOff(this);}" onfocus="if (window.hiOn){hiOn(this);}">
+                <td class="actionColumn" id="" colspan="1" style="cursor: pointer">
+                  <input id="shouldSave" name="shouldSave" type="radio" value="{{Id}}"/>
+                </td>              
+                <td class="dataCell  " id="" colspan="1">
+                  <span id="planName">{{Name}}</span>
+                </td>
+                <td class="dataCell  " id="" colspan="1">
+                  <span id="planStartDate">{{date startDate__c}}</span>
+                </td>              
+                <td class="dataCell  " id="" colspan="1">
+                  <span id="planEndDate">{{date endDate__c}}</span>
+                </td>
+              </tr> 
+              {{else}}   
+              <tr class="headerRow"><th scope="col" class="noRowsHeader" style="font-weight: normal">No products to move to!&nbsp;&nbsp;<a href="/apex/AddPlan?id={!AccountId}" class="actionLink">Create one now?</a></th></tr>
+              {{/each}}          
+            </tbody>          
+          </table>                  
+        </div>
+
+        <br/>
+        <br/>   
+      </script>
+
+      <script id="date-template" type="text/x-handlebars-template">
+        <div class="pbSubheader brandTertiaryBgr first tertiaryPalette"><h3>On date...</h3></div>      
+        <label class="selectLabel" for="endDate">Product End Date:</label><input type="text" id="endDate" /><br/>          
+      </script>
+    </apex:pageBlock>
+  </apex:outputPanel>  
+
+</apex:page>

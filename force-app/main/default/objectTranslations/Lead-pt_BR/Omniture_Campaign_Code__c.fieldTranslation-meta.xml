@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Inbound Call Color --></label>
+    <name>Omniture_Campaign_Code__c</name>
+    <picklistValues>
+        <masterLabel>BLUE</masterLabel>
+        <translation><!-- BLUE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COPPER</masterLabel>
+        <translation><!-- COPPER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CYAN</masterLabel>
+        <translation><!-- CYAN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GOLD</masterLabel>
+        <translation><!-- GOLD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GREEN</masterLabel>
+        <translation><!-- GREEN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GREY</masterLabel>
+        <translation><!-- GREY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NAVY</masterLabel>
+        <translation><!-- NAVY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NO COLOR</masterLabel>
+        <translation><!-- NO COLOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OLIVE</masterLabel>
+        <translation><!-- OLIVE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ORANGE</masterLabel>
+        <translation><!-- ORANGE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PERIWINKLE</masterLabel>
+        <translation><!-- PERIWINKLE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PINK</masterLabel>
+        <translation><!-- PINK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PURPLE</masterLabel>
+        <translation><!-- PURPLE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RED</masterLabel>
+        <translation><!-- RED --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SKY BLUE</masterLabel>
+        <translation><!-- SKY BLUE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VIOLET</masterLabel>
+        <translation><!-- VIOLET --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WHITE</masterLabel>
+        <translation><!-- WHITE --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

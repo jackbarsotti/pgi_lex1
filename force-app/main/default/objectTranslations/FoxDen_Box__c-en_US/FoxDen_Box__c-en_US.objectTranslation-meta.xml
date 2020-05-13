@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>FoxDen Box</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>FoxDen Boxes</value>
+    </caseValues>
+    <layouts>
+        <layout>FoxDen Box Layout</layout>
+        <sections>
+            <label><!-- Administrator Information --></label>
+            <section>Administrator Information</section>
+        </sections>
+        <sections>
+            <label><!-- BBS --></label>
+            <section>BBS</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Shipping Information --></label>
+            <section>Shipping Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- New_FoxDen_Box --></label>
+        <name>New_FoxDen_Box</name>
+    </webLinks>
+</CustomObjectTranslation>

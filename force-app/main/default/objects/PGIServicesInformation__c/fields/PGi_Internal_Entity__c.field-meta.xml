@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Internal_Entity__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>PGi Internal Entity</label>
+    <referenceTo>PGi_Internal_Entity__c</referenceTo>
+    <relationshipLabel>CPQ - Contract General Content</relationshipLabel>
+    <relationshipName>CPQ_Contract_General_Content</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

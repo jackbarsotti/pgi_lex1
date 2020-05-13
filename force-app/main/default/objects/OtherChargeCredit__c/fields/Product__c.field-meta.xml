@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product__c</fullName>
+    <externalId>false</externalId>
+    <label>Product</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Blackberry Charge - Event Manager Assisted - Recording</fullName>
+                <default>false</default>
+                <label>Blackberry Charge - Event Manager Assisted - Recording</label>
+            </value>
+            <value>
+                <fullName>Blackberry Charge - Live Webinars</fullName>
+                <default>false</default>
+                <label>Blackberry Charge - Live Webinars</label>
+            </value>
+            <value>
+                <fullName>Blackberry Charge - On Demand - Recording</fullName>
+                <default>false</default>
+                <label>Blackberry Charge - On Demand - Recording</label>
+            </value>
+            <value>
+                <fullName>Blackberry Charge - Operator Assisted Live - Webinars</fullName>
+                <default>false</default>
+                <label>Blackberry Charge - Operator Assisted Live - Webinars</label>
+            </value>
+            <value>
+                <fullName>Blackberry Charge - Vidyard Recording -  Hosting</fullName>
+                <default>false</default>
+                <label>Blackberry Charge - Vidyard Recording -  Hosting</label>
+            </value>
+            <value>
+                <fullName>Blackberry Charge - Webcasting</fullName>
+                <default>false</default>
+                <label>Blackberry Charge - Webcasting</label>
+            </value>
+            <value>
+                <fullName>Charge - Audio 300 Port Capacity Upgrade</fullName>
+                <default>false</default>
+                <label>Charge - Audio 300 Port Capacity Upgrade</label>
+            </value>
+            <value>
+                <fullName>Charge - Broadcast Audio - Additional Minutes</fullName>
+                <default>false</default>
+                <label>Charge - Broadcast Audio - Additional Minutes</label>
+            </value>
+            <value>
+                <fullName>Charge - Broadcast Audio - Additional Participants</fullName>
+                <default>false</default>
+                <label>Charge - Broadcast Audio - Additional Participants</label>
+            </value>
+            <value>
+                <fullName>Charge - Broadcast Audio - Base Price</fullName>
+                <default>false</default>
+                <label>Charge - Broadcast Audio - Base Price</label>
+            </value>
+            <value>
+                <fullName>Charge - Closed Captioning Services</fullName>
+                <default>false</default>
+                <label>Charge - Closed Captioning Services</label>
+            </value>
+            <value>
+                <fullName>Charge - Corporate License Subscription</fullName>
+                <default>false</default>
+                <label>Charge - Corporate License Subscription</label>
+            </value>
+            <value>
+                <fullName>Charge - Custom Start Page - Annual Maintenance</fullName>
+                <default>false</default>
+                <label>Charge - Custom Start Page - Annual Maintenance</label>
+            </value>
+            <value>
+                <fullName>Charge - Custom Start Page - Set-up</fullName>
+                <default>false</default>
+                <label>Charge - Custom Start Page - Set-up</label>
+            </value>
+            <value>
+                <fullName>Charge - Event Services - Add&#39;l Monitoring &amp; Support</fullName>
+                <default>false</default>
+                <label>Charge - Event Services - Add&#39;l Monitoring &amp; Support</label>
+            </value>
+            <value>
+                <fullName>Charge - Event Services - Cancellation</fullName>
+                <default>false</default>
+                <label>Charge - Event Services - Cancellation</label>
+            </value>
+            <value>
+                <fullName>Charge - Event Services - Communication Line</fullName>
+                <default>false</default>
+                <label>Charge - Event Services - Communication Line</label>
+            </value>
+            <value>
+                <fullName>Charge - Event Services - Dress Rehearsal w/ Op. Svcs.</fullName>
+                <default>false</default>
+                <label>Charge - Event Services - Dress Rehearsal w/ Op. Svcs.</label>
+            </value>
+            <value>
+                <fullName>Charge - Event Services - Dry Run</fullName>
+                <default>false</default>
+                <label>Charge - Event Services - Dry Run</label>
+            </value>
+            <value>
+                <fullName>Charge - Event Services - Event Call Director</fullName>
+                <default>false</default>
+                <label>Charge - Event Services - Event Call Director</label>
+            </value>
+            <value>
+                <fullName>Charge - Event Services - Full Event Moderation</fullName>
+                <default>false</default>
+                <label>Charge - Event Services - Full Event Moderation</label>
+            </value>
+            <value>
+                <fullName>Charge - Event Services - Other</fullName>
+                <default>false</default>
+                <label>Charge - Event Services - Other</label>
+            </value>
+            <value>
+                <fullName>Charge - Event Services - Pre-record</fullName>
+                <default>false</default>
+                <label>Charge - Event Services - Pre-record</label>
+            </value>
+            <value>
+                <fullName>Charge - Event Services - Re-record</fullName>
+                <default>false</default>
+                <label>Charge - Event Services - Re-record</label>
+            </value>
+            <value>
+                <fullName>Charge - Event Services - Simulive - Additional Minutes</fullName>
+                <default>false</default>
+                <label>Charge - Event Services - Simulive - Additional Minutes</label>
+            </value>
+            <value>
+                <fullName>Charge - Event Services - Simulive - Base Price</fullName>
+                <default>false</default>
+                <label>Charge - Event Services - Simulive - Base Price</label>
+            </value>
+            <value>
+                <fullName>Charge - Event Services - Transcription Services</fullName>
+                <default>false</default>
+                <label>Charge - Event Services - Transcription Services</label>
+            </value>
+            <value>
+                <fullName>Charge - Event Services - Webinar Set-Up &amp; Customization</fullName>
+                <default>false</default>
+                <label>Charge - Event Services - Webinar Set-Up &amp; Customization</label>
+            </value>
+            <value>
+                <fullName>Charge - FEM Additional Minutes</fullName>
+                <default>false</default>
+                <label>Charge - FEM Additional Minutes</label>
+            </value>
+            <value>
+                <fullName>Charge - Full Event Moderation Promotion</fullName>
+                <default>false</default>
+                <label>Charge - Full Event Moderation Promotion</label>
+            </value>
+            <value>
+                <fullName>Charge - Gold Webinar - Additional Minutes</fullName>
+                <default>false</default>
+                <label>Charge - Gold Webinar - Additional Minutes</label>
+            </value>
+            <value>
+                <fullName>Charge - Gold Webinar - Additional Participants</fullName>
+                <default>false</default>
+                <label>Charge - Gold Webinar - Additional Participants</label>
+            </value>
+            <value>
+                <fullName>Charge - Gold Webinar - Base Price</fullName>
+                <default>false</default>
+                <label>Charge - Gold Webinar - Base Price</label>
+            </value>
+            <value>
+                <fullName>Charge - Gold Webinar - Communication Line</fullName>
+                <default>false</default>
+                <label>Charge - Gold Webinar - Communication Line</label>
+            </value>
+            <value>
+                <fullName>Charge - Gold Webinar - Event Call Director</fullName>
+                <default>false</default>
+                <label>Charge - Gold Webinar - Event Call Director</label>
+            </value>
+            <value>
+                <fullName>Charge - Gold Webinar - Extended Archive Hosting</fullName>
+                <default>false</default>
+                <label>Charge - Gold Webinar - Extended Archive Hosting</label>
+            </value>
+            <value>
+                <fullName>Charge - Gold Webinar - International Toll-Free Add-On</fullName>
+                <default>false</default>
+                <label>Charge - Gold Webinar - International Toll-Free Add-On</label>
+            </value>
+            <value>
+                <fullName>Charge - Gold Webinar - Premium Op-Assist Add-On</fullName>
+                <default>false</default>
+                <label>Charge - Gold Webinar - Premium Op-Assist Add-On</label>
+            </value>
+            <value>
+                <fullName>Charge - Gold Webinar - Transcription Services</fullName>
+                <default>false</default>
+                <label>Charge - Gold Webinar - Transcription Services</label>
+            </value>
+            <value>
+                <fullName>Charge - On-Demand Audio Services</fullName>
+                <default>false</default>
+                <label>Charge - On-Demand Audio Services</label>
+            </value>
+            <value>
+                <fullName>Charge - Other</fullName>
+                <default>false</default>
+                <label>Charge - Other</label>
+            </value>
+            <value>
+                <fullName>Charge - Platinum Webinar - Additional Minutes</fullName>
+                <default>false</default>
+                <label>Charge - Platinum Webinar - Additional Minutes</label>
+            </value>
+            <value>
+                <fullName>Charge - Platinum Webinar - Additional Participants</fullName>
+                <default>false</default>
+                <label>Charge - Platinum Webinar - Additional Participants</label>
+            </value>
+            <value>
+                <fullName>Charge - Platinum Webinar - Base Price</fullName>
+                <default>false</default>
+                <label>Charge - Platinum Webinar - Base Price</label>
+            </value>
+            <value>
+                <fullName>Charge - Platinum Webinar - Communication Line</fullName>
+                <default>false</default>
+                <label>Charge - Platinum Webinar - Communication Line</label>
+            </value>
+            <value>
+                <fullName>Charge - Platinum Webinar - Event Call Director</fullName>
+                <default>false</default>
+                <label>Charge - Platinum Webinar - Event Call Director</label>
+            </value>
+            <value>
+                <fullName>Charge - Platinum Webinar - Extended Archive Hosting</fullName>
+                <default>false</default>
+                <label>Charge - Platinum Webinar - Extended Archive Hosting</label>
+            </value>
+            <value>
+                <fullName>Charge - Platinum Webinar - International Toll-Free Add-On</fullName>
+                <default>false</default>
+                <label>Charge - Platinum Webinar - International Toll-Free Add-On</label>
+            </value>
+            <value>
+                <fullName>Charge - Platinum Webinar - Premium Op-Assist Add-On</fullName>
+                <default>false</default>
+                <label>Charge - Platinum Webinar - Premium Op-Assist Add-On</label>
+            </value>
+            <value>
+                <fullName>Charge - Platinum Webinar - Transcription Services</fullName>
+                <default>false</default>
+                <label>Charge - Platinum Webinar - Transcription Services</label>
+            </value>
+            <value>
+                <fullName>Charge - Recording Hosting - Flat Rate</fullName>
+                <default>false</default>
+                <label>Charge - Recording Hosting - Flat Rate</label>
+            </value>
+            <value>
+                <fullName>Charge - Returned Check Fee</fullName>
+                <default>false</default>
+                <label>Charge - Returned Check Fee</label>
+            </value>
+            <value>
+                <fullName>Charge - Service Fee</fullName>
+                <default>false</default>
+                <label>Charge - Service Fee</label>
+            </value>
+            <value>
+                <fullName>Charge - Unused Line</fullName>
+                <default>false</default>
+                <label>Charge - Unused Line</label>
+            </value>
+            <value>
+                <fullName>Charge - VoIP Audio Services</fullName>
+                <default>false</default>
+                <label>Charge - VoIP Audio Services</label>
+            </value>
+            <value>
+                <fullName>Charge - Webcasting - Add-On</fullName>
+                <default>false</default>
+                <label>Charge - Webcasting - Add-On</label>
+            </value>
+            <value>
+                <fullName>Charge - Webcasting - Managed Audio &amp; Slides Webcast</fullName>
+                <default>false</default>
+                <label>Charge - Webcasting - Managed Audio &amp; Slides Webcast</label>
+            </value>
+            <value>
+                <fullName>Charge - Webcasting - Managed Video Webcast</fullName>
+                <default>false</default>
+                <label>Charge - Webcasting - Managed Video Webcast</label>
+            </value>
+            <value>
+                <fullName>Charge - Webcasting - Other</fullName>
+                <default>false</default>
+                <label>Charge - Webcasting - Other</label>
+            </value>
+            <value>
+                <fullName>Charge - Web Conferencing Services</fullName>
+                <default>false</default>
+                <label>Charge - Web Conferencing Services</label>
+            </value>
+            <value>
+                <fullName>Charge - Webinar 150 Subscription</fullName>
+                <default>false</default>
+                <label>Charge - Webinar 150 Subscription</label>
+            </value>
+            <value>
+                <fullName>Charge - Webinar 3000 Subscription</fullName>
+                <default>false</default>
+                <label>Charge - Webinar 3000 Subscription</label>
+            </value>
+            <value>
+                <fullName>Charge - Webinar 500 Subscription</fullName>
+                <default>false</default>
+                <label>Charge - Webinar 500 Subscription</label>
+            </value>
+            <value>
+                <fullName>Charge - Webinar - Training</fullName>
+                <default>false</default>
+                <label>Charge - Webinar - Training</label>
+            </value>
+            <value>
+                <fullName>Charge - Web Meeting Pro (150) Subscription</fullName>
+                <default>false</default>
+                <label>Charge - Web Meeting Pro (150) Subscription</label>
+            </value>
+            <value>
+                <fullName>Charge - Web Meeting Pro (25) Subscription</fullName>
+                <default>false</default>
+                <label>Charge - Web Meeting Pro (25) Subscription</label>
+            </value>
+            <value>
+                <fullName>Credit - Account on Trial</fullName>
+                <default>false</default>
+                <label>Credit - Account on Trial</label>
+            </value>
+            <value>
+                <fullName>Credit - Annual Renewal Promo</fullName>
+                <default>false</default>
+                <label>Credit - Annual Renewal Promo</label>
+            </value>
+            <value>
+                <fullName>Credit - Billing Adjustment</fullName>
+                <default>false</default>
+                <label>Credit - Billing Adjustment</label>
+            </value>
+            <value>
+                <fullName>Credit - Broadcast Audio Services</fullName>
+                <default>false</default>
+                <label>Credit - Broadcast Audio Services</label>
+            </value>
+            <value>
+                <fullName>Credit - Corporate License Subscription</fullName>
+                <default>false</default>
+                <label>Credit - Corporate License Subscription</label>
+            </value>
+            <value>
+                <fullName>Credit - Event Billing Adjustment</fullName>
+                <default>false</default>
+                <label>Credit - Event Billing Adjustment</label>
+            </value>
+            <value>
+                <fullName>Credit - Event Services</fullName>
+                <default>false</default>
+                <label>Credit - Event Services</label>
+            </value>
+            <value>
+                <fullName>Credit - Event Services Promotion</fullName>
+                <default>false</default>
+                <label>Credit - Event Services Promotion</label>
+            </value>
+            <value>
+                <fullName>Credit - Federal Universal Service Fund (FUSF)</fullName>
+                <default>false</default>
+                <label>Credit - Federal Universal Service Fund (FUSF)</label>
+            </value>
+            <value>
+                <fullName>Credit - Full Event Moderation Promotion</fullName>
+                <default>false</default>
+                <label>Credit - Full Event Moderation Promotion</label>
+            </value>
+            <value>
+                <fullName>Credit - Gold Webinar Services</fullName>
+                <default>false</default>
+                <label>Credit - Gold Webinar Services</label>
+            </value>
+            <value>
+                <fullName>Credit - Marketo Summit Promotion</fullName>
+                <default>false</default>
+                <label>Credit - Marketo Summit Promotion</label>
+            </value>
+            <value>
+                <fullName>Credit - On-Demand Audio Services</fullName>
+                <default>false</default>
+                <label>Credit - On-Demand Audio Services</label>
+            </value>
+            <value>
+                <fullName>Credit - Other</fullName>
+                <default>false</default>
+                <label>Credit - Other</label>
+            </value>
+            <value>
+                <fullName>Credit - Platinum Webinar Services</fullName>
+                <default>false</default>
+                <label>Credit - Platinum Webinar Services</label>
+            </value>
+            <value>
+                <fullName>Credit - Recording Hosting Charges</fullName>
+                <default>false</default>
+                <label>Credit - Recording Hosting Charges</label>
+            </value>
+            <value>
+                <fullName>Credit - Service Interruption</fullName>
+                <default>false</default>
+                <label>Credit - Service Interruption</label>
+            </value>
+            <value>
+                <fullName>Credit - Simulive Services</fullName>
+                <default>false</default>
+                <label>Credit - Simulive Services</label>
+            </value>
+            <value>
+                <fullName>Credit - VoIP Audio Services</fullName>
+                <default>false</default>
+                <label>Credit - VoIP Audio Services</label>
+            </value>
+            <value>
+                <fullName>Credit - Webcasting - Other</fullName>
+                <default>false</default>
+                <label>Credit - Webcasting - Other</label>
+            </value>
+            <value>
+                <fullName>Credit - Web Conferencing Services</fullName>
+                <default>false</default>
+                <label>Credit - Web Conferencing Services</label>
+            </value>
+            <value>
+                <fullName>Credit - Webinar 150 Subscription</fullName>
+                <default>false</default>
+                <label>Credit - Webinar 150 Subscription</label>
+            </value>
+            <value>
+                <fullName>Credit - Webinar 3000 Subscription</fullName>
+                <default>false</default>
+                <label>Credit - Webinar 3000 Subscription</label>
+            </value>
+            <value>
+                <fullName>Credit - Webinar 500 Subscription</fullName>
+                <default>false</default>
+                <label>Credit - Webinar 500 Subscription</label>
+            </value>
+            <value>
+                <fullName>Credit - Web Meeting Pro (150) Subscription</fullName>
+                <default>false</default>
+                <label>Credit - Web Meeting Pro (150) Subscription</label>
+            </value>
+            <value>
+                <fullName>Credit - Web Meeting Pro (25) Subscription</fullName>
+                <default>false</default>
+                <label>Credit - Web Meeting Pro (25) Subscription</label>
+            </value>
+            <value>
+                <fullName>DoNotUse - Charge - Event Services - Custom Event Preparation</fullName>
+                <default>false</default>
+                <label>DoNotUse - Charge - Event Services - Custom Event Preparation</label>
+            </value>
+            <value>
+                <fullName>DoNotUse - Charge - Event Services - Professional Event Package</fullName>
+                <default>false</default>
+                <label>DoNotUse - Charge - Event Services - Professional Event Package</label>
+            </value>
+            <value>
+                <fullName>DoNotUse - Charge - Gold Web Event - Chat Moderation Add-On</fullName>
+                <default>false</default>
+                <label>DoNotUse - Charge - Gold Web Event - Chat Moderation Add-On</label>
+            </value>
+            <value>
+                <fullName>Free - Simulive 2014 Promo</fullName>
+                <default>false</default>
+                <label>Free - Simulive 2014 Promo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

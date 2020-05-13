@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Was the client able to use the service in the way that was intended without a work around or was the impact caused by a PGi or Client Human Error? --></help>
+    <label><!-- Service Restored --></label>
+    <name>Service_Restored__c</name>
+</CustomFieldTranslation>

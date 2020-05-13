@@ -1,0 +1,3089 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Symptom Sub --></label>
+    <name>Symptom_Sub__c</name>
+    <picklistValues>
+        <masterLabel>*22 Not Working</masterLabel>
+        <translation><!-- *22 Not Working --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>*6 Not Working</masterLabel>
+        <translation><!-- *6 Not Working --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>*96 Not Working</masterLabel>
+        <translation><!-- *96 Not Working --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ANI Report Incomplete/Incorrect</masterLabel>
+        <translation><!-- ANI Report Incomplete/Incorrect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ANI Report Not Received/Received Late</masterLabel>
+        <translation><!-- ANI Report Not Received/Received Late --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AccessDenied/Can&#39;tLoadAcctDetailError</masterLabel>
+        <translation><!-- AccessDenied/Can&apos;tLoadAcctDetailError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ActiveTalkerFail</masterLabel>
+        <translation><!-- ActiveTalkerFail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Add-in Buttons Grayed Out</masterLabel>
+        <translation><!-- Add-in Buttons Grayed Out --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AdobeConnectServer Addr Error</masterLabel>
+        <translation><!-- AdobeConnectServer Addr Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Agent Spoke in Call</masterLabel>
+        <translation><!-- Agent Spoke in Call --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>An UnexpectedErrorOccur’d</masterLabel>
+        <translation><!-- An UnexpectedErrorOccur’d --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>App Freezes/Crashes/NotOpen</masterLabel>
+        <translation><!-- App Freezes/Crashes/NotOpen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>App Launch Delay/Failure</masterLabel>
+        <translation><!-- App Launch Delay/Failure --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>App/Install:WhiteLabelComponent</masterLabel>
+        <translation><!-- App/Install:WhiteLabelComponent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>App/InstallError</masterLabel>
+        <translation><!-- App/InstallError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Application Error</masterLabel>
+        <translation><!-- Application Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Archive</masterLabel>
+        <translation><!-- Archive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ArchiveIssue:Incomplete/MissingContent</masterLabel>
+        <translation><!-- ArchiveIssue:Incomplete/MissingContent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ArchiveIssue:Quality</masterLabel>
+        <translation><!-- ArchiveIssue:Quality --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ArchiveIssue:Unavail</masterLabel>
+        <translation><!-- ArchiveIssue:Unavail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Attended Recording Not Merged</masterLabel>
+        <translation><!-- Attended Recording Not Merged --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audience Members Blocked from Joining Event</masterLabel>
+        <translation><!-- Audience Members Blocked from Joining Event --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio Distortion</masterLabel>
+        <translation><!-- Audio Distortion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio Presence Missing</masterLabel>
+        <translation><!-- Audio Presence Missing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio Quality-Other</masterLabel>
+        <translation><!-- Audio Quality-Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio/Web:NoSync</masterLabel>
+        <translation><!-- Audio/Web:NoSync --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio/WebPresence:Can&#39;tMerge/Unmerge</masterLabel>
+        <translation><!-- Audio/WebPresence:Can&apos;tMerge/Unmerge --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio/WebPresence:NotMerged/Connecting</masterLabel>
+        <translation><!-- Audio/WebPresence:NotMerged/Connecting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AudioControl NotShowing/App</masterLabel>
+        <translation><!-- AudioControl NotShowing/App --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AudioControlFeature:NotWorking</masterLabel>
+        <translation><!-- AudioControlFeature:NotWorking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AudioControlIssue</masterLabel>
+        <translation><!-- AudioControlIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AudioEndsPrematurely</masterLabel>
+        <translation><!-- AudioEndsPrematurely --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AudioFunction:Greyed</masterLabel>
+        <translation><!-- AudioFunction:Greyed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AudioIntegrationIssue</masterLabel>
+        <translation><!-- AudioIntegrationIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AudioIntegrationSetupIncorrectly</masterLabel>
+        <translation><!-- AudioIntegrationSetupIncorrectly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AudioLine:NoAudio</masterLabel>
+        <translation><!-- AudioLine:NoAudio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AudioLine:QualityIssue</masterLabel>
+        <translation><!-- AudioLine:QualityIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AudioMissing:Recording</masterLabel>
+        <translation><!-- AudioMissing:Recording --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AudioNotPulling:BreakoutRoom</masterLabel>
+        <translation><!-- AudioNotPulling:BreakoutRoom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AudioPartNotMuted:All</masterLabel>
+        <translation><!-- AudioPartNotMuted:All --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AudioPartNotMuted:Individual</masterLabel>
+        <translation><!-- AudioPartNotMuted:Individual --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AudioProviderNotShowing/Profile</masterLabel>
+        <translation><!-- AudioProviderNotShowing/Profile --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AudioRecording:FailError</masterLabel>
+        <translation><!-- AudioRecording:FailError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AudioRecording:PoorQuality</masterLabel>
+        <translation><!-- AudioRecording:PoorQuality --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AudioVideo:PoorQuality/Conf</masterLabel>
+        <translation><!-- AudioVideo:PoorQuality/Conf --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AudioVideo:Quality</masterLabel>
+        <translation><!-- AudioVideo:Quality --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Background Noise</masterLabel>
+        <translation><!-- Background Noise --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Backup Streaming Issue</masterLabel>
+        <translation><!-- Backup Streaming Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Black Screen</masterLabel>
+        <translation><!-- Black Screen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BlackScreen/Screensharing</masterLabel>
+        <translation><!-- BlackScreen/Screensharing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BlankReport/DataMissing</masterLabel>
+        <translation><!-- BlankReport/DataMissing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BrandingIssue</masterLabel>
+        <translation><!-- BrandingIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BrandingIssue:ConfReport</masterLabel>
+        <translation><!-- BrandingIssue:ConfReport --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BrandingIssue:EmailConfirm</masterLabel>
+        <translation><!-- BrandingIssue:EmailConfirm --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BrandingIssue:Prompt</masterLabel>
+        <translation><!-- BrandingIssue:Prompt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BrandingIssue:ReplayConfirm</masterLabel>
+        <translation><!-- BrandingIssue:ReplayConfirm --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BrandingNotDisplayingCorrectly</masterLabel>
+        <translation><!-- BrandingNotDisplayingCorrectly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BreakoutRoomIssue</masterLabel>
+        <translation><!-- BreakoutRoomIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BridgeOutage</masterLabel>
+        <translation><!-- BridgeOutage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Broadcast Audio Failed</masterLabel>
+        <translation><!-- Broadcast Audio Failed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Broken Display</masterLabel>
+        <translation><!-- Broken Display --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BrokenHardware</masterLabel>
+        <translation><!-- BrokenHardware --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BrokenLink</masterLabel>
+        <translation><!-- BrokenLink --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Browser Issue-Other</masterLabel>
+        <translation><!-- Browser Issue-Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BrowserError</masterLabel>
+        <translation><!-- BrowserError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BrowserError:404ApacheTomcatError</masterLabel>
+        <translation><!-- BrowserError:404ApacheTomcatError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BrowserError:500InternalServerIssue</masterLabel>
+        <translation><!-- BrowserError:500InternalServerIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BrowserError:CertificateRevocationError</masterLabel>
+        <translation><!-- BrowserError:CertificateRevocationError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BrowserIssue</masterLabel>
+        <translation><!-- BrowserIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Buffering</masterLabel>
+        <translation><!-- Buffering --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Buttons Not Responding</masterLabel>
+        <translation><!-- Buttons Not Responding --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CSVFile/MalformedError</masterLabel>
+        <translation><!-- CSVFile/MalformedError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CalendarEvent NoSync</masterLabel>
+        <translation><!-- CalendarEvent NoSync --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Call Not Received</masterLabel>
+        <translation><!-- Call Not Received --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Call Park Issue</masterLabel>
+        <translation><!-- Call Park Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CallbackFail:NoAnswerError</masterLabel>
+        <translation><!-- CallbackFail:NoAnswerError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CallbackFeature N/A</masterLabel>
+        <translation><!-- CallbackFeature N/A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Calls Tab does not appear in Desktop App</masterLabel>
+        <translation><!-- Calls Tab does not appear in Desktop App --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Capacity Booked Incorrectly</masterLabel>
+        <translation><!-- Capacity Booked Incorrectly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CarrierMsg</masterLabel>
+        <translation><!-- CarrierMsg --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cascading/TunnelingEffect</masterLabel>
+        <translation><!-- Cascading/TunnelingEffect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Certificate Errors</masterLabel>
+        <translation><!-- Certificate Errors --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CertificateRevocationError</masterLabel>
+        <translation><!-- CertificateRevocationError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ChangeAdobeSite</masterLabel>
+        <translation><!-- ChangeAdobeSite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ChangeLiveMeetingSite</masterLabel>
+        <translation><!-- ChangeLiveMeetingSite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ChangeWebExSite</masterLabel>
+        <translation><!-- ChangeWebExSite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ChatIssue</masterLabel>
+        <translation><!-- ChatIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CheckEmail Addr Correct Error:OrderTranscript</masterLabel>
+        <translation><!-- CheckEmail Addr Correct Error:OrderTranscript --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Clicking/Conf</masterLabel>
+        <translation><!-- Clicking/Conf --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client:Accessed Incorrect Equipment for Conference</masterLabel>
+        <translation><!-- Client:Accessed Incorrect Equipment for Conference --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client:LineError</masterLabel>
+        <translation><!-- Client:LineError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client:PC/Network</masterLabel>
+        <translation><!-- Client:PC/Network --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client:ReportedUnsatisfactoryCustSvc</masterLabel>
+        <translation><!-- Client:ReportedUnsatisfactoryCustSvc --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client:Started in Pre-Conference</masterLabel>
+        <translation><!-- Client:Started in Pre-Conference --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ClientSearch/NoResult</masterLabel>
+        <translation><!-- ClientSearch/NoResult --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Clipping</masterLabel>
+        <translation><!-- Clipping --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed Captioning Not Available</masterLabel>
+        <translation><!-- Closed Captioning Not Available --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CommLine Not Available When Client Dialed in</masterLabel>
+        <translation><!-- CommLine Not Available When Client Dialed in --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ComputerAudioConnectionFail</masterLabel>
+        <translation><!-- ComputerAudioConnectionFail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conf Ended Early in Error</masterLabel>
+        <translation><!-- Conf Ended Early in Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conf Interrupted (Op/Client/Prompt/Music)</masterLabel>
+        <translation><!-- Conf Interrupted (Op/Client/Prompt/Music) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conf Report Not Received</masterLabel>
+        <translation><!-- Conf Report Not Received --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conf Started Late</masterLabel>
+        <translation><!-- Conf Started Late --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ConfConnectLate</masterLabel>
+        <translation><!-- ConfConnectLate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ConfInfoNotPopulating/Invitation</masterLabel>
+        <translation><!-- ConfInfoNotPopulating/Invitation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ConfNotConnected</masterLabel>
+        <translation><!-- ConfNotConnected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ConfNotFound/RunningError</masterLabel>
+        <translation><!-- ConfNotFound/RunningError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conflicting/IncorrectInfo:Confirm</masterLabel>
+        <translation><!-- Conflicting/IncorrectInfo:Confirm --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conflicting/IncorrectInfo:Res/ECWS/Confirm</masterLabel>
+        <translation><!-- Conflicting/IncorrectInfo:Res/ECWS/Confirm --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Connection Failure</masterLabel>
+        <translation><!-- Connection Failure --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Connection Failure-H323 Address</masterLabel>
+        <translation><!-- Connection Failure-H323 Address --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Connection Failure-SIP URI</masterLabel>
+        <translation><!-- Connection Failure-SIP URI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ConnectionFail/StreamingWebExRecording</masterLabel>
+        <translation><!-- ConnectionFail/StreamingWebExRecording --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Connectivity:AdminRights</masterLabel>
+        <translation><!-- Connectivity:AdminRights --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact AdminTeamError/ChangingPassword</masterLabel>
+        <translation><!-- Contact AdminTeamError/ChangingPassword --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Content Display Incorrectly</masterLabel>
+        <translation><!-- Content Display Incorrectly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ContentLibraryIssue</masterLabel>
+        <translation><!-- ContentLibraryIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ContentLibraryIssue:Conversion</masterLabel>
+        <translation><!-- ContentLibraryIssue:Conversion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ContentLibraryIssue:GuestAccessSetting</masterLabel>
+        <translation><!-- ContentLibraryIssue:GuestAccessSetting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ContentLibraryIssue:MeetingMinutes</masterLabel>
+        <translation><!-- ContentLibraryIssue:MeetingMinutes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ContentLibraryIssue:Presentation</masterLabel>
+        <translation><!-- ContentLibraryIssue:Presentation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ContentLibraryIssue:Video</masterLabel>
+        <translation><!-- ContentLibraryIssue:Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ContentSharing Problem</masterLabel>
+        <translation><!-- ContentSharing Problem --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ContentSharing Problem:BlankScreen</masterLabel>
+        <translation><!-- ContentSharing Problem:BlankScreen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ContentSharing Problem:Other</masterLabel>
+        <translation><!-- ContentSharing Problem:Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ContentSharing Problem:PCNotConnectedError</masterLabel>
+        <translation><!-- ContentSharing Problem:PCNotConnectedError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ContentSharing Problem:UnsupportedVGAFormatError</masterLabel>
+        <translation><!-- ContentSharing Problem:UnsupportedVGAFormatError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Controller Problem:RemoteControl/TouchPanel</masterLabel>
+        <translation><!-- Controller Problem:RemoteControl/TouchPanel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conversion</masterLabel>
+        <translation><!-- Conversion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ConversionFail</masterLabel>
+        <translation><!-- ConversionFail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ConversionIssue</masterLabel>
+        <translation><!-- ConversionIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CorruptFile</masterLabel>
+        <translation><!-- CorruptFile --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Crashing/Freezing</masterLabel>
+        <translation><!-- Crashing/Freezing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Create PasswordLink/PageCan&#39;tBeDisplayed</masterLabel>
+        <translation><!-- Create PasswordLink/PageCan&apos;tBeDisplayed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CrossTalk/LineBleed/ConfBleed</masterLabel>
+        <translation><!-- CrossTalk/LineBleed/ConfBleed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CurrentlySpeaking/ActiveTalkerFail</masterLabel>
+        <translation><!-- CurrentlySpeaking/ActiveTalkerFail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer Joined in Incorrect Role</masterLabel>
+        <translation><!-- Customer Joined in Incorrect Role --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DVR:Audio/WebRecording NoSync</masterLabel>
+        <translation><!-- DVR:Audio/WebRecording NoSync --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DVR:AudioMissing/Recording</masterLabel>
+        <translation><!-- DVR:AudioMissing/Recording --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DVR:N/A Error</masterLabel>
+        <translation><!-- DVR:N/A Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DVR:PoorQuality</masterLabel>
+        <translation><!-- DVR:PoorQuality --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DVR:RecordingTimeout</masterLabel>
+        <translation><!-- DVR:RecordingTimeout --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DVR:WebMissing/Recording</masterLabel>
+        <translation><!-- DVR:WebMissing/Recording --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DataConnectionLostError</masterLabel>
+        <translation><!-- DataConnectionLostError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dead Air When Connecting</masterLabel>
+        <translation><!-- Dead Air When Connecting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DeadAir</masterLabel>
+        <translation><!-- DeadAir --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DeadAir:AfterPasscode</masterLabel>
+        <translation><!-- DeadAir:AfterPasscode --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DeadAir:BeforePasscode</masterLabel>
+        <translation><!-- DeadAir:BeforePasscode --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Default MeetingRoomDoesn&#39;tExistError</masterLabel>
+        <translation><!-- Default MeetingRoomDoesn&apos;tExistError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Delay in Receiving Voicemail Notification</masterLabel>
+        <translation><!-- Delay in Receiving Voicemail Notification --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Delegation Error</masterLabel>
+        <translation><!-- Delegation Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Device issue</masterLabel>
+        <translation><!-- Device issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dial Tone:Audio</masterLabel>
+        <translation><!-- Dial Tone:Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DialOut:Wrong Time/Not Performed</masterLabel>
+        <translation><!-- DialOut:Wrong Time/Not Performed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DialOutFail</masterLabel>
+        <translation><!-- DialOutFail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DialOutFail:Domestic</masterLabel>
+        <translation><!-- DialOutFail:Domestic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DialOutFail:Intl</masterLabel>
+        <translation><!-- DialOutFail:Intl --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DialOutFail:Press1NotWorking</masterLabel>
+        <translation><!-- DialOutFail:Press1NotWorking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DialOutFail:Softphone</masterLabel>
+        <translation><!-- DialOutFail:Softphone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DialTone:Conf</masterLabel>
+        <translation><!-- DialTone:Conf --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DialinError:CallEnded</masterLabel>
+        <translation><!-- DialinError:CallEnded --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DialinError:CallFail</masterLabel>
+        <translation><!-- DialinError:CallFail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Did Not Receive Post Deliverables</masterLabel>
+        <translation><!-- Did Not Receive Post Deliverables --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Didn&#39;tObtainRequestedInfo</masterLabel>
+        <translation><!-- Didn&apos;tObtainRequestedInfo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Didn&#39;tReceiveRegistrationConfirm</masterLabel>
+        <translation><!-- Didn&apos;tReceiveRegistrationConfirm --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DirectoryIssue:OnlinePresence</masterLabel>
+        <translation><!-- DirectoryIssue:OnlinePresence --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DirectoryIssue:Phonebook</masterLabel>
+        <translation><!-- DirectoryIssue:Phonebook --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DisappearBackButton/MeetingSetting</masterLabel>
+        <translation><!-- DisappearBackButton/MeetingSetting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Disappointing Customer Experience</masterLabel>
+        <translation><!-- Disappointing Customer Experience --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DistortedScreen/WaffleScreen</masterLabel>
+        <translation><!-- DistortedScreen/WaffleScreen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DocSent/WrongPerson</masterLabel>
+        <translation><!-- DocSent/WrongPerson --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Documentation Sent to Incorrect Client</masterLabel>
+        <translation><!-- Documentation Sent to Incorrect Client --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Download/Install/ReinstallFail</masterLabel>
+        <translation><!-- Download/Install/ReinstallFail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DropConnect:AfterPasscode</masterLabel>
+        <translation><!-- DropConnect:AfterPasscode --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DropConnect:App/Audio</masterLabel>
+        <translation><!-- DropConnect:App/Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DropConnect:AppOnly</masterLabel>
+        <translation><!-- DropConnect:AppOnly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DropConnect:Audio/Video</masterLabel>
+        <translation><!-- DropConnect:Audio/Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DropConnect:Audio/Web</masterLabel>
+        <translation><!-- DropConnect:Audio/Web --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DropConnect:BeforePasscode</masterLabel>
+        <translation><!-- DropConnect:BeforePasscode --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DropConnect:InConf</masterLabel>
+        <translation><!-- DropConnect:InConf --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DropConnect:Video Site</masterLabel>
+        <translation><!-- DropConnect:Video Site --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DropConnect:Web</masterLabel>
+        <translation><!-- DropConnect:Web --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DropConnect:WebOnly</masterLabel>
+        <translation><!-- DropConnect:WebOnly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DropConnection</masterLabel>
+        <translation><!-- DropConnection --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DropWebConnect</masterLabel>
+        <translation><!-- DropWebConnect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DropWebConnectOnly</masterLabel>
+        <translation><!-- DropWebConnectOnly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dropped VOIP Connection</masterLabel>
+        <translation><!-- Dropped VOIP Connection --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Duration Certificate Received in Error</masterLabel>
+        <translation><!-- Duration Certificate Received in Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EasyAssist N/A</masterLabel>
+        <translation><!-- EasyAssist N/A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Echo</masterLabel>
+        <translation><!-- Echo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email Not Received:Reset Password</masterLabel>
+        <translation><!-- Email Not Received:Reset Password --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EmailAddr Doesn&#39;tMatchValidUserAcctError</masterLabel>
+        <translation><!-- EmailAddr Doesn&apos;tMatchValidUserAcctError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EmailConfirm</masterLabel>
+        <translation><!-- EmailConfirm --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EmailConfirm:LetterNotReceived</masterLabel>
+        <translation><!-- EmailConfirm:LetterNotReceived --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EmailNotReceived</masterLabel>
+        <translation><!-- EmailNotReceived --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EmailNotReceived:MeetingInvite</masterLabel>
+        <translation><!-- EmailNotReceived:MeetingInvite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EmailNotReceived:PostEvent</masterLabel>
+        <translation><!-- EmailNotReceived:PostEvent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EmailNotReceived:RecordingInvitation</masterLabel>
+        <translation><!-- EmailNotReceived:RecordingInvitation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EmailNotReceived:Registration</masterLabel>
+        <translation><!-- EmailNotReceived:Registration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EmailNotReceived:WelcomeEmail</masterLabel>
+        <translation><!-- EmailNotReceived:WelcomeEmail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error 404: File not found/Page not found</masterLabel>
+        <translation><!-- Error 404: File not found/Page not found --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error Message Received While Recording</masterLabel>
+        <translation><!-- Error Message Received While Recording --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error Message while Screen Sharing</masterLabel>
+        <translation><!-- Error Message while Screen Sharing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error: Country Code Must Be Zero</masterLabel>
+        <translation><!-- Error: Country Code Must Be Zero --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error: Event Has Reached Capacity</masterLabel>
+        <translation><!-- Error: Event Has Reached Capacity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error: No Service</masterLabel>
+        <translation><!-- Error: No Service --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error: Not translated</masterLabel>
+        <translation><!-- Error: Not translated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error: Server Error</masterLabel>
+        <translation><!-- Error: Server Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error: Unallocated Number</masterLabel>
+        <translation><!-- Error: Unallocated Number --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:2010Error:DialOutWasPlaced/NoAnswer</masterLabel>
+        <translation><!-- Error:2010Error:DialOutWasPlaced/NoAnswer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:404ApacheTomcatError</masterLabel>
+        <translation><!-- Error:404ApacheTomcatError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:4125Error/SetupClient</masterLabel>
+        <translation><!-- Error:4125Error/SetupClient --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:5039Meeting#Incorrect</masterLabel>
+        <translation><!-- Error:5039Meeting#Incorrect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:ASeriousErrorOccur’d</masterLabel>
+        <translation><!-- Error:ASeriousErrorOccur’d --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:AccessLoginSvcFail</masterLabel>
+        <translation><!-- Error:AccessLoginSvcFail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:Account Does Not Specify Meeting Type</masterLabel>
+        <translation><!-- Error:Account Does Not Specify Meeting Type --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:AdobeConnectAddInStopWorking</masterLabel>
+        <translation><!-- Error:AdobeConnectAddInStopWorking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:AnErrorEncountered</masterLabel>
+        <translation><!-- Error:AnErrorEncountered --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:AnErrorOccur’d:Wait/TryAgain</masterLabel>
+        <translation><!-- Error:AnErrorOccur’d:Wait/TryAgain --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:AnErrorOccur’dSavingPage/AddingMod</masterLabel>
+        <translation><!-- Error:AnErrorOccur’dSavingPage/AddingMod --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:AnErrorOccur’dVerifyingServerCert</masterLabel>
+        <translation><!-- Error:AnErrorOccur’dVerifyingServerCert --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:AudioConfFailtoStart</masterLabel>
+        <translation><!-- Error:AudioConfFailtoStart --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:BrowserNotSupported</masterLabel>
+        <translation><!-- Error:BrowserNotSupported --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:CallNotCompleted/HasEnded</masterLabel>
+        <translation><!-- Error:CallNotCompleted/HasEnded --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:Changing/ResettingPassword</masterLabel>
+        <translation><!-- Error:Changing/ResettingPassword --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:ClickingViewDialin#List</masterLabel>
+        <translation><!-- Error:ClickingViewDialin#List --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:JavaAppBlockingInstall</masterLabel>
+        <translation><!-- Error:JavaAppBlockingInstall --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:Launch.rtc</masterLabel>
+        <translation><!-- Error:Launch.rtc --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:LaunchingJabber</masterLabel>
+        <translation><!-- Error:LaunchingJabber --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:LiveMeetingCan&#39;tConnectMeeting</masterLabel>
+        <translation><!-- Error:LiveMeetingCan&apos;tConnectMeeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:LoadingProperties</masterLabel>
+        <translation><!-- Error:LoadingProperties --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:MeetingEnded</masterLabel>
+        <translation><!-- Error:MeetingEnded --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:MeetingOver</masterLabel>
+        <translation><!-- Error:MeetingOver --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:MobileDeviceNotSupported/WebExSite</masterLabel>
+        <translation><!-- Error:MobileDeviceNotSupported/WebExSite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:No Internet Connection</masterLabel>
+        <translation><!-- Error:No Internet Connection --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:OSNotSupported</masterLabel>
+        <translation><!-- Error:OSNotSupported --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:ObjectReferenceNotSettoReferenceofObject</masterLabel>
+        <translation><!-- Error:ObjectReferenceNotSettoReferenceofObject --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:PleaseProvideVerifiedTeleConfAcct</masterLabel>
+        <translation><!-- Error:PleaseProvideVerifiedTeleConfAcct --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:PopupBlocker</masterLabel>
+        <translation><!-- Error:PopupBlocker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:Recording upload</masterLabel>
+        <translation><!-- Error:Recording upload --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:SetupUnsuccessful/TryAgain</masterLabel>
+        <translation><!-- Error:SetupUnsuccessful/TryAgain --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:ThereSeems/Issue w/Meeting</masterLabel>
+        <translation><!-- Error:ThereSeems/Issue w/Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:ThereWasError/Server</masterLabel>
+        <translation><!-- Error:ThereWasError/Server --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:Unable to Load Client Data</masterLabel>
+        <translation><!-- Error:Unable to Load Client Data --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:Unexpected Error</masterLabel>
+        <translation><!-- Error:Unexpected Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:UploadingContent</masterLabel>
+        <translation><!-- Error:UploadingContent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:We&#39;ve Detected an Error</masterLabel>
+        <translation><!-- Error:We&apos;ve Detected an Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:WeCan&#39;tLocateURLRequested</masterLabel>
+        <translation><!-- Error:WeCan&apos;tLocateURLRequested --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:YouAreExperiencingConnectionIssue</masterLabel>
+        <translation><!-- Error:YouAreExperiencingConnectionIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:YouDoNotHaveNecessaryAudioCapability</masterLabel>
+        <translation><!-- Error:YouDoNotHaveNecessaryAudioCapability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:YouHaveMultipleMeetingsinProgress</masterLabel>
+        <translation><!-- Error:YouHaveMultipleMeetingsinProgress --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:YouareNoLongerConnectedMeeting/Reconnect</masterLabel>
+        <translation><!-- Error:YouareNoLongerConnectedMeeting/Reconnect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error:YourCurrentSecuritySettingProhibitActiveX</masterLabel>
+        <translation><!-- Error:YourCurrentSecuritySettingProhibitActiveX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event N/A</masterLabel>
+        <translation><!-- Event N/A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Producer Late/Not Present for Conf</masterLabel>
+        <translation><!-- Event Producer Late/Not Present for Conf --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event:ProducerLateNoShow</masterLabel>
+        <translation><!-- Event:ProducerLateNoShow --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FailConnect/ThirdPartyWebApp:SFDC,Weather,FB</masterLabel>
+        <translation><!-- FailConnect/ThirdPartyWebApp:SFDC,Weather,FB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FailDisplayCustomContent</masterLabel>
+        <translation><!-- FailDisplayCustomContent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FailSyncWearable/Watch</masterLabel>
+        <translation><!-- FailSyncWearable/Watch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FastBusy</masterLabel>
+        <translation><!-- FastBusy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FaultyHardware</masterLabel>
+        <translation><!-- FaultyHardware --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Feature:Greyed</masterLabel>
+        <translation><!-- Feature:Greyed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Feedback</masterLabel>
+        <translation><!-- Feedback --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>File Share Frozen</masterLabel>
+        <translation><!-- File Share Frozen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>File Share not visible</masterLabel>
+        <translation><!-- File Share not visible --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>File Share not visible to 1 person</masterLabel>
+        <translation><!-- File Share not visible to 1 person --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>File Share not visible to multiple people</masterLabel>
+        <translation><!-- File Share not visible to multiple people --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>File Upload Issue</masterLabel>
+        <translation><!-- File Upload Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FileDoesn&#39;tExist:AudioStore1</masterLabel>
+        <translation><!-- FileDoesn&apos;tExist:AudioStore1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FileDoesn&#39;tExist:Error</masterLabel>
+        <translation><!-- FileDoesn&apos;tExist:Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FileLibraryIssue:FileUploadFail</masterLabel>
+        <translation><!-- FileLibraryIssue:FileUploadFail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FileLibraryIssue:Presentation</masterLabel>
+        <translation><!-- FileLibraryIssue:Presentation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FileLibraryIssue:Stuck/ConversionStatus</masterLabel>
+        <translation><!-- FileLibraryIssue:Stuck/ConversionStatus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FileLibraryIssue:Video</masterLabel>
+        <translation><!-- FileLibraryIssue:Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FileUploadFail</masterLabel>
+        <translation><!-- FileUploadFail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FileWon&#39;tLoad</masterLabel>
+        <translation><!-- FileWon&apos;tLoad --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Firewall/ProxyServer</masterLabel>
+        <translation><!-- Firewall/ProxyServer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FlashCache/Version</masterLabel>
+        <translation><!-- FlashCache/Version --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FlashIssue</masterLabel>
+        <translation><!-- FlashIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FlashIssue:InstallationError</masterLabel>
+        <translation><!-- FlashIssue:InstallationError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FlashIssue:ShockwavePlayerCrashedError</masterLabel>
+        <translation><!-- FlashIssue:ShockwavePlayerCrashedError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FlashNotSupported</masterLabel>
+        <translation><!-- FlashNotSupported --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FlashNotSupportedIssue</masterLabel>
+        <translation><!-- FlashNotSupportedIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FlashValidationIssue</masterLabel>
+        <translation><!-- FlashValidationIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FlickeringMouse</masterLabel>
+        <translation><!-- FlickeringMouse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FraudUsage</masterLabel>
+        <translation><!-- FraudUsage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Frozen Webcam</masterLabel>
+        <translation><!-- Frozen Webcam --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Garbled Audio</masterLabel>
+        <translation><!-- Garbled Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GeneralFail</masterLabel>
+        <translation><!-- GeneralFail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GetUserMediaError/Webcam in Use</masterLabel>
+        <translation><!-- GetUserMediaError/Webcam in Use --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GreyScreen/AfterGMIcon</masterLabel>
+        <translation><!-- GreyScreen/AfterGMIcon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GreyScreen/Screensharing</masterLabel>
+        <translation><!-- GreyScreen/Screensharing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GroupCallFeatureFailtoConnectUser</masterLabel>
+        <translation><!-- GroupCallFeatureFailtoConnectUser --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Guest Cannot See Screen Share</masterLabel>
+        <translation><!-- Guest Cannot See Screen Share --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Headset Device issue</masterLabel>
+        <translation><!-- Headset Device issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Headshots Not Displayed/Displaying Incorrectly</masterLabel>
+        <translation><!-- Headshots Not Displayed/Displaying Incorrectly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Home Calendar Integration</masterLabel>
+        <translation><!-- Home Calendar Integration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Host:Controls Use Error</masterLabel>
+        <translation><!-- Host:Controls Use Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HostJoins Meeting asPart</masterLabel>
+        <translation><!-- HostJoins Meeting asPart --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HostJoins asGuest</masterLabel>
+        <translation><!-- HostJoins asGuest --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IE Plugin Install/Launch error</masterLabel>
+        <translation><!-- IE Plugin Install/Launch error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Image Is Too Small</masterLabel>
+        <translation><!-- Image Is Too Small --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Image Quality Issue</masterLabel>
+        <translation><!-- Image Quality Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Room Chat Issue</masterLabel>
+        <translation><!-- In Room Chat Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Room Feature - Chat issue - Support Chat</masterLabel>
+        <translation><!-- In Room Feature - Chat issue - Support Chat --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InRoom:AnnotationIssue</masterLabel>
+        <translation><!-- InRoom:AnnotationIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InRoom:Chat/SupportChat</masterLabel>
+        <translation><!-- InRoom:Chat/SupportChat --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InRoom:ChatIssue:Public/PrivateChatinApp</masterLabel>
+        <translation><!-- InRoom:ChatIssue:Public/PrivateChatinApp --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InRoom:PassControlIssue</masterLabel>
+        <translation><!-- InRoom:PassControlIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InRoom:PollingIssue</masterLabel>
+        <translation><!-- InRoom:PollingIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InRoom:Q&amp;A</masterLabel>
+        <translation><!-- InRoom:Q&amp;A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InRoom:RaiseHandNotWorking</masterLabel>
+        <translation><!-- InRoom:RaiseHandNotWorking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InRoom:RoomNotesIssueNotDisplayed</masterLabel>
+        <translation><!-- InRoom:RoomNotesIssueNotDisplayed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InRoom:RoomNotesIssueNotSaving</masterLabel>
+        <translation><!-- InRoom:RoomNotesIssueNotSaving --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InRoom:RoomNotesIssueUnabletoEmail</masterLabel>
+        <translation><!-- InRoom:RoomNotesIssueUnabletoEmail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InRoom:WhiteboardIssue</masterLabel>
+        <translation><!-- InRoom:WhiteboardIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect Content/Information Displayed in Video Stream</masterLabel>
+        <translation><!-- Incorrect Content/Information Displayed in Video Stream --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect Date/Time/Duration in Meeting Schedule</masterLabel>
+        <translation><!-- Incorrect Date/Time/Duration in Meeting Schedule --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect Information in Voicemail Notification Email</masterLabel>
+        <translation><!-- Incorrect Information in Voicemail Notification Email --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect Information on Registration Confirmation Email</masterLabel>
+        <translation><!-- Incorrect Information on Registration Confirmation Email --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect Information on Reminder Email</masterLabel>
+        <translation><!-- Incorrect Information on Reminder Email --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect Listen by Phone Details Available</masterLabel>
+        <translation><!-- Incorrect Listen by Phone Details Available --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect Meeting Module Scheduled</masterLabel>
+        <translation><!-- Incorrect Meeting Module Scheduled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect Minutes on Post Conf Report</masterLabel>
+        <translation><!-- Incorrect Minutes on Post Conf Report --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect Presentation Slide Displayed</masterLabel>
+        <translation><!-- Incorrect Presentation Slide Displayed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect Prompt Played</masterLabel>
+        <translation><!-- Incorrect Prompt Played --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect Recording Posted</masterLabel>
+        <translation><!-- Incorrect Recording Posted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect Registration Page Data</masterLabel>
+        <translation><!-- Incorrect Registration Page Data --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect Stream Selected</masterLabel>
+        <translation><!-- Incorrect Stream Selected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IncorrectAudioConfPaired w/VideoConf</masterLabel>
+        <translation><!-- IncorrectAudioConfPaired w/VideoConf --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IncorrectAudioConfPaired w/WebConf</masterLabel>
+        <translation><!-- IncorrectAudioConfPaired w/WebConf --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IncorrectBrandingDisplaying</masterLabel>
+        <translation><!-- IncorrectBrandingDisplaying --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IncorrectCredentialMsg</masterLabel>
+        <translation><!-- IncorrectCredentialMsg --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IncorrectDate/Time/Duration/Phone</masterLabel>
+        <translation><!-- IncorrectDate/Time/Duration/Phone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IncorrectLayout</masterLabel>
+        <translation><!-- IncorrectLayout --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IncorrectLoginCredential:AcctNotFoundError</masterLabel>
+        <translation><!-- IncorrectLoginCredential:AcctNotFoundError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IncorrectLoginCredential:Msg</masterLabel>
+        <translation><!-- IncorrectLoginCredential:Msg --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IncorrectLoginCredential:Other</masterLabel>
+        <translation><!-- IncorrectLoginCredential:Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IncorrectLoginValue</masterLabel>
+        <translation><!-- IncorrectLoginValue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IncorrectLoginValue:AcctDeactivated</masterLabel>
+        <translation><!-- IncorrectLoginValue:AcctDeactivated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IncorrectLoginValue:AcctLockedOut</masterLabel>
+        <translation><!-- IncorrectLoginValue:AcctLockedOut --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IncorrectLoginValue:Error</masterLabel>
+        <translation><!-- IncorrectLoginValue:Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IncorrectTime</masterLabel>
+        <translation><!-- IncorrectTime --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InstallError:HybridAudioClient</masterLabel>
+        <translation><!-- InstallError:HybridAudioClient --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InstallError:MeetingClient</masterLabel>
+        <translation><!-- InstallError:MeetingClient --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InstallError:ProductivityTool</masterLabel>
+        <translation><!-- InstallError:ProductivityTool --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InstallIssue</masterLabel>
+        <translation><!-- InstallIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Insufficient Information to Join</masterLabel>
+        <translation><!-- Insufficient Information to Join --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Insufficient Meeting Host Privileges Error</masterLabel>
+        <translation><!-- Insufficient Meeting Host Privileges Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Insufficient/IncorrectStaffing</masterLabel>
+        <translation><!-- Insufficient/IncorrectStaffing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Interference in Audio (Music on Hold, Background Noise, etc.)</masterLabel>
+        <translation><!-- Interference in Audio (Music on Hold, Background Noise, etc.) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Internal Testing</masterLabel>
+        <translation><!-- Internal Testing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Internal Testing:ConfirmEmailTesting</masterLabel>
+        <translation><!-- Internal Testing:ConfirmEmailTesting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InternetCache</masterLabel>
+        <translation><!-- InternetCache --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invalid Meeting URL</masterLabel>
+        <translation><!-- Invalid Meeting URL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InvalidFileError</masterLabel>
+        <translation><!-- InvalidFileError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InvalidInput/SysErrorAttemptingViewRecording</masterLabel>
+        <translation><!-- InvalidInput/SysErrorAttemptingViewRecording --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InvalidInput/SysErrorJoining</masterLabel>
+        <translation><!-- InvalidInput/SysErrorJoining --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InvalidPasscode</masterLabel>
+        <translation><!-- InvalidPasscode --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InvalidPasscode:Expired/Deleted</masterLabel>
+        <translation><!-- InvalidPasscode:Expired/Deleted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InvalidPasscode:IncorrectValue</masterLabel>
+        <translation><!-- InvalidPasscode:IncorrectValue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InvalidPasscode:Msg</masterLabel>
+        <translation><!-- InvalidPasscode:Msg --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InvalidPasscode:PromptReplaysCorrectPC</masterLabel>
+        <translation><!-- InvalidPasscode:PromptReplaysCorrectPC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InvalidPasscode:PromptReplaysIncorrectPC</masterLabel>
+        <translation><!-- InvalidPasscode:PromptReplaysIncorrectPC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InvalidRequestError/ChangingPassword</masterLabel>
+        <translation><!-- InvalidRequestError/ChangingPassword --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>InvalidTelephonyValueError/OnSite</masterLabel>
+        <translation><!-- InvalidTelephonyValueError/OnSite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invite:MeetingInfoIncorrect</masterLabel>
+        <translation><!-- Invite:MeetingInfoIncorrect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invite:MeetingInfoNotDisplayed</masterLabel>
+        <translation><!-- Invite:MeetingInfoNotDisplayed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invite:MissingDetail</masterLabel>
+        <translation><!-- Invite:MissingDetail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invite:NotGoingOut</masterLabel>
+        <translation><!-- Invite:NotGoingOut --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invite:TruncatedData</masterLabel>
+        <translation><!-- Invite:TruncatedData --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invite:UnabletoReceive</masterLabel>
+        <translation><!-- Invite:UnabletoReceive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invites - Meeting Information Incorrect</masterLabel>
+        <translation><!-- Invites - Meeting Information Incorrect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invites - Meeting Information Not Displayed</masterLabel>
+        <translation><!-- Invites - Meeting Information Not Displayed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invites - Not Going Out</masterLabel>
+        <translation><!-- Invites - Not Going Out --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invites - Not Received</masterLabel>
+        <translation><!-- Invites - Not Received --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Issue Joining Meeting Via Invite Link</masterLabel>
+        <translation><!-- Issue Joining Meeting Via Invite Link --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Issue Managing Accounts</masterLabel>
+        <translation><!-- Issue Managing Accounts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Issue Starting File Presentation</masterLabel>
+        <translation><!-- Issue Starting File Presentation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Issue Starting Recording</masterLabel>
+        <translation><!-- Issue Starting Recording --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Issue Stopping Recording</masterLabel>
+        <translation><!-- Issue Stopping Recording --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Issue While Presenting File</masterLabel>
+        <translation><!-- Issue While Presenting File --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Issue With Application Sharing</masterLabel>
+        <translation><!-- Issue With Application Sharing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JavaIssue</masterLabel>
+        <translation><!-- JavaIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JoiMeetingIssue:JoinButton:Greyed</masterLabel>
+        <translation><!-- JoiMeetingIssue:JoinButton:Greyed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JoinMeetingError</masterLabel>
+        <translation><!-- JoinMeetingError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JoinMeetingError:ExperiencingConnectionIssue</masterLabel>
+        <translation><!-- JoinMeetingError:ExperiencingConnectionIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JoinMeetingIssue:ConnectionFail</masterLabel>
+        <translation><!-- JoinMeetingIssue:ConnectionFail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JoinMeetingIssue:NothingHappens/JoinMeetingSelected</masterLabel>
+        <translation><!-- JoinMeetingIssue:NothingHappens/JoinMeetingSelected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JoinMeetingIssue:Stuck/OneMomentScreen</masterLabel>
+        <translation><!-- JoinMeetingIssue:Stuck/OneMomentScreen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Joined Incorrect Meeting</masterLabel>
+        <translation><!-- Joined Incorrect Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Latency</masterLabel>
+        <translation><!-- Latency --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Latency:LoggingIn</masterLabel>
+        <translation><!-- Latency:LoggingIn --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Latency:PerformingSearch</masterLabel>
+        <translation><!-- Latency:PerformingSearch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Latency:Screensharing</masterLabel>
+        <translation><!-- Latency:Screensharing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LatestVersionScreenshare/NotDetected</masterLabel>
+        <translation><!-- LatestVersionScreenshare/NotDetected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LatestVersionScreenshare/NotInstalled</masterLabel>
+        <translation><!-- LatestVersionScreenshare/NotInstalled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LayoutIssue</masterLabel>
+        <translation><!-- LayoutIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LayoutIssue:InConf</masterLabel>
+        <translation><!-- LayoutIssue:InConf --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LayoutIssue:LocalScreen</masterLabel>
+        <translation><!-- LayoutIssue:LocalScreen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Line Labeled Incorrectly (Webcast/recording,etc)</masterLabel>
+        <translation><!-- Line Labeled Incorrectly (Webcast/recording,etc) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Line Placed Incorrectly</masterLabel>
+        <translation><!-- Line Placed Incorrectly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Link Line Disconnected</masterLabel>
+        <translation><!-- Link Line Disconnected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LinksNotProvided</masterLabel>
+        <translation><!-- LinksNotProvided --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LiveMeetingUserAlreadyDefined Error</masterLabel>
+        <translation><!-- LiveMeetingUserAlreadyDefined Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LocalCallRoutingFail</masterLabel>
+        <translation><!-- LocalCallRoutingFail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LocalNetwork/WifiFail</masterLabel>
+        <translation><!-- LocalNetwork/WifiFail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lock Meeting Issue</masterLabel>
+        <translation><!-- Lock Meeting Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LoggedOut/AcctMgtSite</masterLabel>
+        <translation><!-- LoggedOut/AcctMgtSite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Login Issue</masterLabel>
+        <translation><!-- Login Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LoginRuntimeError</masterLabel>
+        <translation><!-- LoginRuntimeError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Long Hold Time</masterLabel>
+        <translation><!-- Long Hold Time --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Loss Video</masterLabel>
+        <translation><!-- Loss Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Loss of Audio/Video</masterLabel>
+        <translation><!-- Loss of Audio/Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LossAudio</masterLabel>
+        <translation><!-- LossAudio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LowAudioQuality Error</masterLabel>
+        <translation><!-- LowAudioQuality Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LowBandwidth Indicator</masterLabel>
+        <translation><!-- LowBandwidth Indicator --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LowQualityImage/Screensharing</masterLabel>
+        <translation><!-- LowQualityImage/Screensharing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LowSignalStrength Error</masterLabel>
+        <translation><!-- LowSignalStrength Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MacUser/ScreenshareFileCorruptError</masterLabel>
+        <translation><!-- MacUser/ScreenshareFileCorruptError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Maximum Limit on Live Viewer Reached</masterLabel>
+        <translation><!-- Maximum Limit on Live Viewer Reached --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Meeting Error Message</masterLabel>
+        <translation><!-- Meeting Error Message --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Meeting Settings - Other</masterLabel>
+        <translation><!-- Meeting Settings - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Meeting Settings - Profile Update Failed</masterLabel>
+        <translation><!-- Meeting Settings - Profile Update Failed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Meeting Settings - Unable to Save Account Details</masterLabel>
+        <translation><!-- Meeting Settings - Unable to Save Account Details --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MeetingCan&#39;tSchedule/CertainTime</masterLabel>
+        <translation><!-- MeetingCan&apos;tSchedule/CertainTime --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MeetingInfoIncorrect/NotDisplaying:Invite</masterLabel>
+        <translation><!-- MeetingInfoIncorrect/NotDisplaying:Invite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MeetingPanel:HostOnly/StageIssue</masterLabel>
+        <translation><!-- MeetingPanel:HostOnly/StageIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MeetingPanel:PartsNotDisplayed</masterLabel>
+        <translation><!-- MeetingPanel:PartsNotDisplayed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MeetingPanel:UnableMoveGuest/Stage</masterLabel>
+        <translation><!-- MeetingPanel:UnableMoveGuest/Stage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MeetingRoomSelectedInvalid Error</masterLabel>
+        <translation><!-- MeetingRoomSelectedInvalid Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MeetingSetting:Greyed</masterLabel>
+        <translation><!-- MeetingSetting:Greyed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MeetingSetting:Other</masterLabel>
+        <translation><!-- MeetingSetting:Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MeetingSetting:ProfileUpdateFail</masterLabel>
+        <translation><!-- MeetingSetting:ProfileUpdateFail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MeetingSetting:Timeout</masterLabel>
+        <translation><!-- MeetingSetting:Timeout --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MeetingSetting:UnableSaveAcctDetail</masterLabel>
+        <translation><!-- MeetingSetting:UnableSaveAcctDetail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MgtSysAlert:AuthenticationFail</masterLabel>
+        <translation><!-- MgtSysAlert:AuthenticationFail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MgtSysAlert:GatekeeperRegistrationIssue</masterLabel>
+        <translation><!-- MgtSysAlert:GatekeeperRegistrationIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MgtSysAlert:ISDN Issue</masterLabel>
+        <translation><!-- MgtSysAlert:ISDN Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MgtSysAlert:Missing/IncorrectMgtAddr</masterLabel>
+        <translation><!-- MgtSysAlert:Missing/IncorrectMgtAddr --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MgtSysAlert:PhonebookIssue</masterLabel>
+        <translation><!-- MgtSysAlert:PhonebookIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MgtSysAlert:Port/LicenseResourceLimit</masterLabel>
+        <translation><!-- MgtSysAlert:Port/LicenseResourceLimit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MgtSysAlert:ProvisioningIssue</masterLabel>
+        <translation><!-- MgtSysAlert:ProvisioningIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MgtSysAlert:SysNotResponding</masterLabel>
+        <translation><!-- MgtSysAlert:SysNotResponding --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MgtSysAlert:TimezoneMismatch</masterLabel>
+        <translation><!-- MgtSysAlert:TimezoneMismatch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MicError</masterLabel>
+        <translation><!-- MicError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mismanagment of Q&amp;A/Polling</masterLabel>
+        <translation><!-- Mismanagment of Q&amp;A/Polling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Missing:Content</masterLabel>
+        <translation><!-- Missing:Content --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Missing:ContentShare/Conf</masterLabel>
+        <translation><!-- Missing:ContentShare/Conf --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Missing:Option/SaveRecording/MP4</masterLabel>
+        <translation><!-- Missing:Option/SaveRecording/MP4 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Missing:SysComponent</masterLabel>
+        <translation><!-- Missing:SysComponent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Missing:TransferredRecording</masterLabel>
+        <translation><!-- Missing:TransferredRecording --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MobileDevice NotSupported/WebExSite</masterLabel>
+        <translation><!-- MobileDevice NotSupported/WebExSite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Moderator*Feature NotWorking</masterLabel>
+        <translation><!-- Moderator*Feature NotWorking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Msft Email:ProblemDetected/Integration</masterLabel>
+        <translation><!-- Msft Email:ProblemDetected/Integration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Muffled/Garbled Audio</masterLabel>
+        <translation><!-- Muffled/Garbled Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MultiTask Widget Issue</masterLabel>
+        <translation><!-- MultiTask Widget Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Multiple Lines Disconnected</masterLabel>
+        <translation><!-- Multiple Lines Disconnected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MultipleAcctsFound/SameEmailAddr</masterLabel>
+        <translation><!-- MultipleAcctsFound/SameEmailAddr --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Music On Hold</masterLabel>
+        <translation><!-- Music On Hold --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Music/Silence in Recording File</masterLabel>
+        <translation><!-- Music/Silence in Recording File --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Music/Sound/Noise:ConfInterference</masterLabel>
+        <translation><!-- Music/Sound/Noise:ConfInterference --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MusicError</masterLabel>
+        <translation><!-- MusicError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MusicHold/Bridge/ConfInterference</masterLabel>
+        <translation><!-- MusicHold/Bridge/ConfInterference --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MusicHold/Client/ConfInterference</masterLabel>
+        <translation><!-- MusicHold/Client/ConfInterference --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mute Feature Not Working</masterLabel>
+        <translation><!-- Mute Feature Not Working --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mute Feature Not Working - (All)</masterLabel>
+        <translation><!-- Mute Feature Not Working - (All) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mute Feature Not Working - (Individual)</masterLabel>
+        <translation><!-- Mute Feature Not Working - (Individual) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MuteAllFeature NotWorking/WebApp</masterLabel>
+        <translation><!-- MuteAllFeature NotWorking/WebApp --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MuteFeature NotWorking:All</masterLabel>
+        <translation><!-- MuteFeature NotWorking:All --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MuteFeature NotWorking:Individual</masterLabel>
+        <translation><!-- MuteFeature NotWorking:Individual --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MyRCPlus/UsersCallSupportLoggingIn</masterLabel>
+        <translation><!-- MyRCPlus/UsersCallSupportLoggingIn --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Network Connection Error</masterLabel>
+        <translation><!-- Network Connection Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NetworkConfig</masterLabel>
+        <translation><!-- NetworkConfig --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NetworkError</masterLabel>
+        <translation><!-- NetworkError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NetworkError/GoogleChrome</masterLabel>
+        <translation><!-- NetworkError/GoogleChrome --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NewAdobeSite</masterLabel>
+        <translation><!-- NewAdobeSite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NewLiveMeetingSite</masterLabel>
+        <translation><!-- NewLiveMeetingSite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NewWebExSite</masterLabel>
+        <translation><!-- NewWebExSite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Audio in Headset</masterLabel>
+        <translation><!-- No Audio in Headset --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Option To Call Computer</masterLabel>
+        <translation><!-- No Option To Call Computer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Option to Schedule Meeting</masterLabel>
+        <translation><!-- No Option to Schedule Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Option to Schedule Web Meeting</masterLabel>
+        <translation><!-- No Option to Schedule Web Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Power to Device</masterLabel>
+        <translation><!-- No Power to Device --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Voicemail Notification Received</masterLabel>
+        <translation><!-- No Voicemail Notification Received --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NoDataReceivedWebsite N/A</masterLabel>
+        <translation><!-- NoDataReceivedWebsite N/A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NoOption:CallComputer</masterLabel>
+        <translation><!-- NoOption:CallComputer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NoOption:CallDevice</masterLabel>
+        <translation><!-- NoOption:CallDevice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NoOption:JoinbyPhone</masterLabel>
+        <translation><!-- NoOption:JoinbyPhone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NoOption:RecordAudio&amp;Web</masterLabel>
+        <translation><!-- NoOption:RecordAudio&amp;Web --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NoOption:ScheduleWebMeeting</masterLabel>
+        <translation><!-- NoOption:ScheduleWebMeeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NoPower</masterLabel>
+        <translation><!-- NoPower --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NoSound/PlayingBackNetwork:BasedRecording</masterLabel>
+        <translation><!-- NoSound/PlayingBackNetwork:BasedRecording --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NoiseInterferenceConf/VM,Messaging,Background</masterLabel>
+        <translation><!-- NoiseInterferenceConf/VM,Messaging,Background --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NonSpecificErrorMsg</masterLabel>
+        <translation><!-- NonSpecificErrorMsg --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NothingHappen:ClickJoin</masterLabel>
+        <translation><!-- NothingHappen:ClickJoin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NothingHappen:ClickScheduleFromDesktopApp</masterLabel>
+        <translation><!-- NothingHappen:ClickScheduleFromDesktopApp --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NothingHappen:ClickShareMyScreen</masterLabel>
+        <translation><!-- NothingHappen:ClickShareMyScreen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>One Way Audio</masterLabel>
+        <translation><!-- One Way Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OneWayAudio</masterLabel>
+        <translation><!-- OneWayAudio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Op/Conf/ESProtocolNotFollowed</masterLabel>
+        <translation><!-- Op/Conf/ESProtocolNotFollowed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Op:IncorrectInfo/MissingRequirements</masterLabel>
+        <translation><!-- Op:IncorrectInfo/MissingRequirements --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Op:Missed QA</masterLabel>
+        <translation><!-- Op:Missed QA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Op:MissedPolling</masterLabel>
+        <translation><!-- Op:MissedPolling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Op:NotPrep</masterLabel>
+        <translation><!-- Op:NotPrep --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Op:PoorScriptDelivery</masterLabel>
+        <translation><!-- Op:PoorScriptDelivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Op:Script Error</masterLabel>
+        <translation><!-- Op:Script Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Op:UnavailableDuringConf</masterLabel>
+        <translation><!-- Op:UnavailableDuringConf --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Op:UnavailableHostControls</masterLabel>
+        <translation><!-- Op:UnavailableHostControls --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OpNetworkConnectionLost</masterLabel>
+        <translation><!-- OpNetworkConnectionLost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OpRecallNotWorking</masterLabel>
+        <translation><!-- OpRecallNotWorking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Operator Line Disconnected</masterLabel>
+        <translation><!-- Operator Line Disconnected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Operator Missed Q&amp;A/Polling Queue</masterLabel>
+        <translation><!-- Operator Missed Q&amp;A/Polling Queue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Operator Unavailable/Unresponsive on Host Controls</masterLabel>
+        <translation><!-- Operator Unavailable/Unresponsive on Host Controls --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Operator Unavailable/Unresponsive on Tech Chat</masterLabel>
+        <translation><!-- Operator Unavailable/Unresponsive on Tech Chat --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other:FeatureGreyed</masterLabel>
+        <translation><!-- Other:FeatureGreyed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other:HumanError</masterLabel>
+        <translation><!-- Other:HumanError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other:NonHumanError</masterLabel>
+        <translation><!-- Other:NonHumanError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other:Screenshare</masterLabel>
+        <translation><!-- Other:Screenshare --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Overlay Videos Not Functioning</masterLabel>
+        <translation><!-- Overlay Videos Not Functioning --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>P&amp;G LiveMeeting</masterLabel>
+        <translation><!-- P&amp;G LiveMeeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PSTNPartscan&#39;tHearVOIPPart</masterLabel>
+        <translation><!-- PSTNPartscan&apos;tHearVOIPPart --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Packet/SyncLossDetected</masterLabel>
+        <translation><!-- Packet/SyncLossDetected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PageRefreshAfterJoin</masterLabel>
+        <translation><!-- PageRefreshAfterJoin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ParsingError</masterLabel>
+        <translation><!-- ParsingError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Part Could Not View Overlay Video</masterLabel>
+        <translation><!-- Part Could Not View Overlay Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Part Stuck in Waiting Lobby</masterLabel>
+        <translation><!-- Part Stuck in Waiting Lobby --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Part:Can&#39;tAnnotateWhiteboard</masterLabel>
+        <translation><!-- Part:Can&apos;tAnnotateWhiteboard --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Part:Can&#39;tSeeScreenshare</masterLabel>
+        <translation><!-- Part:Can&apos;tSeeScreenshare --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Part:DrawingSharedContent</masterLabel>
+        <translation><!-- Part:DrawingSharedContent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Part:In Pre-Conf</masterLabel>
+        <translation><!-- Part:In Pre-Conf --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Part:Missed Q&amp;A</masterLabel>
+        <translation><!-- Part:Missed Q&amp;A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Part:NotSeeingChanges/MeetingRoom</masterLabel>
+        <translation><!-- Part:NotSeeingChanges/MeetingRoom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Part:UnableJoinConf</masterLabel>
+        <translation><!-- Part:UnableJoinConf --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Part:UnableQueueQuestion</masterLabel>
+        <translation><!-- Part:UnableQueueQuestion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PartListIncorrect</masterLabel>
+        <translation><!-- PartListIncorrect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PartListIssue</masterLabel>
+        <translation><!-- PartListIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PartListLateNotDelievered</masterLabel>
+        <translation><!-- PartListLateNotDelievered --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Participant List Issue</masterLabel>
+        <translation><!-- Participant List Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Password Doesn&#39;tMeetComplexityReqError</masterLabel>
+        <translation><!-- Password Doesn&apos;tMeetComplexityReqError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Password Reset Issue</masterLabel>
+        <translation><!-- Password Reset Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Password ResetEmailNotReceived</masterLabel>
+        <translation><!-- Password ResetEmailNotReceived --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Phones IntoSupport/ResDeadAir</masterLabel>
+        <translation><!-- Phones IntoSupport/ResDeadAir --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PodGreyed/NotAppearing</masterLabel>
+        <translation><!-- PodGreyed/NotAppearing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Polling Not Conducted/Responses Not Saved</masterLabel>
+        <translation><!-- Polling Not Conducted/Responses Not Saved --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Poor Audio Quality</masterLabel>
+        <translation><!-- Poor Audio Quality --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Poor Presentation Quality</masterLabel>
+        <translation><!-- Poor Presentation Quality --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Poor Script Delivery</masterLabel>
+        <translation><!-- Poor Script Delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Poor/No Audio</masterLabel>
+        <translation><!-- Poor/No Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Poor/No Audio&amp;Video</masterLabel>
+        <translation><!-- Poor/No Audio&amp;Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Poor/No Video</masterLabel>
+        <translation><!-- Poor/No Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Post Deliverables Not Sent/Delivered Late</masterLabel>
+        <translation><!-- Post Deliverables Not Sent/Delivered Late --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PrematureDisconnection</masterLabel>
+        <translation><!-- PrematureDisconnection --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PremiereUnableToConnectMsg</masterLabel>
+        <translation><!-- PremiereUnableToConnectMsg --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Presenter Chat Not Available</masterLabel>
+        <translation><!-- Presenter Chat Not Available --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Press 1 Not Working</masterLabel>
+        <translation><!-- Press 1 Not Working --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Primary Streaming Issue</masterLabel>
+        <translation><!-- Primary Streaming Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ProtocolNotFollowed:EnhancedSvs</masterLabel>
+        <translation><!-- ProtocolNotFollowed:EnhancedSvs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ProtocolNotFollowed:EventProduction</masterLabel>
+        <translation><!-- ProtocolNotFollowed:EventProduction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ProtocolNotFollowed:Ops/Conf</masterLabel>
+        <translation><!-- ProtocolNotFollowed:Ops/Conf --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ProtocolNotFollowed:Provisioning</masterLabel>
+        <translation><!-- ProtocolNotFollowed:Provisioning --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ProtocolNotFollowed:Scheduling/Client/Company</masterLabel>
+        <translation><!-- ProtocolNotFollowed:Scheduling/Client/Company --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Provisioning Issue</masterLabel>
+        <translation><!-- Provisioning Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ReachedSupportInsteadofConf</masterLabel>
+        <translation><!-- ReachedSupportInsteadofConf --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Record/PlaybackIssue</masterLabel>
+        <translation><!-- Record/PlaybackIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Record/RecordIssue</masterLabel>
+        <translation><!-- Record/RecordIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recording Could Not Be Edited</masterLabel>
+        <translation><!-- Recording Could Not Be Edited --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recording Delivered Late/Not Delivered</masterLabel>
+        <translation><!-- Recording Delivered Late/Not Delivered --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recording Incomplete</masterLabel>
+        <translation><!-- Recording Incomplete --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recording Not Initiated</masterLabel>
+        <translation><!-- Recording Not Initiated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recording Option Missing</masterLabel>
+        <translation><!-- Recording Option Missing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recording Playback Issue</masterLabel>
+        <translation><!-- Recording Playback Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recording: Incomplete</masterLabel>
+        <translation><!-- Recording: Incomplete --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RecordingEndsPrematurely</masterLabel>
+        <translation><!-- RecordingEndsPrematurely --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RecordingFTPSite</masterLabel>
+        <translation><!-- RecordingFTPSite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RecordingNotAppearingonSite</masterLabel>
+        <translation><!-- RecordingNotAppearingonSite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RecordingNotCaptured</masterLabel>
+        <translation><!-- RecordingNotCaptured --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RecordingNotDelivered</masterLabel>
+        <translation><!-- RecordingNotDelivered --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RecordingNotPosted</masterLabel>
+        <translation><!-- RecordingNotPosted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RecordingNotProvided</masterLabel>
+        <translation><!-- RecordingNotProvided --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RecordingOption:Greyed</masterLabel>
+        <translation><!-- RecordingOption:Greyed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RecordingOther</masterLabel>
+        <translation><!-- RecordingOther --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RecordingQuality</masterLabel>
+        <translation><!-- RecordingQuality --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RecordingStuck/Processing</masterLabel>
+        <translation><!-- RecordingStuck/Processing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RecordingTimeout</masterLabel>
+        <translation><!-- RecordingTimeout --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Redirect To Desktop App Issue</masterLabel>
+        <translation><!-- Redirect To Desktop App Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Redirect To Mobile App Issue</masterLabel>
+        <translation><!-- Redirect To Mobile App Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RegularBusy</masterLabel>
+        <translation><!-- RegularBusy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Remote Desktop Control Issue</masterLabel>
+        <translation><!-- Remote Desktop Control Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Replay/RecordIssue</masterLabel>
+        <translation><!-- Replay/RecordIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ReplayConfirmLetterNotReceived</masterLabel>
+        <translation><!-- ReplayConfirmLetterNotReceived --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ReplayInfoNotCorrect</masterLabel>
+        <translation><!-- ReplayInfoNotCorrect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ReplayInfoNotDisplaying</masterLabel>
+        <translation><!-- ReplayInfoNotDisplaying --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ReplayIssue</masterLabel>
+        <translation><!-- ReplayIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Report N/A</masterLabel>
+        <translation><!-- Report N/A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ReportNotPosted</masterLabel>
+        <translation><!-- ReportNotPosted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ResSysNotWorking/Latent</masterLabel>
+        <translation><!-- ResSysNotWorking/Latent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RoomLoading:BlackScreen</masterLabel>
+        <translation><!-- RoomLoading:BlackScreen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RoomLoading:GreyScreen</masterLabel>
+        <translation><!-- RoomLoading:GreyScreen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RoomLoading:Stuck/SpecificPercent</masterLabel>
+        <translation><!-- RoomLoading:Stuck/SpecificPercent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RunTime Error</masterLabel>
+        <translation><!-- RunTime Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SSO Option NotAvail:JoinRoom</masterLabel>
+        <translation><!-- SSO Option NotAvail:JoinRoom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Save As New/Copying Event Error</masterLabel>
+        <translation><!-- Save As New/Copying Event Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scheduled/Changed/CancelledCall/SvcIncorrect</masterLabel>
+        <translation><!-- Scheduled/Changed/CancelledCall/SvcIncorrect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scheduling PermissionsError</masterLabel>
+        <translation><!-- Scheduling PermissionsError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scheduling/Client/CompanyProtocolNotFollowed</masterLabel>
+        <translation><!-- Scheduling/Client/CompanyProtocolNotFollowed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ScreenHangs:Joining/StuckonConnecting</masterLabel>
+        <translation><!-- ScreenHangs:Joining/StuckonConnecting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ScreenHangs:NavigatingSite</masterLabel>
+        <translation><!-- ScreenHangs:NavigatingSite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ScreenLaunchFail</masterLabel>
+        <translation><!-- ScreenLaunchFail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Screenshare Frozen</masterLabel>
+        <translation><!-- Screenshare Frozen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Screenshare Not Visible to 1 Person</masterLabel>
+        <translation><!-- Screenshare Not Visible to 1 Person --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Screenshare Not Visible to Multiple People</masterLabel>
+        <translation><!-- Screenshare Not Visible to Multiple People --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Screenshare Stopped Unexpectedly</masterLabel>
+        <translation><!-- Screenshare Stopped Unexpectedly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Screenshare not visible</masterLabel>
+        <translation><!-- Screenshare not visible --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ScreenshareCrash</masterLabel>
+        <translation><!-- ScreenshareCrash --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ScreenshareError</masterLabel>
+        <translation><!-- ScreenshareError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ScreenshareFailLaunch</masterLabel>
+        <translation><!-- ScreenshareFailLaunch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ScreenshareFailLaunch:Host/Guest</masterLabel>
+        <translation><!-- ScreenshareFailLaunch:Host/Guest --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ScreenshareLags/Realtime2+Seconds</masterLabel>
+        <translation><!-- ScreenshareLags/Realtime2+Seconds --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ScreenshareinProgressStop</masterLabel>
+        <translation><!-- ScreenshareinProgressStop --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Script Error (opening/Q&amp;A,etc)</masterLabel>
+        <translation><!-- Script Error (opening/Q&amp;A,etc) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Search Issue</masterLabel>
+        <translation><!-- Search Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SecuritySetting:ReduceSecurity/Browser</masterLabel>
+        <translation><!-- SecuritySetting:ReduceSecurity/Browser --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Server:Error</masterLabel>
+        <translation><!-- Server:Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Server:NotRespondingError</masterLabel>
+        <translation><!-- Server:NotRespondingError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Server:UnableProcessRequest</masterLabel>
+        <translation><!-- Server:UnableProcessRequest --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Server:UnableProcessRequestError</masterLabel>
+        <translation><!-- Server:UnableProcessRequestError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SetupUnsuccessful</masterLabel>
+        <translation><!-- SetupUnsuccessful --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SharingOption:Greyed</masterLabel>
+        <translation><!-- SharingOption:Greyed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SiteDrop:MultipleTime</masterLabel>
+        <translation><!-- SiteDrop:MultipleTime --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SiteDrop:Once/ReconnectOK</masterLabel>
+        <translation><!-- SiteDrop:Once/ReconnectOK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SiteNotConnected</masterLabel>
+        <translation><!-- SiteNotConnected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SlideIssue</masterLabel>
+        <translation><!-- SlideIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SlideIssue:FileUploadFail</masterLabel>
+        <translation><!-- SlideIssue:FileUploadFail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SlideIssue:Sharing</masterLabel>
+        <translation><!-- SlideIssue:Sharing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Softphone</masterLabel>
+        <translation><!-- Softphone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Softphone DialOutFail</masterLabel>
+        <translation><!-- Softphone DialOutFail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Specific Client Request Not Included in Meeting Schedule</masterLabel>
+        <translation><!-- Specific Client Request Not Included in Meeting Schedule --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SpellingError</masterLabel>
+        <translation><!-- SpellingError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SpellingError:Answerline</masterLabel>
+        <translation><!-- SpellingError:Answerline --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SpellingMistake</masterLabel>
+        <translation><!-- SpellingMistake --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spk/Part Joined Late</masterLabel>
+        <translation><!-- Spk/Part Joined Late --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spk/Part Mute/Unmute</masterLabel>
+        <translation><!-- Spk/Part Mute/Unmute --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spk/Part OnHold Music</masterLabel>
+        <translation><!-- Spk/Part OnHold Music --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SplitConf</masterLabel>
+        <translation><!-- SplitConf --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>StarFeature:OtherNotWorking</masterLabel>
+        <translation><!-- StarFeature:OtherNotWorking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Static</masterLabel>
+        <translation><!-- Static --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Streaming/BufferingIssue</masterLabel>
+        <translation><!-- Streaming/BufferingIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stuck:Connecting</masterLabel>
+        <translation><!-- Stuck:Connecting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stuck:SpinningDial</masterLabel>
+        <translation><!-- Stuck:SpinningDial --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stuck:WaitingtoConnectAfterPressingRecord</masterLabel>
+        <translation><!-- Stuck:WaitingtoConnectAfterPressingRecord --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sys Hanging/SearchingforClient</masterLabel>
+        <translation><!-- Sys Hanging/SearchingforClient --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sys Overheating</masterLabel>
+        <translation><!-- Sys Overheating --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sys Running IncorrectSoftwareVersion</masterLabel>
+        <translation><!-- Sys Running IncorrectSoftwareVersion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sys Test Fail</masterLabel>
+        <translation><!-- Sys Test Fail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TestCall/CallMonitoring</masterLabel>
+        <translation><!-- TestCall/CallMonitoring --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ThisCallTerminated/InactivityMsg</masterLabel>
+        <translation><!-- ThisCallTerminated/InactivityMsg --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Timeout</masterLabel>
+        <translation><!-- Timeout --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TimeoutConnecting</masterLabel>
+        <translation><!-- TimeoutConnecting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TimeoutError</masterLabel>
+        <translation><!-- TimeoutError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Toolbar Settings Issue</masterLabel>
+        <translation><!-- Toolbar Settings Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ToolbarNotDisplayingOutlook</masterLabel>
+        <translation><!-- ToolbarNotDisplayingOutlook --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transcription:NotDelievered/Late</masterLabel>
+        <translation><!-- Transcription:NotDelievered/Late --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transcription:PoorQuality</masterLabel>
+        <translation><!-- Transcription:PoorQuality --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TroubleAdding/EditingEnterprise/InternalOnly</masterLabel>
+        <translation><!-- TroubleAdding/EditingEnterprise/InternalOnly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UCF ConversionIssue</masterLabel>
+        <translation><!-- UCF ConversionIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable To Join Meeting</masterLabel>
+        <translation><!-- Unable To Join Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable To Locate VRC Room System Info</masterLabel>
+        <translation><!-- Unable To Locate VRC Room System Info --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable To Start Meeting</masterLabel>
+        <translation><!-- Unable To Start Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable to Join Meeting as Guest</masterLabel>
+        <translation><!-- Unable to Join Meeting as Guest --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable to Locate/Access Recording</masterLabel>
+        <translation><!-- Unable to Locate/Access Recording --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable to Promote Guest</masterLabel>
+        <translation><!-- Unable to Promote Guest --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable to Start Meeting as Host</masterLabel>
+        <translation><!-- Unable to Start Meeting as Host --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable to Start Screen Share</masterLabel>
+        <translation><!-- Unable to Start Screen Share --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:AccessAdminOption</masterLabel>
+        <translation><!-- Unable:AccessAdminOption --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:AccessPortal</masterLabel>
+        <translation><!-- Unable:AccessPortal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:AccessWebcastPage</masterLabel>
+        <translation><!-- Unable:AccessWebcastPage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:Add/DeleteUser</masterLabel>
+        <translation><!-- Unable:Add/DeleteUser --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:AdjustVolume</masterLabel>
+        <translation><!-- Unable:AdjustVolume --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:Change/DeleteCustomContent</masterLabel>
+        <translation><!-- Unable:Change/DeleteCustomContent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:ChatSupport</masterLabel>
+        <translation><!-- Unable:ChatSupport --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:ConnectRecordingServerError</masterLabel>
+        <translation><!-- Unable:ConnectRecordingServerError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:ConnectWebExSvcSite</masterLabel>
+        <translation><!-- Unable:ConnectWebExSvcSite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:Connectvia E164/Connect viaIP</masterLabel>
+        <translation><!-- Unable:Connectvia E164/Connect viaIP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:Connectvia IP/Connect viaISDN</masterLabel>
+        <translation><!-- Unable:Connectvia IP/Connect viaISDN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:Create/SaveGroup:GroupCallFeature</masterLabel>
+        <translation><!-- Unable:Create/SaveGroup:GroupCallFeature --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:Dialin/Connect</masterLabel>
+        <translation><!-- Unable:Dialin/Connect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:DownloadPCsoftclient</masterLabel>
+        <translation><!-- Unable:DownloadPCsoftclient --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:JoinMeetingGuest</masterLabel>
+        <translation><!-- Unable:JoinMeetingGuest --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:JoinMeetingGuest:MeetingNotFound</masterLabel>
+        <translation><!-- Unable:JoinMeetingGuest:MeetingNotFound --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:JoinMeetingGuest:Other</masterLabel>
+        <translation><!-- Unable:JoinMeetingGuest:Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:LaunchMeeting</masterLabel>
+        <translation><!-- Unable:LaunchMeeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:LaunchMeeting/Host</masterLabel>
+        <translation><!-- Unable:LaunchMeeting/Host --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:LaunchMeeting/Toolbar</masterLabel>
+        <translation><!-- Unable:LaunchMeeting/Toolbar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:LoadAllContactsError</masterLabel>
+        <translation><!-- Unable:LoadAllContactsError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:ManageContacts</masterLabel>
+        <translation><!-- Unable:ManageContacts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:ManagePlantronics</masterLabel>
+        <translation><!-- Unable:ManagePlantronics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:ManageSetting</masterLabel>
+        <translation><!-- Unable:ManageSetting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:Mute/UnmuteMic</masterLabel>
+        <translation><!-- Unable:Mute/UnmuteMic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:OperateCamera</masterLabel>
+        <translation><!-- Unable:OperateCamera --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:PromoteUsertoHost</masterLabel>
+        <translation><!-- Unable:PromoteUsertoHost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:ReceiveFree/BusyResponse</masterLabel>
+        <translation><!-- Unable:ReceiveFree/BusyResponse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:RemoteAccessSys</masterLabel>
+        <translation><!-- Unable:RemoteAccessSys --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:ResetPassword</masterLabel>
+        <translation><!-- Unable:ResetPassword --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:ScheduleCall:Free/BusyFeature</masterLabel>
+        <translation><!-- Unable:ScheduleCall:Free/BusyFeature --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:SelectContact</masterLabel>
+        <translation><!-- Unable:SelectContact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:UpdateProfile</masterLabel>
+        <translation><!-- Unable:UpdateProfile --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable:ViewPollingResponse</masterLabel>
+        <translation><!-- Unable:ViewPollingResponse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unedited Archive Delivered</masterLabel>
+        <translation><!-- Unedited Archive Delivered --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unedited Recording Delivered</masterLabel>
+        <translation><!-- Unedited Recording Delivered --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unprofessional Client Interaction</masterLabel>
+        <translation><!-- Unprofessional Client Interaction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Authentication Fail</masterLabel>
+        <translation><!-- User Authentication Fail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Interface Issue</masterLabel>
+        <translation><!-- User Interface Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Joined in Incorrect Role</masterLabel>
+        <translation><!-- User Joined in Incorrect Role --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Limit Reached Error</masterLabel>
+        <translation><!-- User Limit Reached Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Prompted:Update/Install Flash</masterLabel>
+        <translation><!-- User Prompted:Update/Install Flash --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Using Other Vendor</masterLabel>
+        <translation><!-- Using Other Vendor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VRC Presence Missing</masterLabel>
+        <translation><!-- VRC Presence Missing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vendor Issue</masterLabel>
+        <translation><!-- Vendor Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vendor Outage</masterLabel>
+        <translation><!-- Vendor Outage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Verification Code Invalid</masterLabel>
+        <translation><!-- Verification Code Invalid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Verification Process Not Followed</masterLabel>
+        <translation><!-- Verification Process Not Followed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video ISDNGatewayIssue</masterLabel>
+        <translation><!-- Video ISDNGatewayIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video PrematureDisconnection</masterLabel>
+        <translation><!-- Video PrematureDisconnection --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video:CascadingEffect</masterLabel>
+        <translation><!-- Video:CascadingEffect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video:PoorQuality</masterLabel>
+        <translation><!-- Video:PoorQuality --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VideoConf Connected Late/Incorrect Time</masterLabel>
+        <translation><!-- VideoConf Connected Late/Incorrect Time --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VideoConf Not Connected</masterLabel>
+        <translation><!-- VideoConf Not Connected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VideoConnectionFail</masterLabel>
+        <translation><!-- VideoConnectionFail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VideoDirectoryIssue:Phonebook/OnlinePresence</masterLabel>
+        <translation><!-- VideoDirectoryIssue:Phonebook/OnlinePresence --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VideoPacket/SyncLossDetected</masterLabel>
+        <translation><!-- VideoPacket/SyncLossDetected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VideoSite:DropMultiple</masterLabel>
+        <translation><!-- VideoSite:DropMultiple --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VideoSite:DropOnce/ReconnectOK</masterLabel>
+        <translation><!-- VideoSite:DropOnce/ReconnectOK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VideoSite:NotConnected</masterLabel>
+        <translation><!-- VideoSite:NotConnected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VideoUnable:Connectvia E164/Connect viaIP</masterLabel>
+        <translation><!-- VideoUnable:Connectvia E164/Connect viaIP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VideoUnable:Connectvia IP/Connect viaISDN</masterLabel>
+        <translation><!-- VideoUnable:Connectvia IP/Connect viaISDN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VideoUnable:Dialin/Connect</masterLabel>
+        <translation><!-- VideoUnable:Dialin/Connect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>View Add&#39;l Dialin #s LinkDisplayError</masterLabel>
+        <translation><!-- View Add&apos;l Dialin #s LinkDisplayError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VoIP not Available</masterLabel>
+        <translation><!-- VoIP not Available --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Voice Capture Not Operational</masterLabel>
+        <translation><!-- Voice Capture Not Operational --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Voice Capture Report Incomplete/Incorrect</masterLabel>
+        <translation><!-- Voice Capture Report Incomplete/Incorrect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Voicemail Greeting Not Played</masterLabel>
+        <translation><!-- Voicemail Greeting Not Played --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Voicemail Greeting Not Recorded</masterLabel>
+        <translation><!-- Voicemail Greeting Not Recorded --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VolumeProblem</masterLabel>
+        <translation><!-- VolumeProblem --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebEx Screen RefreshesWhenAttemptingLaunchWebEx</masterLabel>
+        <translation><!-- WebEx Screen RefreshesWhenAttemptingLaunchWebEx --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebEx UserAlreadyDefinedError</masterLabel>
+        <translation><!-- WebEx UserAlreadyDefinedError --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebMissingfromRecording</masterLabel>
+        <translation><!-- WebMissingfromRecording --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebPasswordIssue</masterLabel>
+        <translation><!-- WebPasswordIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcam</masterLabel>
+        <translation><!-- Webcam --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcam Not Recognized</masterLabel>
+        <translation><!-- Webcam Not Recognized --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcam:BlackScreen</masterLabel>
+        <translation><!-- Webcam:BlackScreen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcam:CameraFail/Camera use Elsewhere</masterLabel>
+        <translation><!-- Webcam:CameraFail/Camera use Elsewhere --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcam:GreyScreen</masterLabel>
+        <translation><!-- Webcam:GreyScreen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcam:Latency</masterLabel>
+        <translation><!-- Webcam:Latency --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcam:NetworkQualityIssue</masterLabel>
+        <translation><!-- Webcam:NetworkQualityIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcam:OptionGreyed</masterLabel>
+        <translation><!-- Webcam:OptionGreyed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcam:Other</masterLabel>
+        <translation><!-- Webcam:Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcam:PartsCan&#39;tSeeWebcam</masterLabel>
+        <translation><!-- Webcam:PartsCan&apos;tSeeWebcam --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcam:PartsCan&#39;tSeeWebcamImage</masterLabel>
+        <translation><!-- Webcam:PartsCan&apos;tSeeWebcamImage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcam:PartsCan&#39;tSeeWebcamOption/Meeting</masterLabel>
+        <translation><!-- Webcam:PartsCan&apos;tSeeWebcamOption/Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Website Error</masterLabel>
+        <translation><!-- Website Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Website Error:NoPermissiontoAccess</masterLabel>
+        <translation><!-- Website Error:NoPermissiontoAccess --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Website Error:NotAuthorized</masterLabel>
+        <translation><!-- Website Error:NotAuthorized --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Website Outage</masterLabel>
+        <translation><!-- Website Outage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WhiteScreen/BlackScreenWhenJoining</masterLabel>
+        <translation><!-- WhiteScreen/BlackScreenWhenJoining --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WhiteboardIssue</masterLabel>
+        <translation><!-- WhiteboardIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong Conf Error</masterLabel>
+        <translation><!-- Wrong Conf Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iMeetControl:EditProfileFail</masterLabel>
+        <translation><!-- iMeetControl:EditProfileFail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iMeetControl:FileAccessFail</masterLabel>
+        <translation><!-- iMeetControl:FileAccessFail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iMeetControl:SettingIssue</masterLabel>
+        <translation><!-- iMeetControl:SettingIssue --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

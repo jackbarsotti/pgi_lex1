@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_GM_IM_Licenses__c</fullName>
+    <externalId>false</externalId>
+    <formula>Total_GM_Licenses__c + Total_IM_Licenses__c  + 
+Total_Audio_Licenses__c</formula>
+    <inlineHelpText>Shows Total GM, IM and GM Audio licenses</inlineHelpText>
+    <label>Total # Licenses</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

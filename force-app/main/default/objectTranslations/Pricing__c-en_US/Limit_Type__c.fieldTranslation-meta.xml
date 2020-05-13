@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Percentage: 25 means 25% and the limit is calculated as: ListPrice * (1 - Limit / 100.0)
+
+Fixed: 0.10 means 0.11 is fine but 0.099 is not --></help>
+    <label><!-- Limit Type --></label>
+    <name>Limit_Type__c</name>
+    <picklistValues>
+        <masterLabel>Fixed</masterLabel>
+        <translation><!-- Fixed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Percentage</masterLabel>
+        <translation><!-- Percentage --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Using_Platform_for_tracking_Webinars__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates if contact&#39;s company is currently using Salesforce, Eloqua, Pardot, etc. to setup, measure and track webinars.</inlineHelpText>
+    <label>Using Platform for tracking webinars</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

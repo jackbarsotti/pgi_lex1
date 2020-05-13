@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>iMC_Products_Required</fullName>
+    <active>true</active>
+    <description>Products are required at &gt;Evaluate Options.</description>
+    <errorConditionFormula>AND ( 
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;,
+RecordType.DeveloperName = &quot;iMC Opportunity&quot;, 
+CASE( StageName, 
+&quot;Recommendation&quot;, 1, 
+&quot;Purchase&quot;, 1, 
+0) = 1, 
+NOT(HasOpportunityLineItem))</errorConditionFormula>
+    <errorMessage>You may not progress the opportunity past Stage 3 unless products are added. See Jason Klovski w/?s.</errorMessage>
+</ValidationRule>

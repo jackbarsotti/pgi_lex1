@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Date populated when &quot;Already Working?&quot; is checked true --></help>
+    <label><!-- Already Working Date --></label>
+    <name>Already_Working_Date__c</name>
+</CustomFieldTranslation>

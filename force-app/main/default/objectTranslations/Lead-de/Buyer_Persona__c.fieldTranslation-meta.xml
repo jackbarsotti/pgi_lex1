@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Buyer Persona --></label>
+    <name>Buyer_Persona__c</name>
+    <picklistValues>
+        <masterLabel>Analyst – I study everything…</masterLabel>
+        <translation><!-- Analyst – I study everything… --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Architect – I design everything…</masterLabel>
+        <translation><!-- Architect – I design everything… --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Biz Dev – I find the customers…</masterLabel>
+        <translation><!-- Biz Dev – I find the customers… --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Business Transformation - I bring everyone together &amp; make things happen...</masterLabel>
+        <translation><!-- Business Transformation - I bring everyone together &amp; make things happen... --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CEO / MD / President - I run the ship...</masterLabel>
+        <translation><!-- CEO / MD / President - I run the ship... --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CIO/CTO - I am the orchestrator...</masterLabel>
+        <translation><!-- CIO/CTO - I am the orchestrator... --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Co-ordinator – I keep everyone together…</masterLabel>
+        <translation><!-- Co-ordinator – I keep everyone together… --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Engineer – I build everything…</masterLabel>
+        <translation><!-- Engineer – I build everything… --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Learning &amp; Development - I support everyone…</masterLabel>
+        <translation><!-- Learning &amp; Development - I support everyone… --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Management – I keep an eye on everything…</masterLabel>
+        <translation><!-- Management – I keep an eye on everything… --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing &amp; Comms – I tell everyone about everything…</masterLabel>
+        <translation><!-- Marketing &amp; Comms – I tell everyone about everything… --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other – I do something else that is very important…</masterLabel>
+        <translation><!-- Other – I do something else that is very important… --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Project Management – I make sure it happens on time…</masterLabel>
+        <translation><!-- Project Management – I make sure it happens on time… --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales – I sell everything…</masterLabel>
+        <translation><!-- Sales – I sell everything… --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technology Lead - I fix everything...</masterLabel>
+        <translation><!-- Technology Lead - I fix everything... --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billed_Revenue_Last_13_Months__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Total amount of billed revenue over the past 13 month&#39;s from all premier companies (PGi Companies object) associated to this Account.  Although the currency may show differently, this amount is always in USD.</inlineHelpText>
+    <label>Billed Revenue - Last 13 Months</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

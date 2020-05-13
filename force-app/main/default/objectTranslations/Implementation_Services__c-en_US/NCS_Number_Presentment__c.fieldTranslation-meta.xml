@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Number Presentment --></label>
+    <name>NCS_Number_Presentment__c</name>
+    <picklistValues>
+        <masterLabel>All locations alphabetically</masterLabel>
+        <translation><!-- All locations alphabetically --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NAM numbers on top</masterLabel>
+        <translation><!-- NAM numbers on top --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

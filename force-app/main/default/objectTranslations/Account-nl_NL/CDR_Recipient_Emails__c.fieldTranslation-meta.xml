@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Include email addresses of individuals who should receive the selected CDR/s. Include proper email addresses, separated by commas, semi-colons or line breaks. --></help>
+    <label><!-- CDR Recipient Email/s --></label>
+    <name>CDR_Recipient_Emails__c</name>
+</CustomFieldTranslation>

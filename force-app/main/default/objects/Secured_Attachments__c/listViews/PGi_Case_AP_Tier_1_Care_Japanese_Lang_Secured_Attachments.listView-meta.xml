@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Case_AP_Tier_1_Care_Japanese_Lang_Secured_Attachments</fullName>
+    <filterScope>Queue</filterScope>
+    <label>PGi-Case-AP-Tier 1-Care (Japanese Lang)</label>
+    <queue>PGi_Case_AP_Tier_1_Care_Japanese_Lang</queue>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

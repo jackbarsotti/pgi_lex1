@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_RFC_NA_Tier_3_Production_Sys_Admin_Problem_Review_Ticket</fullName>
+    <filterScope>Queue</filterScope>
+    <label>PGi-RFC-NA-Tier 3-Production Sys Admin</label>
+    <queue>PGi_RFC_NA_Tier_3_Production_Sys_Admin</queue>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

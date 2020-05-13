@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- PGi TOLL-FREE Direct Dial in #s --></label>
+    <name>PGi_TOLL_FREE_Direct_Dial_in_s__c</name>
+</CustomFieldTranslation>

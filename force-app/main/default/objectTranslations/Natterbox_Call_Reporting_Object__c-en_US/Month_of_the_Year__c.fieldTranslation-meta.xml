@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is the month of the year that the call took place. This is the text version of the month. For example, January, February, March, etc, --></help>
+    <label><!-- Month of the Year --></label>
+    <name>Month_of_the_Year__c</name>
+</CustomFieldTranslation>

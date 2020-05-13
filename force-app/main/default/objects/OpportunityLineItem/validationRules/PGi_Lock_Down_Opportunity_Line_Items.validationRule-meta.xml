@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Lock_Down_Opportunity_Line_Items</fullName>
+    <active>true</active>
+    <description>When Oppty is Closed, a user cannot take action on the associated Opportunity Products.</description>
+    <errorConditionFormula>AND(
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;, 
+CONTAINS(Opportunity.RecordType.Name, &quot;PGi&quot;), 
+$User.Override_Validation_Rules__c = False,
+$User.DelegatedPowerUserAccess__c = False,
+NOT($User.ProfileId = &quot;00ea0000001sdEo&quot;),
+NOT($User.ProfileId = &quot;00ea0000001sYR8&quot;),
+NOT($Setup.BypassRules__c.Disable_Validation_Rules__c),
+Opportunity.IsClosed = TRUE
+)</errorConditionFormula>
+    <errorMessage>This Opportunity has been closed.  No updates are permitted.</errorMessage>
+</ValidationRule>

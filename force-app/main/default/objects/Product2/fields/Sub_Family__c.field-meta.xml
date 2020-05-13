@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Family__c</fullName>
+    <description>Used to label product by division. In this case iMeet vs iMeet Central.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to label product by division. In this case iMeet vs iMeet Central.</inlineHelpText>
+    <label>Sub-Family</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Additional Subscriptions</fullName>
+                <default>false</default>
+                <label>Additional Subscriptions</label>
+            </value>
+            <value>
+                <fullName>Core Subscriptions</fullName>
+                <default>false</default>
+                <label>Core Subscriptions</label>
+            </value>
+            <value>
+                <fullName>Implementation</fullName>
+                <default>false</default>
+                <label>Implementation</label>
+            </value>
+            <value>
+                <fullName>Pilot</fullName>
+                <default>false</default>
+                <label>Pilot</label>
+            </value>
+            <value>
+                <fullName>Professional Edition</fullName>
+                <default>false</default>
+                <label>Professional Edition</label>
+            </value>
+            <value>
+                <fullName>Professional Services</fullName>
+                <default>false</default>
+                <label>Professional Services</label>
+            </value>
+            <value>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+                <label>Renewal</label>
+            </value>
+            <value>
+                <fullName>Vendor Subscriptions</fullName>
+                <default>false</default>
+                <label>Vendor Subscriptions</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

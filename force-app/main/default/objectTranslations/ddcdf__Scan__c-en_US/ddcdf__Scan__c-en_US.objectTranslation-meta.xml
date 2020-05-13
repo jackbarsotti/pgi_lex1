@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <webLinks>
+        <label><!-- Cancel_Scanners --></label>
+        <name>ddcdf__Cancel_Scanners</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Start_Recursive_Scan --></label>
+        <name>ddcdf__Start_Recursive_Scan</name>
+    </webLinks>
+</CustomObjectTranslation>

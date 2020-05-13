@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Recording Type --></label>
+    <name>Recording_Type__c</name>
+    <picklistValues>
+        <masterLabel>Audio Only</masterLabel>
+        <translation><!-- Audio Only --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio and Web</masterLabel>
+        <translation><!-- Audio and Web --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web Only</masterLabel>
+        <translation><!-- Web Only --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

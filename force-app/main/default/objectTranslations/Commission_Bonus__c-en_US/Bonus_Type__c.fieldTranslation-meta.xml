@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Bonus Type --></label>
+    <name>Bonus_Type__c</name>
+    <picklistValues>
+        <masterLabel>Productivity Bonus</masterLabel>
+        <translation><!-- Productivity Bonus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quota Bonus</masterLabel>
+        <translation><!-- Quota Bonus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Renewal</masterLabel>
+        <translation><!-- Renewal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Special Bonus</masterLabel>
+        <translation><!-- Special Bonus --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

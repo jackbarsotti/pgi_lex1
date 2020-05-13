@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renewal__c</fullName>
+    <externalId>false</externalId>
+    <label>Renewal</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>60 Day Cancellation Notice</fullName>
+                <default>false</default>
+                <label>60 Day Cancellation Notice</label>
+            </value>
+            <value>
+                <fullName>This Agreement will automatically continue on a month to month basis unless Customer provides ReadyTalk with a 60 day written notice of cancellation.</fullName>
+                <default>false</default>
+                <label>This Agreement will automatically continue on a month to month basis unless Customer provides ReadyTalk with a 60 day written notice of cancellation.</label>
+            </value>
+            <value>
+                <fullName>This Agreement will automatically continue on a month to month basis unless Customer provides ReadyTalk with a written notice of cancellation.</fullName>
+                <default>false</default>
+                <label>This Agreement will automatically continue on a month to month basis unless Customer provides ReadyTalk with a written notice of cancellation.</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>This agreement will automatically renew for successive 12 month terms on the True-Up Date (12 months from Effective Date) unless Customer provides ReadyTalk with written notice of termination at least 60 days prior to the True-Up Date.</fullName>
+                <default>false</default>
+                <label>This agreement will automatically renew for successive 12 month terms on the True-Up Date (12 months from Effective Date) unless Customer provides ReadyTalk with written notice of termination at least 60 days prior to the True-Up Date.</label>
+            </value>
+            <value>
+                <fullName>This agreement will automatically renew for successive 8 month terms on the True-Up Date (8 months from Effective Date) unless Customer provides ReadyTalk with written notice of termination at least 60 days prior to the True-Up Date.</fullName>
+                <default>false</default>
+                <label>This agreement will automatically renew for successive 8 month terms on the True-Up Date (8 months from Effective Date) unless Customer provides ReadyTalk with written notice of termination at least 60 days prior to the True-Up Date.</label>
+            </value>
+            <value>
+                <fullName>This agreement will automatically renew for successive 24 month terms on the True-Up Date (24 months from Effective Date) unless Customer provides ReadyTalk with written notice of termination at least 60 days prior to the True-Up Date.</fullName>
+                <default>false</default>
+                <label>This agreement will automatically renew for successive 24 month terms on the True-Up Date (24 months from Effective Date) unless Customer provides ReadyTalk with written notice of termination at least 60 days prior to the True-Up Date.</label>
+            </value>
+            <value>
+                <fullName>No renewal; subscription will end on the last day of the month</fullName>
+                <default>false</default>
+                <label>No renewal; subscription will end on the last day of the month</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

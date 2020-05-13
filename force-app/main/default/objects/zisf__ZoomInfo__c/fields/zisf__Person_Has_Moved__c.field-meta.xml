@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>zisf__Person_Has_Moved__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Indicates ZoomInfo Recognizes the Person Company Input Value does not match ZoomInfo Current Company but does Match Known Employment History.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates ZoomInfo Recognizes the Person Company Input Value does not match ZoomInfo Current Company but does Match Known Employment History.</inlineHelpText>
+    <label>Person Has Moved</label>
+    <length>10</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

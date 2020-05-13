@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Request Type --></label>
+    <name>Request_Type__c</name>
+    <picklistValues>
+        <masterLabel>Business analysis</masterLabel>
+        <translation><!-- Business analysis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cancellation Fee Review / Approval</masterLabel>
+        <translation><!-- Cancellation Fee Review / Approval --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contract Approval Needed</masterLabel>
+        <translation><!-- Contract Approval Needed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contract question</masterLabel>
+        <translation><!-- Contract question --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Custom Quote</masterLabel>
+        <translation><!-- Custom Quote --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Custom contract</masterLabel>
+        <translation><!-- Custom contract --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Custom pricing</masterLabel>
+        <translation><!-- Custom pricing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DD Migration</masterLabel>
+        <translation><!-- DD Migration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DealDesk Approval</masterLabel>
+        <translation><!-- DealDesk Approval --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email Request</masterLabel>
+        <translation><!-- Email Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Free Trial Non Standard Request</masterLabel>
+        <translation><!-- Free Trial Non Standard Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GMSO Related Pricing Request</masterLabel>
+        <translation><!-- GMSO Related Pricing Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GMSS Related Request</masterLabel>
+        <translation><!-- GMSS Related Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HR Request</masterLabel>
+        <translation><!-- HR Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MBP Related Request</masterLabel>
+        <translation><!-- MBP Related Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MBP exemption</masterLabel>
+        <translation><!-- MBP exemption --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Business - Pricing Support Request</masterLabel>
+        <translation><!-- New Business - Pricing Support Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pricing Clarification / General Pricing Question</masterLabel>
+        <translation><!-- Pricing Clarification / General Pricing Question --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pricing clarification (For Sales)</masterLabel>
+        <translation><!-- Pricing clarification (For Sales) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quotation or Contract Account History</masterLabel>
+        <translation><!-- Quotation or Contract Account History --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RFI</masterLabel>
+        <translation><!-- RFI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RFI / Vender Questionnaire</masterLabel>
+        <translation><!-- RFI / Vender Questionnaire --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RFP</masterLabel>
+        <translation><!-- RFP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Renewal - Non-Conversion Pricing Support Request</masterLabel>
+        <translation><!-- Renewal - Non-Conversion Pricing Support Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SaaS Conversion Request</masterLabel>
+        <translation><!-- SaaS Conversion Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Special Pricing / Contract Approval</masterLabel>
+        <translation><!-- Special Pricing / Contract Approval --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Strategic pricing request</masterLabel>
+        <translation><!-- Strategic pricing request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Supplier Info form</masterLabel>
+        <translation><!-- Supplier Info form --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Training Request</masterLabel>
+        <translation><!-- Training Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UCaaS Related Request</masterLabel>
+        <translation><!-- UCaaS Related Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Account / Training request</masterLabel>
+        <translation><!-- User Account / Training request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WIN$ or tool error</masterLabel>
+        <translation><!-- WIN$ or tool error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebEx Related Request</masterLabel>
+        <translation><!-- WebEx Related Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Win$ Quote</masterLabel>
+        <translation><!-- Win$ Quote --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

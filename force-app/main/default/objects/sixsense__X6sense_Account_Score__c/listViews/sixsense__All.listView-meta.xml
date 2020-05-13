@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sixsense__All</fullName>
+    <columns>NAME</columns>
+    <columns>sixsense__account_id__c</columns>
+    <columns>sixsense__profile_fit__c</columns>
+    <columns>sixsense__intent_score__c</columns>
+    <columns>sixsense__buying_stage__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

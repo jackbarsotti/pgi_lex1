@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Pricing</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Pricing</value>
+    </caseValues>
+    <layouts>
+        <layout>Pricing Layout</layout>
+        <sections>
+            <label><!-- Access-Based --></label>
+            <section>Access-Based</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- For --></label>
+            <section>For</section>
+        </sections>
+        <sections>
+            <label><!-- Price &amp; Limits --></label>
+            <section>Price &amp; Limits</section>
+        </sections>
+        <sections>
+            <label><!-- Restrictions --></label>
+            <section>Restrictions</section>
+        </sections>
+        <sections>
+            <label><!-- Tiers --></label>
+            <section>Tiers</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- The Unique ID is used to push data between Sandboxes and Production. If this value changed, the data could get mismatched and cause problems. --></errorMessage>
+        <name>Cannot_Change_Unique_ID</name>
+    </validationRules>
+</CustomObjectTranslation>

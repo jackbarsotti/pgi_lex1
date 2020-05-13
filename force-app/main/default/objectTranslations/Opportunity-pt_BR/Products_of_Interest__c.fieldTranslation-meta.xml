@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Prospect product interests. --></help>
+    <label><!-- Products of Interest --></label>
+    <name>Products_of_Interest__c</name>
+    <picklistValues>
+        <masterLabel>Act-on</masterLabel>
+        <translation><!-- Act-on --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Acteva Integration</masterLabel>
+        <translation><!-- Acteva Integration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Eloqua Integration</masterLabel>
+        <translation><!-- Eloqua Integration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Foxden</masterLabel>
+        <translation><!-- Foxden --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Google Calendar Gadget</masterLabel>
+        <translation><!-- Google Calendar Gadget --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hosted Voice</masterLabel>
+        <translation><!-- Hosted Voice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hubspot Integration</masterLabel>
+        <translation><!-- Hubspot Integration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Illuminate Replay</masterLabel>
+        <translation><!-- Illuminate Replay --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>International Audio</masterLabel>
+        <translation><!-- International Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kapost Integration</masterLabel>
+        <translation><!-- Kapost Integration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Managed Event Services</masterLabel>
+        <translation><!-- Managed Event Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketo Integration</masterLabel>
+        <translation><!-- Marketo Integration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Microsoft Dynamics</masterLabel>
+        <translation><!-- Microsoft Dynamics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mobile Apps</masterLabel>
+        <translation><!-- Mobile Apps --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Op-Assisted Audio</masterLabel>
+        <translation><!-- Op-Assisted Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outlook Plug-in</masterLabel>
+        <translation><!-- Outlook Plug-in --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PSTN Audio/Skype for Business</masterLabel>
+        <translation><!-- PSTN Audio/Skype for Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pardot Integration</masterLabel>
+        <translation><!-- Pardot Integration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RTD</masterLabel>
+        <translation><!-- RTD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recording &amp; Archiving</masterLabel>
+        <translation><!-- Recording &amp; Archiving --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reservationless Audio</masterLabel>
+        <translation><!-- Reservationless Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salesforce Integration</masterLabel>
+        <translation><!-- Salesforce Integration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Simulive</masterLabel>
+        <translation><!-- Simulive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video Conferencing</masterLabel>
+        <translation><!-- Video Conferencing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VoIP</masterLabel>
+        <translation><!-- VoIP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web Conferencing</masterLabel>
+        <translation><!-- Web Conferencing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcasting</masterLabel>
+        <translation><!-- Webcasting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webinar Packages</masterLabel>
+        <translation><!-- Webinar Packages --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

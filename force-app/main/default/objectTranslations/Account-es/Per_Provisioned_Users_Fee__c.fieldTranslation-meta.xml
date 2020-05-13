@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Per month cost / the total users --></help>
+    <label><!-- Per Provisioned Users Fee --></label>
+    <name>Per_Provisioned_Users_Fee__c</name>
+</CustomFieldTranslation>

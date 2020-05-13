@@ -1,0 +1,48 @@
+<apex:page showHeader="false" sidebar="false" action="{!init}" standardController="Case" extensions="EscalateCaseController">
+    <apex:includeScript value="/support/console/45.0/integration.js" />
+    <apex:includeScript value="/soap/ajax/26.0/connection.js" />
+    <script>
+        function handleMethod(recordId) {
+            var closeId = 'close ' + recordId;
+            window.parent.postMessage(closeId, '*');
+        }
+        function closeWindow() {
+            window.parent.postMessage('close', '*');
+        }
+    </script>
+    <style>
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+    <apex:outputPanel rendered="{!isEscalated}">
+        <apex:pageMessages />
+        <apex:form >
+            <!-- <script>
+            setInterval(function(){
+                window.parent.postMessage('close', '*');
+            },3000);
+        </script> -->
+            <apex:commandButton id="OK" value="OK" onClick="closeWindow();" style="height:30px;border-radius:9px;width:26%;margin-top: 5%;margin-left: 35%;"
+            />
+        </apex:form>
+    </apex:outputPanel>
+    <apex:form rendered="{! !isEscalated}">
+        <p class="title">Escalation Type:</p>
+        <apex:selectList value="{!selectedEscalationType}" size="1">
+            <apex:selectOptions value="{!EscalationType}" />
+            <apex:actionSupport event="onchange" reRender="EscalateRecordType" />
+        </apex:selectList>
+        <p/>
+        <p class="title">Escalation Record Type:</p>
+        <apex:selectList id="EscalateRecordType" value="{!selectedEscalationRecordType}" size="1">
+            <apex:selectOptions value="{!EscalationRecordType}" />
+            <apex:actionSupport event="onchange" action="{!handleRecordButton}" reRender="Continue" />
+        </apex:selectList>
+        <p/>
+        <apex:commandButton id="Continue" value="Continue" action="{!handleRecord}" disabled="{!isContinue}" oncomplete="handleMethod('{!returnId}');"
+            reRender="panelId" />
+    </apex:form>
+
+</apex:page>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>PGi-RFC-GL-Tier 2-Integrations</label>
+    <protected>false</protected>
+    <values>
+        <field>Assignment_Group_Name__c</field>
+        <value xsi:type="xsd:string">PGi-RFC-GL-Tier 2-Integrations</value>
+    </values>
+    <values>
+        <field>Product_Manager_ID__c</field>
+        <value xsi:type="xsd:string">0051300000Bj74JAAR</value>
+    </values>
+    <values>
+        <field>Product_Manager_Name__c</field>
+        <value xsi:type="xsd:string">Mandy Moncrief</value>
+    </values>
+    <values>
+        <field>Product__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

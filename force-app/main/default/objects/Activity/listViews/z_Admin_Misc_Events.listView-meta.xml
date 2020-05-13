@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>z_Admin_Misc_Events</fullName>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>TASK.CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>equals</operation>
+        <value>davidson</value>
+    </filters>
+    <filters>
+        <field>TASK.CREATED_DATE</field>
+        <operation>lessOrEqual</operation>
+        <value>4/17/2012 8:30 AM</value>
+    </filters>
+    <label>z-Admin-Misc-Events</label>
+    <language>en_US</language>
+    <sharedTo/>
+</ListView>

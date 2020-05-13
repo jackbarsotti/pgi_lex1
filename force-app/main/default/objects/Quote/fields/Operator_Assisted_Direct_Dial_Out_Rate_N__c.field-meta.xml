@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Operator_Assisted_Direct_Dial_Out_Rate_N__c</fullName>
+    <defaultValue>0.18</defaultValue>
+    <externalId>false</externalId>
+    <label>Direct Dial-Out Rate*</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>4</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

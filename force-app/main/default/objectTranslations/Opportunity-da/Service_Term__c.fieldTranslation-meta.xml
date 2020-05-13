@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Service Term --></label>
+    <name>Service_Term__c</name>
+    <picklistValues>
+        <masterLabel>1 Time Event</masterLabel>
+        <translation><!-- 1 Time Event --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>12 Months (Paying Monthly)</masterLabel>
+        <translation><!-- 12 Months (Paying Monthly) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>12 Months (Pre-Pay)</masterLabel>
+        <translation><!-- 12 Months (Pre-Pay) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>24 Months (Paying Monthly)</masterLabel>
+        <translation><!-- 24 Months (Paying Monthly) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>24 Months (Pre-Pay)</masterLabel>
+        <translation><!-- 24 Months (Pre-Pay) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>36 Months (Paying Monthly)</masterLabel>
+        <translation><!-- 36 Months (Paying Monthly) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>36 Months (Pre-Pay)</masterLabel>
+        <translation><!-- 36 Months (Pre-Pay) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Month to Month</masterLabel>
+        <translation><!-- Month to Month --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Applicable</masterLabel>
+        <translation><!-- Not Applicable --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

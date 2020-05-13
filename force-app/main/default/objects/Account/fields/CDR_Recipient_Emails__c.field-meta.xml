@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CDR_Recipient_Emails__c</fullName>
+    <description>CAUTION - USED IN INTEGRATIONS
+Email addresses of those within the account who should receive the CDRs each month.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Include email addresses of individuals who should receive the selected CDR/s. Include proper email addresses, separated by commas, semi-colons or line breaks.</inlineHelpText>
+    <label>CDR Recipient Email/s</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

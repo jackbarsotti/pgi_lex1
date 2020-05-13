@@ -1,0 +1,82 @@
+<apex:page controller="CustomScheduleLookupController" title="Search" showHeader="false" sideBar="false" tabStyle="Schedule__c" id="pg">
+  <apex:form >
+    <apex:outputPanel id="page" layout="block" style="margin:5px;padding:10px;padding-top:2px;">     
+      <apex:actionRegion >   
+        <apex:outputPanel id="pnlSearchResults" style="margin:10px;height:350px;overflow-Y:auto;" layout="block">
+          <apex:pageBlock id="searchResults"> 
+
+            <div id="schedules">
+              <table class="list " id="" border="0" cellpadding="0" cellspacing="0">
+                <colgroup span="4"></colgroup>            
+                <thead class="rich-table-thead">            
+                  <tr class="headerRow ">                        
+                    <th class="headerRow " scope="col" colspan="1" id=""><div id="">Base Rate Set Name</div></th>
+                  </tr>
+                </thead>
+                <tbody id="">
+                  <apex:repeat value="{!schedules}" var="schedule">         
+                    <apex:outputPanel rendered="{!AND(IF(schedule.scheduleType__c=scheduleType, true, false),NOT(ISNULL(schedule.Id)))}">
+                      <tr class="dataRow" id="" onmouseover="if (window.hiOn){hiOn(this);} " onmouseout="if (window.hiOff){hiOff(this);} " onblur="if (window.hiOff){hiOff(this);}" onfocus="if (window.hiOn){hiOn(this);}">
+                        <td class="dataCell  " id="" colspan="1">
+                          <apex:outputLink value="javascript:top.window.opener.lookupPick2('{!FormTag}','{!TextBox}_lkid','{!TextBox}','{!schedule.Id}','{!schedule.Name}', false)">{!schedule.Name}</apex:outputLink>
+                        </td>
+                      </tr>   
+                    </apex:outputPanel>            
+                  </apex:repeat>                         
+                </tbody>          
+              </table>                  
+            </div>    
+
+            <br/>
+            <div id="customSchedules">
+              <table class="list " id="" border="0" cellpadding="0" cellspacing="0">
+                <colgroup span="4"></colgroup>            
+                <thead class="rich-table-thead">            
+                  <tr class="headerRow ">                        
+                    <th class="headerRow " scope="col" colspan="1" id=""><div id="">Account Rate Set Name</div></th>
+                  </tr>
+                </thead>
+                <tbody id="">
+                  <apex:repeat value="{!customSchedules}" var="customSchedule">         
+                    <apex:outputPanel rendered="{!AND(IF(customSchedule.baseScheduleType__c=scheduleType, true, false),NOT(ISNULL(customSchedule.Id)))}">
+                      <tr class="dataRow" id="" onmouseover="if (window.hiOn){hiOn(this);} " onmouseout="if (window.hiOff){hiOff(this);} " onblur="if (window.hiOff){hiOff(this);}" onfocus="if (window.hiOn){hiOn(this);}">
+                        <td class="dataCell  " id="" colspan="1">
+                          <apex:outputLink value="javascript:top.window.opener.lookupPick2('{!FormTag}','{!TextBox}_lkid','{!TextBox}','{!customSchedule.Id}','{!customSchedule.Name}', false)">{!customSchedule.Name}</apex:outputLink>
+                        </td>
+                      </tr>   
+                    </apex:outputPanel>            
+                  </apex:repeat>                         
+                </tbody>          
+              </table>                  
+            </div> 
+
+            <apex:outputPanel rendered="{!NOT(ISNULL(parentAccountCustomSchedules))}">
+            <br/>
+            <div id="parentAccountCustomSchedules">
+              <table class="list " id="" border="0" cellpadding="0" cellspacing="0">
+                <colgroup span="4"></colgroup>            
+                <thead class="rich-table-thead">            
+                  <tr class="headerRow ">                        
+                    <th class="headerRow " scope="col" colspan="1" id=""><div id="">Parent Account Rate Set Name</div></th>
+                  </tr>
+                </thead>
+                <tbody id="">
+                  <apex:repeat value="{!parentAccountCustomSchedules}" var="customSchedule">         
+                    <apex:outputPanel rendered="{!AND(IF(customSchedule.baseScheduleType__c=scheduleType, true, false),NOT(ISNULL(customSchedule.Id)))}">
+                      <tr class="dataRow" id="" onmouseover="if (window.hiOn){hiOn(this);} " onmouseout="if (window.hiOff){hiOff(this);} " onblur="if (window.hiOff){hiOff(this);}" onfocus="if (window.hiOn){hiOn(this);}">
+                        <td class="dataCell  " id="" colspan="1">
+                          <apex:outputLink value="javascript:top.window.opener.lookupPick2('{!FormTag}','{!TextBox}_lkid','{!TextBox}','{!customSchedule.Id}','{!customSchedule.Name}', false)">{!customSchedule.Name}</apex:outputLink>
+                        </td>
+                      </tr>   
+                    </apex:outputPanel>            
+                  </apex:repeat>                         
+                </tbody>          
+              </table>                  
+            </div>  
+            </apex:outputPanel>                          
+          </apex:pageBlock>
+        </apex:outputPanel>
+      </apex:actionRegion>
+    </apex:outputPanel>
+  </apex:form>
+</apex:page>

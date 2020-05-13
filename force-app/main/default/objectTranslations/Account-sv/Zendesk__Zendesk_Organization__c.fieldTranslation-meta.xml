@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Show Zendesk tickets for the specified organization instead of the combined tickets for all users in the account. --></help>
+    <label><!-- Zendesk Support Organization --></label>
+    <name>Zendesk__Zendesk_Organization__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Worker_Changes_Compilation__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(INCLUDES( Worker_will_require__c , &quot;Department&quot;), &quot;Department&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Worker_will_require__c , &quot;End Date&quot;), &quot;End Date&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Worker_will_require__c , &quot;First Name&quot;), &quot;First Name&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Worker_will_require__c , &quot;Job Title&quot;), &quot;Job Title&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Worker_will_require__c , &quot;Last Name&quot;), &quot;Last Name&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Worker_will_require__c , &quot;Location&quot;), &quot;Location&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Worker_will_require__c , &quot;Supervisor&quot;), &quot;Supervisor&quot; + &quot;,&quot; , NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Worker Changes Compilation</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

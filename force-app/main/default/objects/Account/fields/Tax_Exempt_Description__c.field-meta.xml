@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tax_Exempt_Description__c</fullName>
+    <description>**Picklist options on this field are tied to Billing Code for Taxation. Check with SFB before adding/deleting picklist options.</description>
+    <externalId>false</externalId>
+    <label>Tax Exempt Description</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Sales_Tax_Exempt__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>State and Local Sales Tax Exempt</fullName>
+                <default>false</default>
+                <label>State and Local Sales Tax Exempt</label>
+            </value>
+            <value>
+                <fullName>All PUC Fees Exempt</fullName>
+                <default>false</default>
+                <label>All PUC Fees Exempt</label>
+            </value>
+            <value>
+                <fullName>All State and Local E911s Exempt</fullName>
+                <default>false</default>
+                <label>All State and Local E911s Exempt</label>
+            </value>
+            <value>
+                <fullName>All State and Local Gross Receipts Tax (GRT) Exempt</fullName>
+                <default>false</default>
+                <label>All State and Local Gross Receipts Tax (GRT) Exempt</label>
+            </value>
+            <value>
+                <fullName>All State Universal Service Fund Fees Exempt</fullName>
+                <default>false</default>
+                <label>All State Universal Service Fund Fees Exempt</label>
+            </value>
+            <value>
+                <fullName>City level taxes exempt</fullName>
+                <default>false</default>
+                <label>City level taxes exempt</label>
+            </value>
+            <value>
+                <fullName>County level taxes exempt</fullName>
+                <default>false</default>
+                <label>County level taxes exempt</label>
+            </value>
+            <value>
+                <fullName>Federal Universal Service Fund Exempt</fullName>
+                <default>false</default>
+                <label>Federal Universal Service Fund Exempt</label>
+            </value>
+            <value>
+                <fullName>Local Franchise Fee</fullName>
+                <default>false</default>
+                <label>Local Franchise Fee</label>
+            </value>
+            <value>
+                <fullName>Local Right of Way Fees Exempt</fullName>
+                <default>false</default>
+                <label>Local Right of Way Fees Exempt</label>
+            </value>
+            <value>
+                <fullName>Local taxes exempt</fullName>
+                <default>false</default>
+                <label>Local taxes exempt</label>
+            </value>
+            <value>
+                <fullName>Local Utility Users Tax Exempt (includes CA local UUTs)</fullName>
+                <default>false</default>
+                <label>Local Utility Users Tax Exempt (includes CA local UUTs)</label>
+            </value>
+            <value>
+                <fullName>Los Angeles Communications Users Tax Exempt</fullName>
+                <default>false</default>
+                <label>Los Angeles Communications Users Tax Exempt</label>
+            </value>
+            <value>
+                <fullName>No Exemptions</fullName>
+                <default>false</default>
+                <label>No Exemptions</label>
+            </value>
+            <value>
+                <fullName>Only Apply Federal Universal Service Fund</fullName>
+                <default>false</default>
+                <label>Only Apply Federal Universal Service Fund</label>
+            </value>
+            <value>
+                <fullName>State and Local Taxes Exempt</fullName>
+                <default>false</default>
+                <label>State and Local Taxes Exempt</label>
+            </value>
+            <value>
+                <fullName>State Excise and Local Communications Tax Exempt</fullName>
+                <default>false</default>
+                <label>State Excise and Local Communications Tax Exempt</label>
+            </value>
+            <value>
+                <fullName>State Excise Tax Exempt (Includes FL CST)</fullName>
+                <default>false</default>
+                <label>State Excise Tax Exempt (Includes FL CST)</label>
+            </value>
+            <value>
+                <fullName>State Excise Tax Exempt and Local Surcharge Exempt</fullName>
+                <default>false</default>
+                <label>State Excise Tax Exempt and Local Surcharge Exempt</label>
+            </value>
+            <value>
+                <fullName>State Franchise Fee</fullName>
+                <default>false</default>
+                <label>State Franchise Fee</label>
+            </value>
+            <value>
+                <fullName>State Level Sales Tax Exempt</fullName>
+                <default>false</default>
+                <label>State Level Sales Tax Exempt</label>
+            </value>
+            <value>
+                <fullName>State Taxes Exempt</fullName>
+                <default>false</default>
+                <label>State Taxes Exempt</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>No Exemptions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>State and Local Sales Tax Exempt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>All PUC Fees Exempt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>All State and Local E911s Exempt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>All State and Local Gross Receipts Tax (GRT) Exempt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>All State Universal Service Fund Fees Exempt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>City level taxes exempt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>County level taxes exempt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Federal Universal Service Fund Exempt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Local Franchise Fee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Local Right of Way Fees Exempt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Local taxes exempt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Local Utility Users Tax Exempt (includes CA local UUTs)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Los Angeles Communications Users Tax Exempt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Only Apply Federal Universal Service Fund</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>State and Local Taxes Exempt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>State Excise and Local Communications Tax Exempt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>State Excise Tax Exempt (Includes FL CST)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>State Excise Tax Exempt and Local Surcharge Exempt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>State Franchise Fee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>State Level Sales Tax Exempt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>State Taxes Exempt</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

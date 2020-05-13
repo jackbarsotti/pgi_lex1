@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Case_Tier_4_Agenday_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>PGi-Case-GL-Tier 4-Agenday</label>
+    <queue>PGi_Case_GL_Tier_4_Agenday</queue>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

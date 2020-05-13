@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Unlimited webinars with up to 500 attendees each (incl. chairperson). Broadcast Audio included. Add&apos;l Web Meeting Participant Rate and Direct/Premium Operator Assist Rates (applied to dial-in participants/chairperson) applied for overages. --></help>
+    <label><!-- Webinar (500) Price --></label>
+    <name>Web_Event_500_Price__c</name>
+</CustomFieldTranslation>

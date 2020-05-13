@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assigned_Lead_Owner_ID_required_when_Tru</fullName>
+    <active>true</active>
+    <description>Requires that the Assigned Lead Owner ID</description>
+    <errorConditionFormula>AND(
+Set_Lead_Owner__c = True,
+OR(
+ISBLANK(Assigned_Lead_Owner_ID__c),
+LEN(Assigned_Lead_Owner_ID__c) &lt;&gt; 15
+),
+LEFT(Assigned_Lead_Owner_ID__c ,3) &lt;&gt; &quot;00G&quot;,
+LEFT(Assigned_Lead_Owner_ID__c ,3) &lt;&gt; &quot;005&quot;
+)</errorConditionFormula>
+    <errorDisplayField>Assigned_Lead_Owner_ID__c</errorDisplayField>
+    <errorMessage>Please select a proper Assigned Lead Owner ID.  You can find this by going to the Users record and take the last 15 digits of that pages URL.</errorMessage>
+</ValidationRule>

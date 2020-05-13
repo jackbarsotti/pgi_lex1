@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Live Q&amp;A Type --></label>
+    <name>Live_Q_A_Type__c</name>
+    <picklistValues>
+        <masterLabel>Audio only</masterLabel>
+        <translation><!-- Audio only --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chat &amp; Audio</masterLabel>
+        <translation><!-- Chat &amp; Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chat only</masterLabel>
+        <translation><!-- Chat only --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Email</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Send Email</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>(
+{!REQUIRESCRIPT(&quot;/soap/ajax/45.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/support/console/45.0/integration.js&quot;)}
+function() {
+var fromEmail = &#39;noreplylesforcecrmsupport@pgi.com&#39;;
+
+var subject = &#39;{!JSENCODE(Financial_Request__c.Subject__c)}&#39;;
+console.log(subject);
+var pageUrl;
+if(&#39;{!Financial_Request__c.RequestorsEmail__c}&#39; == &#39;{!Financial_Request__c.Requested_For__c}&#39;) {
+pageUrl = &#39;/email/author/emailauthor.jsp?retURL=/{!Financial_Request__c.Id}&amp;p3_lkid={!Financial_Request__c.Id}&amp;rtype=003&amp;p2_lkid={!Financial_Request__c.RequestorsEmail__c}&amp;p24={!Financial_Request__c.Requested_For__c}&amp;p26=&#39;+fromEmail+&#39;&amp;p6=Reply:&#39;+subject;
+} else {
+pageUrl = &#39;/email/author/emailauthor.jsp?retURL=/{!Financial_Request__c.Id}&amp;p3_lkid={!Financial_Request__c.Id}&amp;rtype=003&amp;p2_lkid={!Financial_Request__c.RequestorsEmail__c}&amp;p24={!Financial_Request__c.RequestorsEmail__c},{!Financial_Request__c.Requested_For__c}&amp;p26=&#39;+fromEmail+&#39;&amp;p6=Reply:&#39;+subject;
+}
+
+if (sforce.console.isInConsole()) {
+sforce.console.openPrimaryTab(null, pageUrl ,true);
+} else {
+window.open(pageUrl , &quot;_self&quot;);
+}
+}
+)();</url>
+</WebLink>

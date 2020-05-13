@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Zendesk_Agent__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Zendesk agent assigned to the record</inlineHelpText>
+    <label>Zendesk Agent</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adam Zalt</fullName>
+                <default>false</default>
+                <label>Adam Zalt</label>
+            </value>
+            <value>
+                <fullName>Armando Aceves</fullName>
+                <default>false</default>
+                <label>Armando Aceves</label>
+            </value>
+            <value>
+                <fullName>Brendan Kussman</fullName>
+                <default>false</default>
+                <label>Brendan Kussman</label>
+            </value>
+            <value>
+                <fullName>Habib Daof</fullName>
+                <default>false</default>
+                <label>Habib Daof</label>
+            </value>
+            <value>
+                <fullName>Joseph Sterner</fullName>
+                <default>false</default>
+                <label>Joseph Sterner</label>
+            </value>
+            <value>
+                <fullName>Kevin Lewis</fullName>
+                <default>false</default>
+                <label>Kevin Lewis</label>
+            </value>
+            <value>
+                <fullName>Michael Ferraro</fullName>
+                <default>false</default>
+                <label>Michael Ferraro</label>
+            </value>
+            <value>
+                <fullName>Robert Walker</fullName>
+                <default>false</default>
+                <label>Robert Walker</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

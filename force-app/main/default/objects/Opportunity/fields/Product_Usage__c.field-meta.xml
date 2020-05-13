@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Usage__c</fullName>
+    <externalId>false</externalId>
+    <label>Product Usage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Audio usage only</fullName>
+                <default>false</default>
+                <label>Audio usage only</label>
+            </value>
+            <value>
+                <fullName>Web High usage</fullName>
+                <default>false</default>
+                <label>Web High usage</label>
+            </value>
+            <value>
+                <fullName>Web Low usage</fullName>
+                <default>false</default>
+                <label>Web Low usage</label>
+            </value>
+            <value>
+                <fullName>No usage - Minimum usage</fullName>
+                <default>false</default>
+                <label>No usage - Minimum usage</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

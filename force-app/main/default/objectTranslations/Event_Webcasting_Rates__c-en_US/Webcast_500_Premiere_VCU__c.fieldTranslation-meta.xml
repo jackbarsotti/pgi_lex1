@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Per month --></help>
+    <label><!-- Webcast 500 (Premiere) - VCU --></label>
+    <name>Webcast_500_Premiere_VCU__c</name>
+</CustomFieldTranslation>

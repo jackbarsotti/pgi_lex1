@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Flag to determine whether company is defunct. --></help>
+    <label><!-- Company Is Defunct --></label>
+    <name>zisf__Company_Is_Defunct__c</name>
+</CustomFieldTranslation>

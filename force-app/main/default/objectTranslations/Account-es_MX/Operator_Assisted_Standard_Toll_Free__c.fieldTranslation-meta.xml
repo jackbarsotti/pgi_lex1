@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Rate charged for a participant dialing into the US toll free number for an Auto Event. --></help>
+    <label><!-- Auto Toll Free Rate --></label>
+    <name>Operator_Assisted_Standard_Toll_Free__c</name>
+</CustomFieldTranslation>

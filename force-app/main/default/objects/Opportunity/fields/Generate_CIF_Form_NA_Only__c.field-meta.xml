@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Generate_CIF_Form_NA_Only__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Will generate a CIF as adding this to the workflow rule that sends out the CIF at closed won</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Emails the Opportunity Owner the CIF form when selected, the Stage = Closed Won, and the record is saved.  Will reset to unchecked once saved. FYI, you need to select this field from the Q/C record if you have a signed contract done via Docusign.</inlineHelpText>
+    <label>Generate CIF Form (NA Only)</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

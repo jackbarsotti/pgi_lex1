@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>iMC_Churn_Reason_Codes_for_Lost_Renewal</fullName>
+    <active>true</active>
+    <description>This is to require the loss Renewal multi-select field in the Opportunity.</description>
+    <errorConditionFormula>AND( 
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;,
+OR( 
+RecordType.DeveloperName = &quot;iMC Renewal Opportunity&quot;), 
+ISPICKVAL(StageName, &quot;Closed Lost&quot;), 
+ISPICKVAL(Churn_Reason_Codes__c,&quot;&quot;) 
+)</errorConditionFormula>
+    <errorMessage>Lost Renewal Opportunities required churn codes.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is an internal reference that the customer can pick to use to reference their boxes easier with ReadyTalk --></help>
+    <label><!-- Room Name --></label>
+    <name>Room_Name__c</name>
+</CustomFieldTranslation>

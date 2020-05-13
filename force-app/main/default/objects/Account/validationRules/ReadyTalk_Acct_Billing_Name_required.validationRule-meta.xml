@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReadyTalk_Acct_Billing_Name_required</fullName>
+    <active>true</active>
+    <description>user is sf admin</description>
+    <errorConditionFormula>AND(
+ISNULL(      Biling_Contact__c   ),Provisioned__c, $User.ReadyTalk_Exempt__c &lt;&gt; TRUE,
+RecordType.DeveloperName = &quot;ReadyTalk_Account&quot;,$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot; 
+)</errorConditionFormula>
+    <errorDisplayField>Biling_Contact__c</errorDisplayField>
+    <errorMessage>Billing Contact Name required.</errorMessage>
+</ValidationRule>

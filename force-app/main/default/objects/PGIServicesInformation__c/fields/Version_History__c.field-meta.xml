@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Version_History__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Version History</label>
+    <referenceTo>Version_History__c</referenceTo>
+    <relationshipLabel>CPQ - Contract General Content</relationshipLabel>
+    <relationshipName>CPQ_Contract_General_Content</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AdminSearchString__c</fullName>
+    <description>No FLS is granted, this field is updated by a WFR that copies over lookup values so that they can be used for searching and getting case results.</description>
+    <externalId>false</externalId>
+    <label>Admin: Search String</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Current Instant Messaging Solution --></label>
+    <name>Current_Instant_Messaging_Solution__c</name>
+    <picklistValues>
+        <masterLabel>Jabber</masterLabel>
+        <translation><!-- Jabber --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Skype for Business</masterLabel>
+        <translation><!-- Skype for Business --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

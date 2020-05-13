@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>z_Admin_Misc</fullName>
+    <columns>NAME</columns>
+    <columns>Implementation_Owner__c</columns>
+    <columns>Related_Opportunity__c</columns>
+    <columns>IST_Status__c</columns>
+    <columns>Implementation_Type__c</columns>
+    <columns>Bill_Review_Completed__c</columns>
+    <columns>Hand_off_Completed__c</columns>
+    <columns>Training_Specialist_Assigned__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>IST_Completed_Status__c</field>
+        <operation>equals</operation>
+        <value>Completed</value>
+    </filters>
+    <label>z-Admin-Misc</label>
+    <language>en_US</language>
+    <sharedTo/>
+</ListView>

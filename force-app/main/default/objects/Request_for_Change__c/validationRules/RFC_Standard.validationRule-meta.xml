@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RFC_Standard</fullName>
+    <active>false</active>
+    <description>if RFC is related to an SCA then the Infrastructure Close Affected and Application Close Affected are required fields</description>
+    <errorConditionFormula>AND(
+$User.ProfileId &lt;&gt; &#39;00e30000001kms9&#39;,
+NOT( ISBLANK( Related_SCA__c ) ), 
+ISBLANK( Infrastructure_CIs_Affected__c ) ,
+ISBLANK( Application_CIs_Affected__c ) 
+)</errorConditionFormula>
+    <errorMessage>The Infrastructure Close Affected and Application Close Affected are required fields when creating a Standard RFC</errorMessage>
+</ValidationRule>

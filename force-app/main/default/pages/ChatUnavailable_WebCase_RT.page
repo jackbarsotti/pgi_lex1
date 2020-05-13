@@ -1,0 +1,324 @@
+<apex:page language="{!$CurrentPage.parameters.lang}" showHeader="false" standardStylesheets="false">
+<style class="script-css">
+
+    body {
+        padding: 0px;
+        margin: 0px;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 13px;
+    }
+    
+    #chatHeader {
+        border-radius: 3px 3px 0px 0px;
+        display:inline-block;
+        background-color: #6ebe47;
+        text-align: center;
+        height: 24px;
+        line-height: 24px;
+        font-weight: bold;
+        color: #ffffff;
+        width: 100%;
+    }
+    
+    #webCaseContainer {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-top: 4px;
+    }
+    
+    #webCaseForm {
+        display: inline-block;
+        text-align: left;
+    }
+    
+    #webCaseSubHeader, #messageText {
+        float: left;
+        margin: 8px;
+        padding-left: 4px;
+        padding-right: 4px;
+        font-weight: bold;
+        color: #666;
+    }
+    
+    #webCaseFields {
+        text-align: center;
+    }
+    
+    input[type=text], input[type=email] {
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 13px;
+        width: 90%;
+        padding-left: 4px;
+        padding-right: 4px;
+        display: inline-block;
+        box-shadow: none;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        border: 1px solid;
+        border-radius: 4px;
+        border-color: #D3D3D3;
+        color: #4D4D4D;
+        height: 24px;
+    }
+    
+    input:hover, textarea:hover, button:hover, input:focus, textarea:focus, button:focus {
+        outline: none;
+        border-color: #52a32c;
+    }
+    
+    textarea {
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 13px;
+        margin-right: 0px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        border: 1px solid;
+        border-radius: 4px;
+        border-color: #D3D3D3;
+        box-shadow: none;
+        text-indent: 0;
+        padding: 4px;
+        color: #4D4D4D;
+        resize: vertical;
+        overflow: auto;
+        width: 90%;
+        max-height: 200px;
+    }
+    
+    button {
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        margin-top: 10px;
+        padding: 4px;
+        text-align: center;
+        border: 1px solid #52a32c;
+        border-radius: 4px;
+        color: #ffffff;
+        background-color: #6ebe47;
+        width: 70%;
+        height: 30px;
+        font-weight: bold;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 13px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #7bcb53;
+        cursor: pointer;
+    }
+    
+    input:-webkit-autofill, textarea:-webkit-autofill {
+        border-color: #D3D3D3;
+        -webkit-text-fill-color: #4D4D4D;
+        -webkit-box-shadow: 0 0 0px 1000px #FFF inset;
+        transition: background-color 5000s ease-in-out 0s;
+        font-family: Verdana, Geneva, sans-serif;
+    }
+    
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus {
+        border-color: #52a32c;
+        -webkit-text-fill-color: #6ebe47;
+        -webkit-box-shadow: 0 0 0px 1000px #FFF inset;
+        transition: background-color 5000s ease-in-out 0s;
+        font-family: Verdana, Geneva, sans-serif;
+    }
+    
+    .input-error{
+        display: none;
+        color: red;
+    }   
+
+</style>
+
+<div id="chatHeader">
+    {!$Label.chat_Leave_a_Message}    
+</div>
+
+<div id="webCaseContainer">
+    <form name="webCaseForm" id="webCaseForm" method="POST">
+    
+        <p id="webCaseSubHeader"></p><br />
+        
+        <input type="hidden" name="orgid" id='org_id' value="00D30000001H6BZ" />
+        <input type="hidden" id="retURL" name="retURL" value="https://pgi.secure.force.com/chatcustompage/ChatLandingPage" />
+        <input type="hidden" name="recordType" id="recordType" value="0121B0000018GljQAE" />
+        <input type="hidden" name="origin" id="Origin" value="Chat" />
+
+        <div id="webCaseFields">
+            <input id="Name" placeholder="{!$Label.chat_Name}" name="Name" maxlength="80" type="text" /><br />
+            <div class="input-error"><a>{!$Label.chat_Please_provide_your_name}</a></div>
+            <input id="email" maxlength="80" placeholder="{!$Label.chat_Email}" name="email" type="text"  /><br />
+            <div class="input-error"><a>{!$Label.chat_Please_provide_a_valid_email}</a></div>
+
+            <input id="Subject"  name="subject" type="hidden" value="Missed Chat" />
+            <p id="messageText">{!$Label.chat_Message}</p><br />
+            <textarea id="description" name="description" form="webCaseForm" rows="8" cols="60" maxlength="255" ></textarea><br />
+            <div class="input-error"><a>{!$Label.chat_Complete_this_field}</a></div>
+        </div>
+    </form>
+<div id="submitButton">
+    <button id="submitBtn" onclick="submitForm()">{!$Label.chat_Submit}</button>
+</div>
+</div>
+
+<script type="text/javascript">
+
+    //mode can be unavailable or canceled
+    var mode= '{!$CurrentPage.parameters.endmode}';
+    
+    if (mode == 'canceled'){
+         document.querySelector("#webCaseSubHeader").innerText = "{!$Label.chat_Leave_a_message_and_we_will_get_back_to_you}";
+    }
+    
+    else {
+        document.querySelector("#webCaseSubHeader").innerText = "{!$Label.Chat_Thank_you_for_your_interest_in_Chat}";
+    }
+
+    //Get values from session storage from prechat
+    var fullName = sessionStorage.getItem("fullName");
+    var Email = sessionStorage.getItem("Email");
+    var Description = sessionStorage.getItem("Description");
+    
+    if (Description == null || Description == 'null'){
+        Description = '';
+    }
+ 
+    var Name = document.getElementById("Name");
+    var EmailAddress = document.getElementById("email");
+    var Message = document.getElementById("description");
+    
+    function setDescription (){
+        document.querySelector("#Name").value= fullName;
+        document.querySelector("#email").value= Email;
+        document.querySelector("#description").value= Description;
+    }
+
+    setDescription();
+    
+    var inputErrors = document.getElementsByClassName("input-error");
+
+    var nameValid = false;
+    var emailValid = false;
+    var messageValid = false;
+    var inputValid = false;
+
+var submitButton = document.getElementById("submitBtn");
+
+function checkValidInput() {
+    checkName();
+    checkEmail();
+    checkMessage();
+
+    if (nameValid && emailValid && messageValid){
+        inputValid = true;
+    }
+    
+    else {
+        inputValid = false;
+    }
+}
+
+//Full Name check
+function checkName() {
+    if  (Name.value.length > 0) {
+        inputErrors[0].style.display = 'none';
+        nameValid = true;
+    }
+    
+    else {
+        inputErrors[0].style.display = 'block';
+        nameValid = false;
+    }
+}
+
+Name.addEventListener("blur",checkName);
+
+//Email check
+function emailCheck(email) { 
+    return /^.+@.+\..+$/.test(email);
+}
+
+function checkEmail() {
+    emailValid = emailCheck(EmailAddress.value);
+        if (emailValid){
+            inputErrors[1].style.display = 'none';
+        }
+        else {
+            inputErrors[1].style.display = 'block';
+        }
+}
+
+EmailAddress.addEventListener("blur",checkEmail);
+
+//Message check
+function checkMessage(){
+    if  (Message.value.length > 0) {
+        inputErrors[2].style.display = 'none';
+        messageValid = true;
+    }
+    
+    else {
+        inputErrors[2].style.display = 'block';
+        messageValid = false;
+    }
+};
+
+Message.addEventListener("blur",checkMessage);
+ 
+    function submitForm() {
+       checkValidInput();
+       
+       if (inputValid) {
+           setVars();
+           document.getElementById("webCaseForm").submit();
+       }
+    }
+    
+    function setVars(){
+    var currentOrg = '{!$CurrentPage.parameters.org}';
+    var currentOrigin = '{!$CurrentPage.parameters.origin}';
+    console.log("origin: " + currentOrigin);
+    var baseRetURL;
+    var form = document.getElementById("webCaseForm");
+    var org_id = document.getElementById("org_id");
+    
+    switch(currentOrg){
+        case "dev":
+            form.action ="https://pgi--Dev.cs42.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8";
+            baseRetURL = 'https://dev-pgi.cs42.force.com/chatcustompage/ChatLandingPage_RT';
+            org_id = '00D56000000AC3q';
+            break;
+        case "staging":
+            form.action ="https://cs9.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8";
+            baseRetURL = 'https://staging-pgi.cs9.force.com/chatcustompage/ChatLandingPage_RT';
+            org_id = '00DK000000WffTs';
+            break;
+        case "prod":
+            form.action ="https://na68.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8";
+            baseRetURL = 'https://pgi.secure.force.com/chatcustompage/ChatLandingPage_RT';
+            org_id = '00D30000001H6BZ';
+            break;
+    }
+    
+    //Set Subject
+    var NameVal = Name.value;
+    document.querySelector("#Subject").value = ("Missed chat from " + NameVal);
+
+    //Set Ret URL
+    document.getElementById('retURL').value = baseRetURL + '?lang=' + '{!$CurrentPage.parameters.lang}' + '&origin=' + currentOrigin;
+    }
+    
+    window.onload = setVars();
+    
+</script>
+
+</apex:page>

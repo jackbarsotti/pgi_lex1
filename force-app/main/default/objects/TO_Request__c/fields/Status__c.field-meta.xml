@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    Approved__c
+    &amp;&amp;
+    Cancellation_Requested__c
+,
+    &quot;Approved (Cancellation Requested)&quot;
+,
+    IF(
+        Approved__c
+    ,
+        &quot;Approved&quot;
+    ,
+        IF(
+            Denied__c
+        ,
+            &quot;Denied&quot;
+        ,
+            IF(
+                Canceled__c
+            ,
+                &quot;Canceled&quot;
+            ,
+                IF(
+                    Cancellation_Requested__c
+                ,
+                    &quot;Pending (Cancellation Requested)&quot;
+                ,
+                    &quot;Pending&quot;
+                )
+            )
+        )
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

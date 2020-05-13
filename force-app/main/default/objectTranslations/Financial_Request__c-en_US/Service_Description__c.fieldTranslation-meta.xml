@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Service Description --></label>
+    <name>Service_Description__c</name>
+    <picklistValues>
+        <masterLabel>Audio</masterLabel>
+        <translation><!-- Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GMNU</masterLabel>
+        <translation><!-- GMNU --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Skype</masterLabel>
+        <translation><!-- Skype --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebEx</masterLabel>
+        <translation><!-- WebEx --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iMeet</masterLabel>
+        <translation><!-- iMeet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iMeetLive</masterLabel>
+        <translation><!-- iMeetLive --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

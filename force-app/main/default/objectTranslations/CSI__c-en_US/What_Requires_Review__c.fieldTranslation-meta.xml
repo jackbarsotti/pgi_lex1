@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- What Requires Review? --></label>
+    <name>What_Requires_Review__c</name>
+    <picklistValues>
+        <masterLabel>3rd Party Vendor Details Incomplete/Missing</masterLabel>
+        <translation><!-- 3rd Party Vendor Details Incomplete/Missing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Call Example Incomplete/Incorrect</masterLabel>
+        <translation><!-- Call Example Incomplete/Incorrect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Case Comments Do Not Include Troubleshooting Steps</masterLabel>
+        <translation><!-- Case Comments Do Not Include Troubleshooting Steps --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Case Comments Missing</masterLabel>
+        <translation><!-- Case Comments Missing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chat/Email Interaction Transcript Missing</masterLabel>
+        <translation><!-- Chat/Email Interaction Transcript Missing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client Follow Up Details Missing/Incomplete</masterLabel>
+        <translation><!-- Client Follow Up Details Missing/Incomplete --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed Prematurely</masterLabel>
+        <translation><!-- Closed Prematurely --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Defect Process Not Followed</masterLabel>
+        <translation><!-- Defect Process Not Followed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Did Not Follow Correct Escalation Path</masterLabel>
+        <translation><!-- Did Not Follow Correct Escalation Path --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Exceptionally Well Executed Ticket</masterLabel>
+        <translation><!-- Exceptionally Well Executed Ticket --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Failed to Attach Logs</masterLabel>
+        <translation><!-- Failed to Attach Logs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Field: Area of Focus</masterLabel>
+        <translation><!-- Field: Area of Focus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Field: Caller Name</masterLabel>
+        <translation><!-- Field: Caller Name --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Field: Impact/Priority</masterLabel>
+        <translation><!-- Field: Impact/Priority --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Field: Incident Date/Time</masterLabel>
+        <translation><!-- Field: Incident Date/Time --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Field: Issue Description/Resolution Comments</masterLabel>
+        <translation><!-- Field: Issue Description/Resolution Comments --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Field: PGi/Vendor at Fault</masterLabel>
+        <translation><!-- Field: PGi/Vendor at Fault --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Field: Product</masterLabel>
+        <translation><!-- Field: Product --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Field: Root Category/Issue/Cause</masterLabel>
+        <translation><!-- Field: Root Category/Issue/Cause --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Field: Symptom Main/Sub Category</masterLabel>
+        <translation><!-- Field: Symptom Main/Sub Category --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Field: Tracking Type</masterLabel>
+        <translation><!-- Field: Tracking Type --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Focus Area Details Incomplete/Incorrect</masterLabel>
+        <translation><!-- Focus Area Details Incomplete/Incorrect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrectly Parented</masterLabel>
+        <translation><!-- Incorrectly Parented --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Multiple Tickets Should Have Been Created</masterLabel>
+        <translation><!-- Multiple Tickets Should Have Been Created --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other (Describe Below)</masterLabel>
+        <translation><!-- Other (Describe Below) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending Information Used Incorrectly</masterLabel>
+        <translation><!-- Pending Information Used Incorrectly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Possible Protocol Violation</masterLabel>
+        <translation><!-- Possible Protocol Violation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service Identification/Conference Details Missing</masterLabel>
+        <translation><!-- Service Identification/Conference Details Missing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service Not Marked as Restored at Correct Time</masterLabel>
+        <translation><!-- Service Not Marked as Restored at Correct Time --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Should Have Been Resolved Without Escalation</masterLabel>
+        <translation><!-- Should Have Been Resolved Without Escalation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Template Not Used</masterLabel>
+        <translation><!-- Template Not Used --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ticket Logged in Error</masterLabel>
+        <translation><!-- Ticket Logged in Error --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

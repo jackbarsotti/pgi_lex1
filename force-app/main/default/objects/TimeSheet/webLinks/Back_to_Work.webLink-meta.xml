@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Back_to_Work</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Back to Work</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/flow/FSL_Time_Sheet_Entries?retURL={!TimeSheet.Id}
+&amp;
+id_TimeSheet={!TimeSheet.Id}
+&amp;
+n_Action=4</url>
+</WebLink>

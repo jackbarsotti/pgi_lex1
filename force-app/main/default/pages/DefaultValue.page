@@ -1,0 +1,223 @@
+<apex:page showHeader="true" sidebar="true" standardController="Default_Value__c" extensions="DefaultValueExtension">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script>
+    	var j$ = jQuery.noConflict();
+
+    	//make case insensitive find
+    	// NEW selector
+		j$.expr[':'].Contains = function(a, i, m) {
+		  return j$(a).text().toUpperCase()
+		      .indexOf(m[3].toUpperCase()) >= 0;
+		};
+
+		// OVERWRITES old selecor
+		j$.expr[':'].contains = function(a, i, m) {
+		  return j$(a).text().toUpperCase()
+		      .indexOf(m[3].toUpperCase()) >= 0;
+		};
+
+
+        var productField, aofField, symptomField, subSymptomField, initialized;
+        var productFieldId, aofFieldId, symptomFieldId, subSymptomFieldId;
+        var getFieldIds = function() {
+            try {
+            	//Get the ID of the field by the LABEL 
+            	j$("label:contains('Product__c')").each(function( index, value ) {
+				  productFieldId = j$(value).attr('for');
+				});
+				j$("label:contains('Area_of_Focus__c')").each(function( index, value ) {
+				  aofFieldId = j$(value).attr('for');
+				});
+				j$("label:contains('Symptom_Main__c')").each(function( index, value ) {
+				  symptomFieldId = j$(value).attr('for');
+				});
+				j$("label:contains('Symptom_Sub__c')").each(function( index, value ) {
+				  subSymptomFieldId = j$(value).attr('for');
+				});
+            } catch (exception) {
+                console.log(exception);
+            }
+        }
+        function initializeFields() {
+            try {
+                productField = j$('[id="'+ productFieldId + '"]');
+                productField.on("change", function() { checkPicklists(); });
+                aofField = j$('[id="'+ aofFieldId + '"]');
+                aofField.on("change", function() { checkPicklists(); });
+                symptomField = j$('[id="'+ symptomFieldId + '"]');
+                symptomField.on("change", function() { checkPicklists(); });
+                subSymptomField = j$('[id="'+ subSymptomFieldId + '"]');
+            } catch (exception) {
+                console.log(exception);
+            }
+        }
+        var clearCurrentValue = function(field) {
+            field.val("");
+        }
+        var disableField = function(field) {
+            field.prop("disabled", true);
+        }
+        var enableField = function(field) {
+            field.prop("disabled",false);
+        }
+        
+
+        var removeFieldValues = function(field) {
+            field.empty();
+        }
+        var getProductField = function() {
+            return productField;
+        }
+        var getProductValue = function() {
+            if(getProductField() != null) {
+                return getProductField().val();
+            }
+            return null;
+        }
+        var getAreaOfFocusField = function() {
+            return aofField;
+        }
+        var getAreaOfFocusValue = function() {
+            if(getAreaOfFocusField() != null) {
+                return getAreaOfFocusField().val();
+            }
+            return null;
+        }
+        var getSymptomField = function() {
+            return symptomField;
+        }
+        var getSymptomValue = function() {
+            if(getSymptomField() != null) {
+                return getSymptomField().val();
+            }
+            return null;
+        }
+        var getSubSymptomField = function() {
+            return subSymptomField;
+        }
+        var getSubSymptomValue = function() {
+            if(getSubSymptomField() != null) {
+                return getSubSymptomField().val();
+            }
+            return null;
+        }
+        var ProductSymptoms = {!ProductSymptoms};
+        //used to preopulate conference information
+        var checkPicklists = function() {
+            initializeFields();
+            //The field of Area of Focus is dependent on Product 
+
+            //The field of Main Symptom is dependent on Area of Focus 
+            
+            //The field of  Sub Symptom values to be unique based off of the entire selection not just the previous controlling field,
+                
+                setFieldValues(getAreaOfFocusField(), ProductSymptoms.productToAreaOfFocusMap[getProductValue()]);
+                setFieldValues(getSymptomField(), ProductSymptoms.areaOfFocusToSymptomMap[getProductValue() + '' + getAreaOfFocusValue()]);
+                //uses complex key -- cpfs.Product__c + cpfs.Symptom__c + cpfs.Area_of_Focus__c;
+                // console.log(getProductValue() + getSymptomValue() + getAreaOfFocusValue());
+                setFieldValues(getSubSymptomField(), ProductSymptoms.subSymptomMap[getProductValue() + getSymptomValue() + getAreaOfFocusValue()]);
+
+        }
+        var setFieldValues = function(field, results) {
+            if(field == null || field == undefined) {return;}
+            var priorValue = field.val();
+            if(results == null || results == undefined || results.length == 0) {
+                disableField(field);
+                clearCurrentValue(field);
+                removeFieldValues(field);
+                field.append('<option value="">--None--</option>');
+                return;
+            } else {
+                results.sort();
+                enableField(field);
+                removeFieldValues(field);
+                field.append('<option value="">--None--</option>');
+                for(var i = 0; i < results.length; i++) {
+                    var loopValue = results[i];
+                    j$(field).append('<option value="' + results[i] + '">' + results[i] + '</option>');
+                    
+                    if(loopValue == priorValue) {
+                        field.val(priorValue);
+                    }
+                }
+            }
+        }
+        var pageLoad = window.onload;
+        // try{
+            window.onload = function() {
+            	console.log('onload');
+                if (pageLoad && typeof pageLoad == 'function') {
+                    getFieldIds(); //store IDs
+                    pageLoad(); //standard page load
+                    checkPicklists(); //overwrite dependent picklist values values
+                    
+                } else {
+                    getFieldIds();
+                    checkPicklists();
+                    
+                }
+                
+            }
+        // } catch (e) {
+
+        // }
+        checkPicklists();
+    </script>
+
+	<apex:form >
+		<apex:pageMessages />
+		<apex:pageBlock id="pb">
+			<apex:pageBlockButtons >
+                    <apex:commandButton action="{!save}" value="Save" />
+                    <apex:commandButton action="{!saveAndNew}" value="Save & New" />
+                    <apex:commandButton action="{!cancel}" value="Cancel" />
+			</apex:pageBlockButtons>
+			<apex:pageBlockSection columns="1">
+			
+			<apex:pageBlockSectionItem >
+			<apex:actionRegion >
+				<apex:selectList label="Field" id="fieldNameinput" value="{!Default_Value__c.Field_API_Name__c}" size="1" required="true">
+					<apex:selectOptions value="{!caseFields}"/>
+					<apex:actionSupport event="onchange" reRender="pb" />
+				</apex:selectList>
+				</apex:actionRegion>
+			</apex:pageBlockSectionItem>
+			<apex:outputPanel rendered="{!requiredFields.size > 0}">
+				<apex:repeat value="{!requiredFields}" var="field"> 
+					<apex:pageBlockSection >
+						<apex:pageBlockSectionItem id="value" >
+							<apex:outputLabel for="valueInput" value="Controlling Field: {!field}" />
+							<apex:inputField styleClass="inputField" id="valueInput" html-inputName="{!field}__input" value="{!caseRecord[field]}" required="true" rendered="{!field != ''}">
+								<apex:actionSupport event="onchange" onsubmit="checkPicklists();return false;" rendered="{!field == 'Product__c' || field == 'Area_of_Focus__c' || field == 'Symptom_Main__c' || field == 'Symptom_Sub__c'}" />
+								<script>
+									// console.log('script pbsi');
+									// if('{!field}' == 'Product__c') {
+									// 	var field = this
+									// 	console.log(this);
+										
+									// }
+								</script>
+							</apex:inputField>
+						</apex:pageBlockSectionItem>
+					</apex:pageBlockSection>
+				</apex:repeat>
+			</apex:outputPanel>
+			<apex:pageBlockSectionItem id="value" >
+				<apex:outputLabel for="valueInput" value="Value for: {!Default_Value__c.Field_API_Name__c}"  />
+				<apex:inputField styleClass="inputField" id="valueInput" html-inputName="{!Default_Value__c.Field_API_Name__c}__input" value="{!caseRecord[Default_Value__c.Field_API_Name__c]}" required="true" rendered="{!Default_Value__c.Field_API_Name__c != ''}">
+					<apex:actionSupport event="onchange" onsubmit="checkPicklists();return false;" rendered="{!Default_Value__c.Field_API_Name__c == 'Product__c' || Default_Value__c.Field_API_Name__c == 'Area_of_Focus__c' || Default_Value__c.Field_API_Name__c == 'Symptom_Main__c' || Default_Value__c.Field_API_Name__c == 'Symptom_Sub__c'}" />
+					<script>
+						
+					</script>
+				</apex:inputField>
+
+				</apex:pageBlockSectionItem>
+					
+			</apex:pageBlockSection>
+			<script>
+				getFieldIds(); //reload IDs for fields
+			</script>
+		</apex:pageBlock>
+	</apex:form>	
+
+</apex:page>

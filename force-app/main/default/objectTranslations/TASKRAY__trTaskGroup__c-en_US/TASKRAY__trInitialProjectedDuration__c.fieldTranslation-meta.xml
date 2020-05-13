@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- “Behind the scenes” field. This is the duration of the task group as it was initially projected. --></help>
+    <label><!-- Initial Projected Duration --></label>
+    <name>TASKRAY__trInitialProjectedDuration__c</name>
+</CustomFieldTranslation>

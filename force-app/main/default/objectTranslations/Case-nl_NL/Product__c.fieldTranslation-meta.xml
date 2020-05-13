@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Product --></label>
+    <name>Product__c</name>
+    <picklistValues>
+        <masterLabel>*Non-Product/Consultative</masterLabel>
+        <translation><!-- *Non-Product/Consultative --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ACT Automated Audio</masterLabel>
+        <translation><!-- ACT Automated Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ACT Reserved Audio</masterLabel>
+        <translation><!-- ACT Reserved Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ACT Webcast</masterLabel>
+        <translation><!-- ACT Webcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Adobe - Outlook Toolbar</masterLabel>
+        <translation><!-- Adobe - Outlook Toolbar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Adobe Connect</masterLabel>
+        <translation><!-- Adobe Connect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cisco Jabber</masterLabel>
+        <translation><!-- Cisco Jabber --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Direct Number Room</masterLabel>
+        <translation><!-- Direct Number Room --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Conferencing</masterLabel>
+        <translation><!-- Event Conferencing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Portal</masterLabel>
+        <translation><!-- Event Portal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet</masterLabel>
+        <translation><!-- GlobalMeet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Admin Portal (Conf. HUB)</masterLabel>
+        <translation><!-- GlobalMeet - Admin Portal (Conf. HUB) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Audio</masterLabel>
+        <translation><!-- GlobalMeet - Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Audio NA</masterLabel>
+        <translation><!-- GlobalMeet - Audio NA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Audio NA - Scheduled</masterLabel>
+        <translation><!-- GlobalMeet - Audio NA - Scheduled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Audio for Skype (GMSO)</masterLabel>
+        <translation><!-- GlobalMeet - Audio for Skype (GMSO) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Audio for Skype Server</masterLabel>
+        <translation><!-- GlobalMeet - Audio for Skype Server --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Audio for Skype for Business Online</masterLabel>
+        <translation><!-- GlobalMeet - Audio for Skype for Business Online --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Click to Join</masterLabel>
+        <translation><!-- GlobalMeet - Click to Join --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Collaboration</masterLabel>
+        <translation><!-- GlobalMeet - Collaboration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Desktop (Legacy)</masterLabel>
+        <translation><!-- GlobalMeet - Desktop (Legacy) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Desktop App</masterLabel>
+        <translation><!-- GlobalMeet - Desktop App --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Greeted Entry</masterLabel>
+        <translation><!-- GlobalMeet - Greeted Entry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Greeted Entry Connection</masterLabel>
+        <translation><!-- GlobalMeet - Greeted Entry Connection --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Mobile App (Android)</masterLabel>
+        <translation><!-- GlobalMeet - Mobile App (Android) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Mobile App (Legacy-All)</masterLabel>
+        <translation><!-- GlobalMeet - Mobile App (Legacy-All) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Mobile App (iPad)</masterLabel>
+        <translation><!-- GlobalMeet - Mobile App (iPad) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Mobile App (iPhone)</masterLabel>
+        <translation><!-- GlobalMeet - Mobile App (iPhone) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - My Conferencing Center</masterLabel>
+        <translation><!-- GlobalMeet - My Conferencing Center --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Outlook Toolbar</masterLabel>
+        <translation><!-- GlobalMeet - Outlook Toolbar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Passcode Entry</masterLabel>
+        <translation><!-- GlobalMeet - Passcode Entry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Phone</masterLabel>
+        <translation><!-- GlobalMeet - Phone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Slide Assist</masterLabel>
+        <translation><!-- GlobalMeet - Slide Assist --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - VRC (Video Room Connector)</masterLabel>
+        <translation><!-- GlobalMeet - VRC (Video Room Connector) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Web (Legacy)</masterLabel>
+        <translation><!-- GlobalMeet - Web (Legacy) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Web Plugin for Skype</masterLabel>
+        <translation><!-- GlobalMeet - Web Plugin for Skype --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Webcast</masterLabel>
+        <translation><!-- GlobalMeet - Webcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Webinar</masterLabel>
+        <translation><!-- GlobalMeet - Webinar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - Webinar (Legacy)</masterLabel>
+        <translation><!-- GlobalMeet - Webinar (Legacy) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet - for Microsoft Teams</masterLabel>
+        <translation><!-- GlobalMeet - for Microsoft Teams --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet India - Audio</masterLabel>
+        <translation><!-- GlobalMeet India - Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet India - Web</masterLabel>
+        <translation><!-- GlobalMeet India - Web --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LSI Managed Services</masterLabel>
+        <translation><!-- LSI Managed Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ON24</masterLabel>
+        <translation><!-- ON24 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PremiereCall - Assisted Meeting</masterLabel>
+        <translation><!-- PremiereCall - Assisted Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PremiereCall - Auditorium</masterLabel>
+        <translation><!-- PremiereCall - Auditorium --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PremiereCall - Connection</masterLabel>
+        <translation><!-- PremiereCall - Connection --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PremiereCall - Event</masterLabel>
+        <translation><!-- PremiereCall - Event --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PremiereCall - Passcode Entry</masterLabel>
+        <translation><!-- PremiereCall - Passcode Entry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Skype Help</masterLabel>
+        <translation><!-- Skype Help --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>V-Cube</masterLabel>
+        <translation><!-- V-Cube --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>V-Cube Hybrid/API</masterLabel>
+        <translation><!-- V-Cube Hybrid/API --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video - Hosted Services</masterLabel>
+        <translation><!-- Video - Hosted Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video - Managed Services</masterLabel>
+        <translation><!-- Video - Managed Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video - Virtual Meeting Room</masterLabel>
+        <translation><!-- Video - Virtual Meeting Room --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebEx - CMR Cloud</masterLabel>
+        <translation><!-- WebEx - CMR Cloud --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebEx - CMR Hybrid</masterLabel>
+        <translation><!-- WebEx - CMR Hybrid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebEx - Microsite</masterLabel>
+        <translation><!-- WebEx - Microsite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebEx - Outlook Toolbar</masterLabel>
+        <translation><!-- WebEx - Outlook Toolbar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebEx - PGi Hosted</masterLabel>
+        <translation><!-- WebEx - PGi Hosted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iMeet</masterLabel>
+        <translation><!-- iMeet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iMeet Narrate</masterLabel>
+        <translation><!-- iMeet Narrate --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

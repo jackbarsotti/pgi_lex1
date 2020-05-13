@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mountain_Timezone_Start_Time__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( DATEVALUE(Pre_Conference_Time__c) &gt;=
+DATE ( YEAR (DATEVALUE(Pre_Conference_Time__c)),3,1)
++
+(
+14-
+CASE( MOD(DATE ( YEAR (DATEVALUE(Pre_Conference_Time__c)),3,1) - DATE (1900,1,7),7) ,
+0,7,MOD(DATE ( YEAR (DATEVALUE(Pre_Conference_Time__c)),3,1) - DATE (1900,1,7),7))
+)
+&amp;&amp;
+DATEVALUE(Pre_Conference_Time__c) &lt;
+DATE ( YEAR (DATEVALUE(Pre_Conference_Time__c)),11,1)
++
+(
+7-
+CASE( MOD(DATE ( YEAR (DATEVALUE(Pre_Conference_Time__c)),11,1) - DATE (1900,1,7),7) ,
+0,7,MOD(DATE ( YEAR (DATEVALUE(Pre_Conference_Time__c)),11,1) - DATE (1900,1,7),7))
+),
+LEFT (TEXT (MONTH(DATEVALUE(Pre_Conference_Time__c))) &amp; &quot;/&quot; &amp; 
+ TEXT (DAY(DATEVALUE(Pre_Conference_Time__c))) &amp; &quot;/&quot; &amp; 
+ TEXT (YEAR(DATEVALUE(Pre_Conference_Time__c))) &amp; &quot; &quot; &amp; 
+ TEXT (HOUR((TIMEVALUE( Pre_Conference_Time__c - 6/24 )))) &amp; &quot;:&quot; &amp; 
+ MID(TEXT ((Pre_Conference_Time__c)),15,2) 
+,20) &amp;
+IF(
+VALUE( MID( TEXT( Pre_Conference_Time__c - 6/24 ), 12, 2 ) ) &lt; 12,
+&quot; AM&quot;,
+&quot; PM&quot;
+)
+,
+LEFT (TEXT (MONTH(DATEVALUE(Pre_Conference_Time__c))) &amp; &quot;/&quot; &amp; 
+ TEXT (DAY(DATEVALUE(Pre_Conference_Time__c))) &amp; &quot;/&quot; &amp; 
+ TEXT (YEAR(DATEVALUE(Pre_Conference_Time__c))) &amp; &quot; &quot; &amp; 
+ TEXT (HOUR((TIMEVALUE( Pre_Conference_Time__c - 7/24 )))) &amp; &quot;:&quot; &amp; 
+ MID(TEXT ((Pre_Conference_Time__c)),15,2) 
+,20) &amp;
+IF(
+VALUE( MID( TEXT(Pre_Conference_Time__c- 7/24 ), 12, 2 ) ) &lt; 12,
+&quot; AM&quot;,
+&quot; PM&quot;
+)
+
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Mountain timezone for pre-conference start time. This is based upon converting the pre-conference start time from customer to Mountain for EM/EP scheduling purposes.</inlineHelpText>
+    <label>Mountain Timezone Start Time</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

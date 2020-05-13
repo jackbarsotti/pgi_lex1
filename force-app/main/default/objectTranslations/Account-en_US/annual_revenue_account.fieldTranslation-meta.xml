@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Annual Rev. of Account</value>
+    </caseValues>
+    <name>annual_revenue_account</name>
+    <startsWith>Vowel</startsWith>
+</CustomFieldTranslation>

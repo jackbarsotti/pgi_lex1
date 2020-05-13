@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Logical_Access_Needs_Compilation__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(INCLUDES( Logical_Access_Needs__c , &quot;Call Manager&quot;), &quot;Call Manager&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Logical_Access_Needs__c , &quot;Exchange Mailbox&quot;), &quot;Exchange Mailbox&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Logical_Access_Needs__c , &quot;GlobalMeet&quot;), &quot;GlobalMeet&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Logical_Access_Needs__c , &quot;iMeet&quot;), &quot;iMeet&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Logical_Access_Needs__c , &quot;Network/Windows Login&quot;), &quot;Network/Windows Login&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Logical_Access_Needs__c , &quot;Other Systems&quot;), &quot;Other Systems&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Logical_Access_Needs__c , &quot;PeopleSoft&quot;), &quot;PeopleSoft&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Logical_Access_Needs__c , &quot;PGiTime&quot;), &quot;PGiTime&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Logical_Access_Needs__c , &quot;RC2&quot;), &quot;RC2&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Logical_Access_Needs__c , &quot;ROC (Auditorium)&quot;), &quot;ROC (Auditorium)&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Logical_Access_Needs__c , &quot;Salesforce&quot;), &quot;Salesforce&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Logical_Access_Needs__c , &quot;Skype for Business (IM)&quot;), &quot;Skype for Business (IM)&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Logical_Access_Needs__c , &quot;Tesla&quot;), &quot;Tesla&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Logical_Access_Needs__c , &quot;VPN&quot;), &quot;VPN&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Logical_Access_Needs__c , &quot;VPN Software Installed (contractor/no PGi computer)&quot;), &quot;VPN Software Installed (contractor/no PGi computer)&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Logical_Access_Needs__c , &quot;Win$&quot;), &quot;Win$&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Logical_Access_Needs__c , &quot;WOC (Event)&quot;), &quot;WOC (Event)&quot; + &quot;,&quot; , NULL) + 
+IF(INCLUDES( Logical_Access_Needs__c , &quot;Xlite&quot;), &quot;Xlite&quot; + &quot;,&quot; , NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Logical Access Needs Compilation</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

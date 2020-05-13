@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Renewal_Opportunity_Name</fullName>
+    <active>true</active>
+    <description>Opportunity Name can NOT be edited once the record is initially created on PGi Renewal Optys</description>
+    <errorConditionFormula>AND( 
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;, $User.Override_Validation_Rules__c = False, 
+ RecordType.Name = &quot;PGi Renewal Opportunity&quot;, 
+ ISCHANGED( Name ) )</errorConditionFormula>
+    <errorMessage>Opportunity Name cannot be edited on a PGi Renewal Opportunity.</errorMessage>
+</ValidationRule>

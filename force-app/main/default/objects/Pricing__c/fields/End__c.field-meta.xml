@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End__c</fullName>
+    <description>The ending point which this Pricing is available for.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The ending point which this Pricing is available for.</inlineHelpText>
+    <label>End</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

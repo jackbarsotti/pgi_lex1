@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Operator_Assisted_Premium_Dial_Out__c</fullName>
+    <defaultValue>0.30</defaultValue>
+    <description>Operator Assisted Premium dial out rate per minute for this account</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Rate charged for an operator dialing out to US/Canada participant for a Premium Event.</inlineHelpText>
+    <label>Operator Assisted Premium Dial Out Rate</label>
+    <precision>13</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

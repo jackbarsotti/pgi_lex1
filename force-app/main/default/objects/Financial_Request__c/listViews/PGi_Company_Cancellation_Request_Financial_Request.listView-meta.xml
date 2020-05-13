@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Company_Cancellation_Request_Financial_Request</fullName>
+    <filterScope>Queue</filterScope>
+    <label>PGi-Company Cancellation Request</label>
+    <queue>PGi_Company_Cancellation_Request</queue>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

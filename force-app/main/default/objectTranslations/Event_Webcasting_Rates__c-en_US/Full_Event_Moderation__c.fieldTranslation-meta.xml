@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Includes 30 min pre-conf + 60 min live event; $100 for each add&apos;l 30 min --></help>
+    <label><!-- Full Event Moderation --></label>
+    <name>Full_Event_Moderation__c</name>
+</CustomFieldTranslation>

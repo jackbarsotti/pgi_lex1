@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Area_of_Focus__c</fullName>
+    <externalId>false</externalId>
+    <label>Area of Focus</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Product__c</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Audio Integration</fullName>
+                <default>false</default>
+                <label>Audio Integration</label>
+            </value>
+            <value>
+                <fullName>Audio Integration Support</fullName>
+                <default>false</default>
+                <label>Audio Integration Support</label>
+            </value>
+            <value>
+                <fullName>Audio Support</fullName>
+                <default>false</default>
+                <label>Audio Support</label>
+            </value>
+            <value>
+                <fullName>Client Education/Request</fullName>
+                <default>false</default>
+                <label>Client Education/Request</label>
+            </value>
+            <value>
+                <fullName>Event Support</fullName>
+                <default>false</default>
+                <label>Event Support</label>
+            </value>
+            <value>
+                <fullName>Mobile Support</fullName>
+                <default>false</default>
+                <label>Mobile Support</label>
+            </value>
+            <value>
+                <fullName>Recording Support</fullName>
+                <default>false</default>
+                <label>Recording Support</label>
+            </value>
+            <value>
+                <fullName>Toolbar Support</fullName>
+                <default>false</default>
+                <label>Toolbar Support</label>
+            </value>
+            <value>
+                <fullName>UCaaS Support</fullName>
+                <default>false</default>
+                <label>UCaaS Support</label>
+            </value>
+            <value>
+                <fullName>Video Support</fullName>
+                <default>false</default>
+                <label>Video Support</label>
+            </value>
+            <value>
+                <fullName>VRC (Video Room Connector) Support</fullName>
+                <default>false</default>
+                <label>VRC (Video Room Connector) Support</label>
+            </value>
+            <value>
+                <fullName>Web Support</fullName>
+                <default>false</default>
+                <label>Web Support</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>iMeet Narrate</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Webinar</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Desktop App</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Audio for Skype (GMSO)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Collaboration</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Greeted Entry Connection</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Passcode Entry</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Slide Assist</controllingFieldValue>
+            <controllingFieldValue>Event Portal</controllingFieldValue>
+            <controllingFieldValue>LSI Managed Services</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Admin Portal (Conf. HUB)</controllingFieldValue>
+            <controllingFieldValue>PremiereCall - Assisted Meeting</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Audio</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Audio for Skype for Business Online</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Audio NA</controllingFieldValue>
+            <controllingFieldValue>*Non-Product/Consultative</controllingFieldValue>
+            <controllingFieldValue>ACT Automated Audio</controllingFieldValue>
+            <controllingFieldValue>ACT Reserved Audio</controllingFieldValue>
+            <controllingFieldValue>Adobe Connect</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Phone</controllingFieldValue>
+            <controllingFieldValue>Adobe - Outlook Toolbar</controllingFieldValue>
+            <controllingFieldValue>Direct Number Room</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Webcast</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - VRC (Video Room Connector)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Greeted Entry</controllingFieldValue>
+            <controllingFieldValue>PremiereCall - Auditorium</controllingFieldValue>
+            <controllingFieldValue>PremiereCall - Connection</controllingFieldValue>
+            <controllingFieldValue>PremiereCall - Event</controllingFieldValue>
+            <controllingFieldValue>PremiereCall - Passcode Entry</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Audio NA - Scheduled</controllingFieldValue>
+            <controllingFieldValue>Skype Help</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Desktop (Legacy)</controllingFieldValue>
+            <controllingFieldValue>V-Cube</controllingFieldValue>
+            <controllingFieldValue>V-Cube Hybrid/API</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet India - Audio</controllingFieldValue>
+            <controllingFieldValue>Video - Hosted Services</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet India - Web</controllingFieldValue>
+            <controllingFieldValue>Video - Managed Services</controllingFieldValue>
+            <controllingFieldValue>Video - Virtual Meeting Room</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (Android)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (Legacy-All)</controllingFieldValue>
+            <controllingFieldValue>Cisco Jabber</controllingFieldValue>
+            <controllingFieldValue>WebEx - Microsite</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (iPad)</controllingFieldValue>
+            <controllingFieldValue>WebEx - Outlook Toolbar</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (iPhone)</controllingFieldValue>
+            <controllingFieldValue>WebEx - PGi Hosted</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - My Conferencing Center</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Outlook Toolbar</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Web (Legacy)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Webinar (Legacy)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Click to Join</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - for Microsoft Teams</controllingFieldValue>
+            <valueName>Client Education/Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>iMeet Narrate</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Webinar</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Desktop App</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Collaboration</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Greeted Entry Connection</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Passcode Entry</controllingFieldValue>
+            <controllingFieldValue>Event Portal</controllingFieldValue>
+            <controllingFieldValue>ON24</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Admin Portal (Conf. HUB)</controllingFieldValue>
+            <controllingFieldValue>PremiereCall - Assisted Meeting</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Audio</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Audio NA</controllingFieldValue>
+            <controllingFieldValue>ACT Automated Audio</controllingFieldValue>
+            <controllingFieldValue>ACT Reserved Audio</controllingFieldValue>
+            <controllingFieldValue>ACT Webcast</controllingFieldValue>
+            <controllingFieldValue>Adobe Connect</controllingFieldValue>
+            <controllingFieldValue>Adobe - Outlook Toolbar</controllingFieldValue>
+            <controllingFieldValue>Direct Number Room</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Webcast</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - VRC (Video Room Connector)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Greeted Entry</controllingFieldValue>
+            <controllingFieldValue>PremiereCall - Auditorium</controllingFieldValue>
+            <controllingFieldValue>PremiereCall - Connection</controllingFieldValue>
+            <controllingFieldValue>PremiereCall - Event</controllingFieldValue>
+            <controllingFieldValue>PremiereCall - Passcode Entry</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Audio NA - Scheduled</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Desktop (Legacy)</controllingFieldValue>
+            <controllingFieldValue>V-Cube</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Web Plugin for Skype</controllingFieldValue>
+            <controllingFieldValue>V-Cube Hybrid/API</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet India - Audio</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet India - Web</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (Android)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (Legacy-All)</controllingFieldValue>
+            <controllingFieldValue>WebEx - CMR Cloud</controllingFieldValue>
+            <controllingFieldValue>WebEx - CMR Hybrid</controllingFieldValue>
+            <controllingFieldValue>Cisco Jabber</controllingFieldValue>
+            <controllingFieldValue>WebEx - Microsite</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (iPad)</controllingFieldValue>
+            <controllingFieldValue>WebEx - Outlook Toolbar</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (iPhone)</controllingFieldValue>
+            <controllingFieldValue>WebEx - PGi Hosted</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - My Conferencing Center</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Outlook Toolbar</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Web (Legacy)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Webinar (Legacy)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Click to Join</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - for Microsoft Teams</controllingFieldValue>
+            <valueName>Event Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>iMeet Narrate</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Webinar</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Desktop App</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Audio for Skype (GMSO)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Collaboration</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Slide Assist</controllingFieldValue>
+            <controllingFieldValue>Event Portal</controllingFieldValue>
+            <controllingFieldValue>ON24</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Admin Portal (Conf. HUB)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Audio</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Audio NA</controllingFieldValue>
+            <controllingFieldValue>ACT Automated Audio</controllingFieldValue>
+            <controllingFieldValue>ACT Webcast</controllingFieldValue>
+            <controllingFieldValue>Adobe Connect</controllingFieldValue>
+            <controllingFieldValue>Adobe - Outlook Toolbar</controllingFieldValue>
+            <controllingFieldValue>Direct Number Room</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Webcast</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - VRC (Video Room Connector)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Audio NA - Scheduled</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Desktop (Legacy)</controllingFieldValue>
+            <controllingFieldValue>V-Cube</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Web Plugin for Skype</controllingFieldValue>
+            <controllingFieldValue>V-Cube Hybrid/API</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet India - Audio</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet India - Web</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (Android)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (Legacy-All)</controllingFieldValue>
+            <controllingFieldValue>Cisco Jabber</controllingFieldValue>
+            <controllingFieldValue>WebEx - Microsite</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (iPad)</controllingFieldValue>
+            <controllingFieldValue>WebEx - Outlook Toolbar</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (iPhone)</controllingFieldValue>
+            <controllingFieldValue>WebEx - PGi Hosted</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - My Conferencing Center</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Outlook Toolbar</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Web (Legacy)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Webinar (Legacy)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Click to Join</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - for Microsoft Teams</controllingFieldValue>
+            <valueName>Recording Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>iMeet Narrate</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Webinar</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Desktop App</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Collaboration</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Slide Assist</controllingFieldValue>
+            <controllingFieldValue>Event Portal</controllingFieldValue>
+            <controllingFieldValue>ON24</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Admin Portal (Conf. HUB)</controllingFieldValue>
+            <controllingFieldValue>ACT Webcast</controllingFieldValue>
+            <controllingFieldValue>Adobe Connect</controllingFieldValue>
+            <controllingFieldValue>Adobe - Outlook Toolbar</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Webcast</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - VRC (Video Room Connector)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Desktop (Legacy)</controllingFieldValue>
+            <controllingFieldValue>V-Cube</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Web Plugin for Skype</controllingFieldValue>
+            <controllingFieldValue>V-Cube Hybrid/API</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet India - Audio</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet India - Web</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (Android)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (Legacy-All)</controllingFieldValue>
+            <controllingFieldValue>WebEx - CMR Cloud</controllingFieldValue>
+            <controllingFieldValue>WebEx - CMR Hybrid</controllingFieldValue>
+            <controllingFieldValue>Cisco Jabber</controllingFieldValue>
+            <controllingFieldValue>WebEx - Microsite</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (iPad)</controllingFieldValue>
+            <controllingFieldValue>WebEx - Outlook Toolbar</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (iPhone)</controllingFieldValue>
+            <controllingFieldValue>WebEx - PGi Hosted</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - My Conferencing Center</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Outlook Toolbar</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Web (Legacy)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Webinar (Legacy)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Click to Join</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - for Microsoft Teams</controllingFieldValue>
+            <valueName>Web Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GlobalMeet - Desktop App</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Audio for Skype (GMSO)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Collaboration</controllingFieldValue>
+            <controllingFieldValue>LSI Managed Services</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Audio for Skype for Business Online</controllingFieldValue>
+            <controllingFieldValue>Adobe Connect</controllingFieldValue>
+            <controllingFieldValue>Adobe - Outlook Toolbar</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Webcast</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Desktop (Legacy)</controllingFieldValue>
+            <controllingFieldValue>V-Cube</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Web Plugin for Skype</controllingFieldValue>
+            <controllingFieldValue>V-Cube Hybrid/API</controllingFieldValue>
+            <controllingFieldValue>Video - Hosted Services</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet India - Web</controllingFieldValue>
+            <controllingFieldValue>Video - Managed Services</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (Android)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (Legacy-All)</controllingFieldValue>
+            <controllingFieldValue>WebEx - CMR Cloud</controllingFieldValue>
+            <controllingFieldValue>WebEx - CMR Hybrid</controllingFieldValue>
+            <controllingFieldValue>Cisco Jabber</controllingFieldValue>
+            <controllingFieldValue>WebEx - Microsite</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (iPad)</controllingFieldValue>
+            <controllingFieldValue>WebEx - Outlook Toolbar</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (iPhone)</controllingFieldValue>
+            <controllingFieldValue>WebEx - PGi Hosted</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Outlook Toolbar</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Web (Legacy)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Webinar (Legacy)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - for Microsoft Teams</controllingFieldValue>
+            <valueName>Audio Integration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GlobalMeet - Desktop App</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Collaboration</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Webcast</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Desktop (Legacy)</controllingFieldValue>
+            <controllingFieldValue>V-Cube</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Web Plugin for Skype</controllingFieldValue>
+            <controllingFieldValue>V-Cube Hybrid/API</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet India - Audio</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet India - Web</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (Android)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (Legacy-All)</controllingFieldValue>
+            <controllingFieldValue>WebEx - CMR Cloud</controllingFieldValue>
+            <controllingFieldValue>WebEx - CMR Hybrid</controllingFieldValue>
+            <controllingFieldValue>Cisco Jabber</controllingFieldValue>
+            <controllingFieldValue>WebEx - Microsite</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (iPad)</controllingFieldValue>
+            <controllingFieldValue>WebEx - Outlook Toolbar</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (iPhone)</controllingFieldValue>
+            <controllingFieldValue>WebEx - PGi Hosted</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Outlook Toolbar</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Web (Legacy)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Webinar (Legacy)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - for Microsoft Teams</controllingFieldValue>
+            <valueName>Mobile Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GlobalMeet - Desktop App</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Audio for Skype (GMSO)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Collaboration</controllingFieldValue>
+            <controllingFieldValue>LSI Managed Services</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Audio for Skype for Business Online</controllingFieldValue>
+            <controllingFieldValue>Adobe Connect</controllingFieldValue>
+            <controllingFieldValue>Adobe - Outlook Toolbar</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Webcast</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Desktop (Legacy)</controllingFieldValue>
+            <controllingFieldValue>V-Cube</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Web Plugin for Skype</controllingFieldValue>
+            <controllingFieldValue>V-Cube Hybrid/API</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet India - Web</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (Android)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (Legacy-All)</controllingFieldValue>
+            <controllingFieldValue>Cisco Jabber</controllingFieldValue>
+            <controllingFieldValue>WebEx - Microsite</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (iPad)</controllingFieldValue>
+            <controllingFieldValue>WebEx - Outlook Toolbar</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Mobile App (iPhone)</controllingFieldValue>
+            <controllingFieldValue>WebEx - PGi Hosted</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Outlook Toolbar</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Web (Legacy)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Webinar (Legacy)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - for Microsoft Teams</controllingFieldValue>
+            <valueName>Toolbar Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GlobalMeet - Audio for Skype (GMSO)</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Greeted Entry Connection</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Passcode Entry</controllingFieldValue>
+            <controllingFieldValue>LSI Managed Services</controllingFieldValue>
+            <controllingFieldValue>ON24</controllingFieldValue>
+            <controllingFieldValue>PremiereCall - Assisted Meeting</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Audio</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Audio for Skype for Business Online</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Audio NA</controllingFieldValue>
+            <controllingFieldValue>ACT Automated Audio</controllingFieldValue>
+            <controllingFieldValue>ACT Reserved Audio</controllingFieldValue>
+            <controllingFieldValue>ACT Webcast</controllingFieldValue>
+            <controllingFieldValue>Adobe - Outlook Toolbar</controllingFieldValue>
+            <controllingFieldValue>Direct Number Room</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Greeted Entry</controllingFieldValue>
+            <controllingFieldValue>PremiereCall - Auditorium</controllingFieldValue>
+            <controllingFieldValue>PremiereCall - Connection</controllingFieldValue>
+            <controllingFieldValue>PremiereCall - Event</controllingFieldValue>
+            <controllingFieldValue>PremiereCall - Passcode Entry</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Audio NA - Scheduled</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Web Plugin for Skype</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet India - Audio</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Click to Join</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Audio for Skype Server</controllingFieldValue>
+            <valueName>Audio Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GlobalMeet - Collaboration</controllingFieldValue>
+            <valueName>VRC (Video Room Connector) Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ON24</controllingFieldValue>
+            <controllingFieldValue>ACT Webcast</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - VRC (Video Room Connector)</controllingFieldValue>
+            <controllingFieldValue>Video - Hosted Services</controllingFieldValue>
+            <controllingFieldValue>Video - Managed Services</controllingFieldValue>
+            <controllingFieldValue>Video - Virtual Meeting Room</controllingFieldValue>
+            <valueName>Video Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GlobalMeet - Phone</controllingFieldValue>
+            <valueName>UCaaS Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GlobalMeet - Webcast</controllingFieldValue>
+            <controllingFieldValue>GlobalMeet - Click to Join</controllingFieldValue>
+            <valueName>Audio Integration Support</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

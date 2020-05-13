@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IST_First_Bill_Month_Year_and_Bill_Total</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+ISPICKVAL(IST_Completed_Status__c, &quot;Completed&quot;), 
+ISBLANK(First_Bill_Month_Year__c)|| 
+ISBLANK(First_Bill_Total_Amount__c) 
+)</errorConditionFormula>
+    <errorDisplayField>First_Bill_Month_Year__c</errorDisplayField>
+    <errorMessage>The &quot;First Bill Month/Year&quot; and &quot;First Bill Total Amount&quot; fields are required if attempting to complete the IST record.</errorMessage>
+</ValidationRule>

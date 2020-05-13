@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Total web charges (subscriptions, per-minute, corporate license) for the invoice period. --></help>
+    <label><!-- Total Web Charges --></label>
+    <name>Total_Web__c</name>
+</CustomFieldTranslation>

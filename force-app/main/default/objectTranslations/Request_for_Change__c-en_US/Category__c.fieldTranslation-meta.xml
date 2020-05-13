@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Category --></label>
+    <name>Category__c</name>
+    <picklistValues>
+        <masterLabel>Audio</masterLabel>
+        <translation><!-- Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Database</masterLabel>
+        <translation><!-- Database --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Desktop</masterLabel>
+        <translation><!-- Desktop --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Facilities</masterLabel>
+        <translation><!-- Facilities --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hardware</masterLabel>
+        <translation><!-- Hardware --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Network</masterLabel>
+        <translation><!-- Network --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Security</masterLabel>
+        <translation><!-- Security --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Telco</masterLabel>
+        <translation><!-- Telco --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web</masterLabel>
+        <translation><!-- Web --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

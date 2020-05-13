@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assignment_Group__c</fullName>
+    <externalId>false</externalId>
+    <label>Assignment Group</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PGi-RFC-EU-Branding&amp;Conf Email</fullName>
+                <default>false</default>
+                <label>PGi-RFC-EU-Branding&amp;Conf Email</label>
+            </value>
+            <value>
+                <fullName>PGi-RFC-GL-Audio Projects</fullName>
+                <default>false</default>
+                <label>PGi-RFC-GL-Audio Projects</label>
+            </value>
+            <value>
+                <fullName>PGi-RFC-GL-Business Intelligence (BI)</fullName>
+                <default>false</default>
+                <label>PGi-RFC-GL-Business Intelligence (BI)</label>
+            </value>
+            <value>
+                <fullName>PGi-RFC-GL-GM Tools &amp; Integration Proj</fullName>
+                <default>false</default>
+                <label>PGi-RFC-GL-GM Tools &amp; Integration Proj</label>
+            </value>
+            <value>
+                <fullName>PGi-RFC-GL-GM Web Projects</fullName>
+                <default>false</default>
+                <label>PGi-RFC-GL-GM Web Projects</label>
+            </value>
+            <value>
+                <fullName>PGi-RFC-GL-InfoSec</fullName>
+                <default>false</default>
+                <label>PGi-RFC-GL-InfoSec</label>
+            </value>
+            <value>
+                <fullName>PGi-RFC-GL-QA</fullName>
+                <default>false</default>
+                <label>PGi-RFC-GL-QA</label>
+            </value>
+            <value>
+                <fullName>PGi-RFC-GL-QA/DEV Lab</fullName>
+                <default>false</default>
+                <label>PGi-RFC-GL-QA/DEV Lab</label>
+            </value>
+            <value>
+                <fullName>PGi-RFC-GL-Tier 2-Integrations</fullName>
+                <default>false</default>
+                <label>PGi-RFC-GL-Tier 2-Integrations</label>
+            </value>
+            <value>
+                <fullName>PGi-RFC-GL-Tier 3-Audio Applications</fullName>
+                <default>false</default>
+                <label>PGi-RFC-GL-Tier 3-Audio Applications</label>
+            </value>
+            <value>
+                <fullName>PGi-RFC-GL-Tier 3-Database Operations</fullName>
+                <default>false</default>
+                <label>PGi-RFC-GL-Tier 3-Database Operations</label>
+            </value>
+            <value>
+                <fullName>PGi-RFC-GL-Tier 3-Network</fullName>
+                <default>false</default>
+                <label>PGi-RFC-GL-Tier 3-Network</label>
+            </value>
+            <value>
+                <fullName>PGi-RFC-GL-Tier 3-SaaS Ops</fullName>
+                <default>false</default>
+                <label>PGi-RFC-GL-Tier 3-SaaS Ops</label>
+            </value>
+            <value>
+                <fullName>PGi-RFC-GL-Tier 3-SAN Admin</fullName>
+                <default>false</default>
+                <label>PGi-RFC-GL-Tier 3-SAN Admin</label>
+            </value>
+            <value>
+                <fullName>PGi-RFC-GL-Tier 3-Systems Admin</fullName>
+                <default>false</default>
+                <label>PGi-RFC-GL-Tier 3-Systems Admin</label>
+            </value>
+            <value>
+                <fullName>PGi-RFC-GL-Tier 3-Systems Ops</fullName>
+                <default>false</default>
+                <label>PGi-RFC-GL-Tier 3-Systems Ops</label>
+            </value>
+            <value>
+                <fullName>PGi-RFC-GL-Tier 3-Telco</fullName>
+                <default>false</default>
+                <label>PGi-RFC-GL-Tier 3-Telco</label>
+            </value>
+            <value>
+                <fullName>PGi-RFC-GL-Tier 3-Voice Delivery</fullName>
+                <default>false</default>
+                <label>PGi-RFC-GL-Tier 3-Voice Delivery</label>
+            </value>
+            <value>
+                <fullName>PGi-RFC-GL-Tier 4-Database Development</fullName>
+                <default>false</default>
+                <label>PGi-RFC-GL-Tier 4-Database Development</label>
+            </value>
+            <value>
+                <fullName>PGi-RFC-INTL-Corp IT</fullName>
+                <default>false</default>
+                <label>PGi-RFC-INTL-Corp IT</label>
+            </value>
+            <value>
+                <fullName>PGi-RFC-INTL-Tier 1-Deskside Support</fullName>
+                <default>false</default>
+                <label>PGi-RFC-INTL-Tier 1-Deskside Support</label>
+            </value>
+            <value>
+                <fullName>PGi-RFC-NA-Corp IT</fullName>
+                <default>false</default>
+                <label>PGi-RFC-NA-Corp IT</label>
+            </value>
+            <value>
+                <fullName>PGi-RFC-NA-Tier 1-CARE (Call Delivery)</fullName>
+                <default>false</default>
+                <label>PGi-RFC-NA-Tier 1-CARE (Call Delivery)</label>
+            </value>
+            <value>
+                <fullName>PGi-RFC-NA-Tier 3-Production Sys Admin</fullName>
+                <default>false</default>
+                <label>PGi-RFC-NA-Tier 3-Production Sys Admin</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

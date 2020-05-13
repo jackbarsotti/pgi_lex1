@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Error_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Error Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>HttpResponse</fullName>
+                <default>false</default>
+                <label>HttpResponse</label>
+            </value>
+            <value>
+                <fullName>SaveResult</fullName>
+                <default>false</default>
+                <label>SaveResult</label>
+            </value>
+            <value>
+                <fullName>Exception</fullName>
+                <default>false</default>
+                <label>Exception</label>
+            </value>
+            <value>
+                <fullName>DmlException</fullName>
+                <default>false</default>
+                <label>DmlException</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

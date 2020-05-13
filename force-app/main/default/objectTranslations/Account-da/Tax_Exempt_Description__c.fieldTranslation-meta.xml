@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tax Exempt Description --></label>
+    <name>Tax_Exempt_Description__c</name>
+    <picklistValues>
+        <masterLabel>All PUC Fees Exempt</masterLabel>
+        <translation><!-- All PUC Fees Exempt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>All State Universal Service Fund Fees Exempt</masterLabel>
+        <translation><!-- All State Universal Service Fund Fees Exempt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>All State and Local E911s Exempt</masterLabel>
+        <translation><!-- All State and Local E911s Exempt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>All State and Local Gross Receipts Tax (GRT) Exempt</masterLabel>
+        <translation><!-- All State and Local Gross Receipts Tax (GRT) Exempt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>City level taxes exempt</masterLabel>
+        <translation><!-- City level taxes exempt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>County level taxes exempt</masterLabel>
+        <translation><!-- County level taxes exempt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Federal Universal Service Fund Exempt</masterLabel>
+        <translation><!-- Federal Universal Service Fund Exempt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Local Franchise Fee</masterLabel>
+        <translation><!-- Local Franchise Fee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Local Right of Way Fees Exempt</masterLabel>
+        <translation><!-- Local Right of Way Fees Exempt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Local Utility Users Tax Exempt (includes CA local UUTs)</masterLabel>
+        <translation><!-- Local Utility Users Tax Exempt (includes CA local UUTs) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Local taxes exempt</masterLabel>
+        <translation><!-- Local taxes exempt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Los Angeles Communications Users Tax Exempt</masterLabel>
+        <translation><!-- Los Angeles Communications Users Tax Exempt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Exemptions</masterLabel>
+        <translation><!-- No Exemptions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Only Apply Federal Universal Service Fund</masterLabel>
+        <translation><!-- Only Apply Federal Universal Service Fund --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>State Excise Tax Exempt (Includes FL CST)</masterLabel>
+        <translation><!-- State Excise Tax Exempt (Includes FL CST) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>State Excise Tax Exempt and Local Surcharge Exempt</masterLabel>
+        <translation><!-- State Excise Tax Exempt and Local Surcharge Exempt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>State Excise and Local Communications Tax Exempt</masterLabel>
+        <translation><!-- State Excise and Local Communications Tax Exempt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>State Franchise Fee</masterLabel>
+        <translation><!-- State Franchise Fee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>State Level Sales Tax Exempt</masterLabel>
+        <translation><!-- State Level Sales Tax Exempt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>State Taxes Exempt</masterLabel>
+        <translation><!-- State Taxes Exempt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>State and Local Sales Tax Exempt</masterLabel>
+        <translation><!-- State and Local Sales Tax Exempt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>State and Local Taxes Exempt</masterLabel>
+        <translation><!-- State and Local Taxes Exempt --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>SMART Development Objective</fullName>
+                <default>false</default>
+                <label>SMART Development Objective</label>
+            </value>
+            <value>
+                <fullName>SMART Work Objective</fullName>
+                <default>false</default>
+                <label>SMART Work Objective</label>
+            </value>
+            <value>
+                <fullName>Value Assessment - Our People Are Our Strength</fullName>
+                <default>false</default>
+                <label>Value Assessment - Our People Are Our Strength</label>
+            </value>
+            <value>
+                <fullName>Value Assessment - Own Outcomes</fullName>
+                <default>false</default>
+                <label>Value Assessment - Own Outcomes</label>
+            </value>
+            <value>
+                <fullName>Value Assessment - Purpose, Passion &amp; Performance</fullName>
+                <default>false</default>
+                <label>Value Assessment - Purpose, Passion &amp; Performance</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

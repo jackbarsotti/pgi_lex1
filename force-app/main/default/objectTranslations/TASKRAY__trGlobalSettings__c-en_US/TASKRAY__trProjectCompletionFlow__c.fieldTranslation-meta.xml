@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The API Name of the Screen Flow to run when TaskRay Projects are completed via the &apos;Complete&apos; button. Works with the &apos;Project Completion Option&apos; custom setting. --></help>
+    <label><!-- Project Completion Flow --></label>
+    <name>TASKRAY__trProjectCompletionFlow__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGI_Product_Field_Required</fullName>
+    <active>true</active>
+    <description>Product Field Required when Type is set to Product Demo</description>
+    <errorConditionFormula>AND( 
+CONTAINS( RecordType.DeveloperName , &quot;PGi&quot;), 
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;, 
+$User.Override_Validation_Rules__c = False, 
+ISPICKVAL(Type, &quot;Product Demo&quot;),
+ISBLANK ( TEXT( Product__c )))</errorConditionFormula>
+    <errorDisplayField>Product__c</errorDisplayField>
+    <errorMessage>Please select the product demoed to the customer.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- CAUTION: Checking/Unchecking this field will make contact preference changes to all contacts on this account automatically. Account Admins with NOT be opted out when checked. --></help>
+    <label><!-- All Account Mass Email Opt Out --></label>
+    <name>All_Account_Mass_Email_Opt_Out__c</name>
+</CustomFieldTranslation>

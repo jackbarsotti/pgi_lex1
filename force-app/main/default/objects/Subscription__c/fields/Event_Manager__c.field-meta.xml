@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Manager__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>CAUTION - USED IN INTEGRATIONS
+Not sure what this will be used for or if it should be on or off initially.</description>
+    <externalId>false</externalId>
+    <label>Event Manager</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

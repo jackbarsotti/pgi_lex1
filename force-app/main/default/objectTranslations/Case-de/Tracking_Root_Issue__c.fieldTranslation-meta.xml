@@ -1,0 +1,1157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tracking Root Issue --></label>
+    <name>Tracking_Root_Issue__c</name>
+    <picklistValues>
+        <masterLabel>4 Tay Video</masterLabel>
+        <translation><!-- 4 Tay Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AAM (Automated Account Manager)</masterLabel>
+        <translation><!-- AAM (Automated Account Manager) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AAPT</masterLabel>
+        <translation><!-- AAPT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ACS (Active Conference Server)</masterLabel>
+        <translation><!-- ACS (Active Conference Server) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ACSS (Advanced Conf Sched System)</masterLabel>
+        <translation><!-- ACSS (Advanced Conf Sched System) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ACT</masterLabel>
+        <translation><!-- ACT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AGT</masterLabel>
+        <translation><!-- AGT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APS (Advanced Protocol Server)</masterLabel>
+        <translation><!-- APS (Advanced Protocol Server) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ARM (Archive Makers)</masterLabel>
+        <translation><!-- ARM (Archive Makers) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ASERGIS</masterLabel>
+        <translation><!-- ASERGIS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AT&amp;T</masterLabel>
+        <translation><!-- AT&amp;T --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AVS (Account Validation Server)</masterLabel>
+        <translation><!-- AVS (Account Validation Server) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AXIS (Advanced XML Internet Server)</masterLabel>
+        <translation><!-- AXIS (Advanced XML Internet Server) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Account Information/Change Request</masterLabel>
+        <translation><!-- Account Information/Change Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Account Provisioning Request</masterLabel>
+        <translation><!-- Account Provisioning Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Account Settings/Account Information</masterLabel>
+        <translation><!-- Account Settings/Account Information --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Account Settings/Information</masterLabel>
+        <translation><!-- Account Settings/Information --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Activate/Inactivate Account</masterLabel>
+        <translation><!-- Activate/Inactivate Account --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Adobe Connect</masterLabel>
+        <translation><!-- Adobe Connect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Airtel</masterLabel>
+        <translation><!-- Airtel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alliance Video and Post, Inc</masterLabel>
+        <translation><!-- Alliance Video and Post, Inc --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Amazon</masterLabel>
+        <translation><!-- Amazon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Amazon (Used for GMW Service Delivery)</masterLabel>
+        <translation><!-- Amazon (Used for GMW Service Delivery) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Applications</masterLabel>
+        <translation><!-- Applications --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio Bridge</masterLabel>
+        <translation><!-- Audio Bridge --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio Integration/Softphone</masterLabel>
+        <translation><!-- Audio Integration/Softphone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BICS</masterLabel>
+        <translation><!-- BICS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BT</masterLabel>
+        <translation><!-- BT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bandwidth</masterLabel>
+        <translation><!-- Bandwidth --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Big Shoulders Digital Video</masterLabel>
+        <translation><!-- Big Shoulders Digital Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BirdHosting</masterLabel>
+        <translation><!-- BirdHosting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Blitz</masterLabel>
+        <translation><!-- Blitz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Border Element</masterLabel>
+        <translation><!-- Border Element --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Box</masterLabel>
+        <translation><!-- Box --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Brightlink</masterLabel>
+        <translation><!-- Brightlink --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Broadvox</masterLabel>
+        <translation><!-- Broadvox --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCOMM</masterLabel>
+        <translation><!-- CCOMM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CDI</masterLabel>
+        <translation><!-- CDI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CES (Central Email Server)</masterLabel>
+        <translation><!-- CES (Central Email Server) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CIS</masterLabel>
+        <translation><!-- CIS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CSOLRPT01 and 02</masterLabel>
+        <translation><!-- CSOLRPT01 and 02 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CSPRDDB (PGI Corporate Database)</masterLabel>
+        <translation><!-- CSPRDDB (PGI Corporate Database) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Call Control Manager</masterLabel>
+        <translation><!-- Call Control Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CenturyLink</masterLabel>
+        <translation><!-- CenturyLink --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>China Telecom</masterLabel>
+        <translation><!-- China Telecom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>China Unicom</masterLabel>
+        <translation><!-- China Unicom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cisco</masterLabel>
+        <translation><!-- Cisco --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client Feedback</masterLabel>
+        <translation><!-- Client Feedback --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client Peripheral/Equipment</masterLabel>
+        <translation><!-- Client Peripheral/Equipment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client Schedule Error</masterLabel>
+        <translation><!-- Client Schedule Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client Site Error</masterLabel>
+        <translation><!-- Client Site Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client Transport Issue</masterLabel>
+        <translation><!-- Client Transport Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Code Issue</masterLabel>
+        <translation><!-- Code Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Collections</masterLabel>
+        <translation><!-- Collections --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Colt</masterLabel>
+        <translation><!-- Colt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Comcast</masterLabel>
+        <translation><!-- Comcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conference America</masterLabel>
+        <translation><!-- Conference America --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Configuration</masterLabel>
+        <translation><!-- Configuration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ConnectSolutions</masterLabel>
+        <translation><!-- ConnectSolutions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Connex</masterLabel>
+        <translation><!-- Connex --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact</masterLabel>
+        <translation><!-- Contact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Content Management System</masterLabel>
+        <translation><!-- Content Management System --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contract</masterLabel>
+        <translation><!-- Contract --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DDS(Dialogue Database Server)</masterLabel>
+        <translation><!-- DDS(Dialogue Database Server) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DU</masterLabel>
+        <translation><!-- DU --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deskside Systems</masterLabel>
+        <translation><!-- Deskside Systems --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Duplicate Ticket</masterLabel>
+        <translation><!-- Duplicate Ticket --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Duplicate Ticket - See Parent Case Field</masterLabel>
+        <translation><!-- Duplicate Ticket - See Parent Case Field --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>During Call - Answer Lines</masterLabel>
+        <translation><!-- During Call - Answer Lines --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>During Call - Event Productions</masterLabel>
+        <translation><!-- During Call - Event Productions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>During Call - Skilled Operator</masterLabel>
+        <translation><!-- During Call - Skilled Operator --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>During Call Skilled Service Error</masterLabel>
+        <translation><!-- During Call Skilled Service Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EMS (PGi Email Server)</masterLabel>
+        <translation><!-- EMS (PGi Email Server) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Eircom</masterLabel>
+        <translation><!-- Eircom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>End User Account</masterLabel>
+        <translation><!-- End User Account --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>End User Education</masterLabel>
+        <translation><!-- End User Education --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>End User Error</masterLabel>
+        <translation><!-- End User Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>End User Event Error</masterLabel>
+        <translation><!-- End User Event Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>End User PC/Equipment/Network</masterLabel>
+        <translation><!-- End User PC/Equipment/Network --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>End/Join/Schedule/Start a Meeting</masterLabel>
+        <translation><!-- End/Join/Schedule/Start a Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Epsilon</masterLabel>
+        <translation><!-- Epsilon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Production - Skilled Service Error</masterLabel>
+        <translation><!-- Event Production - Skilled Service Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>F5 (Load balancers)</masterLabel>
+        <translation><!-- F5 (Load balancers) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FMS (Flash Media Servers)</masterLabel>
+        <translation><!-- FMS (Flash Media Servers) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Feature Usage/Available Features</masterLabel>
+        <translation><!-- Feature Usage/Available Features --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Field Expert</masterLabel>
+        <translation><!-- Field Expert --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Final Root Issue Unknown</masterLabel>
+        <translation><!-- Final Root Issue Unknown --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fraud</masterLabel>
+        <translation><!-- Fraud --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gatekeeper</masterLabel>
+        <translation><!-- Gatekeeper --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gateway</masterLabel>
+        <translation><!-- Gateway --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Global Webcasting Group, LLC</masterLabel>
+        <translation><!-- Global Webcasting Group, LLC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GlobalMeet 5 Upgrade</masterLabel>
+        <translation><!-- GlobalMeet 5 Upgrade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GoGrid</masterLabel>
+        <translation><!-- GoGrid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hardware Failure</masterLabel>
+        <translation><!-- Hardware Failure --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hewlett Packard</masterLabel>
+        <translation><!-- Hewlett Packard --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hildreth Media Group, Inc</masterLabel>
+        <translation><!-- Hildreth Media Group, Inc --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hive</masterLabel>
+        <translation><!-- Hive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Host Control - Auditorium</masterLabel>
+        <translation><!-- Host Control - Auditorium --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Host Control - Compunetix</masterLabel>
+        <translation><!-- Host Control - Compunetix --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hub</masterLabel>
+        <translation><!-- Hub --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IIS (Web Services)</masterLabel>
+        <translation><!-- IIS (Web Services) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IPD</masterLabel>
+        <translation><!-- IPD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Impact Telecom</masterLabel>
+        <translation><!-- Impact Telecom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Conference Support Request</masterLabel>
+        <translation><!-- In Conference Support Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Initial Reservation - Event Manager</masterLabel>
+        <translation><!-- Initial Reservation - Event Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Initial Reservation Error</masterLabel>
+        <translation><!-- Initial Reservation Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inteliquent</masterLabel>
+        <translation><!-- Inteliquent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invoice</masterLabel>
+        <translation><!-- Invoice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JKS Foto LLC</masterLabel>
+        <translation><!-- JKS Foto LLC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jive</masterLabel>
+        <translation><!-- Jive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keystone Pictures, Inc</masterLabel>
+        <translation><!-- Keystone Pictures, Inc --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kiwi Productions</masterLabel>
+        <translation><!-- Kiwi Productions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kollective</masterLabel>
+        <translation><!-- Kollective --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Level3</masterLabel>
+        <translation><!-- Level3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Level3BR</masterLabel>
+        <translation><!-- Level3BR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LifeSize</masterLabel>
+        <translation><!-- LifeSize --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LightFace Media</masterLabel>
+        <translation><!-- LightFace Media --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Login/Passcode/Password/Phone Number</masterLabel>
+        <translation><!-- Login/Passcode/Password/Phone Number --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LoopLogic</masterLabel>
+        <translation><!-- LoopLogic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>M800</masterLabel>
+        <translation><!-- M800 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOWO Media Group</masterLabel>
+        <translation><!-- MOWO Media Group --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MS (Meeting Servers)</masterLabel>
+        <translation><!-- MS (Meeting Servers) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MVAS</masterLabel>
+        <translation><!-- MVAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Maintenance</masterLabel>
+        <translation><!-- Maintenance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Management System</masterLabel>
+        <translation><!-- Management System --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Masergy</masterLabel>
+        <translation><!-- Masergy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Media and other Servers</masterLabel>
+        <translation><!-- Media and other Servers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Microsoft Exchange/O365</masterLabel>
+        <translation><!-- Microsoft Exchange/O365 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Microsoft Live Meeting</masterLabel>
+        <translation><!-- Microsoft Live Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Microsoft Lync</masterLabel>
+        <translation><!-- Microsoft Lync --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Morningside Translation, LLC</masterLabel>
+        <translation><!-- Morningside Translation, LLC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mountain View Staging Services, Inc</masterLabel>
+        <translation><!-- Mountain View Staging Services, Inc --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Move</masterLabel>
+        <translation><!-- Move --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Multipoint Bridge</masterLabel>
+        <translation><!-- Multipoint Bridge --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Network</masterLabel>
+        <translation><!-- Network --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Network - Atlanta</masterLabel>
+        <translation><!-- Network - Atlanta --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Network - CAN</masterLabel>
+        <translation><!-- Network - CAN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Network - COS</masterLabel>
+        <translation><!-- Network - COS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Network - General</masterLabel>
+        <translation><!-- Network - General --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Network - IRE</masterLabel>
+        <translation><!-- Network - IRE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Network - JPN</masterLabel>
+        <translation><!-- Network - JPN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Network - KS</masterLabel>
+        <translation><!-- Network - KS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Network - SYD</masterLabel>
+        <translation><!-- Network - SYD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Next Millenium Productions</masterLabel>
+        <translation><!-- Next Millenium Productions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Action Required</masterLabel>
+        <translation><!-- No Action Required --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Common Root Cause</masterLabel>
+        <translation><!-- No Common Root Cause --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Issue Identified</masterLabel>
+        <translation><!-- No Issue Identified --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Trouble Found</masterLabel>
+        <translation><!-- No Trouble Found --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nuleef</masterLabel>
+        <translation><!-- Nuleef --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Numeric Future</masterLabel>
+        <translation><!-- Numeric Future --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ON24</masterLabel>
+        <translation><!-- ON24 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On Services a GES Company</masterLabel>
+        <translation><!-- On Services a GES Company --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Onvoy</masterLabel>
+        <translation><!-- Onvoy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Optus</masterLabel>
+        <translation><!-- Optus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Orange</masterLabel>
+        <translation><!-- Orange --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Orlando Corporate Media Inc</masterLabel>
+        <translation><!-- Orlando Corporate Media Inc --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other - Back Office Root Issue</masterLabel>
+        <translation><!-- Other - Back Office Root Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other - Carrier Root Issue</masterLabel>
+        <translation><!-- Other - Carrier Root Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other - Human Error Root Issue</masterLabel>
+        <translation><!-- Other - Human Error Root Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other - Partner Product Root Issue</masterLabel>
+        <translation><!-- Other - Partner Product Root Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other Partner Carrier</masterLabel>
+        <translation><!-- Other Partner Carrier --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outlook</masterLabel>
+        <translation><!-- Outlook --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCCW</masterLabel>
+        <translation><!-- PCCW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi Audio Integration</masterLabel>
+        <translation><!-- PGi Audio Integration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi Canada</masterLabel>
+        <translation><!-- PGi Canada --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi Hybrid Audio</masterLabel>
+        <translation><!-- PGi Hybrid Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi Ireland</masterLabel>
+        <translation><!-- PGi Ireland --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi Peripheral/Equipment</masterLabel>
+        <translation><!-- PGi Peripheral/Equipment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi US</masterLabel>
+        <translation><!-- PGi US --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PIA</masterLabel>
+        <translation><!-- PIA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PTA Created in Error</masterLabel>
+        <translation><!-- PTA Created in Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Password Expired/Locked</masterLabel>
+        <translation><!-- Password Expired/Locked --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Peerless</masterLabel>
+        <translation><!-- Peerless --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending Parent Closure</masterLabel>
+        <translation><!-- Pending Parent Closure --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Permissions</masterLabel>
+        <translation><!-- Permissions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pharm to Market</masterLabel>
+        <translation><!-- Pharm to Market --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Polycom</masterLabel>
+        <translation><!-- Polycom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Popeye Media</masterLabel>
+        <translation><!-- Popeye Media --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Post Call Delivery Error - Skilled Service Error</masterLabel>
+        <translation><!-- Post Call Delivery Error - Skilled Service Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Post Conference - Event Productions</masterLabel>
+        <translation><!-- Post Conference - Event Productions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Post Conference - Skilled Operator</masterLabel>
+        <translation><!-- Post Conference - Skilled Operator --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Post Conference - Technician</masterLabel>
+        <translation><!-- Post Conference - Technician --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Post Reservation - Event Manager</masterLabel>
+        <translation><!-- Post Reservation - Event Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Post Reservation Error</masterLabel>
+        <translation><!-- Post Reservation Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Post Service Error</masterLabel>
+        <translation><!-- Post Service Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre Call - AL Error</masterLabel>
+        <translation><!-- Pre Call - AL Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre Call - Answer Lines</masterLabel>
+        <translation><!-- Pre Call - Answer Lines --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre Call - Call Delivery</masterLabel>
+        <translation><!-- Pre Call - Call Delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre Call - Event Productions</masterLabel>
+        <translation><!-- Pre Call - Event Productions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre Call - PGi Management Error</masterLabel>
+        <translation><!-- Pre Call - PGi Management Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre Call - Scheduling</masterLabel>
+        <translation><!-- Pre Call - Scheduling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre Call - Skilled Operator</masterLabel>
+        <translation><!-- Pre Call - Skilled Operator --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre Call - Skilled Service Error</masterLabel>
+        <translation><!-- Pre Call - Skilled Service Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre Call - Technician</masterLabel>
+        <translation><!-- Pre Call - Technician --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ProInnovation</masterLabel>
+        <translation><!-- ProInnovation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Process/Requirements</masterLabel>
+        <translation><!-- Process/Requirements --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product Working as Designed</masterLabel>
+        <translation><!-- Product Working as Designed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Project Television PTY Limited</masterLabel>
+        <translation><!-- Project Television PTY Limited --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Provisioning Error</masterLabel>
+        <translation><!-- Provisioning Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pulsar</masterLabel>
+        <translation><!-- Pulsar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Purchasing</masterLabel>
+        <translation><!-- Purchasing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pure Audio Visual</masterLabel>
+        <translation><!-- Pure Audio Visual --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quality Assurance Monitoring</masterLabel>
+        <translation><!-- Quality Assurance Monitoring --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Question</masterLabel>
+        <translation><!-- Question --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ramp</masterLabel>
+        <translation><!-- Ramp --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rates and Charges</masterLabel>
+        <translation><!-- Rates and Charges --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reach Media Global</masterLabel>
+        <translation><!-- Reach Media Global --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recording</masterLabel>
+        <translation><!-- Recording --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reliance</masterLabel>
+        <translation><!-- Reliance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Renee Bonneau</masterLabel>
+        <translation><!-- Renee Bonneau --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Report/File Request</masterLabel>
+        <translation><!-- Report/File Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reporting/Invites</masterLabel>
+        <translation><!-- Reporting/Invites --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Request</masterLabel>
+        <translation><!-- Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reservations</masterLabel>
+        <translation><!-- Reservations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resolution Productions Group</masterLabel>
+        <translation><!-- Resolution Productions Group --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Restore Data</masterLabel>
+        <translation><!-- Restore Data --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rogers</masterLabel>
+        <translation><!-- Rogers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Root Issue Under Review</masterLabel>
+        <translation><!-- Root Issue Under Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Root Issue Unknown</masterLabel>
+        <translation><!-- Root Issue Unknown --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Schaaf Media Group, Inc (T Scribe)</masterLabel>
+        <translation><!-- Schaaf Media Group, Inc (T Scribe) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scheduling</masterLabel>
+        <translation><!-- Scheduling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scheduling - Call Delivery</masterLabel>
+        <translation><!-- Scheduling - Call Delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Screen Sharing/File</masterLabel>
+        <translation><!-- Screen Sharing/File --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Security Breach</masterLabel>
+        <translation><!-- Security Breach --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Server</masterLabel>
+        <translation><!-- Server --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Server Breach</masterLabel>
+        <translation><!-- Server Breach --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Simple2Call</masterLabel>
+        <translation><!-- Simple2Call --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Singtel</masterLabel>
+        <translation><!-- Singtel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Softbank</masterLabel>
+        <translation><!-- Softbank --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Software Crash</masterLabel>
+        <translation><!-- Software Crash --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Software Error</masterLabel>
+        <translation><!-- Software Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Software Failure</masterLabel>
+        <translation><!-- Software Failure --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Soundbyte</masterLabel>
+        <translation><!-- Soundbyte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Symbio</masterLabel>
+        <translation><!-- Symbio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>System Configuration/Information</masterLabel>
+        <translation><!-- System Configuration/Information --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T-Systems</masterLabel>
+        <translation><!-- T-Systems --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TATA</masterLabel>
+        <translation><!-- TATA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TATA Jamvee</masterLabel>
+        <translation><!-- TATA Jamvee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TDC Song</masterLabel>
+        <translation><!-- TDC Song --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TFD Communications Private Limited</masterLabel>
+        <translation><!-- TFD Communications Private Limited --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TMS - Telephony Management System</masterLabel>
+        <translation><!-- TMS - Telephony Management System --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TTSL</masterLabel>
+        <translation><!-- TTSL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TWTelecom</masterLabel>
+        <translation><!-- TWTelecom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tata Owned</masterLabel>
+        <translation><!-- Tata Owned --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Telefonica</masterLabel>
+        <translation><!-- Telefonica --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TellaSonera</masterLabel>
+        <translation><!-- TellaSonera --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Telstra</masterLabel>
+        <translation><!-- Telstra --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Telus</masterLabel>
+        <translation><!-- Telus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Temasys</masterLabel>
+        <translation><!-- Temasys --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>The Telemarketing Group (TTMC)</masterLabel>
+        <translation><!-- The Telemarketing Group (TTMC) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Third Party Integration</masterLabel>
+        <translation><!-- Third Party Integration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Toolbar Issues</masterLabel>
+        <translation><!-- Toolbar Issues --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UAPI</masterLabel>
+        <translation><!-- UAPI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Undefinable</masterLabel>
+        <translation><!-- Undefinable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unknown</masterLabel>
+        <translation><!-- Unknown --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Upgrade</masterLabel>
+        <translation><!-- Upgrade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VITAC</masterLabel>
+        <translation><!-- VITAC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VM Ware</masterLabel>
+        <translation><!-- VM Ware --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VRC Education/Request</masterLabel>
+        <translation><!-- VRC Education/Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vendor Human Error</masterLabel>
+        <translation><!-- Vendor Human Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Verizon</masterLabel>
+        <translation><!-- Verizon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Viavox</masterLabel>
+        <translation><!-- Viavox --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video Bridge</masterLabel>
+        <translation><!-- Video Bridge --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video Gateway</masterLabel>
+        <translation><!-- Video Gateway --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video Perspectives</masterLabel>
+        <translation><!-- Video Perspectives --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Viju</masterLabel>
+        <translation><!-- Viju --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Virgin Earth, Inc</masterLabel>
+        <translation><!-- Virgin Earth, Inc --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Virus/Malware</masterLabel>
+        <translation><!-- Virus/Malware --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vodafone</masterLabel>
+        <translation><!-- Vodafone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vodafone India</masterLabel>
+        <translation><!-- Vodafone India --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vodafone New Zealand</masterLabel>
+        <translation><!-- Vodafone New Zealand --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Volatus</masterLabel>
+        <translation><!-- Volatus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WPS (Web Provisioning Server)</masterLabel>
+        <translation><!-- WPS (Web Provisioning Server) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web Services</masterLabel>
+        <translation><!-- Web Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebEx</masterLabel>
+        <translation><!-- WebEx --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebRTC - Video</masterLabel>
+        <translation><!-- WebRTC - Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebRTC - VoIP</masterLabel>
+        <translation><!-- WebRTC - VoIP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webcast</masterLabel>
+        <translation><!-- Webcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Widevoice</masterLabel>
+        <translation><!-- Widevoice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WordStream</masterLabel>
+        <translation><!-- WordStream --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WorldNet</masterLabel>
+        <translation><!-- WorldNet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Worldwide</masterLabel>
+        <translation><!-- Worldwide --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wowza</masterLabel>
+        <translation><!-- Wowza --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iBasis</masterLabel>
+        <translation><!-- iBasis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iGLOO</masterLabel>
+        <translation><!-- iGLOO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iMeet Converters</masterLabel>
+        <translation><!-- iMeet Converters --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iSpring Converters</masterLabel>
+        <translation><!-- iSpring Converters --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

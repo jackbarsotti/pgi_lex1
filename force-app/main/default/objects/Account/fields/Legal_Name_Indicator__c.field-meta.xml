@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legal_Name_Indicator__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates that the Account has been matched to Dun &amp; Bradstreet and represents a legal Entity</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates that the Account has been matched to Dun &amp; Bradstreet and represents a legal Entity</inlineHelpText>
+    <label>DnB Legal Entity</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

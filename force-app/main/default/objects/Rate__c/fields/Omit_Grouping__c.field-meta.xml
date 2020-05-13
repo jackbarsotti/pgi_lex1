@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Omit_Grouping__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>Only used for TPx Rentals as each rental has 2 rates: Upfront fee which is One Time rate type and Rental fee which is a Subscription rate type.  Pick this if you want the headers to not apply within iContract</inlineHelpText>
+    <label>Omit Grouping</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

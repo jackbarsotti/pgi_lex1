@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Linked__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This should be a hidden field, it indicates whether the department was just created. If so, run linking &amp; check this box once the link has been established.</description>
+    <externalId>false</externalId>
+    <label>Linked</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

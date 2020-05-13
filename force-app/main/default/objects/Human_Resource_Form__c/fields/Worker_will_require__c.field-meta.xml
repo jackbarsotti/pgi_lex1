@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Worker_will_require__c</fullName>
+    <externalId>false</externalId>
+    <label>Desk Equipment Required</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>1 Monitor</fullName>
+                <default>false</default>
+                <label>1 Monitor</label>
+            </value>
+            <value>
+                <fullName>2 Monitors</fullName>
+                <default>false</default>
+                <label>2 Monitors</label>
+            </value>
+            <value>
+                <fullName>Desktop</fullName>
+                <default>false</default>
+                <label>Desktop</label>
+            </value>
+            <value>
+                <fullName>Docking Station</fullName>
+                <default>false</default>
+                <label>Docking Station</label>
+            </value>
+            <value>
+                <fullName>Headset-Computer</fullName>
+                <default>false</default>
+                <label>Headset-Computer</label>
+            </value>
+            <value>
+                <fullName>Laptop</fullName>
+                <default>false</default>
+                <label>Laptop</label>
+            </value>
+            <value>
+                <fullName>Power User/Tech Laptop</fullName>
+                <default>false</default>
+                <label>Power User/Tech Laptop</label>
+            </value>
+            <value>
+                <fullName>Special Equipment</fullName>
+                <default>false</default>
+                <label>Special Equipment</label>
+            </value>
+            <value>
+                <fullName>Tablet-Android</fullName>
+                <default>false</default>
+                <label>Tablet-Android</label>
+            </value>
+            <value>
+                <fullName>Tablet-iPad</fullName>
+                <default>false</default>
+                <label>Tablet-iPad</label>
+            </value>
+            <value>
+                <fullName>Tablet-Windows</fullName>
+                <default>false</default>
+                <label>Tablet-Windows</label>
+            </value>
+            <value>
+                <fullName>Video Cam/Web Cam</fullName>
+                <default>false</default>
+                <label>Video Cam/Web Cam</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

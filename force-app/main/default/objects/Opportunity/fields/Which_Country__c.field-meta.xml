@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Which_Country__c</fullName>
+    <externalId>false</externalId>
+    <label>Where is Microsoft Licensing Purchased</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Deployment__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>United Kingdom</fullName>
+                <default>false</default>
+                <label>United Kingdom</label>
+            </value>
+            <value>
+                <fullName>North America</fullName>
+                <default>false</default>
+                <label>North America</label>
+            </value>
+            <value>
+                <fullName>Australia</fullName>
+                <default>false</default>
+                <label>Australia</label>
+            </value>
+            <value>
+                <fullName>Singapore</fullName>
+                <default>false</default>
+                <label>Singapore</label>
+            </value>
+            <value>
+                <fullName>Other European</fullName>
+                <default>false</default>
+                <label>Other European</label>
+            </value>
+            <value>
+                <fullName>Another Country</fullName>
+                <default>false</default>
+                <label>Another Country</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>POC</controllingFieldValue>
+            <controllingFieldValue>Initial Deployment</controllingFieldValue>
+            <controllingFieldValue>Extended User Estate</controllingFieldValue>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>United Kingdom</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POC</controllingFieldValue>
+            <controllingFieldValue>Initial Deployment</controllingFieldValue>
+            <controllingFieldValue>Extended User Estate</controllingFieldValue>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>North America</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POC</controllingFieldValue>
+            <controllingFieldValue>Initial Deployment</controllingFieldValue>
+            <controllingFieldValue>Extended User Estate</controllingFieldValue>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Australia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POC</controllingFieldValue>
+            <controllingFieldValue>Initial Deployment</controllingFieldValue>
+            <controllingFieldValue>Extended User Estate</controllingFieldValue>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Singapore</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POC</controllingFieldValue>
+            <controllingFieldValue>Initial Deployment</controllingFieldValue>
+            <controllingFieldValue>Extended User Estate</controllingFieldValue>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Other European</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POC</controllingFieldValue>
+            <controllingFieldValue>Initial Deployment</controllingFieldValue>
+            <controllingFieldValue>Extended User Estate</controllingFieldValue>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Another Country</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

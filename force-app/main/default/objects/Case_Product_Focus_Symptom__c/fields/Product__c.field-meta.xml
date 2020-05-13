@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product__c</fullName>
+    <description>Please ensure the picklist value is also added to the Case.Product__c field</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please ensure the picklist value is also added to the Case.Product__c field</inlineHelpText>
+    <label>Product</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

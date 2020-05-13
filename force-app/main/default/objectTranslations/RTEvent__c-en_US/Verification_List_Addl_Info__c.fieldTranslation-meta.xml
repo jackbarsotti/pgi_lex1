@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- What is the procedure if callers are not on the restricted list? --></help>
+    <label><!-- Verification List Add&apos;l Info --></label>
+    <name>Verification_List_Addl_Info__c</name>
+</CustomFieldTranslation>

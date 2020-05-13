@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This value is auto populated based off the Account that the Related Opportunity belongs to.  This ID will be used in the NCS process for UCaaS customers only to populate as the CorpCustomer SF Acct ID. --></help>
+    <label><!-- Account&apos;s SFDC 18 Digit ID --></label>
+    <name>Account_s_SFDC_18_Digit_ID__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,25 @@
+<apex:page standardController="Matching_Rule__c" extensions="MatchingServiceController"   >
+    <apex:includeLightning />
+    <apex:includeScript value="/support/console/45.0/integration.js"/>
+    <div  style="width:79vw;" id="MachingRuleCreation"  />
+    <!-- style="width:97vw;" -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    
+    <script>
+
+        //D:\Kalpita\MM Workspace\Persona Engine\src\aura\MachingRuleCreation\MachingRuleCreation.cmp
+        $Lightning.use("c:MatchingRule_APP", function() {
+            $Lightning.createComponent("c:MatchingRule_CMP",
+                                   {
+                                       recordId: '{!recordid}',
+                                       
+                                   },
+                                   "MachingRuleCreation",
+                                   function(cmp) {
+                                       console.log('MachingRuleCreation');
+                                   });
+    }); 
+    
+    </script>
+
+</apex:page>

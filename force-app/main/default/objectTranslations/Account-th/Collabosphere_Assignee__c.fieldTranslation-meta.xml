@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Collabosphere service contact --></help>
+    <label><!-- Collabosphere Assignee --></label>
+    <name>Collabosphere_Assignee__c</name>
+    <picklistValues>
+        <masterLabel>Ashkan Naderi</masterLabel>
+        <translation><!-- Ashkan Naderi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Caitlin Giss</masterLabel>
+        <translation><!-- Caitlin Giss --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chris Romero</masterLabel>
+        <translation><!-- Chris Romero --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dana Fordham</masterLabel>
+        <translation><!-- Dana Fordham --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Daniel Borhanian</masterLabel>
+        <translation><!-- Daniel Borhanian --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Elizabeth Bruns</masterLabel>
+        <translation><!-- Elizabeth Bruns --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Erin Brophy</masterLabel>
+        <translation><!-- Erin Brophy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Habib Daof</masterLabel>
+        <translation><!-- Habib Daof --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>James Pulliam</masterLabel>
+        <translation><!-- James Pulliam --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kate Thorne</masterLabel>
+        <translation><!-- Kate Thorne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Katie Gaston</masterLabel>
+        <translation><!-- Katie Gaston --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kevin Lewis</masterLabel>
+        <translation><!-- Kevin Lewis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lauren Nunn</masterLabel>
+        <translation><!-- Lauren Nunn --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Paul Zukauskas</masterLabel>
+        <translation><!-- Paul Zukauskas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rula Marie</masterLabel>
+        <translation><!-- Rula Marie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stephen Nunez</masterLabel>
+        <translation><!-- Stephen Nunez --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Susan Burrows</masterLabel>
+        <translation><!-- Susan Burrows --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Will Lentz</masterLabel>
+        <translation><!-- Will Lentz --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

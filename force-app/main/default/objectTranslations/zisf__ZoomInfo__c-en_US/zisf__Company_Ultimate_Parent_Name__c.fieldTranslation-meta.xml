@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Name of Ultimate parent of company. --></help>
+    <label><!-- Company Ultimate Parent Name --></label>
+    <name>zisf__Company_Ultimate_Parent_Name__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Standard Schedule --></label>
+    <name>standardSchedule__c</name>
+    <relationshipLabel><!-- Schedule Overrides --></relationshipLabel>
+</CustomFieldTranslation>

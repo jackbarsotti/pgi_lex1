@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TASKRAY__trScoreDeduction__c</fullName>
+    <deprecated>false</deprecated>
+    <description>This number represents the number of points that will be deducted from the TaskRay Customer Onboarding Score when a Project deviates from its original schedule by a defined threshold.</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Use this field to define the number of points that will be deducted from the TaskRay Customer Onboarding Score when a Project deviates from its original schedule by a defined threshold.</inlineHelpText>
+    <label>Score Deduction</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>FSL Duty</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>FSL Duties</value>
+    </caseValues>
+    <layouts>
+        <layout>FSL Duty Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Days --></label>
+            <section>Days</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- At least one day must be selected --></errorMessage>
+        <name>FSL_Duty_Days_Required</name>
+    </validationRules>
+</CustomObjectTranslation>

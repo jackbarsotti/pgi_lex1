@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approved_PLP_Record_Required</fullName>
+    <active>true</active>
+    <description>If a PLP record is related to the RFP Request, then the PLP record must be approved before setting the RFP Status to &quot;Closed - Won&quot;.</description>
+    <errorConditionFormula>AND(
+NOT(ISNULL( PLP_Name__c )),
+PLP_Status__c = &quot;Review&quot; ||
+PLP_Status__c = &quot;Rejected&quot;,
+ISPICKVAL(Status__c, &quot;Closed - Won&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>PLP_Name__c</errorDisplayField>
+    <errorMessage>If you have a related PLP Record, the status must be &quot;Approved&quot; before closing this RFP Request as &quot;Closed - Won&quot;.</errorMessage>
+</ValidationRule>

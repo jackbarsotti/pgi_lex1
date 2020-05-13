@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If call policy has specified ID of a record to screen pop, then don&apos;t show other number lookup results --></help>
+    <label><!-- Show Policy Pop Record Only --></label>
+    <name>natterbox__Show_Policy_Pop_Record_Only__c</name>
+</CustomFieldTranslation>

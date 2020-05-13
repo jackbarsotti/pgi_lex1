@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_My_Leads</fullName>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>Global_MQL_Assignment_Date__c</columns>
+    <columns>Global_MQL__c</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.TITLE</columns>
+    <columns>Product_Interest__c</columns>
+    <columns>LEAD.LAST_ACTIVITY</columns>
+    <columns>LEAD.COUNTRY_CODE</columns>
+    <columns>LEAD.EMPLOYEES</columns>
+    <columns>LEAD.ANNUAL_REVENUE</columns>
+    <columns>LEAD.INDUSTRY</columns>
+    <columns>LEAD.STATE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Disqualified,Active Opportunity</value>
+    </filters>
+    <label>My Leads (All Open)</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinates>PGi_Channel_C_Level</roleAndSubordinates>
+    </sharedTo>
+</ListView>

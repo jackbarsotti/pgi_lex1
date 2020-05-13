@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Billable Type --></label>
+    <name>billableType__c</name>
+    <picklistValues>
+        <masterLabel>ACCESS_CODE</masterLabel>
+        <translation><!-- ACCESS_CODE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ACCOUNT</masterLabel>
+        <translation><!-- ACCOUNT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FOXDEN_USER</masterLabel>
+        <translation><!-- FOXDEN_USER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>S3_USER</masterLabel>
+        <translation><!-- S3_USER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEAT</masterLabel>
+        <translation><!-- SEAT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEAT,ACCESS_CODE</masterLabel>
+        <translation><!-- SEAT,ACCESS_CODE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEAT,ACCESS_CODE,FOXDEN_USER</masterLabel>
+        <translation><!-- SEAT,ACCESS_CODE,FOXDEN_USER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEAT,FOXDEN_USER</masterLabel>
+        <translation><!-- SEAT,FOXDEN_USER --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

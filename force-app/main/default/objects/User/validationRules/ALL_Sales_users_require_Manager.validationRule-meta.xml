@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALL_Sales_users_require_Manager</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+           CONTAINS( Profile.Name , &quot;sales&quot;),
+           ISNULL(ManagerId)
+)</errorConditionFormula>
+    <errorDisplayField>ManagerId</errorDisplayField>
+    <errorMessage>Please select a manager for this user before you can save.</errorMessage>
+</ValidationRule>

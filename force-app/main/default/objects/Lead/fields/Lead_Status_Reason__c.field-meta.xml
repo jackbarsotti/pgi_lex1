@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Status_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Lead Status Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Duplicate Lead / Customer / Prospect</fullName>
+                <default>false</default>
+                <label>Duplicate Lead / Customer / Prospect</label>
+            </value>
+            <value>
+                <fullName>Inaccurate Data / Missing Data</fullName>
+                <default>false</default>
+                <label>Inaccurate Data / Missing Data</label>
+            </value>
+            <value>
+                <fullName>Unresponsive</fullName>
+                <default>false</default>
+                <label>Unresponsive</label>
+            </value>
+            <value>
+                <fullName>Insufficient Budget</fullName>
+                <default>false</default>
+                <label>Insufficient Budget</label>
+            </value>
+            <value>
+                <fullName>Interested in Content Only</fullName>
+                <default>false</default>
+                <label>Interested in Content Only</label>
+            </value>
+            <value>
+                <fullName>Not Decision Maker</fullName>
+                <default>false</default>
+                <label>Not Decision Maker</label>
+            </value>
+            <value>
+                <fullName>Missing Product Functionality</fullName>
+                <default>false</default>
+                <label>Missing Product Functionality</label>
+            </value>
+            <value>
+                <fullName>Opted for Competitor</fullName>
+                <default>false</default>
+                <label>Opted for Competitor</label>
+            </value>
+            <value>
+                <fullName>Looking for Customer Support</fullName>
+                <default>false</default>
+                <label>Looking for Customer Support</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Inaccurate Data / Missing Data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Unresponsive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Insufficient Budget</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Interested in Content Only</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Not Decision Maker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Missing Product Functionality</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Opted for Competitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Looking for Customer Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

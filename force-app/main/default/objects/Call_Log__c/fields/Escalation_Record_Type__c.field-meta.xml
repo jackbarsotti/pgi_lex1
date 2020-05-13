@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Escalation_Record_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Escalation Record Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Escalation_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Client External Support</fullName>
+                <default>false</default>
+                <label>Client External Support</label>
+            </value>
+            <value>
+                <fullName>Reservations Request</fullName>
+                <default>false</default>
+                <label>Reservations Request</label>
+            </value>
+            <value>
+                <fullName>Internal Support</fullName>
+                <default>false</default>
+                <label>Internal Support</label>
+            </value>
+            <value>
+                <fullName>Parent Ticket (NOC)</fullName>
+                <default>false</default>
+                <label>Parent Ticket (NOC)</label>
+            </value>
+            <value>
+                <fullName>Billing Support</fullName>
+                <default>false</default>
+                <label>Billing Support</label>
+            </value>
+            <value>
+                <fullName>Company Credit Hold</fullName>
+                <default>false</default>
+                <label>Company Credit Hold</label>
+            </value>
+            <value>
+                <fullName>Credit Request</fullName>
+                <default>false</default>
+                <label>Credit Request</label>
+            </value>
+            <value>
+                <fullName>Payment Research Request</fullName>
+                <default>false</default>
+                <label>Payment Research Request</label>
+            </value>
+            <value>
+                <fullName>Pricing Help Request</fullName>
+                <default>false</default>
+                <label>Pricing Help Request</label>
+            </value>
+            <value>
+                <fullName>Profile Request</fullName>
+                <default>false</default>
+                <label>Profile Request</label>
+            </value>
+            <value>
+                <fullName>Rate Entry Request</fullName>
+                <default>false</default>
+                <label>Rate Entry Request</label>
+            </value>
+            <value>
+                <fullName>Request for Adjustment</fullName>
+                <default>false</default>
+                <label>Request for Adjustment</label>
+            </value>
+            <value>
+                <fullName>Revenue Assurance Audit Request</fullName>
+                <default>false</default>
+                <label>Revenue Assurance Audit Request</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Case</controllingFieldValue>
+            <valueName>Client External Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case</controllingFieldValue>
+            <valueName>Reservations Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case</controllingFieldValue>
+            <valueName>Internal Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case</controllingFieldValue>
+            <valueName>Parent Ticket (NOC)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FinReq</controllingFieldValue>
+            <valueName>Billing Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FinReq</controllingFieldValue>
+            <valueName>Company Credit Hold</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FinReq</controllingFieldValue>
+            <valueName>Credit Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FinReq</controllingFieldValue>
+            <valueName>Payment Research Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FinReq</controllingFieldValue>
+            <valueName>Pricing Help Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FinReq</controllingFieldValue>
+            <valueName>Profile Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FinReq</controllingFieldValue>
+            <valueName>Rate Entry Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FinReq</controllingFieldValue>
+            <valueName>Request for Adjustment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FinReq</controllingFieldValue>
+            <valueName>Revenue Assurance Audit Request</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

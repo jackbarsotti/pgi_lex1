@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Record Ownership will be auto set based off this field when the record is created --></help>
+    <label><!-- Assignment Group --></label>
+    <name>Assignment_Group__c</name>
+    <picklistValues>
+        <masterLabel>PGi-RFC-EU-Branding&amp;Conf Email</masterLabel>
+        <translation><!-- PGi-RFC-EU-Branding&amp;Conf Email --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-EU-Tier 1-CS (Audio)</masterLabel>
+        <translation><!-- PGi-RFC-EU-Tier 1-CS (Audio) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Audio Projects</masterLabel>
+        <translation><!-- PGi-RFC-GL-Audio Projects --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Business Intelligence (BI)</masterLabel>
+        <translation><!-- PGi-RFC-GL-Business Intelligence (BI) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-GM Tools &amp; Integration Proj</masterLabel>
+        <translation><!-- PGi-RFC-GL-GM Tools &amp; Integration Proj --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-GM Web Projects</masterLabel>
+        <translation><!-- PGi-RFC-GL-GM Web Projects --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-InfoSec</masterLabel>
+        <translation><!-- PGi-RFC-GL-InfoSec --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-QA</masterLabel>
+        <translation><!-- PGi-RFC-GL-QA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-QA/DEV Lab</masterLabel>
+        <translation><!-- PGi-RFC-GL-QA/DEV Lab --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Tier 2-Deskside Support</masterLabel>
+        <translation><!-- PGi-RFC-GL-Tier 2-Deskside Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Tier 2-Integrations</masterLabel>
+        <translation><!-- PGi-RFC-GL-Tier 2-Integrations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Tier 3-Audio Applications</masterLabel>
+        <translation><!-- PGi-RFC-GL-Tier 3-Audio Applications --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Tier 3-Database Operations</masterLabel>
+        <translation><!-- PGi-RFC-GL-Tier 3-Database Operations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Tier 3-Network</masterLabel>
+        <translation><!-- PGi-RFC-GL-Tier 3-Network --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Tier 3-SAN Admin</masterLabel>
+        <translation><!-- PGi-RFC-GL-Tier 3-SAN Admin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Tier 3-SRE (Denver)</masterLabel>
+        <translation><!-- PGi-RFC-GL-Tier 3-SRE (Denver) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Tier 3-SaaS Ops</masterLabel>
+        <translation><!-- PGi-RFC-GL-Tier 3-SaaS Ops --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Tier 3-Systems Admin</masterLabel>
+        <translation><!-- PGi-RFC-GL-Tier 3-Systems Admin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Tier 3-Systems Ops</masterLabel>
+        <translation><!-- PGi-RFC-GL-Tier 3-Systems Ops --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Tier 3-Telco</masterLabel>
+        <translation><!-- PGi-RFC-GL-Tier 3-Telco --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Tier 3-Voice Delivery</masterLabel>
+        <translation><!-- PGi-RFC-GL-Tier 3-Voice Delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Tier 3-iMeet Ops</masterLabel>
+        <translation><!-- PGi-RFC-GL-Tier 3-iMeet Ops --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Tier 4-Agenday</masterLabel>
+        <translation><!-- PGi-RFC-GL-Tier 4-Agenday --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Tier 4-Audio Interoperabili</masterLabel>
+        <translation><!-- PGi-RFC-GL-Tier 4-Audio Interoperabili --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Tier 4-Database Development</masterLabel>
+        <translation><!-- PGi-RFC-GL-Tier 4-Database Development --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Tier 4-R&amp;D (Customer Sites)</masterLabel>
+        <translation><!-- PGi-RFC-GL-Tier 4-R&amp;D (Customer Sites) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Tier 4-R&amp;D (GM Mobile Phone)</masterLabel>
+        <translation><!-- PGi-RFC-GL-Tier 4-R&amp;D (GM Mobile Phone) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Tier 4-R&amp;D (HUB&amp;MyInfo)</masterLabel>
+        <translation><!-- PGi-RFC-GL-Tier 4-R&amp;D (HUB&amp;MyInfo) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Tier 4-R&amp;D (Middle Tier)</masterLabel>
+        <translation><!-- PGi-RFC-GL-Tier 4-R&amp;D (Middle Tier) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Tier 4-R&amp;D (Provisioning Sys</masterLabel>
+        <translation><!-- PGi-RFC-GL-Tier 4-R&amp;D (Provisioning Sys --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Tier 4-R&amp;D (iMeet)</masterLabel>
+        <translation><!-- PGi-RFC-GL-Tier 4-R&amp;D (iMeet) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-Tier 4-R&amp;D(GM Dsktp&amp;Phone)</masterLabel>
+        <translation><!-- PGi-RFC-GL-Tier 4-R&amp;D(GM Dsktp&amp;Phone) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-GL-iMeet Projects</masterLabel>
+        <translation><!-- PGi-RFC-GL-iMeet Projects --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-INTL-Tier 1-Deskside Support</masterLabel>
+        <translation><!-- PGi-RFC-INTL-Tier 1-Deskside Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-NA - Cert &amp; Domain Mgmt.</masterLabel>
+        <translation><!-- PGi-RFC-NA - Cert &amp; Domain Mgmt. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-NA-Branding&amp;Confirm Email</masterLabel>
+        <translation><!-- PGi-RFC-NA-Branding&amp;Confirm Email --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-NA-Facilities</masterLabel>
+        <translation><!-- PGi-RFC-NA-Facilities --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-NA-Tier 1-CARE (Call Delivery)</masterLabel>
+        <translation><!-- PGi-RFC-NA-Tier 1-CARE (Call Delivery) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-NA-Tier 2-IST (Config)</masterLabel>
+        <translation><!-- PGi-RFC-NA-Tier 2-IST (Config) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi-RFC-NA-Tier 3-Production Sys Admin</masterLabel>
+        <translation><!-- PGi-RFC-NA-Tier 3-Production Sys Admin --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

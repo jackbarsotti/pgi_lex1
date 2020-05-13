@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MRR__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(iMCNRRProduct__c = FALSE &amp;&amp; iMCProduct__c = TRUE, TotalPrice/12,
+IF(Historic_Line_Item__c = TRUE, Legacy_MRR__c, 
+IF(isReportable_Text__c = &quot;Invalid&quot;, 0,
+IF(ISPICKVAL(Billing_Frequency__c, &quot;One Time Event&quot;), 0,  
+IF(ISPICKVAL(Billing_Frequency__c, &quot;Pay Per Use&quot;), 0, 
+IF(ISPICKVAL(Unit_Type__c , &quot;Ancillary&quot;), 0, 
+IF(Contract_Term__c = 0, New_Sales_Price__c* New_Quantity__c, 
+IF(ISPICKVAL(Billing_Frequency__c,&#39;Annually&#39;), (New_Sales_Price__c* New_Quantity__c)/12,
+IF(ISPICKVAL(Billing_Frequency__c ,&#39;Quarterly&#39;),((New_Sales_Price__c* New_Quantity__c)/3),
+New_Sales_Price__c* New_Quantity__c )))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Product MRR</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <type>Currency</type>
+</CustomField>

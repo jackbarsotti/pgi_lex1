@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target_I_erarchy__c</fullName>
+    <description>[5/20/15, JK]: Created per Caitlin&#39;s request.</description>
+    <externalId>false</externalId>
+    <label>Target I-erarchy</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Interested</fullName>
+                <default>false</default>
+                <label>Interested</label>
+            </value>
+            <value>
+                <fullName>Intentional</fullName>
+                <default>false</default>
+                <label>Intentional</label>
+            </value>
+            <value>
+                <fullName>Immersed</fullName>
+                <default>false</default>
+                <label>Immersed</label>
+            </value>
+            <value>
+                <fullName>Integrated</fullName>
+                <default>false</default>
+                <label>Integrated</label>
+            </value>
+            <value>
+                <fullName>Innovative</fullName>
+                <default>false</default>
+                <label>Innovative</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

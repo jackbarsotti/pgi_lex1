@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Option 2 Menu --></label>
+    <name>Option_2_Menu__c</name>
+    <relationshipLabel><!-- Call Center - Menus (Option 2 Menu) --></relationshipLabel>
+</CustomFieldTranslation>

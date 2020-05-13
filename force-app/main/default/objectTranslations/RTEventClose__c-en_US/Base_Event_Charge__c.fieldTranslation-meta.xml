@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Base Event Charge amount (defaulted from Account ,based on event type) --></help>
+    <label><!-- Base Event Charge --></label>
+    <name>Base_Event_Charge__c</name>
+</CustomFieldTranslation>

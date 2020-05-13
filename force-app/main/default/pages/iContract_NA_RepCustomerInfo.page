@@ -1,0 +1,137 @@
+<apex:page standardController="CONMAN_Contract__c" extensions="iContract_NA_Master_Controller">
+    <!-- Sales Rep's Information -->
+    <table>
+        <tr>
+            <th class="right dark">Sales Rep (Rep No.):</th>
+            <td>
+                <span id="SalesRepName">{!salesRepName}</span>
+                <span id="SalesRepNo">{!salesRepTerritoryCode}</span>
+            </td>
+            <th class="right dark">Phone / Fax:</th>
+            <td>
+                <span id="SalesRepPhone">{!salesRepPhone}</span>
+                /
+                <span id="SalesRepFax">{!salesRepFax}</span>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <!-- RT-497 if APAC and serviceAgreement -->
+    <!-- <apex:outputPanel rendered="{!agreementRegion == 'APAC'}"> -->
+    <apex:outputPanel rendered="{!agreementRegion == 'APAC' && isCSA}">
+        <!-- Customer's Information -->
+        <table>
+            <col width="13%" />
+            <col width="14%" />
+            <col width="14%" />
+            <col width="12%" />
+            <col width="7%" />
+            <col width="10%" />
+            <col width="11%" />
+            <col width="9%" />
+            <tr>
+                <th colspan='8' class='left dark'>Customer Billing and Notice Information</th>
+            </tr>
+            <tr>
+                <th colspan='1' class='right dark'>Company Name:</th>
+                <td colspan='2' id="companyName">{!agreementAccountName}</td>
+                <th colspan='1' class='right dark'>Contact Name:</th>
+                <td colspan='4'>
+                    <span id="firstName">{!contactData.FirstName}</span>
+                    <span id="lastName">{!contactData.LastName}</span>
+                </td>
+            </tr>
+            <tr>
+                <th colspan='1' class='right dark'>Customer's Business Registration #:</th>
+                <td colspan='4'>{!pgiInternalEntity.Business_Registration__c}</td>
+            </tr>
+            <tr>
+                <th colspan='1' class='right dark'>Phone:</th>
+                <td colspan='2' id="phone">{!contactData.Phone}</td>
+                <th colspan='1' class='right dark'>E-mail:</th>
+                <td colspan='4' id="email">{!contactData.Email}</td>
+            </tr>
+            <tr>
+                <th colspan='1' class='right dark'>Title:</th>
+                <td colspan='2' id="jobTitle">{!contactData.Title}</td>
+                <th colspan='1' class='right dark'>Billing E-mail:</th>
+                <td colspan='4' id="billingEmail">{!oppData.Billing_Email__c}</td>
+            </tr>
+            <tr>
+                <!-- RT-497 Change Street Address to Address 1 -->
+                <!-- <th colspan='1' class='right dark'>Street Address:</th> -->
+                <th colspan='1' class='right dark'>Address 1:</th>
+                <td colspan='2' id="address1">{!contactData.MailingStreet}</td>
+                <th colspan='1' class='right dark'>Address 2:</th>
+                <td colspan='4' id="city">{!contactData.MailingCity}, {!contactData.MailingState}</td>
+
+            </tr>
+            <tr>
+
+                <th colspan='1' class='right dark'>Country:</th>
+                <td colspan='2' id="country">{!contactData.MailingCountry}</td>
+                <th colspan='1' class='right dark'>Zip/Postal Code:</th>
+                <td colspan='1' id="postal">{!contactData.MailingPostalCode}</td>
+            </tr>
+        </table>
+    </apex:outputPanel>
+    <apex:outputPanel rendered="{!agreementRegion != 'APAC'}">
+        <table>
+            <col width="13%" />
+            <col width="14%" />
+            <col width="14%" />
+            <col width="12%" />
+            <col width="7%" />
+            <col width="10%" />
+            <col width="11%" />
+            <col width="9%" />
+            <tr>
+                <th colspan='8' class='left dark'>Customer Billing and Notice Information</th>
+            </tr>
+            <tr>
+                <th colspan='1' class='right dark'>Company Name:</th>
+                <td colspan='2' id="companyName">{!agreementAccountName}</td>
+                <th colspan='1' class='right dark'>Contact Name:</th>
+                <td colspan='4'>
+                    <span id="firstName">{!contactData.FirstName}</span>
+                    <span id="lastName">{!contactData.LastName}</span>
+                </td>
+            </tr>
+            <tr>
+                <th colspan='1' class='right dark'>Phone:</th>
+                <td colspan='2' id="phone">{!contactData.Phone}</td>
+                <th colspan='1' class='right dark'>E-mail:</th>
+                <td colspan='4' id="email">{!contactData.Email}</td>
+            </tr>
+            <tr>
+                <th colspan='1' class='right dark'>Title:</th>
+                <td colspan='2' id="jobTitle">{!contactData.Title}</td>
+                <th colspan='1' class='right dark'>Billing E-mail:</th>
+                <td colspan='4' id="billingEmail">{!oppData.Billing_Email__c}</td>
+            </tr>
+            <tr>
+                <th colspan='1' class='right dark'>Street Address:</th>
+                <td colspan='3' id="address1">{!contactData.MailingStreet}</td>
+
+                <th colspan='1' class='right dark'>City:</th>
+                <td colspan='3' id="city">{!contactData.MailingCity}</td>
+            </tr>
+            <tr>
+
+                <th colspan='1' class='right dark'>State/Province:</th>
+                <td colspan='2' id="state">{!contactData.MailingState}</td>
+                <th colspan='1' class='right dark'>Country:</th>
+                <td colspan='2' id="country">{!contactData.MailingCountry}</td>
+                <th colspan='1' class='right dark'>Zip/Postal Code:</th>
+                <td colspan='1' id="postal">{!contactData.MailingPostalCode}</td>
+            </tr>
+        </table>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{! contract.Existing_Account_Numbers__c != null && contract.Existing_Account_Numbers__c != '' }">
+        <strong>Existing Account Number(s):</strong>
+        <br/>
+        <span id="ExistingAccountNumber">
+            <apex:outputText value="{!contract.Existing_Account_Numbers__c}" escape="false" style="white-space:pre;" />
+        </span>
+    </apex:outputPanel>
+</apex:page>

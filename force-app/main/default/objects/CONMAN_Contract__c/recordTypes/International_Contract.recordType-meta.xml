@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>International_Contract</fullName>
+    <active>true</active>
+    <description>APAC Contract going through the iContract system</description>
+    <label>APAC Contract</label>
+    <picklistValues>
+        <picklist>Associated_SLO_Name__c</picklist>
+        <values>
+            <fullName>Client Service Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Service Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Services Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subscription License Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subscription License Order</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Audio_Commit_Frequency__c</picklist>
+        <values>
+            <fullName>Monthly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quarterly</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BP_Contract_Selection__c</picklist>
+        <values>
+            <fullName>Automatic%3A Single Option</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Failed%3A Multiple Options</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Failed%3A No Options</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Tried</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Closed_By__c</picklist>
+        <values>
+            <fullName>User</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>eSignature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iContract</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_Document_Status__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deactivated Company%2FNo Termination Notice</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_Region__c</picklist>
+        <values>
+            <fullName>APAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_Source__c</picklist>
+        <values>
+            <fullName>3rd Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Document Generator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Docusign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gateway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iContract</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Manager Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting RVP Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting SVP Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Pricing Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Pricing Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deactivated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Downloaded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Pending Legal Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Pricing Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent To Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Superseded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Terminated</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_Type__c</picklist>
+        <values>
+            <fullName>Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subscription License Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subscription License Order</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Docusign_Contract_Type__c</picklist>
+        <values>
+            <fullName>Long</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Short</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FinReq_Update_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Created</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Intl_Order_Type__c</picklist>
+        <values>
+            <fullName>Long Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Short Form</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Invoice_Delivery__c</picklist>
+        <values>
+            <fullName>Online - Paperless - Online PDF Only %28no charge%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paper - Full Detail %28%2419%2E95%2Finvoice%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paper - Summary - Remittance Only %28no charge%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Invoice_Layout__c</picklist>
+        <values>
+            <fullName>Conf%2E Title Sort</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Moderator Sort</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PO Sort</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Participant Level Detail</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Language__c</picklist>
+        <values>
+            <fullName>de_DE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>en_UK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>en_US</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>fr_FR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ja_JP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>zh_CN</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Legal_Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pricing_Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Details_Were_Manually_Changed__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Products__c</picklist>
+        <values>
+            <fullName>3rd Party Products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GlobalMeet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GlobalMeet Audio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operator Assisted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iMeet</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Ops_Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>T_Cs_Were_Manually_Changed__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>z_Source__c</picklist>
+        <values>
+            <fullName>Salesgateway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eCommerce</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>z_unittype__c</picklist>
+        <values>
+            <fullName>Ancillary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Device%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Licenses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minutes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

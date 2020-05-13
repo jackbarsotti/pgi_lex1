@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This will be the old individualId for migrated data, or the contactId on new contacts. --></help>
+    <label><!-- L3 spUniqueId --></label>
+    <name>BBS_L3spUniqueId__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- A calculated customer onboarding score based on a project&apos;s Initial Projected Duration vs. Actual Duration and the average of Internal &amp; External Sentiment. --></help>
+    <label><!-- Customer Onboarding Score --></label>
+    <name>TASKRAY__trCustomerOnboardingScore__c</name>
+</CustomFieldTranslation>

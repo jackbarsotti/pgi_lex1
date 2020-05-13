@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ddcdf__Cancel_Scanners</fullName>
+    <availability>online</availability>
+    <description>Cancel all active scanners</description>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Cancel Scanners</masterLabel>
+    <openType>sidebar</openType>
+    <page>ddcdf__CancelScanners</page>
+    <protected>false</protected>
+</WebLink>

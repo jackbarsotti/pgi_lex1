@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restore</fullName>
+    <availability>online</availability>
+    <description>Restore an access code record</description>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Restore</masterLabel>
+    <openType>sidebar</openType>
+    <page>RestoreAccessCode</page>
+    <protected>false</protected>
+</WebLink>

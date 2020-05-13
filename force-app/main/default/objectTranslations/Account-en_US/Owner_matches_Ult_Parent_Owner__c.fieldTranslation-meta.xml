@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Owner matches Ult. Parent Owner --></label>
+    <name>Owner_matches_Ult_Parent_Owner__c</name>
+</CustomFieldTranslation>

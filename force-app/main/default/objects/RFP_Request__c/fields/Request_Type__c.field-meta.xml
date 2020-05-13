@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Request Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Customer Requested RFP Template</fullName>
+                <default>false</default>
+                <label>Customer Requested RFP Template</label>
+            </value>
+            <value>
+                <fullName>Email Support</fullName>
+                <default>false</default>
+                <label>Email Support</label>
+            </value>
+            <value>
+                <fullName>Proposal</fullName>
+                <default>false</default>
+                <label>Proposal</label>
+            </value>
+            <value>
+                <fullName>Request for Information (RFI)</fullName>
+                <default>false</default>
+                <label>Request for Information (RFI)</label>
+            </value>
+            <value>
+                <fullName>Request for Proposal (RFP)</fullName>
+                <default>false</default>
+                <label>Request for Proposal (RFP)</label>
+            </value>
+            <value>
+                <fullName>Request for Quote (RFQ)</fullName>
+                <default>false</default>
+                <label>Request for Quote (RFQ)</label>
+            </value>
+            <value>
+                <fullName>Security Questionnaire</fullName>
+                <default>false</default>
+                <label>Security Questionnaire</label>
+            </value>
+            <value>
+                <fullName>Vendor Questionnaire</fullName>
+                <default>false</default>
+                <label>Vendor Questionnaire</label>
+            </value>
+            <value>
+                <fullName>Vendor Registration</fullName>
+                <default>false</default>
+                <label>Vendor Registration</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

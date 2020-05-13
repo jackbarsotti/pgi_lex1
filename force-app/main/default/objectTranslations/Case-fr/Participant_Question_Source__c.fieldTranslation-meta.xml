@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Not applicable for many cases.Used for describing where the partipant found help/our 800#. This is probably a temporary field. --></help>
+    <label><!-- Participant Question Source --></label>
+    <name>Participant_Question_Source__c</name>
+    <picklistValues>
+        <masterLabel>Calendar</masterLabel>
+        <translation><!-- Calendar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email confirmation/Invite</masterLabel>
+        <translation><!-- Email confirmation/Invite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Meeting lobby</masterLabel>
+        <translation><!-- Meeting lobby --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not sure</masterLabel>
+        <translation><!-- Not sure --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ReadyTalk email - 866#</masterLabel>
+        <translation><!-- ReadyTalk email - 866# --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ReadyTalk email - Op Assist</masterLabel>
+        <translation><!-- ReadyTalk email - Op Assist --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web page/Lobby</masterLabel>
+        <translation><!-- Web page/Lobby --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Website</masterLabel>
+        <translation><!-- Website --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

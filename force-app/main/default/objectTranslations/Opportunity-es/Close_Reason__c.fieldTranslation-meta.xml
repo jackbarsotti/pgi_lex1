@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Close Reason --></label>
+    <name>Close_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Best Solution</masterLabel>
+        <translation><!-- Best Solution --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Capabilities</masterLabel>
+        <translation><!-- Capabilities --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Duplicate Record</masterLabel>
+        <translation><!-- Duplicate Record --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incumbent Supplier</masterLabel>
+        <translation><!-- Incumbent Supplier --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Price</masterLabel>
+        <translation><!-- Price --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Project Cancelled</masterLabel>
+        <translation><!-- Project Cancelled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Project Fit</masterLabel>
+        <translation><!-- Project Fit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Relationship</masterLabel>
+        <translation><!-- Relationship --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reputation</masterLabel>
+        <translation><!-- Reputation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Solution Gap</masterLabel>
+        <translation><!-- Solution Gap --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

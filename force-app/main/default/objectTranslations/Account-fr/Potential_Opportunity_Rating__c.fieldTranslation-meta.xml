@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- 4.0 Potential Opportunity Rating
+
+&gt;$100,000 annual opportunity	        4
+&gt;$50,000 annual opportunity		3
+&gt;$35,000 annual opportunity		2
+&lt;$35,000 annual opportunity		1 --></help>
+    <label><!-- Potential Opportunity Rating --></label>
+    <name>Potential_Opportunity_Rating__c</name>
+</CustomFieldTranslation>

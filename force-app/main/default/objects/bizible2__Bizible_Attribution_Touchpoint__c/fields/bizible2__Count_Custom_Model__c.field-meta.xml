@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>bizible2__Count_Custom_Model__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The count distributed for this touchpoint based on a full path model</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The count distributed for this touchpoint based on a full path model</inlineHelpText>
+    <label>Count - Full Path</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Document_Sign_Date__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Boolean to check whether automatic date should be entered in the document or not.</description>
+    <externalId>false</externalId>
+    <label>Document Sign Date</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

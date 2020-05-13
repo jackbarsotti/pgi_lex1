@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Closed_Pending_Approval</fullName>
+    <active>true</active>
+    <description>Users must send to Closed Pending Approval before the opportunity can be closed won</description>
+    <errorConditionFormula>AND(
+RecordType.Name = &quot;PGi Opportunity&quot;,
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;,
+$User.ProfileId &lt;&gt; &quot;00ea0000001sYR8&quot;,
+$User.ProfileId &lt;&gt; &quot;00e13000001x8MF&quot;,
+CONTAINS(TEXT(StageName), &quot;Closed Won&quot;),
+NOT(ISPICKVAL(PRIORVALUE(StageName),&quot;Closed Pending Approval&quot;)),
+NOT(ISPICKVAL(PRIORVALUE(StageName),&quot;Closed Won&quot;)))</errorConditionFormula>
+    <errorDisplayField>StageName</errorDisplayField>
+    <errorMessage>Please select &quot;Closed Pending Approval&quot; as Stage.</errorMessage>
+</ValidationRule>

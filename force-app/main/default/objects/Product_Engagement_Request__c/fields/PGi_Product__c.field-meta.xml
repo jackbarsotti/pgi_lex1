@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Product__c</fullName>
+    <externalId>false</externalId>
+    <label>PGi Product</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Audio</fullName>
+                <default>false</default>
+                <label>Audio</label>
+            </value>
+            <value>
+                <fullName>BackOffice / MiddleTier</fullName>
+                <default>false</default>
+                <label>BackOffice / MiddleTier</label>
+            </value>
+            <value>
+                <fullName>Billing / Reporting</fullName>
+                <default>false</default>
+                <label>Billing / Reporting</label>
+            </value>
+            <value>
+                <fullName>Central Desktop</fullName>
+                <default>false</default>
+                <label>Central Desktop</label>
+            </value>
+            <value>
+                <fullName>Convergence</fullName>
+                <default>false</default>
+                <label>Convergence</label>
+            </value>
+            <value>
+                <fullName>Event Conferencing</fullName>
+                <default>false</default>
+                <label>Event Conferencing</label>
+            </value>
+            <value>
+                <fullName>GlobalMeet Desktop</fullName>
+                <default>false</default>
+                <label>GlobalMeet Desktop</label>
+            </value>
+            <value>
+                <fullName>GlobalMeet Mobile</fullName>
+                <default>false</default>
+                <label>GlobalMeet Mobile</label>
+            </value>
+            <value>
+                <fullName>GlobalMeet Tools</fullName>
+                <default>false</default>
+                <label>GlobalMeet Tools</label>
+            </value>
+            <value>
+                <fullName>GlobalMeet Web (5.x)</fullName>
+                <default>false</default>
+                <label>GlobalMeet Web (5.x)</label>
+            </value>
+            <value>
+                <fullName>GlobalMeet Webcast</fullName>
+                <default>false</default>
+                <label>GlobalMeet Webcast</label>
+            </value>
+            <value>
+                <fullName>GlobalMeet Webinar</fullName>
+                <default>false</default>
+                <label>GlobalMeet Webinar</label>
+            </value>
+            <value>
+                <fullName>Identity</fullName>
+                <default>false</default>
+                <label>Identity</label>
+            </value>
+            <value>
+                <fullName>MS / Cisco / Adobe</fullName>
+                <default>false</default>
+                <label>MS / Cisco / Adobe</label>
+            </value>
+            <value>
+                <fullName>OnNet</fullName>
+                <default>false</default>
+                <label>OnNet</label>
+            </value>
+            <value>
+                <fullName>Op Assist</fullName>
+                <default>false</default>
+                <label>Op Assist</label>
+            </value>
+            <value>
+                <fullName>Portal/Hub/Provisioning</fullName>
+                <default>false</default>
+                <label>Portal/Hub/Provisioning</label>
+            </value>
+            <value>
+                <fullName>Production Applications</fullName>
+                <default>false</default>
+                <label>Production Applications</label>
+            </value>
+            <value>
+                <fullName>ReadyTalk</fullName>
+                <default>false</default>
+                <label>ReadyTalk</label>
+            </value>
+            <value>
+                <fullName>Systems Architecture</fullName>
+                <default>false</default>
+                <label>Systems Architecture</label>
+            </value>
+            <value>
+                <fullName>UCaaS</fullName>
+                <default>false</default>
+                <label>UCaaS</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

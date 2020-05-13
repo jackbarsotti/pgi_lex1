@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If uncertain, you are welcome to answer &quot;I don&apos;t know&quot;. --></help>
+    <label><!-- Storage Space Size --></label>
+    <name>Storage_Space_Size__c</name>
+</CustomFieldTranslation>

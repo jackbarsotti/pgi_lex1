@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RFP_RequestType_NOT_Email_Support</fullName>
+    <active>true</active>
+    <description>If Request Type is not Email Support, you must populate the following fields: Due Date, PGi Bidding, Current Customer, Sales Rep, Oppty Name, NDA in Place, and Is this an Online RFP?</description>
+    <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+(
+ISPICKVAL(Request_Type__c,&#39;Customer Requested RFP Template&#39;) ||
+ISPICKVAL(Request_Type__c,&#39;Proposal&#39;) ||
+ISPICKVAL(Request_Type__c,&#39;Request for Information (RFI)&#39;) ||
+ISPICKVAL(Request_Type__c,&#39;Request for Proposal (RFP)&#39;) ||
+ISPICKVAL(Request_Type__c,&#39;Request for Quote (RFQ) &#39;) ||
+ISPICKVAL(Request_Type__c,&#39;Security Questionnaire&#39;) ||
+ISPICKVAL(Request_Type__c,&#39;Vendor Registration&#39;) ||
+ISPICKVAL(Request_Type__c,&#39;Vendor Questionnaire&#39;) 
+),
+ISBLANK ( Due_Date__c )||
+ISBLANK ( Opportunity_Name__c)||
+ISBLANK (  Sales_Rep_Name__c )||
+
+ISPICKVAL ( PGi_Bidding__c,&#39;&#39;)||
+ISPICKVAL ( Current_Customer__c ,&#39;&#39;)||
+ISPICKVAL ( NDA_in_place__c, &#39;&#39;)||
+ISPICKVAL ( Is_this_an_Online_RFP__c, &#39;&#39;)
+)</errorConditionFormula>
+    <errorMessage>The following fields are required and must be populated: Due Date, PGi Bidding, Current Customer, Sales Rep, Oppty Name, NDA in Place, and Is this an Online RFP?</errorMessage>
+</ValidationRule>

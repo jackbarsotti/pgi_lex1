@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Warning Message (by Profile) --></label>
+    <name>tls_message_profile__c</name>
+</CustomFieldTranslation>

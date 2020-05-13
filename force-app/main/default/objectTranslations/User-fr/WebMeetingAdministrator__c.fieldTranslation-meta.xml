@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicates the user is allowed to perform administrative functions in the Web Meeting application --></help>
+    <label><!-- Web Meeting Administrator --></label>
+    <name>WebMeetingAdministrator__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subscription_Email_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(Subscription_Email__c=&quot;&quot;,  $User.Id &lt;&gt;&#39;00550000000yfEe&#39;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot; )</errorConditionFormula>
+    <errorDisplayField>Subscription_Email__c</errorDisplayField>
+    <errorMessage>Field required.</errorMessage>
+</ValidationRule>

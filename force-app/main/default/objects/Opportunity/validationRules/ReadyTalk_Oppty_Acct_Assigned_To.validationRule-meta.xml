@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReadyTalk_Oppty_Acct_Assigned_To</fullName>
+    <active>true</active>
+    <description>Field required if Opportunity is Closed Won.</description>
+    <errorConditionFormula>$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;&amp;&amp;
+ispickval(StageName,&quot;Closed Won&quot;)&amp;&amp; 
+ISBLANK (Account_Assigned_To__c)&amp;&amp;
+$RecordType.Name = &quot;ReadyTalk Opportunity&quot;</errorConditionFormula>
+    <errorDisplayField>Account_Assigned_To__c</errorDisplayField>
+    <errorMessage>This field is required when the Opportunity is Closed Won.</errorMessage>
+</ValidationRule>

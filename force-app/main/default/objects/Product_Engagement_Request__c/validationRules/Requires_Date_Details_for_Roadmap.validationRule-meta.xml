@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requires_Date_Details_for_Roadmap</fullName>
+    <active>true</active>
+    <description>if Currently in Roadmap = Yes then the Quarterly and Yearly date fields are required</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(CurrentlyonRoadmap__c,&#39;YES&#39;), 
+ISBLANK(TEXT(Quarter_Completion_Date__c)), 
+ISBLANK(Year_Completion_Date__c)
+)</errorConditionFormula>
+    <errorMessage>The Quarter and Year Completion Date fields are required to continue.</errorMessage>
+</ValidationRule>

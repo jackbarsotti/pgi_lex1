@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outage_Location__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>If Outage is ‘yes’, fill in the location of the work (or the place where the work will impact).</inlineHelpText>
+    <label>Outage Location</label>
+    <length>1000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

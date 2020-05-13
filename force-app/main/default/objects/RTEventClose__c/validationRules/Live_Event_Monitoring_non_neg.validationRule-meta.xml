@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Live_Event_Monitoring_non_neg</fullName>
+    <active>true</active>
+    <errorConditionFormula>Live_Event_Monitoring_Rate__c &lt; 0</errorConditionFormula>
+    <errorDisplayField>Live_Event_Monitoring_Rate__c</errorDisplayField>
+    <errorMessage>Live Event Monitoring rate must be &gt;= 0.00</errorMessage>
+</ValidationRule>

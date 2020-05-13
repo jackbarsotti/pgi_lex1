@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Welcome_New_SSO_Service_User</fullName>
+        <description>Welcome New SSO Service User</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>salesforcecrmsupport@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>User_Notifications/New_SSO_Salesforce_Service_User</template>
+    </alerts>
+    <alerts>
+        <fullName>Welcome_New_SSO_User</fullName>
+        <description>Welcome New SSO User</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>salesforcecrmsupport@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>User_Notifications/New_SSO_User</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Date_for_Next_Report_Trigger_Update</fullName>
+        <field>Date_for_Next_Report_Trigger__c</field>
+        <formula>DATE( 
+YEAR(Date_for_report_trigger__c), MONTH(Date_for_report_trigger__c) + 1, DAY(Date_for_report_trigger__c)
+)</formula>
+        <name>Date for Next Report Trigger Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Report_Trigger_Start_Always_1st_of_Prev</fullName>
+        <field>Report_Trigger_Start__c</field>
+        <formula>IF(
+    
+    MONTH(Report_Trigger_Start__c)=1,
+        
+    DATE(
+        YEAR(Report_Trigger_Start__c)-1,
+        MONTH(Report_Trigger_Start__c)-1,
+        DAY(Report_Trigger_Start__c) - DAY(Report_Trigger_Start__c)+1),
+        
+    DATE(
+        YEAR(Report_Trigger_Start__c),
+        MONTH(Report_Trigger_Start__c)-1,
+        DAY(Report_Trigger_Start__c) - DAY(Report_Trigger_Start__c)+1)
+)</formula>
+        <name>Report Trigger Start Always 1st of Prev</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Team_Id_s_field</fullName>
+        <description>sets the Id of the User, and any manager Ids that user has up to 7 levels.</description>
+        <field>Team_Id_s__c</field>
+        <formula>Id + &quot;, &quot; + ManagerId + &quot;,&quot; + Manager.ManagerId + &quot;,&quot; + Manager.Manager.ManagerId + &quot;,&quot; + Manager.Manager.Manager.ManagerId + &quot;,&quot; + Manager.Manager.Manager.Manager.ManagerId + &quot;,&quot; + Manager.Manager.Manager.Manager.Manager.ManagerId + &quot;,&quot; + 
+Manager.Manager.Manager.Manager.Manager.Manager.ManagerId + &quot;,&quot; + 
+Manager.Manager.Manager.Manager.Manager.Manager.Manager.ManagerId</formula>
+        <name>Set Team Id&#39;s field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>TTrigDate_for_Next_Report_Trigger_Update</fullName>
+        <field>Date_for_report_trigger__c</field>
+        <formula>Date_for_Next_Report_Trigger__c</formula>
+        <name>TTrigDate for Next Report Trigger Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Date_for_Report_Trigger</fullName>
+        <field>Date_for_report_trigger__c</field>
+        <formula>DATE(
+YEAR(Report_Trigger_Start__c), MONTH(Report_Trigger_Start__c) + 1, DAY(Report_Trigger_Start__c)
+)</formula>
+        <name>Update Date for Report Trigger</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>PGi-Set Team Id%27s</fullName>
+        <actions>
+            <name>Set_Team_Id_s_field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>User.Email</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.ProfileId</field>
+            <operation>startsWith</operation>
+            <value>PGi</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

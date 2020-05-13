@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Audience Type --></label>
+    <name>Audience_Type__c</name>
+    <picklistValues>
+        <masterLabel>former customer</masterLabel>
+        <translation><!-- former customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>primary-host</masterLabel>
+        <translation><!-- primary-host --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>prospects</masterLabel>
+        <translation><!-- prospects --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>sub-host</masterLabel>
+        <translation><!-- sub-host --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>trial users</masterLabel>
+        <translation><!-- trial users --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

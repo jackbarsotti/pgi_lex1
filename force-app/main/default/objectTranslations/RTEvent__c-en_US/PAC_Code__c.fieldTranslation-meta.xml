@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Used to populate the InterCall template. This is the code they use to book and manage events (it is our Access Code ID). --></help>
+    <label><!-- External ID --></label>
+    <name>PAC_Code__c</name>
+</CustomFieldTranslation>

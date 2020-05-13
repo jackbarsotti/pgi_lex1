@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SMART_Work_Objective</fullName>
+    <active>true</active>
+    <description>Performance based expectation based on the business needs, job requirements, and business priorities.</description>
+    <label>SMART Work Objective</label>
+    <picklistValues>
+        <picklist>April_Rating__c</picklist>
+        <values>
+            <fullName>1 - Unsatisfactory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Below Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Meets Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Overachieved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Exceptional</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>August_Rating__c</picklist>
+        <values>
+            <fullName>1 - Unsatisfactory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Below Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Meets Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Overachieved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Exceptional</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>December_Rating__c</picklist>
+        <values>
+            <fullName>1 - Unsatisfactory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Below Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Meets Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Overachieved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Exceptional</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>February_Rating__c</picklist>
+        <values>
+            <fullName>1 - Unsatisfactory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Below Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Meets Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Overachieved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Exceptional</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>January_Rating__c</picklist>
+        <values>
+            <fullName>1 - Unsatisfactory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Below Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Meets Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Overachieved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Exceptional</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>July_Rating__c</picklist>
+        <values>
+            <fullName>1 - Unsatisfactory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Below Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Meets Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Overachieved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Exceptional</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>June_Rating__c</picklist>
+        <values>
+            <fullName>1 - Unsatisfactory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Below Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Meets Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Overachieved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Exceptional</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>March_Rating__c</picklist>
+        <values>
+            <fullName>1 - Unsatisfactory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Below Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Meets Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Overachieved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Exceptional</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>May_Rating__c</picklist>
+        <values>
+            <fullName>1 - Unsatisfactory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Below Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Meets Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Overachieved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Exceptional</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>November_Rating__c</picklist>
+        <values>
+            <fullName>1 - Unsatisfactory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Below Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Meets Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Overachieved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Exceptional</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>October_Rating__c</picklist>
+        <values>
+            <fullName>1 - Unsatisfactory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Below Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Meets Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Overachieved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Exceptional</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>September_Rating__c</picklist>
+        <values>
+            <fullName>1 - Unsatisfactory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Below Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Meets Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Overachieved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Exceptional</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>SMART Work Objective</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Year_End_Manager_Rating__c</picklist>
+        <values>
+            <fullName>1 - Unsatisfactory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Below Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Meets Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Overachieved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Exceptional</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

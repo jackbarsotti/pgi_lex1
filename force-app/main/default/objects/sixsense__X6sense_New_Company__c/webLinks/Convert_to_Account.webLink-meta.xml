@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Convert_to_Account</fullName>
+    <availability>online</availability>
+    <description>Creates an account record</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Convert to Account</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>// Salesforce.com Javascript libraries 
+{!REQUIRESCRIPT( &quot;/soap/ajax/31.0/connection.js&quot; )} 
+{!REQUIRESCRIPT( &quot;/soap/ajax/31.0/apex.js&quot; )} 
+
+var name = &quot;{!sixsense__X6sense_New_Company__c.Name}&quot;; 
+var typevalue = &quot;{!sixsense__X6sense_New_Company__c.sixsense_Account_Type__c}&quot;; 
+var website = &quot;{!sixsense__X6sense_New_Company__c.sixsense__Website__c}&quot;; 
+var country = &quot;{!sixsense__X6sense_New_Company__c.sixsense__Country__c}&quot;; 
+var city = &quot;{!sixsense__X6sense_New_Company__c.sixsense__City__c}&quot;; 
+var zipcode = &quot;{!sixsense__X6sense_New_Company__c.sixsense_Zip_Code__c}&quot;; 
+var street = &quot;{!sixsense__X6sense_New_Company__c.sixsense_Street_Address__c}&quot;; 
+var state = &quot;{!sixsense__X6sense_New_Company__c.sixsense__State__c}&quot;; 
+var buystage = &quot;{!sixsense__X6sense_New_Company__c.X6Sense_Buying_Stage__c}&quot; 
+var intentscore = &quot;{!sixsense__X6sense_New_Company__c.sixsense__Intent_Score__c}&quot;; 
+var profilefit = &quot;{!sixsense__X6sense_New_Company__c.sixsense__Profile_Fit__c}&quot;; 
+
+
+if (street == &#39;&#39; || typevalue == &#39;&#39; || website == &#39;&#39; || country == &#39;&#39; || city == &#39;&#39; || zipcode == &#39;&#39; || state == &#39;&#39; || buystage == &#39;&#39; || intentscore == &#39;&#39; || profilefit == &#39;&#39; ) 
+alert(&#39;Please fill in all the following fields to convert to an account - Account Type, Website, Country, State, City, Street Address,ZipCode, Buying Stage, IntentScore and ProfileFit&#39;); 
+
+else 
+{ 
+var acc = new sforce.SObject(&#39;Account&#39;); 
+/* 
+alert(name); 
+alert(typevalue); 
+alert(website); 
+alert(country); 
+alert(state); 
+alert(city); 
+alert(street); 
+alert(zipcode); 
+*/ 
+acc.Name = name; 
+acc.AccountSource = &#39;6Sense New Account&#39;; 
+acc.Type = typevalue ; 
+acc.website = website; 
+acc.billingcountry = country; 
+acc.billingstate = state; 
+acc.billingcity = city; 
+acc.billingstreet = street ; 
+acc.billingpostalcode = zipcode; 
+//acc.accountBuyingStage6sense__c = buystage; 
+//acc.accountIntentScore6sense__c = intentscore; 
+//acc.accountProfileFit6sense__c = profilefit; 
+
+
+result = sforce.connection.create([acc]); 
+
+if(result[0].success == &#39;true&#39;) 
+alert(&#39;Account created successfully&#39;); 
+else 
+{ 
+alert(result); 
+alert(&#39;Unable to create account&#39;); 
+} 
+
+
+}//else</url>
+</WebLink>

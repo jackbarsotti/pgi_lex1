@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TASKRAY__View_in_TaskRay</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>View in TaskRay</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>{!URLFOR($Site.Prefix+&#39;/apex/TASKRAY__trtaskboard?taskid=&#39;+TASKRAY__Project_Task__c.Id+&#39;&amp;projectid=&#39;+TASKRAY__Project_Task__c.TASKRAY__ProjectId__c)}</url>
+</WebLink>

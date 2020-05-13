@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The AE is required to set all negotiated rates at the account level PRIOR to assigning an Account Owner. --></help>
+    <label><!-- Rates Set at Account Level? --></label>
+    <name>Rates_set_at_Account_Level__c</name>
+    <picklistValues>
+        <masterLabel>No - See AE</masterLabel>
+        <translation><!-- No - See AE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes</masterLabel>
+        <translation><!-- Yes --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

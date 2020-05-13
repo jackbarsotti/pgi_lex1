@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- All information provided must match data as it is listed with losing carrier. --></help>
+    <label><!-- LOA/Letter of Authorization --></label>
+    <name>LOA_Letter_of_Authorization__c</name>
+</CustomFieldTranslation>

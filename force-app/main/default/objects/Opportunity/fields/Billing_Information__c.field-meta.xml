@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Information__c</fullName>
+    <description>Please put any necessary billing information here.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Anything we should specify (i.e. credit, discount, future event, etc.)</inlineHelpText>
+    <label>Additional Billing Info (if required)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

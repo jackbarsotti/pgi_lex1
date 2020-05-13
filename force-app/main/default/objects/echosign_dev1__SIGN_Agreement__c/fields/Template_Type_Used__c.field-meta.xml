@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Template_Type_Used__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Auto defined based off what Agreement Template was used</inlineHelpText>
+    <label>Template Type Used</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NA</fullName>
+                <default>false</default>
+                <label>NA</label>
+            </value>
+            <value>
+                <fullName>EMEA Long</fullName>
+                <default>false</default>
+                <label>EMEA Long</label>
+            </value>
+            <value>
+                <fullName>EMEA Short</fullName>
+                <default>false</default>
+                <label>EMEA Short</label>
+            </value>
+            <value>
+                <fullName>APAC Short English</fullName>
+                <default>false</default>
+                <label>APAC Short English</label>
+            </value>
+            <value>
+                <fullName>APAC Short Japanese</fullName>
+                <default>false</default>
+                <label>APAC Short Japanese</label>
+            </value>
+            <value>
+                <fullName>APAC Short Chinese</fullName>
+                <default>false</default>
+                <label>APAC Short Chinese</label>
+            </value>
+            <value>
+                <fullName>APAC Long English</fullName>
+                <default>false</default>
+                <label>APAC Long English</label>
+            </value>
+            <value>
+                <fullName>APAC Long Japanese</fullName>
+                <default>false</default>
+                <label>APAC Long Japanese</label>
+            </value>
+            <value>
+                <fullName>APAC Long Chinese</fullName>
+                <default>false</default>
+                <label>APAC Long Chinese</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

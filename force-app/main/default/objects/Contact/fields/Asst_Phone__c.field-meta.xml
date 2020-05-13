@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Asst_Phone__c</fullName>
+    <description>Replace standard Asst. Phone with this field to map the Lead Asst. Phone to this.</description>
+    <externalId>false</externalId>
+    <label>Assistant Phone</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Phone</type>
+</CustomField>

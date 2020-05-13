@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X6sense_Webinars_Hot_Warm_Contacts</fullName>
+    <booleanFilter>1 AND 2 AND 3</booleanFilter>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.TITLE</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>Webcast_Webinar_Acct_Buying_Stage__c</columns>
+    <columns>Webcast_Webinar_Contact_Grade__c</columns>
+    <columns>Webcast_Webinar_Contact_Profile_Fit__c</columns>
+    <columns>Webcast_Webinar_Contact_Intent_Score__c</columns>
+    <columns>Collab_UC_Contact_Grade__c</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>Acct_Status__c</columns>
+    <columns>Acct_of_Employees__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Webcast_Webinar_Contact_Grade__c</field>
+        <operation>equals</operation>
+        <value>A,B</value>
+    </filters>
+    <filters>
+        <field>Webcast_Webinar_Contact_Profile_Fit__c</field>
+        <operation>equals</operation>
+        <value>STRONG,MODERATE,WEAK</value>
+    </filters>
+    <filters>
+        <field>Webcast_Webinar_Acct_Buying_Stage__c</field>
+        <operation>equals</operation>
+        <value>purchase,decision</value>
+    </filters>
+    <label>6sense Webcast: PU/DE Contacts</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>All_6Sense</group>
+        <group>PGi_Marketing_APAC</group>
+        <group>PGi_Marketing_EMEA</group>
+        <group>PGi_Marketing_NA</group>
+    </sharedTo>
+</ListView>

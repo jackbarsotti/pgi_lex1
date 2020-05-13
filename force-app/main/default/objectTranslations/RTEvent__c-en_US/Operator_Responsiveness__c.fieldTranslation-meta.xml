@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select 1-5 Includes RT rep reaching out to operator, customer reaching out to operator during live call, and ‘reverse-responsiveness’ – making sure they don’t interrupt at inappropriate times during pre-conf to go over details --></help>
+    <label><!-- Operator Responsiveness --></label>
+    <name>Operator_Responsiveness__c</name>
+</CustomFieldTranslation>

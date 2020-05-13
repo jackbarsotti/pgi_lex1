@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Multilingual_Enabled_Per_Add_l_Language__c</fullName>
+    <defaultValue>350</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>Multi-lingual Enabled - each subsequent language - Billed annually</inlineHelpText>
+    <label>Multilingual Enabled: Per Add&#39;l Language</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

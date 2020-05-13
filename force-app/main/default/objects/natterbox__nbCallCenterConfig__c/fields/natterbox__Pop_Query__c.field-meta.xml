@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>natterbox__Pop_Query__c</fullName>
+    <defaultValue>&quot;FIND {%1%} IN PHONE FIELDS&quot;</defaultValue>
+    <deprecated>false</deprecated>
+    <description>SOSL query to look up salesforce objects that match phone numbers. The phone number in the query will be substituted for the string %1%.</description>
+    <externalId>false</externalId>
+    <label>Pop Query</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

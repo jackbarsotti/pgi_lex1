@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Set the first time a lead is changed to Disqualified --></help>
+    <label><!-- Disqualification Date --></label>
+    <name>Disqualification_Date__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>PGi_PRT_Autoset_Date_Closed_field</fullName>
+        <field>Date_Closed__c</field>
+        <formula>TODAY()</formula>
+        <name>PGi-PRT, Autoset Date Closed field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>PGi-PRT%2C Autoset Date Closed field</fullName>
+        <actions>
+            <name>PGi_PRT_Autoset_Date_Closed_field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Problem_Review_Ticket__c.Problem_Status__c</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

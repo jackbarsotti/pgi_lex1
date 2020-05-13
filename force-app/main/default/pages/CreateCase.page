@@ -1,0 +1,16 @@
+<apex:page standardController="Case" extensions="CreateCase">
+
+    <apex:pageMessages id="pm"/>
+    <apex:form >
+        <apex:actionFunction action="{!inConsole}" name="inConsole" />
+        <apex:actionFunction action="{!notInConsole}" name="notInConsole" />
+    </apex:form>
+    <apex:includeScript value="/support/console/41.0/integration.js"/>
+    <script>
+        if(sforce != undefined && sforce != null && sforce.console != null && sforce.console.isInConsole()) {
+            inConsole();
+        } else {
+            notInConsole();
+        }
+    </script>
+</apex:page>

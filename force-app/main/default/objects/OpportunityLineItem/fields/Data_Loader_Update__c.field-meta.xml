@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Loader_Update__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Just a simple flag to toggle on or off to fire triggers and/or workflows on the object.  Setting this field should have no other impact.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Just a simple flag to toggle on or off to fire triggers and/or workflows on the object.  Setting this field should have no other impact.</inlineHelpText>
+    <label>Data Loader Update</label>
+    <type>Checkbox</type>
+</CustomField>

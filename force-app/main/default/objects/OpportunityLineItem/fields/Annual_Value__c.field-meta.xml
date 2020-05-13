@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Annual_Value__c</fullName>
+    <description>andy = updated from = Minutes to contains Minute 4/24/2014</description>
+    <externalId>false</externalId>
+    <formula>/*****************************************************/ 
+/*Annual Value || Annual_Value__c*/ 
+IF( 
+AND( 
+CONTAINS(TEXT(Unit_Type__c), &quot;Minute&quot;), 
+Min_Commit__c = False 
+), 0, 
+IF(ISPICKVAL(Unit_Type__c, &quot;Contract&quot;), 0, 
+IF(ISPICKVAL(Billing_Frequency__c, &quot;One Time Event&quot;), 0, 
+IF(ISPICKVAL(Unit_Type__c, &quot;Ancillary&quot;), 0, 
+IF(isReportable_Text__c = &quot;Invalid&quot;, 0, 
+IF( 
+ISPICKVAL(Billing_Frequency__c,&#39;Annually&#39;), 
+New_Sales_Price__c* New_Quantity__c, IF( 
+ISPICKVAL(Billing_Frequency__c,&#39;Quarterly&#39;), 
+New_Sales_Price__c * New_Quantity__c * 4, 
+IF( 
+AND( 
+ISPICKVAL(Billing_Frequency__c, &quot;One Time Event&quot;), 
+Contract_Term__c &gt; 11 
+), 
+New_Sales_Price__c* New_Quantity__c, 
+IF( Contract_Term__c &gt; 12, New_Sales_Price__c* New_Quantity__c*12, 
+New_Sales_Price__c* New_Quantity__c * Contract_Term__c 
+) 
+) 
+) 
+) 
+) 
+) 
+) 
+) 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Product ACV</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <type>Currency</type>
+</CustomField>

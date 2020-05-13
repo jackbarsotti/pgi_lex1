@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Decision Making Authority --></label>
+    <name>Decision_Making_Authority__c</name>
+    <picklistValues>
+        <masterLabel>Director</masterLabel>
+        <translation><!-- Director --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Executive (CEO, COO, CFO, CIO, President)</masterLabel>
+        <translation><!-- Executive (CEO, COO, CFO, CIO, President) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Manager</masterLabel>
+        <translation><!-- Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Owner/Partner/VP/SVP</masterLabel>
+        <translation><!-- Owner/Partner/VP/SVP --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

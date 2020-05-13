@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If worker is remote, check here --></help>
+    <label><!-- Ship Equipment to Home Office --></label>
+    <name>Ship_Equipment_to_Home_Office__c</name>
+</CustomFieldTranslation>

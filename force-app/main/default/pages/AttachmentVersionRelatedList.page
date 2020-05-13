@@ -1,0 +1,35 @@
+<!-- Attachments Related List -->
+<apex:page showHeader="false" sidebar="false"  standardController="PGIServicesInformation__c" extensions="AttachmentListController" >
+    <apex:form >
+<apex:pageblock >
+
+    <apex:pageBlockTable value="{!attachments}" var="attach" rendered="{!NOT(ISNULL(attachments))}">
+        <apex:column headerValue="Version">
+            <apex:outputText value="{!attach.Name}" />
+        </apex:column>
+        <apex:column headerValue="Type">
+            <apex:outputText value="{!attach.ContentType}" />
+        </apex:column>
+        <apex:column headerValue="Created By">
+            <apex:outputText value="{!attach.CreatedBy.Name}" />
+        </apex:column>
+        <apex:column headerValue="Comapare Version">
+            <apex:commandLink value="Click here for Version compare" style="color:#015ba7;" onClick="openWindow('{!attach.id}', '{!recId}')" >
+                <apex:param value="{!attach.id}" name="attachmentId" assignTo="{!attachId}"/>
+            </apex:commandLink>
+        </apex:column>
+        <!-- <apex:column value="{!attach.BodyLength}" /> -->
+
+    </apex:pageBlockTable>
+
+    <apex:outputLabel value="No records to display" rendered="{!(ISNULL(attachments))}" styleClass="noRowsHeader"></apex:outputLabel>
+
+</apex:pageblock>
+</apex:form>
+<!-- End of Attachment RelatedList -->
+<script>
+    function openWindow( attachid , parentId ){
+        window.open('/apex/VersioningProcess?id='+attachid+'&ParentId='+parentId);
+    }
+</script>
+</apex:page>

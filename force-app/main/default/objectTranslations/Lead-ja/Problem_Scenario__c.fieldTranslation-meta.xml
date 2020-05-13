@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Problem Scenario --></label>
+    <name>Problem_Scenario__c</name>
+    <picklistValues>
+        <masterLabel>Cost Per Lead</masterLabel>
+        <translation><!-- Cost Per Lead --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Integrations</masterLabel>
+        <translation><!-- Integrations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Qualified Leads</masterLabel>
+        <translation><!-- Qualified Leads --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Time Management</masterLabel>
+        <translation><!-- Time Management --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

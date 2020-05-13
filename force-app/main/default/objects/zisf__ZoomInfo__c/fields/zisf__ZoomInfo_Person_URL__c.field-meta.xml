@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>zisf__ZoomInfo_Person_URL__c</fullName>
+    <deprecated>false</deprecated>
+    <description>URL for ZoomInfo person.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Click to view ZoomInfo person profile.</inlineHelpText>
+    <label>ZoomInfo Person URL</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>

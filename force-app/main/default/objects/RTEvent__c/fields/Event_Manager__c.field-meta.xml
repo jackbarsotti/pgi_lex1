@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Manager__c</fullName>
+    <description>Event Manager managing the event.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose the Event Manager for the event</inlineHelpText>
+    <label>OLD - Event Manager</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - Ashlea Beers Testing</fullName>
+                <default>false</default>
+                <label>1 - Ashlea Beers Testing</label>
+            </value>
+            <value>
+                <fullName>300 Ports</fullName>
+                <default>false</default>
+                <label>300 Ports</label>
+            </value>
+            <value>
+                <fullName>Abigail Herreman</fullName>
+                <default>false</default>
+                <label>Abigail Herreman</label>
+            </value>
+            <value>
+                <fullName>Abigail Wall</fullName>
+                <default>false</default>
+                <label>Abigail Wall</label>
+            </value>
+            <value>
+                <fullName>Ali Marsden</fullName>
+                <default>false</default>
+                <label>Ali Marsden</label>
+            </value>
+            <value>
+                <fullName>Amorette Harrison</fullName>
+                <default>false</default>
+                <label>Amorette Harrison</label>
+            </value>
+            <value>
+                <fullName>Amy Rowlan</fullName>
+                <default>false</default>
+                <label>Amy Rowlan</label>
+            </value>
+            <value>
+                <fullName>April Trubell</fullName>
+                <default>false</default>
+                <label>April Trubell</label>
+            </value>
+            <value>
+                <fullName>Audio Only</fullName>
+                <default>false</default>
+                <label>Audio Only</label>
+            </value>
+            <value>
+                <fullName>Automated</fullName>
+                <default>false</default>
+                <label>Automated</label>
+            </value>
+            <value>
+                <fullName>Briana Patterson</fullName>
+                <default>false</default>
+                <label>Briana Patterson</label>
+            </value>
+            <value>
+                <fullName>Cassidy Smock</fullName>
+                <default>false</default>
+                <label>Cassidy Smock</label>
+            </value>
+            <value>
+                <fullName>Chrissy Kennedy</fullName>
+                <default>false</default>
+                <label>Chrissy Kennedy</label>
+            </value>
+            <value>
+                <fullName>Diana Dice</fullName>
+                <default>false</default>
+                <label>Diana Dice</label>
+            </value>
+            <value>
+                <fullName>Gabrielle Kulesza</fullName>
+                <default>false</default>
+                <label>Gabrielle Kulesza</label>
+            </value>
+            <value>
+                <fullName>Gaines Crawford</fullName>
+                <default>false</default>
+                <label>Gaines Crawford</label>
+            </value>
+            <value>
+                <fullName>Heather Rakestraw</fullName>
+                <default>false</default>
+                <label>Heather Rakestraw</label>
+            </value>
+            <value>
+                <fullName>Holly Dupuis</fullName>
+                <default>false</default>
+                <label>Holly Dupuis</label>
+            </value>
+            <value>
+                <fullName>JayJay Schenbeck</fullName>
+                <default>false</default>
+                <label>JayJay Schenbeck</label>
+            </value>
+            <value>
+                <fullName>Jessi Gerak</fullName>
+                <default>false</default>
+                <label>Jessi Gerak</label>
+            </value>
+            <value>
+                <fullName>Kalie Bozich</fullName>
+                <default>false</default>
+                <label>Kalie Bozich</label>
+            </value>
+            <value>
+                <fullName>Karyn Conner</fullName>
+                <default>false</default>
+                <label>Karyn Conner</label>
+            </value>
+            <value>
+                <fullName>Keith Janofski</fullName>
+                <default>false</default>
+                <label>Keith Janofski</label>
+            </value>
+            <value>
+                <fullName>Kevin Upton</fullName>
+                <default>false</default>
+                <label>Kevin Upton</label>
+            </value>
+            <value>
+                <fullName>Kim Morse</fullName>
+                <default>false</default>
+                <label>Kim Morse</label>
+            </value>
+            <value>
+                <fullName>Laura Jackson</fullName>
+                <default>false</default>
+                <label>Laura Jackson</label>
+            </value>
+            <value>
+                <fullName>Margaret Thomas</fullName>
+                <default>false</default>
+                <label>Margaret Thomas</label>
+            </value>
+            <value>
+                <fullName>Missy Bleich</fullName>
+                <default>false</default>
+                <label>Missy Bleich</label>
+            </value>
+            <value>
+                <fullName>No Support</fullName>
+                <default>false</default>
+                <label>No Support</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Patrick Wiley</fullName>
+                <default>false</default>
+                <label>Patrick Wiley</label>
+            </value>
+            <value>
+                <fullName>Rachel Gifford</fullName>
+                <default>false</default>
+                <label>Rachel Gifford</label>
+            </value>
+            <value>
+                <fullName>Sarah McCaslin</fullName>
+                <default>false</default>
+                <label>Sarah McCaslin</label>
+            </value>
+            <value>
+                <fullName>Sara Schmidt</fullName>
+                <default>false</default>
+                <label>Sara Schmidt</label>
+            </value>
+            <value>
+                <fullName>Shawn Cardinal</fullName>
+                <default>false</default>
+                <label>Shawn Cardinal</label>
+            </value>
+            <value>
+                <fullName>Subscription</fullName>
+                <default>false</default>
+                <label>Subscription</label>
+            </value>
+            <value>
+                <fullName>Toby Schrecengost</fullName>
+                <default>false</default>
+                <label>Toby Schrecengost</label>
+            </value>
+            <value>
+                <fullName>Travis Sowash</fullName>
+                <default>false</default>
+                <label>Travis Sowash</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

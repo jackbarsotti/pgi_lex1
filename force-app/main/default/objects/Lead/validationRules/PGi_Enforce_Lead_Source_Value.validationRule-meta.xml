@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Enforce_Lead_Source_Value</fullName>
+    <active>true</active>
+    <description>Users are not allowed to change a Lead Source once it has been set on a Lead</description>
+    <errorConditionFormula>AND
+(
+$User.Alias &lt;&gt; &quot;autocln&quot;,
+CONTAINS(RecordType.Name, &quot;PGi&quot;), 
+$User.Override_Validation_Rules__c = False,
+$User.Profile_Name_Text__c &lt;&gt; &quot;PGi Marketing User&quot;,
+ISCHANGED(LeadSource),
+NOT(ISNEW()),
+NOT(PRIORVALUE(LeadSource) = &quot;&quot;),
+NOT($Setup.BypassRules__c.Disable_Validation_Rules__c)
+)</errorConditionFormula>
+    <errorDisplayField>LeadSource</errorDisplayField>
+    <errorMessage>You are not allowed to change the Lead Source once its set on a Lead.</errorMessage>
+</ValidationRule>

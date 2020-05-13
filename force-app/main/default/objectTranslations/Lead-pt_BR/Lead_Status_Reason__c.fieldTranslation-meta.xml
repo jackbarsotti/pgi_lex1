@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Lead Status Reason --></label>
+    <name>Lead_Status_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Duplicate Lead / Customer / Prospect</masterLabel>
+        <translation><!-- Duplicate Lead / Customer / Prospect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inaccurate Data / Missing Data</masterLabel>
+        <translation><!-- Inaccurate Data / Missing Data --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Insufficient Budget</masterLabel>
+        <translation><!-- Insufficient Budget --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Interested in Content Only</masterLabel>
+        <translation><!-- Interested in Content Only --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Looking for Customer Support</masterLabel>
+        <translation><!-- Looking for Customer Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Missing Product Functionality</masterLabel>
+        <translation><!-- Missing Product Functionality --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Decision Maker</masterLabel>
+        <translation><!-- Not Decision Maker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Opted for Competitor</masterLabel>
+        <translation><!-- Opted for Competitor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unresponsive</masterLabel>
+        <translation><!-- Unresponsive --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

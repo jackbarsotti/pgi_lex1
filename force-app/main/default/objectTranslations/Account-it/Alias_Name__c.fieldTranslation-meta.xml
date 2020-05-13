@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Allows for the population of an Alias Name or DBA used by a business.  Sometimes also referred to as the Trade Name. --></help>
+    <label><!-- Alias Name --></label>
+    <name>Alias_Name__c</name>
+</CustomFieldTranslation>

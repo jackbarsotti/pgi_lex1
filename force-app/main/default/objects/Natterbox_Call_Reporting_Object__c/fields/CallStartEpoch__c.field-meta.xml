@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CallStartEpoch__c</fullName>
+    <description>The time the call started in seconds since 01-01-1970</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The time the call started in seconds since 01-01-1970</inlineHelpText>
+    <label>CallStartEpoch</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

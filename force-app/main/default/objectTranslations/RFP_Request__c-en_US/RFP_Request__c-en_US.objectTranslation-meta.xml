@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>RFP Request</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>RFP Requests</value>
+    </caseValues>
+    <layouts>
+        <layout>RFP Request Layout</layout>
+        <sections>
+            <label><!-- Additional Notes --></label>
+            <section>Additional Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Contact/Customer Information --></label>
+            <section>Contact/Customer Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Email Support Information --></label>
+            <section>Email Support Information</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Information --></label>
+            <section>Opportunity Information</section>
+        </sections>
+        <sections>
+            <label><!-- Pricing/Rate Information --></label>
+            <section>Pricing/Rate Information</section>
+        </sections>
+        <sections>
+            <label><!-- Proposal Mgmt Team Only --></label>
+            <section>Proposal Mgmt Team Only</section>
+        </sections>
+        <sections>
+            <label><!-- Requestor&apos;s Information --></label>
+            <section>Requestor&#39;s Information</section>
+        </sections>
+        <sections>
+            <label><!-- Win Strategy --></label>
+            <section>Win Strategy</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- PGi-RFP Request --></label>
+        <name>PGi_RFP_Request</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- If you have a related PLP Record, the status must be &quot;Approved&quot; before closing this RFP Request as &quot;Closed - Won&quot;. --></errorMessage>
+        <name>Approved_PLP_Record_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Since this is a current customer, please choose Contact/Customer Name, Contact Customer Type, and their Services used today. --></errorMessage>
+        <name>RFP_Current_Customer_yes</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please make selection(s) for this Request Type. --></errorMessage>
+        <name>RFP_Intend_to_Propose</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out Online RFP Login/User name, Password, and URL --></errorMessage>
+        <name>RFP_Online_RFP</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Enter Partner Commission Percentage. --></errorMessage>
+        <name>RFP_Partner_Commission_Percentage_reqd</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please choose either Agent or Reseller. --></errorMessage>
+        <name>RFP_Partner_Name_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Partner Oppty Details are required. --></errorMessage>
+        <name>RFP_Partner_Oppty_Details_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please choose either Agent or Reseller. --></errorMessage>
+        <name>RFP_Partner_agentreseller_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The following fields are required and must be populated: Due Date, PGi Bidding, Current Customer, Sales Rep, Oppty Name, NDA in Place, and Is this an Online RFP? --></errorMessage>
+        <name>RFP_RequestType_NOT_Email_Support</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Drag_Drop_Attachments --></label>
+        <name>Drag_Drop_Attachments</name>
+    </webLinks>
+</CustomObjectTranslation>

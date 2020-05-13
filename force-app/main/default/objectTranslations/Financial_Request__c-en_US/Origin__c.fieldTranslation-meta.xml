@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Origin --></label>
+    <name>Origin__c</name>
+    <picklistValues>
+        <masterLabel>Chat</masterLabel>
+        <translation><!-- Chat --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email</masterLabel>
+        <translation><!-- Email --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lync/IM</masterLabel>
+        <translation><!-- Lync/IM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Migration</masterLabel>
+        <translation><!-- Migration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi Contract</masterLabel>
+        <translation><!-- PGi Contract --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PGi Service Catalog</masterLabel>
+        <translation><!-- PGi Service Catalog --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PIDR</masterLabel>
+        <translation><!-- PIDR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Phone</masterLabel>
+        <translation><!-- Phone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Submission</masterLabel>
+        <translation><!-- Submission --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SvcNow</masterLabel>
+        <translation><!-- SvcNow --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

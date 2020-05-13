@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If checked, this is the primary contact for this account. --></help>
+    <label><!-- Account Admin --></label>
+    <name>Account_Admin__c</name>
+</CustomFieldTranslation>

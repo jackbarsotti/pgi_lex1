@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Webcast_3000_Premiere_Webcam__c</fullName>
+    <defaultValue>7999</defaultValue>
+    <description>Per month. Includes one (1) Add-On Package</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Per month. Includes one (1) Add-On Package</inlineHelpText>
+    <label>Webcast 3000 (Premiere) - Webcam</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

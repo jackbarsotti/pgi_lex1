@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Chat_Transcripts_This_Week</fullName>
+    <columns>Name</columns>
+    <columns>Name__c</columns>
+    <columns>Email_Address__c</columns>
+    <columns>StartTime</columns>
+    <columns>EndTime</columns>
+    <columns>LiveChatButton</columns>
+    <columns>Agent_Name__c</columns>
+    <columns>Case</columns>
+    <columns>Status</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>IsCurrentUser_Owner__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>CreatedDate</field>
+        <operation>equals</operation>
+        <value>THIS_WEEK</value>
+    </filters>
+    <label>*My Chat Transcripts This Week</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>PGi_All_SFDC_Users</group>
+    </sharedTo>
+</ListView>

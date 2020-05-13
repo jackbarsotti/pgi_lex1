@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Address_And_City_Reqd_On_Unprovisioned</fullName>
+    <active>true</active>
+    <description>If (billing Id is 0 or null) - that is it is the subscription is unprovisioned - then if either city or street address 1 is null(empty) fail validation and print an error message.</description>
+    <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;System Administrator&quot; ,
+ OR((Billing_ID__c = 0), ISNULL(Billing_ID__c)),
+ OR( LEN(City__c) = 0,
+  LEN(Address_Line_1__c) = 0
+ )
+)</errorConditionFormula>
+    <errorMessage>New Subscriptions require a simple address. (Street Address 1 and City must both be provided.)</errorMessage>
+</ValidationRule>

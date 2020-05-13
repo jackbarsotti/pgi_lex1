@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- If PBX is on-premise, who manages it? --></label>
+    <name>If_PBX_is_on_premise_who_manages_it__c</name>
+    <picklistValues>
+        <masterLabel>Internal IT</masterLabel>
+        <translation><!-- Internal IT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Third Party Support</masterLabel>
+        <translation><!-- Third Party Support --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

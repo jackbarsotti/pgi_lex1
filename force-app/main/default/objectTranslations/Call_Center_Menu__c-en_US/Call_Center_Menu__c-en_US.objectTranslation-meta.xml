@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Call Center - Menu</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Call Center - Menus</value>
+    </caseValues>
+    <layouts>
+        <layout>Call Center - Menu Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

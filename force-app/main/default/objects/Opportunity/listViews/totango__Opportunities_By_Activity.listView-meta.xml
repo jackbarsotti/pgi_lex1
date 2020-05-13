@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>totango__Opportunities_By_Activity</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>totango__Totango_Online_Status__c</columns>
+    <columns>totango__TotangoEngagement__c</columns>
+    <columns>totango__TotangoEngagementChange__c</columns>
+    <columns>totango__TotangoInsights__c</columns>
+    <columns>totango__Totango_Last_Update__c</columns>
+    <columns>totango__Totango_URL__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>totango__Totango_URL__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Opportunities By Activity</label>
+</ListView>

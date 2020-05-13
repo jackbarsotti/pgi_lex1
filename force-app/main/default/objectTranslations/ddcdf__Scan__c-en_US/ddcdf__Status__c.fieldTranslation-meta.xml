@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The steps a given scan goes through. --></help>
+    <label><!-- Status --></label>
+    <name>ddcdf__Status__c</name>
+    <picklistValues>
+        <masterLabel>Canceled</masterLabel>
+        <translation><!-- Canceled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Complete</masterLabel>
+        <translation><!-- Complete --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Created</masterLabel>
+        <translation><!-- Created --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error</masterLabel>
+        <translation><!-- Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recursive Required</masterLabel>
+        <translation><!-- Recursive Required --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recursive Scan</masterLabel>
+        <translation><!-- Recursive Scan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recursive Search</masterLabel>
+        <translation><!-- Recursive Search --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scanning</masterLabel>
+        <translation><!-- Scanning --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Problem Source --></label>
+    <name>Problem_Source__c</name>
+    <picklistValues>
+        <masterLabel>Case (Incident / PTA / PTN (see related list)</masterLabel>
+        <translation><!-- Case (Incident / PTA / PTN (see related list) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Monitoring</masterLabel>
+        <translation><!-- Monitoring --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Release</masterLabel>
+        <translation><!-- Release --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Request for Change</masterLabel>
+        <translation><!-- Request for Change --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

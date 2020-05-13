@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Region__c</fullName>
+    <externalId>false</externalId>
+    <label>Region</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Asia Pacific</fullName>
+                <default>false</default>
+                <label>Asia Pacific</label>
+            </value>
+            <value>
+                <fullName>AT&amp;T SHELL</fullName>
+                <default>false</default>
+                <label>AT&amp;T SHELL</label>
+            </value>
+            <value>
+                <fullName>EMEA</fullName>
+                <default>false</default>
+                <label>EMEA</label>
+            </value>
+            <value>
+                <fullName>EMEA - TP Direct</fullName>
+                <default>false</default>
+                <label>EMEA - TP Direct</label>
+            </value>
+            <value>
+                <fullName>Event Center - Slide Assist</fullName>
+                <default>false</default>
+                <label>Event Center - Slide Assist</label>
+            </value>
+            <value>
+                <fullName>North America</fullName>
+                <default>false</default>
+                <label>North America</label>
+            </value>
+            <value>
+                <fullName>ON24 Forced Conv</fullName>
+                <default>false</default>
+                <label>ON24 Forced Conv</label>
+            </value>
+            <value>
+                <fullName>PGi Consolidated Billing</fullName>
+                <default>false</default>
+                <label>PGi Consolidated Billing</label>
+            </value>
+            <value>
+                <fullName>PWN</fullName>
+                <default>false</default>
+                <label>PWN</label>
+            </value>
+            <value>
+                <fullName>Ready Talk</fullName>
+                <default>false</default>
+                <label>Ready Talk</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

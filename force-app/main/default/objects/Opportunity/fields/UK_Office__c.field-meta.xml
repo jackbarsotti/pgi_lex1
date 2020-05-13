@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UK_Office__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Was the UK Office involved?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check this box if the UK Office was involved in this deal.</inlineHelpText>
+    <label>UK Office</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

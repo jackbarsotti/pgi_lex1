@@ -1,0 +1,3 @@
+<apex:page standardController="Contact" extensions="NewContact" action="{!doInit}" tabStyle="Contact">
+    <p>New contacts should be created from the related account page.</p>  
+</apex:page>

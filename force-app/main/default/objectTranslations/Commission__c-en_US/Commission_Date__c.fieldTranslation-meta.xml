@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Date the commission is scheduled. This will be the close date of the attached opportunity. --></help>
+    <label><!-- Commission Date --></label>
+    <name>Commission_Date__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If over 50 phone numbers, please attach list and check the &quot;List Attached&quot; checkbox field. --></help>
+    <label><!-- Phone Numbers --></label>
+    <name>Phone_Numbers__c</name>
+</CustomFieldTranslation>

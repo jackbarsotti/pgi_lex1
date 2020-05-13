@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReadyTalk_Contact_assoc_w_Acct</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(RecordType.DeveloperName = &quot;ReadyTalk Contact&quot;,
+LEN(Account.Name) &lt;1)</errorConditionFormula>
+    <errorDisplayField>AccountId</errorDisplayField>
+    <errorMessage>An account must be associated with this contact.</errorMessage>
+</ValidationRule>

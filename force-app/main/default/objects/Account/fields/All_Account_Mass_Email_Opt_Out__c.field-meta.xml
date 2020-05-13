@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Account_Mass_Email_Opt_Out__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates that all contacts at this account location, with the exception of Account Administrators, should be opted out of mass emails.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>CAUTION: Checking/Unchecking this field will make contact preference changes to all contacts on this account automatically. Account Admins with NOT be opted out when checked.</inlineHelpText>
+    <label>All Account Mass Email Opt Out</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

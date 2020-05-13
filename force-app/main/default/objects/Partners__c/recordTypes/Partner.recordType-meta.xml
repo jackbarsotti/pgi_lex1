@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner</fullName>
+    <active>true</active>
+    <label>Partner</label>
+    <picklistValues>
+        <picklist>Partner_Type__c</picklist>
+        <values>
+            <fullName>Referral - Commissioned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral - Non-commissioned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reseller</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sponsorship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wholesale</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Venders_Sold__c</picklist>
+        <values>
+            <fullName>Copper</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Go-To Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WebEx</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

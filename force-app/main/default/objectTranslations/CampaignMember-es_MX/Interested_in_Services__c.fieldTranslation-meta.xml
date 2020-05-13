@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Interested in ReadyTalk Services? --></label>
+    <name>Interested_in_Services__c</name>
+    <picklistValues>
+        <masterLabel>30 Day Free Trial</masterLabel>
+        <translation><!-- 30 Day Free Trial --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audio Conferencing</masterLabel>
+        <translation><!-- Audio Conferencing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Demo</masterLabel>
+        <translation><!-- Demo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recording and Podcasting</masterLabel>
+        <translation><!-- Recording and Podcasting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Social Media integration into web events</masterLabel>
+        <translation><!-- Social Media integration into web events --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web Conferencing</masterLabel>
+        <translation><!-- Web Conferencing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web Event Best Practices</masterLabel>
+        <translation><!-- Web Event Best Practices --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web Event Packages</masterLabel>
+        <translation><!-- Web Event Packages --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webinar Consultation</masterLabel>
+        <translation><!-- Webinar Consultation --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

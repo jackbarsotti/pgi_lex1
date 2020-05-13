@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RTandPGiContactBlocking</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+AND(
+NOT(CONTAINS($User.Profile_Name_Text__c,&quot;System&quot;)),
+ConvertedfromLead__c &lt;&gt; TRUE,
+CONTAINS(RecordType.Name,&quot;PGi&quot;),
+CONTAINS(Account.RecordType.Name, &quot;ReadyTalk&quot;)),
+AND(
+NOT(CONTAINS($User.Profile_Name_Text__c,&quot;System&quot;)),
+ConvertedfromLead__c &lt;&gt; TRUE,
+CONTAINS(RecordType.Name,&quot;ReadyTalk&quot;),
+CONTAINS(Account.RecordType.Name, &quot;PGi&quot;))
+)</errorConditionFormula>
+    <errorMessage>Your not allowed to create a PGi Contact under a ReadyTalk Account or a ReadyTalk Contact under a PGi Account.  Please change the Record Type for this Contact.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,74 @@
+<apex:page standardController="OtherChargeCredit__c" extensions="OtherChargesCreditsController" action="{!checkBilledStatus}">
+    <apex:sectionHeader title="Other Charge or Credit"/>
+
+    <apex:pageMessages escape="false"/>     
+    
+    <apex:form >
+        <apex:commandLink action="{!cancel}" value="« Back to Subscription" id="theCommandLink"/>
+ 
+        <apex:pageBlock title="Edit Other Charge or Credit" mode="edit" id="editPageBlock" rendered="{!ISNULL(OtherChargeCredit__c.BilledDate__c)}">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Save" action="{!save}"/>
+                <apex:commandButton value="Cancel" action="{!cancel}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="2">
+                <apex:pageBlockSection >
+                    <apex:outputField value="{!OtherChargeCredit__c.AccessCode__c}" id="AccessCode" />
+                    <br/>
+                    <apex:inputField value="{!OtherChargeCredit__c.ChargeOrCredit__c}" id="ChargeOrCredit" required="true"/>
+                    <br/>
+                    <apex:inputField value="{!OtherChargeCredit__c.ServiceDate__c}" id="ServiceDate" required="true"/>
+                    <br/>
+                    <apex:outputField value="{!OtherChargeCredit__c.BilledDate__c}" id="BilledDate" />
+                </apex:pageBlockSection>
+                <apex:pageBlockSection >
+                    <apex:inputField value="{!OtherChargeCredit__c.LOB__c}" id="LOB"/>                    
+                    <br/>
+                    <apex:inputField value="{!OtherChargeCredit__c.Product__c}" id="Product" required="true"/>
+                    <br/>
+                    <apex:inputField value="{!OtherChargeCredit__c.Reason__c}" id="Reason"/>
+                    <br/>
+                    <apex:inputField value="{!OtherChargeCredit__c.RTEventName__c}" id="RTEventName"/>
+                    <br/>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Description (Text will be printed on invoice!)" for="Description"/>
+                        <apex:inputField value="{!OtherChargeCredit__c.Description__c}" id="Description"/>                       
+                    </apex:pageBlockSectionItem>
+                    <br/>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Internal Notes" for="InternalNotes"/>
+                        <apex:inputTextarea value="{!OtherChargeCredit__c.Internal_Notes__c}" id="InternalNotes" />                        
+                    </apex:pageBlockSectionItem>                    
+                </apex:pageBlockSection>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+        <apex:pageBlock title="Edit Other Charge or Credit" mode="edit" id="viewPageBlock" rendered="{!NOT(ISNULL(OtherChargeCredit__c.BilledDate__c))}">
+            <apex:pageBlockSection columns="2">
+                <apex:pageBlockSection >
+                    <apex:outputField value="{!OtherChargeCredit__c.AccessCode__c}" id="AccessCode" />
+                    <br/>
+                    <apex:outputField value="{!OtherChargeCredit__c.ChargeOrCredit__c}" id="ChargeOrCredit" />
+                    <br/>
+                    <apex:outputField value="{!OtherChargeCredit__c.ServiceDate__c}" id="ServiceDate" />
+                    <br/>
+                    <apex:outputField value="{!OtherChargeCredit__c.BilledDate__c}" id="BilledDate" />
+                </apex:pageBlockSection>
+                <apex:pageBlockSection >
+                    <apex:outputField value="{!OtherChargeCredit__c.LOB__c}" id="LOB" />
+                    <br/>
+                    <apex:outputField value="{!OtherChargeCredit__c.Product__c}" id="Product" />
+                    <br/>
+                    <apex:outputField value="{!OtherChargeCredit__c.Reason__c}" id="Reason" />
+                    <br/>
+                    <apex:outputField value="{!OtherChargeCredit__c.RTEventName__c}" id="RTEventName"/>
+                    <br/>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Description (Text will be printed on invoice!)" for="Description"/>
+                        <apex:inputTextarea value="{!OtherChargeCredit__c.Description__c}" id="Description" />                        
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+            </apex:pageBlockSection>
+        </apex:pageBlock>                         
+    </apex:form>
+</apex:page>

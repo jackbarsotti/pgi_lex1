@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_SCA__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Related SCA</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Request_for_Change__c.RecordType.Name</field>
+            <operation>equals</operation>
+            <value>Standard Change Accreditation Request</value>
+        </filterItems>
+        <filterItems>
+            <field>Request_for_Change__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Approved</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Request_for_Change__c</referenceTo>
+    <relationshipLabel>Standard RFCs</relationshipLabel>
+    <relationshipName>Request_for_Change</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

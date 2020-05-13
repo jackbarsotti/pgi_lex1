@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>zisf__ZoomInfo_Person_ID__c</fullName>
+    <deprecated>false</deprecated>
+    <description>ZoomInfo unique identified for Person record.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>ZoomInfo ID for person record.</inlineHelpText>
+    <label>ZoomInfo Person ID</label>
+    <length>25</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

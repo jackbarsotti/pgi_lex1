@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Total recording hosting charges for the invoice period. --></help>
+    <label><!-- Recording Hosting --></label>
+    <name>Recording_Hosting__c</name>
+</CustomFieldTranslation>

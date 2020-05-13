@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Order Guide --></label>
+    <name>Order_Guide__c</name>
+    <picklistValues>
+        <masterLabel>New Employee Hire</masterLabel>
+        <translation><!-- New Employee Hire --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Worker</masterLabel>
+        <translation><!-- New Worker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Worker Change</masterLabel>
+        <translation><!-- Worker Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Worker Separation</masterLabel>
+        <translation><!-- Worker Separation --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

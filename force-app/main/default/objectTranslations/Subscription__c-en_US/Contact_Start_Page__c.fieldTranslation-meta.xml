@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Web page for client to access ReadyTalk Conference Center  (Use default unless you have requested a custom start page.) --></help>
+    <label><!-- Contact Start Page --></label>
+    <name>Contact_Start_Page__c</name>
+    <picklistValues>
+        <masterLabel>http://CSAE.readytalk.com</masterLabel>
+        <translation><!-- http://CSAE.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://Gallup.readytalk.com</masterLabel>
+        <translation><!-- http://Gallup.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://KALHD.readytalk.com</masterLabel>
+        <translation><!-- http://KALHD.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://ListEngage.readytalk.com</masterLabel>
+        <translation><!-- http://ListEngage.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://Networldalliance.readytalk.com</masterLabel>
+        <translation><!-- http://Networldalliance.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://PaySimple3.readytalk.com</masterLabel>
+        <translation><!-- http://PaySimple3.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://TGI.readytalk.com</masterLabel>
+        <translation><!-- http://TGI.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://UC.readytalk.com</masterLabel>
+        <translation><!-- http://UC.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://WAHU.readytalk.com</masterLabel>
+        <translation><!-- http://WAHU.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://aaimea.readytalk.com/</masterLabel>
+        <translation><!-- http://aaimea.readytalk.com/ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://absoluteperformance.readytalk.com</masterLabel>
+        <translation><!-- http://absoluteperformance.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://acex.readytalk.com</masterLabel>
+        <translation><!-- http://acex.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://adg.readytalk.com</masterLabel>
+        <translation><!-- http://adg.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://adp.readytalk.com</masterLabel>
+        <translation><!-- http://adp.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://advanstarivt.readytalk.com</masterLabel>
+        <translation><!-- http://advanstarivt.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://advocacyinstitute.readytalk.com</masterLabel>
+        <translation><!-- http://advocacyinstitute.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://afstrainings.readytalk.com/</masterLabel>
+        <translation><!-- http://afstrainings.readytalk.com/ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://albers.readytalk.com</masterLabel>
+        <translation><!-- http://albers.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://amagine.readytalk.com</masterLabel>
+        <translation><!-- http://amagine.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://amerihealthmercy.readytalk.com</masterLabel>
+        <translation><!-- http://amerihealthmercy.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://appwave.readytalk.com</masterLabel>
+        <translation><!-- http://appwave.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://aquent.readytalk.com</masterLabel>
+        <translation><!-- http://aquent.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://argo.readytalk.com</masterLabel>
+        <translation><!-- http://argo.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://artiflex.readytalk.com/</masterLabel>
+        <translation><!-- http://artiflex.readytalk.com/ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://astadia.readytalk.com</masterLabel>
+        <translation><!-- http://astadia.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://awrcorp.readytalk.com</masterLabel>
+        <translation><!-- http://awrcorp.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://bcs.readytalk.com</masterLabel>
+        <translation><!-- http://bcs.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://beyondsecurity.readytalk.com</masterLabel>
+        <translation><!-- http://beyondsecurity.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://bluArc.readytalk.com</masterLabel>
+        <translation><!-- http://bluArc.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://bsi.readytalk.com</masterLabel>
+        <translation><!-- http://bsi.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://cabinbluff.readytalk.com</masterLabel>
+        <translation><!-- http://cabinbluff.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://catalyst.readytalk.com</masterLabel>
+        <translation><!-- http://catalyst.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://centeris.readytalk.com</masterLabel>
+        <translation><!-- http://centeris.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://churchcentral.readytalk.com</masterLabel>
+        <translation><!-- http://churchcentral.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://cision.readytalk.com.readytalk.com/</masterLabel>
+        <translation><!-- http://cision.readytalk.com.readytalk.com/ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://clarkcapital.readytalk.com</masterLabel>
+        <translation><!-- http://clarkcapital.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://clearforest.readytalk.com</masterLabel>
+        <translation><!-- http://clearforest.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://cognicion.readytalk.com</masterLabel>
+        <translation><!-- http://cognicion.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://commonknowledge.readytalk.com</masterLabel>
+        <translation><!-- http://commonknowledge.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://commpartners.readytalk.com</masterLabel>
+        <translation><!-- http://commpartners.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://connell.readytalk.com</masterLabel>
+        <translation><!-- http://connell.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://conventus.readytalk.com</masterLabel>
+        <translation><!-- http://conventus.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://copcp.readytalk.com</masterLabel>
+        <translation><!-- http://copcp.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://criticalmix.readytalk.com</masterLabel>
+        <translation><!-- http://criticalmix.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://csx.readytalk.com</masterLabel>
+        <translation><!-- http://csx.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://dangiddens.readytalk.com</masterLabel>
+        <translation><!-- http://dangiddens.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://datanet.readytalk.com</masterLabel>
+        <translation><!-- http://datanet.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://directedequity.readytalk.com</masterLabel>
+        <translation><!-- http://directedequity.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://echostar.readytalk.com</masterLabel>
+        <translation><!-- http://echostar.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://ecsourcinggroup.readytalk.com</masterLabel>
+        <translation><!-- http://ecsourcinggroup.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://edaff.readytalk.com</masterLabel>
+        <translation><!-- http://edaff.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://elaunchers.readytalk.com</masterLabel>
+        <translation><!-- http://elaunchers.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://esnet.readytalk.com</masterLabel>
+        <translation><!-- http://esnet.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://evolveip.readytalk.com/</masterLabel>
+        <translation><!-- http://evolveip.readytalk.com/ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://fetterlogic.readytalk.com</masterLabel>
+        <translation><!-- http://fetterlogic.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://frannet.readytalk.com</masterLabel>
+        <translation><!-- http://frannet.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://furnituremedic.readytalk.com</masterLabel>
+        <translation><!-- http://furnituremedic.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://gnip.readytalk.com</masterLabel>
+        <translation><!-- http://gnip.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://greatclips.readytalk.com</masterLabel>
+        <translation><!-- http://greatclips.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://greenblue.readytalk.com</masterLabel>
+        <translation><!-- http://greenblue.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://gtnexus.readytalk.com</masterLabel>
+        <translation><!-- http://gtnexus.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://guidantfinancial.readytalk.com</masterLabel>
+        <translation><!-- http://guidantfinancial.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://handyman.readytalk.com</masterLabel>
+        <translation><!-- http://handyman.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://heritancesystem.readytalk.com</masterLabel>
+        <translation><!-- http://heritancesystem.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://hoganlovells-conferencing.readytalk.com &amp; http://hoganlovells.readytalk.com</masterLabel>
+        <translation><!-- http://hoganlovells-conferencing.readytalk.com &amp; http://hoganlovells.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://hoganlovells.readytalk.com</masterLabel>
+        <translation><!-- http://hoganlovells.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://hudvirtualchalkboard.readytalk.com</masterLabel>
+        <translation><!-- http://hudvirtualchalkboard.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://hunton.readytalk.com</masterLabel>
+        <translation><!-- http://hunton.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://iCIMS.readytalk.com</masterLabel>
+        <translation><!-- http://iCIMS.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://ibm.readytalk.com</masterLabel>
+        <translation><!-- http://ibm.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://ift.readytalk.com</masterLabel>
+        <translation><!-- http://ift.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://illuminate.readytalk.com</masterLabel>
+        <translation><!-- http://illuminate.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://in2l.readytalk.com</masterLabel>
+        <translation><!-- http://in2l.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://inclusivehealth-federal.readytalk.com</masterLabel>
+        <translation><!-- http://inclusivehealth-federal.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://intenseschool.readytalk.com</masterLabel>
+        <translation><!-- http://intenseschool.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://ipcommerce.readytalk.com</masterLabel>
+        <translation><!-- http://ipcommerce.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://jeffreyboyanski.readytalk.com</masterLabel>
+        <translation><!-- http://jeffreyboyanski.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://josephbell.readytalk.com</masterLabel>
+        <translation><!-- http://josephbell.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://keatingcapital.readytalk.com</masterLabel>
+        <translation><!-- http://keatingcapital.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://kjinternational.readytalk.com</masterLabel>
+        <translation><!-- http://kjinternational.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://labvantage.readytalk.com</masterLabel>
+        <translation><!-- http://labvantage.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://lbnl.readytalk.com</masterLabel>
+        <translation><!-- http://lbnl.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://liaison.readytalk.com</masterLabel>
+        <translation><!-- http://liaison.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://lifemasters.readytalk.com</masterLabel>
+        <translation><!-- http://lifemasters.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://lightfoot.readytalk.com</masterLabel>
+        <translation><!-- http://lightfoot.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://linksinc.readytalk.com</masterLabel>
+        <translation><!-- http://linksinc.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://ltw.readytalk.com/</masterLabel>
+        <translation><!-- http://ltw.readytalk.com/ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://maximumadvantage.readytalk.com</masterLabel>
+        <translation><!-- http://maximumadvantage.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://meringcarson.readytalk.com</masterLabel>
+        <translation><!-- http://meringcarson.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://meritagefunds.readytalk.com</masterLabel>
+        <translation><!-- http://meritagefunds.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://micropact.readytalk.com.readytalk.com/</masterLabel>
+        <translation><!-- http://micropact.readytalk.com.readytalk.com/ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://minitab.readytalk.com</masterLabel>
+        <translation><!-- http://minitab.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://mmsi.readytalk.com</masterLabel>
+        <translation><!-- http://mmsi.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://multivu.readytalk.com</masterLabel>
+        <translation><!-- http://multivu.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://mwv.readytalk.com</masterLabel>
+        <translation><!-- http://mwv.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://mybandstaff.readytalk.com</masterLabel>
+        <translation><!-- http://mybandstaff.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://mymathlab.readytalk.com/</masterLabel>
+        <translation><!-- http://mymathlab.readytalk.com/ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://naccho.readytalk.com</masterLabel>
+        <translation><!-- http://naccho.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://nacorporation.readytalk.com</masterLabel>
+        <translation><!-- http://nacorporation.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://naiw.readytalk.com</masterLabel>
+        <translation><!-- http://naiw.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://nationalresearch.readytalk.com</masterLabel>
+        <translation><!-- http://nationalresearch.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://nedsullivan.readytalk.com</masterLabel>
+        <translation><!-- http://nedsullivan.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://nexsan.readytalk.com</masterLabel>
+        <translation><!-- http://nexsan.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://nicusa.readytalk.com</masterLabel>
+        <translation><!-- http://nicusa.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://norgrenusa.readytalk.com</masterLabel>
+        <translation><!-- http://norgrenusa.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://nrpa.readytalk.com</masterLabel>
+        <translation><!-- http://nrpa.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://oceanmysteries.readytalk.com</masterLabel>
+        <translation><!-- http://oceanmysteries.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://openeye.readytalk.com</masterLabel>
+        <translation><!-- http://openeye.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://optimumresourcesgroup.readytalk.com</masterLabel>
+        <translation><!-- http://optimumresourcesgroup.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://packard.readytalk.com</masterLabel>
+        <translation><!-- http://packard.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://papamurphys.readytalk.com</masterLabel>
+        <translation><!-- http://papamurphys.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://paysimple.readytalk.com</masterLabel>
+        <translation><!-- http://paysimple.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://paysimplesales.readytalk.com</masterLabel>
+        <translation><!-- http://paysimplesales.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://pega.readytalk.com</masterLabel>
+        <translation><!-- http://pega.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://personalcarecouncil.readytalk.com</masterLabel>
+        <translation><!-- http://personalcarecouncil.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://pharmaceuticaltechnology.readytalk.com</masterLabel>
+        <translation><!-- http://pharmaceuticaltechnology.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://phoenixortho.readytalk.com</masterLabel>
+        <translation><!-- http://phoenixortho.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://placeable.readytalk.com</masterLabel>
+        <translation><!-- http://placeable.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://postnet.readytalk.com</masterLabel>
+        <translation><!-- http://postnet.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://prnewswire.readytalk.com</masterLabel>
+        <translation><!-- http://prnewswire.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://profiles.readytalk.com</masterLabel>
+        <translation><!-- http://profiles.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://ps.readytalk.com</masterLabel>
+        <translation><!-- http://ps.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://pss.readytalk.com</masterLabel>
+        <translation><!-- http://pss.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://pulse.readytalk.com</masterLabel>
+        <translation><!-- http://pulse.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://purvingertz.readytalk.com</masterLabel>
+        <translation><!-- http://purvingertz.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://rallydev.readytalk.com</masterLabel>
+        <translation><!-- http://rallydev.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://returnpath.readytalk.com</masterLabel>
+        <translation><!-- http://returnpath.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://risiinfo.readytalk.com</masterLabel>
+        <translation><!-- http://risiinfo.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://ritas.readytalk.com</masterLabel>
+        <translation><!-- http://ritas.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://rnbresearch.readytalk.com</masterLabel>
+        <translation><!-- http://rnbresearch.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://rt-train.readytalk.com</masterLabel>
+        <translation><!-- http://rt-train.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://sba.readytalk.com</masterLabel>
+        <translation><!-- http://sba.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://scenario-d.readytalk.com</masterLabel>
+        <translation><!-- http://scenario-d.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://schooldude.readytalk.com</masterLabel>
+        <translation><!-- http://schooldude.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://servicemanagementgroup.readytalk.com</masterLabel>
+        <translation><!-- http://servicemanagementgroup.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://smartdatatraining.readytalk.com/</masterLabel>
+        <translation><!-- http://smartdatatraining.readytalk.com/ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://smclean.readytalk.com</masterLabel>
+        <translation><!-- http://smclean.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://spring-green.readytalk.com</masterLabel>
+        <translation><!-- http://spring-green.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://squirepb.readytalk.com</masterLabel>
+        <translation><!-- http://squirepb.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://staywell.readytalk.com</masterLabel>
+        <translation><!-- http://staywell.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://surveygizmo.readytalk.com</masterLabel>
+        <translation><!-- http://surveygizmo.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://susman.readytalk.com</masterLabel>
+        <translation><!-- http://susman.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://swbc.readytalk.com</masterLabel>
+        <translation><!-- http://swbc.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://ta.readytalk.com/</masterLabel>
+        <translation><!-- http://ta.readytalk.com/ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://taa.readytalk.com</masterLabel>
+        <translation><!-- http://taa.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://talentvalue.readytalk.com</masterLabel>
+        <translation><!-- http://talentvalue.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://tanworld.readytalk.com</masterLabel>
+        <translation><!-- http://tanworld.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://tcolandservices.readytalk.com</masterLabel>
+        <translation><!-- http://tcolandservices.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://thecollegenetwork.readytalk.com</masterLabel>
+        <translation><!-- http://thecollegenetwork.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://thegrowthcoachla.readytalk.com</masterLabel>
+        <translation><!-- http://thegrowthcoachla.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://toc.readytalk.com</masterLabel>
+        <translation><!-- http://toc.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://usda.readytalk.com</masterLabel>
+        <translation><!-- http://usda.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://vacationclub1.readytalk.com/</masterLabel>
+        <translation><!-- http://vacationclub1.readytalk.com/ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://vacationclub2.readytalk.com/</masterLabel>
+        <translation><!-- http://vacationclub2.readytalk.com/ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://virtualchalkboard.readytalk.com</masterLabel>
+        <translation><!-- http://virtualchalkboard.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://vmholdings.readytalk.com</masterLabel>
+        <translation><!-- http://vmholdings.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://vxsuite.readytalk.com</masterLabel>
+        <translation><!-- http://vxsuite.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://wdalegal.readytalk.com</masterLabel>
+        <translation><!-- http://wdalegal.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://wildbirdcenters.readytalk.com</masterLabel>
+        <translation><!-- http://wildbirdcenters.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://wiley.readytalk.com/</masterLabel>
+        <translation><!-- http://wiley.readytalk.com/ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://wingzone.readytalk.com</masterLabel>
+        <translation><!-- http://wingzone.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://www.PaySimple.readytalk.com</masterLabel>
+        <translation><!-- http://www.PaySimple.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://www.readytalk.com</masterLabel>
+        <translation><!-- http://www.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://yourcostcenter.readytalk.com</masterLabel>
+        <translation><!-- http://yourcostcenter.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>http://zedxinc.readytalk.com</masterLabel>
+        <translation><!-- http://zedxinc.readytalk.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>https://crypsisgroup.readytalk.com/</masterLabel>
+        <translation><!-- https://crypsisgroup.readytalk.com/ --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

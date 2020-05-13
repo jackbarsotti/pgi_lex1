@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_FinReq_India_Billing_Support_Financial_Request</fullName>
+    <columns>NAME</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>Type__c</columns>
+    <columns>Status__c</columns>
+    <columns>Region__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>notContain</operation>
+        <value>close,complete,resolved,cancel</value>
+    </filters>
+    <label>PGi-FinReq-India-Billing Support</label>
+    <language>en_US</language>
+    <queue>PGi_FinReq_India_Billing_Support</queue>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

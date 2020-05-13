@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rh2__Limit_Pre_Processing__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>Leave this unchecked if you only want rollups / records to be processed where a change was actually made to the source field.  Removes non-essential processing such as filtering out fields that don&#39;t need to be updated (Can help w/ Timeout issues).</inlineHelpText>
+    <label>Limit Pre Processing</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

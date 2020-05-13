@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_Audio_LogAttached</fullName>
+    <active>false</active>
+    <description>If Log Attached = Yes, then Log Analysis Detail is required</description>
+    <errorConditionFormula>AND
+(
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+ISPICKVAL(  Log_Attached__c , &#39;Yes&#39;),
+ISBLANK ( Log_Analysis_Detail__c  )
+)</errorConditionFormula>
+    <errorDisplayField>Log_Analysis_Detail__c</errorDisplayField>
+    <errorMessage>You must provide the Log Analysis Detail</errorMessage>
+</ValidationRule>

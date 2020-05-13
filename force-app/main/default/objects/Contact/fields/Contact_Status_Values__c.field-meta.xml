@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Status_Values__c</fullName>
+    <externalId>false</externalId>
+    <label>Contact Status Values</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Contact_Status__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Legitimate Interest</fullName>
+                <default>false</default>
+                <label>No Legitimate Interest</label>
+            </value>
+            <value>
+                <fullName>Nurture:  Interested but not ready</fullName>
+                <default>false</default>
+                <label>Nurture:  Interested but not ready</label>
+            </value>
+            <value>
+                <fullName>Contact Unresponsive</fullName>
+                <default>false</default>
+                <label>Contact Unresponsive</label>
+            </value>
+            <value>
+                <fullName>Contact Criteria - No Authority</fullName>
+                <default>false</default>
+                <label>Contact Criteria - No Authority</label>
+            </value>
+            <value>
+                <fullName>Contact Criteria - No Budget</fullName>
+                <default>false</default>
+                <label>Contact Criteria - No Budget</label>
+            </value>
+            <value>
+                <fullName>No Fit - No Match</fullName>
+                <default>false</default>
+                <label>No Fit - No Match</label>
+            </value>
+            <value>
+                <fullName>No Fit - Product Not Supported</fullName>
+                <default>false</default>
+                <label>No Fit - Product Not Supported</label>
+            </value>
+            <value>
+                <fullName>Active Billing Account</fullName>
+                <default>false</default>
+                <label>Active Billing Account</label>
+            </value>
+            <value>
+                <fullName>Incomplete / Inaccurate Information</fullName>
+                <default>false</default>
+                <label>Incomplete / Inaccurate Information</label>
+            </value>
+            <value>
+                <fullName>No Longer at Company</fullName>
+                <default>false</default>
+                <label>No Longer at Company</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Return to Marketing</controllingFieldValue>
+            <valueName>No Legitimate Interest</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Return to Marketing</controllingFieldValue>
+            <valueName>Nurture:  Interested but not ready</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Return to Marketing</controllingFieldValue>
+            <valueName>Contact Unresponsive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Return to Marketing</controllingFieldValue>
+            <controllingFieldValue>Not Qualified</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Qualified</controllingFieldValue>
+            <valueName>Contact Criteria - No Authority</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Qualified</controllingFieldValue>
+            <valueName>Contact Criteria - No Budget</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Qualified</controllingFieldValue>
+            <valueName>No Fit - No Match</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Qualified</controllingFieldValue>
+            <valueName>No Fit - Product Not Supported</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Qualified</controllingFieldValue>
+            <valueName>Active Billing Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Qualified</controllingFieldValue>
+            <valueName>Incomplete / Inaccurate Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Qualified</controllingFieldValue>
+            <valueName>No Longer at Company</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Number of invoices an Account has billed with ReadyTalk.  This field is used to determine CHURN --></help>
+    <label><!-- Invoice Count --></label>
+    <name>Invoice_Count__c</name>
+</CustomFieldTranslation>

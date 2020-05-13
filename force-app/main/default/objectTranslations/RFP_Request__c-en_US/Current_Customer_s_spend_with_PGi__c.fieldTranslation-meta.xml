@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If a current customer, what is their current spend with PGi? --></help>
+    <label><!-- Current Customer&apos;s spend with PGi? --></label>
+    <name>Current_Customer_s_spend_with_PGi__c</name>
+</CustomFieldTranslation>

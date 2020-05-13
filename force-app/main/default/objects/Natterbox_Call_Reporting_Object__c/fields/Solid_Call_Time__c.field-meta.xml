@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Solid_Call_Time__c</fullName>
+    <description>Time threshold in seconds for a Solid Call</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This will be the same as the CallTalkSeconds macro if the call was over the solid call threshold time. If the call was not considered a solid call, this field will be left blank.</inlineHelpText>
+    <label>Solid Call Time</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Use this for Tier 1 top level accounts only --></help>
+    <label><!-- Tier 1 UHQ --></label>
+    <name>Tier_1_UHQ__c</name>
+</CustomFieldTranslation>

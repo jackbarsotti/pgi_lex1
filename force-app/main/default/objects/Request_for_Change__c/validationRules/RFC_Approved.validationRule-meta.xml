@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RFC_Approved</fullName>
+    <active>true</active>
+    <description>prevent changes from the RFC if status = Approved</description>
+    <errorConditionFormula>AND(
+NOT(ISPICKVAL( Type__c , &#39;Vendor&#39;)) ||
+NOT(ISPICKVAL( Type__c , &#39;Release&#39;)),
+ isWithdrawRequestClicked__c  = false,
+$User.ProfileId &lt;&gt; &#39;00e30000001kms9&#39;,
+ISPICKVAL( Status__c , &#39;Approved&#39;),
+ISCHANGED( Risk__c ),
+ISCHANGED( Planned_Start_Date_Time__c ),
+ISCHANGED( Planned_End_Date_Time__c ),
+ISCHANGED( Short_Description__c ), 
+ISCHANGED( Detailed_Description__c ),
+ISCHANGED( Location__c ),
+ISCHANGED( Vendor_Outage__c ),
+ISCHANGED( Outage_Start_Date_Time__c ),
+ISCHANGED( Outage_End_Date_Time__c ),
+ISCHANGED( Vendor_Change_Impact__c ),
+ISCHANGED( Outage_Location__c )
+)</errorConditionFormula>
+    <errorMessage>Once Approved, only the Closing Details may be changed.</errorMessage>
+</ValidationRule>

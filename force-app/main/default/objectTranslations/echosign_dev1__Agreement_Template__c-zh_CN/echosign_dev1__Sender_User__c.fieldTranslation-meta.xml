@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>在自动发送协议或使用自动工作流发送协议时，将代表此字段指定的用户发送协议。如果未指定，则按通常情况使用当前上下文用户。</help>
+    <label><!-- Send On Behalf Of --></label>
+    <name>echosign_dev1__Sender_User__c</name>
+</CustomFieldTranslation>

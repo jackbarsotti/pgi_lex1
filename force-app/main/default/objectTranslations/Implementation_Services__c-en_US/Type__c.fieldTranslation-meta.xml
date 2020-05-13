@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>Account Plan</masterLabel>
+        <translation><!-- Account Plan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Base Account - Renewal</masterLabel>
+        <translation><!-- Base Account - Renewal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Base Account - Upsell</masterLabel>
+        <translation><!-- Base Account - Upsell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Business</masterLabel>
+        <translation><!-- Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client Connection</masterLabel>
+        <translation><!-- Client Connection --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Coach</masterLabel>
+        <translation><!-- Coach --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Engagement</masterLabel>
+        <translation><!-- Engagement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>First Class</masterLabel>
+        <translation><!-- First Class --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Follow-up</masterLabel>
+        <translation><!-- Follow-up --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Product Survey Follow-Up</masterLabel>
+        <translation><!-- In-Product Survey Follow-Up --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lite</masterLabel>
+        <translation><!-- Lite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NPS Survey Follow Up</masterLabel>
+        <translation><!-- NPS Survey Follow Up --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Platinum</masterLabel>
+        <translation><!-- Platinum --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Professional Services</masterLabel>
+        <translation><!-- Professional Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SuccessStart</masterLabel>
+        <translation><!-- SuccessStart --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zendesk Tickets</masterLabel>
+        <translation><!-- Zendesk Tickets --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

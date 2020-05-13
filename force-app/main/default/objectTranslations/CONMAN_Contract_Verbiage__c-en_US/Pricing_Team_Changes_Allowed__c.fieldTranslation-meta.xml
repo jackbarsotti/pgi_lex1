@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Whether or not the Deal Desk can edit this Verbiage. Legal can edit all Verbiage. --></help>
+    <label><!-- Pricing Team Changes Allowed --></label>
+    <name>Pricing_Team_Changes_Allowed__c</name>
+</CustomFieldTranslation>

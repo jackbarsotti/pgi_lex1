@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Credit Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account</fullName>
+                <default>false</default>
+                <label>Account</label>
+            </value>
+            <value>
+                <fullName>Event Services</fullName>
+                <default>false</default>
+                <label>Event Services</label>
+            </value>
+            <value>
+                <fullName>Product Change</fullName>
+                <default>false</default>
+                <label>Product Change</label>
+            </value>
+            <value>
+                <fullName>Quality</fullName>
+                <default>false</default>
+                <label>Quality</label>
+            </value>
+            <value>
+                <fullName>Service Interruption</fullName>
+                <default>false</default>
+                <label>Service Interruption</label>
+            </value>
+            <value>
+                <fullName>User Experience</fullName>
+                <default>false</default>
+                <label>User Experience</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

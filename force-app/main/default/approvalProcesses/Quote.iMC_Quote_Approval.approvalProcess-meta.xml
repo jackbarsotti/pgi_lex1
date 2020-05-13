@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Account</field>
+        <field>Name</field>
+        <field>BillingName</field>
+        <field>Contact</field>
+        <field>ExpirationDate</field>
+        <field>Discount</field>
+        <field>LineItemCount</field>
+        <field>Grand_TotalUK_20VAT__c</field>
+        <field>Status</field>
+        <field>IsSyncing</field>
+        <field>TotalPrice</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>mark.fordham@pgi.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>If the &quot;Professional Services&quot; field is &gt;=$15K upon quote submission, Send to Mark Fordham for approval.</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Opportunity.Professional_Services_Bookings__c</field>
+                <operation>greaterOrEqual</operation>
+                <value>&quot;USD 15,000&quot;</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>$15K Service Approval</label>
+        <name>X15K_Service_Approval</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>iMC_Quote_Service_Status_Approved</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>frank.nardi@pgi.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>Unanimous</whenMultipleApprovers>
+        </assignedApprover>
+        <description>If the &quot;Professional Services&quot; field is &lt;$15K upon quote submission, Send to Frank Nardi for approval.</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Opportunity.Owner</field>
+                <operation>equals</operation>
+                <value>Rula Marie,Jason Hurst,Marianna Rodriguez,Cohry Osborne,Eddie Medal</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.Professional_Services_Bookings__c</field>
+                <operation>lessThan</operation>
+                <value>&quot;USD 15,000&quot;</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Service Approval</label>
+        <name>Service_Approval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>iMC_Quote_Service_Status_Update</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Quote_Rejected_by_Services_Team</name>
+                <type>Alert</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>mark.fordham@pgi.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Since Frank Nardi approves quotes, but also creates quotes himself, this step seeks Mark Fordham&#39;s approval for Frank&#39;s quotes.</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Opportunity.Owner</field>
+                <operation>equals</operation>
+                <value>Frank Nardi</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Frank Nardi Quote Approval</label>
+        <name>Frank_Nardi_Quote_Approval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>cohry.osborne@pgi.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Seek Cohry Osborne&#39;s approval.</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Opportunity.Owner</field>
+                <operation>notEqual</operation>
+                <value>Cohry Osborne,Frank Nardi,Rula Marie,Jason Hurst,Marianna Rodriguez</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Sales Manager Approval</label>
+        <name>Sales_Manager_Approval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>steve.anderson@pgi.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Since Cohry Approves quotes, but also creates quotes himself, this step seeks Steve Anderson&#39;s approval for Cohry&#39;s quotes.</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Quote.CreatedBy</field>
+                <operation>equals</operation>
+                <value>Cohry Osborne</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Cohry Osborne Quote Approval</label>
+        <name>Cohry_Osborne_Quote_Approval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>steve.anderson@pgi.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Seek Steve Anderson&#39;s approval if Quote Discount is &gt;=20%.</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Quote.Discount</field>
+                <operation>greaterOrEqual</operation>
+                <value>20</value>
+            </criteriaItems>
+        </entryCriteria>
+        <label>Finance Approval</label>
+        <name>Finance_Approval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>iMC_Quote_Reject_by_Finance</name>
+                <type>Alert</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <description>iMeet Central Quote Approvals only.</description>
+    <emailTemplate>iMC_Internal_Company_Alerts/iMC_Quote_Approvals_Request</emailTemplate>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>Quote.RecordType</field>
+            <operation>equals</operation>
+            <value>iMC Quote</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>iMC_Quote_Approved</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>iMC_Quote_Status_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>iMC_Quote_Status_Needs_Review</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>iMC_Quote_Service_Status_Update</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>iMC_Quote_Status_Needs_Review</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>iMC Quote Approval</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>false</useApproverFieldOfRecordOwner>
+        <userHierarchyField>quote_approver__c</userHierarchyField>
+    </nextAutomatedApprover>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

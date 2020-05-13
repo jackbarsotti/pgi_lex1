@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TASKRAY__filterType__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Possible values: (&#39;task&#39;, &#39;project&#39;)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Possible values: (&#39;task&#39;, &#39;project&#39;)</inlineHelpText>
+    <label>Filter Type</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

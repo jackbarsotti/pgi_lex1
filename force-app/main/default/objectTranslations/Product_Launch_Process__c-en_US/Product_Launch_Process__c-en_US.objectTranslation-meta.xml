@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Product Launch Process</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Product Launch Process</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- PLP Service Catalog Form --></label>
+        <name>PLP_Service_Catalog_Form</name>
+    </fieldSets>
+    <layouts>
+        <layout>Product Launch Process Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Idea Details --></label>
+            <section>Idea Details</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- In Customer Care? --></label>
+    <name>In_Customer_Care__c</name>
+    <picklistValues>
+        <masterLabel>No</masterLabel>
+        <translation><!-- No --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes-Call Delivery</masterLabel>
+        <translation><!-- Yes-Call Delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes-Reservations</masterLabel>
+        <translation><!-- Yes-Reservations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes-Tier Support</masterLabel>
+        <translation><!-- Yes-Tier Support --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

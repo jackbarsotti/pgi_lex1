@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Janati_RR__Lead__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>Populated only if the error is directly related to the lead object</inlineHelpText>
+    <label>Lead</label>
+    <referenceTo>Lead</referenceTo>
+    <relationshipLabel>Round Robin Errors</relationshipLabel>
+    <relationshipName>Round_Robin_Errors</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

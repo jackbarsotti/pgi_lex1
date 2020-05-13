@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Reason for New Worker --></label>
+    <name>Reason_for_New_Worker__c</name>
+    <picklistValues>
+        <masterLabel>Backfill (Exited the Company)</masterLabel>
+        <translation><!-- Backfill (Exited the Company) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Open (Incremental Addition)</masterLabel>
+        <translation><!-- Open (Incremental Addition) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transfer</masterLabel>
+        <translation><!-- Transfer --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>testing123</fullName>
+    <columns>NAME</columns>
+    <columns>CTI_Activity_Created__c</columns>
+    <columns>CallStartDate__c</columns>
+    <columns>UUID__c</columns>
+    <columns>Owner__c</columns>
+    <columns>Account__c</columns>
+    <columns>RelatedContact__c</columns>
+    <columns>Lead__c</columns>
+    <columns>Case__c</columns>
+    <columns>Opportunity__c</columns>
+    <columns>Other_ID__c</columns>
+    <columns>Wrapup_String_1__c</columns>
+    <columns>Wrapup_String_2__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>testing123</label>
+    <language>en_US</language>
+</ListView>

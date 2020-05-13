@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The number of the caller in E164 format (E164 format will always begin with the country code of the called number, then the full number without the leading zero. For example, 07881943075 will become 447881943075). --></help>
+    <label><!-- E164CallerNumber --></label>
+    <name>E164CallerNumber__c</name>
+</CustomFieldTranslation>

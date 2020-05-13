@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Operator_Assisted_Standard_Toll_Free__c</fullName>
+    <defaultValue>0.14</defaultValue>
+    <description>Operator Assisted Express toll free rate for this account</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Rate charged for a participant dialing into the US toll free number for an Auto Event.</inlineHelpText>
+    <label>Auto Toll Free Rate</label>
+    <precision>13</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Date_Signed__c</fullName>
+    <externalId>false</externalId>
+    <label>Customer Date Signed</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>\d1\</fullName>
+                <default>false</default>
+                <label>\d1\</label>
+            </value>
+            <value>
+                <fullName>.</fullName>
+                <default>false</default>
+                <label>.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

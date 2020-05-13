@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bill_Account__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>CAUTION - USED IN INTEGRATIONS</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If checked, an invoice will be created for this account and any activity for the account will get pulled into the next bill run.</inlineHelpText>
+    <label>Bill Account</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

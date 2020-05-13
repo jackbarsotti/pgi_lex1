@@ -1,0 +1,87 @@
+<apex:page standardController="CONMAN_Contract__c" extensions="iContract_NA_Master_Controller">
+ <!-- Editable Signature Text -->
+    <div class="noNewPage newPageAfter">
+        <!-- <apex:repeat value="{!signingVerbiage}" var="sv">
+            <div id='{!sv.originalId}' name='{!sv.contractVerbiage.Name}' class="verbiage front-page-verbiage {!IF (sv.isCustomVerbiage && renderingAsHTML, 'highlightOverride', '')}">
+                <apex:outputPanel rendered="{!sv.contractVerbiage.Show_Verbiage_Header__c == true}">
+                    <h6>
+                        <apex:outputField value="{!sv.contractVerbiage.Verbiage_Header__c}" >
+                        </apex:outputField>
+                    </h6>
+                </apex:outputPanel>
+                <apex:outputField value="{!sv.contractVerbiage.Verbiage__c}">
+                    <apex:inlineEditSupport event="ondblClick"
+                                            rendered="{! canEditVerbiage || (canEditPricing && sv.contractVerbiage.Pricing_Team_Changes_Allowed__c) }" />
+                </apex:outputField>
+                <apex:outputPanel rendered="{! !renderingAsPDF }"  styleClass="verbiage-comments">
+                    <apex:outputField value="{!sv.contractVerbiage.Comments__c}"
+                                    rendered="{! (renderingAsHtml && (canEditVerbiage || (canEditPricing && sv.contractVerbiage.Pricing_Team_Changes_Allowed__c))) || (renderingAsWord && !(sv.contractVerbiage.Comments__c == '' || sv.contractVerbiage.Comments__c == null))}">
+                        <apex:outputPanel layout="none" rendered="{! (canEditVerbiage || (canEditPricing && sv.contractVerbiage.Pricing_Team_Changes_Allowed__c)) && renderingAsHtml && (sv.contractVerbiage.Comments__c == '' || sv.contractVerbiage.Comments__c == null)}">
+                            Insert comments here...
+                        </apex:outputPanel>
+                        <apex:inlineEditSupport event="onClick"
+                                                rendered="{! canEditVerbiage || (canEditPricing && sv.contractVerbiage.Pricing_Team_Changes_Allowed__c) }" />
+                    </apex:outputField>
+                </apex:outputPanel>
+            </div>
+        </apex:repeat> -->
+        <table>
+            <col width="10%" />
+            <col width="40%" />
+            <col width="10%" />
+            <col width="40%" />
+            <tr style='height:18px'>
+                <td class="right td-header dark">Customer:</td>
+                <td width="10%"></td>
+                <td class="right td-header dark">PGi:</td>
+                <td width="10%"></td>
+            </tr>
+            <tr style='height:18px'>
+                <td id='signingCompanyName' colspan='2' width="40%" class="center td-header dark">
+                    {!agreementAccountName}
+                </td>
+                <td id="pgiName" colspan='2' class="center td-header dark">{! pgiName }</td>
+            </tr>
+            <tr style='height:40px'>
+                <td class="right td-header dark">Signature:</td>
+                <td width="10%" class="center esigntag esignsignature">
+                    <span style="color:#fff">{{*Sig_es_:signer:signature}}</span>
+                </td>
+                <td class="right td-header dark">Signature:</td>
+                <td width="10%" class="center esigntag esignsignature">
+                    <span style="color:#fff">{{*Sig_es_:signer2:signature}}</span>
+                </td>
+            </tr>
+            <tr style='height:40px'>
+                <td class="right td-header dark">Name:</td>
+                <td width="10%" class="center esigntag esignsignature">
+                    <span style="color:#fff">{{*N_es_:signer:fullname}}</span>
+                </td>
+                <td class="right td-header dark">Name:</td>
+                <td width="10%" class="center esigntag esignsignature">
+                    <span style="color:#fff">{{*N_es_:signer2:fullname}}</span>
+                </td>
+            </tr>
+            <tr style='height:40px'>
+                <td class="right td-header dark">Title:</td>
+                <td width="10%" class="center esigntag esignsignature">
+                    <span style="color:#fff">{{*Ttl_es_:signer:title}}</span>
+                </td>
+                <td class="right td-header dark">Title:</td>
+                <td width="10%" class="center esigntag esignsignature">
+                    <span style="color:#fff">{{*Ttl_es_:signer2:title}}</span>
+                </td>
+            </tr>
+            <tr style='height:18px'>
+                <td class="right td-header dark">Date:</td>
+                <td width="40%" class="center esigntag">
+                    <span style="color:#fff">{{*Dte_es_:signer:date}}</span>
+                </td>
+                <td class="right td-header dark">Date:</td>
+                <td width="40%" class="center esigntag">
+                    <span style="color:#fff">{{*Dte_es_:signer2:date}}</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</apex:page>

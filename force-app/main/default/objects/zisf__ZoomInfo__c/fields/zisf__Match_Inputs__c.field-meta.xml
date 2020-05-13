@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>zisf__Match_Inputs__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Values passed in to match to ZoomInfo data.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Values passed in to match to ZoomInfo data.</inlineHelpText>
+    <label>Match Inputs</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

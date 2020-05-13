@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Role_with_Technology_Partner_Platform__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates contact&#39;s internal company role in using the partner platform like Salesforce, Eloqua, Pardot, etc.</inlineHelpText>
+    <label>Role with Technology Partner Platform</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adminstrator</fullName>
+                <default>false</default>
+                <label>Adminstrator</label>
+            </value>
+            <value>
+                <fullName>User</fullName>
+                <default>false</default>
+                <label>User</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

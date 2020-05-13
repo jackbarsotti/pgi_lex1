@@ -1,0 +1,244 @@
+<apex:page standardController="Account" extensions="PlanController" tabStyle="Account">
+  <apex:stylesheet value="{!URLFOR($Resource.RTResources, 'css/jquery-ui.min.css')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery-ui.min.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/messaging.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/remoting.js')}"/> 
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/VFResizer.js')}"/>   
+  
+  <script>    
+    $(document).ready(function(){ 
+      VFResizer.resizerProxyPagePath = "{!URLFOR($Resource.RTResources, 'html/VFResizerProxy.html')}";
+      VFResizer.resize('PlanList');      
+      
+      //Click handler to expand a plan
+      $('.planRow').click(function(){
+        $('#'+this.id+'-Products').slideToggle('fast', function() {
+          VFResizer.resize('PlanList');
+         });
+      });      
+
+      //Click handler to make plan the default
+      $(document).on('click', '.makeDefaultPlanLink', function(e){
+        e.preventDefault();
+        var planId = $(this).attr('id');
+        makeDefault(planId, false);
+      }); 
+
+      function makeDefault(planId, overwrite) {
+        //Expand the iframe a little so the dialog fits
+        var h = $('html').height();
+        h=h+50;
+        VFResizer.resize('PlanList');
+
+        //Call makeDefault from the controller
+        PlanController.makeDefault(planId, overwrite, function(result,event){
+          if($.handleRemotingResult(result,event)){
+            if(result){
+              $('.message-dialog').dialog('close');
+              window.top.location.href='/{!AccountId}';
+              //rerenderOutputPanel();
+            }
+            else {
+              $.showDialog('.message-dialog', 'Overwrite Default Plan Value', {
+                "Cancel": function() {
+                  $.disableDialogButtons($(this));                   
+                  $(this).dialog('close');
+                  VFResizer.resize('PlanList');
+                },               
+                "Continue": function() {
+                  $.disableDialogButtons($(this));                   
+                  makeDefault(planId, true);
+                } 
+              });
+
+              $('.warnMessage').html('You are about to overwrite the default Plan, would you like to continue?');
+              $('.warnMessages').show();
+            }
+          }
+          else{
+            showMessageDialog();
+          }
+        });        
+      }
+
+      function showMessageDialog() {
+        //Display the initial message dialog
+        $.showDialog('.message-dialog', 'Message', {
+          "OK": function() {
+            $(this).dialog('close');
+            VFResizer.resize('PlanList');
+          }          
+        }, function() {
+        });
+
+        $('.errorMessages').show();
+      }
+    });     
+  </script>
+  
+  <style>
+    .ui-widget{font-family: inherit; font-size: inherit}
+  </style>     
+
+  <apex:pageBlock tabStyle="Account">
+    <apex:facet name="header">
+      <div class="pbTitle" style="width: 33%; float: left">
+        <img src="/s.gif" alt="" width="1" height="1" class="minWidth" title=""/>
+        <img src="/img/icon/box24.png" title="Plan(s)" style="float: left; padding-right: 5px"/>
+        <h3 style="margin-top: 5px;">Plan(s)</h3>
+      </div>
+      <div class="pbButton">
+        <input type="button" class="btn" style="margin-top: 5px" value="New Plan" onClick="window.top.location.href='/apex/AddPlan?id={!Account.id}'"/>
+      </div>      
+      <br style="clear: both"/>
+    </apex:facet>
+    <apex:outputPanel id="planListPanel"  layout="block" rendered="{!NOT(Plans.empty)}">
+      <div id="plans">
+        <table class="list " id="" border="0" cellpadding="0" cellspacing="0">
+          <colgroup span="5"></colgroup>            
+          <thead class="rich-table-thead">            
+            <tr class="headerRow ">
+              <th class="headerRow " scope="col" colspan="1" id="">
+                <div id="">Action</div>
+              </th>                         
+              <th class="headerRow " scope="col" colspan="1" id="">
+                <div id="">Plan Name</div>
+              </th>
+              <th class="headerRow " scope="col" colspan="1" id="">
+                <div id="">Recurring Charge</div>
+              </th>              
+              <th class="headerRow " scope="col" colspan="1" id="">
+                <div id="">Frequency</div>
+              </th>
+              <th class="headerRow " scope="col" colspan="1" id="">
+                <div id="">Start Date</div>
+              </th>
+              <th class="headerRow " scope="col" colspan="1" id="">
+                <div id="">End Date</div>
+              </th>
+              <th class="headerRow " scope="col" colspan="1" id="">
+                <div id="">Billable Type</div>
+              </th>
+              <th class="headerRow" scope="col" colspan="1" id="">
+                <div id="">Access Codes</div>   
+              </th> 
+              <th class="headerRow" scope="col" colspan="1" id="">
+                <div id="">Default</div>   
+              </th>                                          
+            </tr>
+          </thead>
+          <tbody id="">
+            <apex:repeat value="{!Plans}" var="plan">
+              <tr  class="dataRow" onmouseover="if (window.hiOn){hiOn(this);} " onmouseout="if (window.hiOff){hiOff(this);} " onblur="if (window.hiOff){hiOff(this);}" onfocus="if (window.hiOn){hiOn(this);}">
+                <td class="actionColumn" id="planRow" colspan="1" style="cursor: pointer">
+                  <a href="/apex/editPlan?accountId={!Account.id}&planId={!plan.id}" class="actionLink" target="_parent" title="Edit - {!plan.name}">Edit</a> 
+                  <apex:outputPanel rendered="{!ISNULL(plan.endDate__c)}">
+                    | <a href="/apex/endPlan?id={!Account.id}&planId={!plan.id}" class="actionLink deletePlanLink" target="_parent" title="Delete - {!plan.name}">Delete</a>
+                  </apex:outputPanel>
+                  | <a href="" id="{!plan.id}" class="actionLink makeDefaultPlanLink" target="_parent" title="Make Default - {!plan.name}">Make Default</a>
+                </td>
+                <td class="dataCell planRow" id="{!plan.Id}" colspan="1">
+                  <span id=""  style="cursor: pointer">{!plan.name}</span>
+                </td>
+                <td class="dataCell planRow" id="{!plan.Id}" colspan="1">
+                  <span id="">
+                    <apex:outputText value="{0,number,currency}">
+                      <apex:param value="{!currentPlanTotals[plan.Id].recurringCharge}" />
+                    </apex:outputText></span>
+                </td>
+                <td class="dataCell planRow" id="{!plan.Id}" colspan="1">
+                  <span id=""><!-- TODO: plan chg freq ??? Invoice, Annual, (Varies) -->{!currentPlanTotals[plan.Id].frequency}</span>
+                </td>
+                <td class="dataCell planRow" id="" colspan="1">
+                  <span id=""><apex:outputField value="{!plan.startDate__c}"/></span>
+                </td>              
+                <td class="dataCell  planRow" id="" colspan="1">
+                  <span id=""><apex:outputField value="{!plan.endDate__c}"/></span>
+                </td>
+                <td class="dataCell planRow" id="" colspan="1">
+                  <span id="">{!plan.billableType__c}</span>
+                </td>  
+                <td class="dataCell planRow" id="" colspan="1">
+                  <span id="">{!activeAccessCodeCounts[plan.Id]}</span>
+                </td> 
+                <td class="dataCell planRow" id="" colspan="1">
+                  <span id=""><apex:outputText value="{!IF(plan.isDefault__c, 'Yes', 'No')}"></apex:outputText></span>
+                </td> 
+              </tr>              
+              
+              <tr>
+                <td colspan="5" style="padding: 0px; margin: 0px; border:0px; background-color: #ccc">
+                  <div id="{!plan.id}-Products" style="display: none;">
+                    <table class="list " border="0" cellpadding="0" cellspacing="0" style="padding: 5px 0px 5px 65px; border: 0px">
+                      <colgroup span="4"></colgroup>            
+                      <thead class="rich-table-thead">                            
+                        <tr class="headerRow ">
+                          <th class="headerRow " scope="col" colspan="1" id="">
+                            <div id="">Product Name</div>
+                          </th>            
+                          <th class="headerRow " scope="col" colspan="1" id="">
+                            <div id="">Single Charge</div>
+                          </th>
+                          <th class="headerRow " scope="col" colspan="1" id="">
+                            <div id="">Recurring Charge</div>
+                          </th>
+                          <th class="headerRow " scope="col" colspan="1" id="">
+                            <div id="">Rate Set</div>
+                          </th>
+                          <th class="headerRow " scope="col" colspan="1" id="">
+                            <div id="">Future Changes</div>
+                          </th>                                        
+                        </tr>
+                      </thead>
+                      <tbody id="">
+                        <apex:repeat value="{!plan.NegotiatedProducts__r}" var="product">
+                          <tr class="dataRow" onmouseover="if (window.hiOn){hiOn(this);} " onmouseout="if (window.hiOff){hiOff(this);} " onblur="if (window.hiOff){hiOff(this);}" onfocus="if (window.hiOn){hiOn(this);}">
+                            <td class="dataCell  " id="" colspan="1">
+                              <span id="">{!product.name}</span>
+                            </td>
+                            <td class="dataCell  " id="" colspan="1">
+                              <span id=""><apex:outputField value="{!currentNpOverrides[product.id].singleChargeOverride['singleCharge__c']}"/></span>
+                            </td>             
+                            <td class="dataCell  " id="" colspan="1">
+                              <span id=""><apex:outputField value="{!currentNpOverrides[product.id].recurringChargeOverride['recurringCharge__c']}"/></span>
+                            </td>
+                            <td class="dataCell  " id="" colspan="1">
+                              <span id=""><a href="/apex/viewSchedule?{!currentNpOverrides[product.id].viewScheduleURLParams}" target="_parent"><apex:outputField value="{!currentNpOverrides[product.id].scheduleOverride['scheduleName__c']}"></apex:outputField></a></span>
+                            </td>          
+                            <td class="dataCell  " id="" colspan="1">
+                              <span id=""><apex:outputText value="{!IF(npFutureChanges[product.id], 'Yes', 'No')}" /></span>
+                            </td>                                        
+                          </tr>            
+                        </apex:repeat>
+                      </tbody>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+            </apex:repeat>
+          </tbody>          
+        </table>                  
+      </div>    
+    </apex:outputPanel>  
+    <apex:outputPanel rendered="{!(Plans.empty)}">
+      <table class="list" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr class="headerRow"><th scope="col" class="noRowsHeader" style="font-weight: normal">No records to display</th></tr>
+        </tbody>
+      </table>      
+    </apex:outputPanel>
+
+    <apex:outputPanel id="message-dialog" styleClass="message-dialog" layout="block">         
+      <div class="ui-state-error ui-corner-all errorMessages" style="padding: 0 .7em .7em .7em; margin-bottom: 5px; display: none"> 
+        <p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span><span class="errorMessage"></span></p>
+      </div>
+          
+      <div class="ui-state-highlight ui-corner-all warnMessages" style="padding: 0 .7em .7em .7em; margin-bottom: 5px; display: none"> 
+        <p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span><span class="warnMessage"></span></p>
+      </div>
+    </apex:outputPanel>             
+
+  </apex:pageBlock>  
+          
+</apex:page>

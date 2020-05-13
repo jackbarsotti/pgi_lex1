@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>legacy_Number_of_Licenses_Users__c</fullName>
+    <description>This field is for legacy reporting purposes.</description>
+    <externalId>false</externalId>
+    <label>legacy_Number_of_Licenses_Users</label>
+    <length>10</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

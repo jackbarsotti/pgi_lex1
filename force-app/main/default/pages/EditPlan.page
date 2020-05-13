@@ -1,0 +1,746 @@
+<apex:page controller="PlanController" showHeader="true" tabStyle="Plan__c">
+  <apex:stylesheet value="{!URLFOR($Resource.RTResources, 'css/jquery-ui.min.css')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery-ui.min.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/messaging.js')}"/>
+
+	<script>    
+    function setFocusOnLoad() {};     
+    $(document).ready(function(){  
+    
+      //Click handler for "Edit" links    
+      $('.activateEdit').click(function(){
+        var id = this.id;
+        
+        $('.output,.actions').each(function(){
+          if(this.id==id)
+            $(this).hide();
+        });
+        
+        $('.edit,.saveActions').each(function(){
+          if(this.id==id)
+            $(this).show();
+        });
+      });
+      
+      //Click handler for "Cancel" links
+      $('.cancelEdit').click(function(){
+        var id = this.id;
+        
+        $('.output,.actions').each(function(){
+          if(this.id==id)
+            $(this).show();
+        });
+        
+        $('.edit,.saveActions').each(function(){
+          if(this.id==id)
+            $(this).hide();
+        });        
+      });
+      
+      //Click handler for "Save" links
+      $('.saveEdits').click(function(){
+        var productId = $(this).parent().attr('id');
+        var singleCharge = null;
+        var singleChargeOld = null;
+        var recurringCharge;
+        var recurringChargeOld;
+        var schedule;        
+        var scheduleOld;
+        
+        $('input[id$="singleCharge"]').each(function() { 
+          if(productId === $(this).parent().attr('id'))
+            singleCharge = $(this).val().trim().length==0 ? null : $(this).val();  
+        });
+        
+        $('span[id$="singleChargeOld"]').each(function() {
+          if(productId === $(this).parent().attr('id'))            
+            singleChargeOld = $(this).text().trim().length==0 ? null : $(this).text().replace(/\\$/g, '').trim();  
+        });
+        
+        $('input[id$="recurringCharge"]').each(function() {
+          if(productId === $(this).parent().attr('id'))
+            recurringCharge = $(this).val().trim().length==0 ? null : $(this).val();  
+        });
+        
+        $('span[id$="recurringChargeOld"]').each(function() {
+          if(productId === $(this).parent().attr('id'))
+            recurringChargeOld = $(this).text().trim().length==0 ? null : $(this).text().replace(/\\$/g, '').trim();  
+        });              
+        
+        $('input[id$="schedule"]').each(function() {
+          if(productId === $(this).parent().parent().attr('id')) 
+            schedule = $(this).val().trim().length==0 ? null : $(this).val();  
+        });
+        
+        $('a[id$="scheduleLinkOld"]').each(function() {
+          if(productId === $(this).parent().attr('id'))
+            scheduleOld = $(this).text().trim().length==0 ? null : $(this).text().replace(/\\$/g, '').trim();  
+        });              
+        
+        if(console && console.log)
+          console.log(singleChargeOld+"/"+singleCharge+":"+recurringChargeOld+"/"+recurringCharge+":"+scheduleOld+"/"+schedule);
+        
+        $('.saveEditConfirm').dialog({
+          title: 'Product Edit',
+          autoOpen: true,
+          resizable: false,
+          draggable: true,
+          closeOnEscape: false,
+          open: function(event, ui) { $(".ui-dialog-titlebar-close").css('display', 'none'); },
+          width: 740,
+          modal: true,
+          zIndex: 999,
+          buttons: {
+            "Cancel": {
+              text: 'Cancel',
+              id: 'ProductEdit-CancelButton',
+              click: function(){              
+                $.disableDialogButtons($(this)); 
+                location.reload();
+              }
+            },
+            "Save": {
+              text: 'Save',
+              id: 'ProductEdit-Save',
+              click: function(){
+                var button = $(this);
+                $.disableDialogButtons(button); 
+                $('#errorMessages').hide('fast');
+                $('#warnMessage').text('Saving...');
+                $('#warnMessages').show();
+              
+                var start = $('input[id$="startDate"]').val();
+                var end = '';
+                                           
+                PlanController.editProduct(productId, singleChargeOld, singleCharge, recurringChargeOld, recurringCharge, scheduleOld, schedule, start, end, function(result,event){
+                  $('#warnMessages').hide();
+                  if(event.status){
+                    if(result){
+                    	$('#warnMessages').removeClass('ui-state-error');
+                    	$('#warnMessages').addClass('ui-state-highlight'); 
+                      $('#warnMessage').text('Saved!');
+                      $('#warnMessages').fadeIn('fast');
+                      location.reload();
+                    }
+                  }
+                  else {
+                    //Display errors from event.message
+                    $('#warnMessages').removeClass('ui-state-highlight');
+                    $('#warnMessages').addClass('ui-state-error');
+                    $('#errorMessage').text(event.message);
+                    $('#errorMessages').fadeIn('fast');
+                    $.enableDialogButtons(button);
+                  }              
+                }, {escape: true});                          
+              }
+            }
+          }
+        });         
+      });
+
+        //Click handler for "Save" links
+        $('.savePlanEdits').click(function(){
+            var planId = $(this).parent().attr('id');
+            var quantity;
+            var quantityOld;
+
+            $('input[id$="quantity"]').each(function() {
+                if(planId === $(this).parent().attr('id'))
+                    quantity = $(this).val().trim().length==0 ? null : $(this).val();
+            });
+
+            $('span[id$="quantityOld"]').each(function() {
+                if(planId === $(this).parent().attr('id'))
+                    quantityOld = $(this).text().trim().length==0 ? null : $(this).text().replace(/\\$/g, '').trim();
+            });
+
+            if(console && console.log)
+                console.log(quantityOld+"/"+quantity);
+
+            $('.saveEditConfirm').dialog({
+                title: 'Plan Edit',
+                autoOpen: true,
+                resizable: false,
+                draggable: true,
+                closeOnEscape: false,
+                open: function(event, ui) { $(".ui-dialog-titlebar-close").css('display', 'none'); },
+                width: 740,
+                modal: true,
+                zIndex: 999,
+                buttons: {
+                    "Cancel": {
+                        text: 'Cancel',
+                        id: 'PlanEdit-CancelButton',
+                        click: function(){
+                            $.disableDialogButtons($(this));
+                            location.reload();
+                        }
+                    },
+                    "Save": {
+                        text: 'Save',
+                        id: 'PlanEdit-Save',
+                        click: function(){
+                            var button = $(this);
+                            $.disableDialogButtons(button);
+                            $('#errorMessages').hide('fast');
+                            $('#warnMessage').text('Saving...');
+                            $('#warnMessages').show();
+
+                            var start = $('input[id$="startDate"]').val();
+                            var end = '';
+
+                            PlanController.editPlan(planId, quantity, quantityOld, start, function(result,event){
+                                $('#warnMessages').hide();
+                                if(event.status){
+                                    if(result){
+                                        $('#warnMessages').removeClass('ui-state-error');
+                                        $('#warnMessages').addClass('ui-state-highlight');
+                                        $('#warnMessage').text('Saved!');
+                                        $('#warnMessages').fadeIn('fast');
+                                        location.reload();
+                                    }
+                                }
+                                else {
+                                    //Display errors from event.message
+                                    $('#warnMessages').removeClass('ui-state-highlight');
+                                    $('#warnMessages').addClass('ui-state-error');
+                                    $('#errorMessage').text(event.message);
+                                    $('#errorMessages').fadeIn('fast');
+                                    $.enableDialogButtons(button);
+                                }
+                            }, {escape: true});
+                        }
+                    }
+                }
+            });
+        });
+      
+      //Setup jQuery date selector
+      $('input[id$="startDate"]').datepicker({ dateFormat: "mm/dd/yy"});
+      $('input[id$="endDate"]').datepicker({ dateFormat: "mm/dd/yy"});
+      $('input[id$="startDate"]').datepicker('setDate', new Date()); 
+      
+      //Re-write schedule link hrefs
+      $('span[id*="standardSchedule_scheduleLink"] :first-child, span[id*="schedule_scheduleLink"] :first-child').each(function(index,el){
+        //el.href='/apex/viewschedule?id='+el.href.match(/[^/]+$/)+'&accountid={!account.id}';
+        el.href='#';
+        el.onmouseover = null;
+      });
+      
+      $('span[id*="customSchedule_scheduleLink"] :first-child').each(function(index,el){
+        //el.href='/apex/viewCustomSchedule?customScheduleId='+el.href.match(/[^/]+$/);
+        el.href='#';
+        el.onmouseover = null;
+      });      
+      
+      //Click handler for "View" links
+      $('.viewProduct').click(function(){        
+        var id = $(this).attr('id');
+        console.log(id);
+        
+      	$('#npView_'+id).dialog({
+          title: 'Product History',
+          autoOpen: true,
+          resizable: false,
+          draggable: true,
+          closeOnEscape: true,
+          open: function(event, ui) { $(".ui-dialog-titlebar-close").css('display', 'none'); },
+          width: 740,
+          modal: true,
+          zIndex: 999,
+          buttons: {
+            "Done": function(){
+              $(this).dialog('close'); 
+            }
+          }
+        });                                
+      });
+
+      $('.viewPlan').click(function(){
+            var id = $(this).attr('id');
+            console.log(id);
+
+            $('#pView_'+id).dialog({
+                title: 'Plan History',
+                autoOpen: true,
+                resizable: false,
+                draggable: true,
+                closeOnEscape: true,
+                open: function(event, ui) { $(".ui-dialog-titlebar-close").css('display', 'none'); },
+                width: 740,
+                modal: true,
+                zIndex: 999,
+                buttons: {
+                    "Done": function(){
+                        $(this).dialog('close');
+                    }
+                }
+            });
+        });
+
+        //Utility method to get URL parameters
+      $.extend({
+        getParameterValueByName : function(name,loc){
+          name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+          var regexS = "[\\?&]" + name + "=([^&#]*)";
+          var regex = new RegExp(regexS);
+          var results = regex.exec(loc==null?window.location.search:loc);
+          if(results == null)
+            return "";
+          else{
+            results[1] = results[1].replace(/\+/g, " ");
+            results[1] = results[1].replace(/\.json/g, "");
+            return decodeURIComponent(results[1]);
+          }                  
+        }
+      });                               
+      
+      // hide product rows after 5 are displayed
+      $('.negotiatedPlanItem').each(function(i,o){
+            var rowsHidden = false;
+	      	$(o).find('.dataRow').each(function(j,p){
+		   		if(j >= 5){
+		   			$(p).hide();
+		   			rowsHidden=true;
+		   		}
+      		});
+	      	if(rowsHidden){
+	      		$(o).append('<div style="text-align:center; margin:10px 0 0 0; cursor:pointer;"><a id="showHidePlanRows" class="more-rows" onclick="showHidePlanRows();">View all plan changes</a></div>');
+	     	}
+     });	
+    }); 
+    
+    function showHidePlanRows(){
+    	$('.ui-dialog').find('tr:hidden').show();
+    	if($('#showHidePlanRows').hasClass('more-rows')){
+    		$('#showHidePlanRows').removeClass('more-rows');
+    		$('#showHidePlanRows').addClass('fewer-rows');
+    		$('#showHidePlanRows').text('View fewer plan changes');
+    	} else {
+    		$('#showHidePlanRows').addClass('more-rows');
+    		$('#showHidePlanRows').removeClass('fewer-rows');
+    		$('#showHidePlanRows').text('View all plan changes');
+    		
+    		$('.ui-dialog').each(function(i,o){
+    			if($(o).dialog('isOpen')){
+	    			$(o).find('tr').each(function(j,p){
+				   		if(j > 5){
+				   			$(p).hide();
+				   		}
+				      });
+			      };
+		      });
+    	}
+    }
+  </script>
+
+	<script type="text/javascript"> 
+    function openLookup(baseURL, width, modified, searchParam){
+      var originalbaseURL = baseURL;
+      var originalwidth = width;
+      var originalmodified = modified;
+      var originalsearchParam = searchParam;
+      
+      if (modified == '1') 
+        baseURL = baseURL + searchParam;
+   
+      var isCustomLookup = false;
+   
+      var txtId = $.getParameterValueByName('lknm', baseURL);
+       
+      baseURL = "/apex/CustomScheduleLookup?txt=" + txtId;
+      baseURL = baseURL + "&accountId=" + "{!account.id}";
+      
+      if (modified == '1') {
+        baseURL = baseURL + "&lksearch=" + searchParam;
+      }
+   
+      if(txtId.indexOf('schedule') > -1 ){
+        isCustomLookup = true;
+      }
+  
+      if(isCustomLookup == true){
+        openPopup(baseURL, "lookup", 350, 480, "width="+width+",height=480,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+      }
+      else {
+        if (modified == '1') originalbaseURL = originalbaseURL + originalsearchParam;
+        openPopup(originalbaseURL, "lookup", 350, 480, "width="+originalwidth+",height=480,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+      } 
+    }
+  </script>
+
+	<apex:sectionHeader title="Plan Edit" subtitle="{!account.Name} - {!plan.name}" />
+	<apex:pageMessages escape="false" />
+
+	<apex:form >
+		<apex:outputPanel layout="block" rendered="{!NOT(Plans.empty)}">
+			<div id="plans" class="pbBody">
+      <div class="ptBreadcrumb">&nbsp;«&nbsp;<a href="/{!account.id}">Back to Account</a></div>   
+      <br/>   
+			<table class="list " id="" border="0" cellpadding="0" cellspacing="0"
+				style="width: 100%">
+				<colgroup span="5"></colgroup>
+				<thead class="rich-table-thead">
+					<tr class="headerRow ">
+                        <apex:outputPanel rendered="{!plan.Quantity__c != null}">
+                            <th class="headerRow " scope="col" colspan="1" id="">
+                                <div id="">Action</div>
+                            </th>
+                        </apex:outputPanel>
+						<th class="headerRow " scope="col" colspan="1" id="">
+						<div id="">Plan Name</div>
+						</th>
+						<th class="headerRow " scope="col" colspan="1" id="">
+						<div id="">Start Date</div>
+						</th>
+						<th class="headerRow " scope="col" colspan="1" id="">
+						<div id="">End Date</div>
+						</th>
+						<th class="headerRow " scope="col" colspan="1" id="">
+						<div id="">Billable Type</div>
+						</th>
+						<apex:outputPanel rendered="{!plan.Quantity__c != null}">
+                        <th class="headerRow " scope="col" colspan="1" id="">
+                            <div id="">Quantity</div>
+                        </th>
+                        <th class="headerRow " scope="col" colspan="1" id="">
+                            <div id="">Quantity Start Date</div>
+                        </th>
+                        <th class="headerRow " scope="col" colspan="1" id="">
+                            <div id="">Future Quantity Changes</div>
+                        </th>
+                        </apex:outputPanel>
+					</tr>
+				</thead>
+				<tbody id="">
+
+					<tr class="dataRow" onmouseover="if (window.hiOn){hiOn(this);} "
+						onmouseout="if (window.hiOff){hiOff(this);} "
+						onblur="if (window.hiOff){hiOff(this);}"
+						onfocus="if (window.hiOn){hiOn(this);}">
+                        <apex:outputPanel rendered="{!plan.Quantity__c != null}">
+						<td class="actionColumn" id="" colspan="1" style="cursor: pointer">
+							<span id="{!plan.id}" class="actions">
+								<a href="" id="{!plan.id}" class="actionLink viewPlan" title="History - {!plan.name}">History</a> |
+								<a href="" id="{!plan.id}" class="actionLink activateEdit" title="Edit - {!plan.name}">Edit</a>
+							</span>
+							<span id="{!plan.id}" style="display: none" class="saveActions">
+								<a href="" class="actionLink savePlanEdits" id="" title="Save - {!plan.name}">Save</a> |
+								<a href="" id="{!plan.id}" class="actionLink cancelEdit" title="Cancel - {!plan.name}">Cancel</a>
+							</span>
+						</td>
+                        </apex:outputPanel>
+						<td class="dataCell  " id="" colspan="1"><span id="">{!plan.name}</span>
+						</td>
+						<td class="dataCell  " id="" colspan="1"><span id=""><apex:outputField value="{!plan.startDate__c}" /></span></td>
+						<td class="dataCell  " id="" colspan="1"><span id=""><apex:outputField value="{!plan.endDate__c}" /></span></td>
+						<td class="dataCell  " id="" colspan="1"><span id="">{!plan.billableType__c}</span>
+						<apex:outputPanel rendered="{!plan.Quantity__c != null}">
+						<td class="dataCell  " id="" colspan="1">
+							<span id="{!plan.id}" class="output">
+								<apex:outputField id="quantityOld" value="{!plan.Quantity__c}"></apex:outputField>
+							</span>
+                        <span id="{!plan.id}" style="display: none" class="edit">
+								<apex:inputField id="quantity" value="{!plan.Quantity__c}"></apex:inputField>
+							</span>
+					    </td>
+                        <td class="dataCell  " id="" colspan="1">
+							<span id="">
+								<apex:outputField value="{!plan.quantityStartDate__c}" />
+							</span>
+						</td>
+                        <td class="dataCell  " id="" colspan="1">
+							<span id="">
+                            {!futureQuantityChanges}
+							</span>
+                        </td>
+						</apex:outputPanel>
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="5"
+							style="padding: 0px; margin: 0px; border: 0px; background-color: #ccc;">
+						<div id="{!plan.id}-Products" style="">
+						<table class="list " border="0" cellpadding="0" cellspacing="0"
+							style="padding: 5px 0px 5px 15px; border: 0px; width: 100%">
+							<colgroup span="5"></colgroup>
+							<thead class="rich-table-thead">
+								<tr class="headerRow ">
+									<th class="headerRow " scope="col" colspan="1" id="">
+									<div id="">Action</div>
+									</th>
+									<th class="headerRow " scope="col" colspan="1" id="">
+									<div id="">Product Name</div>
+									</th>
+									<th class="headerRow " scope="col" colspan="1" id="">
+									<div id="">Single Charge</div>
+									</th>
+									<th class="headerRow " scope="col" colspan="1" id="">
+									<div id="">Recurring Charge</div>
+									</th>
+									<th class="headerRow " scope="col" colspan="1" id="">
+									<div id="">Rate Set</div>
+									</th>
+									<th class="headerRow " scope="col" colspan="1" id="">
+									<div id="">Future Plan Changes</div>
+									</th>
+								</tr>
+							</thead>
+                            <tbody id="">
+                            <apex:repeat value="{!plan.NegotiatedProducts__r}" var="product">
+                                <tr class="dataRow"
+                                    onmouseover="if (window.hiOn){hiOn(this);} "
+                                    onmouseout="if (window.hiOff){hiOff(this);} "
+                                    onblur="if (window.hiOff){hiOff(this);}"
+                                    onfocus="if (window.hiOn){hiOn(this);}">
+                                    <td class="actionColumn" id="" colspan="1"
+                                        style="cursor: pointer"><span id="{!product.id}"
+                                                                      class="actions"><a href="" id="{!product.id}"
+                                                                                         class="actionLink viewProduct"
+                                                                                         title="History - {!product.name}">History</a> | <a
+                                            href="" id="{!product.id}" class="actionLink activateEdit"
+                                            title="Edit - {!product.name}">Edit</a></span> <span id="{!product.id}"
+                                                                                                 style="display: none"
+                                                                                                 class="saveActions"><a
+                                            href=""
+                                            class="actionLink saveEdits" id="" title="Save - {!product.name}">Save</a> | <a
+                                            href="" id="{!product.id}" class="actionLink cancelEdit"
+                                            title="Cancel - {!product.name}">Cancel</a></span></td>
+                                    <td class="dataCell  " id="" colspan="1"><span id="">{!product.name}</span>
+                                    </td>
+                                    <td class="dataCell  " id="" colspan="1">
+										<span id="{!product.id}" class="output">
+											<apex:outputField id="singleChargeOld" value="{!currentNpOverrides[product.id].singleChargeOverride.singleCharge__c}"/>
+										</span>
+                                        <span id="{!product.id}" style="display: none" class="edit">
+											<apex:inputField id="singleCharge" required="false" value="{!currentNpOverrides[product.id].singleChargeOverride.singleCharge__c}"/>
+										</span>
+                                    </td>
+                                    <td class="dataCell  " id="" colspan="1"><span
+                                            id="{!product.id}" class="output"><apex:outputField id="recurringChargeOld"
+                                                                                                value="{!currentNpOverrides[product.id].recurringChargeOverride.recurringCharge__c}"/></span>
+                                        <span id="{!product.id}" style="display: none" class="edit"><apex:inputField id="recurringCharge" required="false"
+                                                value="{!currentNpOverrides[product.id].recurringChargeOverride.recurringCharge__c}"/></span>
+                                    </td>
+                                    <td class="dataCell  " id="" colspan="1">
+                                        <!-- Render one of these 3 based on the rendered conditions" -->
+                                        <span id="{!product.id}" class="output"><a id="standardSchedule_scheduleLinkOld"
+                                                                                   href="/apex/viewSchedule?{!currentNpOverrides[product.id].viewScheduleURLParams}"
+                                                                                   target="_parent"><apex:outputField value="{!currentNpOverrides[product.id].scheduleOverride['scheduleName__c']}"></apex:outputField></a></span>
+                                        <span id="{!product.id}" class="output"><apex:outputField id="customSchedule_scheduleLinkOld"
+                                                value="{!currentNpOverrides[product.id].scheduleOverride.customSchedule__c}"
+                                                rendered="{!currentNpOverrides[product.id].hasScheduleOverride && currentNpOverrides[product.id].hasCustomSchedule}"/></span>
+                                        <span id="{!product.id}" class="output"><apex:outputField id="standardSchedule_scheduleLinkOld"
+                                                value="{!currentNpOverrides[product.id].scheduleOverride.standardSchedule__c}"
+                                                rendered="{!currentNpOverrides[product.id].hasScheduleOverride && !currentNpOverrides[product.id].hasCustomSchedule}"/></span>
+                                        <span id="{!product.id}" class="output"><apex:outputField id="schedule_scheduleLinkOld"
+                                                value="{!currentNpOverrides[product.id].scheduleOverride.schedule__c}"
+                                                rendered="{!!currentNpOverrides[product.id].hasScheduleOverride}"/></span>
+
+                                        <!-- Render one of these 3 based on the rendered conditions" -->
+                                        <span id="{!product.id}" style="display: none" class="edit"><apex:inputField id="customSchedule_schedule" required="false"
+                                                value="{!currentNpOverrides[product.id].scheduleOverride.customSchedule__c}"
+                                                rendered="{!currentNpOverrides[product.id].hasScheduleOverride && currentNpOverrides[product.id].hasCustomSchedule}"/></span>
+                                        <span id="{!product.id}" style="display: none" class="edit"><apex:inputField id="standardSchedule_schedule" required="false"
+                                                value="{!currentNpOverrides[product.id].scheduleOverride.standardSchedule__c}"
+                                                rendered="{!currentNpOverrides[product.id].hasScheduleOverride && !currentNpOverrides[product.id].hasCustomSchedule}"/></span>
+                                        <span id="{!product.id}" style="display: none" class="edit"><apex:inputField id="schedule_schedule" required="false"
+                                                value="{!currentNpOverrides[product.id].scheduleOverride.schedule__c}"
+                                                rendered="{!!currentNpOverrides[product.id].hasScheduleOverride}"/></span>
+                                    </td>
+                                    <td class="dataCell  " id="" colspan="1"><span id=""><apex:outputText value="{!IF(npFutureChanges[product.id], 'Yes', 'No')}"/></span></td>
+                                </tr>
+                            </apex:repeat>
+                            </tbody>
+						</table>
+						</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+		</apex:outputPanel>
+		<apex:outputPanel rendered="{!(Plans.empty)}">
+			<table class="list" border="0" cellspacing="0" cellpadding="0">
+				<tbody>
+					<tr class="headerRow">
+						<th scope="col" class="noRowsHeader" style="font-weight: normal">No
+						records to display</th>
+					</tr>
+				</tbody>
+			</table>
+		</apex:outputPanel>
+
+	</apex:form>
+
+	<!-- Save dialog -->
+	<div class="saveEditConfirm" style="display: none"><apex:form >
+		<apex:pageBlock tabStyle="Account">
+			<div id="errorMessages" class="ui-state-error ui-corner-all"
+				style="padding: 0 .7em .7em .7em; margin-bottom: 5px; display: none">
+			<p><span class="ui-icon ui-icon-alert"
+				style="float: left; margin-right: .3em;"></span><span
+				id="errorMessage"></span></p>
+			</div>
+
+			<div id="warnMessages" class="ui-state-highlight ui-corner-all"
+				style="padding: 0 .7em .7em .7em; margin-bottom: 5px; display: none">
+			<p><span class="ui-icon ui-icon-alert"
+				style="float: left; margin-right: .3em;"></span><span
+				id="warnMessage"></span></p>
+			</div>
+
+			<!--
+        <apex:pageBlockSection columns="1" title="Product">
+          <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Product Name" for="productName"/>
+            <apex:outputLabel id="productName" value="" style="margin-top: -2px" />          
+          </apex:pageBlockSectionItem>
+          <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Single Charge" for="singleCharge"/>
+            <apex:outputLabel id="singleCharge" value="" style="margin-top: -2px" />          
+          </apex:pageBlockSectionItem>
+          <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Recurring Charge" for="recurringCharge"/>
+            <apex:outputLabel id="recurringCharge" value="" style="margin-top: -2px" />          
+          </apex:pageBlockSectionItem>
+          <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Schedule" for="schedule"/>
+            <apex:outputLabel id="schedule" value="" style="margin-top: -2px" />          
+          </apex:pageBlockSectionItem>        
+        </apex:pageBlockSection>
+        -->
+			<apex:pageBlockSection columns="1" title="Change starts on...">
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="Start Date" for="startDate" />
+					<apex:inputText id="startDate" required="true"
+						style="margin-top: -2px" />
+				</apex:pageBlockSectionItem>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form></div>
+	<br />
+	<!-- View dialog -->
+	<div class="viewProducts" style=""><apex:form >
+		<apex:repeat value="{!plan.NegotiatedProducts__r}" var="np">
+			<div id="npView_{!np.id}" class="pbBody negotiatedPlanItem"
+				style="display: none">
+			<table class="list " id="" border="0" cellpadding="0" cellspacing="0"
+				style="width: 100%">
+				<colgroup span="4"></colgroup>
+				<thead class="rich-table-thead">
+					<tr class="headerRow ">
+						<th class="headerRow" scope="col" colspan="1" id="">
+						<div id="">Start Date</div>
+						</th>
+						<th class="headerRow" scope="col" colspan="1" id="">
+						<div id="">End Date</div>
+						</th>
+						<th class="headerRow" scope="col" colspan="1" id="">
+						<div id="">Type</div>
+						</th>
+						<th class="headerRow" scope="col" colspan="1" id="">
+						<div id="">Update</div>
+						</th>
+						<th class="headerRow" scope="col" colspan="1" id="">
+						<div id="">Change Date</div>
+						</th>
+            <th class="headerRow" scope="col" colspan="1" id="">
+            <div id="">Changed By</div>
+            </th>            
+					</tr>
+				</thead>
+				<tbody id="">          
+					<apex:repeat value="{!npOverrides[np.id]['singleChargeOverrides']}"
+						var="sco">
+						<tr class="dataRow" onmouseover="if (window.hiOn){hiOn(this);}"
+							onmouseout="if (window.hiOff){hiOff(this);}"
+							onblur="if (window.hiOff){hiOff(this);}"
+							onfocus="if (window.hiOn){hiOn(this);}">
+							<td class="dataCell" id="" colspan="1"><span id=""><apex:outputField value="{!sco.startDate__c}" /></span></td>
+							<td class="dataCell" id="" colspan="1"><span id=""><apex:outputField value="{!sco.endDate__c}" /></span></td>
+							<td class="dataCell" id="" colspan="1"><span id=""><apex:outputText value="Single Charge" /></span></td>
+							<td class="dataCell" id="" colspan="1"><span id=""><apex:outputField value="{!sco.singleCharge__c}" /></span></td>
+							<td class="dataCell" id="" colspan="1"><span id=""><apex:outputField value="{!sco.LastModifiedDate}" /></span></td>
+						</tr>
+					</apex:repeat>          
+					<apex:repeat value="{!npOverrides[np.id]['recurringChargeOverrides']}"
+						var="rco">
+						<tr class="dataRow" onmouseover="if (window.hiOn){hiOn(this);}"
+							onmouseout="if (window.hiOff){hiOff(this);}"
+							onblur="if (window.hiOff){hiOff(this);}"
+							onfocus="if (window.hiOn){hiOn(this);}">
+							<td class="dataCell" id="" colspan="1"><span id=""><apex:outputField value="{!rco.startDate__c}" /></span></td>
+							<td class="dataCell" id="" colspan="1"><span id=""><apex:outputField value="{!rco.endDate__c}" /></span></td>
+							<td class="dataCell" id="" colspan="1"><span id=""><apex:outputText value="Recurring Charge" /></span></td>
+							<td class="dataCell" id="" colspan="1"><span id=""><apex:outputField value="{!rco.recurringCharge__c}" />,<apex:outputField value="{!rco.recurringChargeFrequency__c}" /></span></td>
+							<td class="dataCell" id="" colspan="1"><span id=""><apex:outputField value="{!rco.LastModifiedDate}" /></span></td>
+              <td class="dataCell" id="" colspan="1"><span id=""><apex:outputField value="{!rco.LastModifiedBy.Name}" /></span></td>
+						</tr>
+					</apex:repeat>
+					<apex:repeat value="{!npOverrides[np.id]['scheduleOverrides']}"
+						var="so">
+						<tr class="dataRow" onmouseover="if (window.hiOn){hiOn(this);}"
+							onmouseout="if (window.hiOff){hiOff(this);}"
+							onblur="if (window.hiOff){hiOff(this);}"
+							onfocus="if (window.hiOn){hiOn(this);}">
+							<td class="dataCell" id="" colspan="1"><span id=""><apex:outputField value="{!so.startDate__c}" /></span></td>
+							<td class="dataCell" id="" colspan="1"><span id=""><apex:outputField value="{!so.endDate__c}" /></span></td>
+							<td class="dataCell" id="" colspan="1"><span id=""><apex:outputText value="Schedule" /></span></td>
+							<td class="dataCell" id="" colspan="1"><span id=""><apex:outputField id="scheduleLink_2" value="{!so.scheduleName__c}" /></span></td>
+							<td class="dataCell" id="" colspan="1"><span id=""><apex:outputField value="{!so.LastModifiedDate}" /></span></td>
+              <td class="dataCell" id="" colspan="1"><span id=""><apex:outputField value="{!so.LastModifiedBy.Name}" /></span></td>
+						</tr>
+					</apex:repeat>
+				</tbody>
+			</table>
+			</div>
+		</apex:repeat>
+	</apex:form></div>
+
+    <div class="viewPlans" style=""><apex:form >
+        <div id="pView_{!plan.id}" class="pbBody negotiatedPlanItem"
+             style="display: none">
+                <table class="list " id="" border="0" cellpadding="0" cellspacing="0"
+                       style="width: 100%">
+                    <colgroup span="4"></colgroup>
+                    <thead class="rich-table-thead">
+                    <tr class="headerRow ">
+                        <th class="headerRow" scope="col" colspan="1" id="">
+                            <div id="">Start Date</div>
+                        </th>
+                        <th class="headerRow" scope="col" colspan="1" id="">
+                            <div id="">End Date</div>
+                        </th>
+                        <th class="headerRow" scope="col" colspan="1" id="">
+                            <div id="">Quantity</div>
+                        </th>
+                        <th class="headerRow" scope="col" colspan="1" id="">
+                            <div id="">Change Date</div>
+                        </th>
+                        <th class="headerRow" scope="col" colspan="1" id="">
+                            <div id="">Changed By</div>
+                        </th>
+                    </tr>
+                    </thead>
+
+                    <tbody id="">
+                    <apex:repeat value="{!plan.PlanQuantityHistorys__r}" var="pqh">
+                        <tr class="dataRow" onmouseover="if (window.hiOn){hiOn(this);}"
+                            onmouseout="if (window.hiOff){hiOff(this);}"
+                            onblur="if (window.hiOff){hiOff(this);}"
+                            onfocus="if (window.hiOn){hiOn(this);}">
+                            <td class="dataCell" id="" colspan="1"><span id=""><apex:outputField value="{!pqh.startDate__c}" /></span></td>
+                            <td class="dataCell" id="" colspan="1"><span id=""><apex:outputField value="{!pqh.endDate__c}" /></span></td>
+                            <td class="dataCell" id="" colspan="1"><span id=""><apex:outputField value="{!pqh.quantity__c}" /></span></td>
+                            <td class="dataCell" id="" colspan="1"><span id=""><apex:outputField value="{!pqh.LastModifiedDate}" /></span></td>
+                            <td class="dataCell" id="" colspan="1"><span id=""><apex:outputField value="{!pqh.LastModifiedBy.Name}" /></span></td>
+                        </tr>
+                    </apex:repeat>
+                    </tbody>
+                </table>
+        </div>
+    </apex:form></div>
+</apex:page>

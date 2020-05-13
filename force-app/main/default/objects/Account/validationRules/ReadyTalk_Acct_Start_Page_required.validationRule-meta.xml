@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReadyTalk_Acct_Start_Page_required</fullName>
+    <active>true</active>
+    <description>user is sf admin</description>
+    <errorConditionFormula>AND(ISPICKVAL(    Start_Page__c , &quot;&quot;   ),Provisioned__c, $User.ReadyTalk_Exempt__c &lt;&gt; TRUE,
+RecordType.DeveloperName = &quot;ReadyTalk_Account&quot;)</errorConditionFormula>
+    <errorDisplayField>Start_Page__c</errorDisplayField>
+    <errorMessage>Value required to be provisioned</errorMessage>
+</ValidationRule>

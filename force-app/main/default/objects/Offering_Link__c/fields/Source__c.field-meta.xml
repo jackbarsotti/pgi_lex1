@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Which Offering does this link operate on?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Which Offering does this link operate on?</inlineHelpText>
+    <label>Source</label>
+    <referenceTo>Offerings__c</referenceTo>
+    <relationshipLabel>Add Ons</relationshipLabel>
+    <relationshipName>Offering_Links_AddOns</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

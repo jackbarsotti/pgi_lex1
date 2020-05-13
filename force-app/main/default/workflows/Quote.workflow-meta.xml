@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Quote_Rejected_by_Services_Team</fullName>
+        <description>iMC - Quote Rejected by Services Team</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>iMC_Internal_Company_Alerts/iMC_Quote_Rejected_by_Services</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Notify_Requester_the_Quote_has_been_declined</fullName>
+        <description>RT_Notify Requester the Quote has been declined</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Quote_Declined</template>
+    </alerts>
+    <alerts>
+        <fullName>RT_Quote_Approved_Email</fullName>
+        <description>RT_Quote Approved Email</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ReadyTalk_Email_Templates/RT_Quote_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>iMC_Quote_Approved</fullName>
+        <description>iMC - Quote Final Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>iMC_Internal_Company_Alerts/iMC_Quote_Final_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>iMC_Quote_Initial_Order_Term</fullName>
+        <description>iMC - Quote, Initial Order Term</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>jason.klovski@pgi.com.mainsite</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>steve.anderson@pgi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>iMC_Internal_Company_Alerts/iMC_Initial_Order_Term_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>iMC_Quote_Reject_by_Finance</fullName>
+        <description>iMC - Quote Reject by Finance</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>iMC_Internal_Company_Alerts/iMC_Quote_Rejected_by_Finance</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>RT_Broadcast_Audio_NoticeDeletedifOpAss</fullName>
+        <description>Broadcast Audio Notice Deleted if Op Assist Direct or Premium Dial Rates Removed</description>
+        <field>Broadcast_Audio_Notice__c</field>
+        <name>RT_Broadcast Audio NoticeDeletedifOpAss</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Broadcast_Audio_Notice_Field_Update</fullName>
+        <description>Broadcast Audio Notice with Op Assist Direct or Premium Dial is filled in. The dial-out rate that will be applied to broadcast audio lines for op assisted calls. This is a new charge with Intercall.</description>
+        <field>Broadcast_Audio_Notice__c</field>
+        <literalValue>If Broadcast Audio is enabled on an operator-assisted audio event, the dial-out rate will be applied.</literalValue>
+        <name>RT_Broadcast Audio Notice Field Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Contract_Cust_Date_Signed_Hand_Raiser</fullName>
+        <field>Customer_Date_Signed__c</field>
+        <literalValue>.</literalValue>
+        <name>RT_Customer Date Signed Hand Raiser</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Contract_Cust_Signer_Name_Hand_Raiser</fullName>
+        <field>Customer_Signer_Name__c</field>
+        <literalValue>.</literalValue>
+        <name>RT_Customer Signer Name Hand Raiser</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Contract_Cust_Signer_Sig_Hand_Raiser</fullName>
+        <field>Customer_Signer_Signature__c</field>
+        <literalValue>.</literalValue>
+        <name>RT_Contract_Cust Signer Sig Hand Raiser</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Contract_RT_Date_Signed_Hand_Raiser</fullName>
+        <field>ReadyTalk_Date_Signed__c</field>
+        <literalValue>.</literalValue>
+        <name>RT_Contract RT Date Signed Hand Raiser</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Contract_RT_Signer_Name_Hand_Raiser</fullName>
+        <field>ReadyTalk_Signer_Name__c</field>
+        <literalValue>.</literalValue>
+        <name>RT_Contract RT Signer Name Hand Raiser</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Contract_RT_Signer_Sig_Hand_Raiser</fullName>
+        <field>ReadyTalk_Signer_Signature__c</field>
+        <literalValue>.</literalValue>
+        <name>RT_Contract RT Signer Sig Hand Raiser</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_CustSignerDateAddendum_Docusign_Tags</fullName>
+        <field>Customer_Date_Signed__c</field>
+        <literalValue>\d1\</literalValue>
+        <name>RT_CustSignerDateAddendum Docusign Tags</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_CustSignerNameAddendum_Docusign_Tags</fullName>
+        <field>Customer_Signer_Name__c</field>
+        <literalValue>\n1\</literalValue>
+        <name>RT_CustSignerNameAddendum Docusign Tags</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Cust_Date_Signed_Addendum_Hand_Raiser</fullName>
+        <field>Customer_Date_Signed__c</field>
+        <literalValue>.</literalValue>
+        <name>RT_Cust Date Signed Addendum Hand Raiser</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Cust_Signature_Addendum_Docusign_Tags</fullName>
+        <field>Customer_Signer_Signature__c</field>
+        <literalValue>\s1\</literalValue>
+        <name>RT_Cust Signature Addendum Docusign Tags</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Cust_Signature_Addendum_Hand_Raiser</fullName>
+        <field>Customer_Signer_Signature__c</field>
+        <literalValue>.</literalValue>
+        <name>RT_Cust Signature Addendum Hand Raiser</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Cust_Signer_Name_Addendum_Hand_Raiser</fullName>
+        <field>Customer_Signer_Name__c</field>
+        <literalValue>.</literalValue>
+        <name>RT_Cust Signer Name Addendum Hand Raiser</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_CustomerDateSignedAddDocusignTag</fullName>
+        <field>Customer_Date_Signed__c</field>
+        <literalValue>\d1\</literalValue>
+        <name>RT_CustomerDateSignedAddDocusignTag</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_CustomerDateSignedAdd_Docusign_Tag</fullName>
+        <field>Customer_Date_Signed__c</field>
+        <literalValue>\d1\</literalValue>
+        <name>RT_CustomerDateSignedAdd Docusign Tag</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_CustomerSignerNameAdd_Docusign_Tags</fullName>
+        <field>Customer_Signer_Name__c</field>
+        <literalValue>\n1\</literalValue>
+        <name>RT_CustomerSignerNameAdd Docusign Tags</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_CustomerSignerSigAdd_Docusign_T</fullName>
+        <field>Customer_Signer_Signature__c</field>
+        <literalValue>\s1\</literalValue>
+        <name>RT_CustomerSignerSigAdd Docusign T</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_CustomerSignerSigAdd_Docusign_Tag</fullName>
+        <field>Customer_Signer_Signature__c</field>
+        <literalValue>\s1\</literalValue>
+        <name>RT_CustomerSignerSigAdd Docusign Tag</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_CustomerSigner_Name_Add_Docusign_Tags</fullName>
+        <field>Customer_Signer_Name__c</field>
+        <literalValue>\n1\</literalValue>
+        <name>RT_CustomerSigner Name Add Docusign Tags</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Customer_DateSignedUpdate_to_Blank</fullName>
+        <field>Customer_Date_Signed__c</field>
+        <name>RT_Customer DateSignedUpdate to Blank</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Customer_Date_Signed_Hand_Raiser</fullName>
+        <field>Customer_Date_Signed__c</field>
+        <literalValue>.</literalValue>
+        <name>RT_Customer Date Signed Hand Raiser</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Customer_Signer_Name_Hand_Raiser</fullName>
+        <field>Customer_Signer_Name__c</field>
+        <literalValue>.</literalValue>
+        <name>RT_Customer Signer Name Hand Raiser</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Customer_Signer_Name_Update_to_Blank</fullName>
+        <field>Customer_Signer_Name__c</field>
+        <name>RT_Customer Signer Name Update to Blank</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Customer_Signer_Sig_Hand_Raiser</fullName>
+        <field>Customer_Signer_Signature__c</field>
+        <literalValue>.</literalValue>
+        <name>RT_Customer Signer Sig Hand Raiser</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Customer_Signer_SignatureUpdatetoBlan</fullName>
+        <field>Customer_Signer_Signature__c</field>
+        <name>RT_Customer Signer SignatureUpdatetoBlan</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Date_Signed_Add_Docusign_Contract</fullName>
+        <field>ReadyTalk_Date_Signed__c</field>
+        <literalValue>\d2\</literalValue>
+        <name>RT Date Signed Add Docusign</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Date_Signed_Addendum_Hand_Raiser</fullName>
+        <field>ReadyTalk_Date_Signed__c</field>
+        <name>RT Date Signed Addendum Hand Raiser</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Date_Signed_Update_Blank</fullName>
+        <field>ReadyTalk_Date_Signed__c</field>
+        <name>RT Date Signed Update to Blank</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Date_Signed_Updated_to_Blank</fullName>
+        <field>ReadyTalk_Date_Signed__c</field>
+        <name>RT Date Signed Updated to Blank</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Large_Quote_Apvl_Status_Approved</fullName>
+        <field>Quote_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>RT_Large Quote Apvl Status Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Quote_Approval_Status_Approved</fullName>
+        <field>Quote_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>RT_Quote Approval Status - Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Signature_Addendum_Hand_Raiser</fullName>
+        <field>ReadyTalk_Signer_Signature__c</field>
+        <name>RT Signature Addendum Hand Raiser</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Signature_Addendum_Update_to_Blank</fullName>
+        <field>ReadyTalk_Signer_Signature__c</field>
+        <name>RT Signature Addendum Update to Blank</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Signer_Date_Addendum_Update_to_Blank</fullName>
+        <field>ReadyTalk_Date_Signed__c</field>
+        <name>RT Signer Date Addendum Update to Blank</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Signer_Name_Add_Docusign_Contract</fullName>
+        <field>ReadyTalk_Signer_Name__c</field>
+        <literalValue>\n2\</literalValue>
+        <name>RT Signer Name Add Docusign Tags</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Signer_Name_Addendum_Hand_Raiser</fullName>
+        <field>ReadyTalk_Signer_Name__c</field>
+        <name>RT Signer Name Addendum Hand Raiser</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Signer_Name_Addendum_Update_to_Blank</fullName>
+        <field>ReadyTalk_Date_Signed__c</field>
+        <name>RT Signer Name Addendum Update to Blank</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Signer_Name_Remove_Tags</fullName>
+        <field>ReadyTalk_Signer_Name__c</field>
+        <name>RT Signer Name Remove Tags</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Signer_Name_Update_to_Blank</fullName>
+        <field>ReadyTalk_Signer_Name__c</field>
+        <name>RT Signer Name Update to Blank</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Signer_Signature_Add_Docusign_Contrac</fullName>
+        <field>ReadyTalk_Signer_Signature__c</field>
+        <literalValue>\s2\</literalValue>
+        <name>RT Signer Signature Add Docusign Tags</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Signer_Signature_Update_Blank</fullName>
+        <field>ReadyTalk_Signer_Signature__c</field>
+        <name>RT Signer Signature Update to Blank</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Signer_Signature_Update_to_Blank</fullName>
+        <field>ReadyTalk_Signer_Signature__c</field>
+        <name>RT Signer Signature Update to Blank</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Update_Approval_Status_to_Declined</fullName>
+        <field>Quote_Approval_Status__c</field>
+        <literalValue>Declined</literalValue>
+        <name>RT_Update Approval Status to Declined</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Update_Approval_Status_to_Pending</fullName>
+        <field>Quote_Approval_Status__c</field>
+        <literalValue>Pending</literalValue>
+        <name>RT_Update Approval Status to Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Update_Lg_Quote_Aprvl_Status_Declined</fullName>
+        <field>Quote_Approval_Status__c</field>
+        <literalValue>Declined</literalValue>
+        <name>RT_Update Lg Quote Aprvl Status Declined</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Update_Quote_Approval_Status_Approved</fullName>
+        <field>Quote_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>RT_Update Quote Approval Status Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Update_Quote_Approval_Status_Declined</fullName>
+        <field>Quote_Approval_Status__c</field>
+        <literalValue>Declined</literalValue>
+        <name>RT_Update Quote Approval Status Declined</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RT_Update_Quote_Expiration_Field</fullName>
+        <field>ExpirationDate</field>
+        <formula>Today()  + 30</formula>
+        <name>RT_Update Quote Expiration Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Tax_for_Mod_GBP</fullName>
+        <field>Tax__c</field>
+        <formula>(0.2)</formula>
+        <name>Update Tax for Mod GBP</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Quote_Expiration_Date</fullName>
+        <field>ExpirationDate</field>
+        <formula>IF(
+CASE(MOD(DATEVALUE (CreatedDate +30) - DATE(1900, 1, 7), 7),
+0, 0,
+6, 0,
+1) &lt;&gt;0, CreatedDate +30,
+IF( 
+CASE(MOD(DATEVALUE (CreatedDate +31) - DATE(1900, 1, 7), 7),
+0, 0,
+6, 0,
+1) &lt;&gt; 0, CreatedDate +31,
+IF(
+CASE(MOD(DATEVALUE (CreatedDate +32) - DATE(1900, 1, 7), 7),
+0, 0,
+6, 0,
+1) &lt;&gt; 0, CreatedDate +32, CreatedDate +30
+)
+)
+)</formula>
+        <name>iMC - Quote, Expiration Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Quote_Service_Status_Approved</fullName>
+        <field>Service_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>iMC - Quote, Service Status, Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Quote_Service_Status_Update</fullName>
+        <field>Service_Status__c</field>
+        <literalValue>Update Quote</literalValue>
+        <name>iMC - Quote, Service Status, Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Quote_Status_Approved</fullName>
+        <field>Status</field>
+        <literalValue>Approved</literalValue>
+        <name>iMC - Quote, Status, Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Quote_Status_FN_Approved</fullName>
+        <description>Used to trigger the secondary quote approval process for Mark Fordham.</description>
+        <field>Status</field>
+        <literalValue>Frank Pre-Approved</literalValue>
+        <name>iMC - Quote, Status, FN Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>iMC_Quote_Status_Needs_Review</fullName>
+        <field>Status</field>
+        <literalValue>Needs Review</literalValue>
+        <name>iMC - Quote, Status, Needs Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>RT_Approval Signatures - Addendum</fullName>
+        <actions>
+            <name>RT_CustSignerDateAddendum_Docusign_Tags</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_CustSignerNameAddendum_Docusign_Tags</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Cust_Signature_Addendum_Docusign_Tags</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Signature_Addendum_Update_to_Blank</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Signer_Date_Addendum_Update_to_Blank</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Signer_Name_Addendum_Update_to_Blank</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Quote.Contractual_Stage__c</field>
+            <operation>equals</operation>
+            <value>Addendum</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Quote.Sign_By_Hand__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Quote.RecordTypeId</field>
+            <operation>contains</operation>
+            <value>ReadyTalk</value>
+        </criteriaItems>
+        <description>This flow will pull Customer Approval Signatures to Quote template as Docusign tags when Addendum is chose from the Contractual Stage Field</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Approval Signatures - Addendum Hand Signer</fullName>
+        <actions>
+            <name>RT_Cust_Date_Signed_Addendum_Hand_Raiser</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Cust_Signature_Addendum_Hand_Raiser</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Cust_Signer_Name_Addendum_Hand_Raiser</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Date_Signed_Addendum_Hand_Raiser</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Signature_Addendum_Hand_Raiser</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Signer_Name_Addendum_Hand_Raiser</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Quote.Contractual_Stage__c</field>
+            <operation>equals</operation>
+            <value>Addendum</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Quote.Sign_By_Hand__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Quote.RecordTypeId</field>
+            <operation>contains</operation>
+            <value>ReadyTalk</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Approval Signatures - Contract</fullName>
+        <actions>
+            <name>RT_CustomerDateSignedAddDocusignTag</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_CustomerSignerSigAdd_Docusign_Tag</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_CustomerSigner_Name_Add_Docusign_Tags</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Date_Signed_Add_Docusign_Contract</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Signer_Name_Add_Docusign_Contract</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Signer_Signature_Add_Docusign_Contrac</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Quote.Contractual_Stage__c</field>
+            <operation>equals</operation>
+            <value>Contract</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Quote.Sign_By_Hand__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Quote.RecordTypeId</field>
+            <operation>contains</operation>
+            <value>ReadyTalk</value>
+        </criteriaItems>
+        <description>This flow will pull Customer and RT Approval Signatures to Quote template as Docusign tags when Contract is chose from the Contractual Stage Field</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Approval Signatures - Contract Hand Signer</fullName>
+        <actions>
+            <name>RT_Contract_Cust_Date_Signed_Hand_Raiser</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Contract_Cust_Signer_Name_Hand_Raiser</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Contract_Cust_Signer_Sig_Hand_Raiser</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Contract_RT_Date_Signed_Hand_Raiser</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Contract_RT_Signer_Name_Hand_Raiser</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Contract_RT_Signer_Sig_Hand_Raiser</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Quote.Contractual_Stage__c</field>
+            <operation>equals</operation>
+            <value>Contract</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Quote.Sign_By_Hand__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Quote.RecordTypeId</field>
+            <operation>contains</operation>
+            <value>ReadyTalk</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Approval Signatures - Pricing Agreement</fullName>
+        <actions>
+            <name>RT_CustomerDateSignedAdd_Docusign_Tag</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_CustomerSignerNameAdd_Docusign_Tags</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_CustomerSignerSigAdd_Docusign_T</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Date_Signed_Update_Blank</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Signer_Name_Remove_Tags</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Signer_Signature_Update_Blank</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Quote.Contractual_Stage__c</field>
+            <operation>equals</operation>
+            <value>Pricing Agreement</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Quote.Sign_By_Hand__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Quote.RecordTypeId</field>
+            <operation>contains</operation>
+            <value>ReadyTalk</value>
+        </criteriaItems>
+        <description>This flow will send the Customer Approval Signatures to Quote Template as Docusign Tags when Pricing Agreement is chose from the Contractual Stage Field and clear RT signatures</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Approval Signatures - Pricing Agreement Hand Signer</fullName>
+        <actions>
+            <name>RT_Customer_Date_Signed_Hand_Raiser</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Customer_Signer_Name_Hand_Raiser</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Customer_Signer_Sig_Hand_Raiser</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Quote.Contractual_Stage__c</field>
+            <operation>equals</operation>
+            <value>Pricing Agreement</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Quote.Sign_By_Hand__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Quote.RecordTypeId</field>
+            <operation>contains</operation>
+            <value>ReadyTalk</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Approval Signatures - Quote</fullName>
+        <actions>
+            <name>RT_Customer_DateSignedUpdate_to_Blank</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Customer_Signer_Name_Update_to_Blank</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Customer_Signer_SignatureUpdatetoBlan</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Date_Signed_Updated_to_Blank</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Signer_Name_Update_to_Blank</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RT_Signer_Signature_Update_to_Blank</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Quote.Contractual_Stage__c</field>
+            <operation>equals</operation>
+            <value>Quote</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Quote.RecordTypeId</field>
+            <operation>contains</operation>
+            <value>ReadyTalk</value>
+        </criteriaItems>
+        <description>This flow will set the Approval Signatures to blank when Quote is chose from the Contractual Stage Field</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Broadcast Audio Notice Deleted if Op Assist Direct or Premium Dial Rates Removed</fullName>
+        <actions>
+            <name>RT_Broadcast_Audio_NoticeDeletedifOpAss</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Quote.Operator_Assisted_Direct_Dial_Out_Rate_N__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Quote.Op_Assisted_Premium_Dial_Out_Rate_N__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Quote.RecordTypeId</field>
+            <operation>contains</operation>
+            <value>ReadyTalk</value>
+        </criteriaItems>
+        <description>Broadcast Audio Notice Deleted if Op Assist Direct or Premium Dial Rates Removed</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Broadcast Audio Notice with Op Assist Direct or Premium Dial is filled in</fullName>
+        <actions>
+            <name>RT_Broadcast_Audio_Notice_Field_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 or 2) and 3</booleanFilter>
+        <criteriaItems>
+            <field>Quote.Op_Assisted_Premium_Dial_Out_Rate_N__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Quote.Operator_Assisted_Direct_Dial_Out_Rate_N__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Quote.RecordTypeId</field>
+            <operation>contains</operation>
+            <value>ReadyTalk</value>
+        </criteriaItems>
+        <description>Broadcast Audio Notice with Op Assist Direct or Premium Dial is filled in.  The dial-out rate that will be applied to broadcast audio lines for op assisted calls. This is a new charge with Intercall.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT_Update Expiration Date</fullName>
+        <actions>
+            <name>RT_Update_Quote_Expiration_Field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Quote.CreatedDate</field>
+            <operation>greaterThan</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Quote.RecordTypeId</field>
+            <operation>contains</operation>
+            <value>ReadyTalk</value>
+        </criteriaItems>
+        <description>Updates Expiration Date field to 30 Days from the date the quote is created.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Quote%2C Expiration Date</fullName>
+        <actions>
+            <name>iMC_Quote_Expiration_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Quote.ExpirationDate</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Quote.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Quote</value>
+        </criteriaItems>
+        <description>This will populate blank a Expiration Date field with a default of 30 days.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>iMC - Quote%2C Initial Order Term</fullName>
+        <actions>
+            <name>iMC_Quote_Initial_Order_Term</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Quote.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>iMC Quote</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Quote.Initial__c</field>
+            <operation>contains</operation>
+            <value>13,14,15</value>
+        </criteriaItems>
+        <description>If Initial Order Term is 13, 14 or 15 months, an email notification is sent to Steve Anderson.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

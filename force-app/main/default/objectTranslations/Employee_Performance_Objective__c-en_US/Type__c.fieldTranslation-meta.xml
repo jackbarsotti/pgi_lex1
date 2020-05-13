@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>SMART Development Objective</masterLabel>
+        <translation><!-- SMART Development Objective --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SMART Work Objective</masterLabel>
+        <translation><!-- SMART Work Objective --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Value Assessment - Our People Are Our Strength</masterLabel>
+        <translation><!-- Value Assessment - Our People Are Our Strength --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Value Assessment - Own Outcomes</masterLabel>
+        <translation><!-- Value Assessment - Own Outcomes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Value Assessment - Purpose, Passion &amp; Performance</masterLabel>
+        <translation><!-- Value Assessment - Purpose, Passion &amp; Performance --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

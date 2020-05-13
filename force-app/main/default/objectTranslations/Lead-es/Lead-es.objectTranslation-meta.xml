@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>PGi Lead</layout>
+        <sections>
+            <label><!-- 6Sense Intelligence --></label>
+            <section>6Sense Intelligence</section>
+        </sections>
+        <sections>
+            <label><!-- Account Details --></label>
+            <section>Account Details</section>
+        </sections>
+        <sections>
+            <label><!-- GDPR Information --></label>
+            <section>GDPR Information</section>
+        </sections>
+        <sections>
+            <label><!-- Initial Contact Details --></label>
+            <section>Initial Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Information --></label>
+            <section>Lead Information</section>
+        </sections>
+        <sections>
+            <label><!-- LinkedIn Sales Navigator --></label>
+            <section>LinkedIn Sales Navigator</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing Snapshot --></label>
+            <section>Marketing Snapshot</section>
+        </sections>
+        <sections>
+            <label><!-- SalesWings Intelligence --></label>
+            <section>SalesWings Intelligence</section>
+        </sections>
+        <sections>
+            <label><!-- SalesWings Scoring --></label>
+            <section>SalesWings Scoring</section>
+        </sections>
+        <sections>
+            <label><!-- ZoomInfo --></label>
+            <section>ZoomInfo</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PGi Lead (SalesOps+Mkting)</layout>
+        <sections>
+            <label><!-- 6Sense Details --></label>
+            <section>6Sense Details</section>
+        </sections>
+        <sections>
+            <label><!-- 6Sense Intelligence --></label>
+            <section>6Sense Intelligence</section>
+        </sections>
+        <sections>
+            <label><!-- Account Details --></label>
+            <section>Account Details</section>
+        </sections>
+        <sections>
+            <label><!-- Admin/Marketing Ops --></label>
+            <section>Admin/Marketing Ops</section>
+        </sections>
+        <sections>
+            <label><!-- Bizible --></label>
+            <section>Bizible</section>
+        </sections>
+        <sections>
+            <label><!-- GDPR Information --></label>
+            <section>GDPR Information</section>
+        </sections>
+        <sections>
+            <label><!-- Initial Contact Details --></label>
+            <section>Initial Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Information --></label>
+            <section>Lead Information</section>
+        </sections>
+        <sections>
+            <label><!-- LinkedIn Sales Navigator --></label>
+            <section>LinkedIn Sales Navigator</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing Snapshot --></label>
+            <section>Marketing Snapshot</section>
+        </sections>
+        <sections>
+            <label><!-- SalesWings Intelligence --></label>
+            <section>SalesWings Intelligence</section>
+        </sections>
+        <sections>
+            <label><!-- SalesWings Scoring --></label>
+            <section>SalesWings Scoring</section>
+        </sections>
+        <sections>
+            <label><!-- ZoomInfo --></label>
+            <section>ZoomInfo</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- PGi Leads --></label>
+        <name>PGi_Leads</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Lead Name, Company, Phone, Email, and City cannot contain the following special characters: / | \ ; : --></errorMessage>
+        <name>ALL_Special_Characters</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- CompanyId should be a numeric value --></errorMessage>
+        <name>LID__Check_CompanyId_Value</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Additional details are required when &quot;Other&quot; is selected as Lead Source. --></errorMessage>
+        <name>Lead_Source_Other</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Type field must be set to a value other than Direct, Field Sales, or Commercial Accounts when the value of Owner&apos;s Channel is Partners. --></errorMessage>
+        <name>PGi_AcctType_Cant_Be_Direct_On_Partner</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must select an &quot;Account Type&quot; before you&apos;re able to convert this lead. --></errorMessage>
+        <name>PGi_Cant_Convert_Without_Account_Type</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The First Name, Last Name, and/or Company Name values cannot be [not provided] or blank when the Lead Status is set to Qualifying. Please update before saving the record. --></errorMessage>
+        <name>PGi_Cant_Qualify_With_Blank_Names</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The company name cannot be Unknown Trials when the Lead Status is Qualifying.  Please change the Company Name to something else before saving. --></errorMessage>
+        <name>PGi_Cant_Qualify_With_Unknown_Trials</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Street, City, State, Postal Code, Country, Phone and Email fields are all required in order to set the Lead Status to Qualifying. --></errorMessage>
+        <name>PGi_Cant_Qualify_Without_Address</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Department can&apos;t be &quot;Unknown&quot; or blank to save the lead with a Status as Qualifying. --></errorMessage>
+        <name>PGi_Cant_Qualify_Without_Department</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- An Initial Product of Interest value is required to save the lead with a Status as Qualifying. --></errorMessage>
+        <name>PGi_Cant_Qualify_Without_Product</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Additional details are required when &quot;Other&quot; is selected as Lead Status Reason. --></errorMessage>
+        <name>PGi_Disqualified_Details</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not allowed to change the Lead Source once its set on a Lead. --></errorMessage>
+        <name>PGi_Enforce_Lead_Source_Value</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- An Opportunity must be created on lead conversion for Leads without a Related Account. Please uncheck the Do not create a new opportunity upon conversion checkbox and press the Convert button again, or update the Related Account Field on the Lead. --></errorMessage>
+        <name>PGi_Enforce_Oppty_Creation_on_Conversion</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- An Inbound Color Code is required when &quot;Inbound Call&quot; is selected as the Lead Source. Please complete the &quot;Add Inbound Color Code&quot; field before saving. --></errorMessage>
+        <name>PGi_Inbound_Color_Code_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select an Industry value that is not Other. --></errorMessage>
+        <name>PGi_Industry_Cant_Be_Other_for_APAC</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- All Leads require you to input either a phone number or email address. --></errorMessage>
+        <name>PGi_Must_have_Phone_or_Email</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- An Omniture Campaign Code is required for a Lead Source value of &quot;Inbound Call&quot;. --></errorMessage>
+        <name>PGi_OmnitureCC_Required_for_Inbound</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- AltavistaNews --></label>
+        <name>AltavistaNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Collapse --></label>
+        <name>Collapse</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Convert_JScript --></label>
+        <name>Convert_JScript</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Disqualify --></label>
+        <name>Disqualify</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Domain_Name_Dupes --></label>
+        <name>Domain_Name_Dupes</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Eloqua_Engage --></label>
+        <name>Eloqua_Engage</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- HooversProfile --></label>
+        <name>HooversProfile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Round_Robin_Assignment --></label>
+        <name>Janati_RR__Round_Robin_Assignment</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Round_Robin_Mass_Assignment --></label>
+        <name>Janati_RR__Round_Robin_Mass_Assignment</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- LeadActivityOverview --></label>
+        <name>LeadActivityOverview</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- LinkedIn --></label>
+        <name>LinkedIn</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Sales_Nurture_Track_Process --></label>
+        <name>Sales_Nurture_Track_Process</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Search_Dupe_Kana --></label>
+        <name>Search_Dupe_Kana</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Search_Dupe_Kanji --></label>
+        <name>Search_Dupe_Kanji</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Search_Duplicate_Companies --></label>
+        <name>Search_Duplicate_Companies</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Search_Duplicates --></label>
+        <name>Search_Duplicates</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendGmail --></label>
+        <name>SendGmail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SetupEditCustomLinks --></label>
+        <name>SetupEditCustomLinks</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SetupModifyPageLayout --></label>
+        <name>SetupModifyPageLayout</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SetupNewCustomField --></label>
+        <name>SetupNewCustomField</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_to_EchoSign --></label>
+        <name>echosign_dev1__Send_to_EchoSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ExactTarget_Resubscribe --></label>
+        <name>et4ae5__ExactTarget_Resubscribe</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ExactTarget_Unsubscribe --></label>
+        <name>et4ae5__ExactTarget_Unsubscribe</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_ExactTarget_Email --></label>
+        <name>et4ae5__Send_ExactTarget_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_ExactTarget_SMS --></label>
+        <name>et4ae5__Send_ExactTarget_SMS</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_ExactTarget_Analytics --></label>
+        <name>et4ae5__View_ExactTarget_Analytics</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- test_button --></label>
+        <name>test_button</name>
+    </webLinks>
+</CustomObjectTranslation>

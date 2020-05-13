@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Broadcast_Audio_Additional_Participants__c</fullName>
+    <defaultValue>100</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>Amount charged for every additional 100 participants.</inlineHelpText>
+    <label>Broadcast Audio Additional Participants</label>
+    <precision>10</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

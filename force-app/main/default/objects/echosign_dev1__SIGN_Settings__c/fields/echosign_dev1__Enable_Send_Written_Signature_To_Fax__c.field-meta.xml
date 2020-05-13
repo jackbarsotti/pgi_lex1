@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>echosign_dev1__Enable_Send_Written_Signature_To_Fax__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>By default send written signature to fax is disabled. Check this box to enable this feature.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>By default send written signature to fax is disabled. Check this box to enable this feature.</inlineHelpText>
+    <label>Enable Send Written Signature To Fax</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

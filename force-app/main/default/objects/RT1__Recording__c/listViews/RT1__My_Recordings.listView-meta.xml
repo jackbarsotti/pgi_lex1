@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RT1__My_Recordings</fullName>
+    <columns>NAME</columns>
+    <columns>RT1__StartDate__c</columns>
+    <columns>RT1__Duration__c</columns>
+    <columns>RT1__PlaybackCount__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>My Recordings</label>
+</ListView>

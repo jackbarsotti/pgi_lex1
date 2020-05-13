@@ -1,0 +1,63 @@
+<apex:page language="{!$CurrentPage.parameters.lang}" showHeader="false">
+<style>
+
+body {
+    text-align: center;
+}
+
+#chatHeader {
+    display:inline-block;
+    background-color: #FF9F3B;
+    text-align: center;
+    height: 24px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    width: 100%;
+}
+
+#messageContainer {
+    position:fixed;
+    display: block;
+    border-color: #D3D3D3;
+    padding: 5px;
+    width: 98%;
+    height: auto;
+    top: 24px;
+    left: 50%;
+    transform: translate(-50%,0);
+    text-align: center;
+    margin: 4px;
+}
+
+#message {
+    display: inline-block;
+    width: 90%;
+    top: 40%;
+    padding: 4px;
+}
+</style>
+
+<div id="chatHeader">
+    {!$Label.chat_Leave_a_Message}
+</div>
+
+<div id="messageContainer">
+<div id="message">
+    {!$Label.chat_Thank_you}
+</div>
+</div>
+
+<script type="text/javascript">
+    var currentOrigin= '{!$CurrentPage.parameters.origin}';
+
+    switch(currentOrigin){
+        case "in_product":
+            break;
+        case "web":
+            document.getElementById("chatHeader").style.background = "#ff7110";
+            break;
+    }
+</script>
+
+</apex:page>

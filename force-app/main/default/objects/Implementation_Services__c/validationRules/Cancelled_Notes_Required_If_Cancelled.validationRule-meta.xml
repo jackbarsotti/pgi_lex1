@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancelled_Notes_Required_If_Cancelled</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(IST_Completed_Status__c, &quot;Cancelled&quot;),
+ISBLANK(Cancelled_Notes__c)
+)</errorConditionFormula>
+    <errorMessage>Cancelled Notes are required if cancelled.</errorMessage>
+</ValidationRule>

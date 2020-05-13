@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select which Q&amp;A type the customer would like to use for this event. --></help>
+    <label><!-- Q&amp;A Type --></label>
+    <name>Q_A_type__c</name>
+    <picklistValues>
+        <masterLabel>Audio Only (Operator Facilitated)</masterLabel>
+        <translation><!-- Audio Only (Operator Facilitated) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Both Chat &amp; Audio</masterLabel>
+        <translation><!-- Both Chat &amp; Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chat Only (Customer Facilitated)</masterLabel>
+        <translation><!-- Chat Only (Customer Facilitated) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>None</masterLabel>
+        <translation><!-- None --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

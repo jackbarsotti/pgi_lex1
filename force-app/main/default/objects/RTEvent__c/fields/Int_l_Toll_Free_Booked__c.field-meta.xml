@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Int_l_Toll_Free_Booked__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>CAUTION - USED IN INTEGRATIONS
+Customer requested that International Toll Free numbers are booked for the RT Event.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Were ITFs booked?</inlineHelpText>
+    <label>Int&#39;l Toll Free Booked</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Forward Email to Distro --></label>
+    <name>Forward_Email_to_Distro__c</name>
+</CustomFieldTranslation>

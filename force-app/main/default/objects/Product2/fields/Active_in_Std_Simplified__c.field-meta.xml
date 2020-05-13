@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_in_Std_Simplified__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <label>Active in Std &amp; Simplified</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

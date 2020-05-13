@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Lead Source - Tradeshow --></label>
+    <name>Lead_Source_Tradeshow__c</name>
+    <picklistValues>
+        <masterLabel>ACME 2011</masterLabel>
+        <translation><!-- ACME 2011 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ACME 2012</masterLabel>
+        <translation><!-- ACME 2012 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Biotech October 2010</masterLabel>
+        <translation><!-- Biotech October 2010 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CME Task Force October 2010</masterLabel>
+        <translation><!-- CME Task Force October 2010 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ExL Pharma Meeting Planners Summit 2010</masterLabel>
+        <translation><!-- ExL Pharma Meeting Planners Summit 2010 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PubExpo 2011</masterLabel>
+        <translation><!-- PubExpo 2011 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Streaming Media Europe 2010</masterLabel>
+        <translation><!-- Streaming Media Europe 2010 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>minDay November 2010</masterLabel>
+        <translation><!-- minDay November 2010 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

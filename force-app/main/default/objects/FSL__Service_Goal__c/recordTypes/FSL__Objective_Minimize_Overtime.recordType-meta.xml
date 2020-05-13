@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Objective_Minimize_Overtime</fullName>
+    <active>true</active>
+    <description>Minimize the use of overtime</description>
+    <label>Minimize Overtime</label>
+    <picklistValues>
+        <picklist>FSL__Prioritize_Resource__c</picklist>
+        <values>
+            <fullName>Least Qualified</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Most Qualified</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

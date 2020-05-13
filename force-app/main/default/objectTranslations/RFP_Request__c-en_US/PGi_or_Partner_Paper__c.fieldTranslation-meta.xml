@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- PGi paper means PGi is preparing responses/proposal on our paper and submitting the bid. Partner paper means partner is preparing responses/proposal on their paper and submitting bid. --></help>
+    <label><!-- PGi or Partner Paper? --></label>
+    <name>PGi_or_Partner_Paper__c</name>
+    <picklistValues>
+        <masterLabel>PGi Paper</masterLabel>
+        <translation><!-- PGi Paper --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partner Paper</masterLabel>
+        <translation><!-- Partner Paper --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

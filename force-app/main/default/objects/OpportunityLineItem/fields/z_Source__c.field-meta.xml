@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>z_Source__c</fullName>
+    <externalId>false</externalId>
+    <label>z-Source</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Salesgateway</fullName>
+                <default>false</default>
+                <label>Salesgateway</label>
+            </value>
+            <value>
+                <fullName>eCommerce</fullName>
+                <default>false</default>
+                <label>eCommerce</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

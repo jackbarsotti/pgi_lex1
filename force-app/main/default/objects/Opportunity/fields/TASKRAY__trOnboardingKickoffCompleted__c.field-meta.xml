@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TASKRAY__trOnboardingKickoffCompleted__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Tracks if the TaskRay Onboarding Kickoff Flow has been completed for a given Opportunity.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field will be automatically updated if the TaskRay Onboarding Kickoff Flow has been completed for a given Opportunity.</inlineHelpText>
+    <label>Onboarding Kickoff Completed</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

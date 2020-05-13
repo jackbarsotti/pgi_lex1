@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- For iMeet companies, this &quot;Company Name&quot; will be used in the Room name.
+Example: PGi = www.imeet.com/PGi/HostName --></help>
+    <label><!-- Company Name  --></label>
+    <name>NCS_Company_Name__c</name>
+</CustomFieldTranslation>

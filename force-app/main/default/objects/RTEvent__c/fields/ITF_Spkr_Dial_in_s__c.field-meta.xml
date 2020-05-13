@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITF_Spkr_Dial_in_s__c</fullName>
+    <description>CAUTION - USED IN INTEGRATIONS
+Breakdown of all International TOLL FREE speaker lines requested</description>
+    <externalId>false</externalId>
+    <inlineHelpText>International TOLL FREE Speaker details</inlineHelpText>
+    <label>ITF Spkr Dial in details</label>
+    <length>2000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>6</visibleLines>
+</CustomField>

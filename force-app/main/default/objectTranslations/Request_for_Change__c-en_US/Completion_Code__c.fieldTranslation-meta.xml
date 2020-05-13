@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Completion Code --></label>
+    <name>Completion_Code__c</name>
+    <picklistValues>
+        <masterLabel>Placeholder Text</masterLabel>
+        <translation><!-- Placeholder Text --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

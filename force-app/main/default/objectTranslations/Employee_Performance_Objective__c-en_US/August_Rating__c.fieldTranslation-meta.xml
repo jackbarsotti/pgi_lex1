@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- August Rating --></label>
+    <name>August_Rating__c</name>
+    <picklistValues>
+        <masterLabel>1 - Does Not Demonstrate</masterLabel>
+        <translation><!-- 1 - Does Not Demonstrate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1 - Unsatisfactory</masterLabel>
+        <translation><!-- 1 - Unsatisfactory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2 - Below Expectations</masterLabel>
+        <translation><!-- 2 - Below Expectations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2 - Demonstrates</masterLabel>
+        <translation><!-- 2 - Demonstrates --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3 - Meets Expectations</masterLabel>
+        <translation><!-- 3 - Meets Expectations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3 - Role Model</masterLabel>
+        <translation><!-- 3 - Role Model --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4 - Overachieved</masterLabel>
+        <translation><!-- 4 - Overachieved --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5 - Exceptional</masterLabel>
+        <translation><!-- 5 - Exceptional --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

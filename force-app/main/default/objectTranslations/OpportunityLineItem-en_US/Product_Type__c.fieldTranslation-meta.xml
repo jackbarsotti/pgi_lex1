@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Product Type --></label>
+    <name>Product_Type__c</name>
+    <picklistValues>
+        <masterLabel>Modality</masterLabel>
+        <translation><!-- Modality --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Third Party Devices</masterLabel>
+        <translation><!-- Third Party Devices --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Third Party Hardware</masterLabel>
+        <translation><!-- Third Party Hardware --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Third Party Services</masterLabel>
+        <translation><!-- Third Party Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Third Party Software</masterLabel>
+        <translation><!-- Third Party Software --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Third Party Support</masterLabel>
+        <translation><!-- Third Party Support --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

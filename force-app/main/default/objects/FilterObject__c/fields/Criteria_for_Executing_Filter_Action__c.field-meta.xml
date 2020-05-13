@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Criteria_for_Executing_Filter_Action__c</fullName>
+    <externalId>false</externalId>
+    <label>Criteria for Executing Filter Action</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Conditions are met</fullName>
+                <default>true</default>
+                <label>Conditions are met</label>
+            </value>
+            <value>
+                <fullName>Formula evaluates to true</fullName>
+                <default>false</default>
+                <label>Formula evaluates to true</label>
+            </value>
+            <value>
+                <fullName>No criteria—just execute the actions!</fullName>
+                <default>false</default>
+                <label>No criteria—just execute the actions!</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

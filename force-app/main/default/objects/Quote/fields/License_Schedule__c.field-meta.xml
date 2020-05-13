@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>License_Schedule__c</fullName>
+    <description>Add a customized tier schedule.</description>
+    <externalId>false</externalId>
+    <label>License Schedule</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>LongTextArea</type>
+    <visibleLines>8</visibleLines>
+</CustomField>

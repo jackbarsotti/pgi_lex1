@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Sales_Team_s_New_THIS_MONTH</fullName>
+    <columns>OPPORTUNITY.RECORDTYPE</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.PROBABILITY</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>MRR_Total__c</columns>
+    <columns>Amount__c</columns>
+    <filterScope>Team</filterScope>
+    <filters>
+        <field>OPPORTUNITY.CLOSED</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>THIS_MONTH</value>
+    </filters>
+    <label>My Sales Team&#39;s (New THIS MONTH)</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>PGi_Channel_C_Level</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

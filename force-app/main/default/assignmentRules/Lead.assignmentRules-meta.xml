@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>Round Robin</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>PGi_Lead_NA_Pgi_com_Email_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>OR( RIGHT(Email, 8) = &quot;@pgi.com&quot;, RIGHT(Email, 8) = &quot;@powwownow.com&quot;, CONTAINS(LOWER(Company), &quot;pgi test&quot;) )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>ZoomInfo,Live Chat</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Owner_s_Profile__c</field>
+                <operation>contains</operation>
+                <value>Sales</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>iMC_Lead</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>contains</operation>
+                <value>SF Marketing Cloud Integration</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.OwnerId</field>
+                <operation>equals</operation>
+                <value>iMC-Lead</value>
+            </criteriaItems>
+            <template>Assigned_to_Templates/LeadsNewassignmentnotification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Lead_NA_Partner_Team_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>contains</operation>
+                <value>SF Marketing Cloud Integration</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.OwnerId</field>
+                <operation>equals</operation>
+                <value>PGi-Lead-NA-Partner Team Queue</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Partner Contact</value>
+            </criteriaItems>
+            <template>Workflow_Emails/Leads_New_Partner_Lead_Assigned</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Lead_JAPAN_Web_To_Lead</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>OwnerId = &#39;00Ga000000309O8&#39; || Campaign.Parent.Id = &#39;7011B000002OP0g&#39;|| Campaign.Parent.Id = &#39;7011B000002OOni&#39;|| Campaign.Parent.Id = &#39;7011B000002OOnn&#39;|| Campaign.Parent.Id = &#39;7011B000002OOnY&#39;|| Country = &quot;Japan&quot;</formula>
+            <template>Assigned_to_Templates/LeadsNewassignmentnotification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>contains</operation>
+                <value>Eloqua,SF Marketing Cloud Integration</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.OwnerId</field>
+                <operation>notEqual</operation>
+                <value>,SF Marketing Cloud Integration</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Lead_Global_Inquiries_Baking</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>contains</operation>
+                <value>SF Marketing Cloud Integration</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>jason.silverman@pgi.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.Email</field>
+                <operation>contains</operation>
+                <value>@bankofamerica.com,@baml.com</value>
+            </criteriaItems>
+            <template>Assigned_to_Templates/LeadsNewassignmentnotification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>anita.peterson@pgi.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.Email</field>
+                <operation>contains</operation>
+                <value>@wolterskluwer.com</value>
+            </criteriaItems>
+            <template>Assigned_to_Templates/LeadsNewassignmentnotification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Lead_NA_Potential_Junk_Leads</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Email</field>
+                <operation>contains</operation>
+                <value>@dispostable.com</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Lead_Global_Inquiries_Baking</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.CreatedDate</field>
+                <operation>notEqual</operation>
+            </criteriaItems>
+            <template>Assigned_to_Templates/LeadsNewassignmentnotification</template>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

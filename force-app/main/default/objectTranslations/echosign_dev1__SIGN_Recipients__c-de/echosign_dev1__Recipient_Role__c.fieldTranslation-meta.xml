@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Recipient Role --></label>
+    <name>echosign_dev1__Recipient_Role__c</name>
+    <picklistValues>
+        <masterLabel>Approver</masterLabel>
+        <translation>Genehmiger</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Signer</masterLabel>
+        <translation>Unterzeichner</translation>
+    </picklistValues>
+</CustomFieldTranslation>

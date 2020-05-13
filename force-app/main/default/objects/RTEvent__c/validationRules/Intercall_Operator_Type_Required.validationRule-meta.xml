@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Intercall_Operator_Type_Required</fullName>
+    <active>false</active>
+    <description>Requires the Intercall Operator Type on events created on or after 11/12/15 (to prevent issues with past events) for certain record types</description>
+    <errorConditionFormula>AND(ISBLANK(TEXT(Operator_Type__c)),
+DATEVALUE(CreatedDate)&gt;DATEVALUE(&quot;2015-11-11&quot;),
+OR( RecordType.DeveloperName = &#39;Direct_Event&#39;,
+RecordType.DeveloperName = &#39;Premium_Event&#39;,
+RecordType.DeveloperName = &#39;Stand_Alone&#39;,
+RecordType.DeveloperName = &#39;Gold_Event&#39;,
+RecordType.DeveloperName = &#39;Platinum_Event&#39;,
+RecordType.DeveloperName = &#39;Webinar_Subscription&#39;))</errorConditionFormula>
+    <errorDisplayField>Operator_Type__c</errorDisplayField>
+    <errorMessage>Intercall Operator Type is required for this record type. Please update the field and save again.</errorMessage>
+</ValidationRule>

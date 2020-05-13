@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Territory --></label>
+    <name>Territory__c</name>
+    <picklistValues>
+        <masterLabel>AU - Sydney</masterLabel>
+        <translation><!-- AU - Sydney --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CH - China</masterLabel>
+        <translation><!-- CH - China --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CL - Clonakilty</masterLabel>
+        <translation><!-- CL - Clonakilty --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EN - Euro/NAM</masterLabel>
+        <translation><!-- EN - Euro/NAM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GB - Global</masterLabel>
+        <translation><!-- GB - Global --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IN - India</masterLabel>
+        <translation><!-- IN - India --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JP - Tokyo</masterLabel>
+        <translation><!-- JP - Tokyo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KL - Kuala Lumpur</masterLabel>
+        <translation><!-- KL - Kuala Lumpur --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TO - Toronto</masterLabel>
+        <translation><!-- TO - Toronto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>US - Kansas or Colorado</masterLabel>
+        <translation><!-- US - Kansas or Colorado --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

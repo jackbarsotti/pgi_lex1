@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Determines if the Prospect Account is being actively worked on or not worked on by the assigned Sales user.  The Sub-Status is based on activities and related records against the Account over the past 90 days. --></help>
+    <label><!-- Prospect Sub-Status --></label>
+    <name>Status_Detail__c</name>
+    <picklistValues>
+        <masterLabel>Assigned</masterLabel>
+        <translation><!-- Assigned --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inactive</masterLabel>
+        <translation><!-- Inactive --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

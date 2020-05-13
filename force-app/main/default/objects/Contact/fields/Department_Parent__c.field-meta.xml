@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Department_Parent__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>CAUTION - USED IN INTEGRATIONS
+This is the department that this contact is directly related with.</description>
+    <externalId>false</externalId>
+    <label>Billing Department</label>
+    <referenceTo>Department__c</referenceTo>
+    <relationshipLabel>Contact</relationshipLabel>
+    <relationshipName>Department</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

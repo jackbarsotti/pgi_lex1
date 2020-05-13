@@ -1,0 +1,13 @@
+<apex:page standardController="OpportunityLineItem" extensions="OpportunityProductExtension">
+    <apex:form >
+	    <apex:pageBlock >
+	    	<apex:pageBlockSection collapsible="false" columns="2" >
+			    <apex:repeat value="{!fieldSet}" var="f">
+				    <apex:pageBlockSectionItem >
+				        <apex:outputField value="{!OpportunityLineItem[f]}" /><br/>
+			        </apex:pageBlockSectionItem>
+			    </apex:repeat>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+    </apex:form>
+</apex:page>

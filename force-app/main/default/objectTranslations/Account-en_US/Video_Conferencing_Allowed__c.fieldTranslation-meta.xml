@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Provides chairperson and co-presenters with the ability to share four video feeds simultaneously. --></help>
+    <label><!-- Video Conferencing Allowed --></label>
+    <name>Video_Conferencing_Allowed__c</name>
+</CustomFieldTranslation>

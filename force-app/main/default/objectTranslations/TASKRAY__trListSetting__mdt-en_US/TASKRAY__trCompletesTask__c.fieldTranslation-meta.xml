@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Check this box to determine if a Task should be completed when the specified List value is selected. --></help>
+    <label><!-- Completes Task --></label>
+    <name>TASKRAY__trCompletesTask__c</name>
+</CustomFieldTranslation>

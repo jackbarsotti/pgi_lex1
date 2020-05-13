@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sixsense__Duplicate</fullName>
+    <availability>online</availability>
+    <description>This button is used to mark a record as a duplicate.</description>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Duplicate</masterLabel>
+    <openType>sidebar</openType>
+    <page>sixsense__SixSenseAccountDuplicate</page>
+    <protected>false</protected>
+</WebLink>

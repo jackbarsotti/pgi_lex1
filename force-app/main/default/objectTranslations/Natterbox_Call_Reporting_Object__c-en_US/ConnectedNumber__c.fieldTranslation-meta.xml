@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This will be the phone number of the person that answered the call (This may well be different to CalledNumber, depending on call dialplan routing). If the call recipient was a Natterbox user, this will show their 4 digit extension number. --></help>
+    <label><!-- ConnectedNumber --></label>
+    <name>ConnectedNumber__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGi_QCStage_Probability_Validation_Rule</fullName>
+    <active>true</active>
+    <description>After Stage/ Probability% reaches 10%, the Opportuntiy must have at least 1 Product Line associated with It.   OLD CODE:  IF(AND( (Probability  &gt; 0.1 ),(  of_Line_Items__c =0)),True,False)</description>
+    <errorConditionFormula>AND( 
+RecordType.Name = &quot;PGi Opportunity&quot;, 
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;, 
+!ISPICKVAL(Z_Source__c, &quot;Salesgateway&quot;), 
+NOT(CONTAINS(TEXT(StageName), &quot;Awareness&quot;)), 
+NOT(CONTAINS(TEXT(StageName), &quot;Closed Lost&quot;)), 
+! HasOpportunityLineItem, 
+$User.Override_Validation_Rules__c = False, 
+/* Commented out to align OPLI requirement for NA to be the same as EMEA/APAC */ 
+! ISNEW(), 
+$User.ProfileId &lt;&gt; &quot;00ea0000001sYR8&quot;, 
+$User.ProfileId &lt;&gt; &quot;00ea0000001sdEo&quot;, 
+$User.Id &lt;&gt; &quot;0051300000BAcpp&quot; /* RW Integration User */, 
+NOT($Setup.BypassRules__c.Disable_Validation_Rules__c) 
+/* 
+of_Line_Items__c =0 
+*/ 
+
+)</errorConditionFormula>
+    <errorMessage>At least one product is required to save an Opportunity with Stage greater than Awareness</errorMessage>
+</ValidationRule>

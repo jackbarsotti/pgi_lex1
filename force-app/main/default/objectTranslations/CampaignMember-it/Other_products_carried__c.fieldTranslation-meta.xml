@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Besides the companies you have already listed are there other products you carry? --></help>
+    <label><!-- Other products carried --></label>
+    <name>Other_products_carried__c</name>
+    <picklistValues>
+        <masterLabel>Calling Cards</masterLabel>
+        <translation><!-- Calling Cards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Computer Networking</masterLabel>
+        <translation><!-- Computer Networking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Phone systems</masterLabel>
+        <translation><!-- Phone systems --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Telecom services</masterLabel>
+        <translation><!-- Telecom services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VoIP</masterLabel>
+        <translation><!-- VoIP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Voice</masterLabel>
+        <translation><!-- Voice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wireless phones</masterLabel>
+        <translation><!-- Wireless phones --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

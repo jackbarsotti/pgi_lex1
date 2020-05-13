@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>iMC_Closed_Lost_Rejected</fullName>
+    <active>true</active>
+    <description>This is to require the objection notes field in the opportunity</description>
+    <errorConditionFormula>AND( 
+$User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;,
+RecordType.DeveloperName = &quot;iMC Opportunity&quot;, 
+ISPICKVAL(StageName, &quot;Closed Lost - Reject&quot;) &amp;&amp; 
+ISBLANK(Objections__c) 
+)</errorConditionFormula>
+    <errorMessage>Rejected Opportunities must have objections</errorMessage>
+</ValidationRule>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Audio feature alerts chairperson when participants enter an audio conference (tone, silence or a name announcement). This sends an email to Level 3 to have them change it on the bridge. --></help>
+    <label><!-- Entry Announcement --></label>
+    <name>Entry_Announcement__c</name>
+    <picklistValues>
+        <masterLabel>Name</masterLabel>
+        <translation><!-- Name --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Silence</masterLabel>
+        <translation><!-- Silence --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tone</masterLabel>
+        <translation><!-- Tone --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

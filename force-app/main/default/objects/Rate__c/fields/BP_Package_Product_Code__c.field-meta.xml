@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BP_Package_Product_Code__c</fullName>
+    <description>PackageProductCode for this Rate. If there&#39;s multiple PackageProductCode, they&#39;re separated with a Double-Pipe: ||</description>
+    <externalId>false</externalId>
+    <inlineHelpText>PackageProductCode for this Rate. If there&#39;s multiple PackageProductCode, they&#39;re separated with a Double-Pipe: ||</inlineHelpText>
+    <label>BP Package Product Code</label>
+    <length>2000</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

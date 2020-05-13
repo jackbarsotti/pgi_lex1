@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agent_Code__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select from corresponding Referral Partner</inlineHelpText>
+    <label>Agent Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Referral_Partner__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>3VL</fullName>
+                <default>false</default>
+                <label>3VL</label>
+            </value>
+            <value>
+                <fullName>ABAG</fullName>
+                <default>false</default>
+                <label>ABAG</label>
+            </value>
+            <value>
+                <fullName>AGF</fullName>
+                <default>false</default>
+                <label>AGF</label>
+            </value>
+            <value>
+                <fullName>AGM</fullName>
+                <default>false</default>
+                <label>AGM</label>
+            </value>
+            <value>
+                <fullName>Alabama Association of Nonprofits</fullName>
+                <default>false</default>
+                <label>Alabama Association of Nonprofits</label>
+            </value>
+            <value>
+                <fullName>Alliance of Arizona Nonprofits</fullName>
+                <default>false</default>
+                <label>Alliance of Arizona Nonprofits</label>
+            </value>
+            <value>
+                <fullName>Arkansas Nonprofit Alliance</fullName>
+                <default>false</default>
+                <label>Arkansas Nonprofit Alliance</label>
+            </value>
+            <value>
+                <fullName>CAF</fullName>
+                <default>false</default>
+                <label>CAF</label>
+            </value>
+            <value>
+                <fullName>California Association of Nonprofits</fullName>
+                <default>false</default>
+                <label>California Association of Nonprofits</label>
+            </value>
+            <value>
+                <fullName>CCP</fullName>
+                <default>false</default>
+                <label>CCP</label>
+            </value>
+            <value>
+                <fullName>CMF</fullName>
+                <default>false</default>
+                <label>CMF</label>
+            </value>
+            <value>
+                <fullName>CNJG</fullName>
+                <default>false</default>
+                <label>CNJG</label>
+            </value>
+            <value>
+                <fullName>Colorado Nonprofit Association</fullName>
+                <default>false</default>
+                <label>Colorado Nonprofit Association</label>
+            </value>
+            <value>
+                <fullName>Commission</fullName>
+                <default>false</default>
+                <label>Commission</label>
+            </value>
+            <value>
+                <fullName>Connecticut Association of Nonprofits</fullName>
+                <default>false</default>
+                <label>Connecticut Association of Nonprofits</label>
+            </value>
+            <value>
+                <fullName>CSF</fullName>
+                <default>false</default>
+                <label>CSF</label>
+            </value>
+            <value>
+                <fullName>Deleware Association of Nonprofit Agencies</fullName>
+                <default>false</default>
+                <label>Deleware Association of Nonprofit Agencies</label>
+            </value>
+            <value>
+                <fullName>DF</fullName>
+                <default>false</default>
+                <label>DF</label>
+            </value>
+            <value>
+                <fullName>DFSF</fullName>
+                <default>false</default>
+                <label>DFSF</label>
+            </value>
+            <value>
+                <fullName>DFW</fullName>
+                <default>false</default>
+                <label>DFW</label>
+            </value>
+            <value>
+                <fullName>Donors Forum (IL)</fullName>
+                <default>false</default>
+                <label>Donors Forum (IL)</label>
+            </value>
+            <value>
+                <fullName>DVG</fullName>
+                <default>false</default>
+                <label>DVG</label>
+            </value>
+            <value>
+                <fullName>Florida Association of Nonprofit Organizations</fullName>
+                <default>false</default>
+                <label>Florida Association of Nonprofit Organizations</label>
+            </value>
+            <value>
+                <fullName>FPN</fullName>
+                <default>false</default>
+                <label>FPN</label>
+            </value>
+            <value>
+                <fullName>GCG</fullName>
+                <default>false</default>
+                <label>GCG</label>
+            </value>
+            <value>
+                <fullName>GCRI</fullName>
+                <default>false</default>
+                <label>GCRI</label>
+            </value>
+            <value>
+                <fullName>GFNY</fullName>
+                <default>false</default>
+                <label>GFNY</label>
+            </value>
+            <value>
+                <fullName>GOSW</fullName>
+                <default>false</default>
+                <label>GOSW</label>
+            </value>
+            <value>
+                <fullName>GWPA</fullName>
+                <default>false</default>
+                <label>GWPA</label>
+            </value>
+            <value>
+                <fullName>Hawaii Alliance of Nonprofit Organizations</fullName>
+                <default>false</default>
+                <label>Hawaii Alliance of Nonprofit Organizations</label>
+            </value>
+            <value>
+                <fullName>ICOF</fullName>
+                <default>false</default>
+                <label>ICOF</label>
+            </value>
+            <value>
+                <fullName>Idaho Nonprofit Center</fullName>
+                <default>false</default>
+                <label>Idaho Nonprofit Center</label>
+            </value>
+            <value>
+                <fullName>IGA</fullName>
+                <default>false</default>
+                <label>IGA</label>
+            </value>
+            <value>
+                <fullName>INRC</fullName>
+                <default>false</default>
+                <label>INRC</label>
+            </value>
+            <value>
+                <fullName>Kentucky Nonprofit Network</fullName>
+                <default>false</default>
+                <label>Kentucky Nonprofit Network</label>
+            </value>
+            <value>
+                <fullName>Louisiana Association of Crisis Negotiators</fullName>
+                <default>false</default>
+                <label>Louisiana Association of Crisis Negotiators</label>
+            </value>
+            <value>
+                <fullName>Louisiana Association of Nonprofit Organizations</fullName>
+                <default>false</default>
+                <label>Louisiana Association of Nonprofit Organizations</label>
+            </value>
+            <value>
+                <fullName>Maine Association of Nonprofits</fullName>
+                <default>false</default>
+                <label>Maine Association of Nonprofits</label>
+            </value>
+            <value>
+                <fullName>Maryland Nonprofits</fullName>
+                <default>false</default>
+                <label>Maryland Nonprofits</label>
+            </value>
+            <value>
+                <fullName>Massachusetts Council of Human Services Providers</fullName>
+                <default>false</default>
+                <label>Massachusetts Council of Human Services Providers</label>
+            </value>
+            <value>
+                <fullName>MCF</fullName>
+                <default>false</default>
+                <label>MCF</label>
+            </value>
+            <value>
+                <fullName>MDANO</fullName>
+                <default>false</default>
+                <label>MDANO</label>
+            </value>
+            <value>
+                <fullName>Michigan Nonprofit Association</fullName>
+                <default>false</default>
+                <label>Michigan Nonprofit Association</label>
+            </value>
+            <value>
+                <fullName>Minnesota Council of Nonprofits</fullName>
+                <default>false</default>
+                <label>Minnesota Council of Nonprofits</label>
+            </value>
+            <value>
+                <fullName>Mississippi Center for Nonprofits</fullName>
+                <default>false</default>
+                <label>Mississippi Center for Nonprofits</label>
+            </value>
+            <value>
+                <fullName>MNCN</fullName>
+                <default>false</default>
+                <label>MNCN</label>
+            </value>
+            <value>
+                <fullName>Montana Nonprofit Association</fullName>
+                <default>false</default>
+                <label>Montana Nonprofit Association</label>
+            </value>
+            <value>
+                <fullName>MPC</fullName>
+                <default>false</default>
+                <label>MPC</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>National Resource Center for Adoption</fullName>
+                <default>false</default>
+                <label>National Resource Center for Adoption</label>
+            </value>
+            <value>
+                <fullName>NCG</fullName>
+                <default>false</default>
+                <label>NCG</label>
+            </value>
+            <value>
+                <fullName>NCNG</fullName>
+                <default>false</default>
+                <label>NCNG</label>
+            </value>
+            <value>
+                <fullName>New Hampshire Center for Nonprofits</fullName>
+                <default>false</default>
+                <label>New Hampshire Center for Nonprofits</label>
+            </value>
+            <value>
+                <fullName>New Jersey Center for Nonprofits</fullName>
+                <default>false</default>
+                <label>New Jersey Center for Nonprofits</label>
+            </value>
+            <value>
+                <fullName>New York Council of Nonprofits</fullName>
+                <default>false</default>
+                <label>New York Council of Nonprofits</label>
+            </value>
+            <value>
+                <fullName>NMAG</fullName>
+                <default>false</default>
+                <label>NMAG</label>
+            </value>
+            <value>
+                <fullName>Non-Commission</fullName>
+                <default>false</default>
+                <label>Non-Commission</label>
+            </value>
+            <value>
+                <fullName>Nonprofit Association of Oregon</fullName>
+                <default>false</default>
+                <label>Nonprofit Association of Oregon</label>
+            </value>
+            <value>
+                <fullName>Nonprofit Association of the Midlands</fullName>
+                <default>false</default>
+                <label>Nonprofit Association of the Midlands</label>
+            </value>
+            <value>
+                <fullName>Nonprofit Coordinating Committee of New York</fullName>
+                <default>false</default>
+                <label>Nonprofit Coordinating Committee of New York</label>
+            </value>
+            <value>
+                <fullName>North Carolina Center for Nonprofits</fullName>
+                <default>false</default>
+                <label>North Carolina Center for Nonprofits</label>
+            </value>
+            <value>
+                <fullName>North Dakota Association of Nonprofit Organizations</fullName>
+                <default>false</default>
+                <label>North Dakota Association of Nonprofit Organizations</label>
+            </value>
+            <value>
+                <fullName>Northwest Nonprofit Resources</fullName>
+                <default>false</default>
+                <label>Northwest Nonprofit Resources</label>
+            </value>
+            <value>
+                <fullName>OANO</fullName>
+                <default>false</default>
+                <label>OANO</label>
+            </value>
+            <value>
+                <fullName>OGF</fullName>
+                <default>false</default>
+                <label>OGF</label>
+            </value>
+            <value>
+                <fullName>Oklahoma Center for Nonprofits</fullName>
+                <default>false</default>
+                <label>Oklahoma Center for Nonprofits</label>
+            </value>
+            <value>
+                <fullName>Oregon Nonprofits</fullName>
+                <default>false</default>
+                <label>Oregon Nonprofits</label>
+            </value>
+            <value>
+                <fullName>Pennsylvania Association of Nonprofit Organizations</fullName>
+                <default>false</default>
+                <label>Pennsylvania Association of Nonprofit Organizations</label>
+            </value>
+            <value>
+                <fullName>PNW</fullName>
+                <default>false</default>
+                <label>PNW</label>
+            </value>
+            <value>
+                <fullName>PNY</fullName>
+                <default>false</default>
+                <label>PNY</label>
+            </value>
+            <value>
+                <fullName>SCG</fullName>
+                <default>false</default>
+                <label>SCG</label>
+            </value>
+            <value>
+                <fullName>SDG</fullName>
+                <default>false</default>
+                <label>SDG</label>
+            </value>
+            <value>
+                <fullName>SECF</fullName>
+                <default>false</default>
+                <label>SECF</label>
+            </value>
+            <value>
+                <fullName>South Carolina Association of Nonprofit Associations</fullName>
+                <default>false</default>
+                <label>South Carolina Association of Nonprofit Associations</label>
+            </value>
+            <value>
+                <fullName>Texas Association of Nonprofit Organizations</fullName>
+                <default>false</default>
+                <label>Texas Association of Nonprofit Organizations</label>
+            </value>
+            <value>
+                <fullName>The Foraker Group (AK)</fullName>
+                <default>false</default>
+                <label>The Foraker Group (AK)</label>
+            </value>
+            <value>
+                <fullName>Utah Nonprofits Association</fullName>
+                <default>false</default>
+                <label>Utah Nonprofits Association</label>
+            </value>
+            <value>
+                <fullName>Virginia Network of Nonprofit Organizations</fullName>
+                <default>false</default>
+                <label>Virginia Network of Nonprofit Organizations</label>
+            </value>
+            <value>
+                <fullName>Washington DC Center for Nonprofit Advancement</fullName>
+                <default>false</default>
+                <label>Washington DC Center for Nonprofit Advancement</label>
+            </value>
+            <value>
+                <fullName>Washington Nonprofits</fullName>
+                <default>false</default>
+                <label>Washington Nonprofits</label>
+            </value>
+            <value>
+                <fullName>Washington Nonprofits Association</fullName>
+                <default>false</default>
+                <label>Washington Nonprofits Association</label>
+            </value>
+            <value>
+                <fullName>WG</fullName>
+                <default>false</default>
+                <label>WG</label>
+            </value>
+            <value>
+                <fullName>WNYG</fullName>
+                <default>false</default>
+                <label>WNYG</label>
+            </value>
+            <value>
+                <fullName>WVG</fullName>
+                <default>false</default>
+                <label>WVG</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>ImprovAndy</controllingFieldValue>
+            <controllingFieldValue>Susan Ennis</controllingFieldValue>
+            <controllingFieldValue>Karen Tier</controllingFieldValue>
+            <controllingFieldValue>Kebly Zordrager</controllingFieldValue>
+            <controllingFieldValue>KMI</controllingFieldValue>
+            <controllingFieldValue>Think of It</controllingFieldValue>
+            <controllingFieldValue>Top Ten Reviews</controllingFieldValue>
+            <controllingFieldValue>Medical Devices Manufacturers Association</controllingFieldValue>
+            <controllingFieldValue>Modern Distribution Management</controllingFieldValue>
+            <controllingFieldValue>Blue Penguin Development</controllingFieldValue>
+            <controllingFieldValue>Broadnet</controllingFieldValue>
+            <controllingFieldValue>360 Concepts LLC</controllingFieldValue>
+            <controllingFieldValue>Alison Minaglia</controllingFieldValue>
+            <controllingFieldValue>Chicago Non Profit</controllingFieldValue>
+            <controllingFieldValue>Cloud For Good</controllingFieldValue>
+            <controllingFieldValue>Peach New Media</controllingFieldValue>
+            <controllingFieldValue>CXO</controllingFieldValue>
+            <controllingFieldValue>Profiles International</controllingFieldValue>
+            <controllingFieldValue>Directors of Health Promotion and Education</controllingFieldValue>
+            <controllingFieldValue>Rice Resources</controllingFieldValue>
+            <controllingFieldValue>RocketGirl Solutions</controllingFieldValue>
+            <controllingFieldValue>Front Porch Strategies</controllingFieldValue>
+            <controllingFieldValue>Grant Professionals Association</controllingFieldValue>
+            <controllingFieldValue>Hennessy Consulting</controllingFieldValue>
+            <controllingFieldValue>Hilly Productions</controllingFieldValue>
+            <controllingFieldValue>Scenario D</controllingFieldValue>
+            <controllingFieldValue>SNPO</controllingFieldValue>
+            <controllingFieldValue>iiBridge</controllingFieldValue>
+            <controllingFieldValue>imarketingauthority</controllingFieldValue>
+            <valueName>Commission</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kapost</controllingFieldValue>
+            <controllingFieldValue>TechSoup</controllingFieldValue>
+            <controllingFieldValue>MarketingSherpa</controllingFieldValue>
+            <controllingFieldValue>TSLA</controllingFieldValue>
+            <controllingFieldValue>Turnaround Mgt.</controllingFieldValue>
+            <controllingFieldValue>Marketo</controllingFieldValue>
+            <controllingFieldValue>MECLABS</controllingFieldValue>
+            <controllingFieldValue>Woman&#39;s Assistance League</controllingFieldValue>
+            <controllingFieldValue>Xerox</controllingFieldValue>
+            <controllingFieldValue>MNSBDC</controllingFieldValue>
+            <controllingFieldValue>Astadia</controllingFieldValue>
+            <controllingFieldValue>MPI</controllingFieldValue>
+            <controllingFieldValue>Bluewolf</controllingFieldValue>
+            <controllingFieldValue>NARMS</controllingFieldValue>
+            <controllingFieldValue>National Association of Healthcare Quality</controllingFieldValue>
+            <controllingFieldValue>Business Marketing Association (BMA)</controllingFieldValue>
+            <controllingFieldValue>California Employers Association</controllingFieldValue>
+            <controllingFieldValue>CEBI</controllingFieldValue>
+            <controllingFieldValue>Center for Nonprofit Management</controllingFieldValue>
+            <controllingFieldValue>Certain</controllingFieldValue>
+            <controllingFieldValue>3VL</controllingFieldValue>
+            <controllingFieldValue>AAWCC</controllingFieldValue>
+            <controllingFieldValue>akaCRM</controllingFieldValue>
+            <controllingFieldValue>Alteract Marketing, LLC</controllingFieldValue>
+            <controllingFieldValue>AMA</controllingFieldValue>
+            <controllingFieldValue>Annuitas</controllingFieldValue>
+            <controllingFieldValue>Association for High Technology Distribution</controllingFieldValue>
+            <controllingFieldValue>NCADV</controllingFieldValue>
+            <controllingFieldValue>NC Technology Association</controllingFieldValue>
+            <controllingFieldValue>NetWorld Alliance</controllingFieldValue>
+            <controllingFieldValue>NTEN</controllingFieldValue>
+            <controllingFieldValue>Pardot</controllingFieldValue>
+            <controllingFieldValue>PATH</controllingFieldValue>
+            <controllingFieldValue>Connecticut Technology Council</controllingFieldValue>
+            <controllingFieldValue>PDK</controllingFieldValue>
+            <controllingFieldValue>Couch</controllingFieldValue>
+            <controllingFieldValue>CTA</controllingFieldValue>
+            <controllingFieldValue>Policy Link</controllingFieldValue>
+            <controllingFieldValue>PRNewswire</controllingFieldValue>
+            <controllingFieldValue>Cybertary</controllingFieldValue>
+            <controllingFieldValue>Denver/Boulder Software Club</controllingFieldValue>
+            <controllingFieldValue>Denver Chamber</controllingFieldValue>
+            <controllingFieldValue>Denver Downtown Partnership</controllingFieldValue>
+            <controllingFieldValue>QLM_Coupon</controllingFieldValue>
+            <controllingFieldValue>Digitec Interactive</controllingFieldValue>
+            <controllingFieldValue>RetailWire</controllingFieldValue>
+            <controllingFieldValue>Eloqua</controllingFieldValue>
+            <controllingFieldValue>RMDMA</controllingFieldValue>
+            <controllingFieldValue>ExactTarget</controllingFieldValue>
+            <controllingFieldValue>Ryma Technology</controllingFieldValue>
+            <controllingFieldValue>Salesforce</controllingFieldValue>
+            <controllingFieldValue>Great Clips</controllingFieldValue>
+            <controllingFieldValue>GSA</controllingFieldValue>
+            <controllingFieldValue>SCORE</controllingFieldValue>
+            <controllingFieldValue>SDCBA</controllingFieldValue>
+            <controllingFieldValue>HubSpot</controllingFieldValue>
+            <controllingFieldValue>Specialized Information Publishers Association</controllingFieldValue>
+            <controllingFieldValue>Springboard Enterprises</controllingFieldValue>
+            <controllingFieldValue>Survey Gizmo</controllingFieldValue>
+            <valueName>Non-Commission</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Alabama Association of Nonprofits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Alliance of Arizona Nonprofits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Arkansas Nonprofit Alliance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>California Association of Nonprofits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Colorado Nonprofit Association</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Connecticut Association of Nonprofits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Deleware Association of Nonprofit Agencies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Donors Forum (IL)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Hawaii Alliance of Nonprofit Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Idaho Nonprofit Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Kentucky Nonprofit Network</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Louisiana Association of Nonprofit Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Maine Association of Nonprofits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Maryland Nonprofits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Massachusetts Council of Human Services Providers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Michigan Nonprofit Association</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Minnesota Council of Nonprofits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Mississippi Center for Nonprofits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Montana Nonprofit Association</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>New Hampshire Center for Nonprofits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>New Jersey Center for Nonprofits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>New York Council of Nonprofits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Nonprofit Association of Oregon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Nonprofit Association of the Midlands</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Nonprofit Coordinating Committee of New York</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>North Carolina Center for Nonprofits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>North Dakota Association of Nonprofit Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Oklahoma Center for Nonprofits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Pennsylvania Association of Nonprofit Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>South Carolina Association of Nonprofit Associations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Texas Association of Nonprofit Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>The Foraker Group (AK)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Utah Nonprofits Association</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Washington DC Center for Nonprofit Advancement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Washington Nonprofits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Council of Nonprofits (NCN)</controllingFieldValue>
+            <valueName>Washington Nonprofits Association</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>ABAG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>AGF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>AGM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>CAF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>CCP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>CMF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>CNJG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>CSF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>DF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>DFSF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>DFW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>DVG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>FPN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>GCG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>GCRI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>GFNY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>GOSW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>GWPA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>ICOF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>IGA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>MCF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>MPC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>N/A</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>NCG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>NCNG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>NMAG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>OGF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>PNW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>PNY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>SCG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>SDG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>SECF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>WG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>WNYG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional Association of Grantmakers</controllingFieldValue>
+            <valueName>WVG</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

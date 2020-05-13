@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Field_s__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Required for Poor Ticket Quality/Incorrect or Missing Information</inlineHelpText>
+    <label>Field(s)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Area of Focus</fullName>
+                <default>false</default>
+                <label>Area of Focus</label>
+            </value>
+            <value>
+                <fullName>Call Examples</fullName>
+                <default>false</default>
+                <label>Call Examples</label>
+            </value>
+            <value>
+                <fullName>Client Credentials</fullName>
+                <default>false</default>
+                <label>Client Credentials</label>
+            </value>
+            <value>
+                <fullName>Client Viewable: Description/Resolutions</fullName>
+                <default>false</default>
+                <label>Client Viewable: Description/Resolutions</label>
+            </value>
+            <value>
+                <fullName>Failed to Attach Logs</fullName>
+                <default>false</default>
+                <label>Failed to Attach Logs</label>
+            </value>
+            <value>
+                <fullName>Incident Date/Time</fullName>
+                <default>false</default>
+                <label>Incident Date/Time</label>
+            </value>
+            <value>
+                <fullName>Missing Client Contact Info</fullName>
+                <default>false</default>
+                <label>Missing Client Contact Info</label>
+            </value>
+            <value>
+                <fullName>Product/Service</fullName>
+                <default>false</default>
+                <label>Product/Service</label>
+            </value>
+            <value>
+                <fullName>Root Category/Root Issue/Root Cause</fullName>
+                <default>false</default>
+                <label>Root Category/Root Issue/Root Cause</label>
+            </value>
+            <value>
+                <fullName>Symptom Main/Sub Category</fullName>
+                <default>false</default>
+                <label>Symptom Main/Sub Category</label>
+            </value>
+            <value>
+                <fullName>Template Not Used</fullName>
+                <default>false</default>
+                <label>Template Not Used</label>
+            </value>
+            <value>
+                <fullName>Ticket Type</fullName>
+                <default>false</default>
+                <label>Ticket Type</label>
+            </value>
+            <value>
+                <fullName>Web Details</fullName>
+                <default>false</default>
+                <label>Web Details</label>
+            </value>
+            <value>
+                <fullName>Work Notes - Other</fullName>
+                <default>false</default>
+                <label>Work Notes - Other</label>
+            </value>
+            <value>
+                <fullName>Work Notes Do Not Include Troubleshoot</fullName>
+                <default>false</default>
+                <label>Work Notes Do Not Include Troubleshoot</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

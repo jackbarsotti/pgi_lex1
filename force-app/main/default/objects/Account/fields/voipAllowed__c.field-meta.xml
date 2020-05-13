@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>voipAllowed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Will slow down provisioning when updated.  Needs to be updated with non-patria user name
+
+VoIP Allowed</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Allows chairperson (and all participants) to speak and listen to audio over their computer.</inlineHelpText>
+    <label>VoIP Allowed</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>
