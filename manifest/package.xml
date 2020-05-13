@@ -18766,10 +18766,6 @@
 	</types>
 	<types>
 		<members>*</members>
-		<name>LightningBolt</name>
-	</types>
-	<types>
-		<members>*</members>
 		<name>LightningComponentBundle</name>
 	</types>
 	<types>
