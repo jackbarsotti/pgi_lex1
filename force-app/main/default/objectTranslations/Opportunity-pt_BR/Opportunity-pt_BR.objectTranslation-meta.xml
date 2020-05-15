@@ -352,6 +352,14 @@
             <section>Win-Loss Analysis</section>
         </sections>
     </layouts>
+    <quickActions>
+        <label><!-- Generate NCS --></label>
+        <name>Generate_NCS</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- iContract --></label>
+        <name>iContract</name>
+    </quickActions>
     <recordTypes>
         <description><!-- PGi Opportunity Records --></description>
         <label><!-- PGi Opportunity --></label>

@@ -387,8 +387,28 @@
         </sections>
     </layouts>
     <quickActions>
+        <label><!-- Assign to Me --></label>
+        <name>Assign_to_MeLex</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Assign to Me --></label>
+        <name>Assign_to_Me_listbuttonLex</name>
+    </quickActions>
+    <quickActions>
         <label><!-- Change Status --></label>
         <name>Change_Status</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create a Blank Child FinReq --></label>
+        <name>Create_a_Blank_Child_FinReqLex</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create a Clone Child FinReq --></label>
+        <name>Create_a_Clone_Child_FinReqLex</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create achild --></label>
+        <name>Create_achildDelete</name>
     </quickActions>
     <recordTypes>
         <description><!-- Request help with a client&apos;s billing --></description>

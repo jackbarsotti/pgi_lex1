@@ -20,4 +20,8 @@
         <label><!-- Delete --></label>
         <name>Delete</name>
     </webLinks>
+    <webLinks>
+        <label><!-- Delete_lex --></label>
+        <name>Delete_lex</name>
+    </webLinks>
 </CustomObjectTranslation>

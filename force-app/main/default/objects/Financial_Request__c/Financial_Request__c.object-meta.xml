@@ -179,6 +179,7 @@
         <excludedStandardButtons>MassChangeOwner</excludedStandardButtons>
         <listViewButtons>Assign_to_Me_listbutton</listViewButtons>
         <massQuickActions>Change_Status</massQuickActions>
+        <massQuickActions>Assign_to_Me_listbuttonLex</massQuickActions>
         <searchFilterFields>NAME</searchFilterFields>
         <searchFilterFields>RECORDTYPE</searchFilterFields>
         <searchFilterFields>Assigned_To__c</searchFilterFields>

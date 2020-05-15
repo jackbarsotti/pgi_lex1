@@ -98,6 +98,10 @@
             <section>ZoomInfo</section>
         </sections>
     </layouts>
+    <quickActions>
+        <label><!-- Ready to Convert --></label>
+        <name>Convert_JScriptLex</name>
+    </quickActions>
     <recordTypes>
         <label><!-- PGi Leads --></label>
         <name>PGi_Leads</name>

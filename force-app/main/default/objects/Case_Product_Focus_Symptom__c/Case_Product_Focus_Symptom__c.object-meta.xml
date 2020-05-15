@@ -161,6 +161,7 @@
     <pluralLabel>Case Product Focus Symptoms</pluralLabel>
     <searchLayouts>
         <listViewButtons>Delete</listViewButtons>
+        <listViewButtons>Delete_lex</listViewButtons>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>

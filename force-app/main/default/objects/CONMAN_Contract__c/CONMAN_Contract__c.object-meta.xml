@@ -195,6 +195,7 @@
         <lookupPhoneDialogsAdditionalFields>Related_Agreement__c</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>Contract_Start_Date__c</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>Contract_Renewal_Date__c</lookupPhoneDialogsAdditionalFields>
+        <massQuickActions>New_PGI_Contract</massQuickActions>
         <searchFilterFields>Contract_Status__c</searchFilterFields>
         <searchFilterFields>Contract_Type__c</searchFilterFields>
         <searchFilterFields>Contract_Start_Date__c</searchFilterFields>

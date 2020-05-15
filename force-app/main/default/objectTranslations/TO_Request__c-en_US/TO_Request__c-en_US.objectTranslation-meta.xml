@@ -37,6 +37,10 @@
             <section>Custom Links</section>
         </sections>
     </layouts>
+    <quickActions>
+        <label><!-- New TOR --></label>
+        <name>New_TOR_Lex</name>
+    </quickActions>
     <startsWith>Consonant</startsWith>
     <webLinks>
         <label><!-- Calendar_View --></label>

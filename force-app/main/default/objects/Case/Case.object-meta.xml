@@ -236,6 +236,8 @@
         <lookupPhoneDialogsAdditionalFields>CASES.STATUS</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>CASES.CREATED_DATE</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>CASES.CLOSED_DATE</lookupPhoneDialogsAdditionalFields>
+        <massQuickActions>New_Case_Lex</massQuickActions>
+        <massQuickActions>Assign_to_Me_listbuttonLex</massQuickActions>
         <searchFilterFields>CASES.RECORDTYPE</searchFilterFields>
         <searchFilterFields>Current_Owner_s_Name__c</searchFilterFields>
         <searchFilterFields>Assigned_To__c</searchFilterFields>
