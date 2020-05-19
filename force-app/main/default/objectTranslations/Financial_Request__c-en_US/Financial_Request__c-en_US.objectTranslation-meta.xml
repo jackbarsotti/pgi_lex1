@@ -410,6 +410,10 @@
         <label><!-- Create achild --></label>
         <name>Create_achildDelete</name>
     </quickActions>
+    <quickActions>
+        <label><!-- Send Email --></label>
+        <name>Send_EmailLex</name>
+    </quickActions>
     <recordTypes>
         <description><!-- Request help with a client&apos;s billing --></description>
         <label><!-- PGi-Billing Support --></label>

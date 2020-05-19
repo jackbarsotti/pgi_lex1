@@ -1,0 +1,191 @@
+<aura:component controller="EmailSendController" implements="force:hasRecordId,force:lightningQuickActionWithoutHeader,flexipage:availableForAllPageTypes,force:appHostable" access="global">
+    <!--Part 1 [for attribute declare]-->  
+    <aura:attribute name="options" type="List"/>
+    <aura:attribute name="optionsSobj" type="List"/>
+    <aura:attribute name="selectedSobjValue" type="String" />
+    <aura:attribute name="selectedRecord" type="GenLookUpResult" access="global" description="API Name of field, to be returned from component"/>
+    <aura:attribute name="selectedSobjRecord" type="GenLookUpResult" access="global" description="API Name of field, to be returned from component"/>
+    <aura:attribute name="email" type="string"/>
+    <aura:attribute name="subject" type="string"/>
+    <aura:attribute name="body" type="string"/>
+    <aura:attribute name="mailStatus" type="boolean" default="false"/>
+    <!--for Templete-->
+    <aura:attribute name="listOfEmailTeplates" type="List"/>
+    <aura:attribute name="storeEmailTemplate" type="String"/>
+    <!--for Attachment-->
+    <aura:attribute name="attachMentRec" type="contentDocument"/>
+     <aura:attribute name="baseUrl" type="string"/>
+    <aura:attribute name="attachParentId" type="Id"/>
+    <!-- 'showLoadingSpinner' attribute for show/hide the uploading image and msg in aura:if-->
+    <aura:attribute name="showLoadingSpinner" type="boolean" default="false" />
+    <aura:attribute name="showButton" type="boolean" default="false" />
+    
+    <!-- 'fileName' attribute for display the selected file name -->  
+    <aura:attribute name="fileName" type="String" default="No File Selected.." />
+    <!--For Related List-->
+    <aura:attribute name="optionRLObjSele" type="List" />
+    <aura:attribute name="selectedObjValue" type="String" />
+    <!--Handler-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <!---Part 2 [header part] -->  
+    <div class="slds-page-header" role="banner">
+        <h1 class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate" title="this should match">
+            Quick Email Send.
+        </h1>
+        <div class="slds-text-color--weak">by sfdcMonkey.com</div>
+    </div>
+    
+    <!---Part 3 [message display part] --> 
+    <aura:if isTrue="{!v.mailStatus}">
+        <div role="alertdialog" tabindex="-1" aria-labelledby="prompt-heading-id" aria-describedby="prompt-message-wrapper" class="slds-modal slds-fade-in-open slds-modal--prompt">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header slds-theme--error slds-theme--alert-texture">
+                    <h2 class="slds-text-heading--medium" id="prompt-heading-id">Mail Status</h2>
+                </div>
+                <div class="slds-modal__content slds-p-around--medium">
+                    <div>
+                        <p>Email Sent successfully to {!v.email}</p>
+                    </div>
+                </div>
+                <div class="slds-modal__footer slds-theme--default">
+                    <button class="slds-button slds-button--brand" onclick="{!c.closeMessage}">Close</button>
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </aura:if>
+    <!--Email Templete Selection-->
+    <lightning:select aura:id="field" required="true" label="Email Template" name="emailTemplate" onchange="{!c.changeTemplate}" value="{!v.storeEmailTemplate}">                                                                          
+                                        <option value="">--none--</option>    
+                                        <aura:iteration items="{!v.listOfEmailTeplates}" var="plVal">                                     
+                                            <option value="{!plVal.Id}" text="{!plVal.Name}" /> 
+                                        </aura:iteration>                                              
+                                    </lightning:select>
+    
+    
+    <!---Part 4 [mail fourm part]-->   
+    <!--Attachment-->
+    <lightning:input aura:id="fileId" onchange="{!c.handleFilesChange}" type="file" name="file" label="Upload Attachment" multiple="false"/>
+    <div class="slds-text-body_small slds-text-color_error">{!v.fileName} </div>
+    
+    <!--use aura:if for show-hide the loading spinner image--> 
+    <aura:if isTrue="{!v.showLoadingSpinner}">
+        <div class="slds-text-body_small slds-text-color_error">Uploading... 
+            <img src="/auraFW/resources/aura/images/spinner.gif" class="spinner-img" alt="Loading"/>'
+        </div>
+    </aura:if>
+    
+    <br/>
+    <!--<aura:if isTrue="{!v.showButton}">
+   <button class="slds-button slds-button_brand" onclick="{!c.doSave}">Upload Attachment</button>
+    </aura:if>-->
+    <!--Templete-->
+    
+    
+    <div class="slds-m-around--medium">
+        <div class="slds-container--medium">
+            <div class="slds-form--stacked">
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="CC">From</label>
+                    <div class="slds-form-element__control">
+                        <lightning:select aura:id="fromAdd"  onchange="{! c.handleChange }">
+                            <option value="noreplylesforcecrmsupport@pgi.com" text="noreplylesforcecrmsupport@pgi.com" />
+                            <aura:iteration items="{!v.options}" var="per">
+                                <option value="{!per}" text="{!per}" /> 
+                            </aura:iteration>
+                        </lightning:select>
+                        
+                        <!--<ui:inputEmail class="slds-input" aura:id="From"  value="{!v.email}" required="true" placeholder="abc@email.com"/>-->
+                    </div>
+                </div>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="CC">To</label>
+                    <div class="slds-form-element__control">
+                        <!--<ui:inputEmail class="slds-input" aura:id="email"  value="{!v.email}" required="true" placeholder="abc@email.com"/>-->
+                        <c:GenLookupComp sObjectAPIName='Contact' 
+                                         field_API_text='Name' 
+                                         field_API_val='Id' 
+                                         selectedRecord = "{!v.selectedRecord}"/>  
+                    </div>
+                </div>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="CC">Related To</label>
+                    <div class="slds-form-element__control">
+                        
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_1-of-2" style="margin-top: -16px;">
+                            <lightning:select name="Objects" aura:id="onjId" value="{!v.selectedSobjValue}" onchange="{! c.handleSobjChange }">
+                            <aura:iteration items="{!v.optionsSobj}" var="objectname">
+                                <option value="{!objectname}" text="{!objectname}" />  
+                            </aura:iteration>
+                          </lightning:select>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <c:GenLookupComp sObjectAPIName='{!v.selectedSobjValue}' 
+                                         field_API_text='Name' 
+                                         field_API_val='Id' 
+                                         selectedRecord = "{!v.selectedSobjRecord}"/>
+                            </div>
+                        </div>
+                        
+                        1234 : {!v.selectedSobjRecord}.Id
+                        <!--<ui:inputEmail class="slds-input" aura:id="email"  value="{!v.email}" required="true" placeholder="abc@email.com"/>-->
+                        
+                    </div>
+                </div>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="CC">Subject</label>
+                    <div class="slds-form-element__control">
+                        <ui:inputText class="slds-input" aura:id="subject"  value="{!v.subject}" placeholder="Subject"/>
+                    </div>
+                </div>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="textareaSample2">Mail Body</label>
+                    <div class="slds-form-element__control">
+                        <lightning:inputRichText aura:id="body" value="{!v.body}" />
+                    </div>
+                </div>
+                <div class="slds-form-element">    
+                    <button class="slds-button slds-button--brand" onclick="{!c.sendMail}">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    
+    <!--Attachment-->
+    <div class="slds-form--compound" style="position:relative">
+                                    <div class="slds-scrollable--y" style="height:80px;">
+                                        <p>Attachments</p>
+                                        <table class="slds-table slds-table--bordered">  
+                                            <thead>  
+                                                <tr>  
+                                                    <th>Title</th>
+                                                    <th>File Type</th>
+                                                    <th>File Size(Bytes)</th>
+                                                    <th></th>                                                                        
+                                                </tr>  
+                                            </thead>  
+                                            <tbody>
+                                                <aura:iteration items="{!v.attachMentRec}" var="file">  
+                                                    <tr>                                                          
+                                                        <td><a href="" id="{!file.Id}" onclick="{!c.previewFile}">{!file.Title}</a></td> 
+                                                        <td>{!file.ContentSize}</td>
+                                                        <td><a href="" id="{!file.Id}" onclick="{!c.delFiles}">Delete</a></td>
+                                                    </tr>  
+                                                </aura:iteration>  
+                                            </tbody>  
+                                        </table>  
+                                        <aura:if isTrue="{!v.Spinner}">
+                                            <div class="slds-spinner_container">
+                                                <div class="slds-spinner slds-spinner--medium" aria-hidden="false" role="alert">
+                                                    <div class="slds-spinner__dot-a"></div>
+                                                    <div class="slds-spinner__dot-b"></div>
+                                                </div>
+                                            </div>
+                                        </aura:if>                                      
+                                    </div> 
+                                </div> 
+    
+    
+</aura:component>

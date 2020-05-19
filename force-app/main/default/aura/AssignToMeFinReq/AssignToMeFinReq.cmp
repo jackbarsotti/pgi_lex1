@@ -1,5 +1,5 @@
 <aura:component controller="AssignToMeDetailController" implements="force:hasRecordId,force:lightningQuickActionWithoutHeader,flexipage:availableForAllPageTypes,force:appHostable" access="global">
-    <aura:html tag="style">
+   <aura:html tag="style">
         .slds-modal {
         visibility: hidden;
         display: none;

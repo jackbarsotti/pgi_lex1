@@ -1,0 +1,105 @@
+<aura:component controller="GenLookupCntl" access="global">
+    
+    
+    <!--ltng:require styles="/apexpages/slds/latest/assets/styles/salesforce-lightning-design-system.css" /-->
+    
+    
+    <aura:attribute name="sObjectAPIName" type="String" access="global" description="Name of the object" />
+   
+    <aura:attribute name="field_API_text" type="String" access="global" description="API Name of field, to be used to show text"/>
+    <aura:attribute name="field_API_val" type="String" access="global" description="API Name of field, to be returned from component"/>
+    <aura:attribute name="field_API_search" type="String" access="global" description="API Name of field to be searched" default="Name"/>
+    <aura:attribute name="limit" type="Integer" access="global" default="5" description="Total number of record to be returned"/>
+    <aura:attribute name="isSOQL" type="Boolean" access="global" default="false" description="Total number of record to be returned"/>
+    <aura:attribute Name="selectedRecordId" type="String" access="global" description="Returns the ID of selected Record"/>
+    
+    <aura:attribute name="fieldLabel" type="String" access="global" description="Label of the Field to be searched"/>
+    <aura:attribute name="placeholderText" type="String" default="Search"/>
+    <aura:attribute name="listIconSVGPath" type="String" default="/apexpages/slds/latest/assets/icons/custom-sprite/svg/symbols.svg#custom11" description="The static resource path to the svg icon to use." access="global"/>
+    <aura:attribute name="listIconClass" type="String" default="slds-icon-custom-11" description="The SLDS class to use for the icon." access="global"/>
+      
+    <aura:attribute name="selectedRecord" type="GenLookUpResult" description="Selected Record Label"/>
+    <aura:attribute name="searchKey" type="String" description="contains search String" />
+    <aura:attribute name="searchMessage" type="String" default="Search result .."/>
+    <aura:attribute name="lookupResult" type="GenLookUpResult[]" access="global"/>
+    
+    
+	<aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>	
+	<aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+    
+    <aura:handler event="c:GenLookupItemSelectedEvent" name="lookUpOnItemSelect" action="{!c.handleItemSelected}"/>
+    
+    <aura:registerEvent name="updateLookup" type="c:GenLookupEvent" />
+
+    <div class="slds">
+        
+    	<div class="">
+        	<div aura:id="searchRes" class="slds-form-element slds-lookup slds-is-close" data-select="single">
+            	<aura:if isTrue="{!v.fieldLabel}">
+                    <label class="slds-form-element__label" for="lookupField">
+                        {!v.fieldLabel}
+                    </label>
+                </aura:if>
+           
+                <div class="slds-form-element">
+                    <div class="slds-form-element__control">
+                        <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">	
+                            <div aura:id="lookupFieldSearchIcon" class="disp-flex">
+                                 <c:CJ_Svg svgPath="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#search" 
+                                      category="standard" 
+                                      class="slds-input__icon slds-icon--large slds-show"
+                                      />  <!--iconTop-->
+                            </div>
+                            
+                            
+                            <div aura:id="lookup-pill" class="slds-pill_container slds-hide ">
+                                <span class="slds-pill">
+                                    <span class="slds-pill__label slds-m-around_xx-small">
+                                        <c:CJ_Svg svgPath="{!v.listIconSVGPath}" 
+                                      category="standard"
+                                      class="{!'slds-icon ' + v.listIconClass + ' slds-icon--small'}"
+                                      /> 
+                                        <span class="slds-m-left_x-small">
+                                            {!v.selectedRecord.SObjectLabel}
+                                        </span>
+                                    </span>
+                                    <button class="slds-button slds-button--icon slds-pill__remove slds-m-right--small" onclick="{!c.clear}">
+                                        <c:CJ_Svg svgPath="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#close" 
+                                      category="standard"
+                                      class="slds-button__icon closeColor"
+                                      />
+                                        <span class="slds-assistive-text">Remove</span>
+                                    </button>
+                                </span>
+                            </div>
+                            
+                            <div aura:id="lookupField" class="slds-grid">
+                                <ui:inputText updateOn="keyup" 
+                                              keyup="{!c.search}" 
+                                              class="slds-lookup__search-input slds-input" 
+                                              value="{!v.searchKey}" placeholder="{!v.placeholderText}" >
+                                </ui:inputText>
+                            </div>                    
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="slds-lookup__menu slds" aura:id="lookupmenu">
+                        <div class="slds-lookup__item--label slds-text-body--small">{!v.searchMessage}</div>
+                        <center> 
+                            <ui:spinner aura:id="spinner"/>
+                        </center>
+                        <ul class="slds-lookup__list" role="listbox">
+                            <aura:iteration items="{!v.lookupResult}" var="record">
+                                <c:GenLookupItem item="{!record}"/>
+                            </aura:iteration>
+                        </ul>
+                    </div>
+                </div>
+        	</div>
+        </div>
+    </div>
+
+    
+</aura:component>

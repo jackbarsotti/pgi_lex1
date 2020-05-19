@@ -357,6 +357,10 @@
         <name>Generate_NCS</name>
     </quickActions>
     <quickActions>
+        <label><!-- Send for eSignature --></label>
+        <name>Send_for_eSignature</name>
+    </quickActions>
+    <quickActions>
         <label><!-- iContract --></label>
         <name>iContract</name>
     </quickActions>
