@@ -5,34 +5,6 @@ Created By : Anup
 Description :  
 **********************************************************************/
 public class EscalateEmailCaseController {
-
-	// public String currentRecordId {get;set;}
- 
-    // public EscalateEmailCaseController(ApexPages.StandardController controller) {
-    //     currentRecordId  = ApexPages.CurrentPage().getparameters().get('id');
-    // }
-	// public Case record;
-
-	// public EscalateEmailCaseController(ApexPages.StandardController sc) {
-	// 	this.record = (Case)sc.getRecord();
-	// }
-	// public Case caseDetailsRecord {get; set;}
-	// public PageReference init(){
-	// 	caseDetailsRecord = [SELECT Id, Escalated__c, PGi_Client__c, PGi_Company__c FROM Case WHERE Id =: record.Id];
-	// 	system.debug('==>'+caseDetailsRecord);
-	// 	// if(this.record.Escalated__c == false) {
-	// 	// 	//this.record.Escalated__c = true;
-	// 	// 	try {
-	// 	// 		update record;
-	// 	// 		ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.INFO, 'Your case was successfully escalated.'));
-	// 	// 	} catch (exception e) {
-	// 	// 		ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR, 'Failed to escalate case. ' + e.getMessage()));
-	// 	// 	}
-	// 	// } else {
-	// 	// 	ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.WARNING, 'This case has already been escalated.'));
-	// 	// }
-	// 	 return null;
-	// }
 	@AuraEnabled
 	public static Case getCaseRecord(String recordId){
 		return [SELECT Id, IsEscalated, PGi_Client__c, PGi_Company__c, Caller_Name__c, Origin, Subject, Status FROM Case WHERE Id =: recordId];
@@ -77,8 +49,49 @@ public class EscalateEmailCaseController {
 		Case currentCase = [SELECT ID, PGi_Client__c, Escalated__c,Email_address__c, PGi_Company__c, Subject, Caller_Name__c, ParentId, Follow_Up_Email_Address__c  
 							FROM Case 
 							WHERE Id =: recordId];
+		if(currentCase.Escalated__c){
+			return 'Case is Already Escalated';
+		}
 		String returnId ='';
 		if(escalationType == 'Case'){
+			Case escalatedCase = new Case(Origin = 'Email', 
+									recordTypeId = recordTypeId,
+									PGi_Client__c = currentCase.PGi_Client__c,
+									PGi_Company__c = currentCase.PGi_Company__c,
+									Follow_Up_Email_Address__c = currentCase.Email_address__c,
+									Subject = currentCase.Subject,
+									Caller_Name__c = currentCase.Caller_Name__c);
+			INSERT escalatedCase;
+			currentCase.ParentId = escalatedCase.Id;
+			currentCase.Escalated__c = true;
+			UPDATE currentCase;
+			returnId = escalatedCase.Id;
+		}else{
+			
+			Financial_Request__c finReq = new Financial_Request__c(
+									recordTypeId = recordTypeId,
+									PGi_Client__c = currentCase.PGi_Client__c,
+									PGi_Company__c = currentCase.PGi_Company__c,
+									SuppliedEmail__c = currentCase.Email_address__c, 
+									Subject__c = currentCase.Subject,
+									Origin__c = 'Email',
+									Related_Case__c = currentCase.Id);			
+			INSERT finReq;
+			currentCase.Escalated__c = true;
+			UPDATE currentCase;
+			returnId = finReq.Id;
+		}
+		return returnId;
+	}
+	//start RT-594
+	@AuraEnabled
+	public static String esacalateEmailCase(String recId, String type, String recType){
+		Id recordTypeId = [SELECT Id FROM RecordType WHERE name LIKE :('%' + recType + '%') and SobjectType =: type limit 1].Id;
+		Case currentCase = [SELECT ID, PGi_Client__c, Escalated__c,Email_address__c, PGi_Company__c, Subject, Caller_Name__c, ParentId, Follow_Up_Email_Address__c  
+							FROM Case 
+							WHERE Id =: recId];
+		String returnId ='';
+		if(type == 'Case'){
 			Case escalatedCase = new Case(Origin = 'Email', 
 									recordTypeId = recordTypeId,
 									PGi_Client__c = currentCase.PGi_Client__c,

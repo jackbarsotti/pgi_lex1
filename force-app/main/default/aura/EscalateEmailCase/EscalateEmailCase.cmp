@@ -1,10 +1,14 @@
 <aura:component implements="force:lightningQuickAction,force:hasRecordId"
-                access="global">
+                access="global"
+                controller = "EscalateEmailCaseController">
     <aura:attribute name="options" type="List" default="[]"/>
      <aura:attribute name="recordType" type="List" default="[]"/>
-    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
-	<p> Escalation Type</p>
-    <lightning:combobox name="general" label="Escalation Type" placeholder="Select an Option" options="{! v.options }" onchange="{! c.handleChange }"/>
-    <p> Escalation Record Type</p>
-    <lightning:combobox name="general" label="Escalation Type" placeholder="Select an Option" options="{! v.recordType }"/>
+     <aura:attribute name="selectedType" type="String" />
+     <aura:attribute name="selectedRecordType" type="String" />
+     <aura:attribute name="isDisabled" type="Boolean" default = "true" />
+     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<lightning:combobox name="general" label="Escalation Type" placeholder="Select an Option" options="{! v.options }" onchange="{! c.handleTypeChange }"/>
+    <lightning:combobox name="general" label="Escalation Record Type" placeholder="Select an Option" options="{! v.recordType }" onchange="{!c.handleRecordTypeChange}"/>
+    <lightning:button variant="brand" label="Escalate" title="Escalate" onclick="{! c.escalateEmailCase }" disabled="{! v.isDisabled}" />
+    <lightning:button variant="brand" label="Cancel" title="Cancel" onclick="{! c.cancel }" />
 </aura:component>
