@@ -1,4 +1,4 @@
-<aura:component controller="ContactInactiveController" implements="force:hasRecordId,force:lightningQuickActionWithoutHeader,flexipage:availableForAllPageTypes,force:appHostable" access="global">
+<aura:component controller="ContactInactiveLEXController" implements="force:hasRecordId,force:lightningQuickActionWithoutHeader,flexipage:availableForAllPageTypes,force:appHostable" access="global">
     <aura:html tag="style">
         .slds-modal {
         visibility: hidden;
