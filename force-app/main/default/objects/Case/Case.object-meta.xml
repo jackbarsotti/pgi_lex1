@@ -188,9 +188,7 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <content>CaseViewOverride</content>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Visualforce</type>
+        <type>Default</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>

@@ -1,7 +1,8 @@
 <aura:component implements="force:lightningQuickAction,force:hasRecordId,lightning:isUrlAddressable,flexipage:availableForRecordHome" 
                 controller = "SendForESignatureController"
                 access="global">
-<aura:attribute name="SignAgreementList" type="List" />
+<aura:attribute name="SignAgreementList" type="list" />
+<aura:attribute name="opprtunityList" type="list" />
      <aura:html tag="style">
         .slds-modal {
         visibility: hidden;

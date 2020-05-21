@@ -31,6 +31,10 @@
     <aura:handler event="c:GenLookupItemSelectedEvent" name="lookUpOnItemSelect" action="{!c.handleItemSelected}"/>
     
     <aura:registerEvent name="updateLookup" type="c:GenLookupEvent" />
+    
+    <aura:method name="setValue" action="{!c.setSelection}">
+        <aura:attribute name="selectedItem" type="GenLookUpResult"/>
+    </aura:method>
 
     <div class="slds">
         

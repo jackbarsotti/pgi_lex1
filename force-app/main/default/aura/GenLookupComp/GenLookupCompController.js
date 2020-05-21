@@ -19,5 +19,10 @@
     },
     handleVFEvent : function (component, event, helper) {
         console.log ('VF Event fired');
+    },
+    setSelection : function (component, event, helper) {
+        if (event.getParam ('arguments') && event.getParam ('arguments').selectedItem) {
+        	helper.setSelection (component, event.getParam ('arguments').selectedItem);    
+        }
     }
 })

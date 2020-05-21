@@ -1,11 +1,68 @@
 ({
-    getFromAddess : function(component, event, helper) {
-        var action = component.get("c.getEmailfromAdd");
-        
+    getUser : function(component, event, helper) {
+        var action = component.get("c.getUser");
         action.setCallback(this, function(response) {
             var state = response.getState();
             if (state === "SUCCESS") {
-                component.set("v.options", response.getReturnValue());
+                let record = response.getReturnValue();
+                component.find ('addToLookup').setValue ({
+                    SObjectLabel :  record.Email,
+                    SObjectId : record.Id
+                });
+                component.find ('bccLookup').setValue ({
+                    SObjectLabel :  record.Email,
+                    SObjectId : record.Id
+                });
+            }
+            
+        })
+        
+        $A.enqueueAction(action);
+        
+    },
+    
+    getRecord : function(component, event, helper) {
+        var action = component.get("c.getrecord");
+        action.setParams({
+            recordId: component.get('v.recordId')
+        });
+        action.setCallback(this, function(response) {
+            var state = response.getState();
+            if (state === "SUCCESS") {
+                let record = response.getReturnValue();
+                /*let slecteRecord = {
+                  	SObjectLabel :  record.Name,
+                    SObjectId : record.Id
+                };
+                 component.set ('v.selectedSobjRecord', {
+                    SObjectLabel :  record.Name,
+                    SObjectId : record.Id
+                });
+                */
+                component.set("v.recordDetail", response.getReturnValue());
+                component.find ('sObjectLookup').setValue ({
+                    SObjectLabel :  record.Name,
+                    SObjectId : record.Id
+                });
+            }
+            
+        })
+        
+        $A.enqueueAction(action);
+        
+    },
+    getFromAddess : function(component, event, helper) {
+        var action = component.get("c.getEmailfromAdd");
+        let selectedemail = component.get ('v.fromEmail');
+        action.setCallback(this, function(response) {
+            var state = response.getState();
+            if (state === "SUCCESS") {
+                var result = response.getReturnValue();
+                var arrayMapKeys = [];
+                for(var key in result){
+                    arrayMapKeys.push({key: result[key], isSelected: selectedemail === result[key]});
+                }
+                component.set("v.options", arrayMapKeys);
             }
             
         })
@@ -15,11 +72,18 @@
     },
     getSobjToRelatedList : function(component, event, helper) {
         var action = component.get("c.getObjectName");
+        let selectedSobjValue = component.get ('v.selectedSobjValue');
         
         action.setCallback(this, function(response) {
             var state = response.getState();
             if (state === "SUCCESS") {
-                component.set("v.optionsSobj", response.getReturnValue());
+                var result = JSON.parse(response.getReturnValue());
+                var arrayMapKeys = [];
+                for(var key in result){
+                    arrayMapKeys.push({key: key, value: result[key], isSelected: selectedSobjValue === key});
+                }
+                //component.set("v.mapValues", arrayMapKeys);
+                component.set("v.optionsSobj",arrayMapKeys);
             }
             
         })
@@ -171,40 +235,92 @@
         });  
         $A.enqueueAction(action);  
     },  
-    getBaseUrl : function(component,attId) {  
-        var action = component.get("c.baseUrl");    
+    getTemplete : function(component,attId) {  
+        var action = component.get("c.getEmailTemplateList"); 
+         action.setParams({
+            "folderId":component.get('v.selectedFolder')            
+        }); 
         action.setCallback(this,function(response){  
             var state = response.getState();  
             if(state=='SUCCESS'){ 
-                component.set('v.baseUrl',response.getReturnValue());
+                component.set('v.listOfEmailTeplates',response.getReturnValue());
             }  
         });  
         $A.enqueueAction(action);  
     },  
      //get email templates
-    getAllEmailTemplateValues : function(component, event){
-        var action = component.get("c.getEmailTemplateValuesIntoPickList");
-        action.setCallback(this,function(response){
+    getEmailTemplateHelper: function (component, event) {
+		var selectedFolder = component.get('v.selectedFolder');
+        var action = component.get("c.getEmailTempaltes");
+        action.setCallback(this, function (response) {
             var state = response.getState();
-            if (component.isValid() && state === "SUCCESS") { 
-                var response = response.getReturnValue();   
-                if(response.length>0){
-                    component.set("v.listOfEmailTeplates",response); 
-                }
-                else{
-                    component.set("v.listOfEmailTeplates",'');
-                }
-            }else if(state === "ERROR"){
-                var errors = response.getError();
-                if(errors){
-                    if(errors[0] && errors[0].message){
-                        console.log("Error message: " + errors[0].message);
+            if (state === "SUCCESS" && response.getReturnValue() != null) {
+                alert('Testing');
+				var result = response.getReturnValue();
+                component.set('v.allTemplets',response.getReturnValue());
+                console.log('The result',result);
+                var arrayMapKeys = [];
+                var arrayTemp = [];
+                for(var key in result){
+                    console.log('The values',result[key].FolderId);
+                    arrayMapKeys.push({key: result[key].FolderId, value: result[key].FolderName, isSelected: selectedFolder === result[key].FolderId});
+                    if(result[key].FolderId == selectedFolder){
+                       arrayTemp.push(result[key]); 
                     }
-                }else{
+                }
+                component.set("v.folderList", arrayMapKeys);               
+            }
+            else if (state === "INCOMPLETE") {
+                // do something
+            }
+            else if (state === "ERROR") {
+                var errors = response.getError();
+                if (errors) {
+                    if (errors[0] && errors[0].message) {
+                        console.log("Error message: " +
+                            errors[0].message);
+                    }
+                } else {
                     console.log("Unknown error");
                 }
             }
         });
-        $A.enqueueAction(action);      
+
+        $A.enqueueAction(action);
+
     },
+    
+    getFolders: function (component, event) {
+		var selectedFolder = component.get('v.selectedFolder');
+        console.log('selectedFod',selectedFolder);
+        var action = component.get("c.getFolders");
+        action.setCallback(this, function (response) {
+            var state = response.getState();
+            if (state === "SUCCESS" && response.getReturnValue() != null) {
+                var result = response.getReturnValue();
+                var arrayMapKeys = [];
+                for(var key in result){
+                    arrayMapKeys.push({key: key, value: result[key], isSelected: selectedFolder === key});
+                }
+                component.set("v.folderList", arrayMapKeys);
+            }
+            else if (state === "INCOMPLETE") {
+                // do something
+            }
+            else if (state === "ERROR") {
+                var errors = response.getError();
+                if (errors) {
+                    if (errors[0] && errors[0].message) {
+                        console.log("Error message: " +
+                            errors[0].message);
+                    }
+                } else {
+                    console.log("Unknown error");
+                }
+            }
+        });
+
+        $A.enqueueAction(action);
+
+    }
 })

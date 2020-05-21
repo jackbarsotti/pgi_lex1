@@ -87,6 +87,14 @@
         }
         
     },
+    setSelection : function (component, selectedItem) {
+        component.set ('v.selectedRecord', selectedItem);
+        component.set ('v.selectedRecordId', selectedItem.SObjectId);
+        this.toggleItem (component, event, 'lookup-pill', true);
+        this.toggleItem (component, event, 'lookupField', false);
+        this.toggleItem (component, event, 'lookupFieldSearchIcon', false);
+        this.toggleSearchResult (component, true);
+    },
     fireApplicationEvent : function (component, event, isItemSelected, itemId, itemLabel) {
       	    let updateEvent = $A.get("e.c:GenLookupEvent");
             updateEvent.setParams({"SObjectId": itemId, 

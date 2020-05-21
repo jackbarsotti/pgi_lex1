@@ -11,7 +11,7 @@ public with sharing class SendForESignatureController {
                                       profileIdSet.add(profileRec.Id);
                                   }
         if(profileIdSet.contains(profileId)){
-            oppRecord = [SELECT StageName,Primary_Won_Reason__c,Secondary_Won_Reason__c,Tertiary_Won_Reason__c,Differentiating_Win_Factors__c,Incumbent__c,Competitor_s__c 
+            oppRecord = [SELECT StageName, Primary_Won_Reason__c, Secondary_Won_Reason__c, Tertiary_Won_Reason__c, Differentiating_Win_Factors__c,Incumbent__c,Competitor_s__c 
                          FROM Opportunity WHERE id =: OppId];
         }
         System.debug('>> oppRecord >>'+oppRecord);

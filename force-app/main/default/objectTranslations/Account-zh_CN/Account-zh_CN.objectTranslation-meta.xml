@@ -267,6 +267,10 @@
             <section>ZoomInfo</section>
         </sections>
     </layouts>
+    <quickActions>
+        <label><!-- Update from NetSuite --></label>
+        <name>Update_from_NetSuite</name>
+    </quickActions>
     <recordTypes>
         <label><!-- PGi Account --></label>
         <name>PGi_Account</name>

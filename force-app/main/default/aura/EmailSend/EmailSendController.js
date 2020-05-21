@@ -1,12 +1,20 @@
 ({
     doInit : function(component, event, helper) {
+        
+        component.set('v.selectedFolder','00D290000001JXXEA2');
+        component.set('v.selectedSobjValue','Financial_Request__c');
+        component.set("v.storeEmailTemplate",null); 
         var recordid= component.get('v.recordId');
         component.set('v.attachParentId',recordid);
         component.set('v.subject','Reply');
-        helper.getBaseUrl(component, event, helper);
+        component.set('v.fromEmail','noreplylesforcecrmsupport@pgi.com');
+        /*helper.getTemplete(component,event,helper);
+        helper.getRecord(component, event, helper);
         helper.getFromAddess(component, event, helper);
         helper.getSobjToRelatedList(component, event, helper);
-        
+        helper.getFolders(component, event);
+        helper.getUser(component, event);*/
+        helper.getEmailTemplateHelper(component, event, helper);
     },
     
     
@@ -59,21 +67,22 @@
     handleChange: function (component, event) {
         // This will contain the string of the "value" attribute of the selected option
         var percent = component.find('fromAdd').get('v.value');
-		component.set('v.email',percent);
+		component.set('v.fromEmail',percent);
         alert("Option selected with value: '" + percent + "'");
     },
     handleSobjChange: function (component, event) {
         // This will contain the string of the "value" attribute of the selected option
-        var percent = component.find('onjId').get('v.value');
-        alert("Option selected with value: '" + percent + "'");
+        var selected = component.find('onjId').get('v.value');
+        component.set('v.selectedSobjValue',selected);
+        alert('the value'+selected);
     },
     previewFile :function(component,event,helper){  
         var rec_id = event.currentTarget.id;  
         $A.get('e.lightning:openFiles').fire({ 
             recordIds: [rec_id]
         }); 
-        var documentId = event.currentTarget.id;
-        window.open('/'+documentId);
+        /*var documentId = event.currentTarget.id;
+        window.open('/'+documentId);*/
       /* var navEvt = $A.get("e.force:navigateToSObject");
     navEvt.setParams({
       "recordId": documentId,
@@ -86,11 +95,41 @@
         var documentId = event.currentTarget.id; 
         helper.delUploadedfiles(component,documentId);
     }, 
-   
-     changeTemplate: function(component, event, helper) {
-        var etVal = event.getSource().get("v.value");
-        component.set("v.storeEmailTemplate",etVal);
-        //get email template body 
-        helper.getAllEmailTemplateValues(component, event);
+    getTempleteId:function(component,event,helper){
+        var emailTempId = event.currentTarget.id;
+        var emailbody = '';
+        var emailSubject = '';
+        component.set("v.selectedEmailTemplate", emailTempId);
+        if (emailTempId != null && emailTempId != '' && emailTempId != 'undefined') {
+            var emailTemplateList = component.get("v.listOfEmailTeplates");
+            emailTemplateList.forEach(function (element) {
+                if (element.Id == emailTempId ) {
+                    if(element.HtmlValue  != null && element.HtmlValue  != ''){
+                     emailbody = element.HtmlValue;   
+                    }
+                    else if(element.Body != null && element.Body != ''){
+                      emailbody = element.Body;  
+                    }
+                    emailSubject = element.Subject;
+                }
+            });
+        }emailTempId
+        component.set("v.body", emailbody);
+        component.set("v.subject", emailSubject);
+        component.set('v.isModalOpen',false);
+    }, 
+   selectTemplete:function(component,event,helper){
+        component.set('v.isModalOpen',true);
+    }, 
+    handleFolderChange : function(component,event,helper){
+        var folderId = component.find('folderId').get('v.value');
+        component.set("v.selectedFolder",folderId);
+        if(folderId != 'undefined' && folderId != null && folderId != ''){
+            helper.getTemplete(component,event,helper);
+        }
+        
+    }, 
+    closeModel:function(component,event,helper){
+        component.set('v.isModalOpen',false);
     },
 })

@@ -154,10 +154,6 @@
             <section>Time Summary</section>
         </sections>
     </layouts>
-    <quickActions>
-        <label><!-- New Implementation --></label>
-        <name>New_Implementation</name>
-    </quickActions>
     <recordTypes>
         <label><!-- PGi IST --></label>
         <name>PGi_IST</name>

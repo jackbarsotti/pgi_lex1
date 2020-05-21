@@ -1574,6 +1574,10 @@
         <name>Escalate_Email_Case</name>
     </webLinks>
     <webLinks>
+        <label><!-- Escalate_Email_Case_Lex --></label>
+        <name>Escalate_Email_Case_Lex</name>
+    </webLinks>
+    <webLinks>
         <label><!-- New_Case --></label>
         <name>New_Case</name>
     </webLinks>
