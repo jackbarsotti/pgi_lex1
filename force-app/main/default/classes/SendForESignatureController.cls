@@ -44,10 +44,9 @@ public with sharing class SendForESignatureController {
         else{
             userRegion = 'EMEA';
         }
-        echosign_dev1__Agreement_Template__c at = [SELECT Id, Name FROM echosign_dev1__Agreement_Template__c 
+        echosign_dev1__Agreement_Template__c agTemplate = [SELECT Id, Name FROM echosign_dev1__Agreement_Template__c 
                                                     WHERE Name LIKE : '%'+ userRegion+'%' AND
                                                     echosign_dev1__Master_Object_Type__c = 'Opportunity'];
-        System.debug('>> at >>'+at);
-        return at;
+        return agTemplate;
     }
 }

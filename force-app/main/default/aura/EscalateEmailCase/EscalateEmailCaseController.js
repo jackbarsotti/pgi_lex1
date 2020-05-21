@@ -1,10 +1,11 @@
 ({
 	doInit : function(component, event, helper) {
-        console.log('recordId=>',component.get('v.recordId'));
+        helper.isEscalated(component, event, helper);
 		var item =[{"label": '--None--',"value": ''},
                    {"label": 'Case',  "value": 'Case'},
                    {"label": 'FinReq',  "value": 'Financial_Request__c'}];
         component.set("v.options", item);
+        
 	},
     handleTypeChange: function (component, event) {
         // This will contain the string of the "value" attribute of the selected option
@@ -37,6 +38,11 @@
         component.set("v.isDisabled", false);
     },
     escalateEmailCase : function(component, event, helper){
+        component.set('v.isDisabled',true);
         helper.escalateEmailCase(component, event,helper);
+    },
+    cancel : function(component, event, helper){
+        var dismissActionPanel = $A.get("e.force:closeQuickAction");
+        dismissActionPanel.fire();
     }
 })

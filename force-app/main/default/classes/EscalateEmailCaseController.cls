@@ -11,13 +11,6 @@ public class EscalateEmailCaseController {
 	}
 	@AuraEnabled
 	public static Boolean getIsEscalated(String recordId){
-		// system.debug('====>'+recTypeName);
-		// String recName = '%'+recTypeName+'%';
-		// String query = 'SELECT Id, Name FROM RecordType WHERE name LIKE \'PGi-' + recTypeName + '\' and SobjectType =\''+ObjectName+'\'';
-		// system.debug('query==>'+query);
-		// 	system.debug('=query=====>'+Database.query(query));
-		//  system.debug('====aaaa=='+[SELECT Id FROM RecordType WHERE name LIKE :('PGi-' + recTypeName + '') and SobjectType =: ObjectName]);
-		//system.debug('-[SELECT Id FROM RecordType WHERE name LIKE'+ '%recTypeName%'+'and SobjectType=Case]->'+[SELECT Id FROM RecordType WHERE name LIKE recName and SobjectType ='Case']);
 		return [SELECT Escalated__c FROM Case where id=:recordId].Escalated__c;
 	}
 	@AuraEnabled
@@ -49,9 +42,6 @@ public class EscalateEmailCaseController {
 		Case currentCase = [SELECT ID, PGi_Client__c, Escalated__c,Email_address__c, PGi_Company__c, Subject, Caller_Name__c, ParentId, Follow_Up_Email_Address__c  
 							FROM Case 
 							WHERE Id =: recordId];
-		if(currentCase.Escalated__c){
-			return 'Case is Already Escalated';
-		}
 		String returnId ='';
 		if(escalationType == 'Case'){
 			Case escalatedCase = new Case(Origin = 'Email', 
@@ -84,41 +74,41 @@ public class EscalateEmailCaseController {
 		return returnId;
 	}
 	//start RT-594
-	@AuraEnabled
-	public static String esacalateEmailCase(String recId, String type, String recType){
-		Id recordTypeId = [SELECT Id FROM RecordType WHERE name LIKE :('%' + recType + '%') and SobjectType =: type limit 1].Id;
-		Case currentCase = [SELECT ID, PGi_Client__c, Escalated__c,Email_address__c, PGi_Company__c, Subject, Caller_Name__c, ParentId, Follow_Up_Email_Address__c  
-							FROM Case 
-							WHERE Id =: recId];
-		String returnId ='';
-		if(type == 'Case'){
-			Case escalatedCase = new Case(Origin = 'Email', 
-									recordTypeId = recordTypeId,
-									PGi_Client__c = currentCase.PGi_Client__c,
-									PGi_Company__c = currentCase.PGi_Company__c,
-									Follow_Up_Email_Address__c = currentCase.Email_address__c,
-									Subject = currentCase.Subject,
-									Caller_Name__c = currentCase.Caller_Name__c);
-			INSERT escalatedCase;
-			currentCase.ParentId = escalatedCase.Id;
-			currentCase.Escalated__c = true;
-			UPDATE currentCase;
-			returnId = escalatedCase.Id;
-		}else{
+	// @AuraEnabled
+	// public static String esacalateEmailCase(String recId, String type, String recType){
+	// 	Id recordTypeId = [SELECT Id FROM RecordType WHERE name LIKE :('%' + recType + '%') and SobjectType =: type limit 1].Id;
+	// 	Case currentCase = [SELECT ID, PGi_Client__c, Escalated__c,Email_address__c, PGi_Company__c, Subject, Caller_Name__c, ParentId, Follow_Up_Email_Address__c  
+	// 						FROM Case 
+	// 						WHERE Id =: recId];
+	// 	String returnId ='';
+	// 	if(type == 'Case'){
+	// 		Case escalatedCase = new Case(Origin = 'Email', 
+	// 								recordTypeId = recordTypeId,
+	// 								PGi_Client__c = currentCase.PGi_Client__c,
+	// 								PGi_Company__c = currentCase.PGi_Company__c,
+	// 								Follow_Up_Email_Address__c = currentCase.Email_address__c,
+	// 								Subject = currentCase.Subject,
+	// 								Caller_Name__c = currentCase.Caller_Name__c);
+	// 		INSERT escalatedCase;
+	// 		currentCase.ParentId = escalatedCase.Id;
+	// 		currentCase.Escalated__c = true;
+	// 		UPDATE currentCase;
+	// 		returnId = escalatedCase.Id;
+	// 	}else{
 			
-			Financial_Request__c finReq = new Financial_Request__c(
-									recordTypeId = recordTypeId,
-									PGi_Client__c = currentCase.PGi_Client__c,
-									PGi_Company__c = currentCase.PGi_Company__c,
-									SuppliedEmail__c = currentCase.Email_address__c, 
-									Subject__c = currentCase.Subject,
-									Origin__c = 'Email',
-									Related_Case__c = currentCase.Id);			
-			INSERT finReq;
-			currentCase.Escalated__c = true;
-			UPDATE currentCase;
-			returnId = finReq.Id;
-		}
-		return returnId;
-	}
+	// 		Financial_Request__c finReq = new Financial_Request__c(
+	// 								recordTypeId = recordTypeId,
+	// 								PGi_Client__c = currentCase.PGi_Client__c,
+	// 								PGi_Company__c = currentCase.PGi_Company__c,
+	// 								SuppliedEmail__c = currentCase.Email_address__c, 
+	// 								Subject__c = currentCase.Subject,
+	// 								Origin__c = 'Email',
+	// 								Related_Case__c = currentCase.Id);			
+	// 		INSERT finReq;
+	// 		currentCase.Escalated__c = true;
+	// 		UPDATE currentCase;
+	// 		returnId = finReq.Id;
+	// 	}
+	// 	return returnId;
+	// }
 }

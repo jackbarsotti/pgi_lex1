@@ -6,9 +6,16 @@
      <aura:attribute name="selectedType" type="String" />
      <aura:attribute name="selectedRecordType" type="String" />
      <aura:attribute name="isDisabled" type="Boolean" default = "true" />
+     <aura:attribute name="isEscalated" type="Boolean" />
      <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
-	<lightning:combobox name="general" label="Escalation Type" placeholder="Select an Option" options="{! v.options }" onchange="{! c.handleTypeChange }"/>
-    <lightning:combobox name="general" label="Escalation Record Type" placeholder="Select an Option" options="{! v.recordType }" onchange="{!c.handleRecordTypeChange}"/>
-    <lightning:button variant="brand" label="Escalate" title="Escalate" onclick="{! c.escalateEmailCase }" disabled="{! v.isDisabled}" />
-    <lightning:button variant="brand" label="Cancel" title="Cancel" onclick="{! c.cancel }" />
+    <aura:if isTrue="{!v.isEscalated}">
+            <div> This Email has already been escalated, please view the Parent Case or related FinReq for further actions.</div>
+        <aura:set attribute="else">
+            <lightning:combobox name="general" label="Escalation Type" placeholder="Select an Option" options="{! v.options }" onchange="{! c.handleTypeChange }"/>
+            <lightning:combobox name="general" label="Escalation Record Type" placeholder="Select an Option" options="{! v.recordType }" onchange="{!c.handleRecordTypeChange}"/>
+            <lightning:button variant="brand" label="Escalate" title="Escalate" onclick="{! c.escalateEmailCase }" disabled="{! v.isDisabled}" />
+            <lightning:button variant="brand" label="Cancel" title="Cancel" onclick="{! c.cancel }" />
+        </aura:set>
+    </aura:if>
+    <!-- 'This Email has already been escalated, please view the Parent Case or related FinReq for further actions. -->
 </aura:component>
