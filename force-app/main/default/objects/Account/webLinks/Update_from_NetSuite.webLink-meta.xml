@@ -10,28 +10,26 @@
     <url>var Celigo = {};
 Celigo.SFDC = (function(){ //private members
     function AccountSyncManager(){
-    
-        //instance vars
+      //instance vars
         var that = this;
 		var retries = 0;
 		var maxRetries = 20;
-        
-        //methods
+                //methods
 		this.getURLParameter = function(_url, _name){ //String
-		    var regexS;
+                    var regexS;
 		    var regex;
 		    var results;
-		    _name = _name.replace(/[\[]/, &quot;\\\[&quot;).replace(/[\]]/, &quot;\\\]&quot;);
+                     _name = _name.replace(/[\[]/, &quot;\\\[&quot;).replace(/[\]]/, &quot;\\\]&quot;);
 		    regexS = &quot;[\\?&amp;]&quot; + _name + &quot;=([^&amp;#]*)&quot;;
-		    regex = new RegExp(regexS);
-		    results = regex.exec(_url);
-		    if (results === null) {
+                    regex = new RegExp(regexS);
+                    results = regex.exec(_url);
+                    if (results === null) {
 		        return &quot;&quot;;
 		    }
 		    else {
 		        return results[1];
 		    }
-		};
+                   };
 		
         this.triggerNsSync = function(){
 			var a = new sforce.SObject(&quot;Account&quot;); 

@@ -11,5 +11,6 @@
         
         }        
     </aura:html>
+    <aura:attribute name="accountRecordList" type="List" />
 	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
 </aura:component>

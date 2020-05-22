@@ -109,6 +109,7 @@ public class ContactTriggerHandler extends TriggerHandler {
         }
         
         if(profile != null && profile.Name != null && profile.Name.equals('System Admin API Only')) {
+            System.debug('Test');
             return;
         }
         

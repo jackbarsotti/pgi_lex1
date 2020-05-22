@@ -39,6 +39,11 @@
                     SObjectId : record.Id
                 });
                 */
+                var str1 = "Reply :";
+                var str2 = record.Subject__c;
+                var res = str1+str2;
+                console.log('The Value',res);
+                component.set('v.subject',res);
                 component.set("v.recordDetail", response.getReturnValue());
                 component.find ('sObjectLookup').setValue ({
                     SObjectLabel :  record.Name,
@@ -91,14 +96,21 @@
         $A.enqueueAction(action);
         
     },
-    sendHelper: function(component, getEmail, getSubject, getbody) {
+    sendHelper: function(component, getSubject, getbody,relatedToRecord,addTo,bcc,cc,toAddress,fromEmail,relatedToObject) {
         // call the server side controller method 	
         var action = component.get("c.sendMailMethod");
         // set the 3 params to sendMailMethod method   
         action.setParams({
-            'mMail': getEmail,
-            'mSubject': getSubject,
-            'mbody': getbody
+            relatedToRecord: relatedToRecord,
+            addTo: addTo,
+            cc: cc,
+            bcc: bcc,
+            toAddress: toAddress,
+            fromEmail: fromEmail,
+            relatedToObject: relatedToObject,
+            mSubject: getSubject,
+            mbody: getbody,
+            parentRecord:component.get('v.recordId')
         });
         action.setCallback(this, function(response) {
             var state = response.getState();
@@ -106,9 +118,9 @@
                 var storeResponse = response.getReturnValue();
                 // if state of server response is comes "SUCCESS",
                 // display the success message box by set mailStatus attribute to true
-                component.set("v.mailStatus", true);
+               this.showToast(component,event,"Success!","Success","The Email has been Sent Successfully");
             }
- 
+            
         });
         $A.enqueueAction(action);
     },
@@ -130,7 +142,7 @@
             component.set("v.fileName", 'Alert : File size cannot exceed ' + self.MAX_FILE_SIZE + ' bytes.\n' + ' Selected file size: ' + file.size);
             return;
         }
- 
+        
         // create a FileReader object 
         var objFileReader = new FileReader();
         // set onload function of FileReader object   
@@ -138,26 +150,26 @@
             var fileContents = objFileReader.result;
             var base64 = 'base64,';
             var dataStart = fileContents.indexOf(base64) + base64.length;
- 
+            
             fileContents = fileContents.substring(dataStart);
             // call the uploadProcess method 
             self.uploadProcess(component, file, fileContents);
         });
- 
+        
         objFileReader.readAsDataURL(file);
     },
- 
+    
     uploadProcess: function(component, file, fileContents) {
         // set a default size or startpostiton as 0 
         var startPosition = 0;
         // calculate the end size or endPostion using Math.min() function which is return the min. value   
         var endPosition = Math.min(fileContents.length, startPosition + this.CHUNK_SIZE);
- 
+        
         // start with the initial chunk, and set the attachId(last parameter)is null in begin
         this.uploadInChunk(component, file, fileContents, startPosition, endPosition, '');
     },
- 
- 
+    
+    
     uploadInChunk: function(component, file, fileContents, startPosition, endPosition, attachId) {
         // call the apex method 'saveChunk'
         var getchunk = fileContents.substring(startPosition, endPosition);
@@ -170,7 +182,7 @@
             contentType: file.type,
             fileId: attachId
         });
- 
+        
         // set call back 
         action.setCallback(this, function(response) {
             // store the response / Attachment Id   
@@ -186,7 +198,6 @@
                 if (startPosition < endPosition) {
                     this.uploadInChunk(component, file, fileContents, startPosition, endPosition, attachId);
                 } else {
-                    alert('your File is uploaded successfully'+attachId);
                     component.set("v.showLoadingSpinner", false);
                     this.getContentDoc(component,event,helper);
                 }
@@ -209,18 +220,18 @@
     },
     getContentDoc: function(component,event,helper){
         var recordId = component.get('v.recordId');
-		  var action = component.get("c.getContentDoc");
+        var action = component.get("c.getContentDoc");
         action.setParams({
             recordId: component.get("v.attachParentId")
         });    
-         action.setCallback(this, function(response) {
+        action.setCallback(this, function(response) {
             var state = response.getState();
             if (state === "SUCCESS") {
-               component.set('v.attachMentRec',response.getReturnValue());    
-                alert("Option selected with value: '" + component.get('v.attachMentRec') + "'");
+                component.set('v.attachMentRec',response.getReturnValue());    
+                
             }  
         });
-         $A.enqueueAction(action);
+        $A.enqueueAction(action);
     },
     delUploadedfiles : function(component,attId) {  
         var action = component.get("c.delcontentDocument");           
@@ -235,10 +246,32 @@
         });  
         $A.enqueueAction(action);  
     },  
-    getTemplete : function(component,attId) {  
+    getTemplateMergeFields : function(component,attId) {  
+        var relatedToRecord = component.get("v.selectedSobjRecord.SObjectId");
+        var toAddress = component.get("v.selectedRecord.SObjectId");
+        var action = component.get("c.getTempletemergeData"); 
+        action.setParams({
+            emailTempId :component.get('v.selectedEmailTemplate'),
+            toaddressId :toAddress,
+            mergeFieldObjId : relatedToRecord
+        }); 
+        action.setCallback(this,function(response){  
+            var state = response.getState();  
+            if(state=='SUCCESS'){ 
+                console.log('the value is'+response.getReturnValue().subject);
+                console.log('the value is1'+response.getReturnValue().emailBody);
+                component.set("v.body", response.getReturnValue().emailBody);
+       		   component.set("v.subject", response.getReturnValue().subject);
+                
+            }  
+        });  
+        $A.enqueueAction(action);  
+    },  
+    getTemplete : function(component,event,helper) { 
+        
         var action = component.get("c.getEmailTemplateList"); 
-         action.setParams({
-            "folderId":component.get('v.selectedFolder')            
+        action.setParams({
+            "folderId":component.get('v.selectedFolder')
         }); 
         action.setCallback(this,function(response){  
             var state = response.getState();  
@@ -248,50 +281,9 @@
         });  
         $A.enqueueAction(action);  
     },  
-     //get email templates
-    getEmailTemplateHelper: function (component, event) {
-		var selectedFolder = component.get('v.selectedFolder');
-        var action = component.get("c.getEmailTempaltes");
-        action.setCallback(this, function (response) {
-            var state = response.getState();
-            if (state === "SUCCESS" && response.getReturnValue() != null) {
-                alert('Testing');
-				var result = response.getReturnValue();
-                component.set('v.allTemplets',response.getReturnValue());
-                console.log('The result',result);
-                var arrayMapKeys = [];
-                var arrayTemp = [];
-                for(var key in result){
-                    console.log('The values',result[key].FolderId);
-                    arrayMapKeys.push({key: result[key].FolderId, value: result[key].FolderName, isSelected: selectedFolder === result[key].FolderId});
-                    if(result[key].FolderId == selectedFolder){
-                       arrayTemp.push(result[key]); 
-                    }
-                }
-                component.set("v.folderList", arrayMapKeys);               
-            }
-            else if (state === "INCOMPLETE") {
-                // do something
-            }
-            else if (state === "ERROR") {
-                var errors = response.getError();
-                if (errors) {
-                    if (errors[0] && errors[0].message) {
-                        console.log("Error message: " +
-                            errors[0].message);
-                    }
-                } else {
-                    console.log("Unknown error");
-                }
-            }
-        });
-
-        $A.enqueueAction(action);
-
-    },
     
     getFolders: function (component, event) {
-		var selectedFolder = component.get('v.selectedFolder');
+        var selectedFolder = component.get('v.selectedFolder');
         console.log('selectedFod',selectedFolder);
         var action = component.get("c.getFolders");
         action.setCallback(this, function (response) {
@@ -307,20 +299,31 @@
             else if (state === "INCOMPLETE") {
                 // do something
             }
-            else if (state === "ERROR") {
-                var errors = response.getError();
-                if (errors) {
-                    if (errors[0] && errors[0].message) {
-                        console.log("Error message: " +
-                            errors[0].message);
+                else if (state === "ERROR") {
+                    var errors = response.getError();
+                    if (errors) {
+                        if (errors[0] && errors[0].message) {
+                            console.log("Error message: " +
+                                        errors[0].message);
+                        }
+                    } else {
+                        console.log("Unknown error");
                     }
-                } else {
-                    console.log("Unknown error");
                 }
-            }
         });
-
+        
         $A.enqueueAction(action);
-
+        
+    },
+    showToast : function(component, event,title,type,message) {
+        var toastEvent = $A.get("e.force:showToast");
+        toastEvent.setParams({
+            "title": title,
+            "type" : type,
+            "message": message
+        });
+        toastEvent.fire();
+       /* var dismissActionPanel = $A.get("e.force:closeQuickAction");
+        dismissActionPanel.fire();*/
     }
 })

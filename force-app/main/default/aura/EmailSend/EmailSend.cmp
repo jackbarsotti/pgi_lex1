@@ -51,6 +51,7 @@
         max-width : 100%;
         }
         }
+        
     </aura:html>
     
     <!---Part 3 [message display part] --> 
@@ -75,9 +76,135 @@
     <!--Email Templete Selection-->
     
     
-    
+    <br/>
     <!---Part 4 [mail fourm part]-->   
     <!--Attachment-->
+    <div class="slds-grid slds-gutters slds-align_absolute-center">
+        <div class="slds-col slds-size_2-of-12">
+            <button class="slds-button slds-button--brand" onclick="{!c.selectTemplete}">Select Template</button>
+            
+        </div>
+        <div class="slds-col slds-size_2-of-12">   
+            <button class="slds-button slds-button--brand" onclick="{!c.sendMail}" style="margin-left: -9%;width: 120px;">Send</button>
+            
+        </div>
+        <div class="slds-col slds-size_2-of-12">   
+            <button class="slds-button slds-button--brand" onclick="{!c.closequickAction}" style="margin-left: -9%;width: 120px;">Close</button>
+            
+        </div>
+    </div>
+    <br/>
+    <!--<aura:if isTrue="{!v.showButton}">
+   <button class="slds-button slds-button_brand" onclick="{!c.doSave}">Upload Attachment</button>
+    </aura:if>-->
+    <!--Templete-->
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_1-of-12" style="margin-top: 23px;">
+            From
+        </div>
+        <div class="slds-col slds-size_10-of-12">
+            <lightning:select aura:id="fromAdd"  value="{!v.fromEmail}"  onchange="{! c.handleChange }">
+                <aura:iteration items="{!v.options}" var="per">
+                    <option value="{!per.key}" text="{!per.key}" selected="{!per.isSelected}"/> 
+                </aura:iteration>
+            </lightning:select> 
+        </div>
+        
+    </div>
+    <!--New-->
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_1-of-12" style="margin-top: 23px;">
+            To
+        </div>
+        <div class="slds-col slds-size_10-of-12" style="margin-top: 20px;">
+            <c:GenLookupComp sObjectAPIName='Contact' 
+                             field_API_text='Name' 
+                             field_API_val='Id' 
+                             selectedRecord = "{!v.selectedRecord}"/>
+        </div>
+        
+    </div>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_1-of-12" style="margin-top: 23px;">
+            Related To
+        </div>
+        <div class="slds-col slds-size_10-of-12" style="margin-top: 20px;">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_1-of-2" style="margin-top: -16px;">
+                    <lightning:select name="Objects" aura:id="onjId" value="{!v.selectedSobjValue}" onchange="{! c.handleSobjChange }">
+                        <aura:iteration items="{!v.optionsSobj}" var="objectname">
+                            <option value="{!objectname.key}" text="{!objectname.value}" selected="{!objectname.isSelected}"/>  
+                        </aura:iteration>
+                    </lightning:select>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <c:GenLookupComp sObjectAPIName='{!v.selectedSobjValue}' 
+                                     aura:id="sObjectLookup"
+                                     field_API_text='Name' 
+                                     field_API_val='Id' 
+                                     selectedRecord = "{!v.selectedSobjRecord}"/>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_1-of-12" style="margin-top: 23px;">
+            Additional To
+        </div>
+        <div class="slds-col slds-size_10-of-12" style="margin-top: 20px;">
+            <c:GenLookupComp sObjectAPIName='User' 
+                             aura:id="addToLookup"
+                             field_API_text='Email' 
+                             field_API_val='Id' 
+                             selectedRecord = "{!v.selectedAddTORecord}"/>
+        </div>
+        
+    </div>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_1-of-12" style="margin-top: 23px;">
+            cc
+        </div>
+        <div class="slds-col slds-size_10-of-12" style="margin-top: 20px;">
+            <c:GenLookupComp sObjectAPIName='User' 
+                             field_API_text='Email' 
+                             field_API_val='Id' 
+                             selectedRecord = "{!v.selectedCCRecord}"/>  
+        </div>
+        
+    </div>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_1-of-12" style="margin-top: 23px;">
+            Bcc
+        </div>
+        <div class="slds-col slds-size_10-of-12" style="margin-top: 20px;">
+            <c:GenLookupComp sObjectAPIName='User'
+                             aura:id="bccLookup"
+                             field_API_text='Email' 
+                             field_API_val='Id' 
+                             selectedRecord = "{!v.selectedBCCRecord}"/>
+        </div>
+        
+    </div>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_1-of-12" style="margin-top: 23px;">
+            Subject
+        </div>
+        <div class="slds-col slds-size_10-of-12" style="margin-top: 20px;">
+            <ui:inputText class="slds-input" aura:id="subject"  value="{!v.subject}" placeholder="Subject"/> 
+        </div>
+        
+    </div>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_1-of-12" style="margin-top: 23px;">
+            Mail Body
+        </div>
+        <div class="slds-col slds-size_10-of-12" style="margin-top: 20px;">
+            <pre><lightning:inputRichText class="" aura:id="body" value="{!v.body}" /> </pre>
+        </div>
+        
+    </div>
+    <!--End--><br/>
     <div class="slds-grid slds-gutters slds-align_absolute-center">
         <div class="slds-col slds-size_3.1-of-12">
             <lightning:input aura:id="fileId" onchange="{!c.handleFilesChange}" type="file" name="file" multiple="false"/>
@@ -91,118 +218,23 @@
             </aura:if>
         </div>
         <div class="slds-col slds-size_2-of-12">
-                <button class="slds-button slds-button--brand" onclick="{!c.selectTemplete}">Select Tepllate</button>
-  
+            <button class="slds-button slds-button--brand" onclick="{!c.selectTemplete}">Select Template</button>
+            
         </div>
-         <div class="slds-col slds-size_2-of-12">   
-                    <button class="slds-button slds-button--brand" onclick="{!c.sendMail}" style="margin-left: -9%;width: 120px;">Send</button>
-                
+        <div class="slds-col slds-size_2-of-12">   
+            <button class="slds-button slds-button--brand" onclick="{!c.sendMail}" style="margin-left: -9%;width: 120px;">Send</button>
+            
+        </div>
+        <div class="slds-col slds-size_2-of-12">   
+            <button class="slds-button slds-button--brand" onclick="{!c.closequickAction}" style="margin-left: -9%;width: 120px;">Close</button>
+            
         </div>
     </div>
     <br/>
-    <!--<aura:if isTrue="{!v.showButton}">
-   <button class="slds-button slds-button_brand" onclick="{!c.doSave}">Upload Attachment</button>
-    </aura:if>-->
-    <!--Templete-->
+    
+    <!--<ui:inputEmail class="slds-input" aura:id="From"  value="{!v.email}" required="true" placeholder="abc@email.com"/>-->
     
     
-    <div class="slds-m-around--medium">
-        <div class="slds-container--medium">
-            <div class="slds-form--stacked">
-                <div class="slds-form-element">
-                    <!--<label class="slds-form-element__label" for="CC">From</label>-->
-                    <div class="slds-form-element__control">
-                        <lightning:select aura:id="fromAdd"  value="{!v.fromEmail}" onchange="{! c.handleChange }">
-                            <aura:iteration items="{!v.options}" var="per">
-                                <option value="{!per.key}" text="{!per.key}" selected="{!per.isSelected}"/> 
-                            </aura:iteration>
-                        </lightning:select> 
-                        
-                        <!--<ui:inputEmail class="slds-input" aura:id="From"  value="{!v.email}" required="true" placeholder="abc@email.com"/>-->
-                    </div>
-                </div>
-                <div class="slds-form-element">
-                    <label class="slds-form-element__label" for="CC">To</label>
-                    <div class="slds-form-element__control">
-                        <!--<ui:inputEmail class="slds-input" aura:id="email"  value="{!v.email}" required="true" placeholder="abc@email.com"/>-->
-                        <c:GenLookupComp sObjectAPIName='Contact' 
-                                         field_API_text='Name' 
-                                         field_API_val='Id' 
-                                         selectedRecord = "{!v.selectedRecord}"/>  
-                    </div>
-                </div>
-                <div class="slds-form-element">
-                    <label class="slds-form-element__label" for="CC">Related To</label>
-                    <div class="slds-form-element__control">
-                        
-                        <div class="slds-grid slds-gutters">
-                            <div class="slds-col slds-size_1-of-2" style="margin-top: -16px;">
-                                <lightning:select name="Objects" aura:id="onjId" value="{!v.selectedSobjValue}" onchange="{! c.handleSobjChange }">
-                                    <aura:iteration items="{!v.optionsSobj}" var="objectname">
-                                        <option value="{!objectname.key}" text="{!objectname.value}" selected="{!objectname.isSelected}"/>  
-                                    </aura:iteration>
-                                </lightning:select>
-                            </div>
-                            <div class="slds-col slds-size_1-of-2">
-                                <c:GenLookupComp sObjectAPIName='{!v.selectedSobjValue}' 
-                                                 aura:id="sObjectLookup"
-                                                 field_API_text='Name' 
-                                                 field_API_val='Id' 
-                                                 selectedRecord = "{!v.selectedSobjRecord}"/>
-                            </div>
-                        </div>
-                        <!--<ui:inputEmail class="slds-input" aura:id="email"  value="{!v.email}" required="true" placeholder="abc@email.com"/>-->
-                        
-                    </div>
-                </div>
-                <div class="slds-form-element">
-                    <label class="slds-form-element__label" for="CC">Aditional To</label>
-                    <div class="slds-form-element__control">
-                        <!--<ui:inputEmail class="slds-input" aura:id="email"  value="{!v.email}" required="true" placeholder="abc@email.com"/>-->
-                        <c:GenLookupComp sObjectAPIName='User' 
-                                         aura:id="addToLookup"
-                                         field_API_text='Email' 
-                                         field_API_val='Id' 
-                                         selectedRecord = "{!v.selectedAddTORecord}"/>  
-                    </div>
-                </div>
-                <div class="slds-form-element">
-                    <label class="slds-form-element__label" for="CC">cc</label>
-                    <div class="slds-form-element__control">
-                        <!--<ui:inputEmail class="slds-input" aura:id="email"  value="{!v.email}" required="true" placeholder="abc@email.com"/>-->
-                        <c:GenLookupComp sObjectAPIName='User' 
-                                         field_API_text='Email' 
-                                         field_API_val='Id' 
-                                         selectedRecord = "{!v.selectedCCRecord}"/>  
-                    </div>
-                </div>
-                <div class="slds-form-element">
-                    <label class="slds-form-element__label" for="CC">BCC</label>
-                    <div class="slds-form-element__control">
-                        <!--<ui:inputEmail class="slds-input" aura:id="email"  value="{!v.email}" required="true" placeholder="abc@email.com"/>-->
-                        <c:GenLookupComp sObjectAPIName='User'
-                                         aura:id="bccLookup"
-                                         field_API_text='Email' 
-                                         field_API_val='Id' 
-                                         selectedRecord = "{!v.selectedBCCRecord}"/>  
-                    </div>
-                </div>
-                <div class="slds-form-element">
-                    <label class="slds-form-element__label" for="CC">Subject</label>
-                    <div class="slds-form-element__control">
-                        <ui:inputText class="slds-input" aura:id="subject"  value="{!v.subject}" placeholder="Subject"/>
-                    </div>
-                </div>
-                <div class="slds-form-element">
-                    <label class="slds-form-element__label" for="textareaSample2">Mail Body</label>
-                    <div class="slds-form-element__control">
-                        <pre><lightning:inputRichText aura:id="body" value="{!v.body}" /> </pre>
-                    </div>
-                </div>
-                <!--Button-->
-            </div>
-        </div>
-    </div>
     
     
     <!--Attachment-->
@@ -213,9 +245,8 @@
                 <thead>  
                     <tr>  
                         <th>Title</th>
-                        <th>File Type</th>
                         <th>File Size(Bytes)</th>
-                        <th></th>                                                                        
+                        <th></th>                                                                      
                     </tr>  
                 </thead>  
                 <tbody>
@@ -254,10 +285,10 @@
                                           class="slds-modal__close"/>
                     
                     <span>Select Folder </span><lightning:select aura:id="folderId"  value="{!v.selectedFolder}" onchange="{! c.handleFolderChange }">
-                                    <aura:iteration items="{!v.folderList}" var="per">
-                                        <option value="{!per.key}" text="{!per.value}" selected="{!per.isSelected}"/> 
-                                    </aura:iteration>
-                                </lightning:select>
+                    <aura:iteration items="{!v.folderList}" var="per">
+                        <option value="{!per.key}" text="{!per.value}" selected="{!per.isSelected}"/> 
+                    </aura:iteration>
+                    </lightning:select>
                     
                 </header>
                 <!--Modal/Popup Box Body Starts here-->
@@ -266,25 +297,25 @@
                         
                         <aura:if isTrue="{!not(empty(v.listOfEmailTeplates))}">
                             <div class="slds-scrollable--y slds-scrollable--x" style="height:80%;">
-                            <table class="slds-table slds-table--bordered">  
-                                <thead>  
-                                    <tr>  
-                                        <th>Name</th>
-                                        <th>Type</th>
-                                        <th>Description</th>                                                                        
-                                    </tr>  
-                                </thead>  
-                                <tbody>
-                                    <aura:iteration items="{!v.listOfEmailTeplates}" var="temp">  
-                                        <tr>                                                          
-                                            <td><a href="" id="{!temp.Id}" onclick="{!c.getTempleteId}">{!temp.Name}</a></td> 
-                                            <td>{!temp.TemplateType}</td>
-                                            <td>{!temp.Description}</td>
+                                <table class="slds-table slds-table--bordered slds-table--header-fixed">  
+                                    <thead>  
+                                        <tr>  
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Description</th>                                                                        
                                         </tr>  
-                                    </aura:iteration>  
-                                </tbody>  
-                            </table>                                
-                        </div> 
+                                    </thead>  
+                                    <tbody>
+                                        <aura:iteration items="{!v.listOfEmailTeplates}" var="temp">  
+                                            <tr>                                                          
+                                                <td><a href="" id="{!temp.Id}" onclick="{!c.getTempleteId}">{!temp.Name}</a></td> 
+                                                <td>{!temp.TemplateType}</td>
+                                                <td>{!temp.Description}</td>
+                                            </tr>  
+                                        </aura:iteration>  
+                                    </tbody>  
+                                </table>                                
+                            </div> 
                             <aura:set attribute="else">
                                 <h1>No Templates Available</h1>
                             </aura:set>

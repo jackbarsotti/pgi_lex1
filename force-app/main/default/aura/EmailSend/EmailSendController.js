@@ -1,20 +1,31 @@
 ({
     doInit : function(component, event, helper) {
-        
+        var userId = $A.get("$SObjectType.CurrentUser.Id");
+        var userIe = $A.get("$SObjectType.CurrentUser.Email");
+        component.find ('addToLookup').setValue ({
+                    SObjectLabel :  userIe,
+                    SObjectId : userId
+                });
+                component.find ('bccLookup').setValue ({
+                    SObjectLabel :  userIe,
+                    SObjectId : userIe
+                });
+ 		console.log(userId);
+        console.log(userIe);
         component.set('v.selectedFolder','00D290000001JXXEA2');
         component.set('v.selectedSobjValue','Financial_Request__c');
         component.set("v.storeEmailTemplate",null); 
         var recordid= component.get('v.recordId');
         component.set('v.attachParentId',recordid);
-        component.set('v.subject','Reply');
+        //component.set('v.subject','Reply');
         component.set('v.fromEmail','noreplylesforcecrmsupport@pgi.com');
-        /*helper.getTemplete(component,event,helper);
+        helper.getTemplete(component,event,helper);
         helper.getRecord(component, event, helper);
         helper.getFromAddess(component, event, helper);
         helper.getSobjToRelatedList(component, event, helper);
         helper.getFolders(component, event);
-        helper.getUser(component, event);*/
-        helper.getEmailTemplateHelper(component, event, helper);
+        //helper.getUser(component, event);
+       // helper.getEmailTemplateHelper(component, event, helper);
     },
     
     
@@ -22,15 +33,30 @@
     sendMail: function(component, event, helper) {
         // when user click on Send button 
         // First we get all 3 fields values 	
-        var getEmail = component.get("v.email");
         var getSubject = component.get("v.subject");
         var getbody = component.get("v.body");
+        var fromEmail = component.get("v.fromEmail");
+        if(fromEmail.includes(">")){
+         fromEmail = fromEmail.substring(fromEmail.indexOf('<')+1,fromEmail.indexOf('>'));
+        }
+        alert('the from add'+fromEmail);
+        var toAddress = component.get("v.selectedRecord.SObjectId");
+        var cc = component.get("v.selectedCCRecord.SObjectLabel");
+        var bcc = component.get("v.selectedBCCRecord.SObjectLabel");
+        var addTo = component.get("v.selectedAddTORecord.SObjectLabel")
+        var relatedToRecord = component.get("v.selectedSobjRecord.SObjectId");
+        var relatedToObject = component.get("v.selectedSobjValue");
         // check if Email field is Empty or not contains @ so display a alert message 
         // otherwise call call and pass the fields value to helper method    
-        if ($A.util.isEmpty(getEmail) || !getEmail.includes("@")) {
-            alert('Please Enter valid Email Address');
-        } else {
-            helper.sendHelper(component, getEmail, getSubject, getbody);
+        if ($A.util.isEmpty(toAddress)) {
+            alert('Please Select valid To Address');
+        } 
+        else if($A.util.isEmpty(getSubject))
+        {
+           alert('Please Enter Subject'); 
+        }
+        else {
+            helper.sendHelper(component, getSubject, getbody,relatedToRecord,addTo,bcc,cc,toAddress,fromEmail,relatedToObject);
         }
     },
     
@@ -66,15 +92,18 @@
     },
     handleChange: function (component, event) {
         // This will contain the string of the "value" attribute of the selected option
-        var percent = component.find('fromAdd').get('v.value');
-		component.set('v.fromEmail',percent);
-        alert("Option selected with value: '" + percent + "'");
+        var selected = component.find('fromAdd').get('v.value');
+        /*if(selected.includes(">")){
+         selected = selected.substring(selected.indexOf('<')+1,selected.indexOf('>'));
+        }*/
+        component.set('v.fromEmail',selected);
+        console.log('The Value is',component.get('v.fromEmail'));
     },
     handleSobjChange: function (component, event) {
         // This will contain the string of the "value" attribute of the selected option
         var selected = component.find('onjId').get('v.value');
+        //component.set('v.selectedSobjRecord',null);
         component.set('v.selectedSobjValue',selected);
-        alert('the value'+selected);
     },
     previewFile :function(component,event,helper){  
         var rec_id = event.currentTarget.id;  
@@ -100,7 +129,7 @@
         var emailbody = '';
         var emailSubject = '';
         component.set("v.selectedEmailTemplate", emailTempId);
-        if (emailTempId != null && emailTempId != '' && emailTempId != 'undefined') {
+        /*if (emailTempId != null && emailTempId != '' && emailTempId != 'undefined') {
             var emailTemplateList = component.get("v.listOfEmailTeplates");
             emailTemplateList.forEach(function (element) {
                 if (element.Id == emailTempId ) {
@@ -113,13 +142,26 @@
                     emailSubject = element.Subject;
                 }
             });
-        }emailTempId
+        }
         component.set("v.body", emailbody);
-        component.set("v.subject", emailSubject);
+        component.set("v.subject", emailSubject);*/
+        helper.getTemplateMergeFields(component,event,helper);
         component.set('v.isModalOpen',false);
+        alert('The Value'+emailTempId);
     }, 
    selectTemplete:function(component,event,helper){
-        component.set('v.isModalOpen',true);
+       var toadd = component.get("v.selectedRecord.SObjectId");
+       var relatedToRecord = component.get("v.selectedSobjRecord.SObjectId");
+       if(toadd == null || toadd == '' || toadd == 'undefined'){
+          helper.showToast(component,event,"Warning!","Warning","Please select To address"); 
+       }
+       else if(relatedToRecord == null || relatedToRecord == '' || relatedToRecord == 'undefined'){
+           helper.showToast(component,event,"Warning!","Warning","Please select Relate To record"); 
+       }
+           else{
+              component.set('v.isModalOpen',true);  
+           }
+       
     }, 
     handleFolderChange : function(component,event,helper){
         var folderId = component.find('folderId').get('v.value');
@@ -131,5 +173,9 @@
     }, 
     closeModel:function(component,event,helper){
         component.set('v.isModalOpen',false);
+    },
+     closequickAction:function(component,event,helper){
+        var dismissActionPanel = $A.get("e.force:closeQuickAction");
+        dismissActionPanel.fire();
     },
 })

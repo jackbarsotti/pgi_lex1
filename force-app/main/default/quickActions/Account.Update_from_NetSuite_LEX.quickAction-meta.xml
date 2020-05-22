@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
     <height>250</height>
-    <label>Create a Clone Child FinReq</label>
-    <lightningComponent>CloneChildFinReqLEX</lightningComponent>
+    <label>Update from NetSuite</label>
+    <lightningComponent>UpdatefromNetSuite</lightningComponent>
     <optionsCreateFeedItem>false</optionsCreateFeedItem>
     <type>LightningComponent</type>
     <width>-100</width>

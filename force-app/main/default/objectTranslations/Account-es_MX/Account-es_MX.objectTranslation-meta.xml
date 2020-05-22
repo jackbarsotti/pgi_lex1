@@ -269,7 +269,7 @@
     </layouts>
     <quickActions>
         <label><!-- Update from NetSuite --></label>
-        <name>Update_from_NetSuite</name>
+        <name>Update_from_NetSuite_LEX</name>
     </quickActions>
     <recordTypes>
         <label><!-- PGi Account --></label>
