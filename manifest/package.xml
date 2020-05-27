@@ -18782,6 +18782,8 @@
 		<name>NavigationMenu</name>
 	</types>
 	<types>
+		<members>Case.Assign_to_MeLex</members>
+		<members>Case.Assign_to_Me_listbuttonLex</members>
 		<members>Financial_Request__c.Assign_to_MeLex</members>
 		<members>Request_for_Change__c.Assign_to_Me_RFCLex</members>
 		<members>Financial_Request__c.Assign_to_Me_listbuttonLex</members>
