@@ -1,0 +1,30 @@
+<aura:component >
+    <aura:attribute name="item" type="GenLookUpResult" required='true'/>
+    <aura:attribute name="listIconSVGPath" type="String" default="/apexpages/slds/latest/assets/icons/custom-sprite/svg/symbols.svg#custom11" description="The static resource path to the svg icon to use." access="global"/>
+    <aura:attribute name="listIconClass" type="String" default="slds-icon-custom-11" description="The SLDS class to use for the icon." access="global"/>
+     
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:registerEvent name="lookUpOnItemSelect" type="c:GenLookupItemSelectedEvent"/>
+    <li role="presentation">
+    	<span class="slds-lookup__item-action slds-media slds-media--center" role="option">
+        	<div class="slds-media__body">
+            	<div class="slds-input-has-icon slds-input-has-icon--right">
+                	<!--c:SVGComponent ariaHidden="true" class="slds-input__icon" xlinkHref="/apexpages/slds/latest/assets/icons/standard-sprite/svg/symbols.svg#contact"/-->
+  					<div class="slds-lookup__result-text">
+                        <a id="{!globalId + '_id_' + v.item.SObjectId}" role="option" onclick="{!c.onItemSelect }">
+                            <c:CJ_Svg svgPath="{!v.listIconSVGPath}" 
+                                      category="standard" size="small"
+                                      class="{!'slds-icon ' + v.listIconClass + ' slds-icon--small'}"
+                                      />  
+                            <span class="slds-m-left_x-small">
+                                {!v.item.SObjectLabel}
+                            </span>
+                        </a>
+                       
+                    </div>
+                </div>
+            </div>
+        </span>
+    </li>
+</aura:component>

@@ -10,6 +10,8 @@
   <!-- Above for Ordering -->
   <!-- to store the default value -->
   <aura:attribute name="allSprint" type="list" />
+  <!--Used to Store Default Record.(Used in selection of User no need to update or remove)-->
+  <aura:attribute name="allRecords" type="Case" />
   <aura:attribute name="objName" type="String" default="" />
   <aura:attribute name="objFields" type="String[]" default="" />
   <aura:attribute name="agileStatusOnCase" type="String" default="" />
@@ -53,6 +55,7 @@
       class="slds-col slds-size_2-of-12 slds-p-top_large"
       style="padding-left: 41px;"
     >
+    Select a Group
     </div>
     <div class="slds-col slds-size_2-of-12" style="width:15vw">
       <lightning:select
@@ -73,6 +76,11 @@
         </aura:iteration>
       </lightning:select>
     </div>
+
+    <div class="slds-col slds-size_2-of-12" style="width:15vw;margin-top: 19px;">
+      <lightning:button class="deselectAllitem"  onclick="{! c.docheckClick }" name="Test" label="Show only mine" title="Test" />
+    </div>
+    
   </div>
 
   <div class="slds-col slds-size_12-of-12">
