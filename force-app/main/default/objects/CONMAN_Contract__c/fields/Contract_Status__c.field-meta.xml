@@ -130,6 +130,11 @@
                 <default>false</default>
                 <label>Rejected</label>
             </value>
+            <value>
+                <fullName>agTempValue</fullName>
+                <default>false</default>
+                <label>agTempValue</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

@@ -5,9 +5,7 @@
     <columns>ACCOUNT.NAME</columns>
     <columns>OPPORTUNITY.NAME</columns>
     <columns>OPPORTUNITY.AMOUNT</columns>
-    <columns>Margin__c</columns>
     <columns>CORE.USERS.FULL_NAME</columns>
-    <columns>Sales_Region__c</columns>
     <columns>OPPORTUNITY.CREATED_DATE</columns>
     <columns>OPPORTUNITY.LEAD_SOURCE</columns>
     <columns>OPPORTUNITY.PROBABILITY</columns>

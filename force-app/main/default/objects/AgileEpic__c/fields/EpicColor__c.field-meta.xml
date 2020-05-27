@@ -47,10 +47,10 @@
                 <label>Pink</label>
             </value>
             <value>
-                <fullName>Purple</fullName>
+                <fullName>Purpose</fullName>
                 <color>#641CCF</color>
                 <default>false</default>
-                <label>Purple</label>
+                <label>Purpose</label>
             </value>
             <value>
                 <fullName>Red</fullName>
@@ -59,10 +59,10 @@
                 <label>Red</label>
             </value>
             <value>
-                <fullName>Teal</fullName>
+                <fullName>Teel</fullName>
                 <color>#00CCCC</color>
                 <default>false</default>
-                <label>Teal</label>
+                <label>Teel</label>
             </value>
         </valueSetDefinition>
     </valueSet>

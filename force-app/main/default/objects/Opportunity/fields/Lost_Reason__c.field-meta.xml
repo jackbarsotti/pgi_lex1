@@ -60,6 +60,16 @@
                 <default>false</default>
                 <label>Nothing. This was never a serious opportunity</label>
             </value>
+            <value>
+                <fullName>No decision (due to COVID-19 or lost budget)</fullName>
+                <default>false</default>
+                <label>No decision (due to COVID-19 or lost budget)</label>
+            </value>
+            <value>
+                <fullName>No decision (due to concerns related to migrating to the cloud; security, features, control, integrations)</fullName>
+                <default>false</default>
+                <label>No decision (due to concerns related to migrating to the cloud; security, features, control, integrations)</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

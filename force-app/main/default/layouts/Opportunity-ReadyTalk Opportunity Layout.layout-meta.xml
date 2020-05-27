@@ -43,6 +43,10 @@
                 <behavior>Edit</behavior>
                 <field>Synced_Quote__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Converted_from_Global_Contact_MQL__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -106,18 +110,6 @@
                 <behavior>Edit</behavior>
                 <field>Created_from_Lead__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Converted_from_MQL__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Converted_from_Global_Contact_MQL__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Converted_from_MQA__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -131,6 +123,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Lead_Source_Campaign__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Converted_from_MQL__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>

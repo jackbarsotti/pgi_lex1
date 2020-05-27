@@ -32,7 +32,7 @@
         <operation>equals</operation>
         <value>purchase,decision</value>
     </filters>
-    <label>6sense Collab/UC: PU/DE Contacts</label>
+    <label>6sense Conferencing - PU/DE Contacts</label>
     <language>en_US</language>
     <sharedTo>
         <group>All_6Sense</group>

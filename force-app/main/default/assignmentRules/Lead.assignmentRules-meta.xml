@@ -13,12 +13,26 @@
             <criteriaItems>
                 <field>Lead.LeadSource</field>
                 <operation>equals</operation>
-                <value>ZoomInfo,Live Chat</value>
+                <value>ZoomInfo,Live Chat,Web Chat</value>
             </criteriaItems>
             <criteriaItems>
                 <field>Lead.Owner_s_Profile__c</field>
                 <operation>contains</operation>
                 <value>Sales</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PGi_Lead_Global_Inquiries_Baking</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Created_by_User_s_Name__c</field>
+                <operation>equals</operation>
+                <value>ChatCustomPage Guest User,Automated Process</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Web Chat</value>
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
@@ -60,7 +74,7 @@
         <ruleEntry>
             <assignedTo>PGi_Lead_JAPAN_Web_To_Lead</assignedTo>
             <assignedToType>Queue</assignedToType>
-            <formula>OwnerId = &#39;00Ga000000309O8&#39; || Campaign.Parent.Id = &#39;7011B000002OP0g&#39;|| Campaign.Parent.Id = &#39;7011B000002OOni&#39;|| Campaign.Parent.Id = &#39;7011B000002OOnn&#39;|| Campaign.Parent.Id = &#39;7011B000002OOnY&#39;|| Country = &quot;Japan&quot;</formula>
+            <formula>OwnerId = &apos;00Ga000000309O8&apos; || Campaign.Parent.Id = &apos;7011B000002OP0g&apos;|| Campaign.Parent.Id = &apos;7011B000002OOni&apos;|| Campaign.Parent.Id = &apos;7011B000002OOnn&apos;|| Campaign.Parent.Id = &apos;7011B000002OOnY&apos;|| Country = &quot;Japan&quot;</formula>
             <template>Assigned_to_Templates/LeadsNewassignmentnotification</template>
         </ruleEntry>
         <ruleEntry>

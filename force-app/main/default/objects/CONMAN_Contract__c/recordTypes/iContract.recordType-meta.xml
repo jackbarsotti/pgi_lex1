@@ -239,6 +239,10 @@
             <fullName>Sent To Customer</fullName>
             <default>false</default>
         </values>
+        <values>
+            <fullName>agTempValue</fullName>
+            <default>false</default>
+        </values>
     </picklistValues>
     <picklistValues>
         <picklist>Contract_Type__c</picklist>
@@ -308,6 +312,10 @@
         </values>
         <values>
             <fullName>Subscription License Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TPx Service Agreement</fullName>
             <default>false</default>
         </values>
         <values>

@@ -31,17 +31,17 @@
     <filters>
         <field>CASES.SUBJECT</field>
         <operation>notContain</operation>
-        <value>[Postmaster],Conference America Outsource</value>
+        <value>[Postmaster]</value>
     </filters>
     <filters>
         <field>CASES.ORIGIN</field>
         <operation>notContain</operation>
-        <value>Email - GL - RES - TP Desk - PGiBrand,Email - US - RES - Courtcall - NoAuto</value>
+        <value>Email - GL - RES - TP Desk - PGiBrand,Email - GL - RES - ATTG &amp; Shell - WLBrand</value>
     </filters>
     <filters>
-        <field>CASES.SUBJECT</field>
+        <field>CASES.ORIGIN</field>
         <operation>notContain</operation>
-        <value>Action Required for New Booking</value>
+        <value>Email - US - RES - Courtcall - NoAuto,Email - GL - RES - ATTG &amp; Shell - WLBrand</value>
     </filters>
     <filters>
         <field>Assigned_To__c</field>

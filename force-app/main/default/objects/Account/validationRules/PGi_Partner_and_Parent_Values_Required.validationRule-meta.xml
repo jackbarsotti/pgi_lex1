@@ -14,9 +14,9 @@ ISBLANK(Partner__c ),
 ISBLANK(ParentId)
 ),
 OR(
-ISPICKVAL(Type,&#39;Sub Agent&#39;),
-ISPICKVAL(Type,&#39;VAR&#39;),
-CONTAINS(TEXT(Type),&#39;End User&#39;)
+ISPICKVAL(Type,&apos;Sub Agent&apos;),
+ISPICKVAL(Type,&apos;VAR&apos;),
+CONTAINS(TEXT(Type),&apos;End User&apos;)
  ))</errorConditionFormula>
     <errorMessage>A Partner and a Parent are required on this Account in order to save the record.</errorMessage>
 </ValidationRule>

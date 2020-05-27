@@ -251,6 +251,10 @@
             <section>ZoomInfo</section>
         </sections>
     </layouts>
+    <quickActions>
+        <label><!-- Inactive --></label>
+        <name>Inactive_Lex</name>
+    </quickActions>
     <recordTypes>
         <label><!-- PGi Contact --></label>
         <name>PGi_Contact</name>
@@ -323,10 +327,6 @@
     <webLinks>
         <label><!-- GoogleSearch --></label>
         <name>GoogleSearch</name>
-    </webLinks>
-    <webLinks>
-        <label><!-- Inactive --></label>
-        <name>Inactive</name>
     </webLinks>
     <webLinks>
         <label><!-- LinkedIn --></label>

@@ -27,6 +27,145 @@ public with sharing class SearchMyMeetingHelp {
         Input input = inputs[0];
         Output output = new Output();
 
+        List<String> fluffWords = new List<String> {
+            'i',
+            'me',
+            'my',
+            'myself',
+            'we',
+            'our',
+            'ours',
+            'ourselves',
+            'you',
+            'your',
+            'yours',
+            'yourself',
+            'yourselves',
+            'he',
+            'him',
+            'his',
+            'himself',
+            'she',
+            'her',
+            'hers',
+            'herself',
+            'it',
+            'its',
+            'itself',
+            'they',
+            'them',
+            'their',
+            'theirs',
+            'themselves',
+            'what',
+            'which',
+            'who',
+            'whom',
+            'this',
+            'that',
+            'these',
+            'those',
+            'am',
+            'is',
+            'are',
+            'was',
+            'were',
+            'be',
+            'been',
+            'being',
+            'have',
+            'has',
+            'had',
+            'having',
+            'do',
+            'does',
+            'did',
+            'doing',
+            'a',
+            'an',
+            'the',
+            'and',
+            'but',
+            'if',
+            'or',
+            'because',
+            'as',
+            'until',
+            'while',
+            'of',
+            'at',
+            'by',
+            'for',
+            'with',
+            'about',
+            'against',
+            'between',
+            'into',
+            'through',
+            'during',
+            'before',
+            'after',
+            'above',
+            'below',
+            'to',
+            'from',
+            'up',
+            'down',
+            'in',
+            'out',
+            'on',
+            'off',
+            'over',
+            'under',
+            'again',
+            'further',
+            'then',
+            'once',
+            'here',
+            'there',
+            'when',
+            'where',
+            'why',
+            'how',
+            'all',
+            'any',
+            'both',
+            'each',
+            'few',
+            'more',
+            'most',
+            'other',
+            'some',
+            'such',
+            'no',
+            'nor',
+            'not',
+            'only',
+            'own',
+            'same',
+            'so',
+            'than',
+            'too',
+            'very',
+            'can',
+            'will',
+            'just',
+            'don\'t',
+            'should',
+            'now'
+        };
+        List<String> keywordsArr = input.keywords.split(' ');
+        String newKeywords = '';
+        for(String keyword: keywordsArr) {
+            if(fluffWords.indexOf(keyword.toLowerCase()) == -1) {
+                if(newKeywords != '') {newKeywords += ' ';}
+                newKeywords += keyword;
+            }
+        }
+        if(newKeywords.trim() == '') {
+            newKeywords = input.keywords;
+        }
+
         String searchConstraint = 'type:wiki';
         switch on input.productArea {
             when 'Web or Audio Meetings' {
@@ -44,7 +183,7 @@ public with sharing class SearchMyMeetingHelp {
         //get search results using http client
         Http http = new Http();
         HttpRequest request = new HttpRequest();
-        request.setEndpoint('https://www.mymeetinghelp.com/@api/deki/site/search?q=' + EncodingUtil.urlEncode(input.keywords, 'UTF-8') + '&format=search&constraint=' + EncodingUtil.urlEncode(searchConstraint, 'UTF-8') + '&limit=3');
+        request.setEndpoint('https://www.mymeetinghelp.com/@api/deki/site/search?q=' + EncodingUtil.urlEncode(newKeywords, 'UTF-8') + '&format=search&constraint=' + EncodingUtil.urlEncode(searchConstraint, 'UTF-8') + '&limit=3');
         request.setMethod('GET');
         HttpResponse response = http.send(request);
         Dom.Document doc = response.getBodyDocument();

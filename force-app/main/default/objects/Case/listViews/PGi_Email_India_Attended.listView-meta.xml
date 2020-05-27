@@ -29,9 +29,9 @@
         <operation>notContain</operation>
         <value>[Postmaster]</value>
     </filters>
-    <label>PGi-Email-India-Unattended</label>
+    <label>PGi-Email-India-Tier-1</label>
     <language>en_US</language>
-    <queue>PGi_Email_India_Unattended</queue>
+    <queue>PGi_Email_India_Tier_1</queue>
     <sharedTo>
         <allInternalUsers/>
     </sharedTo>

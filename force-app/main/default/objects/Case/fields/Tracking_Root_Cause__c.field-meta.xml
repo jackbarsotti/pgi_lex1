@@ -803,9 +803,9 @@
                 <label>Delegation/Permissions</label>
             </value>
             <value>
-                <fullName>Delete a User&#39;s Profile on Hub</fullName>
+                <fullName>Delete a User&apos;s Profile on Hub</fullName>
                 <default>false</default>
-                <label>Delete a User&#39;s Profile on Hub</label>
+                <label>Delete a User&apos;s Profile on Hub</label>
             </value>
             <value>
                 <fullName>Deliverables Not Provided</fullName>
@@ -2708,9 +2708,9 @@
                 <label>Service Prepped Incorrectly-Conf Setup Incorrect (Conf ID, Link Lines, Call Mgr Script, Transfer, etc.)</label>
             </value>
             <value>
-                <fullName>Service Prepped Incorrectly-Didn&#39;t Correctly Obtain Information from Participants</fullName>
+                <fullName>Service Prepped Incorrectly-Didn&apos;t Correctly Obtain Information from Participants</fullName>
                 <default>false</default>
-                <label>Service Prepped Incorrectly-Didn&#39;t Correctly Obtain Information from Participants</label>
+                <label>Service Prepped Incorrectly-Didn&apos;t Correctly Obtain Information from Participants</label>
             </value>
             <value>
                 <fullName>Service Prepped Incorrectly-Speaker/Participant Placement Incorrect</fullName>
@@ -3221,6 +3221,11 @@
                 <fullName>Web Scheduling Assistance Request</fullName>
                 <default>false</default>
                 <label>Web Scheduling Assistance Request</label>
+            </value>
+            <value>
+                <fullName>Will Not Be Fixed</fullName>
+                <default>false</default>
+                <label>Will Not Be Fixed</label>
             </value>
             <value>
                 <fullName>Wrap Up Error</fullName>
@@ -5286,7 +5291,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Pre Call - AL Error</controllingFieldValue>
-            <valueName>Service Prepped Incorrectly-Didn&#39;t Correctly Obtain Information from Participants</valueName>
+            <valueName>Service Prepped Incorrectly-Didn&apos;t Correctly Obtain Information from Participants</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Pre Call - AL Error</controllingFieldValue>
@@ -6163,6 +6168,10 @@
             <valueName>Patch Required</valueName>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>Code Issue</controllingFieldValue>
+            <valueName>Will Not Be Fixed</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Collections</controllingFieldValue>
             <valueName>Account/Bill-to Finance Hold</valueName>
         </valueSettings>
@@ -6271,6 +6280,10 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Accessing Dial-In Numbers on Invite</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
             <valueName>Account Information-Account Sign Up Education</valueName>
         </valueSettings>
         <valueSettings>
@@ -6283,7 +6296,23 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Account Information-Phone Number Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>All Other * Feature Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Allow Users to Receive a Call Back</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
             <valueName>Application/Presentation/Video Sharing Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Audio File Education</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>End User Education</controllingFieldValue>
@@ -6316,11 +6345,43 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Download a File</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Download Log File Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>End/Join/Start/Schedule a Meeting Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>End a Meeting Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
             <valueName>File Library Education</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>End User Education</controllingFieldValue>
             <valueName>General Product/Multiple Areas Reviewed Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>How to Access Available Web Features</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>How to Access Available Web Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>How to Contact Technical Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>How to Have International Participants Join</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>End User Education</controllingFieldValue>
@@ -6333,7 +6394,15 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Include International Numbers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
             <valueName>Invite Customization Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Invites Education</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>End User Education</controllingFieldValue>
@@ -6341,7 +6410,23 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Join a Meeting Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Locating/Playing a Recording Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
             <valueName>Making a Recording Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Mark a Recording Public/Private</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Media File Education</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>End User Education</controllingFieldValue>
@@ -6349,8 +6434,24 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Meeting Entry Options</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Meeting Settings Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
             <controllingFieldValue>Feature Usage/Available Features</controllingFieldValue>
             <valueName>Mobile Application Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Move a Recording</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Mute</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>End User Education</controllingFieldValue>
@@ -6383,6 +6484,18 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Record/Playback Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Recording Processing Time Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Refresh List/Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
             <valueName>Reporting Education</valueName>
         </valueSettings>
         <valueSettings>
@@ -6391,12 +6504,24 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Room Monitor Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
             <controllingFieldValue>End/Join/Schedule/Start a Meeting</controllingFieldValue>
             <valueName>Schedule a Meeting Education</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Screen Sharing Installation Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
             <valueName>Screen Sharing Use Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Send an Invite</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>End User Education</controllingFieldValue>
@@ -6408,7 +6533,39 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Skype Cloud PBX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Skype Delegation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
             <valueName>Skype Federation Questions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Skype Headset Configuration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Skype PSTN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Skype Room System Questions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Smartview Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Softphone System Requirements Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Softphone Use Education</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>End User Education</controllingFieldValue>
@@ -6420,11 +6577,27 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Start a Meeting Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
             <valueName>System Requirements</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>End User Education</controllingFieldValue>
             <valueName>Technical Support Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Ticket Follow Up</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Tone Toggle (*39)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End User Education</controllingFieldValue>
+            <valueName>Upload Content</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>End User Education</controllingFieldValue>
@@ -6700,11 +6873,19 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Account Information/Change Request</controllingFieldValue>
+            <valueName>Account Information (Client ID/Email/Passcode/Password) Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Information/Change Request</controllingFieldValue>
             <valueName>Add/Change Hub Request</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Account Information/Change Request</controllingFieldValue>
             <valueName>Company Name/Address Change Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Information/Change Request</controllingFieldValue>
+            <valueName>Company Name Change Request</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Account Information/Change Request</controllingFieldValue>
@@ -6716,7 +6897,27 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Account Information/Change Request</controllingFieldValue>
+            <valueName>Confirm User Has an Account Set-Up</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Information/Change Request</controllingFieldValue>
+            <valueName>FTP Details Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Information/Change Request</controllingFieldValue>
+            <valueName>Hub URL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Information/Change Request</controllingFieldValue>
+            <valueName>Opt Out of Marketing Emails Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Information/Change Request</controllingFieldValue>
             <valueName>Other Account Information/Change Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Information/Change Request</controllingFieldValue>
+            <valueName>Other-End User Account Information/Change Request</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Account Information/Change Request</controllingFieldValue>
@@ -6758,6 +6959,10 @@
         <valueSettings>
             <controllingFieldValue>Account Provisioning Request</controllingFieldValue>
             <valueName>Add/Inactivate GlobalMeet/iMeet License Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Provisioning Request</controllingFieldValue>
+            <valueName>Add/Inactivate Moderator Request</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Account Provisioning Request</controllingFieldValue>
@@ -6813,6 +7018,10 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>In Conference Support Request</controllingFieldValue>
+            <valueName>Other-Conference Support Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In Conference Support Request</controllingFieldValue>
             <valueName>Other In Conference Support Request</valueName>
         </valueSettings>
         <valueSettings>
@@ -6821,11 +7030,27 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Report/File Request</controllingFieldValue>
+            <valueName>Aging Summary/Account Status Requested</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Report/File Request</controllingFieldValue>
+            <valueName>Aging Summary / Account Status Requested</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Report/File Request</controllingFieldValue>
             <valueName>CSV File Request</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Report/File Request</controllingFieldValue>
+            <valueName>eClient File Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Report/File Request</controllingFieldValue>
             <valueName>Other-End User Reports/Files Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Report/File Request</controllingFieldValue>
+            <valueName>Payment History/Research</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Report/File Request</controllingFieldValue>
@@ -6841,7 +7066,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Activate/Inactivate Account</controllingFieldValue>
-            <valueName>Delete a User&#39;s Profile on Hub</valueName>
+            <valueName>Delete a User&apos;s Profile on Hub</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>VRC Education/Request</controllingFieldValue>

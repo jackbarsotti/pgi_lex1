@@ -36,12 +36,12 @@
     <filters>
         <field>CASES.ORIGIN</field>
         <operation>notContain</operation>
-        <value>Email - GL - RES - TP Desk - PGiBrand,Email - US - RES - Courtcall - NoAuto</value>
+        <value>Email - GL - RES - TP Desk - PGiBrand</value>
     </filters>
     <filters>
-        <field>CASES.SUBJECT</field>
+        <field>CASES.ORIGIN</field>
         <operation>notContain</operation>
-        <value>Action Required for New Booking</value>
+        <value>Email - US - RES - Courtcall - NoAuto</value>
     </filters>
     <filters>
         <field>CASES.ORIGIN</field>
@@ -49,9 +49,9 @@
         <value>Email - GL - RES - ATTG &amp; Shell - WLBrand,Email - GL - RES - BOA</value>
     </filters>
     <filters>
-        <field>CASES.SUBJECT</field>
+        <field>CASES.ORIGIN</field>
         <operation>notContain</operation>
-        <value>Conference America Outsource</value>
+        <value>Email - GL - RES - ATTG &amp; Shell - WLBrand,Email - GL - RES - BOA</value>
     </filters>
     <filters>
         <field>CASES.ORIGIN</field>

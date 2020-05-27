@@ -8,6 +8,8 @@
     <columns>Local_Region__c</columns>
     <columns>Status__c</columns>
     <columns>Tier_1_UHQ__c</columns>
+    <columns>Global_Account_MQA_Assignment_date__c</columns>
+    <columns>Global_Account_MQA__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>Tier_1_UHQ__c</field>

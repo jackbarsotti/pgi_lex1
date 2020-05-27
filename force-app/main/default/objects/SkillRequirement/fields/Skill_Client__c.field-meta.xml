@@ -16,7 +16,9 @@ Skill.MasterLabel = &quot;ReadyTalk&quot;
 ||
 Skill.MasterLabel = &quot;TS Sullivan&quot;
 ||
-Skill.MasterLabel = &quot;VIP Lead&quot;</formula>
+Skill.MasterLabel = &quot;VIP Lead&quot;
+||
+Skill.MasterLabel = &quot;Senior Lead&quot;</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Skill - Client</label>
     <trackHistory>false</trackHistory>

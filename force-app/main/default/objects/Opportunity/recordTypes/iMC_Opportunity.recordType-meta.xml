@@ -339,6 +339,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Avaya</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>BT</fullName>
             <default>false</default>
         </values>
@@ -399,6 +403,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Jive</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Join%2Eme</fullName>
             <default>false</default>
         </values>
@@ -419,7 +427,15 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Mitel</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>NASDAQ OMX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nextiva</fullName>
             <default>false</default>
         </values>
         <values>
@@ -484,6 +500,10 @@
         </values>
         <values>
             <fullName>Zoom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zoom Phone</fullName>
             <default>false</default>
         </values>
         <values>
@@ -752,32 +772,6 @@
         </values>
         <values>
             <fullName>Competitor C</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>Deployment_Type__c</picklist>
-        <values>
-            <fullName>SfB Online</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>Deployment__c</picklist>
-        <values>
-            <fullName>Extended User Estate</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Initial Deployment</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>No</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>POC</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -2670,117 +2664,6 @@
         </values>
     </picklistValues>
     <picklistValues>
-        <picklist>Lead_Sub_Source__c</picklist>
-        <values>
-            <fullName>ATU Team Introduction</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Account Management</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Antares</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Coeo</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Collective Activity</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Consortium Activity</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Content %26 Code</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Email Enquiry</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Event %2F Activity</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>FastTrack</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Inbound Call</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Inframon</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Kickback</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Landing Lead Introduction</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Modality Invoiced</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Other Microsoft Introduction</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>P-Seller Distributed</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>PGi</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>PinPoint</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Please enter Channel Partner Record below</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Please enter Referral Account Record below</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Program Framework</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Quorum</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>STU Team Introduction</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Self Generated</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Telemarketing</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Web Enquiry</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
         <picklist>Loss_Reason__c</picklist>
         <values>
             <fullName>Budget</fullName>
@@ -2904,17 +2787,6 @@
         </values>
         <values>
             <fullName>NA%3A Strat Comms</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>Open_Activity__c</picklist>
-        <values>
-            <fullName>No</fullName>
-            <default>true</default>
-        </values>
-        <values>
-            <fullName>Yes</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -3242,25 +3114,6 @@
         </values>
         <values>
             <fullName>Sandbox</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>Pre_Sales_Resource__c</picklist>
-        <values>
-            <fullName>Kieron Sykes</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Not Pre-Sales</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Peter Vasey</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Pre-Sales Team</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -3772,49 +3625,6 @@
         </values>
     </picklistValues>
     <picklistValues>
-        <picklist>Project_Manager__c</picklist>
-        <values>
-            <fullName>Adrian Chatto</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Chris Drage</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Jo Sims</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Lynsay Ansell</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Oliver Jacobs</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>PMO</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Paul Taylor</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Richard Amery</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Ross Broady</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Wayne Blezard</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
         <picklist>Prospect_Messaging_Sent__c</picklist>
         <values>
             <fullName>Admin Center Features</fullName>
@@ -3905,17 +3715,6 @@
         </values>
         <values>
             <fullName>Unqualified</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>Purchase_Process__c</picklist>
-        <values>
-            <fullName>Committee</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Individual</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -4037,21 +3836,6 @@
         </values>
     </picklistValues>
     <picklistValues>
-        <picklist>Sales_Region__c</picklist>
-        <values>
-            <fullName>Australia</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>United Kingdom</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>United States</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
         <picklist>Secondary_Won_Reason__c</picklist>
         <values>
             <fullName>Add-on or Renewal</fullName>
@@ -4160,137 +3944,6 @@
         </values>
     </picklistValues>
     <picklistValues>
-        <picklist>Technical_Lead__c</picklist>
-        <values>
-            <fullName>Adam Tuckwell</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Alex Lewis</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Ben Cross</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Ben Lee</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Brian Blackburn</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Chris Irons</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Craig Jacobs</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Dave Simm</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Dave Wilson</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Dean Woolgar</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Graham Cropley</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Iain Smith</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Jamie Wheeldon</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>John Linker</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Jon Quayle</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Kelvin Chigorimbo</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Mahendran Suppiah</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Marc Bertasius</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Matthew Dobson</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Murali Krishnan</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Nick Seagrave</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Other</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Pat Richard</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Phil Sharp</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Randy Whittle</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Richard McLarney</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Rick Eveleigh</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Ron Cook</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Sean Murphy</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Simon Gardner</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Tom Arbuthnot</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Vikas Jaswal</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
         <picklist>Tertiary_Won_Reason__c</picklist>
         <values>
             <fullName>Add-on or Renewal</fullName>
@@ -4326,25 +3979,6 @@
         </values>
     </picklistValues>
     <picklistValues>
-        <picklist>Timeframes_for_Pain__c</picklist>
-        <values>
-            <fullName>Immediate</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Next Quarter</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>This Quarter</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>This Year</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
         <picklist>Type</picklist>
         <values>
             <fullName>New Logo</fullName>
@@ -4360,98 +3994,6 @@
         </values>
         <values>
             <fullName>Upsell</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>Voice_Licensing__c</picklist>
-        <values>
-            <fullName>E4</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>N%2FA</fullName>
-            <default>true</default>
-        </values>
-        <values>
-            <fullName>Plus CAL</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>What_products_have_they_already_adopted__c</picklist>
-        <values>
-            <fullName>Exchange Online</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Office 365 ProPlus</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>OneDrive for Business</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>SfB Online</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>SharePoint Online</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Yammer</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>When_did_they_purchase_their_licenses__c</picklist>
-        <values>
-            <fullName>Between 18mths and 6mths ago</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Between 6mths and 3mths ago</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>I don%27t know</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Less than 3 mths ago</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>More than 18mths ago</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>Which_Country__c</picklist>
-        <values>
-            <fullName>Another Country</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Australia</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>North America</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Other European</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Singapore</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>United Kingdom</fullName>
             <default>false</default>
         </values>
     </picklistValues>

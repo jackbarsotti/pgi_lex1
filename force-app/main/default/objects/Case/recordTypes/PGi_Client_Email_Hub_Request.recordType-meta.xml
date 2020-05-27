@@ -6686,6 +6686,14 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Recording Content Missing%3AFile Presentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recording Content Missing%3AScreen Share content missing from Recording</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>RecordingEndsPrematurely</fullName>
             <default>false</default>
         </values>

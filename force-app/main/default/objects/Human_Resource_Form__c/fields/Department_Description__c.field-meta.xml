@@ -11,7 +11,7 @@
     <valueSet>
         <controllingField>Department_Group__c</controllingField>
         <valueSetDefinition>
-            <sorted>false</sorted>
+            <sorted>true</sorted>
             <value>
                 <fullName>010005-Client Services Ops COS</fullName>
                 <default>false</default>
@@ -821,6 +821,11 @@
                 <fullName>Administration-Ireland</fullName>
                 <default>false</default>
                 <label>Administration-Ireland</label>
+            </value>
+            <value>
+                <fullName>APAC Sales</fullName>
+                <default>false</default>
+                <label>APAC Sales</label>
             </value>
             <value>
                 <fullName>Audio Architect-Ireland</fullName>
@@ -1988,6 +1993,10 @@
         <valueSettings>
             <controllingFieldValue>EMEA/APAC-PWN</controllingFieldValue>
             <valueName>R&amp;D UK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>
+            <valueName>APAC Sales</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>EMEA/APAC-Sales</controllingFieldValue>

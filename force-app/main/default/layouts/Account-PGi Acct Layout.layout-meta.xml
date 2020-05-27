@@ -114,6 +114,14 @@
                 <behavior>Edit</behavior>
                 <field>Top_100_GMC_Account__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Global_Account_MQA__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Global_Account_MQA_Assignment_date__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -316,7 +324,7 @@
             <layoutItems>
                 <height>375</height>
                 <page>LID__AccountLinkedInCompanyPage</page>
-                <showLabel>false</showLabel>
+                <showLabel>true</showLabel>
                 <showScrollbars>true</showScrollbars>
                 <width>100%</width>
             </layoutItems>

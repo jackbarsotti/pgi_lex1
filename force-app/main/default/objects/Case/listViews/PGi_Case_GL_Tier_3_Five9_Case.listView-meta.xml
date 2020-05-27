@@ -3,11 +3,11 @@
     <fullName>PGi_Case_GL_Tier_3_Five9_Case</fullName>
     <columns>CASES.CASE_NUMBER</columns>
     <columns>CASES.SUBJECT</columns>
-    <columns>CASES.CREATED_DATE</columns>
-    <columns>Assigned_To__c</columns>
     <columns>Case_Type__c</columns>
     <columns>CASES.REASON</columns>
+    <columns>Assigned_To__c</columns>
     <columns>CASES.STATUS</columns>
+    <columns>CASES.CREATED_DATE</columns>
     <columns>CASES.LAST_UPDATE</columns>
     <filterScope>Queue</filterScope>
     <filters>

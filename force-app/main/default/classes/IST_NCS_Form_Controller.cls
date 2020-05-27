@@ -603,7 +603,7 @@ public class IST_NCS_Form_Controller {
         get {
             //01935035 
             //RT-537
-            if(!Test.isRunningTest() && (opp != null && opp.Agreement_Status__c != 'Signed' || iContract.Contract_Status__c == 'Customer Accepted')) {
+            if(!Test.isRunningTest() && (opp != null && opp.Agreement_Status__c == 'Signed' || iContract.Contract_Status__c == 'Customer Accepted')) {
                 return false;
             }
             return !checkField(this.ISRecord.NCS_Provider_Name__c) && !this.ISRecord.NCS_Inherit_Rates_of_Parent__c;
@@ -658,7 +658,6 @@ public class IST_NCS_Form_Controller {
             if (opptyContact == null || opptyContact.MailingCountry == null){
                 opptyContactRegion = 'US';
             } else {
-                // System.debug('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> recursion!?!?');
                 String region = CountryUtil.getCountryRegion(opptyContact.MailingCountry);
                 if(region == '' ){
                     opptyContactRegion = 'US';
@@ -1741,7 +1740,7 @@ public class IST_NCS_Form_Controller {
             for (Attachment attachment : files) attachments.add(attachment.Id);
         }
 
-        files = [SELECT Id, Name FROM Attachment WHERE (ParentId = :recordId AND Name IN :ISTAttachmentNames) OR (ParentId = :oppId AND Name LIKE 'SIGNED: %')];
+        files = [SELECT Id, Name FROM Attachment WHERE (ParentId = :recordId AND Name IN :ISTAttachmentNames) OR (ParentId = :oppId)];
         for (Attachment attachment : files) attachments.add(attachment.Id);
 
         return attachments;

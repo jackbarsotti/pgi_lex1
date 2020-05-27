@@ -32,6 +32,10 @@
             <fullName>010005-Client Services Ops COS</fullName>
             <default>false</default>
         </values>
+        <values>
+            <fullName>APAC Sales</fullName>
+            <default>false</default>
+        </values>
     </picklistValues>
     <picklistValues>
         <picklist>Department_Group__c</picklist>
@@ -120,6 +124,18 @@
         <picklist>In_Customer_Care__c</picklist>
         <values>
             <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes-Call Delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes-Reservations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes-Tier Support</fullName>
             <default>false</default>
         </values>
     </picklistValues>

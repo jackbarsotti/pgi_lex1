@@ -104,6 +104,10 @@
         <label><!-- Product Support Request --></label>
         <name>Product_Support_Request</name>
     </fieldSets>
+    <fieldSets>
+        <label><!-- client_conference --></label>
+        <name>client_conference</name>
+    </fieldSets>
     <layouts>
         <layout>Email Support</layout>
         <sections>
@@ -1211,8 +1215,24 @@
         </sections>
     </layouts>
     <quickActions>
+        <label><!-- Assign to Me --></label>
+        <name>Assign_to_MeLex</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Assign to Me --></label>
+        <name>Assign_to_Me_listbuttonLex</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Escalate Email Case --></label>
+        <name>Escalate_Email_Case_Lex</name>
+    </quickActions>
+    <quickActions>
         <label><!-- NewChildCase --></label>
         <name>NewChildCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Case --></label>
+        <name>New_Case_Lex</name>
     </quickActions>
     <recordTypes>
         <description><!-- Used by teams who are working inbound email cases --></description>

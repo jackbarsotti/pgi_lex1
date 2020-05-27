@@ -205,9 +205,13 @@
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-WaveHome</tabs>
     <tabs>Public_Group_Explorer</tabs>
+    <tabs>Case_SLA_Exception_Rules__c</tabs>
     <workspaceConfig>
         <mappings>
             <tab>Case_List</tab>
+        </mappings>
+        <mappings>
+            <tab>Case_SLA_Exception_Rules__c</tab>
         </mappings>
         <mappings>
             <tab>Financial_Request__c</tab>

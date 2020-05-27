@@ -23,7 +23,7 @@
         <translation><!-- ANI Report Not Received/Received Late --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>AccessDenied/Can&#39;tLoadAcctDetailError</masterLabel>
+        <masterLabel>AccessDenied/Can&apos;tLoadAcctDetailError</masterLabel>
         <translation><!-- AccessDenied/Can&apos;tLoadAcctDetailError --></translation>
     </picklistValues>
     <picklistValues>
@@ -107,7 +107,7 @@
         <translation><!-- Audio/Web:NoSync --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Audio/WebPresence:Can&#39;tMerge/Unmerge</masterLabel>
+        <masterLabel>Audio/WebPresence:Can&apos;tMerge/Unmerge</masterLabel>
         <translation><!-- Audio/WebPresence:Can&apos;tMerge/Unmerge --></translation>
     </picklistValues>
     <picklistValues>
@@ -535,7 +535,7 @@
         <translation><!-- Crashing/Freezing --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Create PasswordLink/PageCan&#39;tBeDisplayed</masterLabel>
+        <masterLabel>Create PasswordLink/PageCan&apos;tBeDisplayed</masterLabel>
         <translation><!-- Create PasswordLink/PageCan&apos;tBeDisplayed --></translation>
     </picklistValues>
     <picklistValues>
@@ -595,7 +595,7 @@
         <translation><!-- DeadAir:BeforePasscode --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Default MeetingRoomDoesn&#39;tExistError</masterLabel>
+        <masterLabel>Default MeetingRoomDoesn&apos;tExistError</masterLabel>
         <translation><!-- Default MeetingRoomDoesn&apos;tExistError --></translation>
     </picklistValues>
     <picklistValues>
@@ -655,11 +655,11 @@
         <translation><!-- Did Not Receive Post Deliverables --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Didn&#39;tObtainRequestedInfo</masterLabel>
+        <masterLabel>Didn&apos;tObtainRequestedInfo</masterLabel>
         <translation><!-- Didn&apos;tObtainRequestedInfo --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Didn&#39;tReceiveRegistrationConfirm</masterLabel>
+        <masterLabel>Didn&apos;tReceiveRegistrationConfirm</masterLabel>
         <translation><!-- Didn&apos;tReceiveRegistrationConfirm --></translation>
     </picklistValues>
     <picklistValues>
@@ -767,7 +767,7 @@
         <translation><!-- Email Not Received:Reset Password --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>EmailAddr Doesn&#39;tMatchValidUserAcctError</masterLabel>
+        <masterLabel>EmailAddr Doesn&apos;tMatchValidUserAcctError</masterLabel>
         <translation><!-- EmailAddr Doesn&apos;tMatchValidUserAcctError --></translation>
     </picklistValues>
     <picklistValues>
@@ -919,7 +919,7 @@
         <translation><!-- Error:LaunchingJabber --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Error:LiveMeetingCan&#39;tConnectMeeting</masterLabel>
+        <masterLabel>Error:LiveMeetingCan&apos;tConnectMeeting</masterLabel>
         <translation><!-- Error:LiveMeetingCan&apos;tConnectMeeting --></translation>
     </picklistValues>
     <picklistValues>
@@ -987,11 +987,11 @@
         <translation><!-- Error:UploadingContent --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Error:We&#39;ve Detected an Error</masterLabel>
+        <masterLabel>Error:We&apos;ve Detected an Error</masterLabel>
         <translation><!-- Error:We&apos;ve Detected an Error --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Error:WeCan&#39;tLocateURLRequested</masterLabel>
+        <masterLabel>Error:WeCan&apos;tLocateURLRequested</masterLabel>
         <translation><!-- Error:WeCan&apos;tLocateURLRequested --></translation>
     </picklistValues>
     <picklistValues>
@@ -1075,11 +1075,11 @@
         <translation><!-- File Upload Issue --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>FileDoesn&#39;tExist:AudioStore1</masterLabel>
+        <masterLabel>FileDoesn&apos;tExist:AudioStore1</masterLabel>
         <translation><!-- FileDoesn&apos;tExist:AudioStore1 --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>FileDoesn&#39;tExist:Error</masterLabel>
+        <masterLabel>FileDoesn&apos;tExist:Error</masterLabel>
         <translation><!-- FileDoesn&apos;tExist:Error --></translation>
     </picklistValues>
     <picklistValues>
@@ -1103,7 +1103,7 @@
         <translation><!-- FileUploadFail --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>FileWon&#39;tLoad</masterLabel>
+        <masterLabel>FileWon&apos;tLoad</masterLabel>
         <translation><!-- FileWon&apos;tLoad --></translation>
     </picklistValues>
     <picklistValues>
@@ -1703,7 +1703,7 @@
         <translation><!-- Meeting Settings - Unable to Save Account Details --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>MeetingCan&#39;tSchedule/CertainTime</masterLabel>
+        <masterLabel>MeetingCan&apos;tSchedule/CertainTime</masterLabel>
         <translation><!-- MeetingCan&apos;tSchedule/CertainTime --></translation>
     </picklistValues>
     <picklistValues>
@@ -2091,7 +2091,7 @@
         <translation><!-- P&amp;G LiveMeeting --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>PSTNPartscan&#39;tHearVOIPPart</masterLabel>
+        <masterLabel>PSTNPartscan&apos;tHearVOIPPart</masterLabel>
         <translation><!-- PSTNPartscan&apos;tHearVOIPPart --></translation>
     </picklistValues>
     <picklistValues>
@@ -2115,11 +2115,11 @@
         <translation><!-- Part Stuck in Waiting Lobby --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Part:Can&#39;tAnnotateWhiteboard</masterLabel>
+        <masterLabel>Part:Can&apos;tAnnotateWhiteboard</masterLabel>
         <translation><!-- Part:Can&apos;tAnnotateWhiteboard --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Part:Can&#39;tSeeScreenshare</masterLabel>
+        <masterLabel>Part:Can&apos;tSeeScreenshare</masterLabel>
         <translation><!-- Part:Can&apos;tSeeScreenshare --></translation>
     </picklistValues>
     <picklistValues>
@@ -2163,7 +2163,7 @@
         <translation><!-- Participant List Issue --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Password Doesn&#39;tMeetComplexityReqError</masterLabel>
+        <masterLabel>Password Doesn&apos;tMeetComplexityReqError</masterLabel>
         <translation><!-- Password Doesn&apos;tMeetComplexityReqError --></translation>
     </picklistValues>
     <picklistValues>
@@ -2269,6 +2269,22 @@
     <picklistValues>
         <masterLabel>Record/RecordIssue</masterLabel>
         <translation><!-- Record/RecordIssue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recording Content Missing:Audio</masterLabel>
+        <translation><!-- Recording Content Missing:Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recording Content Missing:File Presentation</masterLabel>
+        <translation><!-- Recording Content Missing:File Presentation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recording Content Missing:Other/All Web Content</masterLabel>
+        <translation><!-- Recording Content Missing:Other/All Web Content --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recording Content Missing:Screen Share content missing from Recording</masterLabel>
+        <translation><!-- Recording Content Missing:Screen Share content missing from Recording --></translation>
     </picklistValues>
     <picklistValues>
         <masterLabel>Recording Could Not Be Edited</masterLabel>
@@ -2955,7 +2971,7 @@
         <translation><!-- VideoUnable:Dialin/Connect --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>View Add&#39;l Dialin #s LinkDisplayError</masterLabel>
+        <masterLabel>View Add&apos;l Dialin #s LinkDisplayError</masterLabel>
         <translation><!-- View Add&apos;l Dialin #s LinkDisplayError --></translation>
     </picklistValues>
     <picklistValues>
@@ -3035,15 +3051,15 @@
         <translation><!-- Webcam:Other --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Webcam:PartsCan&#39;tSeeWebcam</masterLabel>
+        <masterLabel>Webcam:PartsCan&apos;tSeeWebcam</masterLabel>
         <translation><!-- Webcam:PartsCan&apos;tSeeWebcam --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Webcam:PartsCan&#39;tSeeWebcamImage</masterLabel>
+        <masterLabel>Webcam:PartsCan&apos;tSeeWebcamImage</masterLabel>
         <translation><!-- Webcam:PartsCan&apos;tSeeWebcamImage --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Webcam:PartsCan&#39;tSeeWebcamOption/Meeting</masterLabel>
+        <masterLabel>Webcam:PartsCan&apos;tSeeWebcamOption/Meeting</masterLabel>
         <translation><!-- Webcam:PartsCan&apos;tSeeWebcamOption/Meeting --></translation>
     </picklistValues>
     <picklistValues>

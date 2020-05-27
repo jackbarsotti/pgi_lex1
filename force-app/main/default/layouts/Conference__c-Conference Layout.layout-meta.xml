@@ -77,10 +77,6 @@
                 <field>Skilled_Language__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Cross_City_Eligible__c</field>
-            </layoutItems>
-            <layoutItems>
                 <emptySpace>true</emptySpace>
             </layoutItems>
             <layoutItems>
@@ -90,6 +86,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Polling__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Pre_Record__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -142,22 +142,15 @@
                 <field>AL_Language__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Force_AL_Bridge__c</field>
-            </layoutItems>
-            <layoutItems>
-                <emptySpace>true</emptySpace>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Answer_Line_Bridges__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Dial_Out_Bridges__c</field>
+                <emptySpace>true</emptySpace>
             </layoutItems>
             <layoutItems>
-                <emptySpace>true</emptySpace>
+                <behavior>Edit</behavior>
+                <field>Early_AL__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -169,17 +162,29 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>AL_Wave__c</field>
+                <field>Force_AL_Bridge__c</field>
             </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>FT_AL_Required__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Early_AL_Required__c</field>
+                <field>Force_AL_Visible_for_WFH__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>AL_Wave__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Dial_Out_Bridges__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>DO_Early_Start_Minutes__c</field>
             </layoutItems>
             <layoutItems>
                 <emptySpace>true</emptySpace>
@@ -189,23 +194,26 @@
                 <field>NOE_Bridges__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>FT_NOE_Bridges__c</field>
+                <behavior>Edit</behavior>
+                <field>NOE_Start_Time__c</field>
             </layoutItems>
             <layoutItems>
                 <emptySpace>true</emptySpace>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>FT_NOE_Bridges__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Allow_FT_NOE__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Override_Account_Settings__c</field>
+                <emptySpace>true</emptySpace>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Force_AL_Visible_for_WFH__c</field>
+                <field>Override_Account_Settings__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>

@@ -6,4 +6,5 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <tabs>standard-WaveHome</tabs>
     <tabs>DataRetentionManager</tabs>
+    <tabs>Case_SLA_Exception_Rules__c</tabs>
 </CustomApplication>

@@ -12,11 +12,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>Status__c</field>
+                <field>DeveloperName</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>DeveloperName</field>
+                <behavior>Edit</behavior>
+                <field>Status__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

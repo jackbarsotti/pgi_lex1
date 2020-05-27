@@ -18,4 +18,5 @@
     <tabs>standard-WaveHome</tabs>
     <tabs>DataRetentionManager</tabs>
     <tabs>PGi_Internal_Entity__c</tabs>
+    <tabs>Case_SLA_Exception_Rules__c</tabs>
 </CustomApplication>

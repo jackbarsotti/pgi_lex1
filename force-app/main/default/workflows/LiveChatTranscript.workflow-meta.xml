@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Lead_Chat_Notification</fullName>
+        <description>Lead Chat Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>campaignMemberDerivedOwner</type>
+        </recipients>
+        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Emails/Lead_Chat_Notification</template>
+    </alerts>
     <fieldUpdates>
         <fullName>Update_Location_Country_Code</fullName>
         <field>Location_Country_Code__c</field>
@@ -95,6 +106,7 @@
 &quot;Nigeria&quot;,&quot;NG&quot;,
 &quot;Niue&quot;,&quot;NU&quot;,
 &quot;Norway&quot;,&quot;NO&quot;,
+&quot;null&quot;,&quot;US&quot;,
 &quot;Oman&quot;,&quot;OM&quot;,
 &quot;Pakistan&quot;,&quot;PK&quot;,
 &quot;Panama&quot;,&quot;PA&quot;,
@@ -142,6 +154,7 @@
 &quot;Turks and Caicos Islands&quot;,&quot;TC&quot;,
 &quot;Tuvalu&quot;,&quot;TV&quot;,
 &quot;Ukraine&quot;,&quot;UA&quot;,
+&quot;Unknown&quot;,&quot;US&quot;,
 &quot;United Arab Emirates&quot;,&quot;AE&quot;,
 &quot;United Kingdom&quot;,&quot;GB&quot;,
 &quot;United States&quot;,&quot;US&quot;,
@@ -185,4 +198,32 @@ IF( FIND( &quot;;&quot; &amp; UPPER( RIGHT( Location_Country_Code__c , 2 ) ) , &
         <operation>Formula</operation>
         <protected>false</protected>
     </fieldUpdates>
+    <rules>
+        <fullName>Chat Transcript%3A Set Location Country Code and Region</fullName>
+        <actions>
+            <name>Update_Location_Country_Code</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Location_Region</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>LiveChatTranscript.Location</field>
+            <operation>notEqual</operation>
+            <value>NULL</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Lead Chat Notification</fullName>
+        <actions>
+            <name>Lead_Chat_Notification</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>Lead.Lead_Owner_18_SFDC_ID__c &lt;&gt;  CreatedBy.SFDC_18_ID__c</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
 </Workflow>

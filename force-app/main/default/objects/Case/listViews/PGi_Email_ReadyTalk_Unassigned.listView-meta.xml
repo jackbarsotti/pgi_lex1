@@ -25,7 +25,7 @@
     <filters>
         <field>CASES.SUBJECT</field>
         <operation>notContain</operation>
-        <value>[Postmaster],Readytalk Support Auto Response,Undeliverable,Automated Report</value>
+        <value>[Postmaster],Readytalk Support Auto Response</value>
     </filters>
     <filters>
         <field>CASES.EMAIL</field>

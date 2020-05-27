@@ -48,7 +48,27 @@
         <isRequired>true</isRequired>
     </displayedFields>
     <displayedFields>
+        <field>In_Customer_Care__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>true</isRequired>
+    </displayedFields>
+    <displayedFields>
         <field>Locations__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>true</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>Department_Group__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>true</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>Department_Description__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>true</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>Primary_Work_Location__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>true</isRequired>
     </displayedFields>
@@ -189,6 +209,11 @@
     </displayedFields>
     <displayedFields>
         <field>Comments_on_Worker_Change__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>User_to_mimic__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
     </displayedFields>

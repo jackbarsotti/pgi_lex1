@@ -24,7 +24,7 @@
     </layouts>
     <startsWith>Consonant</startsWith>
     <validationRules>
-        <errorMessage><!-- Only Inside Sales users can add Offerings in &quot;SINGLE EVENT&quot; Product Family --></errorMessage>
+        <errorMessage><!-- Only Inside Sales users can add Offerings in &quot;BlueBird&quot; Product Family --></errorMessage>
         <name>Inside_Sales_Users_BlueBird_products</name>
     </validationRules>
 </CustomObjectTranslation>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Cannot_Change_Unique_ID</fullName>
-    <active>true</active>
+    <active>false</active>
     <description>The Unique ID is used to push data between Sandboxes and Production. If this value changed, the data could get mismatched and cause problems.</description>
     <errorConditionFormula>AND(
 PRIORVALUE(Unique_ID__c) != null,
-PRIORVALUE(Unique_ID__c) != &#39;&#39;,
+PRIORVALUE(Unique_ID__c) != &apos;&apos;,
 PRIORVALUE(Unique_ID__c) != Unique_ID__c
 )</errorConditionFormula>
     <errorMessage>The Unique ID is used to push data between Sandboxes and Production. If this value changed, the data could get mismatched and cause problems.</errorMessage>

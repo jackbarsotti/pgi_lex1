@@ -87,6 +87,10 @@
         <translation><!-- Sales – I sell everything… --></translation>
     </picklistValues>
     <picklistValues>
+        <masterLabel>Sam (Small Business Owner)</masterLabel>
+        <translation><!-- Sam (Small Business Owner) --></translation>
+    </picklistValues>
+    <picklistValues>
         <masterLabel>Technology Lead - I fix everything...</masterLabel>
         <translation><!-- Technology Lead - I fix everything... --></translation>
     </picklistValues>

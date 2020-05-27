@@ -51,6 +51,11 @@
                 <label>Atlassian/Jira</label>
             </value>
             <value>
+                <fullName>Avaya</fullName>
+                <default>false</default>
+                <label>Avaya</label>
+            </value>
+            <value>
                 <fullName>Bluejeans</fullName>
                 <default>false</default>
                 <label>BlueJeans</label>
@@ -121,6 +126,11 @@
                 <label>Inxpo</label>
             </value>
             <value>
+                <fullName>Jive</fullName>
+                <default>false</default>
+                <label>Jive</label>
+            </value>
+            <value>
                 <fullName>Join.me</fullName>
                 <default>false</default>
                 <label>Join.me</label>
@@ -146,9 +156,19 @@
                 <label>Microsoft Teams</label>
             </value>
             <value>
+                <fullName>Mitel</fullName>
+                <default>false</default>
+                <label>Mitel</label>
+            </value>
+            <value>
                 <fullName>NASDAQ OMX</fullName>
                 <default>false</default>
                 <label>NASDAQ (West)</label>
+            </value>
+            <value>
+                <fullName>Nextiva</fullName>
+                <default>false</default>
+                <label>Nextiva</label>
             </value>
             <value>
                 <fullName>ON24</fullName>
@@ -234,6 +254,11 @@
                 <fullName>Zoom</fullName>
                 <default>false</default>
                 <label>Zoom</label>
+            </value>
+            <value>
+                <fullName>Zoom Phone</fullName>
+                <default>false</default>
+                <label>Zoom Phone</label>
             </value>
             <value>
                 <fullName>Zoom Webinar</fullName>

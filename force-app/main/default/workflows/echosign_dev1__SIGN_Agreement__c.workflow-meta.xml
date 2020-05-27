@@ -29,7 +29,7 @@
     </fieldUpdates>
     <rules>
         <fullName>Cancel - Draft</fullName>
-        <active>false</active>
+        <active>true</active>
         <criteriaItems>
             <field>echosign_dev1__SIGN_Agreement__c.echosign_dev1__Status__c</field>
             <operation>equals</operation>

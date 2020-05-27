@@ -113,6 +113,15 @@
         <protected>false</protected>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>FSL_Force_Unassign</fullName>
+        <field>Unassign__c</field>
+        <literalValue>1</literalValue>
+        <name>FSL Force Unassign</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>FSL_IGLOO_Finish_to_ES</fullName>
         <field>DueDate</field>
         <formula>IF(
@@ -305,6 +314,15 @@ TEXT((VALUE(MID(TEXT(NOW()), 12, 2))*60)+(VALUE(MID(TEXT(NOW()), 15, 2))))</form
         <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>FSL_Role_Status_New</fullName>
+        <field>Status</field>
+        <literalValue>New</literalValue>
+        <name>FSL Role Status New</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>FSL_Slide_DD_Restore</fullName>
         <field>DueDate</field>
         <formula>IF(
@@ -391,6 +409,15 @@ TEXT((VALUE(MID(TEXT(NOW()), 12, 2))*60)+(VALUE(MID(TEXT(NOW()), 15, 2))))</form
         <protected>false</protected>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>FSL_UnPin</fullName>
+        <field>FSL__Pinned__c</field>
+        <literalValue>0</literalValue>
+        <name>FSL UnPin</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>FSL_Unassign</fullName>
         <field>Unassign__c</field>
         <literalValue>1</literalValue>
@@ -428,6 +455,16 @@ TEXT((VALUE(MID(TEXT(NOW()), 12, 2))*60)+(VALUE(MID(TEXT(NOW()), 15, 2))))</form
             <timeLength>-8</timeLength>
             <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
         </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>FSL Force Unassign</fullName>
+        <actions>
+            <name>FSL_Force_Unassign</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>!ISBLANK(Resource__c) &amp;&amp; (     ISPICKVAL(Status,&quot;New&quot;)     ||     ISPICKVAL(Status,&quot;Canceled&quot;)     ||     ISPICKVAL(Status,&quot;Cannot Complete&quot;) )</formula>
+        <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
         <fullName>FSL Role Any Change</fullName>
@@ -516,6 +553,10 @@ TEXT((VALUE(MID(TEXT(NOW()), 12, 2))*60)+(VALUE(MID(TEXT(NOW()), 15, 2))))</form
             <type>FieldUpdate</type>
         </actions>
         <actions>
+            <name>FSL_Role_Status_New</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
             <name>FSL_Start_Unnasigned</name>
             <type>FieldUpdate</type>
         </actions>
@@ -524,7 +565,7 @@ TEXT((VALUE(MID(TEXT(NOW()), 12, 2))*60)+(VALUE(MID(TEXT(NOW()), 15, 2))))</form
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>
-        <formula>IsNew() || (     !Is_Staffed__c     &amp;&amp;     PRIORVALUE(Is_Staffed__c)     ||     (         !Time_Slide__c         &amp;&amp;         PRIORVALUE(EarliestStartTime) &gt;= EarliestStartTime         &amp;&amp;         PRIORVALUE(DueDate) &lt;= DueDate         &amp;&amp;         (             ISCHANGED(Dynamic__c)             ||             ISCHANGED(Duration)             ||             ISCHANGED(EarliestStartTime)             ||             ISCHANGED(DueDate)         )     ) ) || (     !ISBLANK(PRIORVALUE(Resource__c))     &amp;&amp;     ISBLANK(Resource__c) )</formula>
+        <formula>ISBLANK(TEXT(Status)) || ISNULL(TEXT(Status)) || IsNew() || (     !Is_Staffed__c     &amp;&amp;     PRIORVALUE(Is_Staffed__c)     ||     (         !Time_Slide__c         &amp;&amp;         !ISPICKVAL(Status,&quot;In Progress&quot;)         &amp;&amp;         PRIORVALUE(EarliestStartTime) &gt;= EarliestStartTime         &amp;&amp;         PRIORVALUE(DueDate) &lt;= DueDate         &amp;&amp;         (             ISCHANGED(Dynamic__c)             ||             ISCHANGED(Duration)             ||             ISCHANGED(EarliestStartTime)             ||             ISCHANGED(DueDate)         )     ) ) || (     !ISBLANK(PRIORVALUE(Resource__c))     &amp;&amp;     ISBLANK(Resource__c) )</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -572,5 +613,19 @@ TEXT((VALUE(MID(TEXT(NOW()), 12, 2))*60)+(VALUE(MID(TEXT(NOW()), 15, 2))))</form
         <active>true</active>
         <formula>ISNEW() || (     ISCHANGED(Status)     &amp;&amp;     ISPICKVAL(PRIORVALUE(Status), &quot;In Progress&quot;)     &amp;&amp;     !ISPICKVAL(Status , &quot;Completed&quot;)     &amp;&amp;     !ISPICKVAL(Status , &quot;Canceled&quot;)     &amp;&amp;     !ISPICKVAL(Status , &quot;Cannot Complete&quot;)      &amp;&amp;     CONTAINS(FSL__GanttLabel__c, &quot;_ip_&quot;)     &amp;&amp;     WorkType_Name__c &lt;&gt; &quot;Break&quot;     &amp;&amp;     !Dynamic__c )</formula>
         <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FSL UnPin</fullName>
+        <actions>
+            <name>FSL_UnPin</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>ServiceAppointment.FSL__Pinned__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
 </Workflow>

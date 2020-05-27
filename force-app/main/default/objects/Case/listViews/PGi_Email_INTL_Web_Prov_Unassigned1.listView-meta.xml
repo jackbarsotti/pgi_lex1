@@ -32,9 +32,9 @@
         <operation>notContain</operation>
         <value>[Postmaster]</value>
     </filters>
-    <label>PGi-Email-India-Unattended (Unassigned)</label>
+    <label>PGi-Email-India-Attended (Unassigned)</label>
     <language>en_US</language>
-    <queue>PGi_Email_India_Unattended</queue>
+    <queue>PGi_Email_India_Tier_1</queue>
     <sharedTo>
         <group>PGi_Case_EU_Tier_1_Care_India</group>
     </sharedTo>

@@ -98,4 +98,8 @@
         <masterLabel>Terminated</masterLabel>
         <translation><!-- Terminated --></translation>
     </picklistValues>
+    <picklistValues>
+        <masterLabel>agTempValue</masterLabel>
+        <translation><!-- agTempValue --></translation>
+    </picklistValues>
 </CustomFieldTranslation>

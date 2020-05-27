@@ -112,11 +112,14 @@
                 }
 
                 function getFiles(a) {
-                    var x = document.getElementById('spinner');
-                    x.style.display = 'block';
                     oFiles = document.getElementById("uploadInput").files[0];
+                    if(oFiles != undefined && oFiles != '' && oFiles != null){
+                        var x = document.getElementById('spinner');
+                        x.style.display = 'block';
+                        
                     fileName = oFiles;
                     var nameOfFile = fileName.name;
+                    
                     var reader = new FileReader();
                     /*reader.onload = function () {
                         var data = btoa(reader.result);
@@ -153,6 +156,7 @@
                             });
                     };
                     reader.readAsBinaryString(oFiles);
+                    }
                 }
                 function disableOnSubmit(input) {
                     // console.log

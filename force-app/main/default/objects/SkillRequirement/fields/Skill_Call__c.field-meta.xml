@@ -28,9 +28,7 @@ Skill.MasterLabel = &quot;PCE Lead&quot;
 ||
 Skill.MasterLabel = &quot;Polling&quot;
 ||
-Skill.MasterLabel = &quot;RT Commline&quot;
-||
-Skill.MasterLabel = &quot;Senior Lead&quot;</formula>
+Skill.MasterLabel = &quot;RT Commline&quot;</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Skill - Call</label>
     <trackHistory>false</trackHistory>

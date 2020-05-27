@@ -3,7 +3,7 @@
     <outboundMessages>
         <fullName>Plan_Quantity_History_Outbound</fullName>
         <apiVersion>41.0</apiVersion>
-        <endpointUrl>https://provision.ecovate.com/bbs-provisioning/inboundGateway</endpointUrl>
+        <endpointUrl>http://forbo12.ecovate.com:8082/bbs-provisioning/inboundGateway</endpointUrl>
         <fields>CreatedById</fields>
         <fields>CreatedDate</fields>
         <fields>Id</fields>

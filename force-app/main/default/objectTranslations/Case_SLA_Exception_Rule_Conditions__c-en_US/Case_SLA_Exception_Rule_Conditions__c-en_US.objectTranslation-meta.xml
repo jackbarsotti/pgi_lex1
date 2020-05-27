@@ -9,7 +9,7 @@
         <value>Case SLA Exception Rule Conditions</value>
     </caseValues>
     <layouts>
-        <layout>Case SLA Exception Rule Conditions Layout</layout>
+        <layout>Case team engine rules Layout</layout>
         <sections>
             <label><!-- Custom Links --></label>
             <section>Custom Links</section>

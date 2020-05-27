@@ -433,10 +433,6 @@
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
-        <name>CSM</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
         <name>LID__LinkedIn_Admin_Portal</name>
         <type>CustomApplication</type>
     </appMenuItems>
@@ -445,11 +441,31 @@
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
+        <name>CSM</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>ClassicKanban__sales_test</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
         <name>ddcdf__Data_com_Dependency_Finder</name>
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
         <name>ddcdf__Data_com_Dependency_Finder_Lightning</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Sales_with_Console</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Survey_Force</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Survey_Force_Lightning</name>
         <type>CustomApplication</type>
     </appMenuItems>
 </AppMenu>

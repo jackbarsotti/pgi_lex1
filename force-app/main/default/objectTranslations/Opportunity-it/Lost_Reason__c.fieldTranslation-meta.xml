@@ -35,6 +35,14 @@
         <translation><!-- If we had a lower price on (fill in the service or feature that needed better pricing) --></translation>
     </picklistValues>
     <picklistValues>
+        <masterLabel>No decision (due to COVID-19 or lost budget)</masterLabel>
+        <translation><!-- No decision (due to COVID-19 or lost budget) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No decision (due to concerns related to migrating to the cloud; security, features, control, integrations)</masterLabel>
+        <translation><!-- No decision (due to concerns related to migrating to the cloud; security, features, control, integrations) --></translation>
+    </picklistValues>
+    <picklistValues>
         <masterLabel>Nothing. This was never a serious opportunity</masterLabel>
         <translation><!-- Nothing. This was never a serious opportunity --></translation>
     </picklistValues>

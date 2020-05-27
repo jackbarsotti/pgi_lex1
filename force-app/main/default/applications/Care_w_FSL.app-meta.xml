@@ -198,7 +198,6 @@
     <tabs>New_Quick_Case</tabs>
     <tabs>Call_Log__c</tabs>
     <tabs>standard-Case</tabs>
-    <tabs>ClassicKanban__Case_Kanban</tabs>
     <tabs>Case_List</tabs>
     <tabs>Case_Template__c</tabs>
     <tabs>Financial_Request__c</tabs>
@@ -225,6 +224,7 @@
     <tabs>standard-ServiceAppointment</tabs>
     <tabs>Conference__c</tabs>
     <tabs>TO_Request__c</tabs>
+    <tabs>Case_SLA_Exception_Rules__c</tabs>
     <workspaceConfig>
         <mappings>
             <tab>Call_Log__c</tab>
@@ -233,10 +233,10 @@
             <tab>Case_List</tab>
         </mappings>
         <mappings>
-            <tab>Case_Template__c</tab>
+            <tab>Case_SLA_Exception_Rules__c</tab>
         </mappings>
         <mappings>
-            <tab>ClassicKanban__Case_Kanban</tab>
+            <tab>Case_Template__c</tab>
         </mappings>
         <mappings>
             <tab>Conference__c</tab>

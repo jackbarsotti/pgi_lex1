@@ -24,12 +24,12 @@
                 <field>Agreement_Type__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Unique_ID__c</field>
+                <behavior>Required</behavior>
+                <field>Relationship_Type__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Relationship_Type__c</field>
+                <field>Unique_ID__c</field>
             </layoutItems>
         </layoutColumns>
         <style>OneColumn</style>
@@ -69,7 +69,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h56000001CaEw</masterLabel>
+        <masterLabel>00h1B00000ESdsc</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

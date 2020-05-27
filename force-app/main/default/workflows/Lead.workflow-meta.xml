@@ -25,8 +25,6 @@
     <alerts>
         <fullName>Round_Robin_Lead_Assignment_APAC</fullName>
         <ccEmails>APmarketing@pgi.com</ccEmails>
-        <ccEmails>apstrategyandmarketing@pgi.com</ccEmails>
-        <ccEmails>MarketingOps@pgi.com</ccEmails>
         <description>Round Robin Lead Assignment - APAC</description>
         <protected>false</protected>
         <recipients>
@@ -71,22 +69,6 @@
         <protected>false</protected>
         <recipients>
             <type>owner</type>
-        </recipients>
-        <senderAddress>pgisfnoreply@pgi.com</senderAddress>
-        <senderType>OrgWideEmailAddress</senderType>
-        <template>Janati_RR__Round_Robin_Assignment/Janati_RR__Lead_Assignment_Notification</template>
-    </alerts>
-    <alerts>
-        <fullName>Round_Robin_Lead_Assignment_Webcast_Australia</fullName>
-        <ccEmails>MarketingOps@pgi.com</ccEmails>
-        <description>Round Robin Lead Assignment - Webcast Australia</description>
-        <protected>false</protected>
-        <recipients>
-            <type>owner</type>
-        </recipients>
-        <recipients>
-            <recipient>michael.foot@pgi.com</recipient>
-            <type>user</type>
         </recipients>
         <senderAddress>pgisfnoreply@pgi.com</senderAddress>
         <senderType>OrgWideEmailAddress</senderType>
@@ -1351,6 +1333,21 @@ ISBLANK(Potential_Account_Matches__c),TRUE), &quot;NO&quot;, &quot;YES&quot;
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
+        <fullName>Notification to Lead Owner</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Lead_Source_Most_Recent__c</field>
+            <operation>equals</operation>
+            <value>Web Chat</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Owner_Active__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
         <fullName>PGI-Set Status to Disqualified</fullName>
         <actions>
             <name>set_status_to_disqualified</name>
@@ -1432,7 +1429,19 @@ OwnerId=&quot;00G13000003pdaG&quot;))</formula>
             <type>FieldUpdate</type>
         </actions>
         <active>false</active>
-        <formula>AND(  Owner:User.ProfileId &lt;&gt; &quot;00e30000001rSOR&quot;, NOT(ISPICKVAL( LeadSource,&#39;Lead Gen - Talkpoint&#39;)), CONTAINS(RecordType.Name, &quot;PGi&quot;), OR(Owner:User.Id &lt;&gt; &quot;&quot;,   OwnerId = &quot;00G13000003t04l&quot;), OR(  CreatedBy.Profile.Id = &quot;00e30000001rSOR&quot;,  CreatedBy.Id = &quot;0051300000BAPRk&quot;,  CreatedBy.Id = &quot;0051300000C42An&quot;,  CreatedBy.Id = &quot;005300000063Gke&quot;), OR(ISPICKVAL( LeadSource, &#39;Web Chat&#39;)) )</formula>
+        <formula>AND( 
+Owner:User.ProfileId &lt;&gt; &quot;00e30000001rSOR&quot;,
+NOT(ISPICKVAL( LeadSource,&apos;Lead Gen - Talkpoint&apos;)),
+CONTAINS(RecordType.Name, &quot;PGi&quot;),
+OR(Owner:User.Id &lt;&gt; &quot;&quot;, 
+ OwnerId = &quot;00G13000003t04l&quot;),
+OR( 
+CreatedBy.Profile.Id = &quot;00e30000001rSOR&quot;, 
+CreatedBy.Id = &quot;0051300000BAPRk&quot;, 
+CreatedBy.Id = &quot;0051300000C42An&quot;, 
+CreatedBy.Id = &quot;005300000063Gke&quot;),
+OR(ISPICKVAL( LeadSource, &apos;Web Chat&apos;))
+)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -1442,15 +1451,7 @@ OwnerId=&quot;00G13000003pdaG&quot;))</formula>
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>
-        <criteriaItems>
-            <field>Lead.Global_MQL__c</field>
-            <operation>equals</operation>
-            <value>True</value>
-        </criteriaItems>
-        <criteriaItems>
-            <field>Lead.Global_MQL_Assignment_Date__c</field>
-            <operation>equals</operation>
-        </criteriaItems>
+        <formula>Global_MQL__c = TRUE</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
@@ -1507,7 +1508,7 @@ OwnerId=&quot;00G13000003pdaG&quot;))</formula>
         </actions>
         <active>true</active>
         <description>Tagging the field &quot;MQL Intl Lead&quot; if the lead ownership is ever under queue &quot;PGi-Lead-International Online&quot; and is then moved to another que or user except if moved to &quot;PGi-Lead-Intl Disqualified Leads&quot;</description>
-        <formula>AND( ISCHANGED(OwnerId), Owner:Queue.Id &lt;&gt; &#39;00G13000003pdaG&#39;, PRIORVALUE(Owner_s_Name_if_Queue__c) = &#39;PGi-Lead-International Online&#39; )</formula>
+        <formula>AND( ISCHANGED(OwnerId), Owner:Queue.Id &lt;&gt; &apos;00G13000003pdaG&apos;, PRIORVALUE(Owner_s_Name_if_Queue__c) = &apos;PGi-Lead-International Online&apos; )</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -1571,8 +1572,8 @@ OwnerId=&quot;00G13000003pdaG&quot;))</formula>
             <name>RR_Reassign_TRUE</name>
             <type>FieldUpdate</type>
         </actions>
-        <active>true</active>
-        <booleanFilter>1 AND (2 OR 3 OR (4 AND 5) OR (4 AND 6 AND 7))</booleanFilter>
+        <active>false</active>
+        <booleanFilter>(1 AND (2 OR 3 OR (4 AND 5) OR (4 AND 6 AND 7))) OR 8</booleanFilter>
         <criteriaItems>
             <field>Lead.OwnerId</field>
             <operation>equals</operation>
@@ -1607,6 +1608,11 @@ OwnerId=&quot;00G13000003pdaG&quot;))</formula>
             <field>Lead.leadScoring__Lead_Score__c</field>
             <operation>greaterOrEqual</operation>
             <value>3</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Created_by_User_s_Name__c</field>
+            <operation>equals</operation>
+            <value>ChatCustomPage Guest User,Automated Process</value>
         </criteriaItems>
         <description>Will assign a lead to Round Robin queue once it meets a qualified lead score.</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
@@ -1876,7 +1882,7 @@ OwnerId=&quot;00G13000003pdaG&quot;))</formula>
         <active>true</active>
         <description>Notify Users when Ownership changes</description>
         <formula>AND(
-$User.Profile_Name_Text__c &lt;&gt; &#39;PGi Sales Operations&#39;,
+$User.Profile_Name_Text__c &lt;&gt; &apos;PGi Sales Operations&apos;,
 ISCHANGED(OwnerId),
 $User.Id &lt;&gt; &quot;&quot;
 )</formula>
@@ -2274,31 +2280,6 @@ Lead Routed by DB is set by the other RoundRobin WFR</description>
             <field>Lead.OwnerId</field>
             <operation>equals</operation>
             <value>Janice Bailey</value>
-        </criteriaItems>
-        <description>Evaluates when a round robin assignee is assigned in order to send an email to the lead owner on Create</description>
-        <triggerType>onCreateOnly</triggerType>
-    </rules>
-    <rules>
-        <fullName>Round Robin Lead Assignment - Webcast Australia</fullName>
-        <actions>
-            <name>Round_Robin_Lead_Assignment_Webcast_Australia</name>
-            <type>Alert</type>
-        </actions>
-        <active>true</active>
-        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
-        <criteriaItems>
-            <field>Lead.Janati_RR__Round_Robin_Assignee__c</field>
-            <operation>notEqual</operation>
-        </criteriaItems>
-        <criteriaItems>
-            <field>Lead.OwnerId</field>
-            <operation>equals</operation>
-            <value>Lucas Gordon</value>
-        </criteriaItems>
-        <criteriaItems>
-            <field>Lead.OwnerId</field>
-            <operation>equals</operation>
-            <value>Michael Foot</value>
         </criteriaItems>
         <description>Evaluates when a round robin assignee is assigned in order to send an email to the lead owner on Create</description>
         <triggerType>onCreateOnly</triggerType>

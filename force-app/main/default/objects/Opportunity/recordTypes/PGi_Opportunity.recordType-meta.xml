@@ -164,6 +164,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Avaya</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>BT</fullName>
             <default>false</default>
         </values>
@@ -224,6 +228,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Jive</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Join%2Eme</fullName>
             <default>false</default>
         </values>
@@ -244,7 +252,15 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Mitel</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>NASDAQ OMX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nextiva</fullName>
             <default>false</default>
         </values>
         <values>
@@ -309,6 +325,10 @@
         </values>
         <values>
             <fullName>Zoom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zoom Phone</fullName>
             <default>false</default>
         </values>
         <values>
@@ -703,6 +723,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Avaya</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>BT</fullName>
             <default>false</default>
         </values>
@@ -759,6 +783,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Jive</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Join%2Eme</fullName>
             <default>false</default>
         </values>
@@ -779,7 +807,15 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Mitel</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>NASDAQ OMX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nextiva</fullName>
             <default>false</default>
         </values>
         <values>
@@ -844,6 +880,10 @@
         </values>
         <values>
             <fullName>Zoom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zoom Phone</fullName>
             <default>false</default>
         </values>
         <values>
@@ -2419,6 +2459,14 @@
         </values>
         <values>
             <fullName>If we had a lower price on %28fill in the service or feature that needed better pricing%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No decision %28due to COVID-19 or lost budget%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No decision %28due to concerns related to migrating to the cloud%3B security%2C features%2C control%2C integrations%29</fullName>
             <default>false</default>
         </values>
         <values>

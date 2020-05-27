@@ -45,6 +45,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>New_Division__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>JointSellingInitiative__c</field>
             </layoutItems>
             <layoutItems>
@@ -58,6 +62,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Opportunity_Age__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Converted_from_Global_Contact_MQL__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -258,25 +266,17 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Orginal_Creator__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Lead_Created_Date__c</field>
+                <field>Converted_from_MQL__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Converted_from_MQL__c</field>
+                <field>Orginal_Creator__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Converted_from_Global_Contact_MQL__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Converted_from_MQA__c</field>
+                <field>Lead_Created_Date__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>

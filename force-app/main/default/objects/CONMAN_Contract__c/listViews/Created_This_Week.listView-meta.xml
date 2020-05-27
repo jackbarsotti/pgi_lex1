@@ -8,6 +8,7 @@
     <columns>Contract_Status__c</columns>
     <columns>Account_s_Agreement_Name__c</columns>
     <columns>Opportunity__c</columns>
+    <columns>Contract_Type__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>CREATED_DATE</field>

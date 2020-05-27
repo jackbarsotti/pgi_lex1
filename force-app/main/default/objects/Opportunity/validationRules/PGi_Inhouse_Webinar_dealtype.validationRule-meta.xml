@@ -11,5 +11,5 @@ NOT(ISPICKVAL(Opportunity_Deal_Type__c,&quot;Up-Sell (Rev Increase)&quot;)),
 RecordType.Name = &quot;PGi Opportunity&quot;
 )</errorConditionFormula>
     <errorDisplayField>Opportunity_Deal_Type__c</errorDisplayField>
-    <errorMessage>PGi&#39;s Webinar Products are not allowed to be sold anymore for new business deals, please select a Webcast or Collaboration product instead.</errorMessage>
+    <errorMessage>PGi&apos;s Webinar Products are not allowed to be sold anymore for new business deals, please select a Webcast or Collaboration product instead.</errorMessage>
 </ValidationRule>

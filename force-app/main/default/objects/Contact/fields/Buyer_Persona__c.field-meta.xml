@@ -120,6 +120,11 @@
                 <default>false</default>
                 <label>Other</label>
             </value>
+            <value>
+                <fullName>Sam (Small Business Owner)</fullName>
+                <default>false</default>
+                <label>Sam (Small Business Owner)</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ListView xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>PGi_Email_GL_Attended_Assigned</fullName>
-    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 and 6 and 7 and 8 and 9 and 10</booleanFilter>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 and 6 and 7 and 8 and 9</booleanFilter>
     <columns>CASES.CASE_NUMBER</columns>
     <columns>Purpose_of_request__c</columns>
     <columns>Conference_Date_Time__c</columns>
@@ -31,14 +31,14 @@
         <operation>notEqual</operation>
     </filters>
     <filters>
-        <field>CASES.SUBJECT</field>
-        <operation>notContain</operation>
-        <value>Action Required for New Booking</value>
+        <field>CASES.ORIGIN</field>
+        <operation>notEqual</operation>
+        <value>Email - GL - RES - TP Desk - PGiBrand</value>
     </filters>
     <filters>
         <field>CASES.ORIGIN</field>
         <operation>notContain</operation>
-        <value>Email - US - RES - Courtcall - NoAuto,Email - GL - RES - TP Desk - PGiBrand</value>
+        <value>Email - US - RES - Courtcall - NoAuto</value>
     </filters>
     <filters>
         <field>CASES.ORIGIN</field>
@@ -59,11 +59,6 @@
         <field>CASES.ORIGIN</field>
         <operation>notContain</operation>
         <value>Email - GL - RES - CallBack Email - PGiBrand</value>
-    </filters>
-    <filters>
-        <field>CASES.SUBJECT</field>
-        <operation>notContain</operation>
-        <value>Conference America Outsource</value>
     </filters>
     <label>PGi-Email-GL-Attended (Assigned)</label>
     <language>en_US</language>

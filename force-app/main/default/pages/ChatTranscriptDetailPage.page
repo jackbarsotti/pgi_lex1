@@ -18,8 +18,8 @@
                 <apex:CommandButton value="Escalate Chat" id="escalateButton" onclick="chatEscalate()" onComplete="return null;">
                 <apex:actionSupport event="onComplete" reRender="escalateButton" />
                 </apex:CommandButton>
-                <apex:commandButton id="fileButton" value="Request File" onclick="testInitFileTransfer()" onComplete="return null;" rendered="{!NOT(OR(LiveChatTranscript.Status == 'Completed',LiveChatTranscript.Status == 'Dropped',LiveChatTranscript.Status == 'Missed'))}" />
-                <apex:commandButton action="{!edit}" id="editButton" value="Edit" />
+                <apex:commandButton id="fileButton" value="Request File" onclick="testInitFileTransfer()" onComplete="return null;" rendered="{!NOT(OR(LiveChatTranscript.Status == 'Completed',LiveChatTranscript.Status == 'Dropped',LiveChatTranscript.Status == 'Missed',CONTAINS($Profile.Name,'Sales')))}" />
+                <apex:commandButton action="{!edit}" id="editButton" value="Edit" rendered="{!$Profile.Name == 'System Administrator'}"/>
                 <apex:commandButton action="{!save}" id="saveButton" value="Save" style="display:none" />
                 <apex:commandButton onclick="resetInlineEdit()" id="cancelButton" value="Cancel" style="display:none" />
             </apex:pageBlockButtons>
@@ -38,8 +38,7 @@
                 <apex:outputField value="{!LiveChatTranscript.Query_Topic__c}" />
                 <apex:outputField value="{!LiveChatTranscript.EndedBy}" rendered="{!OR(LiveChatTranscript.Status == 'Completed',LiveChatTranscript.Status == 'Dropped',LiveChatTranscript.Status == 'Missed')}" />
                 <apex:outputField value="{!LiveChatTranscript.OwnerId}" />
-                <apex:outputField value="{!LiveChatTranscript.CurrentUserProfile__c}" rendered="null" />
-                
+                <apex:outputField value="{!LiveChatTranscript.CurrentUserProfile__c}" rendered="null" />                
             </apex:pageBlockSection>
 
             <apex:pageBlockSection showHeader="true" title="Provided Details" columns="2" collapsible="false">
@@ -48,33 +47,36 @@
                 <apex:outputField value="{!LiveChatTranscript.Name__c}" />
                 <apex:outputField value="{!LiveChatTranscript.Email_Address__c}" />
                 <apex:outputField value="{!LiveChatTranscript.Subject__c}" />
+                <apex:outputField value="{!LiveChatTranscript.Company_Name__c}" />
             </apex:pageBlockSection>
 
             <apex:pageBlockSection showHeader="true" title="Transcript" id="transcript" columns="1" collapsible="false" rendered="{!OR(LiveChatTranscript.Status == 'Completed',LiveChatTranscript.Status == 'Dropped',LiveChatTranscript.Status == 'Missed')}">
                 <apex:outputField value="{!LiveChatTranscript.Body}" />
             </apex:pageBlockSection>
 
-            <apex:pageBlockSection showHeader="true" title="Related Records" id="associatedRecords" columns="2" collapsible="false">
+            <apex:pageBlockSection showHeader="true" title="Client Information" id="associatedRecords" columns="2" collapsible="false">
                 <apex:inlineEditSupport showOnEdit="saveButton, cancelButton" hideOnEdit="editButton, escalateButton, fileButton" event="ondblclick" changedStyleClass="myBoldClass" resetFunction="resetInlineEdit" />
-                <apex:outputField value="{!LiveChatTranscript.CaseId}" />
                 <apex:outputField value="{!LiveChatTranscript.PGi_Client__c}" />                
                 <apex:outputField value="{!LiveChatTranscript.Multiple_Client_Records_Found__c}" />
                 <apex:outputField value="{!LiveChatTranscript.PGi_Company__c}" />
-                <apex:outputField value="{!LiveChatTranscript.Financial_Request__c}" />
-                
             </apex:pageBlockSection>
             
-            <apex:pageBlockSection showHeader="true" title="Other Related Records" id="associatedRecords2" columns="2" collapsible="false">
+            <apex:pageBlockSection showHeader="true" title="Related Records" id="associatedRecords2" columns="2" collapsible="false">
+                <apex:inlineEditSupport showOnEdit="saveButton, cancelButton" hideOnEdit="editButton, escalateButton, fileButton" event="ondblclick" changedStyleClass="myBoldClass" resetFunction="resetInlineEdit" />
+                <apex:outputField value="{!LiveChatTranscript.CaseId}" />
+                <apex:outputField value="{!LiveChatTranscript.Financial_Request__c}" />     
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection showHeader="true" title="Other Related Records" id="associatedRecords3" columns="2" collapsible="false" rendered="{!OR(CONTAINS($Profile.Name,'Sales'),$Profile.Name == 'System Administrator',$Profile.Name == 'PGi Care Business Admins')}">
                 <apex:inlineEditSupport showOnEdit="saveButton, cancelButton" hideOnEdit="editButton, escalateButton, fileButton" event="ondblclick" changedStyleClass="myBoldClass" resetFunction="resetInlineEdit" />
                 <apex:outputField value="{!LiveChatTranscript.ContactId}" />
                 <apex:outputField value="{!LiveChatTranscript.LeadId}" />
-                <apex:outputField value="{!LiveChatTranscript.AccountId}" />
+                <apex:outputField value="{!LiveChatTranscript.Account__c}" />
                 <apex:outputField value="{!LiveChatTranscript.Multiple_Lead_Records_Found__c}" />                   
             </apex:pageBlockSection>
 
             <apex:pageBlockSection showHeader="true" title="Visitor Details" columns="1" collapsible="false">
                 <apex:outputField value="{!LiveChatTranscript.LiveChatVisitorId}" />
-                <apex:outputField value="{!LiveChatTranscript.Company_Name__c}" />
                 <apex:outputField value="{!LiveChatTranscript.Location}" />
                 <apex:outputField value="{!LiveChatTranscript.Location_Country__c}" />
                 <apex:outputField value="{!LiveChatTranscript.Location_Region__c}" />
@@ -107,11 +109,12 @@
                 <apex:outputField value="{!LiveChatTranscript.GM_Description__c}" />
             </apex:pageBlockSection>
 
-            <apex:pageBlockSection showHeader="true" title="Visitor Network Details" id="networkDetails" columns="1" collapsible="false" rendered="{!OR(LiveChatTranscript.Status == 'Completed',LiveChatTranscript.Status == 'Dropped',LiveChatTranscript.Status == 'Missed')}">
+            <apex:pageBlockSection showHeader="true" title="Visitor Network Details" id="networkDetails" columns="1" collapsible="false">
                 <apex:outputField value="{!LiveChatTranscript.IpAddress}" />
                 <apex:outputField value="{!LiveChatTranscript.VisitorNetwork}" />
                 <apex:outputField value="{!LiveChatTranscript.UserAgent}" />
-                <apex:outputField value="{!LiveChatTranscript.ReferrerUri}" />
+                <apex:outputField value="{!LiveChatTranscript.Referring_Webpage__c}" />
+                <apex:outputField value="{!LiveChatTranscript.ReferrerUri}" rendered="{!OR($Profile.Name == 'System Administrator',$Profile.Name == 'PGi Care Business Admins')}" />
                 <apex:outputField value="{!LiveChatTranscript.ScreenResolution}" />
             </apex:pageBlockSection>
 
@@ -144,7 +147,7 @@
                 var userProfile = '{!$Profile.Name}';
 
                 width = 450;
-                height = 380;
+                height = 400;
 
                 var id = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
 
@@ -189,77 +192,127 @@
                         box.hide();
                     }
                     else if (res[0] === 'close') {
-
-                            if (sforce.console.isInConsole()) {
-                              
-                            
-                                //let urlrecord = window.location.origin+'/'+res[1]+'/e?retURL='+res[1];
-                                //sforce.console.openPrimaryTab(null, urlrecord ,true);
-                                
-                                //SavePage();
-                                
-                                //RT-473: In Console
-                                if (res[2] === 'Case'){
-                                    if (res[1] != 'none'){
+                    
+                        if (res[2] === 'Case'){
+                        
+                                if (res[1] != 'none'){
+                                    
+                                    //RT-473: In Console
+                                    if (sforce.console.isInConsole()) {
+                                    
                                         sforce.console.openPrimaryTab(null, window.location.origin + '/apex/CaseTabViewer?isNew=true&id=' + res[1], true);
+                                        box.hide();
+                                        updatePage();
+                                        
+                                        //let urlrecord = window.location.origin+'/'+res[1]+'/e?retURL='+res[1];
+                                        //sforce.console.openPrimaryTab(null, urlrecord ,true);
+                                        
+                                        //SavePage();
+                                    }
+                                    
+                                    //RT-473: Not In Console
+                                    //Added to check the assignment Rule in case Tab viewer.(Previously they were directly redirecting to Case Id)
+                                    else{
+                                        redirectToCaseTab(res[1]);
+                                        
+                                        //window.open(window.location.href ='/'+res[1]+'/e?retURL='+res[1],"_self");
+                                    }
+                                }
+                        }
+                                
+                        else if (res[2] === 'Lead') {
+                        
+                            var baseURL; 
+                                                        
+                            // || userProfile == 'System Administrator'
+                            if (userProfile.indexOf('Sales') != -1 ){
+                                if (res[1] != 'none') {
+                                    if (sforce.console.isInConsole()) {
+                                        let urlrecord = window.location.origin+'/'+res[1]+'/e?retURL='+res[1]+'&isNew=true';
+                                        sforce.console.openPrimaryTab(null, urlrecord ,true);
                                         box.hide();
                                         updatePage();
                                     }
                                 }
                                 
-                                else if (res[2] === 'Lead') {
-                                    if (res[1] != 'none') {
-                                        if (userProfile.indexOf('Sales') != -1){
+                                else if (res[1] == 'none' || res[1] == null) {
+                                                            
+                                    //window.open(window.location.href ='/'+res[1]+'/e?retURL='+res[1]+'&isNew=true',"_self");                                   
+                                    baseURL = window.location.origin;
+                                                                                                                       
+                                    box.setContentInnerHTML(
+                                        '<iframe src="' + baseURL + '/apex/Chat_SubmitLead?Id=' + recId + '" style="border:none;" width="100%" height="' + (height - 10) + 'px" />'
+                                    );
+                                }
+                            }
+                            
+                            else{   //navigate to page where Care users can submit Leads                                                   
+                                if (res[1] == 'none' || res[1] == null){
+                                    if (window.location.origin.indexOf('cs26') != -1){
+                                        baseURL = 'dev-pgi.cs26.force.com';
+                                    }
+                                    else if (window.location.origin.indexOf('cs19') != -1){
+                                        baseURL = 'staging-pgi.cs19.force.com';                                    
+                                    }                                           
+                                    else {
+                                        baseURL = 'pgi.secure.force.com';   
+                                    }
+                                                                                                                       
+                                    box.setContentInnerHTML(
+                                        '<iframe src="https://' + baseURL + '/chatcustompage/Chat_SubmitLead?Id=' + recId + '" style="border:none;" width="100%" height="' + (height - 10) + 'px" />'
+                                    );
+                                }
+                            }
+                            
+                            //box.hide();
+                            //updatePage();
+                            
+                            
+                                //RT-473: In Console
+                                //  if (sforce.console.isInConsole()) {
+                            
+                                    /*    if (userProfile.indexOf('Sales') != -1 || userProfile == 'System Administrator'){
 
                                             let urlrecord = window.location.origin+'/'+res[1]+'/e?retURL='+res[1]+'&isNew=true';
                                             sforce.console.openPrimaryTab(null, urlrecord ,true);
                                             box.hide();
                                             updatePage();
                                         }
-                                    }
+                                    */
+                                    
+                                    
+                                    
+                                    
+                                //    }
+
+                                  //    }
+                        }
                                 
-                                        else {  //navigate to page where Care users can submit Leads         
-                                            var baseURL;                             
-    
-                                            if (window.location.origin.indexOf('cs26') != -1){
-                                                baseURL = 'dev-pgi.cs26.force.com';
-                                            }
-                                            else if (window.location.origin.indexOf('cs19') != -1){
-                                                baseURL = 'staging-pgi.cs19.force.com';                                    
-                                            }                                           
-                                            else {
-                                                baseURL = 'pgi.secure.force.com';   
-                                            }
-                                                                                                                   
-                                                box.setContentInnerHTML(
-                                                  '<iframe src="https://' + baseURL + '/chatcustompage/Chat_SubmitLead?Id=' + recId + '" style="border:none;" width="100%" height="' + (height - 10) + 'px" />'
-                                                );
-                                        }
-                                 }
+                        else if (res[2] === 'Financial_Request__c') {
+                        
+                            if (res[1] == 'none' || res[1] == null){
+                                baseURL = window.location.origin;
+                                                                                                                       
+                                box.setContentInnerHTML(
+                                    '<iframe src="' + baseURL + '/apex/Chat_SubmitEscalatedFinReq?Id=' + recId + '" style="border:none;" width="100%" height="' + (height - 10) + 'px" />'
+                                );
+                            }
+                        
+                            if (res[1] != 'none'){
+                                box.hide();
+                                updatePage();
                                 
-                                else if (res[2] === 'Financial_Request__c') {
-                                    if (res[1] != 'none'){
-                                    updatePage();
-                                    box.hide();
+                                //RT-473: In Console
+                                if (sforce.console.isInConsole()) {                         
                                     //  let urlrecord = window.location.origin+'/'+res[1]+'/e?retURL='+res[1]+'&isNew=true';
                                     //  sforce.console.openPrimaryTab(null, urlrecord ,true);
-                                  }
                                 }
-
-                            }
-                            else {
-                                //RT-473
-                                //Added to check the assignment Rule in case Tab viewer.(Previously they were directly redirecting to Case Id)
-                                if (res[2] === 'Case'){
-                                    redirectToCaseTab(res[1]);
-                                    //window.open(window.location.href ='/'+res[1]+'/e?retURL='+res[1],"_self");
-                                }
-                                else {
-                                    window.open(window.location.href ='/'+res[1]+'/e?retURL='+res[1]+'&isNew=true',"_self");
+                                else{
+                                    //window.open(window.location.href ='/'+res[1]+'/e?retURL='+res[1]+'&isNew=true',"_self");
                                 }
                             }
-                            //box.hide(); 
                         }
+                    }
                 });
             }
 
@@ -303,7 +356,16 @@
             
     </apex:form>
 
-    <apex:relatedList list="LiveChatTranscriptEvents" rendered="{!OR(LiveChatTranscript.Status == 'Completed',LiveChatTranscript.Status == 'Dropped',LiveChatTranscript.Status == 'Missed')}"
-    />
+    <apex:relatedList list="LiveChatTranscriptEvents" rendered="{!OR(LiveChatTranscript.Status == 'Completed',LiveChatTranscript.Status == 'Dropped',LiveChatTranscript.Status == 'Missed')}">
+      <apex:facet name="header">LiveChatTranscript Events</apex:facet>
+    </apex:relatedList>
+    
+        <apex:relatedList list="Survey_Force_Surveys_Taken__r" rendered="{!AND($ObjectType.SurveyTaker__c.accessible,OR(LiveChatTranscript.Status == 'Completed',LiveChatTranscript.Status == 'Dropped',LiveChatTranscript.Status == 'Missed'))}">
+    <apex:facet name="header">Surveys Taken</apex:facet>
+    </apex:relatedList>   
+    
+        <apex:relatedList list="Histories" rendered="{!OR($Profile.Name == 'System Administrator',$Profile.Name == 'PGi Care Business Admins')}">
+      <apex:facet name="header">Histories</apex:facet>
+    </apex:relatedList>
 
 </apex:page>

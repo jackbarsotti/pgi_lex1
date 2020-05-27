@@ -89,6 +89,10 @@
     <layouts>
         <layout>PGi Renewal Opportunity Layout</layout>
         <sections>
+            <label><!-- 6Sense Details --></label>
+            <section>6Sense Details</section>
+        </sections>
+        <sections>
             <label><!-- Buyer Persona Engagement Best Practices --></label>
             <section>Buyer Persona Engagement Best Practices</section>
         </sections>
@@ -99,10 +103,6 @@
         <sections>
             <label><!-- Custom Links --></label>
             <section>Custom Links</section>
-        </sections>
-        <sections>
-            <label><!-- Marketing Information --></label>
-            <section>Marketing Information</section>
         </sections>
         <sections>
             <label><!-- Next Steps --></label>
@@ -119,6 +119,10 @@
         <sections>
             <label><!-- System Information --></label>
             <section>System Information</section>
+        </sections>
+        <sections>
+            <label><!-- Totango Insights --></label>
+            <section>Totango Insights</section>
         </sections>
         <sections>
             <label><!-- Won/Lost Reasons --></label>
@@ -352,6 +356,18 @@
             <section>Win-Loss Analysis</section>
         </sections>
     </layouts>
+    <quickActions>
+        <label><!-- Generate NCS --></label>
+        <name>Generate_NCS</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Send for eSignature --></label>
+        <name>Send_for_eSignature</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- iContract --></label>
+        <name>iContract</name>
+    </quickActions>
     <recordTypes>
         <description><!-- PGi Opportunity Records --></description>
         <label><!-- PGi Opportunity --></label>
@@ -430,6 +446,10 @@
     <validationRules>
         <errorMessage><!-- When &quot;Other&quot; is selected, provide the name of the Competitor, in the &quot;Competitor(s) Other&quot; field --></errorMessage>
         <name>PGi_Competitor_Other_Provide_Product</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- An Existing Product is required to move a Conversion or Down-Sell opportunity beyond the Awareness stage. --></errorMessage>
+        <name>PGi_Existing_Svc_convsersion_downsell</name>
     </validationRules>
     <validationRules>
         <errorMessage><!-- If you have sold GM4, you must advised why GM4 is required and what the GM5 migration plan is in the GlobalMeet Details section below. --></errorMessage>

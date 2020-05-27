@@ -3,7 +3,7 @@
     <outboundMessages>
         <fullName>FoxDen_User_Outbound</fullName>
         <apiVersion>36.0</apiVersion>
-        <endpointUrl>https://provision.ecovate.com/bbs-provisioning/inboundGateway</endpointUrl>
+        <endpointUrl>http://forbo12.ecovate.com:8082/bbs-provisioning/inboundGateway</endpointUrl>
         <fields>Account__c</fields>
         <fields>Auth0_User_Id__c</fields>
         <fields>Contact__c</fields>

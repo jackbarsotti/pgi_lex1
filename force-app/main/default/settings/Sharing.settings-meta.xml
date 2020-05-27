@@ -6,7 +6,6 @@
     <enableExternalSharingModel>true</enableExternalSharingModel>
     <enableManagerGroups>false</enableManagerGroups>
     <enableManualUserRecordSharing>true</enableManualUserRecordSharing>
-    <enablePartnerSuperUserAccess>false</enablePartnerSuperUserAccess>
     <enablePortalUserCaseSharing>true</enablePortalUserCaseSharing>
     <enablePortalUserVisibility>true</enablePortalUserVisibility>
     <enableRestrictAccessLookupRecords>false</enableRestrictAccessLookupRecords>

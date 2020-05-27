@@ -206,6 +206,10 @@
                 <behavior>Edit</behavior>
                 <field>Address</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Country_Lead_Region__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -275,6 +279,25 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>SalesLoft_People_Stages__c</field>
+            </layoutItems>
+            <layoutItems>
+                <emptySpace>true</emptySpace>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Referrer_Full_Name__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Referrer_Company__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Referrer_Email_Address__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Referrer_Phone_Number__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -433,7 +456,7 @@
             <layoutItems>
                 <height>375</height>
                 <page>LID__LeadLinkedInMemberPage</page>
-                <showLabel>false</showLabel>
+                <showLabel>true</showLabel>
                 <showScrollbars>true</showScrollbars>
                 <width>100%</width>
             </layoutItems>
@@ -546,6 +569,11 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
+            <actionName>Edit</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>0</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>ChangeOwnerOne</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>1</sortOrder>
@@ -554,11 +582,6 @@
             <actionName>Convert</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>2</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Edit</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>0</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>FeedItem.TextPost</actionName>
@@ -653,6 +676,14 @@
         <fields>CM.RESPONDED</fields>
         <fields>CM.LAST_UPDATE</fields>
         <relatedList>RelatedCampaignList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>Name</fields>
+        <fields>Owner</fields>
+        <fields>StartTime</fields>
+        <fields>EndTime</fields>
+        <fields>Status</fields>
+        <relatedList>RelatedLiveChatTranscriptList</relatedList>
     </relatedLists>
     <relatedLists>
         <excludeButtons>NewProposeMeeting</excludeButtons>

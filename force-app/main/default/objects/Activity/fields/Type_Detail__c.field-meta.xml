@@ -139,31 +139,6 @@
                 <default>false</default>
                 <label>Webcasting</label>
             </value>
-            <value>
-                <fullName>Requirements Gathering</fullName>
-                <default>false</default>
-                <label>Requirements Gathering</label>
-            </value>
-            <value>
-                <fullName>Follow Up Meeting</fullName>
-                <default>false</default>
-                <label>Follow Up Meeting</label>
-            </value>
-            <value>
-                <fullName>Issues to Resolve</fullName>
-                <default>false</default>
-                <label>Issues to Resolve</label>
-            </value>
-            <value>
-                <fullName>Demo/Training</fullName>
-                <default>false</default>
-                <label>Demo/Training</label>
-            </value>
-            <value>
-                <fullName>Go Live Prep</fullName>
-                <default>false</default>
-                <label>Go Live Prep</label>
-            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

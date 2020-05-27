@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mod_AllOpenLeads</fullName>
+    <columns>Topic__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>Sales_Region__c</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>LEAD.LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>0121B000001hgIP</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Qualified</value>
+    </filters>
+    <label>All Open Leads</label>
+    <language>en_US</language>
+    <sharedTo/>
+</ListView>

@@ -232,6 +232,11 @@
             <sortOrder>5</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
+            <actionName>FeedItem.LinkPost</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>6</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>Submit</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>7</sortOrder>
@@ -240,11 +245,6 @@
             <actionName>Delete</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>8</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>FeedItem.LinkPost</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>6</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <quickActionList>

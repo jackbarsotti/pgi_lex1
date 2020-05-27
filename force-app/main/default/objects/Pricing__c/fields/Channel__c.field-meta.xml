@@ -9,8 +9,9 @@
     <trackTrending>false</trackTrending>
     <type>MultiselectPicklist</type>
     <valueSet>
+        <restricted>true</restricted>
         <valueSetDefinition>
-            <sorted>false</sorted>
+            <sorted>true</sorted>
             <value>
                 <fullName>APAC</fullName>
                 <default>false</default>
@@ -22,6 +23,12 @@
                 <label>ARG</label>
             </value>
             <value>
+                <fullName>Business Development</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Business Development</label>
+            </value>
+            <value>
                 <fullName>Carrier</fullName>
                 <default>false</default>
                 <label>Carrier</label>
@@ -30,6 +37,18 @@
                 <fullName>Cloud</fullName>
                 <default>false</default>
                 <label>Cloud</label>
+            </value>
+            <value>
+                <fullName>Commercial Accounts</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Commercial Accounts</label>
+            </value>
+            <value>
+                <fullName>Field Sales</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Field Sales</label>
             </value>
             <value>
                 <fullName>Finance&amp;Pricing</fullName>
@@ -65,6 +84,12 @@
                 <fullName>Marketing</fullName>
                 <default>false</default>
                 <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>None</label>
             </value>
             <value>
                 <fullName>Partners</fullName>

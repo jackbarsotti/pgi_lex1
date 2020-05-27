@@ -10,7 +10,6 @@
     <excludeButtons>AccountHierarchy</excludeButtons>
     <excludeButtons>ChangeOwnerOne</excludeButtons>
     <excludeButtons>ChangeRecordType</excludeButtons>
-    <excludeButtons>DataDotComAccountInsights</excludeButtons>
     <excludeButtons>DataDotComClean</excludeButtons>
     <excludeButtons>DisableCustomerPortalAccount</excludeButtons>
     <excludeButtons>IncludeOffline</excludeButtons>
@@ -99,6 +98,10 @@
                 <behavior>Edit</behavior>
                 <field>Revenue_Last_Month__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Global_Account_MQA__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -172,6 +175,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>RT_Account_Id__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Global_Account_MQA_Assignment_date__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>

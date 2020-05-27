@@ -202,7 +202,6 @@
     <tabs>standard-QuickText</tabs>
     <tabs>standard-OmniSupervisor</tabs>
     <tabs>Email_SLA_Management__c</tabs>
-    <tabs>Case_SLA_Exception_Rules__c</tabs>
     <tabs>Holiday_Schedule__c</tabs>
     <tabs>Call_Center_DNIS__c</tabs>
     <tabs>Call_Center_Menu__c</tabs>
@@ -212,6 +211,7 @@
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-WaveHome</tabs>
     <tabs>standard-LiveChatTranscript</tabs>
+    <tabs>Case_SLA_Exception_Rules__c</tabs>
     <workspaceConfig>
         <mappings>
             <tab>Call_Center_DNIS__c</tab>

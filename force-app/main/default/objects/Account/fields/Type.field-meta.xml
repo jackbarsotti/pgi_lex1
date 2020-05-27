@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Type</fullName>
-    <inlineHelpText>For PGi it identifies the sales channel the Account belongs to.  For ReadyTalk it indicates the current status of the customer&#39;s relationship. This is different than the Status field which shows the current provisioning status of the customer.</inlineHelpText>
+    <inlineHelpText>Indicates the current status of the customer&apos;s relationship with ReadyTalk. This is different than the Status field which shows the current provisioning status of the customer.</inlineHelpText>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
     <type>Picklist</type>

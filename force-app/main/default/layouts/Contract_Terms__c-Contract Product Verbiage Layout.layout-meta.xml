@@ -27,10 +27,6 @@
                 <behavior>Edit</behavior>
                 <field>Terms_and_Conditions__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CurrencyIsoCode</field>
-            </layoutItems>
         </layoutColumns>
         <style>OneColumn</style>
     </layoutSections>

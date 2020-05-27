@@ -38,11 +38,15 @@
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-WaveHomeLightning</tabs>
+    <tabs>Case_SLA_Exception_Rules__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningService_UtilityBar</utilityBar>
     <workspaceConfig>
         <mappings>
             <tab>Call_Log__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Case_SLA_Exception_Rules__c</tab>
         </mappings>
         <mappings>
             <tab>Financial_Request__c</tab>

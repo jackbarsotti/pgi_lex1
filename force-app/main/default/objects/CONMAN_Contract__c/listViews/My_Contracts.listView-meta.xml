@@ -10,7 +10,7 @@
     <columns>Related_Agreement__c</columns>
     <columns>Contract_Start_Date__c</columns>
     <columns>Contract_Renewal_Date__c</columns>
-    <filterScope>Mine</filterScope>
-    <label>*My PGi Contracts</label>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
     <language>en_US</language>
 </ListView>

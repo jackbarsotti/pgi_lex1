@@ -203,6 +203,11 @@
             <sortOrder>11</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
+            <actionName>LogACall</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>12</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>Clone</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>13</sortOrder>
@@ -221,11 +226,6 @@
             <actionName>Submit</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>16</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>LogACall</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>12</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <relatedContent>

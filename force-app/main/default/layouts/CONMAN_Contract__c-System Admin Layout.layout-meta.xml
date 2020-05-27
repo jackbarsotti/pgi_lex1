@@ -49,6 +49,10 @@
                 <behavior>Edit</behavior>
                 <field>Product_Details_Were_Manually_Changed__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Expiration_Date__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -94,6 +98,14 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Word_File_In_Use__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Is_this_Multi_Location__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>How_many_Locations__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -376,8 +388,6 @@
         <fields>Pricing_Team_Changes_Allowed__c</fields>
         <fields>Language__c</fields>
         <fields>Modified__c</fields>
-        <fields>LAST_UPDATE</fields>
-        <fields>CREATED_DATE</fields>
         <relatedList>CONMAN_Contract_Verbiage__c.PGi_Contract__c</relatedList>
     </relatedLists>
     <relatedLists>
@@ -409,8 +419,15 @@
         <fields>NAME</fields>
         <fields>CREATED_DATE</fields>
         <relatedList>CPQ_Contract_Approved_Version__c.PGi_Contract__c</relatedList>
-        <sortField>CREATED_DATE</sortField>
-        <sortOrder>Desc</sortOrder>
+    </relatedLists>
+    <relatedLists>
+        <excludeButtons>MassChangeOwner</excludeButtons>
+        <excludeButtons>New</excludeButtons>
+        <fields>NAME</fields>
+        <fields>Site_Location_Name__c</fields>
+        <fields>Site_Location_Address__c</fields>
+        <fields>Site_Location_Product_Notes__c</fields>
+        <relatedList>CPQ_Location_Sites__c.PGi_Contract__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>

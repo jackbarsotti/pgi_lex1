@@ -74,7 +74,7 @@
     <outboundMessages>
         <fullName>BBS_Department_Outbound</fullName>
         <apiVersion>27.0</apiVersion>
-        <endpointUrl>https://provision.ecovate.com/bbs-provisioning/inboundGateway</endpointUrl>
+        <endpointUrl>http://forbo12.ecovate.com:8082/bbs-provisioning/inboundGateway</endpointUrl>
         <fields>Add_Emails__c</fields>
         <fields>Additional_email_addresses__c</fields>
         <fields>BBS_AccountGroupId__c</fields>
@@ -136,7 +136,7 @@
         <description>ReadyTalk</description>
         <formula>AND
 (Provision__c = TRUE,
-!ISPICKVAL(Status__c, &#39;Deleting&#39;),
+!ISPICKVAL(Status__c, &apos;Deleting&apos;),
  $User.ReadyTalk_Exempt__c = FALSE
 )</formula>
         <triggerType>onAllChanges</triggerType>

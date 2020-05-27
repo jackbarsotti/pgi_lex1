@@ -6,7 +6,7 @@ public class LeadTriggerHandler extends TriggerHandler {
         LeadBeforeInsertBeforeUpdateSyncAddressFields();
         LeadBeforeInsertBeforeUpdateSetDefaultInvoiceTypes();
         //RT-48
-            //getLeadGlobalMQLFieldspopulate();
+            getLeadGlobalMQLFieldspopulate();
     }
     protected override void beforeUpdate() {
         LeadBeforeInsertBeforeUpdateSyncAddressFields();
@@ -38,6 +38,30 @@ public class LeadTriggerHandler extends TriggerHandler {
     public static Map<ID, Schema.RecordTypeInfo> leadRtMap = Lead.sObjectType.getDescribe().getRecordTypeInfosById();
     public static Map<ID, Schema.RecordTypeInfo> accountRtMap = Account.sObjectType.getDescribe().getRecordTypeInfosById();
 
+    public static Id pgiProfileId {get {
+        if(pgiProfileId == null) {
+            for(Profile p: PGI_Utility.profileById.values()) {
+                if(p.Name == 'PGi Marketing User') {
+                    pgiProfileId = p.Id;
+                }
+            }
+        }
+        return pgiProfileId;
+    }set;}
+
+    public static Set<String> salesProfiles = new Set<String>{'PGi Sales User','PGi Sales Mgr','TalkPoint Sales User','TalkPoint Sales Manager'};
+    public static Set<Id> pgiSalesProfileIds {get {
+        if(pgiSalesProfileIds == null) {
+            pgiSalesProfileIds = new Set<Id>();
+            for(Profile p: PGI_Utility.profileById.values()) {
+                if(salesProfiles.contains(p.Name)) {
+                    pgiSalesProfileIds.add(p.Id);
+                }
+            }
+        }
+        return pgiSalesProfileIds;
+    }set;}
+
     private void getLeadGlobalMQLFieldspopulate() {
 
         //if(LeadTriggerHandler.isExecute){
@@ -49,11 +73,6 @@ public class LeadTriggerHandler extends TriggerHandler {
         //PGi Lead RecordType Id
         Id pgiRecordTypeIdLead = Schema.SObjectType.Lead.getRecordTypeInfosByName().get('PGi Leads').getRecordTypeId();
 
-        //Marketing Profile Id
-        Id pgiProfileId = [SELECT Id, Name FROM Profile Where Name = 'PGi Marketing User'].Id;
-
-        //User's Id
-        
         //Users for setting Global MQL fields during ownership change
         Set<String> querySet = new Set<String>{'Eloqua Integration', 'Olark Chat Integration', 'CRM Support Team', 'SF Marketing Cloud Integration', 'Integration Olark Chat', 'Integration Eloqua', 'Support Team CRM', 'Integration SF Marketing Cloud'};
         Map<Id, User> userMap = new Map<Id, User>([SELECT Id, Name FROM User Where Name IN: querySet]);
@@ -67,7 +86,7 @@ public class LeadTriggerHandler extends TriggerHandler {
                 userMapMQLCreators.put(user.Id, user);
             }
         }
-
+        System.debug('>> userMapMQLCreators >>'+userMapMQLCreators);
         Map<Id,User> userIdMap;
         
         Set<Id> ownerIDs = new Set<Id>();
@@ -91,28 +110,39 @@ public class LeadTriggerHandler extends TriggerHandler {
                                                        FROM User
                                                        WHERE Id IN :userIdSet]);
         }
-
-        for(Lead objLead : (List<Lead>)Trigger.new){
-            Boolean updateGlobalMQL = false;
-            if(userMapMQLCreators.containsKey(objLead.CreatedbyId) && objLead.Global_MQL__c == false){
-                updateGlobalMQL = true;
-            } else if(String.valueOf(objLead.OwnerId).startsWith('005') && isChanged('OwnerId', objLead)) {
-                if(userIdMap.keySet().contains(objLead.OwnerId) && userIdMap.get(objLead.OwnerId).ProfileId != pgiProfileId) {
-                    if(objLead.RecordTypeId == pgiRecordTypeIdLead && 
-                        objLead.Global_MQL__c == false &&
-                        ((userIdMap.get(objLead.CreatedbyId) != null && userIdMap.get(objLead.CreatedbyId).ProfileId == pgiProfileId) 
-                            || userMap.containsKey(objLead.CreatedbyId)
-                            || (objLead.LeadSource == 'Inbound Call' || objLead.LeadSource == 'Customer Referral' || objLead.LeadSource == 'Internal Referral' || objLead.LeadSource == 'Web Chat')
-                            )
-                    ) {
-                        updateGlobalMQL = true;
-                        //System.debug('Onj Updated>>>>>>>> '+objLead);
+        
+        System.debug('>>> userIdMap >>'+userIdMap);
+        if(Trigger.isUpdate && Trigger.isBefore){
+            for(Lead objLead : (List<Lead>)Trigger.new){          
+                if(String.valueOf(objLead.OwnerId).startsWith('005') && isChanged('OwnerId', objLead)) {
+                    if(userIdMap.keySet().contains(objLead.OwnerId) && userIdMap.get(objLead.OwnerId).ProfileId != pgiProfileId) {
+                        if(objLead.RecordTypeId == pgiRecordTypeIdLead && 
+                            objLead.Global_MQL__c == false &&
+                            ((userIdMap.get(objLead.CreatedbyId) != null && userIdMap.get(objLead.CreatedbyId).ProfileId == pgiProfileId) 
+                                || userMap.containsKey(objLead.CreatedbyId)
+                                || (objLead.LeadSource == 'Inbound Call' || objLead.LeadSource == 'Customer Referral' || objLead.LeadSource == 'Internal Referral' || objLead.LeadSource == 'Web Chat' || objLead.LeadSource == 'Lead Gen: Other')
+                                )
+                        ) {
+                            objLead.Global_MQL__c = true;
+                            objLead.Global_MQL_Assignment_Date__c = objLead.Global_MQL_Assignment_Date__c == null ? Date.today() : objLead.Global_MQL_Assignment_Date__c;
+                            //System.debug('Onj Updated>>>>>>>> '+objLead);
+                        }
                     }
                 }
             }
-            if(updateGlobalMQL){
-                objLead.Global_MQL__c = true;
-                objLead.Global_MQL_Assignment_Date__c = objLead.Global_MQL_Assignment_Date__c == null ? Date.today() : objLead.Global_MQL_Assignment_Date__c;
+        }
+        
+        if(Trigger.isInsert && Trigger.isBefore){
+            for(Lead objLead : (List<Lead>)Trigger.new){
+                if(objLead.Global_MQL__c == false && 
+                    (userMapMQLCreators.containsKey(System.UserInfo.getUserId())
+                        || (System.UserInfo.getProfileId() == pgiProfileId && pgiSalesProfileIds.contains(userIdMap.get(objLead.OwnerId).ProfileId))
+                        || (objLead.LeadSource == 'Inbound Call' || objLead.LeadSource == 'Customer Referral' || objLead.LeadSource == 'Internal Referral' || objLead.LeadSource == 'Web Chat' || objLead.LeadSource == 'Lead Gen: Other' || objLead.LeadSource == 'Contact Us' || objLead.LeadSource == 'Demo Request' || objLead.LeadSource == 'Inbound Email')
+                        )
+                ){
+                    objLead.Global_MQL__c = true;
+                    objLead.Global_MQL_Assignment_Date__c = objLead.Global_MQL_Assignment_Date__c == null ? Date.today() : objLead.Global_MQL_Assignment_Date__c;
+                }
             }
         }
     }

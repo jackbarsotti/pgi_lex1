@@ -9,7 +9,11 @@ public class SubmitLeadController {
     public String LastName { get; set; }
     public String Company { get; set; }
     public String Email { get; set; }
+    public String Description { get; set; }
     public String Phone { get; set; }
+    
+    public  String returnId {get;set;}
+    public  String returnRecordType {get;set;}
 
     
     public SubmitLeadController() {
@@ -29,7 +33,7 @@ public class SubmitLeadController {
              FirstName = currentChatTranscript.First_Name__c;
              LastName = currentChatTranscript.Last_Name__c;
              Company = currentChatTranscript.Company_Name__c;
-             Email = currentChatTranscript.Email_Address__c;
+             Email = currentChatTranscript.Email_Address__c;          
     }
     
     public PageReference submitLead() {
@@ -44,12 +48,21 @@ public class SubmitLeadController {
                 l.LastName = LastName;
                 l.Email = Email;
                 l.Company = Company;
+                l.Description = Description;
+                l.Phone = Phone;
                 
                 INSERT l;
                 currentChatTranscript.LeadId = l.Id;
                 currentChatTranscript.Escalated_Lead__c = true;
                 UPDATE currentChatTranscript;
-                PageReference retURL = new PageReference('/ChatEscalateLandingPage');
+                returnId = l.Id;
+                
+                String currentURL = ApexPages.currentPage().getUrl();
+                PageReference retURL;
+                if (currentURL.indexOf('chatcustompage') != -1){
+                    retURL = new PageReference('/ChatEscalateLandingPage');
+                }
+                else retURL = new PageReference('/apex/ChatEscalateLandingPage?recordId=' + returnId + '&recordType=Lead');
                 retURL.setRedirect(true);
                 return retURL;
             } catch (Exception e) {
@@ -57,4 +70,5 @@ public class SubmitLeadController {
                 return null;
             }
     }
+    
 }

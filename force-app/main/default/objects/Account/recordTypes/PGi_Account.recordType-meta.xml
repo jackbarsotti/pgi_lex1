@@ -4860,57 +4860,6 @@
         </values>
     </picklistValues>
     <picklistValues>
-        <picklist>Marketing_Channel__c</picklist>
-        <values>
-            <fullName>CANADA%3A Baking</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>CANADA%3A English</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>CANADA%3A French</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>CANADA%3A Partner</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>International</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>NA%3A Base</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>NA%3A Demand Gen</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>NA%3A Diamond</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>NA%3A Online</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>NA%3A Online Legacy</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>NA%3A Partner</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>NA%3A Strat Comms</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
         <picklist>No_of_Employees__c</picklist>
         <values>
             <fullName>1 to 10</fullName>

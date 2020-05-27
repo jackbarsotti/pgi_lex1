@@ -39,6 +39,20 @@
         </routingAddresses>
         <routingAddresses>
             <addressType>EmailToCase</addressType>
+            <caseOrigin>Direct Dial - Support Site</caseOrigin>
+            <caseOwner>vijay@pgi.com</caseOwner>
+            <caseOwnerType>User</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>canemresellersupport11@pgi.com</emailAddress>
+            <emailServicesAddress>canemresellersupport11@7-1gw6mm2juih8z31a4j83chwr9ctrndtvhmk7j42ckp34rlb3l0.21-apfneaw.cs26.case.sandbox.salesforce.com</emailServicesAddress>
+            <isVerified>false</isVerified>
+            <routingName>CaseEngineTest</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>In Progress</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
             <caseOrigin>Email</caseOrigin>
             <caseOwner>PGi_Case_GL_Tier_2_Integrations</caseOwner>
             <caseOwnerType>Queue</caseOwnerType>
@@ -107,6 +121,15 @@
             <saveEmailHeaders>false</saveEmailHeaders>
         </routingAddresses>
         <routingAddresses>
+            <addressType>Outlook</addressType>
+            <caseOrigin>Email - ReadyTalkSales</caseOrigin>
+            <caseOwner>PGi_Case_ReadyTalkSales</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Low</casePriority>
+            <isVerified>false</isVerified>
+            <routingName>ReadyTalkSales</routingName>
+        </routingAddresses>
+        <routingAddresses>
             <addressType>EmailToCase</addressType>
             <caseOrigin>Email - ReadyTalkSales</caseOrigin>
             <caseOwner>PGi_Case_ReadyTalkSales</caseOwner>
@@ -117,15 +140,6 @@
             <isVerified>true</isVerified>
             <routingName>ReadyTalkSales</routingName>
             <saveEmailHeaders>false</saveEmailHeaders>
-        </routingAddresses>
-        <routingAddresses>
-            <addressType>Outlook</addressType>
-            <caseOrigin>Email - ReadyTalkSales</caseOrigin>
-            <caseOwner>PGi_Case_ReadyTalkSales</caseOwner>
-            <caseOwnerType>Queue</caseOwnerType>
-            <casePriority>Low</casePriority>
-            <isVerified>false</isVerified>
-            <routingName>ReadyTalkSales</routingName>
         </routingAddresses>
         <routingAddresses>
             <addressType>EmailToCase</addressType>
@@ -140,15 +154,6 @@
             <saveEmailHeaders>false</saveEmailHeaders>
         </routingAddresses>
         <routingAddresses>
-            <addressType>Outlook</addressType>
-            <caseOrigin>Email</caseOrigin>
-            <caseOwner>Salesforce_Support</caseOwner>
-            <caseOwnerType>Queue</caseOwnerType>
-            <casePriority>Low</casePriority>
-            <isVerified>false</isVerified>
-            <routingName>Salesforce Support</routingName>
-        </routingAddresses>
-        <routingAddresses>
             <addressType>EmailToCase</addressType>
             <caseOrigin>Email</caseOrigin>
             <caseOwner>Salesforce_Support</caseOwner>
@@ -159,6 +164,15 @@
             <isVerified>true</isVerified>
             <routingName>Salesforce Support</routingName>
             <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>Outlook</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>Salesforce_Support</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Low</casePriority>
+            <isVerified>false</isVerified>
+            <routingName>Salesforce Support</routingName>
         </routingAddresses>
         <routingAddresses>
             <addressType>EmailToCase</addressType>
@@ -1896,6 +1910,7 @@
             <casePriority>Medium</casePriority>
             <createTask>false</createTask>
             <emailAddress>eureservations@pgi.com</emailAddress>
+            <emailServicesAddress>eureservations@vg1qvpz6zg28s0cjtrcr3fhc2q0cgm67ew39t3zctwlz3ej8f.21-apfneaw.cs26.case.sandbox.salesforce.com</emailServicesAddress>
             <isVerified>true</isVerified>
             <routingName>Support</routingName>
             <saveEmailHeaders>false</saveEmailHeaders>
@@ -4399,7 +4414,7 @@
         <routingAddresses>
             <addressType>EmailToCase</addressType>
             <caseOrigin>Email - EMEA - India RES - India Wrap Up - WLBrand</caseOrigin>
-            <caseOwner>PGi_Email_India_Unattended</caseOwner>
+            <caseOwner>PGi_Email_India_Tier_1</caseOwner>
             <caseOwnerType>Queue</caseOwnerType>
             <casePriority>Medium</casePriority>
             <createTask>false</createTask>
@@ -4411,7 +4426,7 @@
         <routingAddresses>
             <addressType>EmailToCase</addressType>
             <caseOrigin>Email - EMEA - India RES - Scheduled Conf - GMBrand</caseOrigin>
-            <caseOwner>PGi_Email_India_Unattended</caseOwner>
+            <caseOwner>PGi_Email_India_Tier_1</caseOwner>
             <caseOwnerType>Queue</caseOwnerType>
             <casePriority>Medium</casePriority>
             <createTask>false</createTask>
@@ -4423,7 +4438,7 @@
         <routingAddresses>
             <addressType>EmailToCase</addressType>
             <caseOrigin>Email - EMEA - India RES - Scheduled Conf - GMBrand</caseOrigin>
-            <caseOwner>PGi_Email_India_Unattended</caseOwner>
+            <caseOwner>PGi_Email_India_Tier_1</caseOwner>
             <caseOwnerType>Queue</caseOwnerType>
             <casePriority>Medium</casePriority>
             <createTask>false</createTask>
@@ -4435,7 +4450,7 @@
         <routingAddresses>
             <addressType>EmailToCase</addressType>
             <caseOrigin>Email - EMEA - India RES - Scheduled Conf - PGiBrand</caseOrigin>
-            <caseOwner>PGi_Email_India_Unattended</caseOwner>
+            <caseOwner>PGi_Email_India_Tier_1</caseOwner>
             <caseOwnerType>Queue</caseOwnerType>
             <casePriority>Medium</casePriority>
             <createTask>false</createTask>
@@ -4447,7 +4462,7 @@
         <routingAddresses>
             <addressType>EmailToCase</addressType>
             <caseOrigin>Email - EMEA - India RES - Scheduled Conf - PGiBrand</caseOrigin>
-            <caseOwner>PGi_Email_India_Unattended</caseOwner>
+            <caseOwner>PGi_Email_India_Tier_1</caseOwner>
             <caseOwnerType>Queue</caseOwnerType>
             <casePriority>Medium</casePriority>
             <createTask>false</createTask>
@@ -4459,7 +4474,7 @@
         <routingAddresses>
             <addressType>EmailToCase</addressType>
             <caseOrigin>Email - EMEA - India RES - Scheduled Conf - WLBrand</caseOrigin>
-            <caseOwner>PGi_Email_India_Unattended</caseOwner>
+            <caseOwner>PGi_Email_India_Tier_1</caseOwner>
             <caseOwnerType>Queue</caseOwnerType>
             <casePriority>Medium</casePriority>
             <createTask>false</createTask>
@@ -5306,6 +5321,17 @@
             <emailAddress>territorychanges@pgi.com</emailAddress>
             <isVerified>true</isVerified>
             <routingName>Territory Change Requests</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>test@pgi.com</emailAddress>
+            <emailServicesAddress>test@g-2rcgl2ztb1k3sjmbeaeukvadnynnajfr6yo9zmjlfue3mp8svj.21-apfneaw.cs26.case.sandbox.salesforce.com</emailServicesAddress>
+            <isVerified>false</isVerified>
+            <routingName>Test Inbound Email Support</routingName>
             <saveEmailHeaders>false</saveEmailHeaders>
         </routingAddresses>
         <routingAddresses>

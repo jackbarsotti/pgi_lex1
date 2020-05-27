@@ -20,7 +20,7 @@ public with sharing class GenLookupCntl {
                 System.debug('searchQuery = ' + searchQuery);         
 
                 List<List<SObject>> searchList = search.query(searchQuery);
-               // System.debug('searchList = ' + searchList);
+                System.debug('searchList = ' + searchList);
                // System.debug('searchQuery = ' + searchQuery);
                 
                 for (SObject sObj : searchList[0]) {

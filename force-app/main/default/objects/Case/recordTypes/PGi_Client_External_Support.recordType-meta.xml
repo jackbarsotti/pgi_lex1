@@ -2896,6 +2896,18 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>External Web Case-Billing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Web Case-Reservations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Web Case-Technical</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Reservations</fullName>
             <default>false</default>
         </values>
@@ -7845,6 +7857,14 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Recording Content Missing%3AAudio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recording Content Missing%3AOther%2FAll Web Content</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Recording Could Not Be Edited</fullName>
             <default>false</default>
         </values>
@@ -11654,6 +11674,10 @@
         </values>
         <values>
             <fullName>Webcast Line in Wrong Mode</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Will Not Be Fixed</fullName>
             <default>false</default>
         </values>
         <values>

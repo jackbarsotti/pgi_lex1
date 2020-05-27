@@ -190,6 +190,11 @@
             <sortOrder>8</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
+            <actionName>NewAccount</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>9</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>NewOpportunity</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>10</sortOrder>
@@ -218,11 +223,6 @@
             <actionName>Submit</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>15</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>NewAccount</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>9</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <relatedContent>

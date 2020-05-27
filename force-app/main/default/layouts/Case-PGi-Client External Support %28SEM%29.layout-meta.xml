@@ -941,11 +941,6 @@
             <sortOrder>2</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>FeedItem.ContentPost</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>3</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>FeedItem.LinkPost</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>4</sortOrder>
@@ -1009,6 +1004,11 @@
             <actionName>Escalate_Case</actionName>
             <actionType>CustomButton</actionType>
             <sortOrder>16</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>FeedItem.ContentPost</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>3</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <relatedContent>

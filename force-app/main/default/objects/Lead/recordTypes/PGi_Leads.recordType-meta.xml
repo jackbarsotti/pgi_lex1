@@ -722,10 +722,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Web Chat</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Webinar</fullName>
             <default>false</default>
         </values>

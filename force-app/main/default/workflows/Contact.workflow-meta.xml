@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <alerts>
+        <fullName>Attached_to_Chat_Transcript</fullName>
+        <description>Attached to Chat Transcript</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>Workflow_Emails/TEST_WFR_Notification</template>
+    </alerts>
+    <alerts>
         <fullName>Canada_Opt_Out_Email_Notification</fullName>
         <description>Canada Opt Out Email Notification</description>
         <protected>false</protected>
@@ -10,6 +20,18 @@
         <senderAddress>salesforcecrmsupport@pgi.com</senderAddress>
         <senderType>OrgWideEmailAddress</senderType>
         <template>Workflow_Emails/Contact_Notify_Owner_of_Opt_Out</template>
+    </alerts>
+    <alerts>
+        <fullName>Chat_transcript_attached_to_contact</fullName>
+        <ccEmails>MarketingOps@pgi.com</ccEmails>
+        <description>Chat transcript attached to contact</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Marketing Frontline Agent</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>Workflow_Emails/TEST_WFR_Notification</template>
     </alerts>
     <alerts>
         <fullName>RT_Annual_Survey_Invite_Sent_to_Contact</fullName>
@@ -101,15 +123,6 @@ IF(CONTAINS( $RecordType.Name, &quot;ReadyTalk&quot;), &quot;ReadyTalk&quot;,
 IF(CONTAINS( $RecordType.Name, &quot;TalkPoint&quot;), &quot;TalkPoint&quot;, 
 IF(CONTAINS( $RecordType.Name, &quot;iMC&quot;), &quot;iMC&quot;, NULL)))))</formula>
         <name>All - Set Deupe Record Type</name>
-        <notifyAssignee>false</notifyAssignee>
-        <operation>Formula</operation>
-        <protected>false</protected>
-    </fieldUpdates>
-    <fieldUpdates>
-        <fullName>All_Set_MQC</fullName>
-        <field>Global_Contact_MQL_Assignment_date__c</field>
-        <formula>NOW()</formula>
-        <name>All-Set MQC</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Formula</operation>
         <protected>false</protected>
@@ -473,19 +486,10 @@ IF(CONTAINS( $RecordType.Name, &quot;iMC&quot;), &quot;iMC&quot;, NULL)))))</for
         <operation>Literal</operation>
         <protected>false</protected>
     </fieldUpdates>
-    <fieldUpdates>
-        <fullName>iMC_Contact_Lead_Source_Update</fullName>
-        <field>LeadSource</field>
-        <literalValue>Client Services</literalValue>
-        <name>iMC - Contact, Lead Source Update</name>
-        <notifyAssignee>false</notifyAssignee>
-        <operation>Literal</operation>
-        <protected>false</protected>
-    </fieldUpdates>
     <outboundMessages>
         <fullName>RT_BBSContactOutbound</fullName>
         <apiVersion>8.0</apiVersion>
-        <endpointUrl>https://provision.ecovate.com/bbs-provisioning/inboundGateway</endpointUrl>
+        <endpointUrl>http://forbo12.ecovate.com:8082/bbs-provisioning/inboundGateway</endpointUrl>
         <fields>AccountId</fields>
         <fields>Account_Admin__c</fields>
         <fields>Advocacy_Level__c</fields>
@@ -548,7 +552,7 @@ IF(CONTAINS( $RecordType.Name, &quot;iMC&quot;), &quot;iMC&quot;, NULL)))))</for
     <outboundMessages>
         <fullName>RT_ContactSyncWithNS</fullName>
         <apiVersion>8.0</apiVersion>
-        <endpointUrl>https://prd-win01.celigo.com/axon/sfdc/ws-bridge/services/notification/contactSync</endpointUrl>
+        <endpointUrl>https://foo.ecovate.com/axon/sfdc/ws-bridge/services/notification/contactSync</endpointUrl>
         <fields>Id</fields>
         <includeSessionId>true</includeSessionId>
         <integrationUser>rt-netsuite@celigo.com</integrationUser>
@@ -667,24 +671,6 @@ ISCHANGED(HasOptedOutOfEmail),
 HasOptedOutOfEmail = TRUE 
 )</formula>
         <triggerType>onAllChanges</triggerType>
-    </rules>
-    <rules>
-        <fullName>All-Set MQC</fullName>
-        <actions>
-            <name>All_Set_MQC</name>
-            <type>FieldUpdate</type>
-        </actions>
-        <active>true</active>
-        <criteriaItems>
-            <field>Contact.Global_Contact_MQL__c</field>
-            <operation>equals</operation>
-            <value>True</value>
-        </criteriaItems>
-        <criteriaItems>
-            <field>Contact.Global_Contact_MQL_Assignment_date__c</field>
-            <operation>equals</operation>
-        </criteriaItems>
-        <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
         <fullName>PGi-Account Name %28for Sharing Rules%29</fullName>
@@ -1236,7 +1222,7 @@ HasOptedOutOfEmail = TRUE
         <description>formula</description>
         <formula>AND( 
 Provisioned__c = TRUE,
-!ISPICKVAL(Status__c, &#39;Deleting&#39;),
+!ISPICKVAL(Status__c, &apos;Deleting&apos;),
 $User.ReadyTalk_Exempt__c = FALSE
 )</formula>
         <triggerType>onAllChanges</triggerType>
@@ -1474,6 +1460,54 @@ $User.ReadyTalk_Exempt__c = FALSE
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
+        <fullName>Send Notification to Contact Owner</fullName>
+        <actions>
+            <name>Attached_to_Chat_Transcript</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.Lead_Source_Most_Recent__c</field>
+            <operation>equals</operation>
+            <value>Web Chat</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Global_Contact_MQL__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.OwnerActive__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send Notification to MarketingOps</fullName>
+        <actions>
+            <name>Chat_transcript_attached_to_contact</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.Lead_Source_Most_Recent__c</field>
+            <operation>equals</operation>
+            <value>Web Chat</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Global_Contact_MQL__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.OwnerActive__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
         <fullName>iMC - Contact%2C Billing Admin%2E</fullName>
         <actions>
             <name>iMC_Contact_Billing_Admin</name>
@@ -1590,33 +1624,6 @@ $User.ReadyTalk_Exempt__c = FALSE
             <value>No Longer There</value>
         </criteriaItems>
         <description>Used to update Contact Type to &quot;No Longer There&quot; and send an Email Alert.</description>
-        <triggerType>onAllChanges</triggerType>
-    </rules>
-    <rules>
-        <fullName>iMC - Contact%2C Lead Source Update</fullName>
-        <actions>
-            <name>iMC_Contact_Lead_Source_Update</name>
-            <type>FieldUpdate</type>
-        </actions>
-        <active>true</active>
-        <criteriaItems>
-            <field>Contact.RecordTypeId</field>
-            <operation>equals</operation>
-            <value>iMC Contact</value>
-        </criteriaItems>
-        <criteriaItems>
-            <field>Contact.AccountName</field>
-            <operation>equals</operation>
-        </criteriaItems>
-        <criteriaItems>
-            <field>Contact.Zendesk__zendesk_id__c</field>
-            <operation>notEqual</operation>
-        </criteriaItems>
-        <criteriaItems>
-            <field>Contact.LeadSource</field>
-            <operation>equals</operation>
-        </criteriaItems>
-        <description>Updates Lead Source if Contact comes from ZenDesk.</description>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <tasks>

@@ -1,24 +1,42 @@
 <apex:page action="{!init}" controller="SubmitLeadController" showHeader="false" sidebar="false">
 
+<style type="text/css">
+
+    input{
+        width: 60%;
+    }
+    
+    textarea {
+        width: 60%;
+        min-height: 50px;
+    }
+    
+    .btn {
+        width: auto;
+    }
+</style>
+
+
   <apex:form id="formId">
       
-      <apex:pageBlock title="Escalate to Lead" id="pageBlockId">
+      <apex:pageBlock >
+      
+        <p>Please use the comments field to note any additional information such as the product the client is interested in and their preferred time for a callback.</p>
+        <br/>
+      
       <apex:pageMessages />
       <apex:pageBlockSection columns="1">
-            <apex:inputText label="First Name" value="{!FirstName}">
-            </apex:inputText>
-            <apex:inputText label="Last Name" value="{!LastName}">
-            </apex:inputText>     
-            <apex:inputText label="Company" value="{!Company}">
-            </apex:inputText>
-            <apex:inputText label="Business Phone" value="{!Phone}">
-            </apex:inputText>   
-            <apex:outputText label="Email" value="{!Email}">
-            </apex:outputText>
-            </apex:pageBlockSection>   
+            <apex:inputText label="First Name" value="{!FirstName}" />
+            <apex:inputText label="Last Name" value="{!LastName}" />    
+            <apex:inputText label="Company" value="{!Company}" />
+            <apex:inputText label="Business Phone" value="{!Phone}" />   
+            <apex:inputText label="Email" value="{!Email}" />
+            <apex:inputTextarea label="Comments" value="{!Description}" html-maxlength="32000" />
             
-          <apex:pageBlockButtons >  
-          <apex:commandButton value="Submit" action="{!submitLead}"/>
+      </apex:pageBlockSection>    
+            
+          <apex:pageBlockButtons location="bottom">  
+              <apex:commandButton value="Submit" action="{!submitLead}"/>
           </apex:pageBlockButtons>
       </apex:pageBlock>
   </apex:form>

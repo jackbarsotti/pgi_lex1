@@ -28,9 +28,9 @@
                 <label>*96 Not Working</label>
             </value>
             <value>
-                <fullName>AccessDenied/Can&#39;tLoadAcctDetailError</fullName>
+                <fullName>AccessDenied/Can&apos;tLoadAcctDetailError</fullName>
                 <default>false</default>
-                <label>AccessDenied/Can&#39;tLoadAcctDetailError</label>
+                <label>AccessDenied/Can&apos;tLoadAcctDetailError</label>
             </value>
             <value>
                 <fullName>ActiveTalkerFail</fullName>
@@ -128,9 +128,9 @@
                 <label>Audio/Web:NoSync</label>
             </value>
             <value>
-                <fullName>Audio/WebPresence:Can&#39;tMerge/Unmerge</fullName>
+                <fullName>Audio/WebPresence:Can&apos;tMerge/Unmerge</fullName>
                 <default>false</default>
-                <label>Audio/WebPresence:Can&#39;tMerge/Unmerge</label>
+                <label>Audio/WebPresence:Can&apos;tMerge/Unmerge</label>
             </value>
             <value>
                 <fullName>Audio/WebPresence:NotMerged/Connecting</fullName>
@@ -673,9 +673,9 @@
                 <label>Crashing/Freezing</label>
             </value>
             <value>
-                <fullName>Create PasswordLink/PageCan&#39;tBeDisplayed</fullName>
+                <fullName>Create PasswordLink/PageCan&apos;tBeDisplayed</fullName>
                 <default>false</default>
-                <label>Create PasswordLink/PageCan&#39;tBeDisplayed</label>
+                <label>Create PasswordLink/PageCan&apos;tBeDisplayed</label>
             </value>
             <value>
                 <fullName>CrossTalk/LineBleed/ConfBleed</fullName>
@@ -723,9 +723,9 @@
                 <label>Dead Air When Connecting</label>
             </value>
             <value>
-                <fullName>Default MeetingRoomDoesn&#39;tExistError</fullName>
+                <fullName>Default MeetingRoomDoesn&apos;tExistError</fullName>
                 <default>false</default>
-                <label>Default MeetingRoomDoesn&#39;tExistError</label>
+                <label>Default MeetingRoomDoesn&apos;tExistError</label>
             </value>
             <value>
                 <fullName>Delay in Receiving Voicemail Notification</fullName>
@@ -793,14 +793,14 @@
                 <label>DialTone:Conf</label>
             </value>
             <value>
-                <fullName>Didn&#39;tObtainRequestedInfo</fullName>
+                <fullName>Didn&apos;tObtainRequestedInfo</fullName>
                 <default>false</default>
-                <label>Didn&#39;tObtainRequestedInfo</label>
+                <label>Didn&apos;tObtainRequestedInfo</label>
             </value>
             <value>
-                <fullName>Didn&#39;tReceiveRegistrationConfirm</fullName>
+                <fullName>Didn&apos;tReceiveRegistrationConfirm</fullName>
                 <default>false</default>
-                <label>Didn&#39;tReceiveRegistrationConfirm</label>
+                <label>Didn&apos;tReceiveRegistrationConfirm</label>
             </value>
             <value>
                 <fullName>Did Not Receive Post Deliverables</fullName>
@@ -963,9 +963,9 @@
                 <label>Echo</label>
             </value>
             <value>
-                <fullName>EmailAddr Doesn&#39;tMatchValidUserAcctError</fullName>
+                <fullName>EmailAddr Doesn&apos;tMatchValidUserAcctError</fullName>
                 <default>false</default>
-                <label>EmailAddr Doesn&#39;tMatchValidUserAcctError</label>
+                <label>EmailAddr Doesn&apos;tMatchValidUserAcctError</label>
             </value>
             <value>
                 <fullName>EmailConfirm</fullName>
@@ -1123,9 +1123,9 @@
                 <label>Error:LaunchingJabber</label>
             </value>
             <value>
-                <fullName>Error:LiveMeetingCan&#39;tConnectMeeting</fullName>
+                <fullName>Error:LiveMeetingCan&apos;tConnectMeeting</fullName>
                 <default>false</default>
-                <label>Error:LiveMeetingCan&#39;tConnectMeeting</label>
+                <label>Error:LiveMeetingCan&apos;tConnectMeeting</label>
             </value>
             <value>
                 <fullName>Error:LoadingProperties</fullName>
@@ -1228,14 +1228,14 @@
                 <label>Error:UploadingContent</label>
             </value>
             <value>
-                <fullName>Error:We&#39;ve Detected an Error</fullName>
+                <fullName>Error:We&apos;ve Detected an Error</fullName>
                 <default>false</default>
-                <label>Error:We&#39;ve Detected an Error</label>
+                <label>Error:We&apos;ve Detected an Error</label>
             </value>
             <value>
-                <fullName>Error:WeCan&#39;tLocateURLRequested</fullName>
+                <fullName>Error:WeCan&apos;tLocateURLRequested</fullName>
                 <default>false</default>
-                <label>Error:WeCan&#39;tLocateURLRequested</label>
+                <label>Error:WeCan&apos;tLocateURLRequested</label>
             </value>
             <value>
                 <fullName>Error:YouAreExperiencingConnectionIssue</fullName>
@@ -1328,14 +1328,14 @@
                 <label>Feedback</label>
             </value>
             <value>
-                <fullName>FileDoesn&#39;tExist:AudioStore1</fullName>
+                <fullName>FileDoesn&apos;tExist:AudioStore1</fullName>
                 <default>false</default>
-                <label>FileDoesn&#39;tExist:AudioStore1</label>
+                <label>FileDoesn&apos;tExist:AudioStore1</label>
             </value>
             <value>
-                <fullName>FileDoesn&#39;tExist:Error</fullName>
+                <fullName>FileDoesn&apos;tExist:Error</fullName>
                 <default>false</default>
-                <label>FileDoesn&#39;tExist:Error</label>
+                <label>FileDoesn&apos;tExist:Error</label>
             </value>
             <value>
                 <fullName>FileLibraryIssue:FileUploadFail</fullName>
@@ -1388,9 +1388,9 @@
                 <label>File Upload Issue</label>
             </value>
             <value>
-                <fullName>FileWon&#39;tLoad</fullName>
+                <fullName>FileWon&apos;tLoad</fullName>
                 <default>false</default>
-                <label>FileWon&#39;tLoad</label>
+                <label>FileWon&apos;tLoad</label>
             </value>
             <value>
                 <fullName>Firewall/ProxyServer</fullName>
@@ -2133,9 +2133,9 @@
                 <label>Maximum Limit on Live Viewer Reached</label>
             </value>
             <value>
-                <fullName>MeetingCan&#39;tSchedule/CertainTime</fullName>
+                <fullName>MeetingCan&apos;tSchedule/CertainTime</fullName>
                 <default>false</default>
-                <label>MeetingCan&#39;tSchedule/CertainTime</label>
+                <label>MeetingCan&apos;tSchedule/CertainTime</label>
             </value>
             <value>
                 <fullName>Meeting Error Message</fullName>
@@ -2653,14 +2653,14 @@
                 <label>ParsingError</label>
             </value>
             <value>
-                <fullName>Part:Can&#39;tAnnotateWhiteboard</fullName>
+                <fullName>Part:Can&apos;tAnnotateWhiteboard</fullName>
                 <default>false</default>
-                <label>Part:Can&#39;tAnnotateWhiteboard</label>
+                <label>Part:Can&apos;tAnnotateWhiteboard</label>
             </value>
             <value>
-                <fullName>Part:Can&#39;tSeeScreenshare</fullName>
+                <fullName>Part:Can&apos;tSeeScreenshare</fullName>
                 <default>false</default>
-                <label>Part:Can&#39;tSeeScreenshare</label>
+                <label>Part:Can&apos;tSeeScreenshare</label>
             </value>
             <value>
                 <fullName>Part:DrawingSharedContent</fullName>
@@ -2723,9 +2723,9 @@
                 <label>Part Stuck in Waiting Lobby</label>
             </value>
             <value>
-                <fullName>Password Doesn&#39;tMeetComplexityReqError</fullName>
+                <fullName>Password Doesn&apos;tMeetComplexityReqError</fullName>
                 <default>false</default>
-                <label>Password Doesn&#39;tMeetComplexityReqError</label>
+                <label>Password Doesn&apos;tMeetComplexityReqError</label>
             </value>
             <value>
                 <fullName>Password ResetEmailNotReceived</fullName>
@@ -2843,9 +2843,9 @@
                 <label>Provisioning Issue</label>
             </value>
             <value>
-                <fullName>PSTNPartscan&#39;tHearVOIPPart</fullName>
+                <fullName>PSTNPartscan&apos;tHearVOIPPart</fullName>
                 <default>false</default>
-                <label>PSTNPartscan&#39;tHearVOIPPart</label>
+                <label>PSTNPartscan&apos;tHearVOIPPart</label>
             </value>
             <value>
                 <fullName>ReachedSupportInsteadofConf</fullName>
@@ -2866,6 +2866,26 @@
                 <fullName>Recording: Incomplete</fullName>
                 <default>false</default>
                 <label>Recording: Incomplete</label>
+            </value>
+            <value>
+                <fullName>Recording Content Missing:Audio</fullName>
+                <default>false</default>
+                <label>Recording Content Missing:Audio</label>
+            </value>
+            <value>
+                <fullName>Recording Content Missing:File Presentation</fullName>
+                <default>false</default>
+                <label>Recording Content Missing:File Presentation</label>
+            </value>
+            <value>
+                <fullName>Recording Content Missing:Other/All Web Content</fullName>
+                <default>false</default>
+                <label>Recording Content Missing:Other/All Web Content</label>
+            </value>
+            <value>
+                <fullName>Recording Content Missing:Screen Share content missing from Recording</fullName>
+                <default>false</default>
+                <label>Recording Content Missing:Screen Share content missing from Recording</label>
             </value>
             <value>
                 <fullName>Recording Could Not Be Edited</fullName>
@@ -3713,9 +3733,9 @@
                 <label>VideoUnable:Dialin/Connect</label>
             </value>
             <value>
-                <fullName>View Add&#39;l Dialin #s LinkDisplayError</fullName>
+                <fullName>View Add&apos;l Dialin #s LinkDisplayError</fullName>
                 <default>false</default>
-                <label>View Add&#39;l Dialin #s LinkDisplayError</label>
+                <label>View Add&apos;l Dialin #s LinkDisplayError</label>
             </value>
             <value>
                 <fullName>Voice Capture Not Operational</fullName>
@@ -3793,19 +3813,19 @@
                 <label>Webcam:Other</label>
             </value>
             <value>
-                <fullName>Webcam:PartsCan&#39;tSeeWebcam</fullName>
+                <fullName>Webcam:PartsCan&apos;tSeeWebcam</fullName>
                 <default>false</default>
-                <label>Webcam:PartsCan&#39;tSeeWebcam</label>
+                <label>Webcam:PartsCan&apos;tSeeWebcam</label>
             </value>
             <value>
-                <fullName>Webcam:PartsCan&#39;tSeeWebcamImage</fullName>
+                <fullName>Webcam:PartsCan&apos;tSeeWebcamImage</fullName>
                 <default>false</default>
-                <label>Webcam:PartsCan&#39;tSeeWebcamImage</label>
+                <label>Webcam:PartsCan&apos;tSeeWebcamImage</label>
             </value>
             <value>
-                <fullName>Webcam:PartsCan&#39;tSeeWebcamOption/Meeting</fullName>
+                <fullName>Webcam:PartsCan&apos;tSeeWebcamOption/Meeting</fullName>
                 <default>false</default>
-                <label>Webcam:PartsCan&#39;tSeeWebcamOption/Meeting</label>
+                <label>Webcam:PartsCan&apos;tSeeWebcamOption/Meeting</label>
             </value>
             <value>
                 <fullName>Webcam Not Recognized</fullName>
@@ -4445,7 +4465,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Recording</controllingFieldValue>
-            <valueName>FileDoesn&#39;tExist:Error</valueName>
+            <valueName>FileDoesn&apos;tExist:Error</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Recording</controllingFieldValue>
@@ -4499,6 +4519,22 @@
         <valueSettings>
             <controllingFieldValue>Recording</controllingFieldValue>
             <valueName>NoSound/PlayingBackNetwork:BasedRecording</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recording</controllingFieldValue>
+            <valueName>Recording Content Missing:Audio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recording</controllingFieldValue>
+            <valueName>Recording Content Missing:File Presentation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recording</controllingFieldValue>
+            <valueName>Recording Content Missing:Other/All Web Content</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recording</controllingFieldValue>
+            <valueName>Recording Content Missing:Screen Share content missing from Recording</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Recording</controllingFieldValue>
@@ -4786,7 +4822,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Screen Share</controllingFieldValue>
-            <valueName>Part:Can&#39;tSeeScreenshare</valueName>
+            <valueName>Part:Can&apos;tSeeScreenshare</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Screen Share</controllingFieldValue>
@@ -4946,7 +4982,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
-            <valueName>AccessDenied/Can&#39;tLoadAcctDetailError</valueName>
+            <valueName>AccessDenied/Can&apos;tLoadAcctDetailError</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
@@ -5096,7 +5132,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
-            <valueName>Create PasswordLink/PageCan&#39;tBeDisplayed</valueName>
+            <valueName>Create PasswordLink/PageCan&apos;tBeDisplayed</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
@@ -5104,7 +5140,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
-            <valueName>Default MeetingRoomDoesn&#39;tExistError</valueName>
+            <valueName>Default MeetingRoomDoesn&apos;tExistError</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
@@ -5112,7 +5148,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
-            <valueName>Didn&#39;tReceiveRegistrationConfirm</valueName>
+            <valueName>Didn&apos;tReceiveRegistrationConfirm</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
@@ -5207,7 +5243,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
-            <valueName>FileDoesn&#39;tExist:AudioStore1</valueName>
+            <valueName>FileDoesn&apos;tExist:AudioStore1</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
@@ -5231,7 +5267,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
-            <valueName>FileWon&#39;tLoad</valueName>
+            <valueName>FileWon&apos;tLoad</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
@@ -5411,7 +5447,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
-            <valueName>MeetingCan&#39;tSchedule/CertainTime</valueName>
+            <valueName>MeetingCan&apos;tSchedule/CertainTime</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
@@ -5503,7 +5539,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
-            <valueName>Part:Can&#39;tAnnotateWhiteboard</valueName>
+            <valueName>Part:Can&apos;tAnnotateWhiteboard</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
@@ -5523,7 +5559,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
-            <valueName>Password Doesn&#39;tMeetComplexityReqError</valueName>
+            <valueName>Password Doesn&apos;tMeetComplexityReqError</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
@@ -5697,7 +5733,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
-            <valueName>View Add&#39;l Dialin #s LinkDisplayError</valueName>
+            <valueName>View Add&apos;l Dialin #s LinkDisplayError</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
@@ -5729,15 +5765,15 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
-            <valueName>Webcam:PartsCan&#39;tSeeWebcam</valueName>
+            <valueName>Webcam:PartsCan&apos;tSeeWebcam</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
-            <valueName>Webcam:PartsCan&#39;tSeeWebcamImage</valueName>
+            <valueName>Webcam:PartsCan&apos;tSeeWebcamImage</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
-            <valueName>Webcam:PartsCan&#39;tSeeWebcamOption/Meeting</valueName>
+            <valueName>Webcam:PartsCan&apos;tSeeWebcamOption/Meeting</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
@@ -5867,7 +5903,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Audio Integration</controllingFieldValue>
-            <valueName>Audio/WebPresence:Can&#39;tMerge/Unmerge</valueName>
+            <valueName>Audio/WebPresence:Can&apos;tMerge/Unmerge</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Audio Integration</controllingFieldValue>
@@ -6043,7 +6079,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Audio Integration</controllingFieldValue>
-            <valueName>PSTNPartscan&#39;tHearVOIPPart</valueName>
+            <valueName>PSTNPartscan&apos;tHearVOIPPart</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Audio Integration</controllingFieldValue>
@@ -6268,7 +6304,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Connectivity</controllingFieldValue>
-            <valueName>EmailAddr Doesn&#39;tMatchValidUserAcctError</valueName>
+            <valueName>EmailAddr Doesn&apos;tMatchValidUserAcctError</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Connectivity</controllingFieldValue>
@@ -6308,7 +6344,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Connectivity</controllingFieldValue>
-            <valueName>Error:LiveMeetingCan&#39;tConnectMeeting</valueName>
+            <valueName>Error:LiveMeetingCan&apos;tConnectMeeting</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Connectivity</controllingFieldValue>
@@ -6364,11 +6400,11 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Connectivity</controllingFieldValue>
-            <valueName>Error:We&#39;ve Detected an Error</valueName>
+            <valueName>Error:We&apos;ve Detected an Error</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Connectivity</controllingFieldValue>
-            <valueName>Error:WeCan&#39;tLocateURLRequested</valueName>
+            <valueName>Error:WeCan&apos;tLocateURLRequested</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Connectivity</controllingFieldValue>
@@ -6868,7 +6904,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Human Error</controllingFieldValue>
-            <valueName>Didn&#39;tObtainRequestedInfo</valueName>
+            <valueName>Didn&apos;tObtainRequestedInfo</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Human Error</controllingFieldValue>

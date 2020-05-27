@@ -142,6 +142,14 @@
     </quickActions>
     <startsWith>Consonant</startsWith>
     <validationRules>
+        <errorMessage><!-- Scheduling related changes are only allowed for active roles. --></errorMessage>
+        <name>FSL_Role_Active_Only_Changes</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Scheduling related fields cannot be changed when Role Not Needed is changed --></errorMessage>
+        <name>FSL_Role_Not_Needed_Only</name>
+    </validationRules>
+    <validationRules>
         <errorMessage><!-- New service appointment cannot be created in scheduled or  dispatched statuses. --></errorMessage>
         <name>FSL__Dont_allow_scheduled_or_dispatched</name>
     </validationRules>

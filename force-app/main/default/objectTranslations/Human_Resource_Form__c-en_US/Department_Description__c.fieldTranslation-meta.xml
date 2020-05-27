@@ -623,6 +623,10 @@
         <translation><!-- 080307-Cust Professional Service Team --></translation>
     </picklistValues>
     <picklistValues>
+        <masterLabel>APAC Sales</masterLabel>
+        <translation><!-- APAC Sales --></translation>
+    </picklistValues>
+    <picklistValues>
         <masterLabel>Accounting-India</masterLabel>
         <translation><!-- Accounting-India --></translation>
     </picklistValues>

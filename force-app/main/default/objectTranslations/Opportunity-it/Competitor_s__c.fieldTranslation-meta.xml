@@ -35,6 +35,10 @@
         <translation><!-- Atlassian/Jira --></translation>
     </picklistValues>
     <picklistValues>
+        <masterLabel>Avaya</masterLabel>
+        <translation><!-- Avaya --></translation>
+    </picklistValues>
+    <picklistValues>
         <masterLabel>BlueJeans</masterLabel>
         <translation><!-- BlueJeans --></translation>
     </picklistValues>
@@ -95,6 +99,10 @@
         <translation><!-- Inxpo --></translation>
     </picklistValues>
     <picklistValues>
+        <masterLabel>Jive</masterLabel>
+        <translation><!-- Jive --></translation>
+    </picklistValues>
+    <picklistValues>
         <masterLabel>Join.me</masterLabel>
         <translation><!-- Join.me --></translation>
     </picklistValues>
@@ -115,8 +123,16 @@
         <translation><!-- Microsoft Teams --></translation>
     </picklistValues>
     <picklistValues>
+        <masterLabel>Mitel</masterLabel>
+        <translation><!-- Mitel --></translation>
+    </picklistValues>
+    <picklistValues>
         <masterLabel>NASDAQ (West)</masterLabel>
         <translation><!-- NASDAQ (West) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nextiva</masterLabel>
+        <translation><!-- Nextiva --></translation>
     </picklistValues>
     <picklistValues>
         <masterLabel>On24</masterLabel>
@@ -185,6 +201,10 @@
     <picklistValues>
         <masterLabel>Zoom</masterLabel>
         <translation><!-- Zoom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zoom Phone</masterLabel>
+        <translation><!-- Zoom Phone --></translation>
     </picklistValues>
     <picklistValues>
         <masterLabel>Zoom Webinar</masterLabel>

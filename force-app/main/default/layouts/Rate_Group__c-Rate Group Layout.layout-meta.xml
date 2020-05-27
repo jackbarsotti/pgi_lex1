@@ -74,6 +74,7 @@
         <fields>Rate_Name__c</fields>
         <fields>CURRENCY_ISO_CODE</fields>
         <fields>Recurrence__c</fields>
+        <fields>Type__c</fields>
         <relatedList>Rate__c.Rate_Group__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>

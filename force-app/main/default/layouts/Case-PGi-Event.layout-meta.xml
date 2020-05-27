@@ -378,6 +378,11 @@
             <sortOrder>10</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
+            <actionName>NewCase</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>11</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>LogACall</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>12</sortOrder>
@@ -401,11 +406,6 @@
             <actionName>Priority_Matrix</actionName>
             <actionType>CustomButton</actionType>
             <sortOrder>16</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>NewCase</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>11</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <relatedContent>

@@ -102,7 +102,6 @@
         <lookupPhoneDialogsAdditionalFields>Address</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>Subject</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>MessageDate</lookupPhoneDialogsAdditionalFields>
-        <searchResultsAdditionalFields>Parent.Name</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>FromName</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>ToAddress</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Subject</searchResultsAdditionalFields>

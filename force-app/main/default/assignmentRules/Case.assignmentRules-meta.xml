@@ -4,6 +4,21 @@
         <fullName>All Support</fullName>
         <active>true</active>
         <ruleEntry>
+            <assignedTo>PGi_Email_GL_Attended</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Case.CreatedById</field>
+                <operation>equals</operation>
+                <value>iGloo Integration</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>contains</operation>
+                <value>- RES,-RES,usres_</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
             <assignedTo>PGi_Email_GL_ES</assignedTo>
             <assignedToType>Queue</assignedToType>
             <criteriaItems>
@@ -15,35 +30,6 @@
                 <field>Case.Origin</field>
                 <operation>contains</operation>
                 <value>- ES,-ES</value>
-            </criteriaItems>
-        </ruleEntry>
-        <ruleEntry>
-            <assignedTo>PGi_Email_Night_Team_India</assignedTo>
-            <assignedToType>Queue</assignedToType>
-            <criteriaItems>
-                <field>Case.CreatedById</field>
-                <operation>equals</operation>
-                <value>iGloo Integration</value>
-            </criteriaItems>
-            <criteriaItems>
-                <field>Case.Origin</field>
-                <operation>equals</operation>
-                <value>Email - US - India Night Team - RT - PGiBrand</value>
-            </criteriaItems>
-        </ruleEntry>
-        <ruleEntry>
-            <assignedTo>PGi_Email_GL_Attended</assignedTo>
-            <assignedToType>Queue</assignedToType>
-            <booleanFilter>1 OR (1 AND 2)</booleanFilter>
-            <criteriaItems>
-                <field>Case.CreatedById</field>
-                <operation>equals</operation>
-                <value>iGloo Integration</value>
-            </criteriaItems>
-            <criteriaItems>
-                <field>Case.Origin</field>
-                <operation>contains</operation>
-                <value>- RES,-RES,usres_</value>
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
@@ -818,7 +804,7 @@
             <criteriaItems>
                 <field>Case.Origin</field>
                 <operation>contains</operation>
-                <value>PGi Service Catalog - Reservations</value>
+                <value>,PGi Service Catalog - Reservations,External Web Case-Reservations</value>
             </criteriaItems>
             <criteriaItems>
                 <field>Case.Regions__c</field>
@@ -896,7 +882,7 @@
             <criteriaItems>
                 <field>Case.Origin</field>
                 <operation>contains</operation>
-                <value>PGi Service Catalog - Technical</value>
+                <value>,PGi Service Catalog - Technical,External Web Case-Technical</value>
             </criteriaItems>
             <criteriaItems>
                 <field>Case.ZD_Group_Assigned__c</field>
@@ -926,7 +912,7 @@
             <criteriaItems>
                 <field>Case.Product__c</field>
                 <operation>notEqual</operation>
-                <value>Event Conferencing,Event Conferencing - Greeted Entry,Event Conferencing - Greeted Entry Connection,Event Conferencing - Passcode Entry,Event Conferencing - Slide Assist</value>
+                <value>Event Conferencing,GlobalMeet - Greeted Entry,GlobalMeet - Greeted Entry Connection,GlobalMeet - Passcode Entry,GlobalMeet - Slide Assist</value>
             </criteriaItems>
             <criteriaItems>
                 <field>Case.Regions__c</field>
@@ -941,7 +927,7 @@
             <criteriaItems>
                 <field>Case.Origin</field>
                 <operation>contains</operation>
-                <value>PGi Service Catalog - Reservations,PGi Service Catalog - Technical,PGi Service Catalog - Billing</value>
+                <value>,PGi Service Catalog - Reservations,PGi Service Catalog - Technical,PGi Service Catalog - Billing,External Web Case-Billing,External Web Case-Reservations,External Web Case-Technical</value>
             </criteriaItems>
             <criteriaItems>
                 <field>User.Care_Team_Label__c</field>
@@ -986,7 +972,7 @@
             <criteriaItems>
                 <field>Case.Origin</field>
                 <operation>contains</operation>
-                <value>PGi Service Catalog - Reservations,PGi Service Catalog - Technical,PGi Service Catalog - Billing</value>
+                <value>PGi Service Catalog - Reservations,PGi Service Catalog - Technical,PGi Service Catalog - Billing,External Web Case-Billing,External Web Case-Reservations,External Web Case-Technical</value>
             </criteriaItems>
             <criteriaItems>
                 <field>Case.ZD_Group_Assigned__c</field>

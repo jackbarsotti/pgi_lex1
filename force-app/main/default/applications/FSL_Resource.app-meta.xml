@@ -181,7 +181,11 @@
     <tabs>standard-ServiceAppointment</tabs>
     <tabs>Conference__c</tabs>
     <tabs>TO_Request__c</tabs>
+    <tabs>Case_SLA_Exception_Rules__c</tabs>
     <workspaceConfig>
+        <mappings>
+            <tab>Case_SLA_Exception_Rules__c</tab>
+        </mappings>
         <mappings>
             <tab>Conference__c</tab>
         </mappings>

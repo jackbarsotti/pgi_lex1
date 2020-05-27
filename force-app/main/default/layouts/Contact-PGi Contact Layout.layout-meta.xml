@@ -99,6 +99,14 @@
                 <behavior>Edit</behavior>
                 <field>ReportsToId</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Global_Contact_MQL__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Global_Contact_MQL_Assignment_date__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -173,10 +181,6 @@
                 <behavior>Edit</behavior>
                 <field>Content_Most_Recent__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Preferred_Call_Back_Date__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -193,11 +197,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Global_Contact_MQL__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Global_Contact_MQL_Assignment_date__c</field>
+                <field>Preferred_Call_Back_Date__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -345,7 +345,7 @@
             <layoutItems>
                 <height>375</height>
                 <page>LID__ContactLinkedInMemberPage</page>
-                <showLabel>false</showLabel>
+                <showLabel>true</showLabel>
                 <showScrollbars>true</showScrollbars>
                 <width>100%</width>
             </layoutItems>
@@ -433,6 +433,14 @@
         <fields>CM.RESPONDED</fields>
         <fields>CM.LAST_UPDATE</fields>
         <relatedList>RelatedCampaignList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>Name</fields>
+        <fields>Owner</fields>
+        <fields>StartTime</fields>
+        <fields>EndTime</fields>
+        <fields>Status</fields>
+        <relatedList>RelatedLiveChatTranscriptList</relatedList>
     </relatedLists>
     <relatedLists>
         <excludeButtons>NewProposeMeeting</excludeButtons>

@@ -26,7 +26,7 @@
         <fullName>OtherChargeCredit</fullName>
         <apiVersion>8.0</apiVersion>
         <description>Send Other Charge Credit to Billing</description>
-        <endpointUrl>https://provision.ecovate.com/bbs-provisioning/inboundGateway</endpointUrl>
+        <endpointUrl>http://forbo12.ecovate.com:8082/bbs-provisioning/inboundGateway</endpointUrl>
         <fields>AccessCode__c</fields>
         <fields>BilledDate__c</fields>
         <fields>ChargeOrCredit__c</fields>

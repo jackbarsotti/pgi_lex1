@@ -27,15 +27,15 @@
         <translation><!-- Pink --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Purple</masterLabel>
-        <translation><!-- Purple --></translation>
+        <masterLabel>Purpose</masterLabel>
+        <translation><!-- Purpose --></translation>
     </picklistValues>
     <picklistValues>
         <masterLabel>Red</masterLabel>
         <translation><!-- Red --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Teal</masterLabel>
-        <translation><!-- Teal --></translation>
+        <masterLabel>Teel</masterLabel>
+        <translation><!-- Teel --></translation>
     </picklistValues>
 </CustomFieldTranslation>

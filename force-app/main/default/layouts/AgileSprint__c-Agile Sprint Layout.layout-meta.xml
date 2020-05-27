@@ -93,12 +93,11 @@
         <style>CustomLinks</style>
     </layoutSections>
     <relatedLists>
-        <customButtons>New_Case</customButtons>
         <excludeButtons>MassChangeOwner</excludeButtons>
         <excludeButtons>NewCase</excludeButtons>
         <fields>CASES.CASE_NUMBER</fields>
         <fields>CASES.RECORDTYPE</fields>
-        <fields>CASES.STATUS</fields>
+        <fields>Current_Owner_s_Name__c</fields>
         <fields>Assigned_To__c</fields>
         <fields>AgileStatus__c</fields>
         <fields>AgileTester__c</fields>
@@ -107,7 +106,7 @@
         <fields>Action_Item__c</fields>
         <fields>Demo_Agent__c</fields>
         <relatedList>Case.AgileSprint__c</relatedList>
-        <sortField>Assigned_To__c</sortField>
+        <sortField>AgileStatus__c</sortField>
         <sortOrder>Asc</sortOrder>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>

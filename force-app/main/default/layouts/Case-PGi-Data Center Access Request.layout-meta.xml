@@ -206,6 +206,11 @@
             <sortOrder>9</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
+            <actionName>NewOpportunity</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>10</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>NewCase</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>11</sortOrder>
@@ -229,11 +234,6 @@
             <actionName>Submit</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>15</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>NewOpportunity</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>10</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <relatedLists>
@@ -259,8 +259,6 @@
     <relatedLists>
         <relatedList>RelatedEntityHistoryList</relatedList>
     </relatedLists>
-    <relatedObjects>ContactId</relatedObjects>
-    <relatedObjects>AccountId</relatedObjects>
     <runAssignmentRulesDefault>true</runAssignmentRulesDefault>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>

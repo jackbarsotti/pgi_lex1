@@ -11,4 +11,5 @@
     <tabs>DataRetentionManager</tabs>
     <tabs>PGIServicesInformation__c</tabs>
     <tabs>Rate__c</tabs>
+    <tabs>Case_SLA_Exception_Rules__c</tabs>
 </CustomApplication>

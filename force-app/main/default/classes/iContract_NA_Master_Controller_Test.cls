@@ -2127,4 +2127,45 @@ private class iContract_NA_Master_Controller_Test {
 
         test.stopTest();
     }
+    static testMethod void TestForMuliLocationSites() {
+        Account accttest = PGITestUtilities.getAccountDetails();
+        insert accttest;
+
+        Opportunity opptytest = PGITestUtilities.getOpportunityDetails();
+        insert opptytest;
+
+        Contact cntcttest = PGITestUtilities.getContactDetails(accttest.id);
+        insert cntcttest;
+    	cntcttest.MailingCountry='Spain';
+        Update cntcttest;
+
+        OpportunityContactRole opptyCntcRole = new OpportunityContactRole();
+        opptyCntcRole.ContactId = cntcttest.Id;
+        opptyCntcRole.OpportunityId = opptytest.Id;
+        opptyCntcRole.IsPrimary = true;
+        insert opptyCntcRole;
+		PGIServicesInformation__c av_S = new PGIServicesInformation__c(Name='Contract Terms', Active__c=true,Language__c='en_us', Order__c=1, Section__c='Intro', Agreement_Type__c='Subscription License Order;Service Agreement',Region__c='APAC',Intl_Order_Type__c='Long Form;Short Form', Content_RTF__c='Contract Terms', Unique_ID__c='3');
+        insert av_S;
+        ConMan_Contract__c ctrctest = PGITestUtilities.getConManContractDetails(accttest.id, opptytest.id);
+        insert ctrctest;
+    	ctrctest.Contract_Type__c='TPx Service Agreement';
+        // ctrctest.Intl_Order_Type__c='Long Form';
+        //ctrctest.Intl_Order_Type__c='Short Form';
+        Update ctrctest;
+        CPQ_Location_Sites__c locationSite = new CPQ_Location_Sites__c(PGi_Contract__c=ctrctest.Id, Site_Location_Name__c = 'USA', Site_Location_Address__c = 'test123', Site_Location_Product_Notes__c = 'test Product Notes');
+        Insert locationSite;
+        // LicenseSet__c licSetBS = new LicenseSet__c(name='Billing Services', PGi_Contract__c = ctrctest.id);
+        // insert licSetBS;
+		// CONMAN_Contract_Verbiage__c cv = new CONMAN_Contract_Verbiage__c(PGi_Contract__c=ctrctest.Id, Name='test1',Contract_General_Content__c=av_S.Id);
+    	// Insert cv;
+        // LicenseSet__c licSetNC = new LicenseSet__c(name='Non-contiguous US Call Charges', PGi_Contract__c = ctrctest.id);
+        // insert licSetNC;
+        test.startTest();
+
+        // ApexPages.currentPage().getParameters().put('id', ctrctest.Id);
+        List<CPQ_Location_Sites__c> locations = iContract_NA_Master_Controller.getSiteLocations(ctrctest.Id, 1);
+        iContract_NA_Master_Controller cd = new iContract_NA_Master_Controller();
+        System.assertEquals(1, locations.size());
+        test.stopTest();
+    }
 }

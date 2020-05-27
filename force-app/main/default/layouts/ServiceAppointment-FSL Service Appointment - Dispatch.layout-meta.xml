@@ -45,6 +45,10 @@
                 <field>Resource__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Unable_to_Assist_Reason__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Company__c</field>
             </layoutItems>
@@ -240,6 +244,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Time_Slide__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Unassign__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>

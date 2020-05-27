@@ -1664,7 +1664,7 @@ https://help.salesforce.com/articleView?id=optimizer_availability.htm&amp;type=5
         <expiration>NinetyDays</expiration>
         <historyRestriction>2</historyRestriction>
         <lockoutInterval>FifteenMinutes</lockoutInterval>
-        <maxLoginAttempts>NoLimit</maxLoginAttempts>
+        <maxLoginAttempts>FiveAttempts</maxLoginAttempts>
         <minimumPasswordLength>8</minimumPasswordLength>
         <minimumPasswordLifetime>false</minimumPasswordLifetime>
         <obscureSecretAnswer>false</obscureSecretAnswer>

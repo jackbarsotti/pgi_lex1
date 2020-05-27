@@ -35,13 +35,15 @@ public with sharing class EmailSendControllerTest {
         cdl.shareType = 'V';
         Insert cdl;
 
-        // EmailTemplate emailtemp = new EmailTemplate();
-        // emailtemp.isActive = true;
-        // emailtemp.Name = 'name';
-        // emailtemp.DeveloperName = 'Single_Mail';
-        // emailtemp.TemplateType = 'text';
-        // emailtemp.FolderId = UserInfo.getUserId();
-        // insert emailtemp;
+        EmailTemplate emailtemp = new EmailTemplate();
+        emailtemp.isActive = true;
+        emailtemp.Name = 'testName';
+        emailtemp.DeveloperName = 'Test_Send_Mail';
+        emailtemp.Subject = 'test Email Subject';
+        emailtemp.Body = 'Test Email Body';
+        emailtemp.TemplateType = 'text';
+        emailtemp.FolderId = UserInfo.getUserId();
+        insert emailtemp;
     }
     static testMethod void testGetrecord(){
         Test.startTest();
@@ -204,6 +206,7 @@ public with sharing class EmailSendControllerTest {
         emailtemp.TemplateType = 'text';
         emailtemp.FolderId = UserInfo.getUserId();
         insert emailtemp;
+       // EmailTemplate emailtemp = [SELECT Id, Name, DeveloperName, Subject, Body, TemplateType, isActive, FolderId FROM EmailTemplate WHERE DeveloperName = 'Test_Send_Mail'];
         EmailSendController.getTempletemergeData('', '', '');
         EmailSendController.getTempletemergeData(emailtemp.Id, con.Id, finreqObj.Id);
         System.assertNotEquals(null, emailtemp.Body);
@@ -215,7 +218,7 @@ public with sharing class EmailSendControllerTest {
         //                             WHERE FolderId =: UserInfo.getUserId() LIMIT 1];
         // EmailSendController.getTempletemergeData(emailTemp1.Id, '', '');
         // // EmailSendController.getTempletemergeData(emailTempList[0].Id, '', '');
-        EmailSendController.getEmailTempaltes1();
+        // EmailSendController.getEmailTempaltes1();
         Test.stopTest();
     }
 }

@@ -25,15 +25,6 @@
     <label>Sales Console</label>
     <navType>Console</navType>
     <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>PGi_Sales_Ops_Admin_Test_for_Oppty</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Opportunity</pageOrSobjectType>
-        <recordType>Opportunity.PGi_Opportunity</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
         <actionName>Tab</actionName>
         <content>Home_Page_Default</content>
         <formFactor>Large</formFactor>
@@ -48,15 +39,6 @@
         <pageOrSobjectType>standard-home</pageOrSobjectType>
         <type>Flexipage</type>
         <profile>PGi Executive</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>PGi_Sales_Ops_Admin_Test_for_Oppty</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Opportunity</pageOrSobjectType>
-        <recordType>Opportunity.PGi_Opportunity</recordType>
-        <type>Flexipage</type>
-        <profile>PGi Sales Operations</profile>
     </profileActionOverrides>
     <tabs>standard-home</tabs>
     <tabs>standard-Feed</tabs>
@@ -73,9 +55,13 @@
     <tabs>DataRetentionManager</tabs>
     <tabs>PGIServicesInformation__c</tabs>
     <tabs>Rate__c</tabs>
+    <tabs>Case_SLA_Exception_Rules__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningSalesConsole_UtilityBar</utilityBar>
     <workspaceConfig>
+        <mappings>
+            <tab>Case_SLA_Exception_Rules__c</tab>
+        </mappings>
         <mappings>
             <tab>DataRetentionManager</tab>
         </mappings>

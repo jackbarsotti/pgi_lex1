@@ -51,10 +51,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Parking_Requested__c</field>
+                <field>In_Customer_Care__c</field>
             </layoutItems>
             <layoutItems>
-                <emptySpace>true</emptySpace>
+                <behavior>Edit</behavior>
+                <field>Primary_Work_Location__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -63,6 +64,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Home_Office_Address__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Parking_Requested__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -102,7 +107,19 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>Department_Group__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Department_Description__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>Supervisor_s_Name__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>User_to_mimic__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

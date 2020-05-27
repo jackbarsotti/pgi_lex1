@@ -15,16 +15,8 @@
         <translation><!-- Core Product --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Demo/Training</masterLabel>
-        <translation><!-- Demo/Training --></translation>
-    </picklistValues>
-    <picklistValues>
         <masterLabel>Discovery</masterLabel>
         <translation><!-- Discovery --></translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Follow Up Meeting</masterLabel>
-        <translation><!-- Follow Up Meeting --></translation>
     </picklistValues>
     <picklistValues>
         <masterLabel>Follow-up</masterLabel>
@@ -43,10 +35,6 @@
         <translation><!-- Gift --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Go Live Prep</masterLabel>
-        <translation><!-- Go Live Prep --></translation>
-    </picklistValues>
-    <picklistValues>
         <masterLabel>Handwritten Note</masterLabel>
         <translation><!-- Handwritten Note --></translation>
     </picklistValues>
@@ -61,10 +49,6 @@
     <picklistValues>
         <masterLabel>Integration</masterLabel>
         <translation><!-- Integration --></translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Issues to Resolve</masterLabel>
-        <translation><!-- Issues to Resolve --></translation>
     </picklistValues>
     <picklistValues>
         <masterLabel>LinkedIn Mail</masterLabel>
@@ -89,10 +73,6 @@
     <picklistValues>
         <masterLabel>Pricing</masterLabel>
         <translation><!-- Pricing --></translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Requirements Gathering</masterLabel>
-        <translation><!-- Requirements Gathering --></translation>
     </picklistValues>
     <picklistValues>
         <masterLabel>Response - Customer/Prosect</masterLabel>

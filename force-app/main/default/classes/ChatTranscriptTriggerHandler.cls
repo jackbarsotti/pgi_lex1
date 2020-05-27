@@ -7,16 +7,19 @@ public without sharing class ChatTranscriptTriggerHandler extends TriggerHandler
     }
 
     protected override void beforeUpdate() {
+        updateRelatedFields();
         updateRegionFields();
         updateGMDescription();
     }
     
     protected override void afterInsert() {
         updateLinkedRecordDescription();
+        mergeRecordsToExistingContactLead();
     }
     
     protected override void afterUpdate() {
         updateLinkedRecordDescription();
+        mergeRecordsToExistingContactLead();
     }
     
     private void updateLinkedRecordDescription() {
@@ -198,11 +201,11 @@ public without sharing class ChatTranscriptTriggerHandler extends TriggerHandler
                 ct_new.ContactId = cnt.Id;
                 ct_new.Escalated_Lead__c = true;
                 if(cnt.AccountId != null){
-                    ct_new.AccountId = cnt.AccountId;
+                    ct_new.Account__c = cnt.AccountId;
                 }
             }
             if (mapOfLeadByEmail.containsKey(ct_new.Email_Address__c)){
-                Lead led = mapOfLeadByEmail.get(ct_new.Email_Address__c);
+                Lead  led = mapOfLeadByEmail.get(ct_new.Email_Address__c);
                 if(led != null) {   
                     List<Lead> relatedLeads = new List<Lead>();
                     relatedLeads = [SELECT Id FROM Lead WHERE Email =: ct_new.Email_Address__c LIMIT 2];
@@ -213,7 +216,7 @@ public without sharing class ChatTranscriptTriggerHandler extends TriggerHandler
                             ct_new.LeadId = led.Id;
                             ct_new.Escalated_Lead__c = true;
                             if(led.Account__c != null){
-                                ct_new.AccountId = led.Account__c;
+                                ct_new.Account__c = led.Account__c;
                             }
                         }
                     }
@@ -225,6 +228,54 @@ public without sharing class ChatTranscriptTriggerHandler extends TriggerHandler
                 }
             }
         }
+    }  
+  }
+  
+  private void mergeRecordsToExistingContactLead(){
+    List<Contact> contactList = new List<Contact>();
+    List<Lead> leadList = new List<Lead>();
+    List<string> emailList = new List<string>();
+    Map<string, Contact> mapOfContactByEmail = new Map<string, Contact>();
+    Map<string, Lead> mapOfLeadByEmail = new Map<string, Lead>();
+
+    for (LiveChatTranscript ct:(List<LiveChatTranscript>) trigger.new){
+        if(ct.Email_Address__c != null){
+            emailList.add(ct.Email_Address__c);
+        }
+     }
+    Id contactOwner = [select Id, Name from Group where  Type = 'Queue' And Name = 'Sales Operations Support'].Id;  
+    for(contact con : [Select Id, Email, OwnerId, Owner.IsActive, Global_Contact_MQL__c, Lead_Source_Most_Recent__c
+                        FROM Contact WHERE Contact.Email IN : emailList LIMIT 1000]){
+        if(!con.Owner.IsActive && con.OwnerId == null){
+            con.OwnerId = contactOwner;
+        }
+        con.Lead_Source_Most_Recent__c = 'Web Chat';
+        con.Global_Contact_MQL__c = true;
+        contactList.add(con);
+    }
+    // Set<Id> proFileIdSet = new Set<Id>();
+    // for(Profile pfObj :[SELECT id From Profile Where Name = 'PGi Sales User' OR Name = 'SalesforceIQ Integration User' OR Name = 'ChatCustomPage Profile']){
+    //     proFileIdSet.add(pfObj.Id);
+    // }
+    Id currentUserProfileId = userinfo.getProfileId();
+    for(Lead leadObj : [Select Id, Email, OwnerId, Owner.IsActive, Global_MQL__c, Lead_Source_Most_Recent__c,Status,Janati_RR__Round_Robin__c
+                        FROM Lead WHERE Lead.Email IN : emailList LIMIT 1000]){
+        if(!leadObj.Owner.IsActive && leadObj.OwnerId == null){
+            leadObj.Status = 'Assigned';
+            leadObj.Janati_RR__Round_Robin__c = 'Yes';
+        }
+        //automated process user has a null profile
+        // if(proFileIdSet.contains(currentUserProfileId) || currentUserProfileId == null){ 
+        leadObj.Global_MQL__c = true;
+        // }
+        leadObj.Lead_Source_Most_Recent__c = 'Web Chat';
+        leadList.add(leadObj);
+    }
+    if(contactList.size() > 0){
+        Database.update(contactList, false);
+    }
+    if(leadList.size() > 0){
+        Database.update(leadList, false);
     }
   }
 }

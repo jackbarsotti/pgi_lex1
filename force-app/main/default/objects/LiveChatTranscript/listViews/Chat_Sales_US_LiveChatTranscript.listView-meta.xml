@@ -2,8 +2,8 @@
 <ListView xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Chat_Sales_US_LiveChatTranscript</fullName>
     <filterScope>Queue</filterScope>
-    <label>Chat - Sales (US)</label>
-    <queue>Chat_Sales_US</queue>
+    <label>Chat - Sales (NA)</label>
+    <queue>Chat_Sales_NA</queue>
     <sharedTo>
         <allInternalUsers/>
     </sharedTo>

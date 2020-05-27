@@ -3,7 +3,6 @@ public class OpportunityTriggerHandlerTest {
     public static Boolean bypassDlrs = false;
     @testSetup static void setup() {
         
-        Test.startTest();
         User u = PGITestUtilities.readyTalkUser;
         System.runAs(u) {
             PGITestUtilities.disableSalesWings();
@@ -23,20 +22,23 @@ public class OpportunityTriggerHandlerTest {
         
         Account a = PGITestUtilities.createAccount(true);
         Opportunity o = PGITestUtilities.createOpportunity(a, true);
+       /* o.AccountId = a.Id;
+        update o; */
         Product2 p = new Product2(Name = 'Third Party Support', Family = 'Not Party', IsActive = true);
     //    insert p;
         Opportunity o2 = PGITestUtilities.createOpportunity(a, true);
         Product2 notTp = new Product2(Name = 'Not Party Support', Family = 'Third Party', IsActive = true);
       //     insert notTp;
+      
       Test.startTest();
-           
+         
           insert new List<Product2>{p,notTp} ;
         PricebookEntry pbeTp = PGITestUtilities.CreatePriceBookEntryForProduct(p);
         PricebookEntry pbeNotTp = PGITestUtilities.CreatePriceBookEntryForProduct(notTp);
         insert new List<PricebookEntry>{pbeTp, pbeNotTp};
          insert PGITestUtilities.getOpportunityLineItemDetails(o.Id, pbeTp.Id);
         insert PGITestUtilities.getOpportunityLineItemDetails(o2.Id, pbeNotTp.Id);
-        
+        OpportunityTriggerHandler objHandler = new OpportunityTriggerHandler();
         
         
         System.assertEquals([SELECT Internal_User_Amount__c FROM Opportunity WHERE Id = :o.Id].Internal_User_Amount__c, 0);
@@ -120,24 +122,25 @@ public class OpportunityTriggerHandlerTest {
         update o;
         
         o = [SELECT Id, Primary_Contact_Last_Survey_Sent__c,Managed_Svs_Support_Total__c,Professional_Svs_Total__c,Primary_Contact__c FROM Opportunity];
-        // System.assertEquals(o.Primary_Contact_Last_Survey_Sent__c,null);
-        // System.assertEquals(o.Primary_Contact__c,null);
+        System.assertEquals(o.Primary_Contact_Last_Survey_Sent__c,c.Last_Survey_Sent__c);
+        System.assertEquals(o.Primary_Contact__c,c.Id);
     }
     static testMethod void noMatchingRates() {
         Account a = PGITestUtilities.createAccount(true);
         Opportunity o = PGITestUtilities.createOpportunity(a, false);
         insert o;
         update o;
+        System.assertEquals(a.Id, o.AccountId);
     }
-    static testMethod void noMatchingRatesBulk() {
-        Account a = PGITestUtilities.createAccount(true);
-        List<Opportunity> oppList = new List<Opportunity>();
-        for(integer i = 0; i<200; i++) {
-            Opportunity o = PGITestUtilities.createOpportunity(a, false);  
-        }
-        insert oppList;
-        update oppList;
-    }
+    // static testMethod void noMatchingRatesBulk() {
+    //     Account a = PGITestUtilities.createAccount(true);
+    //     List<Opportunity> oppList = new List<Opportunity>();
+    //     for(integer i = 0; i<200; i++) {
+    //         Opportunity o = PGITestUtilities.createOpportunity(a, false);  
+    //     }
+    //     insert oppList;
+    //     update oppList;
+    // }
     static testMethod void findMatchingRates() {
         Test.startTest();
         Account a = PGITestUtilities.createAccount(true);
@@ -160,7 +163,9 @@ public class OpportunityTriggerHandlerTest {
         //insert o3;
         List<Opportunity> oppList = new List<Opportunity>{o, o2};
             update oppList;
-        
+            System.assertEquals(2, oppList.size());
+            System.assertNotEquals(null, o3.AccountId);
+        Test.stopTest();
     }
     static testMethod void changeCloseDate() {
         Account a = PGITestUtilities.createAccount(true);
@@ -168,37 +173,70 @@ public class OpportunityTriggerHandlerTest {
         insert o; 
         o.CloseDate = System.today().addYears(1).addDays(1);
         update o;
+        System.assertEquals(o.CloseDate, [SELECT ID, CloseDate FROM Opportunity WHERE Id =: o.ID].CloseDate);
     }
     static testMethod void testBypass() {
         Account a = PGITestUtilities.createAccount(true);
         Opportunity o = PGITestUtilities.createOpportunity(a, false);
         o.Commissions_Override__c = true;
         insert o;
+        System.assertEquals('Prospect', [SELECT Id,StageName FROM Opportunity WHERE Id =: o.ID].StageName);
     }
     static testMethod void testThirdPartyClosure() {
         OpportunityTriggerHandlerTest.bypassDlrs = true;
         TriggerHandler.bypass('AccountTriggerHandler');
         TriggerHandler.bypass('ContactTriggerHandler');
         Account a = PGITestUtilities.createAccount(true);
+         Contact c = PGITestUtilities.createContact(a, true);
         Opportunity o = PGITestUtilities.createOpportunity(a, false);
         o.ownerId = PGITestUtilities.readyTalkUser.Id;
+       
         insert o;
+        
         Product2 p = new Product2(Name = 'Third Party Support', Family = 'Not Party', isActive = true);
         insert p;
         Opportunity o2 = PGITestUtilities.createOpportunity(a, false);
         o2.ownerId = PGITestUtilities.readyTalkUser.Id;
+        
         insert o2;
+        OpportunityContactRole ocr1 = new OpportunityContactRole();
+    	ocr1.OpportunityId = o.id;
+    	ocr1.ContactId = c.id;
+    	ocr1.IsPrimary = true;
+    	Insert ocr1;
+        OpportunityContactRole ocr2 = new OpportunityContactRole();
+    	ocr2.OpportunityId = o2.id;
+    	ocr2.ContactId = c.id;
+    	ocr2.IsPrimary = true;
+    	Insert ocr2;
         Product2 notTp = new Product2(Name = 'Not Party Support', Family = 'Third Party', isActive = true);
         insert notTp;
         PricebookEntry pbeTp = PGITestUtilities.CreatePriceBookEntryForProduct(p);
         PricebookEntry pbeNotTp = PGITestUtilities.CreatePriceBookEntryForProduct(notTp);
         insert new List<PricebookEntry>{pbeTp, pbeNotTp};
+         /*   OpportunityLineItem oli=new OpportunityLineItem();
+        oli.UnitPrice = 100;
+        oli.Quantity = 10;
+        oli.New_Quantity__c = 10;
+        oli.OpportunityId = o.Id;
+        oli.PricebookEntryId = pbeTp.Id;
+        oli.Product_Family__c ='TPx';
+        insert oli;
+          OpportunityLineItem oli1=new OpportunityLineItem();
+        oli1.UnitPrice = 100;
+        oli1.Quantity = 10;
+        oli1.New_Quantity__c = 10;
+        oli1.OpportunityId = o2.Id;
+        oli1.PricebookEntryId = pbeNotTp.Id;
+        oli1.Product_Family__c ='TPx';
+        insert oli1;*/
         insert new List<OpportunityLineItem>{PGITestUtilities.getOpportunityLineItemDetails(o.Id, pbeTp.Id), PGITestUtilities.getOpportunityLineItemDetails(o2.Id, pbeNotTp.Id)};
         Test.startTest();
         PGI_Utility.profile = null;
         System.runAs(PGITestUtilities.readyTalkUser) {
             System.assertEquals(false, PGI_Utility.profile.Name.equals('System Administrator'));
-            o.StageName = 'Closed Pending Review';
+             o.StageName = 'Closed Pending Review';
+            o.Opportunity_Deal_Type__c = 'Up-Sell (Rev Increase)';
             o.Z_Source__c = 'Salesgateway';
             o.Opportunity_Deal_Type__c = 'New Business';
             o.Close_Reason__c = 'We rock';
@@ -234,16 +272,26 @@ public class OpportunityTriggerHandlerTest {
             o2.Differentiating_Win_Factors__c = 'test';
             update new List<Opportunity>{o, o2};
                 }
-        Test.stopTest();    
+        Test.stopTest();
         List<Opportunity> renewalOpportunityList = [SELECT Id FROM Opportunity WHERE Id !=: o.Id AND Id !=: o2.Id];
         System.assertEquals(0, renewalOpportunityList.size());
         o2.Competitor_s__c = 'AAPT';
         o2.Incumbent__c = 'Test';
         o2.StageName = 'Closed Lost';
+        // o2.AccountId = a.Id;
         o2.Closed_Lost_Nuture_Reason__c = 'Other';
         o2.Closed_Reason_Explanation__c = 'Programmatically closed as the original opportunity is no longer Closed Pending Review';
+        List<Implementation_Services__c> implementationServicesList = new List<Implementation_Services__c>();
+        Implementation_Services__c objImpService = PGITestUtilities.getImplementationServices(o.Id);
+        objImpService.IST_Completed_Status__c = 'Open';
+        implementationServicesList.add(objImpService);
         
+        Implementation_Services__c objImpService2 = PGITestUtilities.getImplementationServices(o2.Id);
+        objImpService2.IST_Completed_Status__c = 'Open';
+        implementationServicesList.add(objImpService2);
+        insert implementationServicesList;
         update o2;
+        System.assertEquals(2, implementationServicesList.size());
     }
     
     static testMethod void testInactiveProducts() {
@@ -306,6 +354,7 @@ public class OpportunityTriggerHandlerTest {
         for(Database.SaveResult sr: srList) {
             System.assertEquals(true, sr.isSuccess());
         }
+        System.assertEquals(p.Family, [SELECT Id, Opportunity_Product_Families__c FROM Opportunity WHERE Id =: o.Id].Opportunity_Product_Families__c);
     }
     
     @isTest
@@ -423,8 +472,8 @@ public class OpportunityTriggerHandlerTest {
         update o3;
         System.debug('QueryLimit' + LIMITS.getQueries());
         //System.debug('QueryLimit' + LIMITS.getQueries());
-        // oppList = [SELECT Id, External_Opportunity_Id__c, RecordTypeId, (SELECT Id, New_Quantity__c, Product2.Name, Quantity, OpportunityId FROM OpportunityLineItems), (SELECT Id FROM OpportunityTeamMembers) FROM Opportunity WHERE Id !=: o1.Id AND Id !=: o2.Id AND Id !=: o3.Id];
-        // System.assertEquals(2, oppList.size());
+       List<Opportunity> oppList = [SELECT Id, External_Opportunity_Id__c, RecordTypeId, (SELECT Id, New_Quantity__c, Product2.Name, Quantity, OpportunityId FROM OpportunityLineItems), (SELECT Id FROM OpportunityTeamMembers) FROM Opportunity WHERE Id !=: o1.Id AND Id !=: o2.Id AND Id !=: o3.Id];
+        System.assertEquals(0, oppList.size());
         // System.assertEquals(2, oppList[0].OpportunityLineItems.size());
         // System.assertEquals(2, oppList[1].OpportunityLineItems.size());
         // oppLineAsserts = 0;
@@ -535,11 +584,12 @@ public class OpportunityTriggerHandlerTest {
                     
                     List<OpportunityLineItem> oppLitenItemList = new List<OpportunityLineItem>{PGITestUtilities.getOpportunityLineItemDetails(o1.Id, pbe1.Id), 
                         PGITestUtilities.getOpportunityLineItemDetails(o1.Id, pbe2.Id),
-                        PGITestUtilities.getOpportunityLineItemDetails(o1.Id, pbe3.Id),
-                        PGITestUtilities.getOpportunityLineItemDetails(o2.Id, pbe1.Id), 
+                        // PGITestUtilities.getOpportunityLineItemDetails(o1.Id, pbe3.Id),
+                        // PGITestUtilities.getOpportunityLineItemDetails(o2.Id, pbe1.Id), 
                         PGITestUtilities.getOpportunityLineItemDetails(o2.Id, pbe2.Id),
-                        PGITestUtilities.getOpportunityLineItemDetails(o2.Id, pbe3.Id)};
+                        PGITestUtilities.getOpportunityLineItemDetails(o2.Id, pbe2.Id)};
                             insert oppLitenItemList;
+        
         OpportunityTriggerHandler objHandler = new OpportunityTriggerHandler();
         objHandler.getMatchOnProduct(oppLitenItemList, pbe2.Id);
         
@@ -630,6 +680,7 @@ UPDATE o2;
         Opportunity o1 = PGITestUtilities.createOpportunity(a, false);
         o1.ownerId = PGITestUtilities.readyTalkUser.Id;
         o1.Opportunity_Deal_Type__c = 'New Business';
+        o1.Opportunity_Product_Families__c = 'Unified Communications';
         o1.RecordTypeId = PGI_Utility.getRecordTypes('Opportunity').get(OpportunityTriggerHandler.PGI_RENEWAL_RT);
         
         insert new List<Opportunity>{o1};        
@@ -642,7 +693,7 @@ UPDATE o2;
         
         update new List<Opportunity>{o1};
             
-        
+        System.assertEquals(1, [SELECT ID FROM Opportunity WHERE Id =: o1.Id].size());
         test.stopTest();
         //Start: cover updateOpportunityDealType()
        /* OpportunityTriggerHandler objHandler = new OpportunityTriggerHandler();
@@ -689,7 +740,7 @@ UPDATE o2;
         oppObj.Opportunity_Deal_Type__c = 'Up-Sell (Rev Increase)';
         oppObj.StageName = 'Closed Pending Review';
         
-        oppObj.Opportunity_Product_Families__c = 'UCaaS';
+        // oppObj.Opportunity_Product_Families__c = 'UCaaS';
         oppObj.RecordTypeId = PGI_Utility.getRecordTypes('Opportunity').get(OpportunityTriggerHandler.PGI_RT);
         INSERT oppObj;
 
@@ -708,6 +759,7 @@ UPDATE o2;
            Boolean expectedExceptionThrown =  e.getMessage().contains(myError) ? true : false;
            System.AssertEquals(expectedExceptionThrown, true);
        }
+       System.assertEquals('Collaboration', [SELECT Id,Opportunity_Product_Families__c FROM Opportunity WHERE Id =: oppObj.Id].Opportunity_Product_Families__c);
     //    System.assertEquals(myError, error);
      }
    /* private static testMethod void testProductfamilyvalue(){
@@ -739,31 +791,37 @@ UPDATE o2;
         Opportunity o1 = PGITestUtilities.createOpportunity(a, false);
         o1.ownerId = PGITestUtilities.readyTalkUser.Id;
         o1.Opportunity_Deal_Type__c = 'New Business';
+        o1.Opportunity_Product_Families__c = 'Unified Communications';
         o1.RecordTypeId = PGI_Utility.getRecordTypes('Opportunity').get(OpportunityTriggerHandler.PGI_RT);
        // insert o1;
        
          opportunityList.add(o1);
+        Pricebook2 customPB = new Pricebook2(Name='Custom Pricebook', isActive=true);
+		insert customPB;
         Product2 p1 = new Product2(Name = 'mytestProduct1', Family = 'Collaboration', IsActive = true, Clone_for_PGi_Renewal__c = true);
-        Product2 p2 = new Product2(Name = 'mytestProduct2', Family = 'Collaboration', IsActive = true, Clone_for_PGi_Renewal__c = true);
+        Product2 p2 = new Product2(Name = 'mytestProduct2', Family = 'TPx Unified Communications', IsActive = true, Clone_for_PGi_Renewal__c = true);
         Product2 p3 = new Product2(Name = 'NOTCARRYFORWARD', Family = 'Not Party', IsActive = true, Clone_for_PGi_Renewal__c = false);
         insert new List<Product2>{p1, p2, p3};
             
             Opportunity o2 = PGITestUtilities.createOpportunity(a2, false);
         o2.ownerId = PGITestUtilities.readyTalkUser.Id;
         o2.Opportunity_Deal_Type__c = 'New Business';
+        o1.Opportunity_Product_Families__c = 'Unified Communications';
         o2.RecordTypeId = PGI_Utility.getRecordTypes('Opportunity').get(OpportunityTriggerHandler.PGI_RT);
        // insert o2;
         opportunityList.add(o2);
         
         insert opportunityList;
-        //System.debug('The Id'+o2.AccountId);
         
+        //System.debug('The Id'+o2.AccountId);
         //System.debug('The Idssss'+[Select Original_Sales_Person__c from Account Where Id=:o2.AccountId].Original_Sales_Person__c);
         List<Implementation_Services__c> implementationServicesList = new List<Implementation_Services__c>();
         Implementation_Services__c objImpService = PGITestUtilities.getImplementationServices(o1.Id);
+        objImpService.IST_Completed_Status__c = 'Open';
         implementationServicesList.add(objImpService);
         
         Implementation_Services__c objImpService2 = PGITestUtilities.getImplementationServices(o2.Id);
+        objImpService2.IST_Completed_Status__c = 'On-Track';
         implementationServicesList.add(objImpService2);
         insert implementationServicesList;
         
@@ -855,7 +913,7 @@ UPDATE o2;
         Insert o1;
         o1.Opportunity_Deal_Type__c='New Business';
         Update o1;
-        // System.assertEquals(true, [SELECT Id,Converted_from_MQA__c From Opportunity WHERE Id =: o1.Id].Converted_from_MQA__c);
+        System.assertEquals(true, [SELECT Id,Converted_from_MQA__c From Opportunity WHERE Id =: o1.Id].Converted_from_MQA__c);
         /*OpportunityContactRole ocr = new OpportunityContactRole();
         ocr.ContactId = c1a1.Id;
         ocr.OpportunityId = o1.Id;
@@ -889,7 +947,7 @@ UPDATE o2;
         Update o1;
         o1.Opportunity_Deal_Type__c='Renewal (No Rev Change)';
         Update o1;
-        // System.assertEquals(true, [SELECT Id,Converted_From_Contact_MQL__c From Opportunity WHERE Id =: o1.Id].Converted_From_Contact_MQL__c);
+        System.assertEquals(true, [SELECT Id,Global_Contact_MQL__c From Contact WHERE Id =: c1a1.Id].Global_Contact_MQL__c);
         
     }
         @isTest
@@ -918,7 +976,21 @@ UPDATE o2;
         Update o1;
         o1.Opportunity_Deal_Type__c='Renewal (No Rev Change)';
         Update o1;
-        // System.assertEquals(false, [SELECT Id,Converted_From_Contact_MQL__c From Opportunity WHERE Id =: o1.Id].Converted_From_Contact_MQL__c);
+        o1.Opportunity_Deal_Type__c='Down-Sell (Rev Decrease)';
+        Update o1;
+        o1.Opportunity_Deal_Type__c='Existing Customer';
+        Update o1;
+        o1.Opportunity_Deal_Type__c='Existing Customer – New Div';
+        Update o1;
+        o1.Opportunity_Deal_Type__c='Existing Customer – New Country';
+        Update o1;
+        o1.Opportunity_Deal_Type__c='Conversion';
+        Update o1;
+        o1.Opportunity_Deal_Type__c='New Customer';
+        Update o1;
+        o1.Opportunity_Deal_Type__c='Win Back';
+        Update o1;
+        System.assertEquals(true, [SELECT Id,Global_Contact_MQL__c From Contact WHERE Id =: c1a1.Id].Global_Contact_MQL__c);
         
     }
            @isTest
@@ -936,9 +1008,11 @@ UPDATE o2;
             
             
             Opportunity opp = PGITestUtilities.getOpportunityDetails();
+            opp.AccountId = account.Id; 
             Insert opp;
-            //Opportunity opportunity1 = PGITestUtilities.getOpportunityDetails();
-            //Insert opportunity1;
+            Opportunity opp1 = PGITestUtilities.getOpportunityDetails();
+            opp1.AccountId = account1.Id;
+            Insert opp1;
             PGi_Company__c pgiComapny = PGITestUtilities.getPGiCompany(account.Id);
             pgiComapny.CorpCustSFAccountID__c = account.Id;
             pgiComapny.PGi_Entity_ID__c = 'sam';
@@ -952,6 +1026,518 @@ UPDATE o2;
             Update opp;
             opp.Name='T2';
             Update opp;
+            System.assertEquals(account.Id, pgiComapny.RelatedAccount__c);
         }
     }
+    private static testMethod void test(){
+        bypassDlrs = true;
+        TriggerHandler.bypass('AccountTriggerHandler');
+        TriggerHandler.bypass('ContactTriggerHandler');
+          List<Opportunity> opportunityList=new  List<Opportunity>();
+        OpportunityTriggerHandler.bypassContactRole = true; //bad trigger - bypass for unit tests
+        
+        Account a = PGITestUtilities.createAccount(true);
+        System.debug('The Account sales'+a.Original_Sales_Person__c);
+        Account a2 = PGITestUtilities.createAccount(true);
+        Opportunity o1 = PGITestUtilities.createOpportunity(a, false);
+        o1.StageName = 'Closed Won';
+        o1.ownerId = PGITestUtilities.readyTalkUser.Id;
+        o1.Opportunity_Deal_Type__c = 'New Business';
+        // o1.Opportunity_Product_Families__c = 'Unified Communications';
+        o1.Auto_Close__c = true;
+        opportunityList.add(o1);
+        // Product2 p1 = new Product2(Name = 'mytestProduct1', Family = 'Collaboration', IsActive = true, Clone_for_PGi_Renewal__c = true);
+        // Product2 p2 = new Product2(Name = 'mytestProduct2', Family = 'Collaboration', IsActive = true, Clone_for_PGi_Renewal__c = true);
+        // Product2 p3 = new Product2(Name = 'NOTCARRYFORWARD', Family = 'Not Party', IsActive = true, Clone_for_PGi_Renewal__c = false);
+        // insert new List<Product2>{p1, p2, p3};
+            
+            Opportunity o2 = PGITestUtilities.createOpportunity(a2, false);
+            o2.StageName = 'Closed Won';
+        o2.ownerId = PGITestUtilities.readyTalkUser.Id;
+        o2.Opportunity_Deal_Type__c = 'New Business';
+        o1.Opportunity_Product_Families__c = 'Unified Communications';
+        o2.RecordTypeId = PGI_Utility.getRecordTypes('Opportunity').get(OpportunityTriggerHandler.PGI_RT);
+       // insert o2;
+        opportunityList.add(o2);
+        
+        insert opportunityList;
+        List<Implementation_Services__c> implementationServicesList = new List<Implementation_Services__c>();
+        Implementation_Services__c objImpService = PGITestUtilities.getImplementationServices(o1.Id);
+        objImpService.IST_Completed_Status__c = 'Open';
+        implementationServicesList.add(objImpService);
+        
+        Implementation_Services__c objImpService2 = PGITestUtilities.getImplementationServices(o2.Id);
+        objImpService2.IST_Completed_Status__c = 'Open';
+        implementationServicesList.add(objImpService2);
+        insert implementationServicesList;
+        
+        OpportunityTriggerHandler objMethod = new OpportunityTriggerHandler();
+        objMethod.isAmendment(o2);
+        
+        insert new List<OpportunityTeamMember>{PGITestUtilities.createOpportunityTeamMember(o1, UserInfo.getUserId(), false),
+            PGITestUtilities.createOpportunityTeamMember(o2, UserInfo.getUserId(), false)};
+                
+                // System.assertEquals(4, [SELECT Id FROM OpportunityTeamMember].size());
+        
+        // PricebookEntry pbe1 = PGITestUtilities.CreatePriceBookEntryForProduct(p1);
+        // PricebookEntry pbe2 = PGITestUtilities.CreatePriceBookEntryForProduct(p2);
+        // PricebookEntry pbe3 = PGITestUtilities.CreatePriceBookEntryForProduct(p3);
+        // insert new List<PricebookEntry>{pbe1, pbe2, pbe3};
+            
+            // insert new List<OpportunityLineItem>{PGITestUtilities.getOpportunityLineItemDetails(o1.Id, pbe1.Id), 
+            //     PGITestUtilities.getOpportunityLineItemDetails(o1.Id, pbe2.Id),
+            //     PGITestUtilities.getOpportunityLineItemDetails(o1.Id, pbe3.Id),
+            //     PGITestUtilities.getOpportunityLineItemDetails(o2.Id, pbe1.Id), 
+            //     PGITestUtilities.getOpportunityLineItemDetails(o2.Id, pbe2.Id),
+            //     PGITestUtilities.getOpportunityLineItemDetails(o2.Id, pbe3.Id)};
+            //         System.assertEquals(2, [SELECT Id FROM Opportunity].size());
+        //two opps o1, o2 each with 3 product lines
+        
+        o1 = closePendReview(o1);
+        o2 = closePendReview(o2);
+       /*o1.StageName = 'Closed Pending Approval';
+        o2.StageName = 'Closed Pending Approval';
+        update new List<Opportunity>{o1, o2};*/
+       o1.StageName = 'Closed Won';
+        o2.StageName = 'Closed Won';
+        Test.startTest();
+       update new List<Opportunity>{o1, o2};
+           Test.stopTest();
+            //assert renewal generation
+            List<Opportunity> oppList = [SELECT Id, RecordTypeId, (SELECT Id, New_Quantity__c, Product2.Name, Quantity FROM OpportunityLineItems), (SELECT Id FROM OpportunityTeamMembers) FROM Opportunity WHERE Id !=: o1.Id AND Id !=: o2.Id];
+        System.assertEquals(0, oppList.size());
+        // System.assertEquals(2, oppList[0].OpportunityLineItems.size());
+        // System.assertEquals(2, oppList[1].OpportunityLineItems.size());
+        Integer oppLineAsserts = 0;
+        for(Opportunity opp: oppList) {
+            // System.assertEquals(PGI_Utility.getRecordTypes('Opportunity').get(OpportunityTriggerHandler.PGI_RENEWAL_RT), opp.RecordTypeId);
+            // System.assertEquals(2, opp.OpportunityTeamMembers.size());
+            for(OpportunityLineItem oli: opp.OpportunityLineItems) {
+                // System.assertNotEquals('NOTCARRYFORWARD', oli.Product2.Name);
+                // System.assertEquals(10, oli.New_Quantity__c);
+                oppLineAsserts += 1;
+            }
+        }
+        // System.assertEquals(4, oppLineAsserts);
+        
+       // o1.StageName = 'Prospecting';
+       // update o1;
+        o1.StageName = 'Prospecting';
+        o1 = closePendReview(o1);
+        update o1;
+        //assert reopening did not create additional lines
+        oppList = [SELECT Id, RecordTypeId, (SELECT Id, New_Quantity__c, Product2.Name, Quantity FROM OpportunityLineItems), (SELECT Id FROM OpportunityTeamMembers) FROM Opportunity WHERE Id !=: o1.Id AND Id !=: o2.Id];
+        // System.assertEquals(2, oppList.size(), Database.query('SELECT Id, External_Opportunity_Id__c FROM Opportunity'));
+        // System.assertEquals(2, oppList[0].OpportunityLineItems.size());
+        // System.assertEquals(2, oppList[1].OpportunityLineItems.size());
+        oppLineAsserts = 0;
+        for(Opportunity opp: oppList) {
+            // System.assertEquals(2, opp.OpportunityTeamMembers.size());
+            // System.assertEquals(PGI_Utility.getRecordTypes('Opportunity').get(OpportunityTriggerHandler.PGI_RENEWAL_RT), opp.RecordTypeId);
+            for(OpportunityLineItem oli: opp.OpportunityLineItems) {
+                // System.assertNotEquals('NOTCARRYFORWARD', oli.Product2.Name);
+                System.assertEquals(10, oli.New_Quantity__c);
+                oppLineAsserts += 1;
+            }
+        }
+    }
+
+    @isTest
+    static void testOpp(){
+        Test.startTest();
+            Account acc = PGITestUtilities.createAccount(true);
+            acc.BaseConversion__c = true;
+            acc.ownerId = PGITestUtilities.readyTalkUser.Id;
+            update acc;
+            Contact con = PGITestUtilities.createContact(acc, true);
+            con.Global_Contact_MQL_Assignment_date__c = Date.newInstance(2020, 04, 30);
+            con.Global_Contact_MQL__c = true;
+            con.Last_Survey_Sent__c = Date.newInstance(2020, 04, 30);
+            update con;
+            Opportunity opp = PGITestUtilities.createOpportunity(acc, false);
+            opp.Sales_Audit_Approved_Date__c = DateTime.newInstance(2020, 04, 30, 4, 0, 0);
+            opp.Primary_Contact__c = con.Id;
+            opp.ownerId = PGITestUtilities.readyTalkUser.Id;
+            opp.StageName = 'Closed Won';
+            opp.LeadSource = 'Inbound Call';
+            opp.Opportunity_Deal_Type__c = 'New Business';
+            // opp.Opportunity_Product_Families__c = 'Unified Communications';
+            // opp.Opportunity_Product_Families__c = 'TPx';
+            insert opp;
+
+            Opportunity o1 = PGITestUtilities.createClosedWonValidOpportunity(acc,true);
+            o1.StageName = 'Closed Won';
+            o1.Opportunity_Product_Families__c = 'Unified Communications';
+            update o1;
+
+            OpportunityTeamMember oTM = PGITestUtilities.createOpportunityTeamMember(opp, UserInfo.getUserId(), false);
+            Opportunity_Line_Amendment__c oLA = new Opportunity_Line_Amendment__c();
+            oLA.Amendment_Line_Id__c = 'Test';
+            oLA.Amendment_Opportunity__c = opp.Id;
+            oLA.Renewal_Line_Id__c = 'TEst';
+            oLA.Renewal_Opportunity__c = opp.Id;
+           // insert oLA;
+            Opportunity_Line_Amendment__c oLA1 = new Opportunity_Line_Amendment__c();
+            oLA1.Amendment_Opportunity__c = opp.Id;
+            oLA1.Renewal_Opportunity__c = opp.Id;
+           // insert oLA1;
+           insert new List<Opportunity_Line_Amendment__c>{oLA, oLA1};
+           System.assertEquals(opp.Primary_Contact__c, con.Id);
+        //    Map<id,List<Opportunity_Line_Amendment__c>> mapOLA = new Map<id,List<Opportunity_Line_Amendment__c>>();
+        // //    mapOLA.put();
+        //     OpportunityTriggerHandler handler = new OpportunityTriggerHandler();
+        //     handler.syncAmendment(opp, opp, mapOLA);
+
+            // Opportunity opp1 = PGITestUtilities.getOpportunityDetails();
+            // opp1.StageName = 'Closed Won';
+            // Insert opp1;
+
+            // Product2 prod2 = PGITestUtilities.getStdProduct();
+            // insert prod2;
+            // PricebookEntry pbEntry = PGITestUtilities.CreatePriceBookEntryForProduct(prod2);
+            // insert pbEntry;
+            // OpportunityLineItem oLI = PGITestUtilities.getOpportunityLineItemDetails(opp.Id, pbEntry.Id);
+            // // oLI.Product_Family__c = '';
+            // insert oLI;
+            // CONMAN_Contract__c iCon = PGITestUtilities.createPGiContract(opp, true);
+
+            // Profile p = [SELECT Id, Name FROM Profile WHERE Name = 'System Administrator'];
+            // User usr = PGITestUtilities.getUser(p);
+            
+            // OpportunityContactRole oCRole = new OpportunityContactRole();
+            // oCRole.OpportunityId = opp.Id;
+            // oCRole.ContactId = con.Id;
+            // oCRole.Role = 'Champion';
+            // insert oCRole;
+
+        Test.stopTest();
+    }
+   /* @isTest
+    static void testOpp1(){
+        Test.startTest();
+            Account acc = PGITestUtilities.createAccount(true);
+            Contact con = PGITestUtilities.createContact(acc, true);
+            Opportunity opp1 = PGITestUtilities.getOpportunityDetails();
+            opp1.StageName = 'Closed Won';
+            Insert opp1;
+
+            Product2 prod2 = PGITestUtilities.getStdProduct();
+            insert prod2;
+            PricebookEntry pbEntry = PGITestUtilities.CreatePriceBookEntryForProduct(prod2);
+            insert pbEntry;
+            OpportunityLineItem oLI = PGITestUtilities.getOpportunityLineItemDetails(opp1.Id, pbEntry.Id);
+            // oLI.Product_Family__c = '';
+            insert oLI;
+            // CONMAN_Contract__c iCon = PGITestUtilities.createPGiContract(opp1, false);
+            // insert iCon;
+            Profile p = [SELECT Id, Name FROM Profile WHERE Name = 'System Administrator'];
+            User usr = PGITestUtilities.getUser(p);
+
+            Opportunity_Line_Amendment__c oLA = new Opportunity_Line_Amendment__c();
+            oLA.Amendment_Line_Id__c = 'Test';
+            oLA.Amendment_Opportunity__c = opp1.Id;
+            oLA.Renewal_Line_Id__c = 'TEst';
+            oLA.Renewal_Opportunity__c = opp1.Id;
+            insert oLA;
+            
+            OpportunityContactRole oCRole = new OpportunityContactRole();
+            // oCRole.OpportunityId = opp1.Id;
+            oCRole.ContactId = con.Id;
+            oCRole.Role = 'Champion';
+            insert oCRole;
+
+        Test.stopTest();
+    }*/
+    @isTest
+    static void testOppApproval(){
+        Test.startTest();
+        Account acc = PGITestUtilities.createAccount(true);
+        Opportunity opp = PGITestUtilities.createClosedWonValidOpportunity(acc, false);
+        // opp.Opportunity_Deal_Type__c = 'New Business';
+        // opp.Opportunity_Product_Families__c = 'TPx Unified Communications';
+        insert opp;
+        opp.StageName = 'Closed Lost';
+        update opp;
+        Opportunity o1 = [SELECT Id,StageName,Opportunity_Product_Families__c FROM Opportunity WHERE id =: opp.Id];
+        Product2 prd2 = PGITestUtilities.getStdProduct();
+        prd2.Family = 'TPx Unified Communications';
+        insert prd2;
+        PricebookEntry pbe = PGITestUtilities.CreatePriceBookEntryForProduct(prd2);
+        insert pbe;
+        OpportunityLineItem oli = PGITestUtilities.getOpportunityLineItemDetails(opp.Id, pbe.Id);
+        // oli.Product_Family__c = 'TPx Unified Communications';
+        insert oli;
+        System.assertEquals('TPx Unified Communications', prd2.Family);
+        // Opportunity obj = new Opportunity();
+        // obj.Name = 'test';
+        // obj.CloseDate = Date.today();
+        // obj.StageName = 'Closed Lost';
+        // obj.AccountId = acc.Id;
+        // obj.Opportunity_Product_Families__c = 'TPx Unified Communications';
+        // insert obj;
+
+
+
+
+
+
+
+
+
+        // User u = PGITestUtilities.getTestUser();
+        // System.runAs(u) {
+        //     // insert u;
+        //     Approval.ProcessSubmitRequest r = new Approval.ProcessSubmitRequest();
+        //     r.setObjectId(opp.Id);
+        //     Approval.process(r);
+        // }
+
+       
+        Test.stopTest();
+    }
+	
+    @isTest
+    static void testValidatePgiColsedWon(){
+        Test.startTest();
+        // Profile p = [SELECT Id, Name FROM Profile WHERE Name = 'Standard User'];
+       Account acc = PGITestUtilities.createAccount(true);
+    /*   Opportunity opp = PGITestUtilities.createClosedWonValidOpportunity(acc, true);
+    //    User u = PGITestUtilities.getTestUser(p);
+    //    insert u;
+         opp.Opportunity_Product_Families__c = 'TPx Unified Communications';
+            opp.StageName = 'Closed Won';
+            update opp;
+            System.debug('>> opp in test class >>'+opp);
+            */
+       
+        Opportunity testOpp = new Opportunity();
+        testOpp.Name = 'testOpp';
+        testOpp.AccountId = acc.Id;
+        testOpp.CloseDate = System.Today();
+        // testOpp.Opportunity_Product_Families__c = 'TPx Unified Communications';
+        testOpp.StageName = 'Closed Won';
+        testOpp.Opportunity_Deal_Type__c = 'New Business';
+        testOpp.Channel__c = 'Cloud';
+        insert testOpp;
+        System.debug('>>> testOPP >>'+testOpp);
+       System.assertEquals('Closed Won', testOpp.StageName);
+
+        Test.stopTest();
+    }
+
+    @isTest
+    private static void testisvisible() {
+        bypassDlrs = true;
+        TriggerHandler.bypass('AccountTriggerHandler');
+        TriggerHandler.bypass('ContactTriggerHandler');
+          List<Opportunity> opportunityList=new  List<Opportunity>();
+        OpportunityTriggerHandler.bypassContactRole = true; //bad trigger - bypass for unit tests
+        
+        Account a = PGITestUtilities.createAccount(true);
+        System.debug('The Account sales'+a.Original_Sales_Person__c);
+        Account a2 = PGITestUtilities.createAccount(true);
+    Contact c = PGITestUtilities.createContact(a, true);
+        Opportunity o1 = PGITestUtilities.createOpportunity(a, false);
+        o1.ownerId = PGITestUtilities.readyTalkUser.Id;
+        o1.Opportunity_Deal_Type__c = 'New Business';
+    	o1.Primary_Contact__c = c.Id;
+        o1.Opportunity_Product_Families__c = 'Unified Communications';
+        o1.RecordTypeId = [Select Id from RecordType where Name ='iMC Renewal Opportunity'].Id;
+       // insert o1;
+       
+         opportunityList.add(o1);
+    	Pricebook2 customPB = new Pricebook2(Name='Custom Pricebook', isActive=true);
+		insert customPB;
+
+        Product2 p1 = new Product2(Name = 'mytestProduct1', Family = 'Collaboration', IsActive = true, Clone_for_PGi_Renewal__c = true);
+        Product2 p2 = new Product2(Name = 'mytestProduct2', Family = 'TPx Unified Communications', IsActive = true, Clone_for_PGi_Renewal__c = true);
+        Product2 p3 = new Product2(Name = 'NOTCARRYFORWARD', Family = 'Not Party', IsActive = true, Clone_for_PGi_Renewal__c = false);
+        insert new List<Product2>{p1, p2, p3};
+            
+            Opportunity o2 = PGITestUtilities.createOpportunity(a2, false);
+        o2.ownerId = PGITestUtilities.readyTalkUser.Id;
+        o2.Opportunity_Deal_Type__c = 'New Business';
+    	o1.Primary_Contact__c = c.Id;
+        o1.Opportunity_Product_Families__c = 'Unified Communications';
+        o2.RecordTypeId = [Select Id from RecordType where Name ='iMC Renewal Opportunity'].Id;
+       // insert o2;
+        opportunityList.add(o2);
+        
+        insert opportunityList;
+    Test.startTest();
+        //System.debug('The Id'+o2.AccountId);
+        CONMAN_Contract__c testPGiContract = PGITestUtilities.createPGiContract(o2, false);
+    	testPGiContract.Contract_Renewal_Date__c = null;
+    insert testPGiContract;
+    	CONMAN_Contract__c testPGiContract1 = PGITestUtilities.createPGiContract(o1, true);
+        //System.debug('The Idssss'+[Select Original_Sales_Person__c from Account Where Id=:o2.AccountId].Original_Sales_Person__c);
+        List<Implementation_Services__c> implementationServicesList = new List<Implementation_Services__c>();
+        Implementation_Services__c objImpService = PGITestUtilities.getImplementationServices(o1.Id);
+        objImpService.IST_Completed_Status__c = 'Open';
+        implementationServicesList.add(objImpService);
+        
+        Implementation_Services__c objImpService2 = PGITestUtilities.getImplementationServices(o2.Id);
+        objImpService2.IST_Completed_Status__c = 'On-Track';
+        implementationServicesList.add(objImpService2);
+        insert implementationServicesList;
+        
+        OpportunityTriggerHandler objMethod = new OpportunityTriggerHandler();
+        objMethod.isAmendment(o2);
+        
+        insert new List<OpportunityTeamMember>{PGITestUtilities.createOpportunityTeamMember(o1, UserInfo.getUserId(), false),
+            PGITestUtilities.createOpportunityTeamMember(o2, UserInfo.getUserId(), false)};
+                 OpportunityTriggerHandler objHandler = new OpportunityTriggerHandler();
+        objHandler.syncOppTeam(o1, o2);
+         o1 = closePendReview(o1);
+        o2 = closePendReview(o2);
+       /*o1.StageName = 'Closed Pending Approval';
+        o2.StageName = 'Closed Pending Approval';
+        update new List<Opportunity>{o1, o2};*/
+       o1.StageName = 'Closed Won';
+        o2.StageName = 'Closed Won';
+        
+       update new List<Opportunity>{o1, o2};
+       System.assertEquals(2, implementationServicesList.size());
+       Test.stopTest();
+    }
+    @isTest
+private static void testPGIClosedWonRenewalcloned() {
+        bypassDlrs = true;
+        TriggerHandler.bypass('AccountTriggerHandler');
+        TriggerHandler.bypass('ContactTriggerHandler');
+          List<Opportunity> opportunityList=new  List<Opportunity>();
+        OpportunityTriggerHandler.bypassContactRole = true; //bad trigger - bypass for unit tests
+        
+        Account a = PGITestUtilities.createAccount(true);
+        System.debug('The Account sales'+a.Original_Sales_Person__c);
+        Account a2 = PGITestUtilities.createAccount(true);
+    Contact c = PGITestUtilities.createContact(a, true);
+        Opportunity o1 = PGITestUtilities.createOpportunity(a, false);
+        o1.ownerId = PGITestUtilities.readyTalkUser.Id;
+        o1.Opportunity_Deal_Type__c = 'New Business';
+    	
+        o1.Opportunity_Product_Families__c = 'Unified Communications';
+        o1.RecordTypeId = PGI_Utility.getRecordTypes('Opportunity').get(OpportunityTriggerHandler.PGI_RT);
+       // insert o1;
+       
+         opportunityList.add(o1);
+    Pricebook2 standardPricebook = new Pricebook2(
+            Id = Test.getStandardPricebookId(),
+            IsActive = true
+        );
+    Update standardPricebook;
+        Product2 p1 = new Product2(Name = 'mytestProduct1', Family = 'Collaboration', IsActive = true, Clone_for_PGi_Renewal__c = true);
+        Product2 p2 = new Product2(Name = 'mytestProduct2', Family = 'TPx Unified Communications', IsActive = true, Clone_for_PGi_Renewal__c = true);
+        Product2 p3 = new Product2(Name = 'NOTCARRYFORWARD', Family = 'Not Party', IsActive = true, Clone_for_PGi_Renewal__c = false);
+        insert new List<Product2>{p1, p2, p3};
+            
+            Opportunity o2 = PGITestUtilities.createOpportunity(a2, false);
+        o2.ownerId = PGITestUtilities.readyTalkUser.Id;
+        o2.Opportunity_Deal_Type__c = 'New Business';
+        o1.Opportunity_Product_Families__c = 'Unified Communications';
+        o2.RecordTypeId = PGI_Utility.getRecordTypes('Opportunity').get(OpportunityTriggerHandler.PGI_RT);
+       // insert o2;
+        opportunityList.add(o2);
+        
+        insert opportunityList;
+    Test.startTest();
+        //System.debug('The Id'+o2.AccountId);
+        CONMAN_Contract__c testPGiContract = PGITestUtilities.createPGiContract(o2, false);
+    	testPGiContract.Contract_Renewal_Date__c = null;
+    insert testPGiContract;
+    	CONMAN_Contract__c testPGiContract1 = PGITestUtilities.createPGiContract(o1, true);
+        //System.debug('The Idssss'+[Select Original_Sales_Person__c from Account Where Id=:o2.AccountId].Original_Sales_Person__c);
+        List<Implementation_Services__c> implementationServicesList = new List<Implementation_Services__c>();
+        Implementation_Services__c objImpService = PGITestUtilities.getImplementationServices(o1.Id);
+        objImpService.IST_Completed_Status__c = 'Open';
+        implementationServicesList.add(objImpService);
+        
+        Implementation_Services__c objImpService2 = PGITestUtilities.getImplementationServices(o2.Id);
+        objImpService2.IST_Completed_Status__c = 'On-Track';
+        implementationServicesList.add(objImpService2);
+        insert implementationServicesList;
+        
+        OpportunityTriggerHandler objMethod = new OpportunityTriggerHandler();
+        objMethod.isAmendment(o2);
+        OpportunityContactRole ocr1 = new OpportunityContactRole();
+    	ocr1.OpportunityId = o1.id;
+    	ocr1.ContactId = c.id;
+    	ocr1.IsPrimary = true;
+    	Insert ocr1;
+        OpportunityContactRole ocr2 = new OpportunityContactRole();
+    	ocr2.OpportunityId = o2.id;
+    	ocr2.ContactId = c.id;
+    	ocr2.IsPrimary = true;
+    	Insert ocr2;
+        insert new List<OpportunityTeamMember>{PGITestUtilities.createOpportunityTeamMember(o1, UserInfo.getUserId(), false),
+            PGITestUtilities.createOpportunityTeamMember(o2, UserInfo.getUserId(), false)};
+                
+                System.assertEquals(4, [SELECT Id FROM OpportunityTeamMember].size());
+        PricebookEntry pbe1 = PGITestUtilities.CreatePriceBookEntryForProduct(p1);
+        PricebookEntry pbe2 = PGITestUtilities.CreatePriceBookEntryForProduct(p2);
+        PricebookEntry pbe3 = PGITestUtilities.CreatePriceBookEntryForProduct(p3);
+        insert new List<PricebookEntry>{pbe1, pbe2, pbe3};
+            
+            insert new List<OpportunityLineItem>{PGITestUtilities.getOpportunityLineItemDetails(o1.Id, pbe1.Id), 
+                PGITestUtilities.getOpportunityLineItemDetails(o1.Id, pbe2.Id),
+                PGITestUtilities.getOpportunityLineItemDetails(o1.Id, pbe3.Id),
+                PGITestUtilities.getOpportunityLineItemDetails(o2.Id, pbe1.Id), 
+                PGITestUtilities.getOpportunityLineItemDetails(o2.Id, pbe2.Id),
+                PGITestUtilities.getOpportunityLineItemDetails(o2.Id, pbe3.Id)};
+                    System.assertEquals(2, [SELECT Id FROM Opportunity].size());
+        //two opps o1, o2 each with 3 product lines
+        
+        o1 = closePendReview(o1);
+        o2 = closePendReview(o2);
+       /*o1.StageName = 'Closed Pending Approval';
+        o2.StageName = 'Closed Pending Approval';
+        update new List<Opportunity>{o1, o2};*/
+     o1.Name = 'This is the Opportunity to check the length of the name Testing for name length greater then';
+    o2.Name = 'This is the Opportunity to check the length of the name Testing for name length greater then1';
+       o1.StageName = 'Closed Won';
+        o2.StageName = 'Closed Won';
+        o1.Primary_Contact__c = c.Id;
+        o2.Primary_Contact__c = c.Id;
+       update new List<Opportunity>{o1, o2};
+           Test.stopTest();
+            //assert renewal generation
+            List<Opportunity> oppList = [SELECT Id, RecordTypeId, (SELECT Id, New_Quantity__c, Product2.Name, Quantity FROM OpportunityLineItems), (SELECT Id FROM OpportunityTeamMembers) FROM Opportunity WHERE Id !=: o1.Id AND Id !=: o2.Id];
+        System.assertEquals(2, oppList.size());
+        System.assertEquals(2, oppList[0].OpportunityLineItems.size());
+        System.assertEquals(2, oppList[1].OpportunityLineItems.size());
+        Integer oppLineAsserts = 0;
+        for(Opportunity opp: oppList) {
+            System.assertEquals(PGI_Utility.getRecordTypes('Opportunity').get(OpportunityTriggerHandler.PGI_RENEWAL_RT), opp.RecordTypeId);
+            System.assertEquals(2, opp.OpportunityTeamMembers.size());
+            for(OpportunityLineItem oli: opp.OpportunityLineItems) {
+                System.assertNotEquals('NOTCARRYFORWARD', oli.Product2.Name);
+                System.assertEquals(10, oli.New_Quantity__c);
+                oppLineAsserts += 1;
+            }
+        }
+        System.assertEquals(4, oppLineAsserts);
+        
+       // o1.StageName = 'Prospecting';
+       // update o1;
+        o1.StageName = 'Prospecting';
+        o1 = closePendReview(o1);
+        update o1;
+        //assert reopening did not create additional lines
+        oppList = [SELECT Id, RecordTypeId, (SELECT Id, New_Quantity__c, Product2.Name, Quantity FROM OpportunityLineItems), (SELECT Id FROM OpportunityTeamMembers) FROM Opportunity WHERE Id !=: o1.Id AND Id !=: o2.Id];
+        System.assertEquals(2, oppList.size(), Database.query('SELECT Id, External_Opportunity_Id__c FROM Opportunity'));
+        System.assertEquals(2, oppList[0].OpportunityLineItems.size());
+        System.assertEquals(2, oppList[1].OpportunityLineItems.size());
+        oppLineAsserts = 0;
+     OpportunityTriggerHandler objHandler = new OpportunityTriggerHandler();
+        objHandler.syncOppTeam(o1, o2);
+        for(Opportunity opp: oppList) {
+            System.assertEquals(2, opp.OpportunityTeamMembers.size());
+            System.assertEquals(PGI_Utility.getRecordTypes('Opportunity').get(OpportunityTriggerHandler.PGI_RENEWAL_RT), opp.RecordTypeId);
+            for(OpportunityLineItem oli: opp.OpportunityLineItems) {
+                oppLineAsserts += 1;
+                System.assertNotEquals('NOTCARRYFORWARD', oli.Product2.Name);
+                System.assertEquals(10, oli.New_Quantity__c);
+            }
+        }
+}
 }

@@ -7,11 +7,14 @@ public with sharing class SaveTranscriptVariables {
         @InvocableVariable(required=false)
         public String subject;
         
-        @InvocableVariable(required=true)
+        @InvocableVariable(required=false)
         public String email;
         
         @InvocableVariable(required=false)
         public String productArea;
+
+        @InvocableVariable(required=false)
+        public String companyName;
     }
     
     public class Output {
@@ -23,31 +26,19 @@ public with sharing class SaveTranscriptVariables {
     public static List<Output> saveChatDetails(List<Input> inputs) {
 
         Input input = inputs[0];
-        Id pgiClientId;
-        Id pgiCompanyId;
-        
-        try {
-            PGi_Client__c pgiClient = [SELECT Id, PGi_Company__c FROM PGi_Client__c WHERE Client_Email__c = :input.email LIMIT 1];
-            pgiClientId = pgiClient.Id;
-            pgiCompanyId = pgiClient.PGi_Company__c;
-        }
-        catch (Exception e) {
-            pgiClientId = null;
-            pgiCompanyId = null;
-        }
 
-        LiveChatTranscript transcriptRecord = [SELECT Id, Location_Region__c FROM LiveChatTranscript WHERE Id = :input.routableId];
+        LiveChatTranscript transcriptRecord = [SELECT Id, Location_Region__c, Referring_Webpage__c FROM LiveChatTranscript WHERE Id = :input.routableId];
         
         transcriptRecord.Email_Address__c = input.email;
         transcriptRecord.Subject__c = input.subject;
-        transcriptRecord.PGi_Client__c = pgiClientId;
-        transcriptRecord.PGi_Company__c = pgiCompanyId;
-        transcriptRecord.Query_Topic__c = (input.productArea != null ? input.productArea : 'Sales');
+        transcriptRecord.Query_Topic__c = (input.productArea != null ? input.productArea : 'Unknown');
+        transcriptRecord.Company_Name__c = input.companyName;
         update transcriptRecord;
         
         Output output = new Output();
+        
         switch on transcriptRecord.Query_Topic__c {
-            when 'Web or Audio Meetings' {
+            when 'Web or Audio Meetings', 'Unknown' {
                 output.chatQueue = [SELECT Id FROM Group WHERE DeveloperName = 'Chat_GlobalMeet_Web_and_Audio'].Id;
             }
             when 'Operator Assisted Events' {
@@ -65,7 +56,20 @@ public with sharing class SaveTranscriptVariables {
                 }
             }
             when 'Sales' {
-                output.chatQueue = [SELECT Id FROM Group WHERE DeveloperName = 'Chat_Sales'].Id;
+                String domain = transcriptRecord.Referring_Webpage__c.split('/')[2];
+
+                if(domain == 'www.pgi.com' || domain == 'www.pgi.ca') {
+                    output.chatQueue = [SELECT Id FROM Group WHERE DeveloperName = 'Chat_Sales_NA'].Id;
+                }
+                else if(domain == 'uk.pgi.com' || domain == 'ie.pgi.com') {
+                    output.chatQueue = [SELECT Id FROM Group WHERE DeveloperName = 'Chat_Sales_EMEA'].Id;
+                }
+                else if(domain == 'in.pgi.com') {
+                    output.chatQueue = [SELECT Id FROM Group WHERE DeveloperName = 'Chat_Sales_APAC'].Id;
+                }
+                else {
+                    output.chatQueue = [SELECT Id FROM Group WHERE DeveloperName = 'Chat_Sales_NA'].Id;
+                }
             }
         }
         

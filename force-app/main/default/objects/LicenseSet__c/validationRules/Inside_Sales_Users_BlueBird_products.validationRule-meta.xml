@@ -7,5 +7,5 @@
     NOT(PGi_Contract__r.Opportunity__r.Owner.Inside_Sales_Staff__c),
     INCLUDES(Family__c,&quot;BlueBird&quot;)
 )</errorConditionFormula>
-    <errorMessage>Only Inside Sales users can add Offerings in &quot;SINGLE EVENT&quot; Product Family</errorMessage>
+    <errorMessage>Only Inside Sales users can add Offerings in &quot;BlueBird&quot; Product Family</errorMessage>
 </ValidationRule>

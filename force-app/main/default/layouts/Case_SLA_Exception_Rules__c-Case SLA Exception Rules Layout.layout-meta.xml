@@ -12,12 +12,12 @@
                 <field>Name</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Evaluation_Order__c</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Required</behavior>
                 <field>Rule_Order__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Evaluation_Order__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -63,6 +63,14 @@
     </layoutSections>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>Field_API_Name__c</fields>
+        <fields>Field_Label__c</fields>
+        <fields>Field_Name__c</fields>
+        <fields>Field_Operator__c</fields>
+        <fields>Field_Type__c</fields>
+        <fields>Field_Value__c</fields>
+        <fields>Relationship_Name__c</fields>
+        <fields>Object_Name__c</fields>
         <relatedList>Case_SLA_Exception_Rule_Conditions__c.Case_SLA_Exception_Rules__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
@@ -71,7 +79,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h1B00000ESe2E</masterLabel>
+        <masterLabel>00h21000000pjTr</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

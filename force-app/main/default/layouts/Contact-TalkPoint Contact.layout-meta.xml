@@ -40,6 +40,14 @@
                 <behavior>Edit</behavior>
                 <field>Last_Survey_Sent__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Global_Contact_MQL__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Global_Contact_MQL_Assignment_date__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -282,14 +290,6 @@
                 <behavior>Edit</behavior>
                 <field>Most_Recent_Note__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Global_Contact_MQL__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Global_Contact_MQL_Assignment_date__c</field>
-            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -442,6 +442,10 @@
     </relatedLists>
     <relatedLists>
         <relatedList>RelatedNoteList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>Form_Submissions__c.Contact_Id__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>ACTIVITY.SUBJECT</fields>

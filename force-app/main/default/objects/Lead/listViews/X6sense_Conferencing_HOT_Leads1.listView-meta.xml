@@ -31,7 +31,7 @@
         <operation>notEqual</operation>
         <value>Disqualified</value>
     </filters>
-    <label>6sense Webcast: PU/DE Leads</label>
+    <label>6Sense Webinar PU/DE Leads</label>
     <language>en_US</language>
     <sharedTo>
         <group>All_6Sense</group>
