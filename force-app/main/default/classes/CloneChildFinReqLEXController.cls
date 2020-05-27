@@ -24,12 +24,12 @@ public class CloneChildFinReqLEXController {
         
     }
     
-    @AuraEnabled
+  /*  @AuraEnabled
     public static void deleteCloneRecord(String cloneRecId){
         System.debug('inCacel');
         Financial_Request__c finReqObj=[SELECT id, Name FROM Financial_Request__c 
                                         WHERE id=:cloneRecId];
         DELETE finReqObj;
-    }
+    } */
 
 }

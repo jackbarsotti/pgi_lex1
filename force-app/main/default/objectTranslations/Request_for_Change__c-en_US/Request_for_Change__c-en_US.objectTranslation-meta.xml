@@ -59,6 +59,14 @@
             <section>System Information</section>
         </sections>
     </layouts>
+    <quickActions>
+        <label><!-- Assign to Me --></label>
+        <name>Assign_to_Me_RFCLex</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Assign to Me --></label>
+        <name>Assign_to_Me_RFCListLex</name>
+    </quickActions>
     <recordTypes>
         <label><!-- Request for Change --></label>
         <name>Request_for_Change</name>

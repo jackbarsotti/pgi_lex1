@@ -8,10 +8,11 @@
       
         component.set('v.fromEmail','noreplylesforcecrmsupport@pgi.com');
         // Task
-        //helper.getAllUser(component, event, helper);        
+        //helper.getAllUser(component, event, helper); 
+        helper.getSobjToRelatedList(component, event, helper);       
         helper.getRecord(component, event, helper);
         helper.getFromAddess(component, event, helper);
-        helper.getSobjToRelatedList(component, event, helper);
+        
       
     },
     // Task

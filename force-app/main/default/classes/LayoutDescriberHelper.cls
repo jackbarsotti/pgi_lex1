@@ -172,13 +172,15 @@ public class LayoutDescriberHelper {
     static string getUrlPrefix(){
         
             string baseurl= System.URL.getSalesforceBaseUrl().toExternalForm();
-            //system.debug('original prefix is ===>'+ baseurl);
+            system.debug('original prefix is ===>'+ baseurl);
             if(baseurl.contains('c.cs'))
                 baseurl = baseurl.substring(baseurl.indexof('.cs') + 1,baseurl.indexof('.visual'));
             else if(baseurl.contains('.na'))
                 baseurl = baseurl.substring(baseurl.indexof('.na') + 1,baseurl.indexof('.visual'));
             else if(baseurl.contains('.ap'))
                 baseurl = baseurl.substring(baseurl.indexof('.ap') + 1,baseurl.indexof('.visual'));
+         else if(baseurl.contains('pgi--lex--c'))
+                baseurl ='pgi--lex.my';
             else
                 baseurl = baseurl.substring(baseurl.indexof('/cs') + 1, baseurl.indexof('.salesforce'));
        

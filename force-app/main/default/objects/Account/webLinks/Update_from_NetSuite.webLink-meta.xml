@@ -10,34 +10,32 @@
     <url>var Celigo = {};
 Celigo.SFDC = (function(){ //private members
     function AccountSyncManager(){
-    
-        //instance vars
+      //instance vars
         var that = this;
 		var retries = 0;
 		var maxRetries = 20;
-        
-        //methods
+                //methods
 		this.getURLParameter = function(_url, _name){ //String
-		    var regexS;
+                    var regexS;
 		    var regex;
 		    var results;
-		    _name = _name.replace(/[\[]/, &quot;\\\[&quot;).replace(/[\]]/, &quot;\\\]&quot;);
+                     _name = _name.replace(/[\[]/, &quot;\\\[&quot;).replace(/[\]]/, &quot;\\\]&quot;);
 		    regexS = &quot;[\\?&amp;]&quot; + _name + &quot;=([^&amp;#]*)&quot;;
-		    regex = new RegExp(regexS);
-		    results = regex.exec(_url);
-		    if (results === null) {
+                    regex = new RegExp(regexS);
+                    results = regex.exec(_url);
+                    if (results === null) {
 		        return &quot;&quot;;
 		    }
 		    else {
 		        return results[1];
 		    }
-		};
+                   };
 		
         this.triggerNsSync = function(){
 			var a = new sforce.SObject(&quot;Account&quot;); 
 			a.id = &quot;{!Account.Id}&quot;; 
-			a.NetSuite_Pull__c = &#39;true&#39;;
-			a.Celigo_Update__c = &#39;true&#39;;
+			a.NetSuite_Pull__c = &apos;true&apos;;
+			a.Celigo_Update__c = &apos;true&apos;;
 			return sforce.connection.update([a]); 
         };
         
@@ -45,18 +43,18 @@ Celigo.SFDC = (function(){ //private members
         
             var top = screen.height - (screen.height * .5) - 100;
             var left = screen.width - (screen.width * .5) - 187;
-            var params = &#39;dependent = yes,resizable=false,scrollbars=false,toolbar=false,menubar=false,location=false,status=true,directories=false,width=375,height=160,top=&#39;;
+            var params = &apos;dependent = yes,resizable=false,scrollbars=false,toolbar=false,menubar=false,location=false,status=true,directories=false,width=375,height=160,top=&apos;;
             params += top.toString();
-            params += &#39;,left=&#39; + left.toString() + &#39;\&#39;&#39;;
+            params += &apos;,left=&apos; + left.toString() + &apos;\&apos;&apos;;
             
-            return window.open(&#39;/apex/account_status?whence=&#39;+&quot;{!Account.Id}&quot;, &#39;NetSuite_Synchronization&#39;, params);
+            return window.open(&apos;/apex/account_status?whence=&apos;+&quot;{!Account.Id}&quot;, &apos;NetSuite_Synchronization&apos;, params);
         };
         
         this.checkSyncStatus = function(){
-            var result = sforce.connection.query(&quot;select Id, NetSuite_Pull__c from Account where Id = &#39;&quot;+ &quot;{!Account.Id}&quot; +&quot;&#39;&quot;, {
+            var result = sforce.connection.query(&quot;select Id, NetSuite_Pull__c from Account where Id = &apos;&quot;+ &quot;{!Account.Id}&quot; +&quot;&apos;&quot;, {
                 onSuccess: function(result){
-                    var records = result.getArray(&#39;records&#39;);
-                    if (records[0].NetSuite_Pull__c === &#39;false&#39;) 
+                    var records = result.getArray(&apos;records&apos;);
+                    if (records[0].NetSuite_Pull__c === &apos;false&apos;) 
 						window.location.href = window.location.href;
 					else if(retries &lt; maxRetries){
 						retries++;
@@ -64,7 +62,7 @@ Celigo.SFDC = (function(){ //private members
 					}
                 },
                 onFailure: function(error){
-                    alert(&#39;An error has occurred, please contact your Celigo representative: &#39; + error);
+                    alert(&apos;An error has occurred, please contact your Celigo representative: &apos; + error);
                 }
             });
         };
@@ -74,9 +72,9 @@ Celigo.SFDC = (function(){ //private members
         main: function(){
             try {
                 {!REQUIRESCRIPT(&quot;/soap/ajax/13.0/connection.js&quot;)}
-var inProg= sforce.connection.query(&quot;select Id, NetSuite_Pull__c, NetSuite_Push__c from Account where Id = &#39;&quot;+ &quot;{!Account.Id}&quot; + &quot;&#39;&quot;);
-                        var records = inProg.getArray(&#39;records&#39;);
-                        if (records[0].NetSuite_Pull__c === &#39;true&#39; || records[0]. NetSuite_Push__c === &#39;true&#39;) 
+var inProg= sforce.connection.query(&quot;select Id, NetSuite_Pull__c, NetSuite_Push__c from Account where Id = &apos;&quot;+ &quot;{!Account.Id}&quot; + &quot;&apos;&quot;);
+                        var records = inProg.getArray(&apos;records&apos;);
+                        if (records[0].NetSuite_Pull__c === &apos;true&apos; || records[0]. NetSuite_Push__c === &apos;true&apos;) 
                             alert(&quot;Sync already in progress.&quot;);
 else {
                 var sosm = new AccountSyncManager();
@@ -86,7 +84,7 @@ else {
 }
             } 
             catch (e) {
-                alert(&#39;An error has occurred, please contact your Celigo representative: &#39; + e.name + &#39; - &#39; + e.message);
+                alert(&apos;An error has occurred, please contact your Celigo representative: &apos; + e.name + &apos; - &apos; + e.message);
             }
         }
     }

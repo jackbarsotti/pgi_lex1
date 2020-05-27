@@ -160,7 +160,9 @@
 
         /* --end--*/
         var checkPicklists = function () {
-            initializeFields();
+            //NJinitialized = true;
+            
+            //NJinitializeFields();
             //The field of Area of Focus is dependent on Product 
 
             //The field of Main Symptom is dependent on Area of Focus 
@@ -170,7 +172,7 @@
             setFieldValues(getAreaOfFocusField(), ProductSymptoms.productToAreaOfFocusMap[getProductValue()]);
             setFieldValues(getSymptomField(), ProductSymptoms.areaOfFocusToSymptomMap[getProductValue() + '' + getAreaOfFocusValue()]);
             setFieldValues(getSubSymptomField(), ProductSymptoms.subSymptomMap[getProductValue() + getSymptomValue() + getAreaOfFocusValue()]);
-
+            //initialized = true;
         }
         var setFieldValues = function (field, results) {
             if (field == null || field == undefined) { return; }
@@ -196,7 +198,7 @@
                 }
             }
         }
-        checkPicklists();
+        //NJcheckPicklists();
     </script>
 
 
@@ -247,6 +249,7 @@
                     }
                 });
             }
+            //initialized = false;
         }, 750);
         var dirty = false;
         var displayNone = function () {

@@ -82,6 +82,7 @@
         action.setCallback(this, function(response) {
             var state = response.getState();
             if (state === "SUCCESS") {
+                console.log('>> getFromAddess >>');
                 var result = response.getReturnValue();
                 var arrayMapKeys = [];
                 for(var key in result){
@@ -102,6 +103,7 @@
         action.setCallback(this, function(response) {
             var state = response.getState();
             if (state === "SUCCESS") {
+                console.log('>> getSobjToRelatedList >>');
                 var result = JSON.parse(response.getReturnValue());
                 var arrayMapKeys = [];
                 for(var key in result){
@@ -308,6 +310,7 @@
         action.setCallback(this, function (response) {
             var state = response.getState();
             if (state === "SUCCESS" && response.getReturnValue() != null) {
+                console.log('The Folder>>>');
                 var result = response.getReturnValue();
                 var arrayMapKeys = [];
                 for(var key in result){

@@ -1211,8 +1211,24 @@
         </sections>
     </layouts>
     <quickActions>
+        <label><!-- Assign to Me --></label>
+        <name>Assign_to_MeLex</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Assign to Me --></label>
+        <name>Assign_to_Me_listbuttonLex</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Escalate Email Case --></label>
+        <name>Escalate_Email_Case_Lex</name>
+    </quickActions>
+    <quickActions>
         <label><!-- NewChildCase --></label>
         <name>NewChildCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Case --></label>
+        <name>New_Case_Lex</name>
     </quickActions>
     <recordTypes>
         <description><!-- Used by teams who are working inbound email cases --></description>
@@ -1560,6 +1576,10 @@
     <webLinks>
         <label><!-- Escalate_Email_Case --></label>
         <name>Escalate_Email_Case</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Escalate_Email_Case_Lex --></label>
+        <name>Escalate_Email_Case_Lex</name>
     </webLinks>
     <webLinks>
         <label><!-- New_Case --></label>

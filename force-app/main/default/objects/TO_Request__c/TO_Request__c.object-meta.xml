@@ -168,8 +168,8 @@
         <excludedStandardButtons>Accept</excludedStandardButtons>
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
         <excludedStandardButtons>Forward</excludedStandardButtons>
-        <excludedStandardButtons>MassChangeOwner</excludedStandardButtons>
         <excludedStandardButtons>PrintableListView</excludedStandardButtons>
+        <excludedStandardButtons>MassChangeOwner</excludedStandardButtons>
         <listViewButtons>New_TOR</listViewButtons>
         <listViewButtons>Calendar_View</listViewButtons>
         <searchResultsAdditionalFields>Resource__c</searchResultsAdditionalFields>

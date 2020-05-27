@@ -25,7 +25,7 @@ var numFailed = 0;
 var numSucceeded = 0; 
 for (var i = 0; i &lt; result.length; i++){ 
 var res = result[i]; 
-if (res &amp;&amp; res.success == &#39;true&#39;){ 
+if (res &amp;&amp; res.success == &apos;true&apos;){ 
 numSucceeded++; 
 } else { 
 var es = res.getArray(&quot;errors&quot;); 

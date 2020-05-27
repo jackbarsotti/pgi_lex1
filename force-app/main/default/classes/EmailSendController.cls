@@ -292,10 +292,10 @@ update a;*/
     @AuraEnabled
     public static Map<Id,String> getFolders(){
         Map<Id,String> folderIdToMame = new Map<Id,String>();
-        EmailTemplate emailTemp = [SELECT Id,Body,Subject,HtmlValue ,Name,DeveloperName,FolderId,TemplateType, Description, FolderName 
-                                   FROM EmailTemplate  
-                                   where FolderId =: UserInfo.getOrganizationId() LIMIT 1];
-        folderIdToMame.put(emailTemp.FolderId, emailTemp.FolderName);
+       // EmailTemplate emailTemp = [SELECT Id,Body,Subject,HtmlValue ,Name,DeveloperName,FolderId,TemplateType, Description, FolderName 
+                                   //FROM EmailTemplate  
+                                  // where FolderId =: UserInfo.getOrganizationId() LIMIT 1];
+        //folderIdToMame.put(emailTemp.FolderId, emailTemp.FolderName);
         for(Folder folderObj : [SELECT Id, Name, DeveloperName, Type 
                                 FROM Folder 
                                 WHERE Type  ='Email']){

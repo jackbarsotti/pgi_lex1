@@ -4,9 +4,6 @@
 <aura:attribute name="recordDetail" type="Financial_Request__c"/>
 <aura:attribute name="optionsSobj" type="List"/>
 <aura:attribute name="selectedSobjValue" type="String" default="Financial_Request__c"/>
-<aura:attribute name="selectedCCRecord" type="GenLookUpResult" access="global" description="API Name of field, to be returned from component"/>
-<aura:attribute name="selectedBCCRecord" type="GenLookUpResult" access="global" description="API Name of field, to be returned from component"/>
-<aura:attribute name="selectedAddTORecord" type="GenLookUpResult" access="global" description="API Name of field, to be returned from component"/>
 <aura:attribute name="selectedRecord" type="GenLookUpResult" access="global" description="API Name of field, to be returned from component"/>
 <aura:attribute name="selectedSobjRecord" type="GenLookUpResult" access="global" description="API Name of field, to be returned from component"/>
 <aura:attribute name="email" type="string"/>
