@@ -8,7 +8,12 @@ public class ContactInactiveLEXController {
                              WHERE Id =: recordId];
             conObj.Inactive__c = true;
             conObj.FirstName = 'None';
-            UPDATE conObj;
+            try{
+                 UPDATE conObj;
+            }
+            catch(Exception e){
+                
+            }           
         }
     }
 }

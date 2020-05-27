@@ -1,7 +1,18 @@
 public class EmailSendController {
     @AuraEnabled
     public static Financial_Request__c getrecord(String recordId){
-        return [SELECT Id,Name,Subject__c FROM Financial_Request__c WHERE Id=:recordId];
+        String recId = recordId;
+        if(recId.startsWith('00T')){
+            Task taskObj =[SELECT Id, WhatId 
+                                    FROM Task 
+                                    WHERE ID =:recId];
+                                    if(taskObj !=null && taskObj.WhatId != null && taskObj.WhatId != ''){
+                                        recId =  taskObj.WhatId;
+                                    }
+        }
+        return [SELECT Id,Name,Subject__c ,RequestorsEmail__c, Requested_For__c 
+                                    FROM Financial_Request__c 
+                                    WHERE Id=:recId];
     }
     @AuraEnabled
     public static List<String> getObjectName1(){
@@ -34,7 +45,7 @@ public class EmailSendController {
         System.debug('The mSubject'+mSubject);
         System.debug('The parentRecord '+parentRecord );
         String toAdd = [SELECT Email FROM Contact WHERE Id =: toAddress].Email;   
-        
+        toAdd +=';'+addTo;
         Set<Id> conDocId = new Set<Id>();
         for(ContentDocumentLink conDoc : [SELECT Id, LinkedEntityId, ContentDocumentId, Visibility, IsDeleted, ShareType
                                           FROM ContentDocumentLink 
@@ -66,15 +77,17 @@ public class EmailSendController {
         List<String> toAddList = new List<String>();
         toAddList.add(toAdd);
         //sendTo.add(mMail);
-        System.debug('The to Address'+toAdd.split(' '));
-        singleEmailMsg.setToAddresses(toAdd.split(' '));
+        System.debug('The to Address'+toAdd.split(';'));
+        singleEmailMsg.setToAddresses(toAdd.split(';'));
         
         // concatenate all CC Addresses
         if (cc != null && cc != '') {
-            singleEmailMsg.setCcAddresses(cc.split(' '));
+            singleEmailMsg.setCcAddresses(cc.split(';'));
+            System.debug('The ccSplit'+cc.split(';'));
         }
         if (bcc != null && bcc != ''){
-            singleEmailMsg.setBccAddresses(addTo.split(' '));
+            System.debug('The ccSplit'+bcc.split(';'));
+            singleEmailMsg.setBccAddresses(bcc.split(';'));
         }
         // singleEmailMsg.setReplyTo(fromAddress);
         if (mSubject != null && mSubject != '') {
@@ -101,15 +114,15 @@ public class EmailSendController {
     
     @AuraEnabled 
     public static List<EmailTemplate> getEmailTemplateList(String folderId){
-        return  [SELECT Id,Body,Subject,HtmlValue ,Name,DeveloperName,FolderId,TemplateType, Description,Folder.Name, FolderName 
+        return  [SELECT Id,Name,TemplateType, Description  
                  FROM EmailTemplate  
                  where FolderId =:folderId];
     }
     @AuraEnabled 
-    public static User getUser(){
+    public static List<User> getUser(){
         return  [SELECT Id,Name,Email 
                  FROM User 
-                 WHERE Id=:userinfo.getuserid()];
+                 WHERE isActive = true];
     }
     /* @AuraEnabled 
 public static List<Attachment> getAttachment(String recordId){

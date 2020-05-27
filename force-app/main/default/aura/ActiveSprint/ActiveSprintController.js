@@ -315,6 +315,31 @@ win.focus();
          component.set('v.fieldToSort',fieldName);
          component.set('v.fieldOrder',order);
     },
+    docheckClick : function(component, event, helper) {
+        var records = component.get('v.allRecords');
+        var label = event.getSource().get("v.label");
+        var userId = $A.get("$SObjectType.CurrentUser.Id"); 	
+        console.log('userId',userId);
+        if(label == 'Show only Me') {
+            event.getSource().set("v.label","Show All")
+        } else {
+            event.getSource().set("v.label","Show only Me")
+        }
+        if(label == 'Show All'){
+            console.log('The Records is',component.get('v.allRecords'));
+            component.set('v.kanbanData.records',records);
+        }
+        else{
+             var newArray = [];
+             for(var key in records){
+                 if(records[key].Assigned_To__c == userId || records[key].AgileTester__c == userId){
+                     console.log('Hai');
+                    newArray.push(records[key]);
+                 }
+             }
+             component.set('v.kanbanData.records',newArray); 
+        }
+},
     onSelectChange : function(component, event, helper) {
         let selectedGroup = event.getSource().get("v.value");
         window.localStorage.setItem('Group', selectedGroup);

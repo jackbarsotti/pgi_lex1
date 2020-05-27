@@ -19,7 +19,7 @@
                     resolve("true");
                     console.log('ActiveSprint: ',response.getReturnValue());
                     component.set("v.kanbanData", response.getReturnValue());
-                    component.set('v.allRecords',response.getReturnValue().records);
+                    component.set('v.allRecords',component.get('v.kanbanData.records'));
                     console.log('kanbanData: ',JSON.parse(JSON.stringify(component.get("v.kanbanData"))));
                     var picklist = component.get('v.kanbanData.pickVals');
                  

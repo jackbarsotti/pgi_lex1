@@ -1,7 +1,7 @@
 @isTest
-public class CloneChildFinReqLEXControllerTest {
-
-    static testMethod void testCloneAnySobjet(){
+public class CreateABlankChildFinReqControllerTest {
+    
+ static testMethod void testGetFields(){
          Test.startTest();
         
         Profile profile = [SELECT Id FROM Profile WHERE name = 'System Administrator'];
@@ -33,13 +33,13 @@ public class CloneChildFinReqLEXControllerTest {
             
             Financial_Request__c objFinReq = new Financial_Request__c();
             objFinReq.Status__c = 'New';
-            objFinReq.Type__c = 'Other';
-            objFinReq.Reason__c = 'NA';
-            objFinReq.Bill_To_Client__c = objPgiClient.Id;
+           // objFinReq.Type__c = 'Other';
+          //  objFinReq.Reason__c = 'NA';
+          //  objFinReq.Bill_To_Client__c = objPgiClient.Id;
             INSERT objFinReq;
             
-            String cloneChildRecId=CloneChildFinReqLEXController.cloneAnySobjet(objFinReq.Id,'Financial_Request__c');
-            System.assert(cloneChildRecId!=null);
+            Financial_Request__c cloneChildRecObj=CreateABlankChildFinReqController.getFields(objFinReq.Id);
+            System.assert(cloneChildRecObj!=null);
         }
         
         Test.stopTest();

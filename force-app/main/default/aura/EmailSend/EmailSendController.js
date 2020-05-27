@@ -12,24 +12,55 @@
                 });
  		console.log(userId);
         console.log(userIe);
-        component.set('v.selectedFolder','00D290000001JXXEA2');
+        
+        component.set('v.defaultSelectedBcc',userIe);
+        component.set('v.selectedMulBcc',component.get('v.defaultSelectedBcc'));
         component.set('v.selectedSobjValue','Financial_Request__c');
         component.set("v.storeEmailTemplate",null); 
         var recordid= component.get('v.recordId');
+
         component.set('v.attachParentId',recordid);
-        //component.set('v.subject','Reply');
+      
         component.set('v.fromEmail','noreplylesforcecrmsupport@pgi.com');
-        helper.getTemplete(component,event,helper);
+        // Task
+        //helper.getAllUser(component, event, helper);        
         helper.getRecord(component, event, helper);
         helper.getFromAddess(component, event, helper);
         helper.getSobjToRelatedList(component, event, helper);
-        helper.getFolders(component, event);
-        //helper.getUser(component, event);
-       // helper.getEmailTemplateHelper(component, event, helper);
+      
     },
-    
-    
-    
+    // Task
+    handleMulAddClick : function(component, event, helper) {
+        component.set('v.selectMultiple',true);
+        component.set('v.purpose','addTo');
+        component.find("multiSelect").set('v.value',component.get('v.defaultAddToforDuel'));
+    },
+    handleMulCCClick : function(component, event, helper) {
+        component.set('v.selectMultiple',true);
+        component.set('v.purpose','cc');
+        component.find("multiSelect").set('v.value',component.get('v.defaultCCforDuel'));
+    },
+     handleMulBccClick : function(component, event, helper) {
+        component.set('v.selectMultiple',true);
+        component.set('v.purpose','bcc');
+        component.find("multiSelect").set('v.value',component.get('v.defaultBccforDuel'));
+    },
+    handleMulSel : function(component, event, helper) {
+        var purpose = component.get('v.purpose');
+        var selectedOptionValue = event.getParam("value");
+        var selectedOptionValueString = selectedOptionValue.toString();
+        var selectedList = [];
+        if(selectedOptionValueString !== null && selectedOptionValueString !== undefined && selectedOptionValueString !== '' ){
+            selectedList = selectedOptionValueString.split(",");
+        }
+            
+        component.set('v.duelSelectedList',selectedList);
+       /* if(allAddTo.includes(",")){
+            allAddTo = allAddTo.replace(/,/g,";");
+        }*/
+        //component.set('v.selectedMulAddTo',allAddTo);
+        //console.log('The value is',component.get('v.selectedMulAddTo'));
+    },
     sendMail: function(component, event, helper) {
         // when user click on Send button 
         // First we get all 3 fields values 	
@@ -41,9 +72,9 @@
         }
         alert('the from add'+fromEmail);
         var toAddress = component.get("v.selectedRecord.SObjectId");
-        var cc = component.get("v.selectedCCRecord.SObjectLabel");
-        var bcc = component.get("v.selectedBCCRecord.SObjectLabel");
-        var addTo = component.get("v.selectedAddTORecord.SObjectLabel")
+        var cc = component.get("v.selectedMulcc");
+        var bcc = component.get("v.selectedMulBcc");
+        var addTo = component.get("v.selectedMulAddTo")
         var relatedToRecord = component.get("v.selectedSobjRecord.SObjectId");
         var relatedToObject = component.get("v.selectedSobjValue");
         // check if Email field is Empty or not contains @ so display a alert message 
@@ -102,7 +133,7 @@
     handleSobjChange: function (component, event) {
         // This will contain the string of the "value" attribute of the selected option
         var selected = component.find('onjId').get('v.value');
-        //component.set('v.selectedSobjRecord',null);
+        component.find ('sObjectLookup').clear(); 
         component.set('v.selectedSobjValue',selected);
     },
     previewFile :function(component,event,helper){  
@@ -159,9 +190,13 @@
            helper.showToast(component,event,"Warning!","Warning","Please select Relate To record"); 
        }
            else{
-              component.set('v.isModalOpen',true);  
+               //in doinit loading template takes time so using this only for the first time
+               if(component.get('v.isGetFirstTempTemplete')){
+                   component.set('v.isGetFirstTempTemplete',false)
+                   helper.getTemplete(component);
+               }	
+               component.set('v.isModalOpen',true);  
            }
-       
     }, 
     handleFolderChange : function(component,event,helper){
         var folderId = component.find('folderId').get('v.value');
@@ -173,6 +208,26 @@
     }, 
     closeModel:function(component,event,helper){
         component.set('v.isModalOpen',false);
+    },
+    closeMultipleModel:function(component,event,helper){
+        var purpose = component.get('v.purpose');
+        var listofSelected = component.get('v.duelSelectedList');
+        var stringValue =listofSelected.join(";");
+        if(purpose === 'addTo'){
+            component.set('v.defaultAddToforDuel',component.get('v.duelSelectedList'));
+            stringValue = component.get('v.defaultSelectedAddTo')+';'+stringValue;
+            component.set('v.selectedMulAddTo',stringValue);
+        }
+        else if(purpose === 'cc'){
+            component.set('v.defaultCCforDuel',component.get('v.duelSelectedList'));
+            component.set('v.selectedMulcc',stringValue);
+        }
+        else{
+            component.set('v.defaultBccforDuel',component.get('v.duelSelectedList'));
+            stringValue = component.get('v.defaultSelectedBcc')+';'+stringValue;
+            component.set('v.selectedMulBcc',stringValue);
+        }
+        component.set('v.selectMultiple',false);
     },
      closequickAction:function(component,event,helper){
         var dismissActionPanel = $A.get("e.force:closeQuickAction");

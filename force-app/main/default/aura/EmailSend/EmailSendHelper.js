@@ -1,20 +1,19 @@
 ({
-    getUser : function(component, event, helper) {
+    getAllUser : function(component, helper) {
         var action = component.get("c.getUser");
+        action.setBackground ();
         action.setCallback(this, function(response) {
             var state = response.getState();
             if (state === "SUCCESS") {
-                let record = response.getReturnValue();
-                component.find ('addToLookup').setValue ({
-                    SObjectLabel :  record.Email,
-                    SObjectId : record.Id
-                });
-                component.find ('bccLookup').setValue ({
-                    SObjectLabel :  record.Email,
-                    SObjectId : record.Id
-                });
+                
+                var result = response.getReturnValue();
+                var arrayMapKeys = [];
+                for(var key in result){
+                    arrayMapKeys.push({label: result[key].Name, value: result[key].Email});
+                }
+                component.set('v.allUserList',arrayMapKeys);
             }
-            
+           
         })
         
         $A.enqueueAction(action);
@@ -26,10 +25,12 @@
         action.setParams({
             recordId: component.get('v.recordId')
         });
+        action.setBackground ();
         action.setCallback(this, function(response) {
             var state = response.getState();
             if (state === "SUCCESS") {
                 let record = response.getReturnValue();
+                console.log('>> record >>',record);
                 /*let slecteRecord = {
                   	SObjectLabel :  record.Name,
                     SObjectId : record.Id
@@ -49,6 +50,22 @@
                     SObjectLabel :  record.Name,
                     SObjectId : record.Id
                 });
+                if(record.RequestorsEmail__c === record.Requested_For__c){
+                    console.log('Test123');
+                    component.set('v.defaultSelectedAddTo',record.Requested_For__c)
+                    component.set('v.selectedMulAddTo',component.get('v.defaultSelectedAddTo'));
+                }else{
+                    var defaultSelectedAddTo ='';
+                    if(record.Requested_For__c != null && record.Requested_For__c != '' && record.Requested_For__c != 'undefined'){
+                        defaultSelectedAddTo = record.Requested_For__c;
+                    }
+                    if(record.RequestorsEmail__c != null && record.RequestorsEmail__c != '' && record.RequestorsEmail__c != 'undefined'){
+                        defaultSelectedAddTo += ';'+record.RequestorsEmail__c;
+                    }
+                    console.log('Test321',defaultSelectedAddTo);
+                    component.set('v.defaultSelectedAddTo',defaultSelectedAddTo)
+                    component.set('v.selectedMulAddTo',component.get('v.defaultSelectedAddTo'));
+                }
             }
             
         })
@@ -59,6 +76,7 @@
     getFromAddess : function(component, event, helper) {
         var action = component.get("c.getEmailfromAdd");
         let selectedemail = component.get ('v.fromEmail');
+        action.setBackground ();
         action.setCallback(this, function(response) {
             var state = response.getState();
             if (state === "SUCCESS") {
@@ -267,7 +285,7 @@
         });  
         $A.enqueueAction(action);  
     },  
-    getTemplete : function(component,event,helper) { 
+    getTemplete : function(component) { 
         
         var action = component.get("c.getEmailTemplateList"); 
         action.setParams({
@@ -282,7 +300,7 @@
         $A.enqueueAction(action);  
     },  
     
-    getFolders: function (component, event) {
+    getFolders: function (component) {
         var selectedFolder = component.get('v.selectedFolder');
         console.log('selectedFod',selectedFolder);
         var action = component.get("c.getFolders");
@@ -323,7 +341,10 @@
             "message": message
         });
         toastEvent.fire();
-       /* var dismissActionPanel = $A.get("e.force:closeQuickAction");
-        dismissActionPanel.fire();*/
+        if(message.includes("Sent Succ")){
+             var dismissActionPanel = $A.get("e.force:closeQuickAction");
+        dismissActionPanel.fire();
+        }
+       
     }
 })

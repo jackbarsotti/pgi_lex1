@@ -1,6 +1,6 @@
 public class CloneChildFinReqLEXController {
     @AuraEnabled
-    public static String cloneAnySobjet(String recordId, String objectName){
+   public static String cloneAnySobjet(String recordId, String objectName){
         
        Set <String> fieldMap = Schema.getGlobalDescribe().get(objectName).getDescribe().fields.getMap().keySet();
         String soqlQuery = 'SELECT ' ; 
@@ -12,15 +12,24 @@ public class CloneChildFinReqLEXController {
         soqlQuery =  soqlQuery.removeEnd(',');
         soqlQuery += ' FROM ' +objectName +' WHERE ID = \'' + recordId +'\'' ;
         System.debug('soqlQuery'+soqlQuery);
-        Financial_Request__c record = Database.query(soqlQuery);
-        Financial_Request__c clondedParentRecordID= record.clone(false, false, false, false);
-        clondedParentRecordID.Related_FinReq__c=recordId;
+        Financial_Request__c parentFinReqRec= Database.query(soqlQuery);
+        Financial_Request__c clondedFinReqRec= parentFinReqRec.clone(false, false, false, false);
+        clondedFinReqRec.Related_FinReq__c=recordId;
         try{
-            insert clondedParentRecordID ;
-            return clondedParentRecordID.id ;
+            insert clondedFinReqRec ;
+            return clondedFinReqRec.id ;
         }catch(Exception e){
             return '' ;
         }
         
     }
+    
+    @AuraEnabled
+    public static void deleteCloneRecord(String cloneRecId){
+        System.debug('inCacel');
+        Financial_Request__c finReqObj=[SELECT id, Name FROM Financial_Request__c 
+                                        WHERE id=:cloneRecId];
+        DELETE finReqObj;
+    }
+
 }

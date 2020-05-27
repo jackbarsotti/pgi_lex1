@@ -7,19 +7,32 @@ public class AssignToMeLEXController {
         if(objectName == 'Case'){
             Case caseObj = [SELECT Id, Assigned_To__c FROM Case WHERE Id =:recordId];
             caseObj.Assigned_To__c =userinfo.getuserid();
-            UPDATE caseObj;
+            try{
+                UPDATE caseObj;
+            }
+            catch(Exception e){
+            }
+            
         }
         // Financial Request: AssignToMe QuickAction 
         else if(objectName == 'Financial_Request__c'){
             Financial_Request__c finReqObj = [SELECT Id, Assigned_To__c FROM Financial_Request__c WHERE Id =:recordId];
             finReqObj.Assigned_To__c =userinfo.getuserid();
-            UPDATE finReqObj; 
+            try{
+                UPDATE finReqObj;
+            }
+            catch(Exception e){
+            } 
         }
         // Request for Change: AssignToMe QuickAction 
         else if(objectName == 'Request_for_Change__c'){
             Request_for_Change__c objRFC = [SELECT Id, Assigned_To__c FROM Request_for_Change__c WHERE Id =:recordId];
             objRFC.Assigned_To__c =userinfo.getuserid();
-            UPDATE objRFC; 
+            try{
+                UPDATE objRFC;
+            }
+            catch(Exception e){
+            } 
         }
     }
 }
