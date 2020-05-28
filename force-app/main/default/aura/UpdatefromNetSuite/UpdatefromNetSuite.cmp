@@ -1,4 +1,4 @@
-<aura:component implements="force:lightningQuickAction,force:hasRecordId,lightning:isUrlAddressable,flexipage:availableForRecordHome" 
+<aura:component implements="force:lightningQuickAction,force:hasRecordId" 
                 controller = "UpdatefromNetSuiteController"
                 access="global">
  <aura:html tag="style">

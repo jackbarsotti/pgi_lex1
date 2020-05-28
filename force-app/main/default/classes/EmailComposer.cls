@@ -44,8 +44,7 @@ public with sharing class EmailComposer {
             String selectedTemplateDevName = emailSlaMap.get(value).Email_Template__c;
             origin = emailSlaMap.get(value).Origin__c;
             try {
-
-                this.theEmailTemplate = [SELECT Id, Name FROM EmailTemplate WHERE DeveloperName =: selectedTemplateDevName];
+                this.theEmailTemplate = [SELECT Id, Name FROM EmailTemplate WHERE DeveloperName =: selectedTemplateDevName LIMIT 1];
                 System.debug('The from1 Address'+ this.theEmailTemplate);
             } catch (Exception e) {
                 System.debug(e);

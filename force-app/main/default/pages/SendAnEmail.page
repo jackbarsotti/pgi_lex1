@@ -1,5 +1,5 @@
 <apex:page sidebar="{!IF(passedInFrom != null, false , true)}" showHeader="{!IF(passedInFrom != null, false , true)}" controller="EmailComposer"
-    id="page" action="{!init}" extensions="CustomEmailTemplateLookupController" docType="html-5.0">
+    id="page" action="{!init}" extensions="CustomEmailTemplateLookupController" docType="html-5.0" lightningStylesheets="true">
     <apex:includeLightning />
     <script type="text/javascript">
         sforce.connection.sessionId = '{!GETSESSIONID()}';
