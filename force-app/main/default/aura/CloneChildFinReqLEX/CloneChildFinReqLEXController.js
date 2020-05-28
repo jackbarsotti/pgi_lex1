@@ -1,5 +1,6 @@
 ({
     doInit : function(component, event, helper) {
+        component.set("v.spinner",true);
         var recordId = component.get("v.recordId");
         var action = component.get("c.cloneAnySobjet");
         action.setParams({"recordId": recordId,
@@ -7,13 +8,14 @@
         action.setCallback(this, function(response) {
             var state = response.getState();
             if(state === "SUCCESS") {
+                component.set("v.spinner",false);
                 var returnVal=response.getReturnValue();
-                var childRecordId=component.set("v.childRecordId",returnVal);
-            /*    var editRecordEvent = $A.get("e.force:editRecord");
-                editRecordEvent.setParams({
-                    "recordId": returnVal
+                var createCloneRec = $A.get("e.force:createRecord");
+                createCloneRec.setParams({
+                    "entityApiName": "Financial_Request__c",
+                    "defaultFieldValues": returnVal
                 });
-                editRecordEvent.fire(); */
+                createCloneRec.fire();
             }	
             else if (state === "ERROR"){
                 var errors = response.getError();
@@ -29,17 +31,6 @@
         });
         $A.enqueueAction(action); 
         
-    },
+    }
     
-    handleSubmit: function (component, event, helper) {
-        var childRecordId=component.get("v.childRecordId");
-        var sObjectEvent = $A.get("e.force:navigateToSObject");
-                sObjectEvent.setParams({
-                    "recordId": childRecordId,
-                    "slideDevName": "detail" 
-                });
-               sObjectEvent.fire();
-       }
-    
-  
 })

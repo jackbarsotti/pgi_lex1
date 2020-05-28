@@ -1,32 +1,19 @@
 ({
     doInit : function(component, event, helper) {
+         helper.getSobjToRelatedList(component, event, helper);  
         var userId = $A.get("$SObjectType.CurrentUser.Id");
         var userIe = $A.get("$SObjectType.CurrentUser.Email");
-        component.find ('addToLookup').setValue ({
-                    SObjectLabel :  userIe,
-                    SObjectId : userId
-                });
-                component.find ('bccLookup').setValue ({
-                    SObjectLabel :  userIe,
-                    SObjectId : userIe
-                });
- 		console.log(userId);
-        console.log(userIe);
-        
         component.set('v.defaultSelectedBcc',userIe);
         component.set('v.selectedMulBcc',component.get('v.defaultSelectedBcc'));
         component.set('v.selectedSobjValue','Financial_Request__c');
-        component.set("v.storeEmailTemplate",null); 
-        var recordid= component.get('v.recordId');
-
-        component.set('v.attachParentId',recordid);
       
         component.set('v.fromEmail','noreplylesforcecrmsupport@pgi.com');
         // Task
-        //helper.getAllUser(component, event, helper);        
+        //helper.getAllUser(component, event, helper); 
+            
         helper.getRecord(component, event, helper);
         helper.getFromAddess(component, event, helper);
-        helper.getSobjToRelatedList(component, event, helper);
+        
       
     },
     // Task
@@ -94,12 +81,7 @@
     // when user click on the close buttton on message popup ,
     // hide the Message box by set the mailStatus attribute to false
     // and clear all values of input fields.   
-    closeMessage: function(component, event, helper) {
-        component.set("v.mailStatus", false);
-        component.set("v.email", null);
-        component.set("v.subject", null);
-        component.set("v.body", null);
-    },
+  
     doSave: function(component, event, helper) {
         if (component.find("fileId").get("v.files").length > 0) {
             helper.uploadHelper(component, event);
@@ -193,7 +175,8 @@
                //in doinit loading template takes time so using this only for the first time
                if(component.get('v.isGetFirstTempTemplete')){
                    component.set('v.isGetFirstTempTemplete',false)
-                   helper.getTemplete(component);
+                   helper.getFolders(component);
+                   //helper.getTemplete(component);
                }	
                component.set('v.isModalOpen',true);  
            }

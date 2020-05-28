@@ -4,9 +4,6 @@
 <aura:attribute name="recordDetail" type="Financial_Request__c"/>
 <aura:attribute name="optionsSobj" type="List"/>
 <aura:attribute name="selectedSobjValue" type="String" default="Financial_Request__c"/>
-<aura:attribute name="selectedCCRecord" type="GenLookUpResult" access="global" description="API Name of field, to be returned from component"/>
-<aura:attribute name="selectedBCCRecord" type="GenLookUpResult" access="global" description="API Name of field, to be returned from component"/>
-<aura:attribute name="selectedAddTORecord" type="GenLookUpResult" access="global" description="API Name of field, to be returned from component"/>
 <aura:attribute name="selectedRecord" type="GenLookUpResult" access="global" description="API Name of field, to be returned from component"/>
 <aura:attribute name="selectedSobjRecord" type="GenLookUpResult" access="global" description="API Name of field, to be returned from component"/>
 <aura:attribute name="email" type="string"/>
@@ -39,6 +36,7 @@
 <aura:attribute name="attachMentRec" type="contentDocument"/>
 <aura:attribute name="baseUrl" type="string"/>
 <aura:attribute name="attachParentId" type="Id"/>
+<aura:attribute name="originalRecordId" type="Id"/>
 <!-- 'showLoadingSpinner' attribute for show/hide the uploading image and msg in aura:if-->
 <aura:attribute name="showLoadingSpinner" type="boolean" default="false" />
 <aura:attribute name="showButton" type="boolean" default="false" />
@@ -71,25 +69,6 @@
     
 </aura:html>
 
-<!---Part 3 [message display part] --> 
-<aura:if isTrue="{!v.mailStatus}">
-    <div role="alertdialog" tabindex="-1" aria-labelledby="prompt-heading-id" aria-describedby="prompt-message-wrapper" class="slds-modal slds-fade-in-open slds-modal--prompt">
-        <div class="slds-modal__container">
-            <div class="slds-modal__header slds-theme--error slds-theme--alert-texture">
-                <h2 class="slds-text-heading--medium" id="prompt-heading-id">Mail Status</h2>
-            </div>
-            <div class="slds-modal__content slds-p-around--medium">
-                <div>
-                    <p>Email Sent successfully to {!v.email}</p>
-                </div>
-            </div>
-            <div class="slds-modal__footer slds-theme--default">
-                <button class="slds-button slds-button--brand" onclick="{!c.closeMessage}">Close</button>
-            </div>
-        </div>
-    </div>
-    <div class="slds-backdrop slds-backdrop--open"></div>
-</aura:if>
 <!--Email Templete Selection-->
 
 
@@ -165,48 +144,12 @@
     </div>
     
 </div>
-<div class="slds-grid slds-gutters">
-    <div class="slds-col slds-size_1-of-12" style="margin-top: 23px;">
-        Additional To
-    </div>
-    <div class="slds-col slds-size_10-of-12" style="margin-top: 20px;">
-        <c:GenLookupComp sObjectAPIName='User' 
-                            aura:id="addToLookup"
-                            field_API_text='Email' 
-                            field_API_val='Id' 
-                            selectedRecord = "{!v.selectedAddTORecord}"/>
-    </div>
     
-</div>
-<div class="slds-grid slds-gutters">
-    <div class="slds-col slds-size_1-of-12" style="margin-top: 23px;">
-        cc
-    </div>
-    <div class="slds-col slds-size_10-of-12" style="margin-top: 20px;">
-        <c:GenLookupComp sObjectAPIName='User' 
-                            field_API_text='Email' 
-                            field_API_val='Id' 
-                            selectedRecord = "{!v.selectedCCRecord}"/>  
-    </div>
-    
-</div>
-<div class="slds-grid slds-gutters">
-    <div class="slds-col slds-size_1-of-12" style="margin-top: 23px;">
-        Bcc
-    </div>
-    <div class="slds-col slds-size_10-of-12" style="margin-top: 20px;">
-        <c:GenLookupComp sObjectAPIName='User'
-                            aura:id="bccLookup"
-                            field_API_text='Email' 
-                            field_API_val='Id' 
-                            selectedRecord = "{!v.selectedBCCRecord}"/>
-    </div>
-    
-</div>
+
 <!--Tsk-->
 <div class="slds-grid slds-gutters">
     <div class="slds-col slds-size_1-of-12" style="margin-top: 23px;">
-        AddTo
+        Additional To
     </div>
     <div class="slds-col slds-size_9-of-12" >
         <lightning:textarea name="addTo" placeholder="Enter email ....." value="{!v.selectedMulAddTo}"/>

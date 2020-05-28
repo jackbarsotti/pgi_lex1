@@ -46,6 +46,8 @@
                 console.log('The Value',res);
                 component.set('v.subject',res);
                 component.set("v.recordDetail", response.getReturnValue());
+                //Always set to fin req 
+                component.set('v.originalRecordId',record.Id);
                 component.find ('sObjectLookup').setValue ({
                     SObjectLabel :  record.Name,
                     SObjectId : record.Id
@@ -80,6 +82,7 @@
         action.setCallback(this, function(response) {
             var state = response.getState();
             if (state === "SUCCESS") {
+                console.log('>> getFromAddess >>');
                 var result = response.getReturnValue();
                 var arrayMapKeys = [];
                 for(var key in result){
@@ -99,10 +102,14 @@
         
         action.setCallback(this, function(response) {
             var state = response.getState();
+            console.log('>> getSobjToRelatedList 123>>');
             if (state === "SUCCESS") {
+                console.log('>> getSobjToRelatedList >>');
                 var result = JSON.parse(response.getReturnValue());
                 var arrayMapKeys = [];
+                console.log('The Value1234 ',result);
                 for(var key in result){
+                    
                     arrayMapKeys.push({key: key, value: result[key], isSelected: selectedSobjValue === key});
                 }
                 //component.set("v.mapValues", arrayMapKeys);
@@ -128,7 +135,7 @@
             relatedToObject: relatedToObject,
             mSubject: getSubject,
             mbody: getbody,
-            parentRecord:component.get('v.recordId')
+            parentRecord:component.get('v.originalRecordId')
         });
         action.setCallback(this, function(response) {
             var state = response.getState();
@@ -193,7 +200,7 @@
         var getchunk = fileContents.substring(startPosition, endPosition);
         var action = component.get("c.saveChunk");
         action.setParams({
-            parentId: component.get("v.attachParentId"),
+            parentId: component.get("v.originalRecordId"),
             //parentId: 'a8E29000000GqnGEAS',
             fileName: file.name,
             base64Data: encodeURIComponent(getchunk),
@@ -237,10 +244,9 @@
         $A.enqueueAction(action);
     },
     getContentDoc: function(component,event,helper){
-        var recordId = component.get('v.recordId');
         var action = component.get("c.getContentDoc");
         action.setParams({
-            recordId: component.get("v.attachParentId")
+            recordId: component.get("v.originalRecordId")
         });    
         action.setCallback(this, function(response) {
             var state = response.getState();
@@ -307,11 +313,13 @@
         action.setCallback(this, function (response) {
             var state = response.getState();
             if (state === "SUCCESS" && response.getReturnValue() != null) {
+                console.log('The Folder>>>');
                 var result = response.getReturnValue();
                 var arrayMapKeys = [];
                 for(var key in result){
                     arrayMapKeys.push({key: key, value: result[key], isSelected: selectedFolder === key});
                 }
+                this.getTemplete(component);
                 component.set("v.folderList", arrayMapKeys);
             }
             else if (state === "INCOMPLETE") {

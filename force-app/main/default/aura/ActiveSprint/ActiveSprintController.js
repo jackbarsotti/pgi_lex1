@@ -320,10 +320,10 @@ win.focus();
         var label = event.getSource().get("v.label");
         var userId = $A.get("$SObjectType.CurrentUser.Id"); 	
         console.log('userId',userId);
-        if(label == 'Show only Me') {
+        if(label == 'Show only mine') {
             event.getSource().set("v.label","Show All")
         } else {
-            event.getSource().set("v.label","Show only Me")
+            event.getSource().set("v.label","Show only mine")
         }
         if(label == 'Show All'){
             console.log('The Records is',component.get('v.allRecords'));

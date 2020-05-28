@@ -25,7 +25,7 @@ public class EmailSendController {
         return objects;
     }
     @AuraEnabled
-    public static string getObjectName(){
+    public static String getObjectName(){
         Map<String,String> objects=new Map<String,String>();
         List<Schema.SObjectType> gd = Schema.getGlobalDescribe().Values();  
         for(SObjectType sot:gd){
@@ -146,11 +146,15 @@ return [SELECT Id,Name,ContentType, BodyLength FROM Attachment Where Description
     @AuraEnabled 
     public static List<String> getEmailfromAdd(){
         List<String> OrgWideList = new List<String>();
-        User userObj =[Select Name,Email From User where Id = : userinfo.getuserid()];
+        System.debug('Time Consume'+Limits.getCpuTime());
+        System.debug('Actual Tme Consume'+Limits.getLimitCpuTime());
+        //User userObj =[Select Name,Email From User where Id = : userinfo.getuserid()];
         OrgWideList.add('noreplylesforcecrmsupport@pgi.com');
-        OrgWideList.add(userObj.Name+'<'+userObj.Email+'>');
+        OrgWideList.add(userinfo.getUserName()+'<'+UserInfo.getUserEmail()+'>');
         for(OrgWideEmailAddress org : [select id, Address,DisplayName  from OrgWideEmailAddress])
             OrgWideList.add(org.DisplayName+'<'+org.Address+'>');
+        System.debug('Time Consume'+Limits.getCpuTime());
+        System.debug('Actual Tme Consume'+Limits.getLimitCpuTime());
         return OrgWideList;
     }
     @AuraEnabled
@@ -291,17 +295,20 @@ update a;*/
     
     @AuraEnabled
     public static Map<Id,String> getFolders(){
+         System.debug('Time Consume'+Limits.getCpuTime());
+        System.debug('Actual Tme Consume'+Limits.getLimitCpuTime());
         Map<Id,String> folderIdToMame = new Map<Id,String>();
-        EmailTemplate emailTemp = [SELECT Id,Body,Subject,HtmlValue ,Name,DeveloperName,FolderId,TemplateType, Description, FolderName 
-                                   FROM EmailTemplate  
-                                   where FolderId =: UserInfo.getOrganizationId() LIMIT 1];
-        folderIdToMame.put(emailTemp.FolderId, emailTemp.FolderName);
+       // EmailTemplate emailTemp = [SELECT Id,Body,Subject,HtmlValue ,Name,DeveloperName,FolderId,TemplateType, Description, FolderName 
+                                   //FROM EmailTemplate  
+                                  // where FolderId =: UserInfo.getOrganizationId() LIMIT 1];
+        folderIdToMame.put(UserInfo.getOrganizationId(),'Unfiled Public Classic Email Templates');
         for(Folder folderObj : [SELECT Id, Name, DeveloperName, Type 
                                 FROM Folder 
                                 WHERE Type  ='Email']){
                                     folderIdToMame.put(folderObj.Id,folderObj.Name);                
                                 }
-        
+    System.debug('Time Consume'+Limits.getCpuTime());
+        System.debug('Actual Tme Consume'+Limits.getLimitCpuTime());
         return folderIdToMame;
     }
     
