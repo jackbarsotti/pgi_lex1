@@ -4,8 +4,12 @@ public class CloneChildFinReqLEXControllerTest {
     static testMethod void testCloneAnySobjet(){
          Test.startTest();
         
-        Profile profile = [SELECT Id FROM Profile WHERE name = 'System Administrator'];
-        UserRole portalRole = [SELECT Id FROM UserRole WHERE PortalType = 'None' LIMIT 1];
+        Profile profile = [SELECT Id 
+                           FROM Profile 
+                           WHERE name = 'System Administrator'];
+        UserRole portalRole = [SELECT Id 
+                               FROM UserRole 
+                               WHERE PortalType = 'None' LIMIT 1];
         
         User u = new User(
             UserRoleId = portalRole.Id,
@@ -23,7 +27,9 @@ public class CloneChildFinReqLEXControllerTest {
         INSERT u;
         System.debug('User: '+u);
         
-        User objUser = [SELECT Id FROM User WHERE Id =: u.Id LIMIT 1];
+        User objUser = [SELECT Id 
+                        FROM User 
+                        WHERE Id =: u.Id LIMIT 1];
         
         System.runas(objUser) {
            
@@ -38,7 +44,7 @@ public class CloneChildFinReqLEXControllerTest {
             objFinReq.Bill_To_Client__c = objPgiClient.Id;
             INSERT objFinReq;
             
-            String cloneChildRecId=CloneChildFinReqLEXController.cloneAnySobjet(objFinReq.Id,'Financial_Request__c');
+            Financial_Request__c cloneChildRecId=CloneChildFinReqLEXController.cloneAnySobjet(objFinReq.Id,'Financial_Request__c');
             System.assert(cloneChildRecId!=null);
         }
         

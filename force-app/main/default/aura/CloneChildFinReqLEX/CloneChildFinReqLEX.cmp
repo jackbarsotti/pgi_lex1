@@ -14,7 +14,7 @@
     <aura:if isTrue="{!v.spinner}">
     <lightning:spinner class="spins" size="large" variant="brand" alternativeText="Loading" />
     </aura:if>
-    <ui:message aura:id="errorMsg" severity="error" class="slds-hide">
+  <!--  <ui:message aura:id="errorMsg" severity="error" class="slds-hide">
         {!v.errorMsg}
-    </ui:message>
+    </ui:message> -->
 </aura:component>

@@ -9,6 +9,7 @@
             if(state === 'SUCCESS'){
                 var result = responce.getReturnValue();
                 component.set("v.accountRecordList",result);
+                console.log('>> result >>',result)
                 if(result.NetSuite_Pull__c === true || result.NetSuite_Push__c === true){
                     var toastEvent = $A.get("e.force:showToast");
                     toastEvent.setParams({

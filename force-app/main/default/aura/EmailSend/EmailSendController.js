@@ -175,8 +175,7 @@
                //in doinit loading template takes time so using this only for the first time
                if(component.get('v.isGetFirstTempTemplete')){
                    component.set('v.isGetFirstTempTemplete',false)
-                   helper.getFolders(component);
-                   //helper.getTemplete(component);
+                   helper.getTemplete(component);
                }	
                component.set('v.isModalOpen',true);  
            }

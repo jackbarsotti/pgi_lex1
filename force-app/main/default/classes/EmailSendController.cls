@@ -2,14 +2,17 @@ public class EmailSendController {
     @AuraEnabled
     public static Financial_Request__c getrecord(String recordId){
         String recId = recordId;
+        System.debug('The Id'+recId);
         if(recId.startsWith('00T')){
+            System.debug('The Id'+recId);
             Task taskObj =[SELECT Id, WhatId 
                                     FROM Task 
-                                    WHERE ID =:recId];
-                                    if(taskObj !=null && taskObj.WhatId != null && taskObj.WhatId != ''){
+                                    WHERE Id =:recId];
                                         recId =  taskObj.WhatId;
-                                    }
         }
+        System.debug('The value is'+ [SELECT Id,Name,Subject__c ,RequestorsEmail__c, Requested_For__c 
+        FROM Financial_Request__c 
+        WHERE Id=:recId]);
         return [SELECT Id,Name,Subject__c ,RequestorsEmail__c, Requested_For__c 
                                     FROM Financial_Request__c 
                                     WHERE Id=:recId];
@@ -24,14 +27,29 @@ public class EmailSendController {
         }
         return objects;
     }
-    @AuraEnabled
-    public static String getObjectName(){
+   @AuraEnabled
+    public static String getObjectName(String selectedApiName){
         Map<String,String> objects=new Map<String,String>();
-        List<Schema.SObjectType> gd = Schema.getGlobalDescribe().Values();  
+        Map<String, Schema.SObjectType> schemaMap = Schema.getGlobalDescribe();
+        List<SobjectWrapper> returnList = new List<SobjectWrapper> ();
+        
+        for (AggregateResult res : [SELECT SObjectType From ObjectPermissions Group By SObjectType ]) {
+            if (schemaMap.containsKey(String.valueOf(res.get('SObjectType')))) {
+                returnList.add (new SobjectWrapper (
+                    schemaMap.get(String.valueOf(res.get('SObjectType'))).getDescribe().getLabel(),
+                    String.valueOf(res.get('SObjectType')),
+                    String.valueOf(res.get('SObjectType')) == selectedApiName
+                ));
+				//objects.put(String.valueOf(res.get('SObjectType')), 
+                  //      schemaMap.get(String.valueOf(res.get('SObjectType'))).getDescribe().getLabel());                
+            }
+        }
+        
+        /*List<Schema.SObjectType> gd = Schema.getGlobalDescribe().Values();  
         for(SObjectType sot:gd){
             objects.put(sot.getDescribe().getName(),sot.getDescribe().getLabel()); 
-        }
-        return JSON.serialize(objects);
+        }*/
+        return JSON.serialize(returnList);
     }
     @AuraEnabled 
     public static void sendMailMethod(String relatedToRecord,String addTo,String cc,String bcc,String toAddress,String fromEmail,String relatedToObject,String mSubject,String mbody,String parentRecord){
@@ -146,15 +164,11 @@ return [SELECT Id,Name,ContentType, BodyLength FROM Attachment Where Description
     @AuraEnabled 
     public static List<String> getEmailfromAdd(){
         List<String> OrgWideList = new List<String>();
-        System.debug('Time Consume'+Limits.getCpuTime());
-        System.debug('Actual Tme Consume'+Limits.getLimitCpuTime());
         //User userObj =[Select Name,Email From User where Id = : userinfo.getuserid()];
         OrgWideList.add('noreplylesforcecrmsupport@pgi.com');
         OrgWideList.add(userinfo.getUserName()+'<'+UserInfo.getUserEmail()+'>');
-        for(OrgWideEmailAddress org : [select id, Address,DisplayName  from OrgWideEmailAddress])
+        for(OrgWideEmailAddress org : [SELECT Id, Address,DisplayName  FROM OrgWideEmailAddress])
             OrgWideList.add(org.DisplayName+'<'+org.Address+'>');
-        System.debug('Time Consume'+Limits.getCpuTime());
-        System.debug('Actual Tme Consume'+Limits.getLimitCpuTime());
         return OrgWideList;
     }
     @AuraEnabled
@@ -295,20 +309,13 @@ update a;*/
     
     @AuraEnabled
     public static Map<Id,String> getFolders(){
-         System.debug('Time Consume'+Limits.getCpuTime());
-        System.debug('Actual Tme Consume'+Limits.getLimitCpuTime());
         Map<Id,String> folderIdToMame = new Map<Id,String>();
-       // EmailTemplate emailTemp = [SELECT Id,Body,Subject,HtmlValue ,Name,DeveloperName,FolderId,TemplateType, Description, FolderName 
-                                   //FROM EmailTemplate  
-                                  // where FolderId =: UserInfo.getOrganizationId() LIMIT 1];
         folderIdToMame.put(UserInfo.getOrganizationId(),'Unfiled Public Classic Email Templates');
         for(Folder folderObj : [SELECT Id, Name, DeveloperName, Type 
                                 FROM Folder 
                                 WHERE Type  ='Email']){
                                     folderIdToMame.put(folderObj.Id,folderObj.Name);                
                                 }
-    System.debug('Time Consume'+Limits.getCpuTime());
-        System.debug('Actual Tme Consume'+Limits.getLimitCpuTime());
         return folderIdToMame;
     }
     
@@ -362,5 +369,17 @@ update a;*/
         
         @AuraEnabled 
         public String emailBody{get;set;}
+    }
+    
+    public class SobjectWrapper {
+        @auraEnabled public String key;
+        @auraEnabled public String value;
+        @auraEnabled public Boolean isSelected;
+        
+        public SobjectWrapper  (String value, String key, Boolean isSelected) {
+            this.key = key;
+            this.value = value;
+            this.isSelected = isSelected;
+        }
     }
 }

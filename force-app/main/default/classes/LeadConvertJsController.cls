@@ -3,7 +3,9 @@ public class LeadConvertJsController {
     public static string getStatus(String recordId){
         string status ='';
         if(recordId != null || recordId != ''){
-      Lead objLead = [Select Id,Status from Lead where Id =:recordId];
+      Lead objLead = [SELECT Id,Status 
+                      FROM Lead 
+                      WHERE Id =:recordId];
          status = objLead.Status;
         }
         return status;
