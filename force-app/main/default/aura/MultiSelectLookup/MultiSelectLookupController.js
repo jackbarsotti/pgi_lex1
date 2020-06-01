@@ -9,7 +9,7 @@
 
     // When a keyword is entered in search box
 	searchRecords : function( component, event, helper ) {
-        if( !$A.util.isEmpty(component.get('v.searchString')) ) {
+        if( !$A.util.isEmpty(component.get('v.searchString')) && component.get('v.searchString').length >= 2) {
 		    helper.searchRecordsHelper(component, event, helper, []);
         } else {
             $A.util.removeClass(component.find('resultsDiv'),'slds-is-open');

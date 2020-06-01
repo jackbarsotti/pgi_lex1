@@ -23,6 +23,7 @@
     <enableLotusNotesImages>false</enableLotusNotesImages>
     <enableMassEnableReportBuilder>true</enableMassEnableReportBuilder>
     <enableNewChartsEngine>true</enableNewChartsEngine>
+    <enableOrgHasWatchlistEnabled>false</enableOrgHasWatchlistEnabled>
     <enableQueryLiveConnectors>false</enableQueryLiveConnectors>
     <enableRemoveFooterForRepDisplay>false</enableRemoveFooterForRepDisplay>
     <enableRemoveFooterFromRepExp>false</enableRemoveFooterFromRepExp>

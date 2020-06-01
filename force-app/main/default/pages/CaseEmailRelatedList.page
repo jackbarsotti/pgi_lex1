@@ -1,4 +1,5 @@
-<apex:page standardController="Case" extensions="CaseEmailRelatedListController" sidebar="true" showHeader="true">
+<apex:page standardController="Case" extensions="CaseEmailRelatedListController" sidebar="true" showHeader="true" lightningStylesheets="true">
+    <apex:includeLightning />
     <apex:includeScript value="/support/console/41.0/integration.js" />
     <apex:form >
 
@@ -83,6 +84,7 @@
         var subject;
         function myNavigation(subjectVar, myVar) {
             url = myVar;
+            alert('The Value'+url);
             subject = subjectVar;
             if (sforce.console.isInConsole()) {
                 if (url.indexOf('?') > 0) {
@@ -94,6 +96,7 @@
                 sforce.console.getEnclosingPrimaryTabId(openSubtab);
                 // sforce.console.openPrimaryTab(null, myVar, true, subject);
             } else {
+                console.log('=link=>',myVar);
                 var win = window.open(myVar, '_blank');
                 win.focus();
             }

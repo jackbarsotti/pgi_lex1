@@ -6,6 +6,9 @@
         });
         action.setCallback(this, function(responce){
             var state = responce.getState();
+            var title = '';
+            var type = '' ;
+            var message = '';
             if(state === 'SUCCESS'){
                 var result = responce.getReturnValue();
                 component.set("v.accountRecordList",result);
@@ -27,6 +30,22 @@
                             helper.checkSyncStatus(component, event, helper)
                         }), 5000
                     );
+                }
+            }
+            else if (state === "ERROR") {
+                var errors = response.getError();
+                if (errors) {
+                    if (errors[0] && errors[0].message) {
+                        title = 'Error';
+                        type = 'error';
+                        message =  errors[0].message;
+                        helper.showToast(component, event,title,type,message);
+                    }
+                } else {
+                    title = 'Error';
+                    type = 'error';
+                    message = 'Unknown error';
+                    helper.showToast(component, event,title,type,message);
                 }
             }
         });
@@ -94,5 +113,15 @@
             }
         });
         $A.enqueueAction(action);
-    }
+    },
+    
+    showToast : function(component, event,title,type,message) {
+        var toastEvent = $A.get("e.force:showToast");
+        toastEvent.setParams({
+            "title": title,
+            "type" : type,
+            "message": message
+        });
+        toastEvent.fire();
+        }
 })

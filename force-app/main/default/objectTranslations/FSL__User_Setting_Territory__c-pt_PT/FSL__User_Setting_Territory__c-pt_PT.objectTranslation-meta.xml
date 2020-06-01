@@ -2,12 +2,12 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value>Território de definição de utilizador</value>
+        <value>Definição de utilizador do território</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value>Territórios de definições de utilizador</value>
+        <value>Definições de utilizador do território</value>
     </caseValues>
-    <gender>Masculine</gender>
+    <gender>Feminine</gender>
     <nameFieldLabel>Nome do território de definição de utili</nameFieldLabel>
 </CustomObjectTranslation>

@@ -10,13 +10,13 @@
     <columns>OPPORTUNITY.CLOSE_DATE</columns>
     <columns>MRR_Total__c</columns>
     <columns>Amount__c</columns>
-    <filterScope>Team</filterScope>
+    <filterScope>SalesTeam</filterScope>
     <filters>
         <field>OPPORTUNITY.STAGE_NAME</field>
         <operation>equals</operation>
         <value>Closed Pending Approval</value>
     </filters>
-    <label>My Sales Team&#39;s (Pending Approval)</label>
+    <label>My Sales Team&apos;s (Pending Approval)</label>
     <language>en_US</language>
     <sharedTo>
         <roleAndSubordinatesInternal>PGi_Channel_C_Level</roleAndSubordinatesInternal>

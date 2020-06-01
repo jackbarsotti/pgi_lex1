@@ -12,7 +12,7 @@
     </picklistValues>
     <picklistValues>
         <masterLabel>Corrupted data</masterLabel>
-        <translation><!-- Corrupted data --></translation>
+        <translation>Dữ liệu bị lỗi</translation>
     </picklistValues>
     <picklistValues>
         <masterLabel>No Availability Rule</masterLabel>
@@ -24,6 +24,6 @@
     </picklistValues>
     <picklistValues>
         <masterLabel>User Aborted</masterLabel>
-        <translation><!-- User Aborted --></translation>
+        <translation>Người Dùng Đã Hủy</translation>
     </picklistValues>
 </CustomFieldTranslation>

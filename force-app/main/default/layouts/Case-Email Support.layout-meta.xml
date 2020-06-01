@@ -20,6 +20,13 @@
         <label>SLA</label>
         <layoutColumns>
             <layoutItems>
+                <height>200</height>
+                <page>CaseEmailRelatedList</page>
+                <showLabel>false</showLabel>
+                <showScrollbars>false</showScrollbars>
+                <width>100%</width>
+            </layoutItems>
+            <layoutItems>
                 <height>100</height>
                 <page>CaseEmailSLATimer</page>
                 <showLabel>false</showLabel>

@@ -1,4 +1,4 @@
-<apex:page standardController="EmailMessage" extensions="OutboundEmailMessagesController">
+<apex:page standardController="EmailMessage" extensions="OutboundEmailMessagesController" lightningStylesheets="true">
     <apex:includeScript value="/support/console/41.0/integration.js" />
     
         

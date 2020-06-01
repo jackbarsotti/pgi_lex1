@@ -1,4 +1,27 @@
 ({
+    deleteAllContentDoc : function(component,event,helper) {
+       var action = component.get('c.delListcontentDocument');
+         console.log('Deleted1');
+        var alldocRec = component.get('v.attachMentRec');
+        var idList =[];
+        for(var key in alldocRec){
+            idList.push(alldocRec[key].Id);
+        }
+        action.setParams({
+            recordIds : idList
+        });
+        action.setCallback(this, function(response) {
+            var state = response.getState();
+            if (state === "SUCCESS") {
+                 console.log('Deleted');
+           var dismissActionPanel = $A.get("e.force:closeQuickAction");
+        dismissActionPanel.fire();  
+            }
+            
+        })
+       $A.enqueueAction(action);  
+        
+    },
     getAllUser : function(component, helper) {
         var action = component.get("c.getUser");
         action.setBackground ();
@@ -53,7 +76,7 @@
                 });
                 if(record.RequestorsEmail__c === record.Requested_For__c){
                     component.set('v.defaultSelectedAddTo',record.Requested_For__c)
-                    component.set('v.selectedMulAddTo',component.get('v.defaultSelectedAddTo'));
+                    component.set('v.selectedMulAddTo',component.get('v.defaultSelectedAddTo')+';');
                 }else{
                     var defaultSelectedAddTo ='';
                     if(record.Requested_For__c != null && record.Requested_For__c != '' && record.Requested_For__c != 'undefined'){
@@ -63,7 +86,7 @@
                         defaultSelectedAddTo += ';'+record.RequestorsEmail__c;
                     }
                     component.set('v.defaultSelectedAddTo',defaultSelectedAddTo)
-                    component.set('v.selectedMulAddTo',component.get('v.defaultSelectedAddTo'));
+                    component.set('v.selectedMulAddTo',component.get('v.defaultSelectedAddTo')+';');
                 }
             }
             
@@ -139,6 +162,20 @@
                 // display the success message box by set mailStatus attribute to true
                this.showToast(component,event,"Success!","Success","The Email has been Sent Successfully");
             }
+            
+            else if (state === "ERROR") {
+                var errors = response.getError();
+                var message = '';
+                if (errors) {
+                    if (errors[0] && errors[0].message) {
+                        message = errors[0].message;
+                    }
+                } else {
+                    message = 'Unknown error';
+                }
+                this.showToast(component,event,"Warning!","Warning",message); 
+            }
+            
             
         });
         $A.enqueueAction(action);

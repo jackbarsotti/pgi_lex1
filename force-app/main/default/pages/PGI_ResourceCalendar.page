@@ -1,4 +1,5 @@
-<apex:page StandardController="ServiceResource" Extensions="PGI_ResourceCalendar_Controller">
+<apex:page StandardController="ServiceResource" Extensions="PGI_ResourceCalendar_Controller" lightningStylesheets="true">
+    <apex:includeLightning />
     <link href="{!$Resource.ResourceCalendar_fullCalendarCSS}" rel="stylesheet" />
     <link href="{!$Resource.ResourceCalendar_fullCalendarPrintCSS}" rel="stylesheet" media="print" />
      

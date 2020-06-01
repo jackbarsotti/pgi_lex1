@@ -130,26 +130,38 @@
     <enableFeeds>false</enableFeeds>
     <externalSharingModel>Private</externalSharingModel>
     <searchLayouts>
-        <customTabListAdditionalFields>LastModifiedDate</customTabListAdditionalFields>
-        <customTabListAdditionalFields>LastModifiedBy</customTabListAdditionalFields>
+        <customTabListAdditionalFields>StartTime</customTabListAdditionalFields>
+        <customTabListAdditionalFields>EndTime</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status</customTabListAdditionalFields>
+        <customTabListAdditionalFields>JobProfile</customTabListAdditionalFields>
         <customTabListAdditionalFields>ServiceResource</customTabListAdditionalFields>
         <customTabListAdditionalFields>ServiceTerritory</customTabListAdditionalFields>
-        <customTabListAdditionalFields>JobProfile</customTabListAdditionalFields>
-        <lookupDialogsAdditionalFields>LastModifiedDate</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>LastModifiedBy</lookupDialogsAdditionalFields>
+        <customTabListAdditionalFields>LastModifiedDate</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LastModifiedBy</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>StartTime</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>EndTime</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>JobProfile</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>ServiceResource</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>ServiceTerritory</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>JobProfile</lookupDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>LastModifiedDate</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>LastModifiedBy</lookupPhoneDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LastModifiedDate</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LastModifiedBy</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>StartTime</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>EndTime</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Status</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>JobProfile</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>ServiceResource</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>ServiceTerritory</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>JobProfile</lookupPhoneDialogsAdditionalFields>
-        <searchResultsAdditionalFields>LastModifiedDate</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>LastModifiedBy</searchResultsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LastModifiedDate</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LastModifiedBy</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>StartTime</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>EndTime</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>JobProfile</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>ServiceResource</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>ServiceTerritory</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>JobProfile</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LastModifiedDate</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LastModifiedBy</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>Private</sharingModel>
 </CustomObject>

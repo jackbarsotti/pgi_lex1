@@ -223,6 +223,11 @@
         <name>FSL__Objective_Asap</name>
     </recordTypes>
     <recordTypes>
+        <description><!-- Custom Objective --></description>
+        <label><!-- Custom Objective --></label>
+        <name>FSL__Objective_Custom_Logic</name>
+    </recordTypes>
+    <recordTypes>
         <description><!-- Minimize the use of overtime --></description>
         <label><!-- Minimize Overtime --></label>
         <name>FSL__Objective_Minimize_Overtime</name>

@@ -10,7 +10,7 @@
     <columns>OPPORTUNITY.CLOSE_DATE</columns>
     <columns>MRR_Total__c</columns>
     <columns>Amount__c</columns>
-    <filterScope>Team</filterScope>
+    <filterScope>SalesTeam</filterScope>
     <filters>
         <field>OPPORTUNITY.CLOSED</field>
         <operation>equals</operation>
@@ -21,7 +21,7 @@
         <operation>equals</operation>
         <value>THIS_MONTH</value>
     </filters>
-    <label>My Sales Team&#39;s (New THIS MONTH)</label>
+    <label>My Sales Team&apos;s (New THIS MONTH)</label>
     <language>en_US</language>
     <sharedTo>
         <roleAndSubordinatesInternal>PGi_Channel_C_Level</roleAndSubordinatesInternal>

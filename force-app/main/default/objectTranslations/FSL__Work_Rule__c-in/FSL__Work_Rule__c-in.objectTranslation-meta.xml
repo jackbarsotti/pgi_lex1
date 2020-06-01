@@ -10,6 +10,11 @@
     </caseValues>
     <nameFieldLabel>Nama Aturan Kerja</nameFieldLabel>
     <recordTypes>
+        <description><!-- Limits service resources based on a number of items such as service appointments, appointment durations, or custom field values --></description>
+        <label><!-- Field Service - Count Rule --></label>
+        <name>FSL__Count_Rule</name>
+    </recordTypes>
+    <recordTypes>
         <description><!-- Matches a property between a service appointment object to a property cointained in a list in service resource object --></description>
         <label><!-- Field Service - Extended Match --></label>
         <name>FSL__Enhanced_Match_Service</name>

@@ -151,7 +151,10 @@ return [SELECT Id,Name,ContentType, BodyLength FROM Attachment Where Description
     public static void delcontentDocument(String recordId){
         Delete [Select id,Title,FileType,CreatedBy.Name,ContentSize From contentDocument WHERE id =: recordId];
     }
-    
+    @AuraEnabled 
+    public static void delListcontentDocument(List<String> recordIds){
+        Delete [Select id,Title,FileType,CreatedBy.Name,ContentSize From contentDocument WHERE id =: recordIds];
+    }
     @AuraEnabled 
     public static List<String> getEmailfromAdd(){
         List<String> OrgWideList = new List<String>();
@@ -225,32 +228,7 @@ a.Body = EncodingUtil.base64Decode(existingBody + base64Data);
 
 update a;*/
     }
-    
-    
-    @AuraEnabled
-    public static Map<Id,List<EmailTemplate>> getEmailTempaltes1(){
-        Map<Id,List<EmailTemplate>> folderIdVsTemplateMap = new Map<Id,List<EmailTemplate>>();
-        Set<Id> folderId = new Set<Id>();
-        folderId.add(UserInfo.getOrganizationId());
-        for(Folder folderObj : [SELECT Id,Name FROM Folder WHERE Type='Email']){
-            folderId.add(folderObj.Id);
-        }
-        for(EmailTemplate emailtemp : [ SELECT Id, FolderId,TemplateType,Description, HtmlValue, FolderName, isActive, body,Name,subject 
-                                       FROM EmailTemplate 
-                                       WHERE isActive= true AND FolderId =: folderId ]){ 
-                                           if( !folderIdVsTemplateMap.containskey(emailtemp.FolderId)){
-                                               folderIdVsTemplateMap.put(emailtemp.FolderId,new List<EmailTemplate>{});
-                                           }
-                                           folderIdVsTemplateMap.get(emailtemp.FolderId).add(emailtemp);
-                                       }
-        
-        if( !folderIdVsTemplateMap.isEmpty() ){
-            
-            
-            return folderIdVsTemplateMap;
-        }
-        return null;
-    }
+
     @AuraEnabled
     public static List<EmailTemplate> getEmailTempaltes(){
         Map<Id,List<EmailTemplate>> folderIdVsTemplateMap = new Map<Id,List<EmailTemplate>>();

@@ -1,35 +1,128 @@
 ({
     doInit : function(component, event, helper) {
-         helper.getSobjToRelatedList(component, event, helper);  
+        helper.getSobjToRelatedList(component, event, helper);  
         var userId = $A.get("$SObjectType.CurrentUser.Id");
         var userIe = $A.get("$SObjectType.CurrentUser.Email");
         component.set('v.defaultSelectedBcc',userIe);
         component.set('v.selectedMulBcc',component.get('v.defaultSelectedBcc'));
         component.set('v.selectedSobjValue','Financial_Request__c');
-      
+        
         component.set('v.fromEmail','noreplylesforcecrmsupport@pgi.com');
         // Task
         //helper.getAllUser(component, event, helper); 
-            
+        
         helper.getRecord(component, event, helper);
         helper.getFromAddess(component, event, helper);
         
-      
+        
     },
     // Task
     handleMulAddClick : function(component, event, helper) {
         component.set('v.selectMultiple',true);
         component.set('v.purpose','addTo');
+        component.set('v.selectedDataObj',component.get('v.duelSelectedAddToList'));
+        var duelSelected = component.get('v.duelSelectedAddToList');
+        var listofPrevSelected =component.get('v.selectedMulAddTo').split(";");
+        var stringValue='';
+        if(duelSelected.length >0){
+            for(var i in listofPrevSelected){
+                var isPresent = 'true';
+                for(var key in duelSelected){
+                    if(duelSelected[key].Email === listofPrevSelected[i] && listofPrevSelected[i] !=''){
+                        console.log('Test1',listofPrevSelected[i]);
+                        isPresent = 'false';
+                    } 
+                }
+                if(isPresent === 'true' && listofPrevSelected[i] !=''){
+                    console.log('Test2',component.get('v.selectedMulAddTo'));
+                    stringValue +=listofPrevSelected[i]+';';
+                }
+                
+            } 
+            component.set('v.selectedMulAddTo',stringValue);
+            console.log('Test3',component.get('v.selectedMulAddTo'));
+        }
+        else{
+            stringValue =  component.get('v.selectedMulAddTo');
+            if(!stringValue.endsWith(";")){
+                stringValue = stringValue+';';
+            }
+            component.set('v.selectedMulAddTo',stringValue);
+        }   
+        
         //component.find("multiSelect").set('v.value',component.get('v.defaultAddToforDuel'));
     },
     handleMulCCClick : function(component, event, helper) {
         component.set('v.selectMultiple',true);
         component.set('v.purpose','cc');
+        component.set('v.selectedDataObj',component.get('v.duelSelectedCCList'));
+        var duelSelected = component.get('v.duelSelectedCCList');
+        var listofPrevSelected =component.get('v.selectedMulAddTo').split(";");
+        var stringValue='';
+        if(duelSelected.length >0){
+            for(var i in listofPrevSelected){
+                var isPresent = 'true';
+                for(var key in duelSelected){
+                    if(duelSelected[key].Email === listofPrevSelected[i] && listofPrevSelected[i] !=''){
+                        console.log('Test1',listofPrevSelected[i]);
+                        isPresent = 'false';
+                    } 
+                }
+                if(isPresent === 'true' && listofPrevSelected[i] !=''){
+                    console.log('Test2',component.get('v.selectedMulcc'));
+                    stringValue +=listofPrevSelected[i]+';';
+                }
+                
+            } 
+            component.set('v.selectedMulcc',stringValue);
+            console.log('Test3',component.get('v.selectedMulcc'));
+        }
+        else{
+            stringValue =  component.get('v.selectedMulcc');
+            console.log('Yhe',stringValue);
+            if(stringValue !== undefined && stringValue != ''){
+                if(!stringValue.endsWith(";")){
+                  stringValue = stringValue+';';  
+                }
+                
+            }
+            component.set('v.selectedMulcc',stringValue);
+        }   
+        
         //component.find("multiSelect").set('v.value',component.get('v.defaultCCforDuel'));
     },
-     handleMulBccClick : function(component, event, helper) {
+    handleMulBccClick : function(component, event, helper) {
         component.set('v.selectMultiple',true);
         component.set('v.purpose','bcc');
+        component.set('v.selectedDataObj',component.get('v.duelSelectedBccList'));
+        var duelSelected = component.get('v.duelSelectedBccList');
+        var listofPrevSelected =component.get('v.selectedMulBcc').split(";");
+        var stringValue='';
+        if(duelSelected.length >0){
+            for(var i in listofPrevSelected){
+                var isPresent = 'true';
+                for(var key in duelSelected){
+                    if(duelSelected[key].Email === listofPrevSelected[i] && listofPrevSelected[i] !=''){
+                        console.log('Test1',listofPrevSelected[i]);
+                        isPresent = 'false';
+                    } 
+                }
+                if(isPresent === 'true' && listofPrevSelected[i] !=''){
+                    console.log('Test2',component.get('v.selectedMulBcc'));
+                    stringValue +=listofPrevSelected[i]+';';
+                }
+                
+            } 
+            component.set('v.selectedMulBcc',stringValue);
+            console.log('Test3',component.get('v.selectedMulBcc'));
+        }
+        else{
+            stringValue =  component.get('v.selectedMulBcc');
+            if(!stringValue.endsWith(";")){
+                stringValue = stringValue+';';
+            }
+            component.set('v.selectedMulBcc',stringValue);
+        }   
         //component.find("multiSelect").set('v.value',component.get('v.defaultBccforDuel'));
     },
     handleMulSel : function(component, event, helper) {
@@ -40,9 +133,9 @@
         if(selectedOptionValueString !== null && selectedOptionValueString !== undefined && selectedOptionValueString !== '' ){
             selectedList = selectedOptionValueString.split(",");
         }
-            
+        
         component.set('v.duelSelectedList',selectedList);
-       /* if(allAddTo.includes(",")){
+        /* if(allAddTo.includes(",")){
             allAddTo = allAddTo.replace(/,/g,";");
         }*/
         //component.set('v.selectedMulAddTo',allAddTo);
@@ -55,9 +148,8 @@
         var getbody = component.get("v.body");
         var fromEmail = component.get("v.fromEmail");
         if(fromEmail.includes(">")){
-         fromEmail = fromEmail.substring(fromEmail.indexOf('<')+1,fromEmail.indexOf('>'));
+            fromEmail = fromEmail.substring(fromEmail.indexOf('<')+1,fromEmail.indexOf('>'));
         }
-        alert('the from add'+fromEmail);
         var toAddress = component.get("v.selectedRecord.SObjectId");
         var cc = component.get("v.selectedMulcc");
         var bcc = component.get("v.selectedMulBcc");
@@ -71,17 +163,17 @@
         } 
         else if($A.util.isEmpty(getSubject))
         {
-           alert('Please Enter Subject'); 
+            alert('Please Enter Subject'); 
         }
-        else {
-            helper.sendHelper(component, getSubject, getbody,relatedToRecord,addTo,bcc,cc,toAddress,fromEmail,relatedToObject);
-        }
+            else {
+                helper.sendHelper(component, getSubject, getbody,relatedToRecord,addTo,bcc,cc,toAddress,fromEmail,relatedToObject);
+            }
     },
     
     // when user click on the close buttton on message popup ,
     // hide the Message box by set the mailStatus attribute to false
     // and clear all values of input fields.   
-  
+    
     doSave: function(component, event, helper) {
         if (component.find("fileId").get("v.files").length > 0) {
             helper.uploadHelper(component, event);
@@ -125,7 +217,7 @@
         }); 
         /*var documentId = event.currentTarget.id;
         window.open('/'+documentId);*/
-      /* var navEvt = $A.get("e.force:navigateToSObject");
+        /* var navEvt = $A.get("e.force:navigateToSObject");
     navEvt.setParams({
       "recordId": documentId,
       "slideDevName": "related"
@@ -160,25 +252,24 @@
         component.set("v.subject", emailSubject);*/
         helper.getTemplateMergeFields(component,event,helper);
         component.set('v.isModalOpen',false);
-        alert('The Value'+emailTempId);
     }, 
-   selectTemplete:function(component,event,helper){
-       var toadd = component.get("v.selectedRecord.SObjectId");
-       var relatedToRecord = component.get("v.selectedSobjRecord.SObjectId");
-       if(toadd == null || toadd == '' || toadd == 'undefined'){
-          helper.showToast(component,event,"Warning!","Warning","Please select To address"); 
-       }
-       else if(relatedToRecord == null || relatedToRecord == '' || relatedToRecord == 'undefined'){
-           helper.showToast(component,event,"Warning!","Warning","Please select Relate To record"); 
-       }
-           else{
-               //in doinit loading template takes time so using this only for the first time
-               if(component.get('v.isGetFirstTempTemplete')){
-                   component.set('v.isGetFirstTempTemplete',false)
-                   helper.getTemplete(component);
-               }	
-               component.set('v.isModalOpen',true);  
-           }
+    selectTemplete:function(component,event,helper){
+        var toadd = component.get("v.selectedRecord.SObjectId");
+        var relatedToRecord = component.get("v.selectedSobjRecord.SObjectId");
+        if(toadd == null || toadd == '' || toadd == 'undefined'){
+            helper.showToast(component,event,"Warning!","Warning","Please select To address"); 
+        }
+        else if(relatedToRecord == null || relatedToRecord == '' || relatedToRecord == 'undefined'){
+            helper.showToast(component,event,"Warning!","Warning","Please select Relate To record"); 
+        }
+            else{
+                //in doinit loading template takes time so using this only for the first time
+                if(component.get('v.isGetFirstTempTemplete')){
+                    component.set('v.isGetFirstTempTemplete',false)
+                    helper.getTemplete(component);
+                }	
+                component.set('v.isModalOpen',true);  
+            }
     }, 
     handleFolderChange : function(component,event,helper){
         var folderId = component.find('folderId').get('v.value');
@@ -193,12 +284,52 @@
     },
     closeMultipleModel:function(component,event,helper){
         var purpose = component.get('v.purpose');
-        var listofSelected = component.get('v.duelSelectedList');
-        var stringValue =listofSelected.join(";");
-        if(purpose === 'addTo'){
+        var listofSelected = component.get('v.selectedDataObj');
+        
+        if(purpose === 'addTo'){             
+            component.set('v.duelSelectedAddToList',component.get('v.selectedDataObj'));
+            if(listofSelected.length >0){
+                var duelSelectedString='';
+                for(var key in listofSelected){
+                    duelSelectedString +=listofSelected[key].Email+';';
+                }
+                var stringValue = component.get('v.selectedMulAddTo');
+                console.log('String',stringValue);
+                component.set('v.selectedMulAddTo',stringValue+duelSelectedString);
+            }
+            
+        }
+        else if(purpose === 'cc'){
+            
+            component.set('v.duelSelectedCCList',component.get('v.selectedDataObj'));
+            if(listofSelected.length >0){
+                    var duelSelectedString='';
+                    for(var key in listofSelected){
+                        duelSelectedString +=listofSelected[key].Email+';';
+                    }
+                    var stringValue = component.get('v.selectedMulcc');
+                    console.log('String',stringValue);
+                    component.set('v.selectedMulcc',stringValue+duelSelectedString);
+                }
+        }
+            else{
+                component.set('v.duelSelectedBccList',component.get('v.selectedDataObj')); 
+                if(listofSelected.length >0){
+                    var duelSelectedString='';
+                    for(var key in listofSelected){
+                        duelSelectedString +=listofSelected[key].Email+';';
+                    }
+                    var stringValue = component.get('v.selectedMulBcc');
+                    console.log('String',stringValue);
+                    component.set('v.selectedMulBcc',stringValue+duelSelectedString);
+                }
+                
+                
+            }
+        /* if(purpose === 'addTo'){
             component.set('v.defaultAddToforDuel',component.get('v.duelSelectedList'));
             stringValue = component.get('v.defaultSelectedAddTo')+';'+stringValue;
-            component.set('v.selectedMulAddTo',stringValue);
+            component.set('v.selectedMulBcc',stringValue);
         }
         else if(purpose === 'cc'){
             component.set('v.defaultCCforDuel',component.get('v.duelSelectedList'));
@@ -208,11 +339,10 @@
             component.set('v.defaultBccforDuel',component.get('v.duelSelectedList'));
             stringValue = component.get('v.defaultSelectedBcc')+';'+stringValue;
             component.set('v.selectedMulBcc',stringValue);
-        }
+        }*/
         component.set('v.selectMultiple',false);
     },
-     closequickAction:function(component,event,helper){
-        var dismissActionPanel = $A.get("e.force:closeQuickAction");
-        dismissActionPanel.fire();
+    closequickAction:function(component,event,helper){
+        helper.deleteAllContentDoc(component,event,helper);
     },
 })

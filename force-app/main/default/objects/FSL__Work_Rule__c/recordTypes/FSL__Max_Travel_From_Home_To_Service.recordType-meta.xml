@@ -28,6 +28,43 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>FSL__CountObject__c</picklist>
+        <values>
+            <fullName>ServiceAppointment</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>WorkOrder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WorkOrderLineItem</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FSL__CountTimeResolution__c</picklist>
+        <values>
+            <fullName>Daily</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FSL__CountType__c</picklist>
+        <values>
+            <fullName>Assignments</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>CustomValue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duration</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>FSL__Maximum_Travel_From_Home_Type__c</picklist>
         <values>
             <fullName>Distance</fullName>

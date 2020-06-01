@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="ApexWireMethodWithParams" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+                <template for:each={contacts.data} for:item="contact">
+                    <p key={contact.Id}>{contact.Id}</p>
+                </template>
+            
+        </div>
+    </lightning-card>
+</template>

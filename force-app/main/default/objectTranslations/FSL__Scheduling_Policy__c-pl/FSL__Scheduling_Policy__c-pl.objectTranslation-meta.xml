@@ -3,12 +3,12 @@
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>false</plural>
-        <value>Zasada harmonogramowania</value>
+        <value>Polityka harmonogramowania</value>
     </caseValues>
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
-        <value>Zasady harmonogramowania</value>
+        <value>Polityki harmonogramowania</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>

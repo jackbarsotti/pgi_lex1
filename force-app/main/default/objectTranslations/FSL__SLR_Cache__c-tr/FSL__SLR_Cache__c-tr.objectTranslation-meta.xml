@@ -4,13 +4,13 @@
         <caseType>Nominative</caseType>
         <plural>false</plural>
         <possessive>None</possessive>
-        <value>SLR Özbelleği</value>
+        <value>SLR Özebelleği</value>
     </caseValues>
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <possessive>None</possessive>
-        <value>SLR Özbellekleri</value>
+        <value>SLR Özebellekleri</value>
     </caseValues>
     <caseValues>
         <caseType>Nominative</caseType>

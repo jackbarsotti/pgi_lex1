@@ -17,18 +17,19 @@ public with sharing class GenLookupCntlTest {
         INSERT conObj2;
         Contact conObj3 = New Contact(LastName='Test1345');
         INSERT conObj3;
-            GenLookupCntl.lookup(searchString, sObjectAPIName, fld_API_Text, fld_API_Val, fld_API_Search,  limitVal, isSOQL, filter);
-            GenLookupCntl.lookup(searchString, sObjectAPIName, fld_API_Text, fld_API_Val, fld_API_Search,  limitVal, true, filter);
+             GenLookUpResult[] genLookUpResults=GenLookupCntl.lookup(searchString, sObjectAPIName, fld_API_Text, fld_API_Val, fld_API_Search,  limitVal, isSOQL, filter);
+             GenLookUpResult[] genLookUpResult=GenLookupCntl.lookup(searchString, sObjectAPIName, fld_API_Text, fld_API_Val, fld_API_Search,  limitVal, true, filter);
             System.assertEquals(searchString, [SELECT Id,Name FROM Contact WHERE Id =: conObj.Id].Name);
+            System.assert(genLookUpResult!=null);
         Test.stopTest();
     }
     
-    static testMethod void testtestLookupSecond(){
+    static testMethod void testLookupSecond(){
         Test.startTest();
         Contact conObj = New Contact(LastName='TestContact');
         INSERT conObj;
         
-        String searchString = 'TestContact';
+        String searchString = 'TestCo';
         String sObjectAPIName = 'Contact';
         String fld_API_Text = 'Name';
         String fld_API_Val = 'Id';
@@ -38,7 +39,6 @@ public with sharing class GenLookupCntlTest {
         String filter = '';
 
             GenLookUpResult[] genLookUpResults=GenLookupCntl.lookup(searchString, sObjectAPIName, fld_API_Text, fld_API_Val, fld_API_Search,  limitVal, isSOQL, filter);
-           // System.assertEquals(searchString, [SELECT Id,Name FROM Contact WHERE Id =: conObj.Id].Name);
             System.assert(genLookUpResults!=null);
             
         Test.stopTest();

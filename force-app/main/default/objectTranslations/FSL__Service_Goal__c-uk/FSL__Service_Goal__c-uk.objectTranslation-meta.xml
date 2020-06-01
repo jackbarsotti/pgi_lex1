@@ -61,11 +61,16 @@
         <value><!-- Цілі послуги --></value>
     </caseValues>
     <gender>Feminine</gender>
-    <nameFieldLabel>ім&#39;я цілі обслуговування</nameFieldLabel>
+    <nameFieldLabel>ім&apos;я цілі обслуговування</nameFieldLabel>
     <recordTypes>
         <description><!-- Schedule as soon as possible --></description>
         <label><!-- ASAP --></label>
         <name>FSL__Objective_Asap</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Custom Objective --></description>
+        <label><!-- Custom Objective --></label>
+        <name>FSL__Objective_Custom_Logic</name>
     </recordTypes>
     <recordTypes>
         <description><!-- Minimize the use of overtime --></description>
