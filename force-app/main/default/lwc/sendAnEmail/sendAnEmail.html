@@ -1,0 +1,82 @@
+<template>
+    <div class="slds-grid slds-gutters">
+    <div class="slds-col slds-size_1-of-3">
+        <div>
+            <lightning-combobox 
+                name="From"
+                label="From"
+                value={value}
+                placeholder="-- Select One --">
+                
+                <!-- onchange={handleChange} options={options} -->
+            </lightning-combobox>
+        </div>
+        <div >
+            <lightning-input label ="Origin" type="text" disabled></lightning-input>
+        </div>
+        <div>
+            <lightning-combobox 
+                name="Status"
+                label="Status"
+                value={value}
+                placeholder="Select Status"
+                options={options}
+                onchange={handleChange}>
+            </lightning-combobox>
+        </div>
+        <div >
+            <lightning-input label ="To" type="text" ></lightning-input>
+        </div>
+        <div >
+            <lightning-input label ="CC" type="text" ></lightning-input>
+        </div>
+        <div >
+            <lightning-input label ="BCC" type="text" ></lightning-input>
+        </div>
+        <div >
+            <lightning-input label ="Template" type="text" disabled></lightning-input>
+        </div>
+        <div >
+            <lightning-input label ="Parent Case" type="text" ></lightning-input>
+        </div>
+        <div>
+            <lightning-input label ="Case" type="text" ></lightning-input>
+        </div>
+    </div>
+    <div class="slds-col slds-size_2-of-3">
+        <div style=" margin-top: 2%; ">
+            <lightning-button
+                name="Template"
+                label="Select Template"
+                >
+            </lightning-button>
+            <lightning-button
+                name="Attachemnt"
+                label="Attachment"
+                >
+            </lightning-button>
+            <lightning-button
+                name="Send"
+                label="Send"
+                >
+            </lightning-button>
+            <lightning-button
+                name="close"
+                label="Cancel"
+                onclick={closeWindow}>
+            </lightning-button>
+        </div>
+        
+            <!-- <template if:true ={isTemplateSelected}> -->
+                <div class="slds-p-around_medium lgc-bg" style="margin-left: -2%;">
+                    <lightning-input type="text" label="Subject" value={subject}></lightning-input>
+                </div>
+                <lightning-input-rich-text
+                    value={mailBody} 
+                    label = "Email Body"
+                    >
+                </lightning-input-rich-text>
+            <!-- </template> -->
+        </div>
+    </div>
+</template>
