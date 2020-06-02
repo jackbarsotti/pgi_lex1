@@ -84,7 +84,6 @@
         var subject;
         function myNavigation(subjectVar, myVar) {
             url = myVar;
-            alert('The Value'+url);
             subject = subjectVar;
             if (sforce.console.isInConsole()) {
                 if (url.indexOf('?') > 0) {

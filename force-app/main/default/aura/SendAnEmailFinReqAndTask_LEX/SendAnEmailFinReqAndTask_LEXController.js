@@ -159,12 +159,16 @@
         // check if Email field is Empty or not contains @ so display a alert message 
         // otherwise call call and pass the fields value to helper method    
         if ($A.util.isEmpty(toAddress)) {
-            alert('Please Select valid To Address');
+            helper.showToast(component,event,"Error!","Error","Please Select valid To Address");
         } 
         else if($A.util.isEmpty(getSubject))
         {
-            alert('Please Enter Subject'); 
+            helper.showToast(component,event,"Error!","Error","Please Enter Subject");
         }
+        //  else if($A.util.isEmpty(getbody))
+        // { 
+        //     helper.showToast(component,event,"Warning!","Warning","Body should not be empty");
+        // }
             else {
                 helper.sendHelper(component, getSubject, getbody,relatedToRecord,addTo,bcc,cc,toAddress,fromEmail,relatedToObject);
             }

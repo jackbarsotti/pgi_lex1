@@ -165,15 +165,19 @@
             
             else if (state === "ERROR") {
                 var errors = response.getError();
+                console.log('Error 0',errors);
                 var message = '';
                 if (errors) {
                     if (errors[0] && errors[0].message) {
                         message = errors[0].message;
+                        var splitedMessage = message.substring(message.indexOf(',')+1);
+                        //splitedMessage = splitedMessage.split(":")[0]+":"+splitedMessage.split(":")[1];
+                        message = splitedMessage;
                     }
                 } else {
                     message = 'Unknown error';
                 }
-                this.showToast(component,event,"Warning!","Warning",message); 
+                this.showToast(component,event,"Error!","Error",message); 
             }
             
             

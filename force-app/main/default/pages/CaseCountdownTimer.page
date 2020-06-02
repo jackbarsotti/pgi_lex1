@@ -1,4 +1,4 @@
-<apex:page showHeader="false" sidebar="false" standardController="Case" extensions="CaseCountdownTimer" docType="html-5.0">
+<apex:page showHeader="false" sidebar="false" standardController="Case" extensions="CaseCountdownTimer" docType="html-5.0" lightningStylesheets="true">
 	<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <head>
             <title>Case Countdown Timer</title>
