@@ -16,8 +16,68 @@
     EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<apex:page standardController="account" tabStyle="Account" > 
+<apex:page standardController="account" tabStyle="Account" lightningStylesheets="true"> 
+    <apex:includeScript value="/support/console/42.0/integration.js" />
+    
     <div style="height: 200px" class="bodyDiv" onclick="resizeFrame();">
-        <c:AccountHierarchyTree currentId="{!Account.id}" />
+        <c:AccountHierarchyTree accRecId="{!Account.id}" callback="navigateToSubTab" />
     </div>
+    <script>
+    	var url;
+        var subject;
+        function navigateToSubTab(subjectVar, myVar) {
+            url = myVar;
+            subject = subjectVar;
+            if (sforce.console.isInConsole()) {
+                /*if (url.indexOf('?') > 0) {
+                    url += '&inConsole=true';
+                } else {
+                    url += '?inConsole=true';
+                }*/
+                //Open a new primary tab with the salesforce.com home page in it
+                sforce.console.getEnclosingPrimaryTabId(openSubtab);
+                // sforce.console.openPrimaryTab(null, myVar, true, subject);
+            } else {
+                // This is for Lightning Sales View 
+                if({!$User.UITheme == 'Theme4d'}){
+                    var win = window.open('/one/one.app#/alohaRedirect'+myVar, '_blank');
+                win.focus();   
+                }
+                // This is for Lightning Console View
+                else if({!$User.UITheme == 'Theme4u'}){
+                    
+                    sforce.console.getEnclosingPrimaryTabId(openSubtab);  
+                }
+                // Classic View
+                else{
+                    console.log('=link=>',myVar);
+                var win = window.open(myVar, '_blank');
+                win.focus();
+                }
+                
+            }
+        }
+        var openSubtab = function openSubtab(result) {
+            //Now that we have the primary tab ID, we can open a new subtab in it
+            console.log(result, 'result');
+            console.log(result.id, 'result.id');
+            var primaryTabId = result.id;
+            console.log(url);
+            //url = '/apex/AccountHierarchyPage?id=' + url;
+            sforce.console.generateConsoleUrl([url], function (result) {
+            	sforce.console.openSubtab(primaryTabId, result.consoleUrl, true,
+                subject, null, openSuccess, subject);
+            });
+            
+        };
+        var openSuccess = function openSuccess(result) {
+            //Report whether we succeeded in opening the subtab
+            console.log(result);
+            if (result.success == true) {
+
+            } else {
+                sforce.console.openPrimaryTab(null, url, true, subject);
+            }
+        };
+    </script>
 </apex:page>
