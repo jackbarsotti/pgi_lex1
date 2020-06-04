@@ -4,7 +4,6 @@ import getEmailSLA from '@salesforce/apex/SendAnEmailComposer.getEmailSLA';
 import generatePreview from '@salesforce/apex/SendAnEmailComposer.generatePreview';
 import getTemplates from '@salesforce/apex/SendAnEmailComposer.getTemplates';
 import getEmailFolders from '@salesforce/apex/SendAnEmailComposer.getEmailFolders';
-import sendAnMail from '@salesforce/apex/SendAnEmailComposer.sendAnMail';
 
 export default class SendAnEmail extends LightningElement {
     @api recordId;
@@ -115,26 +114,6 @@ export default class SendAnEmail extends LightningElement {
         //     }
         // }
 
-    }
-    sendEmail(){
-        if(this.toReceipientIds.length > 0){
-            sendAnMail({templateId : this.templateId, recId : this.recordId, toRecepients : this.toReceipientIds, bccRecepients : this.bccReceipientIds, ccRecepients : this.ccReceipientIds})
-            .then(result=>{
-                const closeQA = new CustomEvent('close');
-                // Dispatches the event.
-                this.dispatchEvent(closeQA);
-            })
-            .catch(error => {
-                this.error = error;
-            });
-
-        }else{
-            const event = new ShowToastEvent({
-                title: 'No Receipeints',
-                message: 'Add Receipeints.',
-            });
-            this.dispatchEvent(event);
-        }
     }
     handleTemplate(event){
         this.isModalOpen = false;

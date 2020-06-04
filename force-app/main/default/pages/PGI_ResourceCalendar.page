@@ -91,7 +91,6 @@
 
                 eventClick: function(event) {
                     if (event.url) {
-                        console.log('>> event.url >>',event.url);
                         window.open(event.url);
                         return false;
                     }

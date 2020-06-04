@@ -1,5 +1,5 @@
-<apex:page standardController="EmailMessage" showheader="true" extensions="OutboundEmailMessagesController" lightningStylesheets="true">
-    <apex:includeScript value="/support/console/41.0/integration.js" />
+<apex:page standardController="EmailMessage"  extensions="OutboundEmailMessagesController" lightningStylesheets="true">
+    <apex:includeScript value="/support/console/42.0/integration.js" />
     
         
     <apex:form >

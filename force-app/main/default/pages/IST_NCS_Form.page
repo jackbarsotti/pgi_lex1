@@ -1,5 +1,5 @@
 <apex:page standardController="Implementation_Services__c" extensions="IST_NCS_Form_Controller" sidebar="false" action="{!checkRedirect}"
-    title="New Company Setup (NCS) Form: {!Implementation_Services__c.Name}" docType="html-5.0">
+    title="New Company Setup (NCS) Form: {!Implementation_Services__c.Name}" docType="html-5.0" lightningStylesheets="true">
     <style type="text/css">
         #bodyTable td:first-of-type.noSidebarCell {
             padding: 0px !important;
@@ -128,7 +128,7 @@
                     <apex:commandButton value="Continue" action="{! continueForm }" />
                     <apex:commandLink value="Submit via e-mail" action="{! submitForm }" rendered="{! submittable }" styleClass="btn" style="text-decoration:none">
                         <!-- <apex:param name="mailto_default" value="istcompanysetups@pgi.com" assignTo="{!mailto_default}" />
-                		<apex:param name="mailto_video" value="videoprovisioning@pgi.com" assignTo="{!mailto_video}" /> -->
+                        <apex:param name="mailto_video" value="videoprovisioning@pgi.com" assignTo="{!mailto_video}" /> -->
 
                         <!-- <apex:param name="mailto_default" value="cameron.leger@pgi.com" assignTo="{!mailto_default}" />
                         <apex:param name="mailto_video" value="cameron.leger@pgi.com" assignTo="{!mailto_video}" /> -->
@@ -392,7 +392,7 @@
                             </apex:pageBlockSectionItem>
 
                             <apex:pageBlockSectionItem >
-                                <apex:outputLabel for="taxType" value="	Bill-to Is Licensed User" />
+                                <apex:outputLabel for="taxType" value=" Bill-to Is Licensed User" />
                                 <apex:actionRegion >
                                     <apex:inputField value="{!Implementation_Services__c.NCS_Is_BillTo_Licensed_User__c}" rendered="{! Implementation_Services__c.NCS_BillTo_Type__c == '1' }">
                                         <apex:actionSupport event="onchange" reRender="sc1_2" />

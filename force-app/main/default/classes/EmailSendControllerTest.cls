@@ -1,7 +1,7 @@
 @isTest
 public with sharing class EmailSendControllerTest {
     @TestSetup
-    static void setData(){
+    static void setData(){ 
         Financial_Request__c finreqObj = new Financial_Request__c();
         finreqObj.Subject__c = 'testSubject';
         insert finreqObj;
@@ -57,14 +57,14 @@ public with sharing class EmailSendControllerTest {
     }
     static testMethod void testGetObjectName1(){
         Test.startTest();
-        EmailSendController.getObjectName1();
-        System.assertNotEquals(null, EmailSendController.getObjectName1());
+        List<String> returns = EmailSendController.getObjectName1();
+        System.assertNotEquals(0, EmailSendController.getObjectName1().size());
         Test.stopTest();
     }
     static testMethod void testGetObjectName(){
         Test.startTest();
-        EmailSendController.getObjectName();
-        System.assertNotEquals(null, EmailSendController.getObjectName());
+        String returnValue = EmailSendController.getObjectName('Account');
+        System.assertNotEquals(null, EmailSendController.getObjectName('Account'));
         Test.stopTest();
     }
     static testMethod void testSendMailMethod(){

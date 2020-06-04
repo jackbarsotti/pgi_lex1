@@ -16,8 +16,9 @@
     EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<apex:page standardController="account" tabStyle="Account" > 
+<apex:page standardController="account" tabStyle="Account" lightningStylesheets="true"> 
+    <apex:includeScript value="/support/console/42.0/integration.js" />
     <div style="height: 200px" class="bodyDiv" onclick="resizeFrame();">
-        <c:AccountHierarchyTree currentId="{!Account.id}" />
+        <c:AccountHierarchyTree accRecId="{!Account.id}"/>
     </div>
 </apex:page>

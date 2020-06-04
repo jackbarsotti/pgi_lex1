@@ -212,6 +212,7 @@
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-WaveHome</tabs>
     <tabs>standard-LiveChatTranscript</tabs>
+    <tabs>FSL_Calendar</tabs>
     <workspaceConfig>
         <mappings>
             <tab>Call_Center_DNIS__c</tab>
@@ -236,6 +237,9 @@
         </mappings>
         <mappings>
             <tab>Email_SLA_Management__c</tab>
+        </mappings>
+        <mappings>
+            <tab>FSL_Calendar</tab>
         </mappings>
         <mappings>
             <tab>Holiday_Schedule__c</tab>

@@ -1,6 +1,5 @@
 ({
     getALLsObjects : function(cmp, evt) {
-        
         let action = cmp.get('c.getallobjects');
         action.setCallback(this, function(res){
             var state = res.getState();
@@ -23,6 +22,7 @@
             console.log('state:::',state);
             if(state === 'SUCCESS'){
                 var res = res.getReturnValue();
+                console.log('res',res);
                 let cmpType = "lightning:formattedRichText", attrs ={};
                 attrs.value = res;                
                 $A.createComponent(cmpType, attrs, function(newCmp, status, statusMsgLst) {

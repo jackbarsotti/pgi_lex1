@@ -1,6 +1,6 @@
-<apex:page standardController="Case" extensions="CaseEmailRelatedListController" sidebar="true" showHeader="true" lightningStylesheets="true">
+<apex:page standardController="Case" extensions="CaseEmailRelatedListController" sidebar="true"  lightningStylesheets="true">
     <apex:includeLightning />
-    <apex:includeScript value="/support/console/41.0/integration.js" />
+    <apex:includeScript value="/support/console/42.0/integration.js" />
     <apex:form >
 
         <apex:pageblock id="CaseList">
@@ -95,9 +95,23 @@
                 sforce.console.getEnclosingPrimaryTabId(openSubtab);
                 // sforce.console.openPrimaryTab(null, myVar, true, subject);
             } else {
-                console.log('=link=>',myVar);
+                // This is for Lightning Sales View 
+                if({!$User.UITheme == 'Theme4d'}){
+                    var win = window.open('/one/one.app#/alohaRedirect'+myVar, '_blank');
+                win.focus();   
+                }
+                // This is for Lightning Console View
+                else if({!$User.UITheme == 'Theme4u'}){
+                    
+                    sforce.console.getEnclosingPrimaryTabId(openSubtab);  
+                }
+                // Classic View
+                else{
+                    console.log('=link=>',myVar);
                 var win = window.open(myVar, '_blank');
                 win.focus();
+                }
+                
             }
         }
         var openSubtab = function openSubtab(result) {

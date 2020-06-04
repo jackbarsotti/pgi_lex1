@@ -14,6 +14,7 @@ global without sharing class PGi_ServiceCatalogController {
   } set;}
   private Map<Id, PGi_ServiceCatalog_Category__c> categoryMap {
     get {
+      System.debug('>> categoryList >>'+new Map<Id, PGi_ServiceCatalog_Category__c>(categoryList));
       return new Map<Id, PGi_ServiceCatalog_Category__c>(categoryList);
     }
   }
@@ -23,6 +24,7 @@ global without sharing class PGi_ServiceCatalogController {
   public String baseUrl {get {
     String urlString = URL.getCurrentRequestUrl().toExternalForm();
     system.debug(urlString);
+    System.debug('> internalUser >'+ internalUser +','+ !internalUser);
     if(urlString.contains('/apex') && !internalUser) {
       String[] urlList = urlString.split('/apex');
       urlString = urlList[0];
@@ -107,6 +109,11 @@ global without sharing class PGi_ServiceCatalogController {
     categoryOptionList   = database.query(categoryOptionSoql);
     sectionList     = database.query(sectionSoql);
     hiddenValueList    = database.query(hiddenSoql);
+    
+    System.debug('>> categoryList >>'+categoryList);
+    System.debug('>> categoryOptionList >>'+categoryOptionList);
+    System.debug('>> sectionList >>'+sectionList);
+    System.debug('>> hiddenValueList >>'+hiddenValueList);
 
     if(ApexPages.currentPage().getParameters().get('category') != null) {
       try {
@@ -144,7 +151,7 @@ global without sharing class PGi_ServiceCatalogController {
     } else {
       pr = new PageReference(baseUrl);
     }
-    system.debug(pr);
+    system.debug('pr>>'+pr);
     //return ApexPages.currentPage();
     return setPageParams(pr);
   }

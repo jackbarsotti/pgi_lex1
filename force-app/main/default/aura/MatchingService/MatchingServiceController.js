@@ -1,6 +1,7 @@
 ({
     doInit : function(cmp, evt, help) {       
        // help.getALLsObjects(cmp, evt);
+       
         help.startMatchingService(cmp, evt);
     },
     handleChange : function(cmp, evt, help) {       

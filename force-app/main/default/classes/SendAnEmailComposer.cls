@@ -70,17 +70,6 @@ public with sharing class SendAnEmailComposer {
                 FROM Folder 
                 WHERE Type = 'Email' ORDER BY Name];
     }
-    @AuraEnabled(cacheable=true)
-    public static string sendAnMail(){
-        Messaging.SingleEmailMessage singleEmailMsg = new Messaging.SingleEmailMessage();
-        singleEmailMsg.setWhatId();
-        singleEmailMsg.setSaveAsActivity(true);
-        singleEmailMsg.setUseSignature(false);
-        singleEmailMsg.setOrgWideEmailAddressId(slaFromToOrgWideEmail.get(fromAddress));
-        //TODO -  INVALID_MESSAGE_ID_REFERENCE, References header is not valid singleEmailMsg.setReferences('<' + currentCase.ID + '>');
-        List<Messaging.SendEmailResult> results =  Messaging.sendEmail(new List<Messaging.SingleEmailMessage> {singleEmailMsg});  
-        
-    }
     public class OrgWideSLAWrapper{
         public String displayName;
         public String slaId;

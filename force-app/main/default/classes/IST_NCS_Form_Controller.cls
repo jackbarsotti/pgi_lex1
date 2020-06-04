@@ -748,6 +748,7 @@ public class IST_NCS_Form_Controller {
 
             if (this.licenseSets != null && this.licenseSets.size() > 0) {
                 for (LicenseSet__c ls : this.licenseSets) {
+                    System.debug('>> ls >>'+ls);
                     if (ls.Enterprise_Name__c != null && ls.Enterprise_Name__r != null && ls.Enterprise_Name__r.Family__c != null) {
                         this.offerings.add(ls.Enterprise_Name__c);
                         List<String> families = ls.Enterprise_Name__r.Family__c.split(';');

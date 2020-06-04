@@ -1,4 +1,18 @@
 <template>
+    <lightning-card title="Wire Get Picklist Info for specified picklist" icon-name="custom:custom67">
+        <div class="slds-m-horizontal_medium">
+            <template if:true={caseAreaOfFocus.data}>
+                <div class="scroller">
+                    <pre>{caseAreaOfFocusData}</pre>
+                </div>
+            </template>
+        </div>
+        <template if:true={caseAreaOfFocus.error}>
+            Error. No object info
+        </template>        
+    </lightning-card>
+
+
     <lightning-card title="Wire Get Object Info" icon-name="custom:custom67">
         <div class="slds-m-horizontal_medium">
             <template if:true={objectInfo.data}>
