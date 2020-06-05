@@ -1,4 +1,5 @@
-<apex:page controller="ScorecardController" sidebar="false" title="Scorecard" id="pageId">
+<apex:page controller="ScorecardController" sidebar="false" title="Scorecard" id="pageId" lightningStylesheets="true">
+    <apex:includeLightning />
     <html>
         <head>
             <style>

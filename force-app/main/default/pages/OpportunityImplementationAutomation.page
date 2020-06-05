@@ -1,4 +1,5 @@
-<apex:page controller="OpportunityImplementationAutomation" tabStyle="Opportunity">
+<apex:page controller="OpportunityImplementationAutomation" tabStyle="Opportunity" lightningStylesheets="true">
+    <apex:includeLightning />
     <apex:variable var="count" value="{!0}"/>
     <div  style="width:79vw;" id="pgiOpportunities"  />
     <apex:slds />

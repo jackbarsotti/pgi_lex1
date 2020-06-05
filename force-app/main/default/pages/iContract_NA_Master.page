@@ -1,6 +1,7 @@
 <apex:page showHeader="false" applyBodyTag="false" standardStylesheets="{! renderingAsHTML }" standardController="CONMAN_Contract__c"
            extensions="iContract_NA_Master_Controller" applyHtmlTag="{!if(renderingAsExcel,false,true)}" contentType="{! renderedContentType }" renderAs="{! renderingService }"
            lightningStyleSheets="true">
+    <apex:includeLightning />
     {!IF (renderingAsWord, "
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />", '')}
     <!-- Added by Anup   RT-335  -->
@@ -200,7 +201,7 @@
             background-color: white;
             padding: 2px;
             position: fixed;
-            top: 40px;
+            top: 0px;
             left: 0px;
             box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
             }

@@ -1,9 +1,9 @@
-<apex:page showHeader="true" sidebar="true" standardController="Case_Template__c" extensions="CaseTemplateExtension">
-	
+<apex:page showHeader="true" sidebar="true" standardController="Case_Template__c" extensions="CaseTemplateExtension" lightningStylesheets="true">
+    <apex:includeLightning />
 	<apex:form >
 		<apex:pageMessages />
 		<apex:pageBlock >
-			<apex:pageBlockButtons >
+			<apex:pageBlockButtons>
                     <apex:commandButton action="{!save}" value="Save" />
                     <apex:commandButton action="{!saveAndNew}" value="Save & New" />
                     <apex:commandButton action="{!cancel}" value="Cancel" />

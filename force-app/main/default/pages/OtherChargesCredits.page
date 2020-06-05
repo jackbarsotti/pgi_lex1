@@ -1,4 +1,5 @@
-<apex:page standardController="OtherChargeCredit__c" extensions="OtherChargesCreditsController" action="{!checkBilledStatus}">
+<apex:page standardController="OtherChargeCredit__c" extensions="OtherChargesCreditsController" action="{!checkBilledStatus}" lightningStylesheets="true" >
+    <apex:includeLightning />
     <apex:sectionHeader title="Other Charge or Credit"/>
 
     <apex:pageMessages escape="false"/>     
