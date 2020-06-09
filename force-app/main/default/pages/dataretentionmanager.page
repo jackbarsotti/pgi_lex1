@@ -1,4 +1,4 @@
-<apex:page controller="DataRetentionManager" showHeader="true" standardStylesheets="false" sidebar="false" docType="html-5.0">
+<apex:page controller="DataRetentionManager" showHeader="true" standardStylesheets="false" sidebar="false" docType="html-5.0" lightningStylesheets="true">
     <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <head>
             <title>Data Retention Manager</title>
