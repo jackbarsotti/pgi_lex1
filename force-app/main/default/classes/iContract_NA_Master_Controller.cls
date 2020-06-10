@@ -3139,7 +3139,7 @@ global class iContract_NA_Master_Controller {
                 MailingPostalCode, MailingState, MailingCity, MailingStreet, Phone, Fax, AccountId, Account.Name
                 FROM Contact WHERE id = :contactData.ContactId ];
          country = contactObjData.MailingCountry;
-            // System.debug('contactObjData: '+contactObjData);
+             System.debug('contactData: '+contactData.ContactId);
          if(contactObjData.MailingCountry != 'United States' && contactObjData.MailingCountry != 'Canada'){
                 dateFormatOutput = '0,date,dd/mm/yy';
                 isUSA = false;

@@ -1,8 +1,6 @@
 <apex:page standardController="RTEvent__c" extensions="RTEventCloseDispatcher" action="{!createEventClose}">
-
-  <apex:pageBlock >
-      <apex:pageBlockSection title="RTEvent Close">
-      </apex:pageBlockSection>
-  </apex:pageBlock>
-
+    <apex:pageBlock >
+        <apex:pageBlockSection title="RTEvent Close">
+        </apex:pageBlockSection>
+    </apex:pageBlock>
 </apex:page>

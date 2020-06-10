@@ -23,7 +23,6 @@
                 }
                 else{
                     helper.updateAccountSync(component, event, helper);
-                    helper.openPopUp(component, event, helper);
                     // helper.checkSyncStatus(component, event, helper);
                     window.setTimeout(
                         $A.getCallback(function() {
@@ -64,17 +63,7 @@
         console.log('>> record values are updated >>');
         $A.enqueueAction(action);
     },
-    openPopUp : function(component, event, helper){
-        var accountId = component.get('v.recordId');
-        console.log('>> inside show popup >>');
-        var top = screen.height - (screen.height * .5) - 100;
-        var left = screen.width - (screen.width * .5) - 187;
-        var params = 'dependent = yes,resizable=false,scrollbars=false,toolbar=false,menubar=false,location=false,status=true,directories=false,width=375,height=160,top=';
-        params += top.toString();
-        params += ',left=' + left.toString() + '\'';
-        window.open('/apex/account_status?whence='+accountId, 'NetSuite_Synchronization', params);
-        
-    },
+   
     checkSyncStatus : function(component, event, helper){
         var retries = 0;
         var maxRetries = 20;

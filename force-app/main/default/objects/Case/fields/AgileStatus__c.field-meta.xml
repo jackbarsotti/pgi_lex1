@@ -47,6 +47,31 @@
                 <default>false</default>
                 <label>Canceled</label>
             </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>In Progress (QE)</fullName>
+                <default>false</default>
+                <label>In Progress (QE)</label>
+            </value>
+            <value>
+                <fullName>In Progress (PO Review)</fullName>
+                <default>false</default>
+                <label>In Progress (PO Review)</label>
+            </value>
+            <value>
+                <fullName>Done (Ready)</fullName>
+                <default>false</default>
+                <label>Done (Ready)</label>
+            </value>
+            <value>
+                <fullName>Done (Closed)</fullName>
+                <default>false</default>
+                <label>Done (Closed)</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

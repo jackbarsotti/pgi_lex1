@@ -3,7 +3,7 @@
 	<apex:form >
 		<apex:pageMessages />
 		<apex:pageBlock >
-			<apex:pageBlockButtons>
+			<apex:pageBlockButtons >
                     <apex:commandButton action="{!save}" value="Save" />
                     <apex:commandButton action="{!saveAndNew}" value="Save & New" />
                     <apex:commandButton action="{!cancel}" value="Cancel" />

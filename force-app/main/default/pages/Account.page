@@ -46,4 +46,13 @@
       <apex:actionFunction name="cancelDelete" action="{!cancelDelete}"/>
                     
     </apex:form>
+
+    <!-- <apex:pageBlock  rendered="{!$User.UITheme != 'Theme3'}">
+    </apex:pageBlock> -->
+    <apex:pageBlock rendered="{!$User.UITheme != 'Theme3'}">
+    <script type="text/javascript">
+    { window.alert("Please Switch to Salesforce Classic"); }
+    </script>
+    <apex:pageMessage severity="Info" summary="You must switch to salesforce classic to access this page." strength="1"/>
+    </apex:pageBlock>
 </apex:page>

@@ -7,7 +7,7 @@ History    : Updated by Matthew Reznick
 Testing    : ?id=001d000000VsxRi
 Updates    : 02/05/2015 by Matthew 
 -->
-<apex:page showHeader="false" standardController="Account" >
+<apex:page showHeader="false" standardController="Account" lightningStylesheets="true">
   
     <apex:tabPanel switchType="client" selectedTab="ASX1" id="theTabPanel" height="50%">
         

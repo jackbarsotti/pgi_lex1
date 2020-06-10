@@ -44,9 +44,7 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>Delete</actionName>
-        <content>FoxDenBox</content>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Visualforce</type>
+        <type>Default</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>Delete</actionName>

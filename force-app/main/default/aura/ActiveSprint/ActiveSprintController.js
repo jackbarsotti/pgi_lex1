@@ -310,7 +310,25 @@ win.focus();
         console.log('order'+order);
         window.localStorage.setItem('BacklogSort', columnName+'.'+order);
         console.log('StartsWith'+localStorage.getItem('BacklogSort'));
-        helper.getActiveAgileSprint(component, event, helper,fieldName,order);
+        helper.getActiveAgileSprint(component, event, helper,fieldName,order).then(
+            $A.getCallback(function(result){
+                var records = component.get('v.allRecords');
+                        var label = component.find( "switchUser" ).get( "v.label" );
+                        var userId = $A.get("$SObjectType.CurrentUser.Id"); 
+                            if(label == 'Show only mine'){
+                                component.set('v.kanbanData.records',records);
+                            }
+                            else{
+                                var newArray = [];
+                                for(var key in records){
+                                    if(records[key].Assigned_To__c == userId || records[key].AgileTester__c == userId){
+                                        newArray.push(records[key]);
+                                    }
+                                }
+                                component.set('v.kanbanData.records',newArray); 
+                            }
+            })
+        )
         // helper.doInitHelper(component, event, helper);
          component.set('v.fieldToSort',fieldName);
          component.set('v.fieldOrder',order);
@@ -333,7 +351,6 @@ win.focus();
              var newArray = [];
              for(var key in records){
                  if(records[key].Assigned_To__c == userId || records[key].AgileTester__c == userId){
-                     console.log('Hai');
                     newArray.push(records[key]);
                  }
              }
@@ -347,6 +364,23 @@ win.focus();
         component.set('v.groupSelected',selectedGroup);
         helper.getActiveAgileSprint(component, event, helper,component.get('v.fieldToSort'),component.get('v.fieldOrder')).then(
             $A.getCallback(function(result){
+                //Show All
+                        var records = component.get('v.allRecords');
+                        var label = component.find( "switchUser" ).get( "v.label" );
+                        var userId = $A.get("$SObjectType.CurrentUser.Id"); 
+                            if(label == 'Show only mine'){
+                                component.set('v.kanbanData.records',records);
+                            }
+                            else{
+                                var newArray = [];
+                                for(var key in records){
+                                    if(records[key].Assigned_To__c == userId || records[key].AgileTester__c == userId){
+                                        newArray.push(records[key]);
+                                    }
+                                }
+                                component.set('v.kanbanData.records',newArray); 
+                            }
+                            //End
                 if(!component.get('v.isForBackLog')){
                     var map = component.get('v.groupToAgileStatus');
                     console.log('Mapvalues1',map[component.get('v.groupSelected')]);
@@ -368,6 +402,21 @@ win.focus();
                 helper.checkGroupActive(component, event, helper);
                 helper.getActiveAgileSprint(component, event, helper,component.get('v.fieldToSort'),component.get('v.fieldOrder')).then(
                     $A.getCallback(function(result){
+                        var records = component.get('v.allRecords');
+                        var label = component.find( "switchUser" ).get( "v.label" );
+                        var userId = $A.get("$SObjectType.CurrentUser.Id"); 
+                            if(label == 'Show only mine'){
+                                component.set('v.kanbanData.records',records);
+                            }
+                            else{
+                                var newArray = [];
+                                for(var key in records){
+                                    if(records[key].Assigned_To__c == userId || records[key].AgileTester__c == userId){
+                                        newArray.push(records[key]);
+                                    }
+                                }
+                                component.set('v.kanbanData.records',newArray); 
+                            }
                             helper.hideSpinner( component );
                     })
                 )

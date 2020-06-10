@@ -1,5 +1,5 @@
 <apex:page applyBodyTag="false" showHeader="false" applyHtmlTag="false" standardStylesheets="false" sidebar="false" controller="PGi_ServiceCatalogController"
-    extensions="PGI_ServiceCatalog_ADAuthorization" action="{!checkUser}" cache="true" expires="3600">
+    extensions="PGI_ServiceCatalog_ADAuthorization" action="{!checkUser}" cache="true" expires="3600" lightningStylesheets="true">
     <html>
 
     <head>

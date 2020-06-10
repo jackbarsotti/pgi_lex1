@@ -1,4 +1,5 @@
-<apex:page standardcontroller="Account" extensions="RateListController" showHeader="false" sideBar="false">   
+<apex:page standardcontroller="Account" extensions="RateListController" showHeader="false" sideBar="false">
+    
   <apex:stylesheet value="{!URLFOR($Resource.RTResources, 'css/jquery-ui.min.css')}"/>
   <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery.js')}"/>
   <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery-ui.min.js')}"/>

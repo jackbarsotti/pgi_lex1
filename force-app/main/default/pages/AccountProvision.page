@@ -1,140 +1,148 @@
-<apex:page standardcontroller="Account" extensions="AccountProvisionController">   
-  <apex:stylesheet value="{!URLFOR($Resource.RTResources, 'css/jquery-ui.min.css')}"/>
-  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery.js')}"/>
-  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery-ui.min.js')}"/>
-  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/messaging.js')}"/>
-  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/remoting.js')}"/>
-
-  <script>
-    $(document).ready(function(){  
-
-      var checkStatusInterval = setInterval(function(){checkStatus()}, 5000);
-      checkStatus();
-
-      //Check the Account's status, if we get a null response, then display the Default Schedule Selector
-      function checkStatus(){
-        AccountProvisionController.getStatusMessage('{!AccountId}', function(result,event){
-          if($.handleRemotingResult(result,event) && result){   
-            console.log(result);         
-            showInitialMessage(result);
-          }
-          else {
-            window.clearInterval(checkStatusInterval);
-            showDefaultScheduleSelectDialog();            
-          }
-        }, {escape: false});
-      }
-
-      //Should be abstracted into some lib
-      function populateSelectFromMap(select, map, selected){
-        $.each(map, function(key,value){
-          var builtOption = "";
-          if(selected===value)
-            builtOption = "<option value=" + key + " selected = "+selected+">" + value + "</option>";
-          else
-            builtOption = "<option value=" + key + ">" + value + "</option>";  
-
-          select.append(builtOption);
-        });                  
-      }  
-
-      function showInitialMessage(message){
-        //Display the initial message dialog
-        $.showDialog('.initial-message-dialog', 'Message', {
-          "Continue": function() {
-            $.disableDialogButtons($(this)); 
-            location.href='/{!AccountId}';
-          }
-        });
-
-        $('.warnMessage').html(message);
-        $('.warnMessages').show();                           
-      }
-
-      function showDefaultScheduleSelectDialog() {      
-        //Populate the Audio Schedule select
-        AccountProvisionController.getAudioSchedulesByType('Audio', function(result,event){
-          if($.handleRemotingResult(result,event)){
-            populateSelectFromMap($('#audioSchedules'), result, 'Audio - Standard');          
-          }
-        }, {escape: true});  
-
-        //Populate the Web Schedule select
-        AccountProvisionController.getAudioSchedulesByType('Web', function(result,event){
-          if($.handleRemotingResult(result,event)){
-            populateSelectFromMap($('#webSchedules'), result, 'Web - Standard');
-          }
-        }, {escape: true});   
-
-        //Populate the Hosting Schedule select
-        AccountProvisionController.getAudioSchedulesByType('Hosting', function(result,event){
-          if($.handleRemotingResult(result,event)){
-            populateSelectFromMap($('#hostingSchedules'), result, 'Hosting - Standard');
-          }
-        }, {escape: true});  
-
-        //Display the dialog       
-        $.showDialog('.default-schedule-select-dialog', 'Select Account Rate Sets', {
-          "Cancel": function() {
-            $.disableDialogButtons($(this)); 
-            location.href='/{!AccountId}';
-          },
-          "Provision": function() {
-            $.disableDialogButtons($(this)); 
-            provision($(this));
-          }            
-        });
-      }
-
-      function provision(buttonRef) {
-        var audioScheduleName = $('select[id="audioSchedules"] option:selected').text();
-        var audioScheduleId = $('select[id="audioSchedules"] option:selected').val();
-        var webScheduleName = $('select[id="webSchedules"] option:selected').text();
-        var webScheduleId = $('select[id="webSchedules"] option:selected').val();
-        var hostingScheduleName = $('select[id="hostingSchedules"] option:selected').text();
-        var hostingScheduleId = $('select[id="hostingSchedules"] option:selected').val();
-
-        AccountProvisionController.provision('{!AccountId}', audioScheduleName, audioScheduleId, webScheduleName, webScheduleId, hostingScheduleName, hostingScheduleId,function(result,event){
-        console.log(result);
-          if($.handleRemotingResult(result, event)){
-            location.reload();
-          }
-          else
-            $.enableDialogButtons(buttonRef);
-
-        }, {escape: true});
-      }
-    });  
-  </script>
-
-  <style>
-    .selectLabel{display: inline-block; width: 120px;}
-  </style>
-
-  <apex:detail relatedListHover="false"/>
-
-  <apex:outputPanel id="default-schedule-select-dialog" styleClass="default-schedule-select-dialog" layout="block">
-    <apex:pageBlock tabStyle="Account">          
-      <div class="ui-state-error ui-corner-all errorMessages" style="padding: 0 .7em .7em .7em; margin-bottom: 5px; display: none"> 
-        <p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span><span class="errorMessage"></span></p>
-      </div>
-          
-      <div class="ui-state-highlight ui-corner-all warnMessages" style="padding: 0 .7em .7em .7em; margin-bottom: 5px; display: none"> 
-        <p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span><span class="warnMessage"></span></p>
-      </div>
+<apex:page standardcontroller="Account" extensions="AccountProvisionController">
+    <apex:pageBlock title="My Content" rendered="{!$User.UITheme == 'Theme3'}"> 
+        <apex:stylesheet value="{!URLFOR($Resource.RTResources, 'css/jquery-ui.min.css')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery.js')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery-ui.min.js')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/messaging.js')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/remoting.js')}"/>
+        
+        <script>
+        $(document).ready(function(){  
+            
+            var checkStatusInterval = setInterval(function(){checkStatus()}, 5000);
+            checkStatus();
+            
+            //Check the Account's status, if we get a null response, then display the Default Schedule Selector
+            function checkStatus(){
+                AccountProvisionController.getStatusMessage('{!AccountId}', function(result,event){
+                    if($.handleRemotingResult(result,event) && result){   
+                        console.log(result);         
+                        showInitialMessage(result);
+                    }
+                    else {
+                        window.clearInterval(checkStatusInterval);
+                        showDefaultScheduleSelectDialog();            
+                    }
+                }, {escape: false});
+            }
+            
+            //Should be abstracted into some lib
+            function populateSelectFromMap(select, map, selected){
+                $.each(map, function(key,value){
+                    var builtOption = "";
+                    if(selected===value)
+                        builtOption = "<option value=" + key + " selected = "+selected+">" + value + "</option>";
+                    else
+                        builtOption = "<option value=" + key + ">" + value + "</option>";  
+                    
+                    select.append(builtOption);
+                });                  
+            }  
+            
+            function showInitialMessage(message){
+                //Display the initial message dialog
+                $.showDialog('.initial-message-dialog', 'Message', {
+                    "Continue": function() {
+                        $.disableDialogButtons($(this)); 
+                        location.href='/{!AccountId}';
+                    }
+                });
+                
+                $('.warnMessage').html(message);
+                $('.warnMessages').show();                           
+            }
+            
+            function showDefaultScheduleSelectDialog() {      
+                //Populate the Audio Schedule select
+                AccountProvisionController.getAudioSchedulesByType('Audio', function(result,event){
+                    if($.handleRemotingResult(result,event)){
+                        populateSelectFromMap($('#audioSchedules'), result, 'Audio - Standard');          
+                    }
+                }, {escape: true});  
+                
+                //Populate the Web Schedule select
+                AccountProvisionController.getAudioSchedulesByType('Web', function(result,event){
+                    if($.handleRemotingResult(result,event)){
+                        populateSelectFromMap($('#webSchedules'), result, 'Web - Standard');
+                    }
+                }, {escape: true});   
+                
+                //Populate the Hosting Schedule select
+                AccountProvisionController.getAudioSchedulesByType('Hosting', function(result,event){
+                    if($.handleRemotingResult(result,event)){
+                        populateSelectFromMap($('#hostingSchedules'), result, 'Hosting - Standard');
+                    }
+                }, {escape: true});  
+                
+                //Display the dialog       
+                $.showDialog('.default-schedule-select-dialog', 'Select Account Rate Sets', {
+                    "Cancel": function() {
+                        $.disableDialogButtons($(this)); 
+                        location.href='/{!AccountId}';
+                    },
+                    "Provision": function() {
+                        $.disableDialogButtons($(this)); 
+                        provision($(this));
+                    }            
+                });
+            }
+            
+            function provision(buttonRef) {
+                var audioScheduleName = $('select[id="audioSchedules"] option:selected').text();
+                var audioScheduleId = $('select[id="audioSchedules"] option:selected').val();
+                var webScheduleName = $('select[id="webSchedules"] option:selected').text();
+                var webScheduleId = $('select[id="webSchedules"] option:selected').val();
+                var hostingScheduleName = $('select[id="hostingSchedules"] option:selected').text();
+                var hostingScheduleId = $('select[id="hostingSchedules"] option:selected').val();
+                
+                AccountProvisionController.provision('{!AccountId}', audioScheduleName, audioScheduleId, webScheduleName, webScheduleId, hostingScheduleName, hostingScheduleId,function(result,event){
+                    console.log(result);
+                    if($.handleRemotingResult(result, event)){
+                        location.reload();
+                    }
+                    else
+                        $.enableDialogButtons(buttonRef);
+                    
+                }, {escape: true});
+            }
+        });  
+        </script>
+        
+        <style>
+            .selectLabel{display: inline-block; width: 120px;}
+        </style>
+        
+        <apex:detail relatedListHover="false"/>
+        
+        <apex:outputPanel id="default-schedule-select-dialog" styleClass="default-schedule-select-dialog" layout="block">
+            <apex:pageBlock tabStyle="Account">          
+                <div class="ui-state-error ui-corner-all errorMessages" style="padding: 0 .7em .7em .7em; margin-bottom: 5px; display: none"> 
+                    <p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span><span class="errorMessage"></span></p>
+                </div>
+                
+                <div class="ui-state-highlight ui-corner-all warnMessages" style="padding: 0 .7em .7em .7em; margin-bottom: 5px; display: none"> 
+                    <p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span><span class="warnMessage"></span></p>
+                </div>
+                
+                <div><span>Please select the account rate sets that will be used when provisioning your account.</span></div><br/>
+                <label class="selectLabel" for="audioSchedules">Audio Schedule:</label><select id="audioSchedules"></select><br/>
+                <label class="selectLabel" for="webSchedules">Web Schedule:</label><select id="webSchedules"></select><br/>
+                <label class="selectLabel" for="hostingSchedules">Hosting Schedule:</label><select id="hostingSchedules"></select><br/>
+                
+            </apex:pageBlock>    
+        </apex:outputPanel>
+        
+        <apex:outputPanel id="initial-message-dialog" styleClass="initial-message-dialog" layout="block">         
+            <div class="ui-state-highlight ui-corner-all warnMessages" style="padding: 0 .7em .7em .7em; margin-bottom: 5px; display: none"> 
+                <p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span><span class="warnMessage"></span></p>
+            </div>
+        </apex:outputPanel>
+    </apex:pageBlock>
+    <apex:pageBlock rendered="{!$User.UITheme != 'Theme3'}">
+        <script type="text/javascript">
+        { window.alert("Please Switch to Salesforce Classic"); }
+        </script>
+        <apex:pageMessage severity="Info" summary="You must switch to salesforce classic to access this page." strength="1"/>
+    </apex:pageBlock>
     
-      <div><span>Please select the account rate sets that will be used when provisioning your account.</span></div><br/>
-      <label class="selectLabel" for="audioSchedules">Audio Schedule:</label><select id="audioSchedules"></select><br/>
-      <label class="selectLabel" for="webSchedules">Web Schedule:</label><select id="webSchedules"></select><br/>
-      <label class="selectLabel" for="hostingSchedules">Hosting Schedule:</label><select id="hostingSchedules"></select><br/>
-      
-    </apex:pageBlock>    
-  </apex:outputPanel>
-
-  <apex:outputPanel id="initial-message-dialog" styleClass="initial-message-dialog" layout="block">         
-    <div class="ui-state-highlight ui-corner-all warnMessages" style="padding: 0 .7em .7em .7em; margin-bottom: 5px; display: none"> 
-      <p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span><span class="warnMessage"></span></p>
-    </div>
-  </apex:outputPanel>
-
 </apex:page>

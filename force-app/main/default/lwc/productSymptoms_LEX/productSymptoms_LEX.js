@@ -18,24 +18,27 @@ export default class ProductSymptoms_LEX extends LightningElement {
     @track defaultrecordtypeid;
 
     @wire(getObjectInfo, { objectApiName: CASE_PRODUCT_FOCUS_SYMPTOM_OBJECT })
-    getObjectInfoData({data,error}) {
-        if(data) {
-            console.log('log defaultrecordtypeid ' + data.defaultRecordTypeId);
-            this.defaultrecordtypeid = data.defaultRecordTypeId;
-        }
-        else if(error) {
-            console.log('log error ' + error);
-            this.error = error;
-        }
-    }
+    objectInfo;
 
-    /*
+    // getObjectInfoData({data,error}) {
+        
+    //     if(data) {
+    //         console.log('log defaultrecordtypeid ' + data.defaultRecordTypeId);
+    //         this.defaultrecordtypeid = data.defaultRecordTypeId;
+    //     }
+    //     else if(error) {
+    //         console.log('log error ' + error);
+    //         this.error = error;
+    //     }
+    // }
+
+    
     get objectInfoData() {
         return this.objectInfo ?
                 JSON.stringify(this.objectInfo.data, null, 2) :
                 'No object info';
     }
-    */
+    
     // @wire(getPicklistValues, { recordTypeId: this.defaultrecordtypeid, fieldApiName: PRODUCT_FIELD })
     // cpfsProduct;
 

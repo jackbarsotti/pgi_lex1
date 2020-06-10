@@ -72,8 +72,11 @@ public without sharing class DefaultValueExtension {
 	public DefaultValueExtension(ApexPages.StandardController controller) {
 		caseRecord = new Case();
 		Id caseTemplateId = ApexPages.CurrentPage().getParameters().get('CF00N1B00000AxTaB_lkid');
+		//Id caseTemplateId = 'a0O29000006FGaf';
+        System.debug('The Value is'+caseTemplateId);
 		Id dvId = ApexPages.CurrentPage().getParameters().get('Id');
 		if(dvId != null) {
+            System.debug('The DivId'+dvId);
 			Default_Value__c dv = [SELECT Id, Case_Template__c, Case_Template__r.RecordType__c FROM Default_Value__c WHERE Id =: dvId];
 			caseRecord.recordTypeId = dv.Case_Template__r.RecordType__c;
 			caseTemplateId = dv.Case_Template__c;

@@ -1594,10 +1594,6 @@
         <name>New_RFC_Case</name>
     </webLinks>
     <webLinks>
-        <label><!-- New_RFC_Case_Quick_Create --></label>
-        <name>New_RFC_Case_Quick_Create</name>
-    </webLinks>
-    <webLinks>
         <label><!-- Priority_Matrix --></label>
         <name>Priority_Matrix</name>
     </webLinks>

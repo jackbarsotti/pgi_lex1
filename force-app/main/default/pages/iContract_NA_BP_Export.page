@@ -5,10 +5,8 @@ No indentions are used because they would appear in the CSV file
 -->
 <apex:page standardController="CONMAN_Contract__c" extensions="iContract_NA_BP_Export"
            showheader="false" contenttype="text/csv#BP_Rate_Export_{! contract.Name }.csv"
-           cache="false" readOnly="true" lightningStyleSheets="true"
->
-<apex:includeLightning />
-iContract ID|iContract Offering|iContract Subheader|iContract Rate|iContract Customized|Bill Code|PGI Bill To Company ID|Contract Number|Rate Class|Contract Start Date|Rate Start Date|Rate End Date|Rate|Intl Rate|Setup Fee|Minimum Charge Rate|Upper band|Block Order|Block Iteration|Block Size|Currency|Bridge Country|Access Country|Access Location|PackageProductCode|contractPackageProductCode|intlContractPackageProductCode|ContractRateExternalId|PricingExternalId|ContractCurrencyExternalId|ProductName|PackageProductExt
+           cache="false" readOnly="true"
+>iContract ID|iContract Offering|iContract Subheader|iContract Rate|iContract Customized|Bill Code|PGI Bill To Company ID|Contract Number|Rate Class|Contract Start Date|Rate Start Date|Rate End Date|Rate|Intl Rate|Setup Fee|Minimum Charge Rate|Upper band|Block Order|Block Iteration|Block Size|Currency|Bridge Country|Access Country|Access Location|PackageProductCode|contractPackageProductCode|intlContractPackageProductCode|ContractRateExternalId|PricingExternalId|ContractCurrencyExternalId|ProductName|PackageProductExt
 <apex:repeat value="{! lines }" var="line">
 {! line.iContractId }|{! line.iContractOffering }|{! line.iContractRateGroup }|{! line.iContractRate }|{! IF(line.modified, 'MODIFIED', '') }|{! line.billCode }|||||||{! line.rate }|{! line.intlRate }|||||||{! line.currencyCode }|{! line.bridgeCountry }|{! line.accessCountry }||{! line.packageProductCode }
 </apex:repeat>

@@ -161,14 +161,6 @@
         <name>Drag_Drop_Attachments</name>
     </webLinks>
     <webLinks>
-        <label><!-- Pickup_RFC --></label>
-        <name>Pickup_RFC</name>
-    </webLinks>
-    <webLinks>
-        <label><!-- Submit_for_Approval --></label>
-        <name>Submit_for_Approval</name>
-    </webLinks>
-    <webLinks>
         <label><!-- Withdraw_Request2 --></label>
         <name>Withdraw_Request2</name>
     </webLinks>

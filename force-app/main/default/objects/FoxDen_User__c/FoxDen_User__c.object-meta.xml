@@ -44,9 +44,7 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>Delete</actionName>
-        <content>FoxDenUser</content>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Visualforce</type>
+        <type>Default</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>Delete</actionName>
@@ -88,9 +86,7 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>New</actionName>
-        <content>FoxDenUser</content>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Visualforce</type>
+        <type>Default</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>New</actionName>

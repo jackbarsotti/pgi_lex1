@@ -489,10 +489,6 @@
         <name>Account_Revenue_Usage_Snapshot</name>
     </webLinks>
     <webLinks>
-        <label><!-- Account_Team --></label>
-        <name>Account_Team</name>
-    </webLinks>
-    <webLinks>
         <label><!-- Active_Access_Codes_by_Account --></label>
         <name>Active_Access_Codes_by_Account</name>
     </webLinks>
