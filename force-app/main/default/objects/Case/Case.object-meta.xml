@@ -188,6 +188,7 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>CaseViewOverride</content>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
         <type>Visualforce</type>
@@ -219,7 +220,7 @@
         <excludedStandardButtons>Accept</excludedStandardButtons>
         <excludedStandardButtons>MassClose</excludedStandardButtons>
         <excludedStandardButtons>Forward</excludedStandardButtons>
-        <listViewButtons>Assign_to_Me_listbutton</listViewButtons>
+        <listViewButtons>Assign_to_Me_ListBtn_Lex</listViewButtons>
         <lookupDialogsAdditionalFields>CASES.CASE_NUMBER</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>CASES.RECORDTYPE</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>Current_Owner_s_Name__c</lookupDialogsAdditionalFields>
@@ -250,7 +251,7 @@
         <searchResultsAdditionalFields>CASES.STATUS</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CASES.CREATED_DATE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CASES.CLOSED_DATE</searchResultsAdditionalFields>
-        <searchResultsCustomButtons>Assign_to_Me_listbutton</searchResultsCustomButtons>
+        <searchResultsCustomButtons>Assign_to_Me_ListBtn_Lex</searchResultsCustomButtons>
     </searchLayouts>
     <sharingModel>Private</sharingModel>
 </CustomObject>

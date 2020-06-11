@@ -173,11 +173,7 @@
         <customTabListAdditionalFields>PGi_Company__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>PGi_Client__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
-        <excludedStandardButtons>OpenListInQuip</excludedStandardButtons>
-        <excludedStandardButtons>Accept</excludedStandardButtons>
-        <excludedStandardButtons>Forward</excludedStandardButtons>
-        <excludedStandardButtons>MassChangeOwner</excludedStandardButtons>
-        <listViewButtons>Assign_to_Me_listbutton</listViewButtons>
+        <listViewButtons>Assign_to_Me_ListBtn_Lex</listViewButtons>
         <massQuickActions>Change_Status</massQuickActions>
         <searchFilterFields>NAME</searchFilterFields>
         <searchFilterFields>RECORDTYPE</searchFilterFields>
@@ -196,6 +192,7 @@
         <searchResultsAdditionalFields>Historical_Case_Number__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>LAST_UPDATE</searchResultsAdditionalFields>
+        <searchResultsCustomButtons>Assign_to_Me_ListBtn_Lex</searchResultsCustomButtons>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
