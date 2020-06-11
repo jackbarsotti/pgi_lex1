@@ -10,12 +10,18 @@ public with sharing class AssignToMeListBtnFinReqController {
     public void assignRecords(){
          Set<Id> selectedIds = new Map<Id, SObject>(standardController.getSelected()).keySet(); 
         if(!selectedIds.isEmpty()){
-             Financial_Request__c finReqObj = [SELECT Id, Assigned_To__c 
+             List<Financial_Request__c> finReqList = new List<Financial_Request__c>();
+            for(Financial_Request__c finObj :[SELECT Id, Assigned_To__c 
                                               FROM Financial_Request__c 
-                                              WHERE Id =:selectedIds];
-            finReqObj.Assigned_To__c = UserInfo.getUserId();
+                                              WHERE Id =:selectedIds]){
+                                 finObj.Assigned_To__c = UserInfo.getUserId();    
+                                        finReqList.add(finObj);          
+                                              }
             try{
-                UPDATE finReqObj;
+                if(!finReqList.isEmpty()){
+                  UPDATE finReqList;  
+                }
+                
             }
             catch(Exception e){
             } 
