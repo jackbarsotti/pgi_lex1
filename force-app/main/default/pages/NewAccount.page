@@ -1,3 +1,11 @@
 <apex:page standardController="Account" extensions="NewAccount" action="{!doInit}" tabStyle="Account">
-    <p>To create a new Account, first start with a Lead and go through the Lead Convert process.</p>  
+     <apex:pageBlock title="My Content" rendered="{!$User.UITheme == 'Theme3'}">
+    <p>To create a new Account, first start with a Lead and go through the Lead Convert process.</p>
+         </apex:pageBlock>
+    <apex:pageBlock rendered="{!$User.UITheme != 'Theme3'}">
+        <script type="text/javascript">
+        { window.alert("Please Switch to Salesforce Classic"); }
+        </script>
+        <apex:pageMessage severity="Info" summary="You must switch to salesforce classic to access this page." strength="1"/>
+    </apex:pageBlock>
 </apex:page>
