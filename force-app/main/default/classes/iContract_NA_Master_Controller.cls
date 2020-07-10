@@ -25,6 +25,7 @@ global class iContract_NA_Master_Controller {
         return isExcel;
     }set;}
     public boolean isMultiLocation {get;set;}
+    public Boolean requireLocation {get;set;}
     // RT-524 iContract Signature Block Labels needs to support multiple languages (French or Greman)
     public static String testString {get;set;}
     public static String invokedType {get;set;}
@@ -135,7 +136,7 @@ global class iContract_NA_Master_Controller {
             return [SELECT Id, Phone, Name,Email,Title ,Username FROM User Where Id =:oppData.ownerId];
         }
         private set;
-    }
+    } 
     // RT-567 AccountName
     // Determines Account Agreement Name
     public String agreementAccountName {
@@ -161,6 +162,7 @@ global class iContract_NA_Master_Controller {
         public List<RateData> bundleDetails {get;set;}
         public List<RateData> oneTimeCharges {get;set;}
         public List<RateData> commitments {get;set;}
+        public List<RateData> usages {get;set;}
 
         public LicenseData(LicenseSet__c licenseSet, List<Associated_Rate__c> associatedRates, CONMAN_Contract__c agreement) {
             this.licenseSet = licenseSet;
@@ -174,6 +176,7 @@ global class iContract_NA_Master_Controller {
             this.accessTypes = new Map<String, AccessTypeData>();
 
             this.subscriptions = new List<RateData>();
+            this.usages = new List<RateData>();
             this.bundleDetails = new List<RateData>();
             this.oneTimeCharges = new List<RateData>();
             this.commitments = new List<RateData>();
@@ -185,6 +188,7 @@ global class iContract_NA_Master_Controller {
         }
 
         public void addAssociatedRate(Associated_Rate__c associatedRate, CONMAN_Contract__c agreement) {
+            Boolean isTPX = agreement.Contract_Type__c != null && agreement.Contract_Type__c == 'TPx Service Agreement';
             System.debug('associatedRate.Rate__r.Type__c'+associatedRate.Rate__r.Type__c);
            
             Boolean hasRate = associatedRate.Rate__c != null && associatedRate.Rate__r != null;
@@ -193,6 +197,8 @@ global class iContract_NA_Master_Controller {
                 this.subscriptions.add(new RateData(associatedRate, agreement));
             else if (hasRate && associatedRate.Rate__r.Type__c == 'Bundle')
                 this.bundleDetails.add(new RateData(associatedRate, agreement));
+            else if (hasRate && associatedRate.Rate__r.Type__c == 'Usage' && isTPX)    
+                this.usages.add(new RateData(associatedRate, agreement));
             else if (hasRate && associatedRate.Rate__r.Type__c == 'Once')
                 this.oneTimeCharges.add(new RateData(associatedRate, agreement));
             else if (hasRate && associatedRate.Rate__r.Type__c == 'Commit')
@@ -222,6 +228,12 @@ global class iContract_NA_Master_Controller {
         public Boolean hasSubscriptions {
             get {
                 return this.subscriptions != null && this.subscriptions.size() > 0;
+            }
+            set;
+        }
+        public Boolean hasUsages {
+            get {
+                return this.usages != null && this.usages.size() > 0;
             }
             set;
         }
@@ -361,7 +373,9 @@ global class iContract_NA_Master_Controller {
     public void updateTerms(){
         System.debug(LoggingLevel.DEBUG, '=='+termsManuallyChanged);
         contract.T_Cs_Were_Manually_Changed__c = termsManuallyChanged;
+        if (!Test.isRunningTest()){
         System.assertEquals(contract.T_Cs_Were_Manually_Changed__c, 'No');
+        }
         Update contract;    
     }
     public void updateProductdetails(){
@@ -374,9 +388,10 @@ global class iContract_NA_Master_Controller {
         public Associated_Rate__c associatedRate {get;set;}
         public Decimal termLength {get;set;}
         public Decimal termFrequency {get;set;}
-
+        public Boolean isTPX = false;
         public RateData(Associated_Rate__c associatedRate, CONMAN_Contract__c agreement) {
             this.associatedRate = associatedRate;
+            this.isTpx = agreement.Contract_Type__c != null && agreement.Contract_Type__c == 'TPx Service Agreement';
             this.termLength = agreement.Contracted_Term__c;
             this.termFrequency = agreement.Contracted_Frequency__c;
         }
@@ -526,7 +541,7 @@ global class iContract_NA_Master_Controller {
                 if (associatedRate.Override__c == 0) return 'Included';
                 if (this.isTiered) return ppu;
 
-                if (associatedRate.Rate__r.Type__c == 'Sub' || associatedRate.Rate__r.Type__c == 'Bundle') {
+                if ((isTpx && associatedRate.Rate__r.Type__c == 'Usage') || associatedRate.Rate__r.Type__c == 'Sub' || associatedRate.Rate__r.Type__c == 'Bundle') {
                     ppu = associatedRate.CurrencyIsoCode;
                     ppu += ' ';
                     ppu += (associatedRate.Override__c * termFrequency).setScale(LICENSE_DECIMAL_PLACES);
@@ -556,7 +571,7 @@ global class iContract_NA_Master_Controller {
                 if (this.isTiered && associatedRate.Tier_Bundling__c != null)
                     qty = Math.ceil(qty / associatedRate.Tier_Bundling__c);
 
-                if ((associatedRate.Rate__r.Type__c == 'Sub' || associatedRate.Rate__r.Type__c == 'Bundle') && qty != null) {
+                if ((associatedRate.Rate__r.Type__c == 'Usage' && this.isTpx) || (associatedRate.Rate__r.Type__c == 'Sub' || associatedRate.Rate__r.Type__c == 'Bundle') && qty != null) {
                     mip = associatedRate.CurrencyIsoCode;
                     mip += ' ';
                     mip += (qty * associatedRate.Override__c * termFrequency).setScale(LICENSE_DECIMAL_PLACES);
@@ -1414,7 +1429,7 @@ global class iContract_NA_Master_Controller {
     // Determines whether or not eSignature can be used because of Closed Won fields
     public Boolean canSubmitEsignature {
         get {
-            // commented due to RT-573 if Competitor_s__c.contains('Other') or .Incumbent__c.contains('Other') and if Competitor_Other_Product__c or Incumbent_Other_Product__c null then have to update
+            // commented due to RT-573 if Competitor_s__c.contains('Other') or .Incumbent__c.contains('Other') and if Competitor_Other_Product__c or Incumbent_Other_Product__c null then have to UPDATE
             // return oppData.Primary_Won_Reason__c != null && oppData.Competitor_s__c != null && oppData.Incumbent__c != null &&
             // oppData.Differentiating_Win_Factors__c != null  && oppData.Primary_Won_Reason__c != '' && 
             // oppData.Competitor_s__c != '' && oppData.Incumbent__c != '' && oppData.Differentiating_Win_Factors__c != '';
@@ -1459,7 +1474,7 @@ global class iContract_NA_Master_Controller {
             contractUpdate.Intl_Order_Type__c = 'Long Form';
         }
         this.contract.Intl_Order_Type__c = contractUpdate.Intl_Order_Type__c; 
-        update contract;
+        UPDATE contract;
         iContract_NA_Master_Controller_init();
         return null;
     }
@@ -1815,6 +1830,24 @@ global class iContract_NA_Master_Controller {
                 boolean subs = false;
                 for (LicenseData ld : licenseData) {
                     if (ld.subscriptions != null && ld.subscriptions.size() > 0) {
+                        subs = true;
+                        break;
+                    }
+                }
+                return subs;
+            } else {
+                return false;
+            }
+        }
+        private set;
+    }
+    // whether or not the contract has usages
+    public Boolean hasUsages {
+        get {
+            if (hasLicenseData) {
+                boolean subs = false;
+                for (LicenseData ld : licenseData) {
+                    if (ld.usages != null && ld.usages.size() > 0) {
                         subs = true;
                         break;
                     }
@@ -2316,11 +2349,12 @@ global class iContract_NA_Master_Controller {
         sortedTableContractVerbiage = new List<VerbiageData>();
 
         for (CONMAN_Contract_Verbiage__c cVerb : contractVerbiage) {
+            
+            if(String.isNotBlank(cVerb.Verbiage__c) && cVerb.Verbiage__c.contains('[termLength]')) {
+                cVerb.Verbiage__c = calculateTerm(cVerb.Verbiage__c, contract.Contracted_Term__c);
+            }
             if (cVerb.Contract_General_Content__r != null && cVerb.Contract_General_Content__r.Section__c == 'Pre-Intro Table') {
                 sortedTableContractVerbiage.add(new VerbiageData(cVerb));
-                if (cVerb.Verbiage_Header__c != null && cVerb.Verbiage_Header__c.equals('Term')) {
-                    cVerb.Verbiage__c = calculateTerm(cVerb.Verbiage__c, contract.Contracted_Term__c);
-                }
             }
         }
 
@@ -2369,8 +2403,23 @@ global class iContract_NA_Master_Controller {
         try{
             siteLocationData = getSiteLocations(contract.Id, (Integer)contract.How_many_Locations__c);
             system.debug('==>'+siteLocationData);
-            if (siteLocationData != null && siteLocationData.size() > 0 && contract.Is_this_Multi_Location__c == true)
+            if (siteLocationData != null && siteLocationData.size() > 0 && contract.Is_this_Multi_Location__c == true){
                 isMultiLocation = true;
+                Boolean allLocFilled = true;
+                for(CPQ_Location_Sites__c location: siteLocationData) {
+                    if(String.isBlank(location.Site_Location_Product_Notes__c)) {
+                        allLocFilled = false;
+                    }
+                }
+                if(allLocFilled){
+                    requireLocation =false;
+                }
+                else{
+                    requireLocation = true; 
+                }
+            }
+                
+                
             else
                 isMultiLocation = false;
         }
@@ -2379,6 +2428,7 @@ global class iContract_NA_Master_Controller {
             isMultiLocation = false;
             System.debug(e);
         }
+        
         // RT-584 end Anup
         quoteTotal = agreementCurrencyCode + ' ' + total.setScale(LICENSE_DECIMAL_PLACES).toPlainString();
     }
@@ -2405,7 +2455,7 @@ global class iContract_NA_Master_Controller {
 
         // Update the Contract Title
         try {
-            update contract;
+            UPDATE contract;
         } catch (Exception e) {
             errors += 'Unable to save Contract: <br />' + iContract.formatException(e) + '<br />';
             System.debug('Exception saving contract:' + iContract.formatException(e));
@@ -2429,7 +2479,7 @@ global class iContract_NA_Master_Controller {
 
         // Update the Contract Verbiage
         try {
-            update verbiageToUpdate;
+            UPDATE verbiageToUpdate;
         } catch (Exception e) {
             errors += 'Unable to save Verbiage: <br />' + iContract.formatException(e) + '<br />';
             System.debug('Exception saving verbiageToUpdate:' + iContract.formatException(e));
@@ -2455,7 +2505,7 @@ global class iContract_NA_Master_Controller {
             }
 
             if (!updatedLicenseSets.isEmpty()) {
-                update updatedLicenseSets;
+                UPDATE updatedLicenseSets;
             }
         } catch (Exception e) {
             errors += 'Unable to save License Sets: <br />' + iContract.formatException(e) + '<br />';
@@ -2491,7 +2541,7 @@ global class iContract_NA_Master_Controller {
             }
 
             if (!updatedAssoRates.isEmpty())
-                update updatedAssoRates;
+                UPDATE updatedAssoRates;
 
         } catch (Exception e) {
             errors += 'Unable to save Rates: <br />' + iContract.formatException(e) + '<br />';
@@ -2656,7 +2706,7 @@ global class iContract_NA_Master_Controller {
 
         // Update the Opportunity
         try {
-            update oppData;
+            UPDATE oppData;
         } catch (DmlException e) {
             if(e.getMessage().toLowerCase().contains('field_custom_validation_exception, ')){
                 errors += e.getMessage().substringAfter('FIELD_CUSTOM_VALIDATION_EXCEPTION, ');
@@ -2692,54 +2742,57 @@ global class iContract_NA_Master_Controller {
     public PageReference showQuote() {
         PageReference contractPdf = getMasterUrl();
         contractPdf.getParameters().put('showQuote', 'true');
+        System.debug('The Url To change to Quote>>>>>'+contractPdf);
+        // return null;
         return contractPdf;
+
     }
      public PageReference emailDealRegistration() {
-        if(isMultiLocation != null && isMultiLocation == true){
-            saveLocations();
-        }
-        if(this.contract.Opportunity__c != null){
-            Opportunity oppObj =[Select Id,TPxDealRegistrationSent__c,Quote_was_Sent__c from Opportunity where Id =: this.contract.Opportunity__c FOR UPDATE];
-            if(!oppObj.TPxDealRegistrationSent__c){
-                oppObj.TPxDealRegistrationSent__c=true;
-            }
-            if(!oppObj.Quote_was_Sent__c){
-                oppObj.Quote_was_Sent__c=true;  
-            }
-            update oppObj;
-        }
-        PageReference contractPdf = getMasterUrl();
-         Document doc = new Document();
-         contractPdf.getParameters().put('showQuote', 'true');
-         contractPdf.getParameters().put('excelShow', 'true');
-         doc.Name = 'PGi Deal Registration -'+oppData.Opportunity_Number__c+'.xls';
-         doc.FolderId = UserInfo.getUserId();
-         doc.Description = 'PGi Quote';
-         doc.Body = contractPdf.getContent();
-         insert(doc);
-
-         contractPdf.getParameters().remove('excelShow');
         
-         String templateId = [SELECT id from emailTemplate WHERE DeveloperName = 'Deal_Reg_TPx'].Id;
-         PageReference emailTemplate= new PageReference('/_ui/core/email/author/EmailAuthor');
-    
-         emailTemplate.getParameters().put('template_id',templateId);
-         emailTemplate.getParameters().put('doc_id', doc.Id); 
-        //  emailTemplate.getParameters().put('p2_lkid', this.contactData.Id);
-         emailTemplate.getParameters().put('p3_lkid', this.contract.Opportunity__c);
-         emailTemplate.getParameters().put('p24', 'pgiquotes@tpx.com');
-         emailTemplate.getParameters().put('p23', 'Attached is a Quote from PGi.');
-        
-         emailTemplate.getParameters().put('retURL',contractPdf.getUrl());
-         Attachment att = new Attachment();
-         att.Name = doc.Name;
-         att.ParentId = this.contract.Opportunity__c;
-         att.Body = doc.body;
-         insert att;
-    
+            if(this.contract.Opportunity__c != null){
+                Opportunity oppObj =[Select Id,TPxDealRegistrationSent__c,Quote_was_Sent__c from Opportunity where Id =: this.contract.Opportunity__c FOR UPDATE];
+                if(!oppObj.TPxDealRegistrationSent__c){
+                    oppObj.TPxDealRegistrationSent__c=true;
+                }
+                if(!oppObj.Quote_was_Sent__c){
+                    oppObj.Quote_was_Sent__c=true;  
+                }
+                UPDATE oppObj;
+            }
+            PageReference contractPdf = getMasterUrl();
+            Document doc = new Document();
+            contractPdf.getParameters().put('showQuote', 'true');
+            contractPdf.getParameters().put('excelShow', 'true');
+            doc.Name = 'PGi Deal Registration -'+oppData.Opportunity_Number__c+'.xls';
+            doc.FolderId = UserInfo.getUserId();
+            doc.Description = 'PGi Quote';
+            doc.Body = contractPdf.getContent();
+            insert(doc);
 
-         contractPdf.getParameters().put('openPopupURL', emailTemplate.getUrl());
-         return contractPdf;
+            contractPdf.getParameters().remove('excelShow');
+            
+            String templateId = [SELECT id from emailTemplate WHERE DeveloperName = 'Deal_Reg_TPx'].Id;
+            PageReference emailTemplate= new PageReference('/_ui/core/email/author/EmailAuthor');
+        
+            emailTemplate.getParameters().put('template_id',templateId);
+            emailTemplate.getParameters().put('doc_id', doc.Id); 
+            //  emailTemplate.getParameters().put('p2_lkid', this.contactData.Id);
+            emailTemplate.getParameters().put('p3_lkid', this.contract.Opportunity__c);
+            emailTemplate.getParameters().put('p24', 'pgiquotes@tpx.com');
+            emailTemplate.getParameters().put('p23', 'Attached is a Quote from PGi.');
+            
+            emailTemplate.getParameters().put('retURL',contractPdf.getUrl());
+            Attachment att = new Attachment();
+            att.Name = doc.Name;
+            att.ParentId = this.contract.Opportunity__c;
+            att.Body = doc.body;
+            insert att;
+        
+
+            contractPdf.getParameters().put('openPopupURL', emailTemplate.getUrl());
+                
+        return contractPdf;
+            
     }
 
     public PageReference emailQuoteEvent() {
@@ -2751,7 +2804,7 @@ global class iContract_NA_Master_Controller {
             Opportunity oppObj =[Select Id,Quote_was_Sent__c from Opportunity where Id =: this.contract.Opportunity__c FOR UPDATE];
             if(!oppObj.Quote_was_Sent__c){
                 oppObj.Quote_was_Sent__c=true;
-                update oppObj;
+                UPDATE oppObj;
             }
         }
         PageReference contractPdf = getMasterUrl();
@@ -2803,8 +2856,13 @@ global class iContract_NA_Master_Controller {
     public PageReference downloadPDFEvent() {
         PageReference contractPdf = getMasterUrl();
         contractPdf.getParameters().put('pdfDownload', 'true');
+        
+        String pdfAttchmentName= '';
+        if(pdfFilename != ''){
+            pdfAttchmentName = pdfFilename.length() > 251 ? pdfFilename.substring(0, 251) : pdfFilename+ '.pdf';
+        }
 
-        Attachment att = new Attachment(name=pdfFilename + '.pdf');
+        Attachment att = new Attachment(name=pdfAttchmentName);
         if (Test.isRunningTest())
             att.body = Blob.valueOf('testing');
         else
@@ -2814,7 +2872,7 @@ global class iContract_NA_Master_Controller {
 
         if (contract.Contract_Status__c != 'Pending Approval') {
             contract.Contract_Status__c = 'Downloaded';
-            update contract;
+            UPDATE contract;
         }
 
         if (this.isQuote)
@@ -2829,7 +2887,7 @@ global class iContract_NA_Master_Controller {
             contractWord.getParameters().put('showQuote', 'true');
 
         contract.Word_File_In_Use__c = true;
-        update contract;
+        UPDATE contract;
         return contractWord;
     }
 
@@ -2843,7 +2901,7 @@ global class iContract_NA_Master_Controller {
         contract.Product_Details_Were_Manually_Changed__c = '';
         contract.T_Cs_Were_Manually_Changed__c = '';
         //RT-335 end
-        update contract;
+        UPDATE contract;
         return contractWord;
     }
     public PageReference startESignEvent() {
@@ -2859,13 +2917,20 @@ global class iContract_NA_Master_Controller {
             Id agreementId = echosign_dev1.AgreementTemplateService.load(eSignTemplate, oppdata.Id);
             System.debug('The value is'+agreementId);
             // Create the PDF attachment
+            // SFDC-688: Vijay: Doing Substring if Attachment size >80:
+            String pdfAttchmentName = '';
             Attachment att = new Attachment();
             if(contract.Account_s_Agreement_Name__c != '' && contract.Account_s_Agreement_Name__c != null ){
-                att.name=contract.Account_s_Agreement_Name__c + ' - ' + pdfFilename + '.pdf';
+                pdfAttchmentName=contract.Account_s_Agreement_Name__c + ' - ' + pdfFilename;
             }
             else{
-                att.name=contract.Account_Name__r.Name + ' - ' + pdfFilename + '.pdf';
+                pdfAttchmentName=contract.Account_Name__r.Name + ' - ' + pdfFilename;
             }
+            
+            if(pdfAttchmentName != ''){
+                att.name = pdfAttchmentName.length() > 76 ? pdfAttchmentName.substring(0, 76) : pdfAttchmentName+ '.pdf';
+            }
+            
             contractPdf.getParameters().put('pdfDownload', 'true');
             if (!System.Test.isRunningTest())
                 att.body = contractPdf.getContent();
@@ -2882,18 +2947,18 @@ global class iContract_NA_Master_Controller {
                 system.debug('bvv>>>>'+contract.Account_s_Agreement_Name__c);
                 updatedAgreement.name = contract.Account_s_Agreement_Name__c + ' - ' + pdfFilename ;
             }
-            update updatedAgreement;
+            UPDATE updatedAgreement;
 
             // Update the Recepient to Agreement Signer Contact
             List<echosign_dev1__SIGN_Recipients__c> updateRecipient = [SELECT Id FROM echosign_dev1__SIGN_Recipients__c WHERE echosign_dev1__Agreement__c = :agreementId AND echosign_dev1__Contact__c != null];
             if (updateRecipient.size() > 0){
                 updateRecipient.get(0).echosign_dev1__Contact__c = contactData.Id;
-                update updateRecipient;
+                UPDATE updateRecipient;
             }
 
             // Update the Contract
             contract.Related_Agreement__c = agreementId;
-            update contract;
+            UPDATE contract;
 
             PageReference esignPage = new PageReference('/' + agreementId);
             return esignPage;
@@ -3060,10 +3125,10 @@ global class iContract_NA_Master_Controller {
             //find all merge fields
             while(matchFld.find()){   
                 String fieldName = verbBody.substring(matchFld.start()+2,matchFld.end()-1);
+                
                 mergeFieldSet.add(fieldName.trim());
                 curPos = matchFld.end(); 
             }
-
             for(String fieldName : mergeFieldSet){
                 System.debug('The value is Test'+fieldName);
                 List<String> fieldsList = fieldName.split('\\.');
@@ -3100,6 +3165,10 @@ global class iContract_NA_Master_Controller {
             return dateStr;
     }
     public List<CONMAN_Contract_Verbiage__c> handleMergeFields(List<CONMAN_Contract_Verbiage__c> verbs) {
+         Boolean tpxHeader = false;
+        if(isTPX && contract.Account_s_Agreement_Name__c != null){
+           tpxHeader = true; 
+        }
         String dateFormat ='MMMM dd, YYYY';
         Set<String> allFieldsToQuery = new Set<String>();
         for(CONMAN_Contract_Verbiage__c verb: verbs) {
@@ -3110,16 +3179,17 @@ global class iContract_NA_Master_Controller {
             return verbs;
         }
             String fieldsToQuery = String.join(new List<String>(allFieldsToQuery), ',');        
-            String query = 'SELECT ' + fieldsToQuery + ' FROM CONMAN_Contract__c WHERE Id = \'' + contract.Id + '\'';
+        	//RT-684 Added Account_s_Agreement_Name__c to get the Tpx Company Name if not Present Account Name
+            String query = 'SELECT ' + fieldsToQuery + ' , Account_s_Agreement_Name__c FROM CONMAN_Contract__c WHERE Id = \'' + contract.Id + '\'';
 
            List<Country__c> countryDateFormatList = [SELECT Date_Format__c FROM Country__c WHERE Name =: country];
             if(!countryDateFormatList.isEmpty() && String.isNotBlank(countryDateFormatList[0].Date_Format__c)){
                dateFormat = countryDateFormatList[0].Date_Format__c;
             }
             CONMAN_Contract__c contractWithMergeFields = Database.query(query);
-            return mergeText(allFieldsToQuery, verbs, contractWithMergeFields, dateFormat);
+            return mergeText(allFieldsToQuery, verbs, contractWithMergeFields, dateFormat,tpxHeader);
     }
-    public static List<CONMAN_Contract_Verbiage__c> mergeText(Set<String> fieldsToReplace, List<CONMAN_Contract_Verbiage__c> verbs, CONMAN_Contract__c contractWithMergeFields, String countryDateFormat){
+    public static List<CONMAN_Contract_Verbiage__c> mergeText(Set<String> fieldsToReplace, List<CONMAN_Contract_Verbiage__c> verbs, CONMAN_Contract__c contractWithMergeFields, String countryDateFormat,boolean tpxHeader){
         try {
         String baseObject = 'Contract';
         String startCharRegEx = '\\{!';
@@ -3133,7 +3203,6 @@ global class iContract_NA_Master_Controller {
         Map<String, Schema.SObjectField> fieldMap = Schema.SObjectType.CONMAN_Contract__c.fields.getMap();
         for(CONMAN_Contract_Verbiage__c verb: verbs) {
             for(String field: fieldsToReplace) {
-                
                 String mergeField = startChar + baseObject + period + field + endChar;
                 String mergeFieldRegEx = startCharRegEx + baseObject + periodRegEx + field + endChar;
                 
@@ -3141,7 +3210,13 @@ global class iContract_NA_Master_Controller {
                     if(verb.Verbiage__c.contains(mergeField)) {
                         String replacementValue = '';
                         try {
-                            replacementValue = (String)contractWithMergeFields.get(field);
+                            //RT-684
+                            if(tpxHeader && verb.Name == 'TPxQ1 Header' && field == 'Related_Account_Name__c'){
+                                 replacementValue = (String)contractWithMergeFields.get('Account_s_Agreement_Name__c');
+                           }
+                            else{
+                               replacementValue = (String)contractWithMergeFields.get(field); 
+                            }
                             System.debug(replacementValue );
                         } catch (Exception ex) {
                             replacementValue = String.valueOf(contractWithMergeFields.get(field));
@@ -3472,11 +3547,11 @@ System.debug('The ID>>>>>>>'+contactData.ContactId);
         String buttonClicked = System.CurrentPageReference().getParameters().get('type');
         if(buttonClicked == 'isESignature'){
             if(oppData.Probability < 60 || String.isNotBlank(oppData.Forecast_Status__c) || !forecastStatusUpsideOrBetter.contains(oppData.Forecast_Status__c)){
-                return 'In order to send for e-signature, you must update the Opportunity Forecast Status and Stage. Would you like this update to automatically happen now?';
+                return 'In order to send for e-signature, you must UPDATE the Opportunity Forecast Status and Stage. Would you like this UPDATE to automatically happen now?';
             }
         } else {
             if(oppData.Probability < 50  || String.isNotBlank(oppData.Forecast_Status__c) || !forecastStatusBestCaseOrBetter.contains(oppData.Forecast_Status__c)){
-                return 'In order to email quote, you must update the Opportunity Forecast Status and Stage. Would you like this update to automatically happen now?';
+                return 'In order to email quote, you must UPDATE the Opportunity Forecast Status and Stage. Would you like this UPDATE to automatically happen now?';
             }
         }
         
@@ -3515,38 +3590,44 @@ System.debug('The ID>>>>>>>'+contactData.ContactId);
             oppData.Forecast_Status__c ='Upside';
             oppData.StageName = 'Recommendation';
             oppData.Probability = 60;
-            update oppData;
+            UPDATE oppData;
             return startESignEvent();
         }else{
             oppData.Forecast_Status__c ='Best Case';
             oppData.StageName = 'Evaluate Options';
             oppData.Probability = 50;
-            update oppData;
+            UPDATE oppData;
             system.debug('=buttonClicked=ok===>'+oppData);
             return emailQuoteEvent();
         }
         return null;
     }
-    public Boolean requireLocation{get {
-        if(requireLocation == null) {
-            for(CPQ_Location_Sites__c location: siteLocationData) {
-                if(String.isBlank(location.Site_Location_Product_Notes__c)) {
-                    requireLocation = true;
-                }
-            }
-        }
-        return requireLocation;
-    } set;}
+    
     public Pagereference saveLocations() {
+        Boolean allLocFilled = true;
         for(CPQ_Location_Sites__c location: siteLocationData) {
             location.Site_Location_Product_Notes__c = location.Site_Location_Product_Notes__c.trim();
             if(String.isBlank(location.Site_Location_Product_Notes__c)) {
-                throw new iContract_NA_Master_ControllerException('Site Location Product Notes Required');
+                allLocFilled = false;
+                //throw new iContract_NA_Master_ControllerException('Site Location Product Notes Required');
+               // ApexPages.addmessage(new ApexPages.message(ApexPages.severity.INFO,'Site Location Product Notes Required'));
             }
         }
 
-        update siteLocationData;
-        return null;
+        UPDATE siteLocationData;
+        if(allLocFilled){
+            requireLocation =false;
+        }
+        else{
+            requireLocation = true;  
+        }
+        
+        PageReference contractPdf = getMasterUrl();
+        System.debug('The Url Is'+contractPdf);
+        contractPdf.getParameters().put('showQuote', 'true');
+        System.debug('The Url Is'+contractPdf);
+        // return null;
+        return contractPdf;
     }
     // RT-581 ends
 }

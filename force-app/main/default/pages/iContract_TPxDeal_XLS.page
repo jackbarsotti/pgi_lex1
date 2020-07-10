@@ -1,5 +1,5 @@
 <apex:page id="pg" showHeader="false" applyBodyTag="false" standardController="CONMAN_Contract__c" applyHtmlTag="false" standardStylesheets="false"
-    contentType="application/vnd.ms-excel#contract.xml" extensions="iContract_NA_Master_Controller" lightningStylesheets="true">
+    contentType="application/vnd.ms-excel#contract.xml" extensions="iContract_NA_Master_Controller" lightningStyleSheets="{!IF(renderingService = 'pdf',false,true)}">
     {!xmlheader}
     <Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel"
         xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40">
@@ -79,8 +79,7 @@
                         <Data ss:Type="String">Company Name:</Data>
                     </Cell>
                     <Cell ss:MergeAcross="4" ss:StyleID="s30">
-                        <Data ss:Type="String"><apex:outputText value="{!agreementAccountName}" escape="false" />
-                        </Data>
+                        <Data ss:Type="String"><apex:outputText value="{!agreementAccountName}" escape="false" /></Data>
                     </Cell>
                 </Row>
                 <Row>
@@ -88,7 +87,7 @@
                         <Data ss:Type="String">Street Address 1</Data>
                     </Cell>
                     <Cell ss:MergeAcross="4" ss:StyleID="s30">
-                        <Data ss:Type="String">{!address1}</Data>
+                        <Data ss:Type="String"></Data>
                     </Cell>
                 </Row>
                 <Row>
@@ -96,7 +95,7 @@
                         <Data ss:Type="String">Street Address 2</Data>
                     </Cell>
                     <Cell ss:MergeAcross="4" ss:StyleID="s30">
-                        <Data ss:Type="String">{!address2}</Data>
+                        <Data ss:Type="String"></Data>
                     </Cell>
                 </Row>
                 <Row>
@@ -104,8 +103,7 @@
                         <Data ss:Type="String">City</Data>
                     </Cell>
                     <Cell ss:MergeAcross="4" ss:StyleID="s30">
-                        <Data ss:Type="String"><apex:outputText value="{!contract.Account_Name__r.BillingCity}" escape="false" />
-                        </Data>
+                        <Data ss:Type="String"><apex:outputText value="{!contract.Account_Name__r.BillingCity}" escape="false" /></Data>
                     </Cell>
                 </Row>
                 <Row>
@@ -113,8 +111,7 @@
                         <Data ss:Type="String">State</Data>
                     </Cell>
                     <Cell ss:MergeAcross="4" ss:StyleID="s30">
-                        <Data ss:Type="String"><apex:outputText value="{!contract.Account_Name__r.BillingState}" escape="false" />
-                        </Data>
+                        <Data ss:Type="String"><apex:outputText value="{!contract.Account_Name__r.BillingState}" escape="false" /></Data>
                     </Cell>
                 </Row>
                 <Row>
@@ -122,8 +119,7 @@
                         <Data ss:Type="String">Country</Data>
                     </Cell>
                     <Cell ss:MergeAcross="4" ss:StyleID="s30">
-                        <Data ss:Type="String"><apex:outputText value="{!contract.Account_Name__r.BillingCountry}" escape="false" />
-                        </Data>
+                        <Data ss:Type="String"><apex:outputText value="{!contract.Account_Name__r.BillingCountry}" escape="false" /></Data>
                     </Cell>
                 </Row>
                 <Row>
@@ -131,8 +127,7 @@
                         <Data ss:Type="String">Zip</Data>
                     </Cell>
                     <Cell ss:MergeAcross="4" ss:StyleID="s30">
-                        <Data ss:Type="String"><apex:outputText value="{!contract.Account_Name__r.BillingPostalCode}" escape="false" />
-                        </Data>
+                        <Data ss:Type="String"><apex:outputText value="{!contract.Account_Name__r.BillingPostalCode}" escape="false" /></Data>
                     </Cell>
                 </Row>
                 <Row>
@@ -140,8 +135,7 @@
                         <Data ss:Type="String">Billing Email</Data>
                     </Cell>
                     <Cell ss:MergeAcross="4" ss:StyleID="s30">
-                        <Data ss:Type="String"><apex:outputText value="{!oppData.Billing_Email__c}" escape="false" />
-                        </Data>
+                        <Data ss:Type="String"><apex:outputText value="{!oppData.Billing_Email__c}" escape="false" /></Data>
                     </Cell>
                 </Row>
                 <Row>
@@ -154,8 +148,7 @@
                         <Data ss:Type="String">Full Name</Data>
                     </Cell>
                     <Cell ss:MergeAcross="4" ss:StyleID="s30">
-                        <Data ss:Type="String"><apex:outputText value="{!oppData.Primary_Contact__r.Name}" escape="false" />
-                        </Data>
+                        <Data ss:Type="String"><apex:outputText value="{!oppData.Primary_Contact__r.Name}" escape="false" /></Data>
                     </Cell>
                 </Row>
                 <Row>
@@ -163,8 +156,7 @@
                         <Data ss:Type="String">Title</Data>
                     </Cell>
                     <Cell ss:MergeAcross="4" ss:StyleID="s30">
-                        <Data ss:Type="String"><apex:outputText value="{!oppData.Primary_Contact_Title__c}" escape="false" />
-                        </Data>
+                        <Data ss:Type="String"><apex:outputText value="{!oppData.Primary_Contact_Title__c}" escape="false" /></Data>
                     </Cell>
                 </Row>
                 <Row>
@@ -172,8 +164,7 @@
                         <Data ss:Type="String">Email</Data>
                     </Cell>
                     <Cell ss:MergeAcross="4" ss:StyleID="s30">
-                        <Data ss:Type="String"><apex:outputText value="{!oppData.Primary_Contact_Email_Address__c}" escape="false" />
-                        </Data>
+                        <Data ss:Type="String"><apex:outputText value="{!oppData.Primary_Contact_Email_Address__c}" escape="false" /></Data>
                     </Cell>
                 </Row>
                 <Row>
@@ -181,8 +172,7 @@
                         <Data ss:Type="String">Phone</Data>
                     </Cell>
                     <Cell ss:MergeAcross="4" ss:StyleID="s30">
-                        <Data ss:Type="String"><apex:outputText value="{!oppData.Primary_Contact_Phone__c}" escape="false" />
-                        </Data>
+                        <Data ss:Type="String"><apex:outputText value="{!oppData.Primary_Contact_Phone__c}" escape="false" /></Data>
                     </Cell>
                 </Row>
                 <Row>
@@ -195,8 +185,7 @@
                         <Data ss:Type="String">Full Name</Data>
                     </Cell>
                     <Cell ss:MergeAcross="4" ss:StyleID="s30">
-                        <Data ss:Type="String"><apex:outputText value="{!opportunityOwner.Name}" escape="false" />
-                        </Data>
+                        <Data ss:Type="String"><apex:outputText value="{!opportunityOwner.Name}" escape="false" /></Data>
                     </Cell>
                 </Row>
                 <Row>
@@ -204,8 +193,7 @@
                         <Data ss:Type="String">Email</Data>
                     </Cell>
                     <Cell ss:MergeAcross="4" ss:StyleID="s30">
-                        <Data ss:Type="String"><apex:outputText value="{!opportunityOwner.Email}" escape="false" />
-                        </Data>
+                        <Data ss:Type="String"><apex:outputText value="{!opportunityOwner.Email}" escape="false" /></Data>
                     </Cell>
                 </Row>
                 <Row>
@@ -213,8 +201,7 @@
                         <Data ss:Type="String">Phone</Data>
                     </Cell>
                     <Cell ss:MergeAcross="4" ss:StyleID="s30">
-                        <Data ss:Type="String"><apex:outputText value="{!opportunityOwner.Phone}" escape="false" />
-                        </Data>
+                        <Data ss:Type="String"><apex:outputText value="{!opportunityOwner.Phone}" escape="false" /></Data>
                     </Cell>
                 </Row>
                 <Row>
@@ -227,8 +214,7 @@
                         <Data ss:Type="String">Term Length</Data>
                     </Cell>
                     <Cell ss:MergeAcross="4" ss:StyleID="s30">
-                        <Data ss:Type="String"><apex:outputText value="{!contract.Contracted_Term__c}" escape="false" />
-                        </Data>
+                        <Data ss:Type="String"><apex:outputText value="{!contract.Contracted_Term__c}" escape="false" /></Data>
                     </Cell>
                 </Row>
                 <Row>
@@ -236,8 +222,7 @@
                         <Data ss:Type="String">PGi SF Oppty #</Data>
                     </Cell>
                     <Cell ss:MergeAcross="4" ss:StyleID="s30">
-                        <Data ss:Type="String"><apex:outputText value="{!oppData.Opportunity_Number__c}" escape="false" />
-                        </Data>
+                        <Data ss:Type="String"><apex:outputText value="{!oppData.Opportunity_Number__c}" escape="false" /></Data>
                     </Cell>
                 </Row>
                 <Row>
@@ -245,8 +230,7 @@
                         <Data ss:Type="String">PGi Contract #</Data>
                     </Cell>
                     <Cell ss:MergeAcross="4" ss:StyleID="s30">
-                        <Data ss:Type="String"><apex:outputText value="{!contract.Name}" escape="false" />
-                        </Data>
+                        <Data ss:Type="String"><apex:outputText value="{!contract.Name}" escape="false" /></Data>
                     </Cell>
                 </Row>
                 <Row>
@@ -254,8 +238,7 @@
                         <Data ss:Type="String">TPx Rep</Data>
                     </Cell>
                     <Cell ss:MergeAcross="4" ss:StyleID="s30">
-                        <Data ss:Type="String"><apex:outputText value="{!oppData.TPx_Rep__c}" escape="false" />
-                        </Data>
+                        <Data ss:Type="String"><apex:outputText value="{!oppData.TPx_Rep__c}" escape="false" /></Data>
                     </Cell>
                 </Row>
             </Table>
@@ -315,140 +298,67 @@
                     <Cell ss:StyleID="s20">
                         <Data ss:Type="String">Cost</Data>
                     </Cell>
-                    <!-- <Cell ss:StyleID="s20">
-                        <Data ss:Type="String">Cost</Data>
-                    </Cell> -->
                 </Row>
 
                 <apex:repeat value="{!licenseData}" var="ld">
                     <Row>
                         <Cell ss:Index="2" ss:MergeAcross="6" ss:StyleID="s35">
-                            <Data ss:Type="String"><apex:outputText value="{!ld.name}" escape="false" />
-                            </Data>
+                            <Data ss:Type="String"><apex:outputText value="{!ld.name}" escape="false" /></Data>
                         </Cell>
                     </Row>
                     <apex:repeat value="{!ld.subscriptions}" var="sub">
                         <Row>
                             <Cell ss:Index="3" ss:StyleID="s17">
-                                <Data ss:Type="String"><apex:outputText value="{!sub.quantity}" escape="false" /></Data>
+                                <Data ss:Type="Number"><apex:outputText value="{!sub.quantity}" escape="false" /></Data>
                             </Cell>
                             <Cell ss:MergeAcross="3" ss:StyleID="s33">
                                 <Data ss:Type="String"><apex:outputText value="{!sub.name}" escape="false" /></Data>
                             </Cell>
                             <Cell ss:StyleID="s18">
-                                <Data ss:Type="String"><apex:outputText value="{!sub.tsfcurrencyMonthly}" /></Data>
+                                <Data ss:Type="String"><apex:outputText value="{!sub.tsf}" escape="false" /></Data>
                             </Cell>
-                            <!-- <Cell ss:StyleID="s18">
-                                <Data ss:Type="String"><apex:outputText value="{!sub.tsfcurrency}"/></Data>
-                            </Cell> -->
                         </Row>
                     </apex:repeat>
                     <apex:repeat value="{!ld.bundleDetails}" var="bndl">
                         <Row>
                             <Cell ss:Index="3" ss:StyleID="s17">
-                                <Data ss:Type="String"><apex:outputText value="{!bndl.quantity}" escape="false" /></Data>
+                                <Data ss:Type="Number"><apex:outputText value="{!bndl.quantity}" escape="false" /></Data>
                             </Cell>
                             <Cell ss:MergeAcross="3" ss:StyleID="s33">
                                 <Data ss:Type="String"><apex:outputText value="{!bndl.name}" escape="false" /></Data>
                             </Cell>
                             <Cell ss:StyleID="s18">
-                                <Data ss:Type="String"><apex:outputText value="{!bndl.tsfcurrencyMonthly}" escape="false" /></Data>
+
+                                <Data ss:Type="String"><apex:outputText value="{!bndl.tsf}" escape="false" /></Data>
                             </Cell>
-                            <!-- <Cell ss:StyleID="s18">
-                                <Data ss:Type="String"><apex:outputText value="{!bndl.tsfcurrency}" escape="false" /></Data>
-                            </Cell> -->
                         </Row>
                     </apex:repeat>
                     <apex:repeat value="{!ld.commitments}" var="sub">
                         <Row>
                             <Cell ss:Index="3" ss:StyleID="s17">
-                                <Data ss:Type="String"><apex:outputText value="{!sub.quantity}" escape="false" /></Data>
+                                <Data ss:Type="Number"><apex:outputText value="{!sub.quantity}" escape="false" /></Data>
                             </Cell>
                             <Cell ss:MergeAcross="3" ss:StyleID="s33">
                                 <Data ss:Type="String"><apex:outputText value="{!sub.name}" escape="false" /></Data>
                             </Cell>
                             <Cell ss:StyleID="s18">
-                                <Data ss:Type="String"><apex:outputText value="{!sub.tsfcurrencyMonthly}" escape="false" /></Data>
+                                <Data ss:Type="String"><apex:outputText value="{!sub.tsf}" escape="false" /></Data>
                             </Cell>
-                            <!-- <Cell ss:StyleID="s18">
-                                <Data ss:Type="String"><apex:outputText value="{!sub.tsfcurrency}" escape="false" /></Data>
-                            </Cell>  -->
                         </Row>
                     </apex:repeat>
                     <apex:repeat value="{!ld.oneTimeCharges}" var="sub">
                         <Row>
                             <Cell ss:Index="3" ss:StyleID="s17">
-                                <Data ss:Type="String"><apex:outputText value="{!sub.quantity}" escape="false" /></Data>
+                                <Data ss:Type="Number"><apex:outputText value="{!sub.quantity}" escape="false" /></Data>
                             </Cell>
                             <Cell ss:MergeAcross="3" ss:StyleID="s33">
                                 <Data ss:Type="String"><apex:outputText value="{!sub.name}" escape="false" /></Data>
                             </Cell>
                             <Cell ss:StyleID="s18">
-                                <Data ss:Type="String"><apex:outputText value="{!sub.tsftotc}" escape="false" /></Data>
+                                <Data ss:Type="String"><apex:outputText value="{!sub.tsf}" escape="false" /></Data>
                             </Cell>
-                            <!-- <Cell ss:StyleID="s18">
-                                <Data ss:Type="String"><apex:outputText value="{!sub.tsfcurrency}" escape="false" /></Data>
-                            </Cell>  -->
                         </Row>
                     </apex:repeat>
-                </apex:repeat>
-            </Table>
-            <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
-                <PageSetup>
-                    <Header x:Margin="0.3" />
-                    <Footer x:Margin="0.3" />
-                    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75" />
-                </PageSetup>
-                <Panes>
-                    <Pane>
-                        <Number>3</Number>
-                        <ActiveRow>19</ActiveRow>
-                        <ActiveCol>3</ActiveCol>
-                    </Pane>
-                </Panes>
-                <ProtectObjects>False</ProtectObjects>
-                <ProtectScenarios>False</ProtectScenarios>
-            </WorksheetOptions>
-        </Worksheet>
-        <Worksheet ss:Name="Multi-Location Details">
-            <Table ss:ExpandedColumnCount="11" x:FullColumns="1" x:FullRows="1" ss:DefaultColumnWidth="53" ss:DefaultRowHeight="15">
-                <Column ss:Index="4" ss:AutoFitWidth="0" ss:Width="101" />
-                <Column ss:AutoFitWidth="0" ss:Width="94" />
-                <Column ss:AutoFitWidth="0" ss:Width="133" />
-                <Column ss:AutoFitWidth="0" ss:Width="117" />
-                <Row>
-                    <Cell ss:MergeAcross="10" ss:StyleID="s32">
-                        <Data ss:Type="String">Multi-Location Details</Data>
-                    </Cell>
-                </Row>
-                <Row>
-                    <Cell ss:Index="3" ss:StyleID="s19" ss:MergeAcross="1">
-                        <Data ss:Type="String">Site Location Name</Data>
-                    </Cell>
-                    <Cell ss:MergeAcross="2" ss:StyleID="s19">
-                        <Data ss:Type="String">Site Location Address</Data>
-                    </Cell>
-                    <Cell ss:MergeAcross="3" ss:StyleID="s20">
-                        <Data ss:Type="String">Site Location Product Notes</Data>
-                    </Cell>
-                </Row>
-
-
-                <apex:repeat value="{!siteLocationData}" var="location">
-                    <Row>
-                        <Cell ss:Index="3" ss:StyleID="s17" ss:MergeAcross="1">
-                            <Data ss:Type="String"><apex:outputText value="{!location.Site_Location_Name__c}" escape="false" />
-                            </Data>
-                        </Cell>
-                        <Cell ss:MergeAcross="2" ss:StyleID="s33">
-                            <Data ss:Type="String"><apex:outputText value="{!location.Site_Location_Address__c}" escape="false" />
-                            </Data>
-                        </Cell>
-                        <Cell ss:MergeAcross="3" ss:StyleID="s18">
-                            <Data ss:Type="String"><apex:outputText value="{!location.Site_Location_Product_Notes__c}" escape="false" />
-                            </Data>
-                        </Cell>
-                    </Row>
                 </apex:repeat>
             </Table>
             <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">

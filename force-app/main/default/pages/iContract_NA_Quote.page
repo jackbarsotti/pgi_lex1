@@ -1,4 +1,4 @@
-<apex:page standardController="CONMAN_Contract__c" extensions="iContract_NA_Master_Controller" lightningStylesheets="true">
+<apex:page standardController="CONMAN_Contract__c" extensions="iContract_NA_Master_Controller" lightningStyleSheets="{!IF(renderingService = 'pdf',false,true)}">
     <!-- Top of Agreement: Logo & eSignature ID -->
     <apex:image rendered="{! !renderingAsWord }" id="PGilogo" url="{!$Resource.PGILogoSmall}" height="36px" width="36px" />
     <apex:image rendered="{! renderingAsWord }" url="https://c.na68.content.force.com/servlet/servlet.ImageServer?id=01513000002iSUv&oid=00D30000001H6BZ&lastMod=1469808329000" height="36px" width="36px" />
@@ -77,7 +77,7 @@
             </tr>
             <tr>
                 <th class="right dark" >Business Registration #</th>
-                <td><span id="businessRegistration">{!pgiInternalEntity.Business_Registration__c}</span></td>
+                <td><span id="businessRegistration">{!contract.Customer_s_Business_Registration_Number__c}</span></td>
                 <!-- <td><span id="SalesRepName">{!pgiInternalEntity.City__c} {!pgiInternalEntity.State__c} {!pgiInternalEntity.Zip_Postal_Code__c} {!pgiInternalEntity.Country__c}</span></td> -->
             </tr>
         </table>
