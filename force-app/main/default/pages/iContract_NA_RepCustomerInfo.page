@@ -1,4 +1,4 @@
-<apex:page standardController="CONMAN_Contract__c" extensions="iContract_NA_Master_Controller" lightningStylesheets="true">
+<apex:page standardController="CONMAN_Contract__c" extensions="iContract_NA_Master_Controller">
     <!-- Sales Rep's Information -->
     <table>
         <tr>
@@ -43,7 +43,7 @@
             </tr>
             <tr>
                 <th colspan='1' class='right dark'>Customer's Business Registration #:</th>
-                <td colspan='4'>{!contract.Customer_s_Business_Registration_Number__c}</td>
+                <td colspan='4'>{!pgiInternalEntity.Business_Registration__c}</td>
             </tr>
             <tr>
                 <th colspan='1' class='right dark'>Phone:</th>

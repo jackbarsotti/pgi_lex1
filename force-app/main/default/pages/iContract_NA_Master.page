@@ -1,5 +1,5 @@
 <apex:page showHeader="false" applyBodyTag="false" standardStylesheets="{! renderingAsHTML }" standardController="CONMAN_Contract__c"
-           extensions="iContract_NA_Master_Controller" applyHtmlTag="{!if(renderingAsPDF,false,true)}" contentType="{! renderedContentType }" renderAs="{! renderingService }" id="page" lightningStyleSheets="{!IF(renderingService = 'pdf',false,true)}">
+           extensions="iContract_NA_Master_Controller" applyHtmlTag="{!if(renderingAsPDF,false,true)}" contentType="{! renderedContentType }" renderAs="{! renderingService }" id="page" >
     {!IF (renderingAsWord, "
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />", '')}
     <!-- Added by Anup   RT-335  -->

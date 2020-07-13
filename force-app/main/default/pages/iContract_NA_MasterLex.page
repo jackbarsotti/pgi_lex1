@@ -1,11 +1,11 @@
-<apex:page standardController="CONMAN_Contract__c" showHeader="false" applyBodyTag="false" sidebar="false" extensions="iContract_NA_MasterLex_Controller">
+<apex:page standardController="CONMAN_Contract__c" showHeader="false" applyBodyTag="false" sidebar="false" extensions="iContract_NA_MasterLex_Controller" lightningStylesheets="true">
     <apex:includeLightning />    
     <div id="LightningComponentid" />
     <script>
         $Lightning.use("c:iContractLexApp", function() {
             $Lightning.createComponent("c:iContractLex",
               { 
-                recordId :{!contractId}
+                recordId :"{!contractId}"
               },
               "LightningComponentid",
               function(cmp) {

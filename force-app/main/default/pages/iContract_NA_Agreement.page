@@ -1,4 +1,4 @@
-<apex:page standardController="CONMAN_Contract__c" extensions="iContract_NA_Master_Controller" lightningStyleSheets="{!IF(renderingService = 'pdf',false,true)}">
+<apex:page standardController="CONMAN_Contract__c" extensions="iContract_NA_Master_Controller" >
     <apex:includeLightning />
     <!-- Top of Agreement: Logo & eSignature ID -->
     <apex:image rendered="{! !renderingAsWord }" id="PGilogo" url="{!$Resource.PGILogoSmall}" height="36px" width="36px" />
