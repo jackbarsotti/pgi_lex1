@@ -2928,7 +2928,7 @@ global class iContract_NA_Master_Controller {
             }
             
             if(pdfAttchmentName != ''){
-                att.name = pdfAttchmentName.length() > 76 ? pdfAttchmentName.substring(0, 76) : pdfAttchmentName+ '.pdf';
+                att.name = pdfAttchmentName.length() > 76 ? pdfAttchmentName.substring(0, 76)+'.pdf' : pdfAttchmentName+ '.pdf';
             }
             
             contractPdf.getParameters().put('pdfDownload', 'true');
@@ -2943,9 +2943,11 @@ global class iContract_NA_Master_Controller {
             // Update the Agreement
             echosign_dev1__SIGN_Agreement__c updatedAgreement = new echosign_dev1__SIGN_Agreement__c(Id=agreementId);
             updatedAgreement.Created_by_iContract__c = true;
+      		String updatedAgreName = '';
             if(contract.Account_s_Agreement_Name__c != '' && contract.Account_s_Agreement_Name__c != null ){
                 system.debug('bvv>>>>'+contract.Account_s_Agreement_Name__c);
-                updatedAgreement.name = contract.Account_s_Agreement_Name__c + ' - ' + pdfFilename ;
+              	updatedAgreName = contract.Account_s_Agreement_Name__c + ' - ' + pdfFilename ;
+                updatedAgreement.name = updatedAgreName.length() > 80 ? updatedAgreName.substring(0, 80) : updatedAgreName;
             }
             UPDATE updatedAgreement;
 
