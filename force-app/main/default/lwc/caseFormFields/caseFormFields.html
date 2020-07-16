@@ -1,0 +1,72 @@
+<template>
+
+	{label}
+	<!-- FOR TEXT TYPE -->
+	<template if:true={isString}>
+		<lightning-input tabindex="0" type="text" label=" a" value={value} onchange={handleOnValueChange}
+			variant="label-hidden" required={fieldRequired}>
+		</lightning-input>
+	</template>
+	<!-- END OF TEXT TYPE -->
+	<!-- START OF CURRENCY TYPE -->
+	<template if:true={isCurrency}>
+		<lightning-input type="number" label=" a" value={value} variant="label-hidden" onchange={handleOnValueChange}
+			required={fieldRequired} tabindex="0">
+		</lightning-input>
+	</template>
+	<!-- END OF CURRENCY TYPE -->
+	<!-- START OF TEXTAREA -->
+	<template if:true={isTextArea}>
+		<lightning-input type="text" label=" a" value={value} variant="label-hidden" onchange={handleOnValueChange}
+			required={fieldRequired}>
+		</lightning-input>
+	</template>
+	<!-- END OF TEXTAREA -->
+	<!-- START OF NUMBER -->
+	<template if:true={isNumber}>
+		<lightning-input type="number" name="datefld" label="date" value={value} onchange={handleOnValueChange}
+			variant="label-hidden" required={fieldRequired}></lightning-input>
+	</template>
+	<!-- END OF NUMBER -->
+	<!-- START OF EMAIL -->
+	<template if:true={isEmail}>
+		<lightning-input type="email" label="E-mail address" value={value} onchange={handleOnValueChange}
+			required={fieldRequired} variant="label-hidden">
+		</lightning-input>
+	</template>
+	<!-- END OF EMAIL -->
+	<template if:true={isUrl}>
+		<lightning-input type="url" label="Enter a URL" name="input1" onchange={handleOnValueChange}
+			required={fieldRequired} value={value} variant="label-hidden"></lightning-input>
+	</template>
+	<!-- END OF URL -->
+	<!-- START OF DATETIME -->
+	<template if:true={isDateTime}>
+		<lightning-input type="datetime" name="input5" label="datetime" value={value} onchange={handleOnValueChange}
+			variant="label-hidden" required={fieldRequired}>
+		</lightning-input>
+	</template>
+	<!-- END OF DATETIME -->
+	<!-- START OF DATE -->
+	<template if:true={isDate}>
+		<lightning-input type="date" name="datefld" label="date" onclick={onEditFocus} value={value}
+			onchange={handleOnValueChange} variant="label-hidden" required={fieldRequired}></lightning-input>
+	</template>
+	<!-- END OF DATE -->
+
+
+	<!-- START OF PICKLIST -->
+	<template if:true={isPickList}>
+		<lightning-combobox onfocus={onEditFocus} name="progress" label="Status" value={value} placeholder=" "
+			onchange={handleOnValueChange} options={pckListOptions} variant="label-hidden" tabindex="0"
+			required={fieldRequired}>
+		</lightning-combobox>
+	</template>
+	<!-- END OF PICKLIST -->
+	<!-- START OF LOOKUP -->
+	<template if:true={isLookup}>
+		<c-custom-lookup field-label="Select Account Record" child-object-api-name='Case' required={fieldRequired}
+			target-field-api-name={fldApi} onvalueselected={handleValueSelcted}></c-custom-lookup>
+	</template>
+	<!-- END OF LOOKUP -->
+</template>
