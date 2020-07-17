@@ -1,7 +1,7 @@
-import { LightningElement,track,wire } from 'lwc';
-import getRecordType from '@salesforce/apex/CaseRTSelection.getRecordType';
+import { LightningElement,track,wire ,api} from 'lwc';
 import { getObjectInfo} from 'lightning/uiObjectInfoApi';
 import CASE_OBJECT from '@salesforce/schema/Case';
+import getRecordType from '@salesforce/apex/CaseRTSelection.getRecordType';
 export default class CaseRecordTypeSelectionInLWC extends LightningElement {
     @track selectedValue;
     @track recTypeData = [];
@@ -20,12 +20,26 @@ export default class CaseRecordTypeSelectionInLWC extends LightningElement {
     @wire(getRecordType)
     wiredResult(result) {
         if (result.data) {
+            console.log('TestIng for>>>>')
             var returnValues = result.data;
             console.log('const',returnValues);
-            this.recTypeData=returnValues;
+            returnValues.forEach(ele =>{
+                if(ele.Id === this.selectedValue){
+                    this.recTypeData.push({Name:ele.Name,Id:ele.Id,Description:ele.Description,default:true});
+                }
+                else{
+                    this.recTypeData.push({Name:ele.Name,Id:ele.Id,Description:ele.Description,default:false});
+                }
+            })
+            //this.recTypeData=returnValues;
             console.log('recTypeData>>24',this.recTypeData);
 
         }
+    }
+
+    @api
+    get defaultchecked() {
+        return this.selectedValue;
     }
 
     handleChange(event) {

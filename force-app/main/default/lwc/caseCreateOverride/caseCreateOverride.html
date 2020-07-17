@@ -24,7 +24,8 @@
                                             <template if:true={layoutItems.editableForNew}>
                                                 <template for:each={layoutItems.layoutComponents}
                                                     for:item="layoutItemApi">
-                                                    <div key={layoutItemApi} class="slds-size_1-of-2" style="padding-right: 109px">
+                                                    <div key={layoutItemApi} class="slds-size_1-of-2 " 
+                                                    style="padding-right: 109px;padding-left: 84px">
                                                         <c-case-form-fields data-id={layoutItemApi.apiName}
                                                             record-type-id={recordTypeId} record={record}
                                                             case-template-rec-value={caseTemplateRecValue}
