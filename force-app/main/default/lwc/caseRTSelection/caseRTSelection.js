@@ -1,8 +1,9 @@
 import { LightningElement,track,wire ,api} from 'lwc';
 import { getObjectInfo} from 'lightning/uiObjectInfoApi';
+import { NavigationMixin } from 'lightning/navigation';
 import CASE_OBJECT from '@salesforce/schema/Case';
 import getRecordType from '@salesforce/apex/CaseRTSelection.getRecordType';
-export default class CaseRecordTypeSelectionInLWC extends LightningElement {
+export default class CaseRecordTypeSelectionInLWC extends NavigationMixin(LightningElement) {
     @track selectedValue;
     @track recTypeData = [];
     @track openCaseTab;
@@ -55,6 +56,16 @@ export default class CaseRecordTypeSelectionInLWC extends LightningElement {
     }
     closeModal() {
         this.isModalOpen = false;
+        this[NavigationMixin.Navigate]({
+            type: "standard__objectPage",
+            attributes: {
+                objectApiName: "Case",
+                actionName: 'list'
+            },
+            state: {
+                filterName: 'Recent'
+            },
+        });
     }
     submitDetails() {
         
