@@ -28,6 +28,7 @@ export default class CaseFormFields extends LightningElement {
   @api isUrl;
   @api isEmail;
   @api isNumber;
+  @api isBoolean;
   @api isCurrency;
   @api pckListOptions;
   @api editableForNew;
@@ -108,6 +109,9 @@ export default class CaseFormFields extends LightningElement {
     }
     if (type === "CURRENCY") {
       this.isCurrency = true;
+    }
+    if (type=== "BOOLEAN"){
+      this.isBoolean=true;
     }
   }
   onEditFocus () {

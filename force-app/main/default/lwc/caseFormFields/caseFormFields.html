@@ -33,15 +33,17 @@
 	<!-- START OF TEXTAREA -->
 	<template if:true={isTextArea}>
 		<template if:false={fieldRequired}>
-		<lightning-input type="text" label=" a" value={value} variant="label-hidden" onchange={handleOnValueChange}
-			required={fieldRequired}>
-		</lightning-input>
+		<lightning-textarea name="myTextArea" value={value}  variant="label-hidden" onchange={handleOnValueChange}
+			label="textareafld" maxlength="300" required={fieldRequired} ></lightning-textarea>
 		</template>
 		<template if:true={fieldRequired}>
 			<span class="required">*</span>
-			<lightning-input type="text" label=" a" value={value} variant="label-hidden" onchange={handleOnValueChange}
+			<lightning-textarea name="myTextArea" value={value}  variant="label-hidden" onchange={handleOnValueChange}
+				 label="textareafld" maxlength="300" required={fieldRequired}> 
+			</lightning-textarea>
+			<!-- <lightning-input type="textarea" label="textareafld" value={value} variant="label-hidden" onchange={handleOnValueChange}
 				required={fieldRequired}>
-			</lightning-input>
+			</lightning-input> -->
 		</template>
 	</template>
 	<!-- END OF TEXTAREA -->
@@ -145,4 +147,8 @@
 			</template>
 	</template>
 	<!-- END OF LOOKUP -->
+	<template if:true={isBoolean}>
+		<lightning-input type="checkbox" name="chkboxfld" label="chkbox" value={value}
+			onchange={handleOnValueChange} variant="label-hidden" required={fieldRequired}></lightning-input>
+	</template>
 </template>
