@@ -1,137 +1,137 @@
-<apex:page showHeader="true" sidebar="true" controller="CaseListView">
+<apex:page showHeader="false" sidebar="true" controller="CaseListView" lightningStylesheets="true" >
 <apex:includeScript value="//code.jquery.com/jquery-2.1.1.min.js"/>
 <apex:includeScript value="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.18.3/js/jquery.tablesorter.js"/>
 <apex:includeScript value="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.18.3/js/jquery.tablesorter.widgets.js"/>
 <apex:stylesheet value="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.18.3/css/theme.jui.css"/>
-	<apex:form >
-		<!-- TODO - Change Ownership
-			TODO - AssignToMe
-			TODO - Timer display - 1 column with 2 fields in the pageblocktable
-			TODO ? Sortable Columns?
-		-->
-		<apex:pageBlock > 
-			
-			<apex:pageBlockSection title="Select a queue"> 
-				<apex:selectList value="{!queueId}" multiselect="false" size="1">
-					<apex:actionSupport action="{!addQueue}" event="onchange" rerender="pm, caseListPanel"/>
-					<apex:selectOptions value="{!caseQueuesSelectionOptions}" />
-				</apex:selectList>
-			</apex:pageBlockSection>
-			
-		<apex:actionRegion renderRegionOnly="true" >
-			<apex:pageMessages id="pm" />
-			<apex:commandButton value="Change Owner" action="{!showPopup}" rerender="pm, ownerpopup"/>
-			<apex:commandButton value="Assign to Me" action="{!assignToMe}" id="assignToMeBtn" rerender="pm, caseListPanel" />
-			<apex:commandButton value="Refresh" action="{!doNothing}" rerender="pm, caseListPanel" />
-			
-			<apex:outputPanel layout="block" id="caseListPanel">
-				
-					<apex:pageBlockTable value="{!caseWrapperList}" var="caseWrapper">
-							<apex:variable value="{!caseWrapper.c}" var="case" />
-							<apex:column >
-								<apex:inputCheckbox value="{!caseWrapper.selected}"  />
-							</apex:column>
-							<apex:repeat value="{!$ObjectType.Case.FieldSets.PGi_Working_Views}" var="caseField" >
-								<apex:column headerValue="{!IF(caseField.Label == 'Owner ID', 'Queue Name', caseField.Label)}"  >
-									<apex:outputField value="{!caseWrapper.c[caseField]}" rendered="{!NOT(CONTAINS(caseField.Label, 'Case Number'))}" />
-									<apex:outputLink value="/{!caseWrapper.c.Id}" rendered="{!CONTAINS(caseField.Label, 'Case Number')}">{!caseWrapper.c[caseField]}</apex:outputLink>
-								</apex:column>
-							</apex:repeat>
-							<apex:column headerValue="Time to Restore" >
-								<apex:outputText value="{!caseWrapper.c.Time_to_Restore__c + '  '}"  /> 
-								<apex:outputText value="{!caseWrapper.c.Restore_Color_Field__c}" escape="false" />
-							</apex:column>
-							<apex:column headerValue="Time to Resolve" >
-								<apex:outputText value="{!caseWrapper.c.Time_to_Resolve__c + '  '}"  /> 
-								<apex:outputText value="{!caseWrapper.c.Resolve_Color_Field__c}" escape="false" />
-							</apex:column>
-					</apex:pageBlockTable>
-					<apex:actionFunction reRender="pm, caseListPanel" name="rerenderCases"  />
-					<script> 
+    <apex:form >
+        <!-- TODO - Change Ownership
+            TODO - AssignToMe
+            TODO - Timer display - 1 column with 2 fields in the pageblocktable
+            TODO ? Sortable Columns?
+        -->
+        <apex:pageBlock > 
+            
+            <apex:pageBlockSection title="Select a queue"> 
+                <apex:selectList value="{!queueId}" multiselect="false" size="1">
+                    <apex:actionSupport action="{!addQueue}" event="onchange" rerender="pm, caseListPanel"/>
+                    <apex:selectOptions value="{!caseQueuesSelectionOptions}" />
+                </apex:selectList>
+            </apex:pageBlockSection>
+            
+        <apex:actionRegion renderRegionOnly="true" >
+            <apex:pageMessages id="pm" />
+            <apex:commandButton value="Change Owner" action="{!showPopup}" rerender="pm, ownerpopup"/>
+            <apex:commandButton value="Assign to Me" action="{!assignToMe}" id="assignToMeBtn" rerender="pm, caseListPanel" />
+            <apex:commandButton value="Refresh" action="{!doNothing}" rerender="pm, caseListPanel" />
+            
+            <apex:outputPanel layout="block" id="caseListPanel">
+                
+                    <apex:pageBlockTable value="{!caseWrapperList}" var="caseWrapper">
+                            <apex:variable value="{!caseWrapper.c}" var="case" />
+                            <apex:column >
+                                <apex:inputCheckbox value="{!caseWrapper.selected}"  />
+                            </apex:column>
+                            <apex:repeat value="{!$ObjectType.Case.FieldSets.PGi_Working_Views}" var="caseField" >
+                                <apex:column headerValue="{!IF(caseField.Label == 'Owner ID', 'Queue Name', caseField.Label)}"  >
+                                    <apex:outputField value="{!caseWrapper.c[caseField]}" rendered="{!NOT(CONTAINS(caseField.Label, 'Case Number'))}" />
+                                    <apex:outputLink value="/{!caseWrapper.c.Id}" rendered="{!CONTAINS(caseField.Label, 'Case Number')}">{!caseWrapper.c[caseField]}</apex:outputLink>
+                                </apex:column>
+                            </apex:repeat>
+                            <apex:column headerValue="Time to Restore" >
+                                <apex:outputText value="{!caseWrapper.c.Time_to_Restore__c + '  '}"  /> 
+                                <apex:outputText value="{!caseWrapper.c.Restore_Color_Field__c}" escape="false" />
+                            </apex:column>
+                            <apex:column headerValue="Time to Resolve" >
+                                <apex:outputText value="{!caseWrapper.c.Time_to_Resolve__c + '  '}"  /> 
+                                <apex:outputText value="{!caseWrapper.c.Resolve_Color_Field__c}" escape="false" />
+                            </apex:column>
+                    </apex:pageBlockTable>
+                    <apex:actionFunction reRender="pm, caseListPanel" name="rerenderCases"  />
+                    <script> 
 
-						$(document).ready(function(){
-						    $("table").tablesorter({
+                        $(document).ready(function(){
+                            $("table").tablesorter({
 
-							    theme : 'jui', 
+                                theme : 'jui', 
 
-							    headerTemplate : '{content} {icon}',
+                                headerTemplate : '{content} {icon}',
 
-							    widgets : ['uitheme', 'zebra'],
+                                widgets : ['uitheme', 'zebra'],
 
-							    widgetOptions : {
-							      zebra   : ["even", "odd"],
-							    }
+                                widgetOptions : {
+                                  zebra   : ["even", "odd"],
+                                }
 
-							})
-						});
-					</script>
-			</apex:outputPanel>
-			
-		
+                            })
+                        });
+                    </script>
+            </apex:outputPanel>
+            
+        
 
-		<apex:outputPanel id="ownerpopup"> 
-	    	<apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
-	        <apex:outputPanel styleClass="custPopup" layout="block" rendered="{!displayPopUp}">
-			        <apex:pageBlock >
-			            <apex:pageBlockSection columns="1">
-			                <apex:pageBlockSectionItem >
-			                    <apex:outputLabel for="user">Owner</apex:outputLabel>
-			                    <apex:inputField id="user" value="{!changeOwnerLookup.OwnerId}"/>
-			                </apex:pageBlockSectionItem>
-			                <apex:pageBlockSectionItem >
-			                    <apex:outputLabel for="notifyOwner">Send Notification Email</apex:outputLabel>
-			                    <apex:inputCheckbox id="notifyOwner" value="{!notifyOwner}"/>
-			                </apex:pageBlockSectionItem>
-			            </apex:pageBlockSection>
-			        </apex:pageBlock>
-			        <br/><br/><br/>
-			        <apex:commandButton value="Cancel" action="{!closePopup}" immediate="true" rerender="pm, ownerpopup"/>
-			        <apex:commandButton value="Change Owner" action="{!saveChangeOwner}" rerender="pm, ownerpopup"/>
-	        </apex:outputPanel>
-	        </apex:outputPanel>
-	    </apex:actionRegion>
-	    </apex:pageBlock>
+        <apex:outputPanel id="ownerpopup"> 
+            <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+            <apex:outputPanel styleClass="custPopup" layout="block" rendered="{!displayPopUp}">
+                    <apex:pageBlock >
+                        <apex:pageBlockSection columns="1">
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="user">Owner</apex:outputLabel>
+                                <apex:inputField id="user" value="{!changeOwnerLookup.OwnerId}"/>
+                            </apex:pageBlockSectionItem>
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="notifyOwner">Send Notification Email</apex:outputLabel>
+                                <apex:inputCheckbox id="notifyOwner" value="{!notifyOwner}"/>
+                            </apex:pageBlockSectionItem>
+                        </apex:pageBlockSection>
+                    </apex:pageBlock>
+                    <br/><br/><br/>
+                    <apex:commandButton value="Cancel" action="{!closePopup}" immediate="true" rerender="pm, ownerpopup"/>
+                    <apex:commandButton value="Change Owner" action="{!saveChangeOwner}" rerender="pm, ownerpopup"/>
+            </apex:outputPanel>
+            </apex:outputPanel>
+        </apex:actionRegion>
+        </apex:pageBlock>
     
-	</apex:form>
-	<script>
-		function reloadTable() {
-			//rerenderCases();
-			setInterval(rerenderCases, 60000);	
-		}
-	</script>
+    </apex:form>
+    <script>
+        function reloadTable() {
+            //rerenderCases();
+            setInterval(rerenderCases, 60000);  
+        }
+    </script>
 
 
-	<style >
-		.hidden {
-        	display: none;
+    <style >
+        .hidden {
+            display: none;
         }
         .form-popup {
-		    position:fixed;
-		    left: 50%;
-		    top: 50%;
-		    width: 80%;
-		    -ms-transform: translate(-50%,-50%);
-		    -moz-transform:translate(-50%,-50%);
-		    -webkit-transform: translate(-50%,-50%);
-		     transform: translate(-50%,-50%);
-			z-index: 100;
-		}
-		.darkClass {
-		    background-color: white;
-		    filter:alpha(opacity=50); /* IE */
-		    opacity: 0.5; /* Safari, Opera */
-		    -moz-opacity:0.50; /* FireFox */
-		    z-index: 99;
-		    height: 100%;
-		    width: 100%;
-		    background-repeat:no-repeat;
-		    background-position:center;
-		    position:absolute;
-		    top: 0px;
-		    left: 0px;
-		}
+            position:fixed;
+            left: 50%;
+            top: 50%;
+            width: 80%;
+            -ms-transform: translate(-50%,-50%);
+            -moz-transform:translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+             transform: translate(-50%,-50%);
+            z-index: 100;
+        }
+        .darkClass {
+            background-color: white;
+            filter:alpha(opacity=50); /* IE */
+            opacity: 0.5; /* Safari, Opera */
+            -moz-opacity:0.50; /* FireFox */
+            z-index: 99;
+            height: 100%;
+            width: 100%;
+            background-repeat:no-repeat;
+            background-position:center;
+            position:absolute;
+            top: 0px;
+            left: 0px;
+        }
 
-		.custPopup{
+        .custPopup{
             background-color: white;
             border-width: 2px;
             border-style: solid;
@@ -159,5 +159,5 @@
             z-index: 9998;
         }
 
-	</style>
+    </style>
 </apex:page>
