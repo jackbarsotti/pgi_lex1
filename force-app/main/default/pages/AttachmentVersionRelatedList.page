@@ -1,5 +1,5 @@
 <!-- Attachments Related List -->
-<apex:page showHeader="false" sidebar="false"  standardController="PGIServicesInformation__c" extensions="AttachmentListController" >
+<apex:page showHeader="false" sidebar="false"  standardController="PGIServicesInformation__c" extensions="AttachmentListController" lightningStylesheets="true"  >
     <apex:form >
 <apex:pageblock >
 
@@ -20,7 +20,7 @@
         </apex:column>
         <!-- <apex:column value="{!attach.BodyLength}" /> -->
 
-    </apex:pageBlockTable>
+    </apex:pageBlockTable>`
 
     <apex:outputLabel value="No records to display" rendered="{!(ISNULL(attachments))}" styleClass="noRowsHeader"></apex:outputLabel>
 
