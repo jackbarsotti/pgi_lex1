@@ -1,4 +1,4 @@
-<apex:page standardController="Case_SLA_Exception_Rules__c" extensions="CaseRulesController"   >
+<apex:page standardController="Case_SLA_Exception_Rules__c" extensions="CaseRulesController"  showHeader="false" lightningStylesheets="true" >
     <apex:includeLightning />
     <apex:includeScript value="/support/console/45.0/integration.js"/>
     <div  style="width:79vw;" id="CaseSLAException"  />
