@@ -26,7 +26,7 @@
                                         <div key={layoutRows} class="slds-grid slds-wrap">
                                             <template for:each={layoutRows.layoutItems} for:item="layoutItems">
                                                 <template for:each={layoutItems.layoutComponents} for:item="layoutItemApi">
-                                                    <div key={layoutItemApi} class="slds-size_1-of-2">
+                                                    <div key={layoutItemApi} class="slds-p-around_medium slds-size_1-of-2">
                                                         <c-case-form-fields data-id={layoutItemApi.apiName}
                                                         record-type-id={recordTypeId}
                                                         record={record} 
@@ -77,7 +77,7 @@
                                         <div key={layoutRows} class="slds-grid slds-wrap">
                                             <template for:each={layoutRows.layoutItems} for:item="layoutItems">
                                                 <template for:each={layoutItems.layoutComponents} for:item="layoutItemApi">
-                                                    <div key={layoutItemApi} class="slds-size_1-of-2">
+                                                    <div key={layoutItemApi} class="slds-p-around_medium slds-size_1-of-2">
                                                         <c-case-form-fields data-id={layoutItemApi.apiName}
                                                         record-type-id={recordTypeId}
                                                         record={record} 
@@ -104,10 +104,11 @@
                             <div key={layoutRows} class="slds-grid slds-wrap">
                                 <template for:each={layoutRows.layoutItems} for:item="layoutItems">
                                     <template for:each={layoutItems.layoutComponents} for:item="layoutItemApi">
-                                        <div key={layoutItemApi} class="slds-size_1-of-2">
+                                        <div key={layoutItemApi} class="slds-p-around_medium slds-size_1-of-2">
                                             <c-case-form-fields data-id={layoutItemApi.apiName}
                                             record-type-id={recordTypeId}
-                                            record={record} 
+                                            record={record}
+                                            req-tab-sections={reqTabSections}
                                             case-template-rec-layout-value={caseTemplateRecLayoutValue}
                                             fld-api={layoutItemApi.apiName} 
                                             field-details={fieldDetails}>
@@ -135,7 +136,7 @@
                                         <div key={layoutRows} class="slds-grid slds-wrap">
                                             <template for:each={layoutRows.layoutItems} for:item="layoutItems">
                                                 <template for:each={layoutItems.layoutComponents} for:item="layoutItemApi">
-                                                    <div key={layoutItemApi} class="slds-size_1-of-2">
+                                                    <div key={layoutItemApi} class="slds-p-around_medium slds-size_1-of-2">
                                                         <c-case-form-fields data-id={layoutItemApi.apiName}
                                                         record-type-id={recordTypeId}
                                                         record={record} 

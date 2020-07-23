@@ -120,14 +120,14 @@
 	<!-- START OF PICKLIST -->
 	<template if:true={isPickList}>
 		<template if:false={fieldRequired}>
-		<lightning-combobox onfocus={onEditFocus} name="progress" label="Status" value={value} placeholder=" "
+		<lightning-combobox onfocus={onEditFocus} name="progress" label={label} value={value} placeholder=" "
 			onchange={handleOnValueChange} options={pckListOptions} variant="label-hidden" tabindex="0"
 			required={fieldRequired}>
 		</lightning-combobox>
 		</template>
 		<template if:true={fieldRequired}>
 			<span class="required">*</span>
-			<lightning-combobox onfocus={onEditFocus} name="progress" label="Status" value={value} placeholder=" "
+			<lightning-combobox onfocus={onEditFocus} name="progress" label={label} value={value} placeholder=" "
 				onchange={handleOnValueChange} options={pckListOptions} variant="label-hidden" tabindex="0"
 				required={fieldRequired}>
 			</lightning-combobox>

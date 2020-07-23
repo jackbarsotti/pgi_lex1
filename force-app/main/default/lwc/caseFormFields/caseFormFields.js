@@ -13,6 +13,7 @@ export default class CaseFormFields extends LightningElement {
   @api fldApi;
   @api record;
   @api fieldDetails = [];
+  @api reqTabSections=[];
   @api fieldProperty;
   @api value;
   @api label;
@@ -33,13 +34,32 @@ export default class CaseFormFields extends LightningElement {
   @api pckListOptions;
   @api editableForNew;
   @api caseTemplateRecValue =[];
+  @api reqTabNames=[];
+
   handleOnValueChange (event) {
     var fldval = event.target.value;
+    var fldValLbel=event.target.label;
+    var reqTabs=[];
+    console.log('fldValLbel>>40',fldValLbel);
+
     if(this.isPickList && fldval === '--None--'){
       fldval = null;
     }
     this.value = fldval;
     console.log('The Xhanged',this.value);
+
+     var reqTabValues=this.reqTabSections;
+     for(var p in reqTabValues){
+       console.log('in for >53 ');
+       if(reqTabValues[p].fieldLabel===fldValLbel){
+        console.log('in if >55 ');
+        if(fldval==='--None--' || fldval===undefined || fldval===" " || fldval===null){
+          console.log('in for >57 ')
+            this.reqTabNames.push({heading:reqTabValues[p].heading});
+            console.log('tabNames>>56',this.reqTabNames);
+        }
+       }
+     }
   }
   @api getValue () {
     return {
@@ -53,6 +73,7 @@ export default class CaseFormFields extends LightningElement {
     this.value = val;
   }
   connectedCallback() {
+  //  console.log('reqTabSections>>57',this.reqTabSections);
     var fieldDetail = this.fieldDetails;
     for (var key in fieldDetail) {
       if (fieldDetail[key].realApiName === this.fldApi) {

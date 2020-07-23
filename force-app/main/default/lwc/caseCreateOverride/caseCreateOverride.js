@@ -19,6 +19,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
   @api tabLayoutSections=[];
   @api bottomLayoutSections=[];
   @api buttonSections=[];
+  @api reqTabSections=[];
   //caseTemplate Selecction List
   @track quickCaseListOption = [];
   //All case Templete Records
@@ -59,16 +60,20 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
   }
 
   handleSave() {
+    console.log('compVal>>hj');
     let caseObj = {};
-    this.template.querySelectorAll('c-dynamic-table-row').forEach(eachElement => {
+    this.template.querySelectorAll('c-case-form-fields').forEach(eachElement => {
       let compVal = eachElement.getValue();
+      console.log('compVal>>66',JSON.stringify(compVal));
       if (compVal.apiName != null
         && compVal.apiName != ''
         && compVal.apiName != undefined
         && compVal.value != null
         && compVal.value != undefined
         && compVal.editableForNew) {
+          console.log('in if>>74');
         caseObj[compVal.apiName] = compVal.value;
+        console.log('in if>>74',caseObj[compVal.apiName]);
       }
     });
     caseObj.Id = this.recordId;
@@ -113,55 +118,40 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
         }
       })
       .catch(error => {
-        console.log('ErrorResultQuick', error);
       });
       getRecordType()
         .then(result => {
           if(result !== null && result !== undefined){
             var retRecTypData= result;
-             console.log('retRecTypData>>126',retRecTypData);
              for(var key in retRecTypData){
-              console.log('>>> inside for  >>128');
               if(retRecTypData[key].Id == this.recordTypeId){
-                console.log('inside if 130');
                 var currentRTName=retRecTypData[key].Name;
-                console.log('currentRTName>>132',currentRTName);
                 this.recordTypeName=currentRTName;
               }
             }
           }
         })
         .catch(error => {
-          console.log('ErrorResultQuick',error);
         });
 
         // for getting tabCount and topCount from custom setting 
         getCaseTabViewRecords()
      .then(result => {
-      console.log('result>>122',result);
       var retData= result;
-      console.log('Resulttoptab>>124',retData);
      var topCountValue;
     var tabCountValue;
     for(var key in retData){
-        console.log('recordtypeid>>149',this.recordTypeId);
-        console.log('recordTypeName>>150',this.recordTypeName);
         if(retData[key].RecordType__c == this.recordTypeName){
            this.tabRecordType=retData[key].RecordType__c;
           if(retData[key].Top_Count__c >0 && retData[key].Top_Count__c >0){
-            console.log('inside if 131');
            topCountValue = retData[key].Top_Count__c;
-            console.log('>> topCountvalues133',retData[key].Top_Count__c);
             this.topCount = topCountValue; 
-            console.log('layoutsection>>42',this.layoutsection);  
             tabCountValue=retData[key].Tab_Count__c;
             this.tabCount=tabCountValue;
-            console.log('tabCountValue>>138',this.tabCount);
           }
           else 
           {
             this.topCount= 0;
-            console.log('topCount>>else166',this.topCount);
             this.tabCount= 0;
           }
            
@@ -202,7 +192,6 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
       var sectionHeader = [];
       var eachSection = [];
       var layoutSec = this.layoutsection;
-      console.log('The secCtion>>205',layoutSec);
       for (var key in layoutSec) {
         //all section related Information
         sectionHeader.push(layoutSec[key].heading);
@@ -220,12 +209,10 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
           for (var j in items) {
             if(items[j].editableForNew){
             var reqFields=items[j].required;
-            console.log('reqFields>>2234',reqFields);
             var getfieldApi = items[j].layoutComponents;
             //to get ApiName for LayoutItem
             for (var k in getfieldApi) {
               let apiNameforMap = getfieldApi[k].apiName;
-              console.log('apiNameforMap>>228',apiNameforMap);
               if (apiNameforMap !== null) {
                 this.lowertoOriginalApi.push({ lower: apiNameforMap.toLowerCase(), apiName: apiNameforMap });
               }
@@ -246,35 +233,76 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
         for(i=0;i<this.layoutsection.length;i++){ 
           if(i<this.topCount){
             topSections=this.layoutsection[i];
-            console.log('topSections>>188',topSections);
           //  this.topLayoutSections=this.topLayoutSection+this.layoutsection[i];
-            console.log('layout>>190',this.layoutsection[i])
             this.topLayoutSections.push(topSections);
-            console.log('topLayoutSections>>192',this.topLayoutSections);
+          
            
           }
           else if(i>=this.topCount && i<(this.topCount + this.tabCount)){
             tabSections=this.layoutsection[i];
             console.log('tabSections>>198',tabSections);
             this.tabLayoutSections.push(tabSections);
-          
+           var tabSecButtons=this.tabLayoutSections;
+           var reqTabs=[];
+            var reqFields;
+          for(var l in tabSecButtons){
+            var secRows = tabSecButtons[l].layoutRows;
+            
+            for (var m in secRows) {
+              var items = secRows[m].layoutItems;  
+              for (var n in items) {
+                
+                reqFields=items[n].required;
+                var layComponents=items[n].layoutComponents;
+                // if(reqFields==true){
+                //   console.log('tabSecButtons[l].heading>>',tabSecButtons[l].heading);
+                //   if(reqTabs.contains(tabSecButtons[l].heading)){
+                //     console.log('contains>>271');
+                //   }
+                //   else{
+                //     reqTabs.push({heading:tabSecButtons[l].heading,});
+                //     console.log('reqTabs>>258',reqTabs);
+                //   }
+                // }
+                for(var o in layComponents){
+                 // let reqLabel= layComponents[o].label;
+                  // if(items[n].required==true){
+                  //   this.reqTabSections.push({heading:tabSecButtons[l].heading,fieldLabel:layComponents[o].label});
+                  //     console.log('reqTabSections>>258',this.reqTabSections);
+                  // }
+                  if(items[n].required==true){
+                   
+                    // if(reqTabs.heading.contains(tabSecButtons[l].heading)){
+                    //   console.log('in272')
+                    //   reqTabs.add({fieldLabel:layComponents[o].label});
+
+                    // }
+                    reqTabs.push({heading:tabSecButtons[l].heading,fieldLabel:layComponents[o].label});
+                      console.log('reqTabs>>258',reqTabs);
+                      
+                  }
+                }
+               
+              }
+              
+            }
+          }
+          this.reqTabSections=reqTabs;
+          console.log('reqTabSections>>276',this.reqTabSections);
           }
           else if(i>=(this.topCount + this.tabCount)){
             bottomSections=this.layoutsection[i];
-            console.log('bottomSections>>265',bottomSections);
             this.bottomLayoutSections.push(bottomSections);
-            console.log('bottomLayoutSections>>267',this.bottomLayoutSections);
           }
          
         }
          
-        console.log('topLayoutSections>>205',this.topLayoutSections);
         console.log('tabLayoutSections>>206',this.tabLayoutSections);
       }
      // end for caseTabviewer
+     
 
-
-      console.log('The Map Is',this.lowertoOriginalApi);
+    
       var fieldDetail = [];
       var fieldApi = [];
       //to get is editable ornot
@@ -327,9 +355,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
   handleTabSections(event){
     var buttonData;
     var clickedButton = event.target.label;
-    console.log('clickedButton>>330',clickedButton);
     var layoutSecData=this.layoutsection;
-    console.log('layoutSecData>>332',layoutSecData);
     for(var key in layoutSecData){
       if(layoutSecData[key].heading == clickedButton){
         buttonData=layoutSecData[key];
@@ -344,7 +370,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
   }
   handleCaseTemplateChange(event) {
     this.selectedCaseTemplate = event.target.value;
-    console.log('The Selected', this.selectedCaseTemplate);
+    console.log('The Selected>>361', this.selectedCaseTemplate);
     //clearing the previous Value
     if(this.caseTemplateRecLayoutValue !== null && this.caseTemplateRecLayoutValue.length > 0){
       var layoutDefVal = this.caseTemplateRecLayoutValue;
