@@ -25,6 +25,7 @@
                                     <template for:each={sections.layoutRows} for:item="layoutRows">
                                         <div key={layoutRows} class="slds-grid slds-wrap">
                                             <template for:each={layoutRows.layoutItems} for:item="layoutItems">
+                                                <template if:true={layoutItems.editableForNew}>
                                                 <template for:each={layoutItems.layoutComponents} for:item="layoutItemApi">
                                                     <div key={layoutItemApi} class="slds-p-around_medium slds-size_1-of-2">
                                                         <c-case-form-fields data-id={layoutItemApi.apiName}
@@ -36,6 +37,7 @@
                                                         </c-case-form-fields>
                                                     </div>
                                                 </template>
+                                            </template>
                                             </template>
                                         </div>
                                         <br key={layoutRows} />
@@ -76,6 +78,7 @@
                                     <template for:each={sections.layoutRows} for:item="layoutRows">
                                         <div key={layoutRows} class="slds-grid slds-wrap">
                                             <template for:each={layoutRows.layoutItems} for:item="layoutItems">
+                                                <template if:true={layoutItems.editableForNew}>
                                                 <template for:each={layoutItems.layoutComponents} for:item="layoutItemApi">
                                                     <div key={layoutItemApi} class="slds-p-around_medium slds-size_1-of-2">
                                                         <c-case-form-fields data-id={layoutItemApi.apiName}
@@ -86,6 +89,7 @@
                                                         field-details={fieldDetails}>
                                                         </c-case-form-fields>
                                                     </div>
+                                                </template>
                                                 </template>
                                             </template>
                                         </div>
@@ -103,6 +107,7 @@
                          <template for:each={buttonSections.layoutRows} for:item="layoutRows">
                             <div key={layoutRows} class="slds-grid slds-wrap">
                                 <template for:each={layoutRows.layoutItems} for:item="layoutItems">
+                                    <template if:true={layoutItems.editableForNew}>
                                     <template for:each={layoutItems.layoutComponents} for:item="layoutItemApi">
                                         <div key={layoutItemApi} class="slds-p-around_medium slds-size_1-of-2">
                                             <c-case-form-fields data-id={layoutItemApi.apiName}
@@ -114,6 +119,7 @@
                                             field-details={fieldDetails}>
                                             </c-case-form-fields>
                                         </div>
+                                    </template>
                                     </template>
                                 </template>
                             </div>
@@ -135,6 +141,7 @@
                                     <template for:each={sections.layoutRows} for:item="layoutRows">
                                         <div key={layoutRows} class="slds-grid slds-wrap">
                                             <template for:each={layoutRows.layoutItems} for:item="layoutItems">
+                                                <template if:true={layoutItems.editableForNew}>
                                                 <template for:each={layoutItems.layoutComponents} for:item="layoutItemApi">
                                                     <div key={layoutItemApi} class="slds-p-around_medium slds-size_1-of-2">
                                                         <c-case-form-fields data-id={layoutItemApi.apiName}
@@ -145,6 +152,7 @@
                                                         field-details={fieldDetails}>
                                                         </c-case-form-fields>
                                                     </div>
+                                                </template>
                                                 </template>
                                             </template>
                                         </div>
@@ -160,9 +168,22 @@
                 
             </template> 
         </template>
-        <div  class="slds-align_absolute-center">
+        <!-- <div  class="slds-align_absolute-center">
             <lightning-button label="Save" onclick={handleSave}></lightning-button>
             <lightning-button label="Cancel" onclick={handleCancel}></lightning-button>
-        </div>
+        </div> -->
+        <footer class="slds-model_footer slds-align_absolute-center slds-docked-form-footer">
+            <lightning-button variant="brand"
+                                label="Save"
+                                title="save" 
+                                onclick={handleSave}
+                                class="slds-m-right_x-small">
+            </lightning-button>
+            <lightning-button variant="brand"
+                                label="Cancel"
+                                title="cancel" 
+                                onclick={handleCancel}>
+            </lightning-button>
+        </footer>
     </lightning-card>
 </template>

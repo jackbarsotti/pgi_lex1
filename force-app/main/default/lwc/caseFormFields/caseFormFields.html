@@ -1,154 +1,111 @@
 <template>
 
-	{label}
+	<!-- {label} {fieldRequired}  -->
 	<!-- FOR TEXT TYPE -->
 	<template if:true={isString}>
-		<template if:false={fieldRequired}>
-		<lightning-input tabindex="0" type="text" label=" a" value={value} onchange={handleOnValueChange}
-			variant="label-hidden" required={fieldRequired}>
+		<lightning-input tabindex="0" type="text" class="inputCmp" label={label} value={value} onchange={handleOnValueChange}
+			 required={fieldRequired}>
 		</lightning-input>
-	    </template>
-		<template if:true={fieldRequired}>
-			<span class="required">*</span>
-			<lightning-input tabindex="0" type="text" label=" a" value={value} onchange={handleOnValueChange}
-				 variant="label-hidden" required={fieldRequired}></lightning-input>
-		</template>
+		<div if:true={isError}>
+			 <b style="color: red">{error}</b>
+		</div>
 	</template>
 	<!-- END OF TEXT TYPE -->
 	<!-- START OF CURRENCY TYPE -->
 	<template if:true={isCurrency}>
-		<template if:false={fieldRequired}>
-		<lightning-input type="number" label=" a" value={value} variant="label-hidden" onchange={handleOnValueChange}
+		<lightning-input type="number" class="inputCmp" label={label} value={value}  onchange={handleOnValueChange}
 			required={fieldRequired} tabindex="0">
 		</lightning-input>
-	    </template>
-		<template if:true={fieldRequired}>
-			<span class="required">*</span>
-			<lightning-input type="number" label=" a" value={value} variant="label-hidden" onchange={handleOnValueChange}
-			required={fieldRequired} tabindex="0">
-			 </lightning-input>
-		</template>
+		<div if:true={isError}>
+			<b style="color: red">{error}</b>
+	   </div>
 	</template>
 	<!-- END OF CURRENCY TYPE -->
 	<!-- START OF TEXTAREA -->
 	<template if:true={isTextArea}>
-		<template if:false={fieldRequired}>
-		<lightning-textarea name="myTextArea" value={value}  variant="label-hidden" onchange={handleOnValueChange}
-			label="textareafld" maxlength="300" required={fieldRequired} ></lightning-textarea>
-		</template>
-		<template if:true={fieldRequired}>
-			<span class="required">*</span>
-			<lightning-textarea name="myTextArea" value={value}  variant="label-hidden" onchange={handleOnValueChange}
+			<lightning-textarea name="myTextArea" class="inputCmp" value={value}   onchange={handleOnValueChange}
 				 label="textareafld" maxlength="300" required={fieldRequired}> 
 			</lightning-textarea>
-			<!-- <lightning-input type="textarea" label="textareafld" value={value} variant="label-hidden" onchange={handleOnValueChange}
-				required={fieldRequired}>
-			</lightning-input> -->
-		</template>
+		<div if:true={isError}>
+			<b style="color: red">{error}</b>
+	   </div>
 	</template>
 	<!-- END OF TEXTAREA -->
 	<!-- START OF NUMBER -->
 	<template if:true={isNumber}>
-		<template if:false={fieldRequired}>
-		<lightning-input type="number" name="datefld" label="date" value={value} onchange={handleOnValueChange}
-			variant="label-hidden" required={fieldRequired}></lightning-input>
-		</template>
-		<template if:true={fieldRequired}>
-			<span class="required">*</span>
-			<lightning-input type="number" name="datefld" label="date" value={value} onchange={handleOnValueChange}
-				variant="label-hidden" required={fieldRequired}></lightning-input>
-		</template>
+			<lightning-input type="number" class="inputCmp" name="datefld" label={label} value={value} onchange={handleOnValueChange}
+				 required={fieldRequired}></lightning-input>
+		<div if:true={isError}>
+			<b style="color: red">{error}</b>
+	   </div>
 	</template>
 	<!-- END OF NUMBER -->
 	<!-- START OF EMAIL -->
 	<template if:true={isEmail}>
-		<template if:false={fieldRequired}>
-		<lightning-input type="email" label="E-mail address" value={value} onchange={handleOnValueChange}
-			required={fieldRequired} variant="label-hidden">
-		</lightning-input>
-		</template>
-		<template if:true={fieldRequired}>
-			<span class="required">*</span>
-			<lightning-input type="email" label="E-mail address" value={value} onchange={handleOnValueChange}
-				required={fieldRequired} variant="label-hidden">
+			<lightning-input type="email" class="inputCmp" label={label} value={value} onchange={handleOnValueChange}
+				required={fieldRequired} >
 			</lightning-input>
-		</template>
+		<div if:true={isError}>
+			<b style="color: red">{error}</b>
+	   </div>
 	</template>
 	<!-- END OF EMAIL -->
 	<template if:true={isUrl}>
-		<template if:false={fieldRequired}>
-		<lightning-input type="url" label="Enter a URL" name="input1" onchange={handleOnValueChange}
-			required={fieldRequired} value={value} variant="label-hidden"></lightning-input>
-		</template>
-		<template if:true={fieldRequired}>
-			<span class="required">*</span>
-			<lightning-input type="url" label="Enter a URL" name="input1" onchange={handleOnValueChange}
-				required={fieldRequired} value={value} variant="label-hidden"></lightning-input>
-			</template>
+			<lightning-input type="url" class="inputCmp" label={label} name="input1" onchange={handleOnValueChange}
+				required={fieldRequired} value={value} ></lightning-input>
+			<div if:true={isError}>
+				<b style="color: red">{error}</b>
+		   </div>
 	</template>
 	<!-- END OF URL -->
 	<!-- START OF DATETIME -->
 	<template if:true={isDateTime}>
-		<template if:false={fieldRequired}>
-		<lightning-input type="datetime" name="input5" label="datetime" value={value} onchange={handleOnValueChange}
-			variant="label-hidden" required={fieldRequired}>
-		</lightning-input>
-		</template>
-		<template if:true={fieldRequired}>
-			<span class="required">*</span>
-			<lightning-input type="datetime" name="input5" label="datetime" value={value} onchange={handleOnValueChange}
-				variant="label-hidden" required={fieldRequired}>
+			<lightning-input type="datetime" class="inputCmp" name="input5" label={label} value={value} onchange={handleOnValueChange}
+				 required={fieldRequired}>
 			</lightning-input>
-		</template>
+		<div if:true={isError}>
+			<b style="color: red">{error}</b>
+	   </div>
 	</template>
 	<!-- END OF DATETIME -->
 	<!-- START OF DATE -->
 	<template if:true={isDate}>
-		<template if:false={fieldRequired}>
-		<lightning-input type="date" name="datefld" label="date" onclick={onEditFocus} value={value}
-			onchange={handleOnValueChange} variant="label-hidden" required={fieldRequired}></lightning-input>
-		</template>
-		<template if:true={fieldRequired}>
-			<span class="required">*</span>
-			<lightning-input type="date" name="datefld" label="date" onclick={onEditFocus} value={value}
-				onchange={handleOnValueChange} variant="label-hidden" required={fieldRequired}></lightning-input>
-		</template>
+			<lightning-input type="date" class="inputCmp" name="datefld" label={label} onclick={onEditFocus} value={value}
+				onchange={handleOnValueChange}  required={fieldRequired}>
+			</lightning-input>
+		<div if:true={isError}>
+			<b style="color: red">{error}</b>
+	   </div>
 	</template>
 	<!-- END OF DATE -->
 
 
 	<!-- START OF PICKLIST -->
 	<template if:true={isPickList}>
-		<template if:false={fieldRequired}>
-		<lightning-combobox onfocus={onEditFocus} name="progress" label={label} value={value} placeholder=" "
-			onchange={handleOnValueChange} options={pckListOptions} variant="label-hidden" tabindex="0"
-			required={fieldRequired}>
-		</lightning-combobox>
-		</template>
-		<template if:true={fieldRequired}>
-			<span class="required">*</span>
-			<lightning-combobox onfocus={onEditFocus} name="progress" label={label} value={value} placeholder=" "
-				onchange={handleOnValueChange} options={pckListOptions} variant="label-hidden" tabindex="0"
+			<lightning-combobox onfocus={onEditFocus} class="inputCmp" name="progress" label={label} value={value} placeholder=" "
+				onchange={handleOnValueChange} options={pckListOptions}  tabindex="0"
 				required={fieldRequired}>
 			</lightning-combobox>
-		</template>
+		<div if:true={isError}>
+			<b style="color: red">{error}</b>
+	   </div>
 	</template>
 	<!-- END OF PICKLIST -->
 	<!-- START OF LOOKUP -->
 	<template if:true={isLookup}>
-		<template if:false={fieldRequired}>
-		<c-custom-lookup field-label="Select Account Record" child-object-api-name='Case' required={fieldRequired}
-			target-field-api-name={fldApi} onvalueselected={handleValueSelcted}></c-custom-lookup>
-		</template>
-		<template if:true={fieldRequired}>
-			<span class="required">*</span>
-			<c-custom-lookup field-label="Select Account Record" child-object-api-name='Case' required={fieldRequired}
-				target-field-api-name={fldApi} onvalueselected={handleValueSelcted}></c-custom-lookup>
-			</template>
+			<c-custom-lookup field-label="Select Account Record" child-object-api-name='Case' class="inputCmp" required={fieldRequired}
+				target-field-api-name={fldApi} onvalueselected={handleValueSelcted}>
+			</c-custom-lookup>
+			<div if:true={isError}>
+				<b style="color: red">{error}</b>
+		   </div>
 	</template>
 	<!-- END OF LOOKUP -->
 	<template if:true={isBoolean}>
-		<lightning-input type="checkbox" name="chkboxfld" label="chkbox" value={value}
-			onchange={handleOnValueChange} variant="label-hidden" required={fieldRequired}></lightning-input>
+		<lightning-input type="checkbox" class="inputCmp" name="chkboxfld" label={label} value={value}
+			onchange={handleOnValueChange}  required={fieldRequired}></lightning-input>
+			<div if:true={isError}>
+				<b style="color: red">{error}</b>
+		   </div>
 	</template>
 </template>

@@ -9,6 +9,7 @@ import getQuickCase from '@salesforce/apex/CaseCreateOverrideController.getQuick
 import { NavigationMixin } from 'lightning/navigation';
 import getRecordType from '@salesforce/apex/CaseRTSelection.getRecordType';
 import getCaseTabViewRecords from '@salesforce/apex/CaseTabViewerController.getCaseTabViewRecords';
+import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 export default class CaseCreateOverride extends NavigationMixin(LightningElement) {
   @api recordId;
@@ -58,43 +59,167 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
       this.error = JSON.stringify(error);
     }
   }
-
+ 
   handleSave() {
-    console.log('compVal>>hj');
+		console.log('compVal>>hj');
     let caseObj = {};
-    this.template.querySelectorAll('c-case-form-fields').forEach(eachElement => {
-      let compVal = eachElement.getValue();
-      console.log('compVal>>66',JSON.stringify(compVal));
-      if (compVal.apiName != null
-        && compVal.apiName != ''
-        && compVal.apiName != undefined
-        && compVal.value != null
-        && compVal.value != undefined
-        && compVal.editableForNew) {
-          console.log('in if>>74');
-        caseObj[compVal.apiName] = compVal.value;
-        console.log('in if>>74',caseObj[compVal.apiName]);
+    let isValidate=true;
+    //Start
+    this.fieldDetails.forEach(ele =>{
+      console.log('The RealApi1',ele.realApiName);
+      if(ele.required && ele.editableForNew && ele.realApiName !== null){
+        console.log('The RealApi',ele.realApiName);
+      let element = this.template.querySelector(`c-case-form-fields[data-id="${ele.realApiName}"]`);
+      element.setError();
       }
     });
-    caseObj.Id = this.recordId;
-    console.log(caseObj);
-    updateCase({ record: caseObj }).then(res => {
-      console.log(`${res}`);
-      if (res) {
-        this[NavigationMixin.Navigate]({
-          type: 'standard__recordPage',
-          attributes: {
-            recordId: this.recordId,
-            objectApiName: 'Case',
-            actionName: 'view'
-          },
+    //End
+		this.template.querySelectorAll('c-case-form-fields').forEach(eachElement => {
+				let compVal = eachElement.getValue();
+				console.log('compVal>>66', JSON.stringify(compVal));
+				if (compVal.required && compVal.value == null)
+				//|| compVal.value === undefined || compVal.value === ''))
+				{
+          isValidate=false;
+          console.log('isvalidate',isValidate);
+          console.log()
+          const evt = new ShowToastEvent({
+            title: 'Toast Error',
+            message: 'Please fill the required fields',
+            variant: 'error',
+            mode: 'dismissable'
+          });
+          this.dispatchEvent(evt);
+        } 
+        console.log('isvalidate',isValidate);
+					if (isValidate && compVal.apiName != null &&
+						compVal.apiName != '' &&
+						compVal.apiName != undefined &&
+						compVal.value != null &&
+						compVal.value != undefined &&
+            compVal.editableForNew) 
+          {
+						console.log('compVal.required  ', compVal.required);
+						console.log('in if>>74');
+						caseObj[compVal.apiName] = compVal.value;
+            console.log('in if>>74', caseObj[compVal.apiName]);
+          }
         });
-      }
-    }).catch(error => {
-      console.log(`${error}`);
-    });
 
-  }
+        if(isValidate){
+					caseObj.Id = this.recordId;
+					console.log(caseObj);
+					updateCase({
+						record: caseObj
+					}).then(res => {
+						console.log(`${res}`);
+						if (res) {
+							this[NavigationMixin.Navigate]({
+								type: 'standard__recordPage',
+								attributes: {
+									recordId: this.recordId,
+									objectApiName: 'Case',
+									actionName: 'view'
+								},
+							});
+						}
+					}).catch(error => {
+						console.log(`${error}`);
+					});
+					//this.createCaseObj(caseObj);
+        }
+      //});
+      
+    }
+  // createCaseObj(caseObj){
+    
+  //   console.log(caseObj);
+  //   updateCase({ record: caseObj }).then(res => {
+  //     console.log(`${res}`);
+  //     if (res) {
+  //       this[NavigationMixin.Navigate]({
+  //         type: 'standard__recordPage',
+  //         attributes: {
+  //           recordId: this.recordId,
+  //           objectApiName: 'Case',
+  //           actionName: 'view'
+  //         },
+  //       });
+  //     }
+  //   }).catch(error => {
+  //     console.log(`${error}`);
+  //   });
+  //  .forEach(element => {
+  //    element.checkValidity();
+  //  });
+  
+
+/*
+    this.template.querySelectorAll("c-case-form-fields")
+      .forEach(element => {
+        element.checkValidity();
+      }); */
+    // Capture existing state to restore later
+   // let tempExpandAll = this.expandAll; 
+    // Temporarily expand all the child components (doesn't propagate in time)
+   /* this.expandAll = true; 
+
+    this.valid = [...this.template.querySelectorAll('c-case-form-fields')]
+        .reduce((allValid, childCmp) => {
+          window.console.log('childCmp: ',childCmp);
+          window.console.log('childCmp.validateInputs: ',childCmp.validateInputs());
+            if (childCmp.validateInputs()) {
+                return allValid; 
+            }
+            return 'no';
+        }, 'yes'); 
+    this.expandAll = tempExpandAll; // Put the state back where you found it
+/*this.valid = [...this.template.querySelectorAll('c-case-form-fields')]
+        .reduce((validSoFar, childCmp) => {
+          window.console.log('childCmp: ',childCmp);
+          window.console.log('childCmp.validateInputs: ',childCmp.validateInputs());
+            if (childCmp.validateInputs()) {
+                return validSoFar; 
+            }
+            return 'no';
+        }, 'yes'); */
+    // console.log('compVal>>hj');
+    // let caseObj = {};
+    // this.template.querySelectorAll('c-case-form-fields').forEach(eachElement => {
+    //   let compVal = eachElement.getValue();
+    //   console.log('compVal>>66',JSON.stringify(compVal));
+    //   if (compVal.apiName != null
+    //     && compVal.apiName != ''
+    //     && compVal.apiName != undefined
+    //     && compVal.value != null
+    //     && compVal.value != undefined
+    //     && compVal.editableForNew) {
+
+
+    //       console.log('in if>>74');
+    //     caseObj[compVal.apiName] = compVal.value;
+    //     console.log('in if>>74',caseObj[compVal.apiName]);
+    //   }
+    // });
+    // caseObj.Id = this.recordId;
+    // console.log(caseObj);
+    // updateCase({ record: caseObj }).then(res => {
+    //   console.log(`${res}`);
+    //   if (res) {
+    //     this[NavigationMixin.Navigate]({
+    //       type: 'standard__recordPage',
+    //       attributes: {
+    //         recordId: this.recordId,
+    //         objectApiName: 'Case',
+    //         actionName: 'view'
+    //       },
+    //     });
+    //   }
+    // }).catch(error => {
+    //   console.log(`${error}`);
+    // });
+
+  
 
   // Picklist values based on record type
   connectedCallback() {
@@ -215,8 +340,9 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
               let apiNameforMap = getfieldApi[k].apiName;
               if (apiNameforMap !== null) {
                 this.lowertoOriginalApi.push({ lower: apiNameforMap.toLowerCase(), apiName: apiNameforMap });
-              }
+              
               fieldAPIList.push({ apiName: getfieldApi[k].apiName, editableForNew: items[j].editableForNew, required:reqFields });
+            }
             }
           }
           }
@@ -244,16 +370,26 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
             this.tabLayoutSections.push(tabSections);
            var tabSecButtons=this.tabLayoutSections;
            var reqTabs=[];
+           var requiredLabel=[];
+           var heading=[];
+           var tempHolder=[];
             var reqFields;
           for(var l in tabSecButtons){
-            var secRows = tabSecButtons[l].layoutRows;
             
-            for (var m in secRows) {
+            var secRows = tabSecButtons[l].layoutRows;
+            console.log('secRows >>',secRows);
+            for (var m in secRows) 
+            {
+             
               var items = secRows[m].layoutItems;  
-              for (var n in items) {
-                
+             
+              for (var n in items) 
+              {  
+              
                 reqFields=items[n].required;
+                
                 var layComponents=items[n].layoutComponents;
+         
                 // if(reqFields==true){
                 //   console.log('tabSecButtons[l].heading>>',tabSecButtons[l].heading);
                 //   if(reqTabs.contains(tabSecButtons[l].heading)){
@@ -265,18 +401,21 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
                 //   }
                 // }
                 for(var o in layComponents){
+            
                  // let reqLabel= layComponents[o].label;
                   // if(items[n].required==true){
                   //   this.reqTabSections.push({heading:tabSecButtons[l].heading,fieldLabel:layComponents[o].label});
                   //     console.log('reqTabSections>>258',this.reqTabSections);
                   // }
                   if(items[n].required==true){
-                   
+         
                     // if(reqTabs.heading.contains(tabSecButtons[l].heading)){
                     //   console.log('in272')
                     //   reqTabs.add({fieldLabel:layComponents[o].label});
 
                     // }
+                //    heading.push(tabSecButtons[l].heading);
+               //     requiredLabel.push(layComponents[o].label);
                     reqTabs.push({heading:tabSecButtons[l].heading,fieldLabel:layComponents[o].label});
                       console.log('reqTabs>>258',reqTabs);
                       
@@ -287,6 +426,15 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
               
             }
           }
+       /*   for( var i in heading)
+          {
+            for(j in requiredLabel)
+            {
+              tempHolder.push({heading:heading[i],fieldLabel:requiredLabel});
+            }
+          }
+          console.log('tempholder',tempHolder);
+          */
           this.reqTabSections=reqTabs;
           console.log('reqTabSections>>276',this.reqTabSections);
           }

@@ -1,11 +1,4 @@
-import { LightningElement, api, wire, track } from "lwc";
-import { getPicklistValuesByRecordType } from "lightning/uiObjectInfoApi"; 
-import CASE_OBJECT from "@salesforce/schema/Case";
-import { updateRecord } from "lightning/uiRecordApi";
-import LANG from "@salesforce/i18n/lang";
-import mediumDateFormat from "@salesforce/i18n/dateTime.mediumDateFormat";
-import usertimeZone from "@salesforce/i18n/timeZone";
-import { ShowToastEvent } from "lightning/platformShowToastEvent";
+import { LightningElement, api } from "lwc";
 
 export default class CaseFormFields extends LightningElement {
   @api recordId;
@@ -33,9 +26,11 @@ export default class CaseFormFields extends LightningElement {
   @api isCurrency;
   @api pckListOptions;
   @api editableForNew;
+  @api required;
   @api caseTemplateRecValue =[];
   @api reqTabNames=[];
-
+  @api isError = false;
+  @api error;
   handleOnValueChange (event) {
     var fldval = event.target.value;
     var fldValLbel=event.target.label;
@@ -61,16 +56,92 @@ export default class CaseFormFields extends LightningElement {
        }
      }
   }
+ 
+  @api checkValidity() {
+
+    const allValid = [...this.template.querySelectorAll('lightning-input')]
+    .reduce((validSoFar, inputCmp) => {
+                inputCmp.reportValidity();
+                // console.log('inputCmp.reportvalidity',JSON.stringify(inputCmp.reportValidity()));
+                // console.log('validsoFar',validSoFar);
+                // console.log('inputCmp.checkValidity()',JSON.stringify(inputCmp.checkValidity()));
+                return validSoFar && inputCmp.checkValidity();
+    }, true);
+    if (allValid) {
+         alert('All form entries look valid. Ready to submit!');
+      } else {
+        alert('Please update the invalid form entries and try again.');
+    }
+      
+  //   var inputCmp=[];
+  // /*  let divclass=this.template.querySelector('.div-class');
+  //   console.log('divClass>>',JSON.stringify(divclass));
+  //   let secondClasses = divclass.querySelectorAll(".inputCmp");
+  //   console.log('secondclass>>',JSON.stringify(secondClasses));*/
+  //   inputCmp.push(this.template.querySelectorAll("lightning-input"));
+  //   console.log('inputCmp',inputCmp);
+  //   console.log('inputCmp>>66',JSON.stringify(this.template.querySelectorAll("lightning-input")));
+  //   var value = inputCmp.value;
+  //   console.log('value>>69',value);
+  //   // is input is valid?
+  //   if (!value) {
+  //     inputCmp.setCustomValidity("Please Enter a valid Value");
+  //   } else {
+  //     inputCmp.setCustomValidity(""); 
+  //   }
+  //   inputCmp.reportValidity(); // Tells lightning-input to show the error right away without needing interaction
+  }
+
+  @api
+    validateInputs() {
+     return [...this.template.querySelectorAll('lightning-input')]
+            .reduce((allValid, inputCmp) => {
+              window.console.log('inputCm: ',inputCmp);
+              window.console.log('inputCmp.checkValidit: ',inputCmp.checkValidity());
+              inputCmp.reportValidity();
+                if (inputCmp.checkValidity()) {
+                    return allValid; 
+                }
+                return false;
+            }, true);
+          }
+    /*
+               inputCmp.reportValidity();
+                if (inputCmp.checkValidity()) {
+                    return allValid; 
+                }
+                return false;
+            }, true);
+      
+     */
+    /*   inputCmp.reportValidity();
+                    return validSoFar && inputCmp.checkValidity();
+        }, true);
+    if (allValid) {
+        alert('All form entries look valid. Ready to submit!');
+    } else {
+        alert('Please update the invalid form entries and try again.');
+    }*/
+
   @api getValue () {
     return {
       apiName : this.fldApi,
-      value : this.value,
-      editableForNew : this.editableForNew
+      value : this.value ? this.value : null,
+      editableForNew : this.editableForNew,
+      required: this.required
     }
   }
   @api 
   setValue (val) {
     this.value = val;
+  }
+  @api 
+  setError () {
+    if(this.value === null || this.value === '' || this.value === undefined){
+      console.log('The ReQFLD',this.fldApi);
+      this.isError =true;
+      this.error = 'Please fill the required Field';
+    }
   }
   connectedCallback() {
   //  console.log('reqTabSections>>57',this.reqTabSections);
@@ -78,6 +149,7 @@ export default class CaseFormFields extends LightningElement {
     for (var key in fieldDetail) {
       if (fieldDetail[key].realApiName === this.fldApi) {
         this.editableForNew =fieldDetail[key].editableForNew;
+        this.required=fieldDetail[key].required;
         var caseTempValues = this.caseTemplateRecValue;
         // if(caseTempValues.length > 0){
         // for(var i in caseTempValues){
