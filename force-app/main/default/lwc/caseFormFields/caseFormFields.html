@@ -1,6 +1,6 @@
 <template>
 
-	<!-- {label} {fieldRequired}  -->
+	<!-- {label} -->{fieldRequired}  
 	<!-- FOR TEXT TYPE -->
 	<template if:true={isString}>
 		<lightning-input tabindex="0" type="text" class="inputCmp" label={label} value={value} onchange={handleOnValueChange}
@@ -24,7 +24,7 @@
 	<!-- START OF TEXTAREA -->
 	<template if:true={isTextArea}>
 			<lightning-textarea name="myTextArea" class="inputCmp" value={value}   onchange={handleOnValueChange}
-				 label="textareafld" maxlength="300" required={fieldRequired}> 
+				 label={label} maxlength="300" required={fieldRequired}> 
 			</lightning-textarea>
 		<div if:true={isError}>
 			<b style="color: red">{error}</b>

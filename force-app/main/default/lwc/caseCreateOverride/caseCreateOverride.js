@@ -6,6 +6,7 @@ import getCaseFieldValues from '@salesforce/apex/CaseCreateOverrideController.ge
 import createCase from '@salesforce/apex/CaseCreateOverrideController.createCase';
 import updateCase from '@salesforce/apex/CaseCreateOverrideController.updateCase';
 import getQuickCase from '@salesforce/apex/CaseCreateOverrideController.getQuickCase';
+import insertCaseComment from '@salesforce/apex/CaseCreateOverrideController.insertCaseComment';
 import { NavigationMixin } from 'lightning/navigation';
 import getRecordType from '@salesforce/apex/CaseRTSelection.getRecordType';
 import getCaseTabViewRecords from '@salesforce/apex/CaseTabViewerController.getCaseTabViewRecords';
@@ -21,6 +22,8 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
   @api bottomLayoutSections=[];
   @api buttonSections=[];
   @api reqTabSections=[];
+  @api requiredCaseComment;
+  @api caseCommentValue;
   //caseTemplate Selecction List
   @track quickCaseListOption = [];
   //All case Templete Records
@@ -63,16 +66,25 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
   handleSave() {
 		console.log('compVal>>hj');
     let caseObj = {};
+    caseObj.sobjectType='Case';
     let isValidate=true;
+    console.log('the value is',this.caseCommentValue)
     //Start
-    this.fieldDetails.forEach(ele =>{
-      console.log('The RealApi1',ele.realApiName);
-      if(ele.required && ele.editableForNew && ele.realApiName !== null){
-        console.log('The RealApi',ele.realApiName);
-      let element = this.template.querySelector(`c-case-form-fields[data-id="${ele.realApiName}"]`);
-      element.setError();
-      }
-    });
+    // this.fieldDetails.forEach(ele =>{
+    //   console.log('The RealApi1',ele.realApiName);
+    //   if(ele.required && ele.editableForNew && ele.realApiName !== null){
+    //     console.log('The RealApi',ele.realApiName);
+    //   let element = this.template.querySelector(`c-case-form-fields[data-id="${ele.realApiName}"]`);
+    //   element.setError();
+    //   }
+    // });
+    // this.valid = [...this.template.querySelectorAll('c-test-child')]
+    //         .reduce((allValid, childCmp) => {
+    //             if (childCmp.validateInputs()) {
+    //                 return allValid; 
+    //             }
+    //             return 'no';
+    //         }, 'yes');
     //End
 		this.template.querySelectorAll('c-case-form-fields').forEach(eachElement => {
 				let compVal = eachElement.getValue();
@@ -80,6 +92,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
 				if (compVal.required && compVal.value == null)
 				//|| compVal.value === undefined || compVal.value === ''))
 				{
+          console.log('The Api',compVal.apiName);
           isValidate=false;
           console.log('isvalidate',isValidate);
           console.log()
@@ -105,25 +118,35 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
             console.log('in if>>74', caseObj[compVal.apiName]);
           }
         });
-
+        console.log('isvalidate1',isValidate);
         if(isValidate){
-					caseObj.Id = this.recordId;
-					console.log(caseObj);
+          console.log('The Original Save');
+          caseObj.Id = this.recordId;
+          caseObj.Scheduled_Resolve_Time__c = new Date (caseObj.Scheduled_Resolve_Time__c);
+          caseObj.Scheduled_Restore_Time__c = new Date (caseObj.Scheduled_Restore_Time__c);
+          console.log('The Value Of recoerdd',caseObj);
 					updateCase({
 						record: caseObj
 					}).then(res => {
-						console.log(`${res}`);
+						console.log('Test Save result',res);
 						if (res) {
-							this[NavigationMixin.Navigate]({
-								type: 'standard__recordPage',
-								attributes: {
-									recordId: this.recordId,
-									objectApiName: 'Case',
-									actionName: 'view'
-								},
-							});
+              
+//CaseComment Insert
+
+            this[NavigationMixin.Navigate]({
+              type: 'standard__recordPage',
+              attributes: {
+                recordId: this.recordId,
+                objectApiName: 'Case',
+                actionName: 'view'
+              },
+            });
+
+
+
 						}
 					}).catch(error => {
+            console.log('The Error Is',JSON.stringify(error));
 						console.log(`${error}`);
 					});
 					//this.createCaseObj(caseObj);
@@ -273,6 +296,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
             this.topCount = topCountValue; 
             tabCountValue=retData[key].Tab_Count__c;
             this.tabCount=tabCountValue;
+            this.requiredCaseComment = retData[key].Show_New_Comment__c;
           }
           else 
           {
@@ -593,5 +617,10 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
     .catch(error => {
       console.log('TestE >>>',error);   
     });
+}
+
+handleCommentChange(event) {
+   this.caseCommentValue = event.target.value;
+  console.log('the value is',this.caseCommentValue)
 }
 }

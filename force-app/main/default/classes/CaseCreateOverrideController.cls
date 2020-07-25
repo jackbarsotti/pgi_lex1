@@ -62,6 +62,18 @@ public with sharing class CaseCreateOverrideController {
         return true;
     }
     @AuraEnabled
+    public static boolean insertCaseComment(String caseCommentBody,String recordId){
+        if(caseCommentBody != null && String.isNotBlank(caseCommentBody)) {
+            CaseComment caseComment = new CaseComment(CommentBody = caseCommentBody, ParentId = recordId);
+            //caseComment.ParentId = cse.Id;                
+            caseComment.CommentBody = caseCommentBody;
+            insert caseComment;
+            return true;
+        }
+        
+        return false;
+    }
+    @AuraEnabled
     public static List<Case_Template__c> getQuickCase(){
         // Map<String,String> apiNameToValueMAp = new Map<String,String>();
         List<Case_Template__c> caseTemplates = Database.query('SELECT Name, Name__c, (SELECT Field_API_Name__c, Value__c FROM Default_Values__r) FROM Case_Template__c');

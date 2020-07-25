@@ -1,4 +1,11 @@
-import { LightningElement, api } from "lwc";
+import { LightningElement, api, wire, track } from "lwc";
+import { getPicklistValuesByRecordType } from "lightning/uiObjectInfoApi"; 
+import CASE_OBJECT from "@salesforce/schema/Case";
+import { updateRecord } from "lightning/uiRecordApi";
+import LANG from "@salesforce/i18n/lang";
+import mediumDateFormat from "@salesforce/i18n/dateTime.mediumDateFormat";
+import usertimeZone from "@salesforce/i18n/timeZone";
+import { ShowToastEvent } from "lightning/platformShowToastEvent";
 
 export default class CaseFormFields extends LightningElement {
   @api recordId;
@@ -135,14 +142,16 @@ export default class CaseFormFields extends LightningElement {
   setValue (val) {
     this.value = val;
   }
-  @api 
-  setError () {
-    if(this.value === null || this.value === '' || this.value === undefined){
-      console.log('The ReQFLD',this.fldApi);
-      this.isError =true;
-      this.error = 'Please fill the required Field';
-    }
-  }
+  // @api 
+  // setError () {
+  //   if(this.value === null || this.value === '' || this.value === undefined){
+  //     console.log('The ReQFLD',this.fldApi);
+  //     this.isError =true;
+  //     this.error = 'Please fill the required Field';
+  //   }
+  // }
+
+  
   connectedCallback() {
   //  console.log('reqTabSections>>57',this.reqTabSections);
     var fieldDetail = this.fieldDetails;
