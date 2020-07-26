@@ -138,6 +138,25 @@ export default class CaseFormFields extends LightningElement {
       required: this.required
     }
   }
+  @api
+  validateInputs11() {
+    var isVal = true;
+    this.template.querySelectorAll('lightning-combobox').forEach(element => {
+      window.console.log('inside combobox for: ', element.reportValidity());
+      isVal = isVal && element.reportValidity();
+    });
+    this.template.querySelectorAll('lightning-input').forEach(element => {
+      window.console.log('inside input for: ', element.reportValidity());
+      isVal = isVal && element.reportValidity();
+    });
+    this.template.querySelectorAll('lightning-textarea').forEach(element => {
+      window.console.log('inside textarea for: ', element.reportValidity());
+      isVal = isVal && element.reportValidity();
+    });
+    window.console.log('isVal: ', isVal);
+
+  }
+
   @api 
   setValue (val) {
     this.value = val;

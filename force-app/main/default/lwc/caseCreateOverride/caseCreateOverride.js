@@ -87,6 +87,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
     //         }, 'yes');
     //End
 		this.template.querySelectorAll('c-case-form-fields').forEach(eachElement => {
+      eachElement.validateInputs11();
 				let compVal = eachElement.getValue();
 				console.log('compVal>>66', JSON.stringify(compVal));
 				if (compVal.required && compVal.value == null)
