@@ -20,9 +20,9 @@ sfdx plugins --core
  
 # Authenticate against correct org
 if [ "$TRAVIS_BRANCH" == "LEX" ]; then
- echo $SFDX_AUTH_URL_LEX>authtravisci.txt;
+  echo $SFDX_AUTH_URL_LEX>authtravisci.txt;
 elif [ "$TRAVIS_BRANCH" == "master" ]; then
- echo $SFDX_AUTH_URL_DEV>authtravisci.txt;
+  echo $SFDX_AUTH_URL_DEV>authtravisci.txt;
 fi;
  
 # Set the target environment for force:source:retrieve command

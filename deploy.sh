@@ -3,7 +3,7 @@
 echo
 echo "Travis event type: $TRAVIS_EVENT_TYPE"
 if [ "$TRAVIS_EVENT_TYPE" == "pull_request" ]; then
- echo "Travis pull request branch: $TRAVIS_PULL_REQUEST_BRANCH"
+  echo "Travis pull request branch: $TRAVIS_PULL_REQUEST_BRANCH"
 fi;
 echo
  
@@ -54,95 +54,95 @@ export triggerPath=force-app/main/default/triggers
 # Run a git diff for the incremental build depending on checked-out branch (if-statement per branch)
 #lex branch:
 if [ "$BRANCH" == "LEX" ]; then
- #create tracking branch
- echo 'Your current branches: '
- echo
- for branch in $(git branch -r|grep -v HEAD); do
-     echo $branch
-     git checkout -qf ${branch#origin/}
- done;
- echo
- git checkout LEX
- # Copy the files from a git diff into the deploy directory
- export CHANGED_FILES=$(git diff --name-only master force-app/)
- sudo cp --parents $(git diff --name-only master force-app/) $DEPLOYDIR;
- # Show which files will be deployed in the Travis build job log
- echo
- echo 'Your changed files: '
- echo
- for FILE in $CHANGED_FILES; do
-   echo ../$FILE
- done;
- echo
+  #create tracking branch
+  echo 'Your current branches: '
+  echo
+  for branch in $(git branch -r|grep -v HEAD); do
+    echo $branch
+    git checkout -qf ${branch#origin/}
+  done;
+  echo
+  git checkout LEX
+  # Copy the files from a git diff into the deploy directory
+  export CHANGED_FILES=$(git diff --name-only master force-app/)
+  sudo cp --parents $(git diff --name-only master force-app/) $DEPLOYDIR;
+  # Show which files will be deployed in the Travis build job log
+  echo
+  echo 'Your changed files: '
+  echo
+  for FILE in $CHANGED_FILES; do
+    echo ../$FILE
+  done;
+  echo
 fi;
 #master branch
 if [ "$BRANCH" == "master" ]; then
- echo 'Your current branches: '
- echo
- for branch in $(git branch -r|grep -v HEAD); do
-     echo $branch
-     git checkout -qf ${branch#origin/}
- done;
- echo
- git checkout master
+  cho 'Your current branches: '
+  echo
+  for branch in $(git branch -r|grep -v HEAD); do
+    echo $branch
+    git checkout -qf ${branch#origin/}
+  done;
+  echo
+  git checkout master
  
- export CHANGED_FILES=$(git diff --name-only LEX force-app/)
- sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
+  export CHANGED_FILES=$(git diff --name-only LEX force-app/)
+  sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
  
- echo
- echo 'Your changed files: '
- echo
- for FILE in $CHANGED_FILES; do
-   echo ../$FILE
- done;
- echo
+  echo
+  echo 'Your changed files: '
+  echo
+  for FILE in $CHANGED_FILES; do
+    echo ../$FILE
+  done;
+  echo
 fi;
  
 # List each changed file from the git diff command
  # For any changed class or trigger file, it's associated meta data file is copied to the deploy directory (and vice versa)
 for FILE in $CHANGED_FILES; do
- echo ' ';
- echo "Found changed file:`echo ' '$FILE`";
- # NOTE - naming convention used for <className>Test.cls files: "Test":
- if [[ $FILE == *Test.cls ]]; then
-   sudo cp --parents "$(find $classPath -samefile "$FILE-meta.xml")"* $DEPLOYDIR;
-   echo 'Copying class file to diff folder for deployment...';
-   echo 'Class files that will be deployed:';
-   ls $userPath$diffPath/classes;
+  echo ' ';
+  echo "Found changed file:`echo ' '$FILE`";
+  # NOTE - naming convention used for <className>Test.cls files: "Test":
+  if [[ $FILE == *Test.cls ]]; then
+    sudo cp --parents "$(find $classPath -samefile "$FILE-meta.xml")"* $DEPLOYDIR;
+    echo 'Copying class file to diff folder for deployment...';
+    echo 'Class files that will be deployed:';
+    ls $userPath$diffPath/classes;
  
- elif [[ $FILE == *Test.cls-meta.xml ]]; then
-   export FILE2=${FILE%.cls-meta.xml};
-   sudo cp --parents "$(find $classPath -samefile "$FILE2.cls")"* $DEPLOYDIR;
-   echo 'Copying class meta file to diff folder for deployment...';
-   echo 'Class files that will be deployed:';
-   ls $userPath$diffPath/classes;
+  elif [[ $FILE == *Test.cls-meta.xml ]]; then
+    export FILE2=${FILE%.cls-meta.xml};
+    sudo cp --parents "$(find $classPath -samefile "$FILE2.cls")"* $DEPLOYDIR;
+    echo 'Copying class meta file to diff folder for deployment...';
+    echo 'Class files that will be deployed:';
+    ls $userPath$diffPath/classes;
  
- elif [[ $FILE == *.cls ]]; then
-   sudo cp --parents "$(find $classPath -samefile "$FILE-meta.xml")"* $DEPLOYDIR;
-   echo 'Copying class file to diff folder for deployment...';
-   echo 'Class files that will be deployed:';
-   ls $userPath$diffPath/classes;
+  elif [[ $FILE == *.cls ]]; then
+    sudo cp --parents "$(find $classPath -samefile "$FILE-meta.xml")"* $DEPLOYDIR;
+    echo 'Copying class file to diff folder for deployment...';
+    echo 'Class files that will be deployed:';
+    ls $userPath$diffPath/classes;
  
- elif [[ $FILE == *.cls-meta.xml ]]; then
-   export FILE2=${FILE%.cls-meta.xml};
-   sudo cp --parents "$(find $classPath -samefile "$FILE2.cls")"* $DEPLOYDIR;
-   echo 'Copying class meta file to diff folder for deployment...';
-   echo 'Class files that will be deployed:';
-   ls $userPath$diffPath/classes;
+  elif [[ $FILE == *.cls-meta.xml ]]; then
+    export FILE2=${FILE%.cls-meta.xml};
+    sudo cp --parents "$(find $classPath -samefile "$FILE2.cls")"* $DEPLOYDIR;
+    echo 'Copying class meta file to diff folder for deployment...';
+    echo 'Class files that will be deployed:';
+    ls $userPath$diffPath/classes;
  
- elif [[ $FILE == *.trigger ]]; then
-   sudo cp --parents "$(find $triggerPath -samefile "$FILE-meta.xml")"* $DEPLOYDIR;
-   echo 'Copying trigger file to diff folder for deployment...';
-   echo 'Trigger files that will be deployed:';
-   ls $userPath$diffPath/triggers;
+  elif [[ $FILE == *.trigger ]]; then
+    sudo cp --parents "$(find $triggerPath -samefile "$FILE-meta.xml")"* $DEPLOYDIR;
+    echo 'Copying trigger file to diff folder for deployment...';
+    echo 'Trigger files that will be deployed:';
+    ls $userPath$diffPath/triggers;
     
- elif [[ $FILE == *.trigger-meta.xml ]]; then
-   export FILE3=${FILE%.trigger-meta.xml};
-   sudo cp --parents "$(find $triggerPath -samefile "$FILE3.trigger")"* $DEPLOYDIR;
-   echo 'Copying trigger meta file to diff folder for deployment...';
-   echo 'Trigger files that will be deployed:';
-   ls $userPath$diffPath/triggers;
- fi;
+  elif [[ $FILE == *.trigger-meta.xml ]]; then
+    export FILE3=${FILE%.trigger-meta.xml};
+    sudo cp --parents "$(find $triggerPath -samefile "$FILE3.trigger")"* $DEPLOYDIR;
+    echo 'Copying trigger meta file to diff folder for deployment...';
+    echo 'Trigger files that will be deployed:';
+    ls $userPath$diffPath/triggers;
+  fi;
 done;
  
 # Make temporary folder for our <className>Test.cls files that will be parsed
@@ -154,11 +154,11 @@ export classTests=$(find $classPath -name "*Test.cls")
 # Exports as a string that will be called in the deploy command in script phase IF branch is dev or qa
 export parsedList=''
 for testfiles in $classTests; do
- sudo cp "$testfiles"* $unparsedTestsDir;
- export parsed=$(find $unparsedTestsDir -name "*Test.cls");
- export parsed=${parsed##*/};
- export parsed=${parsed%.cls*};
- export parsedList="${parsedList}${parsed},";
+  sudo cp "$testfiles"* $unparsedTestsDir;
+  export parsed=$(find $unparsedTestsDir -name "*Test.cls");
+  export parsed=${parsed##*/};
+  export parsed=${parsed%.cls*};
+  export parsedList="${parsedList}${parsed},";
 done;
  
 # Finally, go back to the HEAD from the before_script phase
@@ -170,21 +170,21 @@ git checkout $build_head
 # Only validate, not deploy, when a pull request is being created
  # When a pull request is MERGED, deploy it
 if [ "$BRANCH" == "LEX" ]; then
- echo $SFDX_AUTH_URL_LEX>authtravisci.txt;
- if [ "$TRAVIS_EVENT_TYPE" == "pull_request" ]; then
-   export TESTLEVEL="RunSpecifiedTests -r $parsedList -c";
- else
-   export TESTLEVEL="RunSpecifiedTests -r $parsedList";
- fi;
+  echo $SFDX_AUTH_URL_LEX>authtravisci.txt;
+  if [ "$TRAVIS_EVENT_TYPE" == "pull_request" ]; then
+    export TESTLEVEL="RunSpecifiedTests -r $parsedList -c";
+  else
+    export TESTLEVEL="RunSpecifiedTests -r $parsedList";
+  fi;
 fi;
  
 if [ "$BRANCH" == "master" ]; then
- echo $SFDX_AUTH_URL_DEV>authtravisci.txt;
- if [ "$TRAVIS_EVENT_TYPE" == "pull_request" ]; then
-   export TESTLEVEL="RunSpecifiedTests -r $parsedList -c";
- else
-   export TESTLEVEL="RunSpecifiedTests -r $parsedList";
- fi;
+  echo $SFDX_AUTH_URL_DEV>authtravisci.txt;
+  if [ "$TRAVIS_EVENT_TYPE" == "pull_request" ]; then
+    export TESTLEVEL="RunSpecifiedTests -r $parsedList -c";
+  else
+    export TESTLEVEL="RunSpecifiedTests -r $parsedList";
+  fi;
 fi;
 
 # Store our auth-url for our targetEnvironment alias for deployment
@@ -200,6 +200,6 @@ echo
  
 # Failure message if deployment fails
 if [ TRAVIS_TEST_RESULT != 0 ]; then
- echo $deployErrorMsg;
- echo
+  echo $deployErrorMsg;
+  echo
 fi;
