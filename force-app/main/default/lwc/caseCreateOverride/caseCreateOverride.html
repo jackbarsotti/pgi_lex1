@@ -31,7 +31,8 @@
                                                                 record-type-id={recordTypeId} record={record}
                                                                 case-template-rec-layout-value={caseTemplateRecLayoutValue}
                                                                 fld-api={layoutItemApi.apiName}
-                                                                field-details={fieldDetails}>
+                                                                field-details={fieldDetails}
+                                                                onmycustomevent={handleCustomEvent}>
                                                             </c-case-form-fields>
                                                         </div>
                                                     </template>
@@ -82,7 +83,8 @@
                                                                 record-type-id={recordTypeId} record={record}
                                                                 case-template-rec-layout-value={caseTemplateRecLayoutValue}
                                                                 fld-api={layoutItemApi.apiName}
-                                                                field-details={fieldDetails}>
+                                                                field-details={fieldDetails}
+                                                                onmycustomevent={handleCustomEvent}>
                                                             </c-case-form-fields>
                                                         </div>
                                                     </template>
@@ -114,7 +116,8 @@
                                                                 req-tab-sections={reqTabSections}
                                                                 case-template-rec-layout-value={caseTemplateRecLayoutValue}
                                                                 fld-api={layoutItemApi.apiName}
-                                                                field-details={fieldDetails}>
+                                                                field-details={fieldDetails}
+                                                                onmycustomevent={handleCustomEvent}>
                                                             </c-case-form-fields>
                                                         </div>
                                                     </template>
@@ -148,7 +151,8 @@
                                                                 record-type-id={recordTypeId} record={record}
                                                                 case-template-rec-layout-value={caseTemplateRecLayoutValue}
                                                                 fld-api={layoutItemApi.apiName}
-                                                                field-details={fieldDetails}>
+                                                                field-details={fieldDetails}
+                                                                onmycustomevent={handleCustomEvent}>
                                                             </c-case-form-fields>
                                                         </div>
                                                     </template>
@@ -179,8 +183,14 @@
                 </lightning-accordion-section>
             </lightning-accordion>
         </template>
-    </br>
-</br>
+            <lightning-accordion active-section-name="Optional">
+                <lightning-accordion-section name="Assignment rule" label="Assignment rule">
+                    <div class="slds-size_1-of-2 slds-align_absolute-center">
+                    
+                </div>
+                </lightning-accordion-section>
+            </lightning-accordion>
+        
         <!-- <div  class="slds-align_absolute-center">
             <lightning-button label="Save" onclick={handleSave}></lightning-button>
             <lightning-button label="Cancel" onclick={handleCancel}></lightning-button>

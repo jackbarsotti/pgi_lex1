@@ -2,6 +2,7 @@ import { LightningElement, api, wire, track } from 'lwc';
 import CASE_OBJECT from '@salesforce/schema/Case';
 import { getObjectInfo, getPicklistValuesByRecordType } from 'lightning/uiObjectInfoApi';
 import { getRecordUi, deleteRecord } from 'lightning/uiRecordApi';
+import getAllDependentValues from '@salesforce/apex/ProductSymptomsLex.getAllDependentValues';
 import getCaseFieldValues from '@salesforce/apex/CaseCreateOverrideController.getCaseFieldValues';
 import createCase from '@salesforce/apex/CaseCreateOverrideController.createCase';
 import updateCase from '@salesforce/apex/CaseCreateOverrideController.updateCase';
@@ -13,15 +14,33 @@ import getCaseTabViewRecords from '@salesforce/apex/CaseTabViewerController.getC
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 export default class CaseCreateOverride extends NavigationMixin(LightningElement) {
+  //Product Related Dependent Picklist
+  productrelatedmapData;
+  @track productValues = [];
+  @track dependentAOFValues = [];
+  @track dependentSymptomValues = [];
+  @track dependentSubSymptomValues = [];
+  @track selectedProduct;
+  @track selectedAreaOfFocus;
+  @track selectedSymptom;
+  @track selectedSubSymptom;
+  @track valueforSelectingSymptom;
+  @track valueforSelectingSubSymptom;
+  @track isAOF = true;
+  @track isSymptom = true;
+  @track isSubSymptom = true;
+  @track error;
+  @track ifFirstTime = true;
+  //
   @api recordId;
   @api recordTypeId;
   @api recordTypeName;
   @api tabRecordType;
-  @api topLayoutSections=[];
-  @api tabLayoutSections=[];
-  @api bottomLayoutSections=[];
-  @api buttonSections=[];
-  @api reqTabSections=[];
+  @api topLayoutSections = [];
+  @api tabLayoutSections = [];
+  @api bottomLayoutSections = [];
+  @api buttonSections = [];
+  @api reqTabSections = [];
   @api requiredCaseComment;
   @api caseCommentValue;
   //caseTemplate Selecction List
@@ -62,189 +81,81 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
       this.error = JSON.stringify(error);
     }
   }
- 
+
   handleSave() {
-		console.log('compVal>>hj');
     let caseObj = {};
-    caseObj.sobjectType='Case';
-    let isValidate=true;
-    console.log('the value is',this.caseCommentValue)
-    //Start
-    // this.fieldDetails.forEach(ele =>{
-    //   console.log('The RealApi1',ele.realApiName);
-    //   if(ele.required && ele.editableForNew && ele.realApiName !== null){
-    //     console.log('The RealApi',ele.realApiName);
-    //   let element = this.template.querySelector(`c-case-form-fields[data-id="${ele.realApiName}"]`);
-    //   element.setError();
-    //   }
-    // });
-    // this.valid = [...this.template.querySelectorAll('c-test-child')]
-    //         .reduce((allValid, childCmp) => {
-    //             if (childCmp.validateInputs()) {
-    //                 return allValid; 
-    //             }
-    //             return 'no';
-    //         }, 'yes');
-    //End
-		this.template.querySelectorAll('c-case-form-fields').forEach(eachElement => {
+    caseObj.sobjectType = 'Case';
+    let isValidate = true;
+    this.template.querySelectorAll('c-case-form-fields').forEach(eachElement => {
       eachElement.validateInputs11();
-				let compVal = eachElement.getValue();
-				console.log('compVal>>66', JSON.stringify(compVal));
-				if (compVal.required && compVal.value == null)
-				//|| compVal.value === undefined || compVal.value === ''))
-				{
-          console.log('The Api',compVal.apiName);
-          isValidate=false;
-          console.log('isvalidate',isValidate);
-          console.log()
-          const evt = new ShowToastEvent({
-            title: 'Toast Error',
-            message: 'Please fill the required fields',
-            variant: 'error',
-            mode: 'dismissable'
-          });
-          this.dispatchEvent(evt);
-        } 
-        console.log('isvalidate',isValidate);
-					if (isValidate && compVal.apiName != null &&
-						compVal.apiName != '' &&
-						compVal.apiName != undefined &&
-						compVal.value != null &&
-						compVal.value != undefined &&
-            compVal.editableForNew) 
-          {
-						console.log('compVal.required  ', compVal.required);
-						console.log('in if>>74');
-						caseObj[compVal.apiName] = compVal.value;
-            console.log('in if>>74', caseObj[compVal.apiName]);
-          }
+      let compVal = eachElement.getValue();
+      console.log('compVal>>66', JSON.stringify(compVal));
+      if (compVal.required && compVal.value == null)
+      //|| compVal.value === undefined || compVal.value === ''))
+      {
+        isValidate = false;
+        const evt = new ShowToastEvent({
+          title: 'Toast Error',
+          message: 'Please fill the required fields',
+          variant: 'error',
+          mode: 'dismissable'
         });
-        console.log('isvalidate1',isValidate);
-        if(isValidate){
-          console.log('The Original Save');
-          caseObj.Id = this.recordId;
-          caseObj.Scheduled_Resolve_Time__c = new Date (caseObj.Scheduled_Resolve_Time__c);
-          caseObj.Scheduled_Restore_Time__c = new Date (caseObj.Scheduled_Restore_Time__c);
-          console.log('The Value Of recoerdd',caseObj);
-					updateCase({
-						record: caseObj
-					}).then(res => {
-						console.log('Test Save result',res);
-						if (res) {
-              
-//CaseComment Insert
-
-            this[NavigationMixin.Navigate]({
-              type: 'standard__recordPage',
-              attributes: {
-                recordId: this.recordId,
-                objectApiName: 'Case',
-                actionName: 'view'
-              },
-            });
-
-
-
-						}
-					}).catch(error => {
-            console.log('The Error Is',JSON.stringify(error));
-						console.log(`${error}`);
-					});
-					//this.createCaseObj(caseObj);
+        this.dispatchEvent(evt);
+      }
+      console.log('isvalidate', isValidate);
+      if (isValidate && compVal.apiName != null &&
+        compVal.apiName != '' &&
+        compVal.apiName != undefined &&
+        compVal.value != null &&
+        compVal.value != undefined &&
+        compVal.editableForNew) {
+        if (compVal.type !== null && (compVal.type.toUpperCase() === "DATE" || compVal.type.toUpperCase() === "DATETIME")) {
+          caseObj[compVal.apiName] = new Date(compVal.value);
         }
-      //});
-      
+        else {
+          caseObj[compVal.apiName] = compVal.value;
+        }
+      }
+    });
+    console.log('isvalidate1', isValidate);
+    if (isValidate) {
+      console.log('The Original Save');
+      caseObj.Id = this.recordId;
+      updateCase({
+        record: caseObj
+      }).then(res => {
+        if (res) {
+
+          //CaseComment Insert
+          if (this.caseCommentValue !== null && this.caseCommentValue !== '' && this.caseCommentValue != undefined) {
+            insertCaseComment({ caseCommentBody: this.caseCommentValue, recordId: this.recordId })
+              .then(result => {
+
+              })
+              .catch(error => {
+                // console.log('Error',error);
+              });
+          }
+
+          //
+          this[NavigationMixin.Navigate]({
+            type: 'standard__recordPage',
+            attributes: {
+              recordId: this.recordId,
+              objectApiName: 'Case',
+              actionName: 'view'
+            },
+          });
+
+
+
+        }
+      }).catch(error => {
+        console.log('The Error Is', JSON.stringify(error));
+      });
     }
-  // createCaseObj(caseObj){
-    
-  //   console.log(caseObj);
-  //   updateCase({ record: caseObj }).then(res => {
-  //     console.log(`${res}`);
-  //     if (res) {
-  //       this[NavigationMixin.Navigate]({
-  //         type: 'standard__recordPage',
-  //         attributes: {
-  //           recordId: this.recordId,
-  //           objectApiName: 'Case',
-  //           actionName: 'view'
-  //         },
-  //       });
-  //     }
-  //   }).catch(error => {
-  //     console.log(`${error}`);
-  //   });
-  //  .forEach(element => {
-  //    element.checkValidity();
-  //  });
-  
 
-/*
-    this.template.querySelectorAll("c-case-form-fields")
-      .forEach(element => {
-        element.checkValidity();
-      }); */
-    // Capture existing state to restore later
-   // let tempExpandAll = this.expandAll; 
-    // Temporarily expand all the child components (doesn't propagate in time)
-   /* this.expandAll = true; 
-
-    this.valid = [...this.template.querySelectorAll('c-case-form-fields')]
-        .reduce((allValid, childCmp) => {
-          window.console.log('childCmp: ',childCmp);
-          window.console.log('childCmp.validateInputs: ',childCmp.validateInputs());
-            if (childCmp.validateInputs()) {
-                return allValid; 
-            }
-            return 'no';
-        }, 'yes'); 
-    this.expandAll = tempExpandAll; // Put the state back where you found it
-/*this.valid = [...this.template.querySelectorAll('c-case-form-fields')]
-        .reduce((validSoFar, childCmp) => {
-          window.console.log('childCmp: ',childCmp);
-          window.console.log('childCmp.validateInputs: ',childCmp.validateInputs());
-            if (childCmp.validateInputs()) {
-                return validSoFar; 
-            }
-            return 'no';
-        }, 'yes'); */
-    // console.log('compVal>>hj');
-    // let caseObj = {};
-    // this.template.querySelectorAll('c-case-form-fields').forEach(eachElement => {
-    //   let compVal = eachElement.getValue();
-    //   console.log('compVal>>66',JSON.stringify(compVal));
-    //   if (compVal.apiName != null
-    //     && compVal.apiName != ''
-    //     && compVal.apiName != undefined
-    //     && compVal.value != null
-    //     && compVal.value != undefined
-    //     && compVal.editableForNew) {
-
-
-    //       console.log('in if>>74');
-    //     caseObj[compVal.apiName] = compVal.value;
-    //     console.log('in if>>74',caseObj[compVal.apiName]);
-    //   }
-    // });
-    // caseObj.Id = this.recordId;
-    // console.log(caseObj);
-    // updateCase({ record: caseObj }).then(res => {
-    //   console.log(`${res}`);
-    //   if (res) {
-    //     this[NavigationMixin.Navigate]({
-    //       type: 'standard__recordPage',
-    //       attributes: {
-    //         recordId: this.recordId,
-    //         objectApiName: 'Case',
-    //         actionName: 'view'
-    //       },
-    //     });
-    //   }
-    // }).catch(error => {
-    //   console.log(`${error}`);
-    // });
-
-  
-
+  }
   // Picklist values based on record type
   connectedCallback() {
     createCase({ recordType: this.recordTypeId })
@@ -268,52 +179,51 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
       })
       .catch(error => {
       });
-      getRecordType()
-        .then(result => {
-          if(result !== null && result !== undefined){
-            var retRecTypData= result;
-             for(var key in retRecTypData){
-              if(retRecTypData[key].Id == this.recordTypeId){
-                var currentRTName=retRecTypData[key].Name;
-                this.recordTypeName=currentRTName;
-              }
+    getRecordType()
+      .then(result => {
+        if (result !== null && result !== undefined) {
+          var retRecTypData = result;
+          for (var key in retRecTypData) {
+            if (retRecTypData[key].Id == this.recordTypeId) {
+              var currentRTName = retRecTypData[key].Name;
+              this.recordTypeName = currentRTName;
             }
           }
-        })
-        .catch(error => {
-        });
-
-        // for getting tabCount and topCount from custom setting 
-        getCaseTabViewRecords()
-     .then(result => {
-      var retData= result;
-     var topCountValue;
-    var tabCountValue;
-    for(var key in retData){
-        if(retData[key].RecordType__c == this.recordTypeName){
-           this.tabRecordType=retData[key].RecordType__c;
-          if(retData[key].Top_Count__c >0 && retData[key].Top_Count__c >0){
-           topCountValue = retData[key].Top_Count__c;
-            this.topCount = topCountValue; 
-            tabCountValue=retData[key].Tab_Count__c;
-            this.tabCount=tabCountValue;
-            this.requiredCaseComment = retData[key].Show_New_Comment__c;
-          }
-          else 
-          {
-            this.topCount= 0;
-            this.tabCount= 0;
-          }
-           
         }
-        
-    }
-      
-    })
-    .catch(error => {
+      })
+      .catch(error => {
+      });
 
-      console.log('Error>>153',error);
-    });
+    // for getting tabCount and topCount from custom setting 
+    getCaseTabViewRecords()
+      .then(result => {
+        var retData = result;
+        var topCountValue;
+        var tabCountValue;
+        for (var key in retData) {
+          if (retData[key].RecordType__c == this.recordTypeName) {
+            this.tabRecordType = retData[key].RecordType__c;
+            if (retData[key].Top_Count__c > 0 && retData[key].Top_Count__c > 0) {
+              topCountValue = retData[key].Top_Count__c;
+              this.topCount = topCountValue;
+              tabCountValue = retData[key].Tab_Count__c;
+              this.tabCount = tabCountValue;
+              this.requiredCaseComment = retData[key].Show_New_Comment__c;
+            }
+            else {
+              this.topCount = 0;
+              this.tabCount = 0;
+            }
+
+          }
+
+        }
+
+      })
+      .catch(error => {
+
+        console.log('Error>>153', error);
+      });
   }
 
   @wire(getObjectInfo, { objectApiName: CASE_OBJECT })
@@ -325,7 +235,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
         return { apiName, dataType, label, required, createable, updateable };
       });
     }
-     console.log('fld>>188',this.dataTypes);
+    console.log('fld>>188', this.dataTypes);
   }
 
 
@@ -357,125 +267,90 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
           var items = secRows[i].layoutItems;
           //Retrieve fields From Items
           for (var j in items) {
-            if(items[j].editableForNew){
-            var reqFields=items[j].required;
-            var getfieldApi = items[j].layoutComponents;
-            //to get ApiName for LayoutItem
-            for (var k in getfieldApi) {
-              let apiNameforMap = getfieldApi[k].apiName;
-              if (apiNameforMap !== null) {
-                this.lowertoOriginalApi.push({ lower: apiNameforMap.toLowerCase(), apiName: apiNameforMap });
-              
-              fieldAPIList.push({ apiName: getfieldApi[k].apiName, editableForNew: items[j].editableForNew, required:reqFields });
+            if (items[j].editableForNew) {
+              var reqFields = items[j].required;
+              var getfieldApi = items[j].layoutComponents;
+              //to get ApiName for LayoutItem
+              for (var k in getfieldApi) {
+                let apiNameforMap = getfieldApi[k].apiName;
+                if (apiNameforMap !== null) {
+                  this.lowertoOriginalApi.push({ lower: apiNameforMap.toLowerCase(), apiName: apiNameforMap });
+
+                  fieldAPIList.push({ apiName: getfieldApi[k].apiName, editableForNew: items[j].editableForNew, required: reqFields });
+                }
+              }
             }
-            }
-          }
           }
         }
       }
 
       //for selection of top sections,tab sections and bottom sections
-      if(this.topCount > 0 && this.tabCount> 0 && (this.topCount + this.tabCount ) < this.layoutsection.length +1 ){
-        this.buttons = true;  
-        var i;  
-        var topSections=[];
-        var tabSections=[];
-        var bottomSections=[];
-        for(i=0;i<this.layoutsection.length;i++){ 
-          if(i<this.topCount){
-            topSections=this.layoutsection[i];
-          //  this.topLayoutSections=this.topLayoutSection+this.layoutsection[i];
+      if (this.topCount > 0 && this.tabCount > 0 && (this.topCount + this.tabCount) < this.layoutsection.length + 1) {
+        this.buttons = true;
+        var i;
+        var topSections = [];
+        var tabSections = [];
+        var bottomSections = [];
+        for (i = 0; i < this.layoutsection.length; i++) {
+          if (i < this.topCount) {
+            topSections = this.layoutsection[i];
+            //  this.topLayoutSections=this.topLayoutSection+this.layoutsection[i];
             this.topLayoutSections.push(topSections);
-          
-           
-          }
-          else if(i>=this.topCount && i<(this.topCount + this.tabCount)){
-            tabSections=this.layoutsection[i];
-            console.log('tabSections>>198',tabSections);
-            this.tabLayoutSections.push(tabSections);
-           var tabSecButtons=this.tabLayoutSections;
-           var reqTabs=[];
-           var requiredLabel=[];
-           var heading=[];
-           var tempHolder=[];
-            var reqFields;
-          for(var l in tabSecButtons){
-            
-            var secRows = tabSecButtons[l].layoutRows;
-            console.log('secRows >>',secRows);
-            for (var m in secRows) 
-            {
-             
-              var items = secRows[m].layoutItems;  
-             
-              for (var n in items) 
-              {  
-              
-                reqFields=items[n].required;
-                
-                var layComponents=items[n].layoutComponents;
-         
-                // if(reqFields==true){
-                //   console.log('tabSecButtons[l].heading>>',tabSecButtons[l].heading);
-                //   if(reqTabs.contains(tabSecButtons[l].heading)){
-                //     console.log('contains>>271');
-                //   }
-                //   else{
-                //     reqTabs.push({heading:tabSecButtons[l].heading,});
-                //     console.log('reqTabs>>258',reqTabs);
-                //   }
-                // }
-                for(var o in layComponents){
-            
-                 // let reqLabel= layComponents[o].label;
-                  // if(items[n].required==true){
-                  //   this.reqTabSections.push({heading:tabSecButtons[l].heading,fieldLabel:layComponents[o].label});
-                  //     console.log('reqTabSections>>258',this.reqTabSections);
-                  // }
-                  if(items[n].required==true){
-         
-                    // if(reqTabs.heading.contains(tabSecButtons[l].heading)){
-                    //   console.log('in272')
-                    //   reqTabs.add({fieldLabel:layComponents[o].label});
 
-                    // }
-                //    heading.push(tabSecButtons[l].heading);
-               //     requiredLabel.push(layComponents[o].label);
-                    reqTabs.push({heading:tabSecButtons[l].heading,fieldLabel:layComponents[o].label});
-                      console.log('reqTabs>>258',reqTabs);
-                      
+
+          }
+          else if (i >= this.topCount && i < (this.topCount + this.tabCount)) {
+            tabSections = this.layoutsection[i];
+            console.log('tabSections>>198', tabSections);
+            this.tabLayoutSections.push(tabSections);
+            var tabSecButtons = this.tabLayoutSections;
+            var reqTabs = [];
+            var requiredLabel = [];
+            var heading = [];
+            var tempHolder = [];
+            var reqFields;
+            for (var l in tabSecButtons) {
+
+              var secRows = tabSecButtons[l].layoutRows;
+              console.log('secRows >>', secRows);
+              for (var m in secRows) {
+
+                var items = secRows[m].layoutItems;
+
+                for (var n in items) {
+
+                  reqFields = items[n].required;
+
+                  var layComponents = items[n].layoutComponents;
+                  for (var o in layComponents) {
+                    if (items[n].required == true) {
+
+                      reqTabs.push({ heading: tabSecButtons[l].heading, fieldLabel: layComponents[o].label });
+                      console.log('reqTabs>>258', reqTabs);
+
+                    }
                   }
+
                 }
-               
+
               }
-              
             }
+            this.reqTabSections = reqTabs;
+            console.log('reqTabSections>>276', this.reqTabSections);
           }
-       /*   for( var i in heading)
-          {
-            for(j in requiredLabel)
-            {
-              tempHolder.push({heading:heading[i],fieldLabel:requiredLabel});
-            }
-          }
-          console.log('tempholder',tempHolder);
-          */
-          this.reqTabSections=reqTabs;
-          console.log('reqTabSections>>276',this.reqTabSections);
-          }
-          else if(i>=(this.topCount + this.tabCount)){
-            bottomSections=this.layoutsection[i];
+          else if (i >= (this.topCount + this.tabCount)) {
+            bottomSections = this.layoutsection[i];
             this.bottomLayoutSections.push(bottomSections);
           }
-         
-        }
-         
-        console.log('tabLayoutSections>>206',this.tabLayoutSections);
-      }
-     // end for caseTabviewer
-     
 
-    
+        }
+
+        console.log('tabLayoutSections>>206', this.tabLayoutSections);
+      }
+      // end for caseTabviewer
+
+
+
       var fieldDetail = [];
       var fieldApi = [];
       //to get is editable ornot
@@ -521,21 +396,21 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
         })
       }
       this.fieldDetails = fieldDetail;
-       console.log('Field Details>>323',this.fieldDetails);
+      console.log('Field Details>>323', this.fieldDetails);
     }
   }
 
-  handleTabSections(event){
+  handleTabSections(event) {
     var buttonData;
     var clickedButton = event.target.label;
-    var layoutSecData=this.layoutsection;
-    for(var key in layoutSecData){
-      if(layoutSecData[key].heading == clickedButton){
-        buttonData=layoutSecData[key];
-        this.buttonSections=buttonData;
+    var layoutSecData = this.layoutsection;
+    for (var key in layoutSecData) {
+      if (layoutSecData[key].heading == clickedButton) {
+        buttonData = layoutSecData[key];
+        this.buttonSections = buttonData;
       }
     }
-    console.log('buttonSections>>341',this.buttonSections);
+    console.log('buttonSections>>341', this.buttonSections);
   }
 
   handleSectionToggle(event) {
@@ -545,83 +420,263 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
     this.selectedCaseTemplate = event.target.value;
     console.log('The Selected>>361', this.selectedCaseTemplate);
     //clearing the previous Value
-    if(this.caseTemplateRecLayoutValue !== null && this.caseTemplateRecLayoutValue.length > 0){
+    if (this.caseTemplateRecLayoutValue !== null && this.caseTemplateRecLayoutValue.length > 0) {
       var layoutDefVal = this.caseTemplateRecLayoutValue;
-      layoutDefVal.forEach(ele =>{
+      layoutDefVal.forEach(ele => {
         let element = this.template.querySelector(`c-case-form-fields[data-id="${ele.apiName}"]`);
-          element.setValue(null);
+        element.setValue(null);
       })
-      this.caseTemplateRecLayoutValue =[];
+      this.caseTemplateRecLayoutValue = [];
     }
     //feetching the default__value of record ApiName and Value
     var defaultValRecordFields = [];
-    if(this.selectedCaseTemplate != '--None--'){
-    if (this.caseTemplateRecord !== null && this.caseTemplateRecord !== undefined) {
-      this.caseTemplateRecord.forEach(ele => {
-        if (ele.Name === this.selectedCaseTemplate && ele.Default_Values__r !== null && ele.Default_Values__r !== undefined) {
-          var defaultValueofTemplate = ele.Default_Values__r;
-          for (var key in defaultValueofTemplate) {
-            defaultValRecordFields.push({ apiName: defaultValueofTemplate[key].Field_API_Name__c, value: defaultValueofTemplate[key].Value__c });
+    if (this.selectedCaseTemplate != '--None--') {
+      if (this.caseTemplateRecord !== null && this.caseTemplateRecord !== undefined) {
+        this.caseTemplateRecord.forEach(ele => {
+          if (ele.Name === this.selectedCaseTemplate && ele.Default_Values__r !== null && ele.Default_Values__r !== undefined) {
+            var defaultValueofTemplate = ele.Default_Values__r;
+            for (var key in defaultValueofTemplate) {
+              defaultValRecordFields.push({ apiName: defaultValueofTemplate[key].Field_API_Name__c, value: defaultValueofTemplate[key].Value__c });
+            }
           }
-        }
-      })
-    }
-    //to store ApiName and Value.present in Layout
-    var defaultTemplateValues = [];
-    var upperToLowerCaseApi = this.lowertoOriginalApi;
-    if (defaultValRecordFields.length > 0) {
-
-      defaultValRecordFields.forEach(ele => {
-        for (var i in upperToLowerCaseApi) {
-          //Storing Value Matching the Layout
-          if (ele.apiName === upperToLowerCaseApi[i].lower) {
-            defaultTemplateValues.push({ apiName: upperToLowerCaseApi[i].apiName, value: ele.value });
-          }
-          // else{
-          //   this.caseTemplateRecValueOther.push({ apiName: ele.apiName, value: ele.value });
-          // }
-        }
-      })
-      this.caseTemplateRecLayoutValue = defaultTemplateValues;
-      //Setting Value for Fields
-      if (defaultTemplateValues.length > 0) {
-        defaultTemplateValues.forEach(ele => {
-          console.log('The Value Is', ele.apiName);
-          let element = this.template.querySelector(`c-case-form-fields[data-id="${ele.apiName}"]`);
-          element.setValue(ele.value);
         })
       }
+      //to store ApiName and Value.present in Layout
+      var defaultTemplateValues = [];
+      var upperToLowerCaseApi = this.lowertoOriginalApi;
+      if (defaultValRecordFields.length > 0) {
+
+        defaultValRecordFields.forEach(ele => {
+          for (var i in upperToLowerCaseApi) {
+            //Storing Value Matching the Layout
+            if (ele.apiName === upperToLowerCaseApi[i].lower) {
+              defaultTemplateValues.push({ apiName: upperToLowerCaseApi[i].apiName, value: ele.value });
+            }
+            // else{
+            //   this.caseTemplateRecValueOther.push({ apiName: ele.apiName, value: ele.value });
+            // }
+          }
+        })
+        this.caseTemplateRecLayoutValue = defaultTemplateValues;
+        //Setting Value for Fields
+        if (defaultTemplateValues.length > 0) {
+          defaultTemplateValues.forEach(ele => {
+            console.log('The Value Is', ele.apiName);
+            let element = this.template.querySelector(`c-case-form-fields[data-id="${ele.apiName}"]`);
+            element.setValue(ele.value);
+          })
+        }
+      }
     }
+    else {
 
-
-    //console.log('The ResultVal',JSON.stringify(this.caseTemplateRecValue));
-  }
-  else {
-
-  }
+    }
   }
 
   handleCancel() {
     deleteRecord(this.recordId)
-    .then(result => {
-      this[NavigationMixin.Navigate]({
-        type: 'standard__objectPage',
-        attributes: {
+      .then(result => {
+        this[NavigationMixin.Navigate]({
+          type: 'standard__objectPage',
+          attributes: {
             objectApiName: 'Case',
             actionName: 'list'
-        },
-        state: {
+          },
+          state: {
             filterName: 'Recent'
-        },
-    });
-    })
-    .catch(error => {
-      console.log('TestE >>>',error);   
-    });
-}
+          },
+        });
+      })
+      .catch(error => {
+        console.log('TestE >>>', error);
+      });
+  }
 
-handleCommentChange(event) {
-   this.caseCommentValue = event.target.value;
-  console.log('the value is',this.caseCommentValue)
-}
+  handleCommentChange(event) {
+    this.caseCommentValue = event.target.value;
+    console.log('the value is', this.caseCommentValue)
+  }
+  handleCustomEvent(event) {
+    const textVal = event.detail;
+    // if(this.fldApi === 'Product__c' || this.fldApi === 'Area_of_Focus__c' || this.fldApi === 'Symptom_Main__c' || this.fldApi === 'Symptom_Sub__c' ){
+
+    // }
+    let apiName;
+    let value;
+    console.log('The Value Is1', textVal);
+    textVal.forEach(ele => {
+      apiName = ele.apiName;
+      value = ele.value;
+    })
+    if (apiName === 'Product__c') {
+      if (this.ifFirstTime) {
+        this.ifFirstTime = false;
+        console.log('The Value Is1');
+        getAllDependentValues()
+          .then(result => {
+            this.productrelatedmapData = result;
+            this.selectedProduct = value;
+            console.log('Test1');
+            this.handleProductChange(value);
+          })
+          .catch(error => {
+            console.log('Error', error);
+          });
+      }
+      else {
+        this.selectedProduct = value;
+        if (this.productrelatedmapData !== undefined && this.productrelatedmapData != null && this.ifFirstTime === false) {
+          console.log('Test');
+          this.handleProductChange();
+        }
+      }
+    }
+    //If area of focus
+    else if (apiName === 'Area_of_Focus__c'){ 
+      this.selectedAreaOfFocus = value;
+      this.handleAreaOfFocusChange();
+    }
+    else if (apiName === 'Symptom_Main__c'){ 
+      this.selectedSymptom = value;
+      this.handleSymptomChange();
+    }
+  }
+  @api
+  handleProductChange() {
+    var mapDataHandle = this.productrelatedmapData;
+    console.log('The Result', mapDataHandle);
+    this.isAOF = false;
+    let mapData = [{ label: '--None--', value: null }];
+
+    if (this.selectedProduct) {
+      // if Selected country is none returns nothing
+      if (this.selectedProduct === null) {
+        this.isSymptom = true;
+        this.isSubSymptom = true;
+        this.isAOF = true;
+        mapData = [{ label: '--None--', value: null }];
+        this.selectedProduct = null;
+        this.selectedAreaOfFocus = null;
+        this.selectedSymptom = null;
+        this.selectedSubSymptom = null;
+        return;
+      }
+      var prodToAof = mapDataHandle.productToAreaOfFocusMap;
+      for (var key in prodToAof) {
+        if (key === this.selectedProduct) {
+          var setofFocus = prodToAof[key];
+          for (var i in setofFocus) {
+            mapData.push({ label: setofFocus[i], value: setofFocus[i] });
+            console.log('The log',setofFocus[i]);
+          }
+        }
+
+      }
+      if (mapData.length == 1) {
+        this.isSymptom = true;
+        this.isSubSymptom = true;
+        this.selectedSymptom = null;
+        this.selectedSubSymptom = null;
+        this.selectedAreaOfFocus = null;
+      }
+
+      this.dependentAOFValues = mapData;
+    }
+    let aof = 'Area_of_Focus__c';
+    console.log('The Picklist Option Is',this.dependentAOFValues);
+    let element = this.template.querySelector(`c-case-form-fields[data-id="${aof}"]`);
+    element.setproductRelated(this.selectedAreaOfFocus, this.dependentAOFValues, this.isAOF);
+  }
+  @api
+  handleAreaOfFocusChange() {
+      var mapDataHandle = this.productrelatedmapData;
+      this.valueforSelectingSymptom = this.selectedProduct + this.selectedAreaOfFocus 
+      let mapData= [{label:'--None--', value: null}];
+      this.isSymptom = false;
+      console.log("symptom", this.valueforSelectingSymptom)
+      console.log('The AOF',this.selectedAreaOfFocus);
+      if(this.selectedAreaOfFocus) {
+          // if returns nothing
+          if(this.selectedAreaOfFocus === null) {
+              this.isSymptom = true;
+              this.isSubSymptom = true;
+              mapData = [{label:'--None--', value: null}];
+              this.selectedAreaOfFocus = null;
+              this.selectedSymptom = null;
+              this.selectedSubSymptom = null;
+              return;
+          }
+          var aofToSymptom = mapDataHandle.areaOfFocusToSymptomMap;
+          for(var key in aofToSymptom){
+              if(key === this.valueforSelectingSymptom){
+                  var setofSym =aofToSymptom[key];
+                  for(var i in setofSym){
+                      mapData.push({label:setofSym[i],value:setofSym[i]}); 
+                      console.log('The Key',setofSym[i]);
+                  }
+              }
+
+          }
+          if(mapData.length == 1){
+              this.isSubSymptom = true;
+              this.selectedSymptom = null;
+              this.selectedSubSymptom = null;
+          }
+          this.dependentSymptomValues = mapData;
+      }
+      let sym = 'Symptom_Main__c';
+    console.log('The Picklist Option Is',this.dependentAOFValues);
+    let element = this.template.querySelector(`c-case-form-fields[data-id="${sym}"]`);
+    element.setproductRelated(this.selectedSymptom, this.dependentSymptomValues, this.isSymptom);
+  }
+
+  handleSymptomChange() {
+      var mapDataHandle = this.productrelatedmapData;
+     
+      this.valueforSelectingSubSymptom = this.selectedProduct + this.selectedSymptom + this.selectedAreaOfFocus;
+      let mapData= [{label:'--None--', value:null}];
+      this.isSubSymptom = false;
+      console.log("symptom1", this.selectedSymptom)
+      if(this.selectedSymptom) {
+          // if returns nothing
+          if(this.selectedSymptom ===null) {
+            console.log("symptom12", this.selectedSymptom)
+              this.isSubSymptom = true;
+              mapData = [{label:'--None--', value:null}];
+              this.selectedSubSymptom = null;
+              this.selectedSymptom = null;
+              return;
+          }
+          var symptomToSub = mapDataHandle.subSymptomMap;
+          for(var key in symptomToSub){
+              if(key === this.valueforSelectingSubSymptom){
+                  var setofsub =symptomToSub[key];
+                  for(var i in setofsub){
+                      mapData.push({label:setofsub[i],value:setofsub[i]}); 
+                  }
+              }
+
+          }
+          //Check If the Selection dosesnt Have further Value
+          if(mapData.length == 1){
+              this.selectedSubSymptom = null;
+          }
+          this.dependentSubSymptomValues = mapData;
+      }
+    let symSub = 'Symptom_Sub__c';
+    console.log('The Picklist Option Is',this.dependentAOFValues);
+    let element = this.template.querySelector(`c-case-form-fields[data-id="${symSub}"]`);
+    element.setproductRelated(this.selectedSubSymptom, this.dependentSubSymptomValues, this.isSubSymptom);
+  }
+
+  // handleSubSymptomChange(event) {
+  //     this.selectedSubSymptom = event.target.value;
+  //     if(this.selectedSubSymptom) {
+  //         // if  returns nothing
+  //         if(this.selectedSubSymptom === '--None--') {
+  //             this.selectedSubSymptom = null;
+  //             return;
+  //         }
+  //     }
+  // }
 }
