@@ -30,7 +30,7 @@ sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
  
 # Delete the contents of force-app folder before we paste source:retrieve contents into it
 echo
-rm -rfv force-app/main/default/*
+rm -rf force-app/main/default/*
 echo
 echo 'The contents of the force-app directory have been removed.'
 echo "Ready to retrieve org metadata to your $TRAVIS_BRANCH branch."

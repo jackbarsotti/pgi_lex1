@@ -68,12 +68,13 @@ if [ "$BRANCH" == "LEX" ]; then
   sudo cp --parents $(git diff --name-only master force-app/) $DEPLOYDIR;
   # Show which files will be deployed in the Travis build job log
   echo
-  echo 'Your changed files: '
+  echo 'There are changed files detected'
   echo
-  for FILE in $CHANGED_FILES; do
-    echo ../$FILE
-  done;
-  echo
+  #removed to shorten output in travis:
+  #for FILE in $CHANGED_FILES; do
+    #echo ../$FILE
+  #done;
+  #echo
 fi;
 #master branch
 if [ "$BRANCH" == "master" ]; then
@@ -90,60 +91,63 @@ if [ "$BRANCH" == "master" ]; then
   sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
  
   echo
-  echo 'Your changed files: '
+  echo 'There are changed files detected'
   echo
-  for FILE in $CHANGED_FILES; do
-    echo ../$FILE
-  done;
-  echo
+  #removed to shorten output in travis:
+  #for FILE in $CHANGED_FILES; do
+    #echo ../$FILE
+  #done;
+  #echo
 fi;
  
 # List each changed file from the git diff command
  # For any changed class or trigger file, it's associated meta data file is copied to the deploy directory (and vice versa)
 for FILE in $CHANGED_FILES; do
-  echo ' ';
-  echo "Found changed file:`echo ' '$FILE`";
+  #removed to shorten output in travis: echo ' ';
+  #removed to shorten output in travis: echo "Found changed file:`echo ' '$FILE`";
   # NOTE - naming convention used for <className>Test.cls files: "Test":
   if [[ $FILE == *Test.cls ]]; then
     sudo cp --parents "$(find $classPath -samefile "$FILE-meta.xml")"* $DEPLOYDIR;
-    echo 'Copying class file to diff folder for deployment...';
-    echo 'Class files that will be deployed:';
-    ls $userPath$diffPath/classes;
+    #removed to shorten output in travis: echo 'Copying class file to diff folder for deployment...';
+    #removed to shorten output in travis: echo 'Class files that will be deployed:';
+    #removed to shorten output in travis: ls $userPath$diffPath/classes;
  
   elif [[ $FILE == *Test.cls-meta.xml ]]; then
     export FILE2=${FILE%.cls-meta.xml};
     sudo cp --parents "$(find $classPath -samefile "$FILE2.cls")"* $DEPLOYDIR;
-    echo 'Copying class meta file to diff folder for deployment...';
-    echo 'Class files that will be deployed:';
-    ls $userPath$diffPath/classes;
+    #removed to shorten output in travis: echo 'Copying class meta file to diff folder for deployment...';
+    #removed to shorten output in travis: echo 'Class files that will be deployed:';
+    #removed to shorten output in travis: ls $userPath$diffPath/classes;
  
   elif [[ $FILE == *.cls ]]; then
     sudo cp --parents "$(find $classPath -samefile "$FILE-meta.xml")"* $DEPLOYDIR;
-    echo 'Copying class file to diff folder for deployment...';
-    echo 'Class files that will be deployed:';
-    ls $userPath$diffPath/classes;
+    #removed to shorten output in travis: echo 'Copying class file to diff folder for deployment...';
+    #removed to shorten output in travis: echo 'Class files that will be deployed:';
+    #removed to shorten output in travis: ls $userPath$diffPath/classes;
  
   elif [[ $FILE == *.cls-meta.xml ]]; then
     export FILE2=${FILE%.cls-meta.xml};
     sudo cp --parents "$(find $classPath -samefile "$FILE2.cls")"* $DEPLOYDIR;
-    echo 'Copying class meta file to diff folder for deployment...';
-    echo 'Class files that will be deployed:';
-    ls $userPath$diffPath/classes;
+    #removed to shorten output in travis: echo 'Copying class meta file to diff folder for deployment...';
+    #removed to shorten output in travis: echo 'Class files that will be deployed:';
+    #removed to shorten output in travis: ls $userPath$diffPath/classes;
  
   elif [[ $FILE == *.trigger ]]; then
     sudo cp --parents "$(find $triggerPath -samefile "$FILE-meta.xml")"* $DEPLOYDIR;
-    echo 'Copying trigger file to diff folder for deployment...';
-    echo 'Trigger files that will be deployed:';
-    ls $userPath$diffPath/triggers;
+    #removed to shorten output in travis: echo 'Copying trigger file to diff folder for deployment...';
+    #removed to shorten output in travis: echo 'Trigger files that will be deployed:';
+    #removed to shorten output in travis: ls $userPath$diffPath/triggers;
     
   elif [[ $FILE == *.trigger-meta.xml ]]; then
     export FILE3=${FILE%.trigger-meta.xml};
     sudo cp --parents "$(find $triggerPath -samefile "$FILE3.trigger")"* $DEPLOYDIR;
-    echo 'Copying trigger meta file to diff folder for deployment...';
-    echo 'Trigger files that will be deployed:';
-    ls $userPath$diffPath/triggers;
+    #removed to shorten output in travis: echo 'Copying trigger meta file to diff folder for deployment...';
+    #removed to shorten output in travis: echo 'Trigger files that will be deployed:';
+    #removed to shorten output in travis: ls $userPath$diffPath/triggers;
   fi;
 done;
+echo 'All changed files have been copied to their destination directories.'
+echo
  
 # Make temporary folder for our <className>Test.cls files that will be parsed
 sudo mkdir -p /Users/jackbarsotti/pgi_lex/force-app/main/default/unparsedTests
@@ -200,7 +204,7 @@ echo 'skipping deployment'
 echo
  
 # Failure message if deployment fails
-if [ TRAVIS_TEST_RESULT != 0 ]; then
-  echo $deployErrorMsg;
-  echo
-fi;
+#if [ TRAVIS_TEST_RESULT != 0 ]; then
+  #echo $deployErrorMsg;
+  #echo
+#fi;
