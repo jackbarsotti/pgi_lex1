@@ -25,11 +25,11 @@ stages:
 jobs:
   include:
   - stage: deployment
-    script: "./deployment.sh"
+    script: "./deploy.sh"
   - stage: retrieve
     script: "./retrieve.sh"
  
 # Make the shell scripts executable
 before_script:
-- chmod +rx deployment.sh
+- chmod +rx deploy.sh
 - chmod +rx retrieve.sh
