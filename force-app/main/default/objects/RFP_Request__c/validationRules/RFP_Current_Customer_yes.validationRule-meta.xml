@@ -8,6 +8,6 @@
 
 ISBLANK ( Services_Used_Today__c),
 ISBLANK ( Contact_Customer_Name__c),
-ISPICKVAL ( Contact_Customer_Type__c, &#39;&#39;))</errorConditionFormula>
+ISPICKVAL ( Contact_Customer_Type__c, &apos;&apos;))</errorConditionFormula>
     <errorMessage>Since this is a current customer, please choose Contact/Customer Name, Contact Customer Type, and their Services used today.</errorMessage>
 </ValidationRule>

@@ -4,7 +4,7 @@
     <defaultValue>470</defaultValue>
     <externalId>false</externalId>
     <inlineHelpText>Billed per hour with a one hour minimum for such tasks as creative services, HTML/Flash Development, slide design, etc</inlineHelpText>
-    <label>Add&#39;l Training/Rehearsal Session</label>
+    <label>Add&apos;l Training/Rehearsal Session</label>
     <precision>18</precision>
     <required>false</required>
     <scale>2</scale>

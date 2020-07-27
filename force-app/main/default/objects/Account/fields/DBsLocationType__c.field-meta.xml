@@ -10,7 +10,7 @@ IF(ISPICKVAL(DandbCompany.LocationStatus, &quot;2&quot;),&quot;Branch. Secondary
 )
 )</formula>
     <inlineHelpText>The Location Type of the related D&amp;B company if the Account has been cleaned and matched to a D&amp;B company.</inlineHelpText>
-    <label>D&amp;B&#39;s Location Type</label>
+    <label>D&amp;B&apos;s Location Type</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <type>Text</type>

@@ -1,4 +1,5 @@
-<apex:page standardcontroller="Account" extensions="RateListController" showHeader="false" sideBar="false">   
+<apex:page standardcontroller="Account" extensions="RateListController" showHeader="false" sideBar="false">
+  <apex:pageBlock rendered="{!$User.UITheme == 'Theme3'}">
   <apex:stylesheet value="{!URLFOR($Resource.RTResources, 'css/jquery-ui.min.css')}"/>
   <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery.js')}"/>
   <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery-ui.min.js')}"/>
@@ -61,4 +62,11 @@
       </script>
     </div>
   </body>
+</apex:pageBlock>
+<apex:pageBlock rendered="{!$User.UITheme != 'Theme3'}">
+        <script type="text/javascript">
+            { window.alert("Please Switch to Salesforce Classic"); }
+        </script>
+        <apex:pageMessage severity="Info" summary="You must switch to salesforce classic to access this page." strength="1"/>
+    </apex:pageBlock>
 </apex:page>

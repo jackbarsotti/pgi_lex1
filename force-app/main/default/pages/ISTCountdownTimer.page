@@ -1,4 +1,4 @@
-<apex:page showHeader="false" sidebar="false" standardController="Implementation_Services__c" extensions="ISTCountdownTimer" docType="html-5.0">
+<apex:page showHeader="false" sidebar="false" standardController="Implementation_Services__c" extensions="ISTCountdownTimer" docType="html-5.0" lightningStylesheets="true">
 <!--    <apex:page showHeader="false" sidebar="false" standardController="Case" extensions="CaseCountdownTimer" docType="html-5.0"> -->
     <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <head>
@@ -82,7 +82,7 @@
                                 var completeImage = '<use xlink:href="{!URLFOR($Asset.SLDS, "/assets/icons/utility-sprite/svg/symbols.svg#forward")}"></use>';
                                 var pausedImage = '<use xlink:href="{!URLFOR($Asset.SLDS, "/assets/icons/utility-sprite/svg/symbols.svg#pause")}"></use>';
                                 var clockImage = '<use xlink:href="{!URLFOR($Asset.SLDS, "/assets/icons/utility-sprite/svg/symbols.svg#clock")}"></use>';
-								console.log(result);
+                                console.log(result);
                                 if(result.stage1Time != undefined) {
                                     document.getElementById("demo1").innerHTML = result.stage1Time + ' days ' + result.stage1Color;
                                     if(result.stage1Complete) {
@@ -107,7 +107,7 @@
                                 }
                                 if(result.stage3Time != undefined) {
                                     if(result.stage2Complete) {
-	                                    document.getElementById("demo3").innerHTML = result.stage1Time + ' days ' + result.stage1Color;
+                                        document.getElementById("demo3").innerHTML = result.stage1Time + ' days ' + result.stage1Color;
                                     }
                                     if(result.stage3Complete) {
                                         document.getElementById("stage3Image").innerHTML = completeImage;

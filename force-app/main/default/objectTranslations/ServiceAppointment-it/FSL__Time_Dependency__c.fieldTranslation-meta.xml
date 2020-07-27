@@ -4,7 +4,7 @@
     <name>FSL__Time_Dependency__c</name>
     <picklistValues>
         <masterLabel>Finish Before Start</masterLabel>
-        <translation>Fine precedente all&#39;inizio</translation>
+        <translation>Fine precedente all&apos;inizio</translation>
     </picklistValues>
     <picklistValues>
         <masterLabel>Same Start</masterLabel>

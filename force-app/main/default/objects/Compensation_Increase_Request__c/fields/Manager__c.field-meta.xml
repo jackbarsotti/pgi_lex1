@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <formula>Employee_Name__r.Manager_Copy__c</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <inlineHelpText>If this field is blank or has the incorrect manager, please send an email to salesforcecrmsupport@pgi.com to have the user&#39;s record updated.</inlineHelpText>
+    <inlineHelpText>If this field is blank or has the incorrect manager, please send an email to salesforcecrmsupport@pgi.com to have the user&apos;s record updated.</inlineHelpText>
     <label>Manager</label>
     <required>false</required>
     <trackHistory>false</trackHistory>

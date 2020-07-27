@@ -8,5 +8,5 @@
     <masterLabel>View in TaskRay</masterLabel>
     <openType>replace</openType>
     <protected>false</protected>
-    <url>{!URLFOR($Site.Prefix+&#39;/apex/TASKRAY__trtaskboard?taskid=&#39;+TASKRAY__Project_Task__c.Id+&#39;&amp;projectid=&#39;+TASKRAY__Project_Task__c.TASKRAY__ProjectId__c)}</url>
+    <url>{!URLFOR($Site.Prefix+&apos;/apex/TASKRAY__trtaskboard?taskid=&apos;+TASKRAY__Project_Task__c.Id+&apos;&amp;projectid=&apos;+TASKRAY__Project_Task__c.TASKRAY__ProjectId__c)}</url>
 </WebLink>

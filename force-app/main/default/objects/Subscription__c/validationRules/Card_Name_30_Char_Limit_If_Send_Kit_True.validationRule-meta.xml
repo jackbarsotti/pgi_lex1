@@ -2,7 +2,7 @@
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Card_Name_30_Char_Limit_If_Send_Kit_True</fullName>
     <active>true</active>
-    <errorConditionFormula>AND(len(Card_Name__c) &gt; 30, $User.Id&lt;&gt;&#39;00550000000yfEe&#39;, Send_Kit__c =true)</errorConditionFormula>
+    <errorConditionFormula>AND(len(Card_Name__c) &gt; 30, $User.Id&lt;&gt;&apos;00550000000yfEe&apos;, Send_Kit__c =true)</errorConditionFormula>
     <errorDisplayField>Card_Name__c</errorDisplayField>
     <errorMessage>Subscription Card Name must be less than 30 characters if Send Kit Checkbox is checked</errorMessage>
 </ValidationRule>

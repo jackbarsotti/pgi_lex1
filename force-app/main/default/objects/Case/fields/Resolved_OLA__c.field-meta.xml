@@ -10,7 +10,7 @@ TEXT(FLOOR(((Resolved__c - Restored__c)*1440*60 - (IF(ISNULL(Total_Paused_Time__
 TEXT( FLOOR(MOD(((Resolved__c -  Restored__c)*1440*60 - (IF(ISNULL(Total_Paused_Time__c),0, Total_Paused_Time__c))),86400)/3600)) + 
 &quot;:&quot; + 
 /* minutes */ 
-TEXT(FLOOR(MOD(((Resolved__c -  Restored__c)*1440*60 - (IF(ISNULL(Total_Paused_Time__c),0, Total_Paused_Time__c))),3600)/60)), &#39;&#39;)</formula>
+TEXT(FLOOR(MOD(((Resolved__c -  Restored__c)*1440*60 - (IF(ISNULL(Total_Paused_Time__c),0, Total_Paused_Time__c))),3600)/60)), &apos;&apos;)</formula>
     <inlineHelpText>Difference between the time the Service Restored check box was checked and the status was changed to Resolved (minus the time the case was in a Pending Client Action/Info Status)</inlineHelpText>
     <label>Resolved OLA</label>
     <required>false</required>

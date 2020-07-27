@@ -3,7 +3,7 @@
     <fullName>saleswings__Name_Lead__c</fullName>
     <deprecated>false</deprecated>
     <externalId>false</externalId>
-    <formula>saleswings__Lead__r.FirstName  + &#39; &#39; +   saleswings__Lead__r.LastName</formula>
+    <formula>saleswings__Lead__r.FirstName  + &apos; &apos; +   saleswings__Lead__r.LastName</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Name</label>
     <required>false</required>

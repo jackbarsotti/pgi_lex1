@@ -1,0 +1,2 @@
+<apex:page standardController="Implementation_Services__c"  recordSetVar="logs" extensions="ToDelete" lightningStylesheets="true">
+</apex:page>

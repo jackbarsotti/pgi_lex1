@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NavigationMenu xmlns="http://soap.sforce.com/2006/04/metadata">
+    <container>Webcasts</container>
+    <containerType>Network</containerType>
+    <label>TileMenu</label>
+    <navigationMenuItem>
+        <label>Portal Training</label>
+        <position>0</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/article/kA01B000000do0f</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Template Training</label>
+        <position>1</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/article/kA01B000000do1J</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Video Bridge (Webcam) Training</label>
+        <position>2</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/article/kA01B000000do1O</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Video Bridge (Advanced) Training</label>
+        <position>3</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/article/kA01B000000do1T</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+</NavigationMenu>

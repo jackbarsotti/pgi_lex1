@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <formula>Manager.Manager.FirstName + &quot; &quot; + Manager.Manager.LastName</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>Mgr&#39;s Manager</label>
+    <label>Mgr&apos;s Manager</label>
     <required>false</required>
     <type>Text</type>
     <unique>false</unique>

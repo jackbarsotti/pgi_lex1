@@ -2,7 +2,7 @@
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Subscription_CardName_Required</fullName>
     <active>true</active>
-    <errorConditionFormula>AND(Card_Name__c =&quot;&quot;, $User.Id&lt;&gt;&#39;00550000000yfEe&#39;,
+    <errorConditionFormula>AND(Card_Name__c =&quot;&quot;, $User.Id&lt;&gt;&apos;00550000000yfEe&apos;,
 $Profile.Name &lt;&gt; &quot;System Administrator&quot; )</errorConditionFormula>
     <errorDisplayField>Card_Name__c</errorDisplayField>
     <errorMessage>Card Name field is required.</errorMessage>

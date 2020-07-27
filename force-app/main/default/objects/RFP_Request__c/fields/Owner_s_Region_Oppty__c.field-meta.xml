@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <formula>Opportunity_Name__r.Owner_Region__c</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>Owner&#39;s Region (Oppty)</label>
+    <label>Owner&apos;s Region (Oppty)</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

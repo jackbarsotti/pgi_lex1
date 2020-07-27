@@ -3,7 +3,7 @@
     <fullName>OwnersEmail__c</fullName>
     <externalId>false</externalId>
     <formula>Owner:User.Email</formula>
-    <label>Owner&#39;s Email</label>
+    <label>Owner&apos;s Email</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <type>Text</type>

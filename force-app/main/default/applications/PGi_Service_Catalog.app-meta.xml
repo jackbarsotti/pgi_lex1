@@ -8,4 +8,5 @@
     <tabs>PGi_ServiceCatalog_Category__c</tabs>
     <tabs>PGi_ServiceCatalog_Category_Option__c</tabs>
     <tabs>Service_Catalog</tabs>
+    <tabs>Batch_Import_Revenue__c</tabs>
 </CustomApplication>

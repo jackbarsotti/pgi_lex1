@@ -4,7 +4,7 @@
     <deprecated>false</deprecated>
     <description>Document Name</description>
     <externalId>false</externalId>
-    <inlineHelpText>This is a list of PDF Documents located in your Organization&#39;s Salesforce &quot;Documents Tab&quot;.  In order to send with DocuSign you must add a PDF to any of the folders within your Documents Tab in Salesforce.  To Send with other Formats click &quot;Learn More&#39;.</inlineHelpText>
+    <inlineHelpText>This is a list of PDF Documents located in your Organization&apos;s Salesforce &quot;Documents Tab&quot;.  In order to send with DocuSign you must add a PDF to any of the folders within your Documents Tab in Salesforce.  To Send with other Formats click &quot;Learn More&apos;.</inlineHelpText>
     <label>Document Name</label>
     <length>255</length>
     <required>false</required>

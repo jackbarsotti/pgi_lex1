@@ -4,7 +4,7 @@
     <active>true</active>
     <errorConditionFormula>AND( $RecordType.Name = &quot;ReadyTalk Opportunity&quot;,
 $User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;,
-ISPICKVAL(StageName, &#39;Closed Won&#39;), 
+ISPICKVAL(StageName, &apos;Closed Won&apos;), 
 ISBLANK( TEXT(  Service_Term__c  )))</errorConditionFormula>
     <errorDisplayField>Service_Term__c</errorDisplayField>
     <errorMessage>Service Term is required on Closed Won Opps</errorMessage>

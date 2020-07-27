@@ -205,7 +205,11 @@
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-WaveHome</tabs>
     <tabs>Public_Group_Explorer</tabs>
+    <tabs>Batch_Import_Revenue__c</tabs>
     <workspaceConfig>
+        <mappings>
+            <tab>Batch_Import_Revenue__c</tab>
+        </mappings>
         <mappings>
             <tab>Case_List</tab>
         </mappings>

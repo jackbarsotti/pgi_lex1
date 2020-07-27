@@ -4,7 +4,7 @@
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Shows the Ultimate Parent within the Account Hierarchy.  For example even if something is 2+ levels down in the hierarchy so that its parent Account isnt the top level parent, it with show through this relationship who the top level parent is.</description>
     <externalId>false</externalId>
-    <inlineHelpText>The Top-Level Parent in the Account Hierarchy.  You can think of it as the Parent&#39;s Parent&#39;s Parent.  OR Great Great Grandparent.</inlineHelpText>
+    <inlineHelpText>The Top-Level Parent in the Account Hierarchy.  You can think of it as the Parent&apos;s Parent&apos;s Parent.  OR Great Great Grandparent.</inlineHelpText>
     <label>x-Ultimate Parent</label>
     <lookupFilter>
         <active>false</active>

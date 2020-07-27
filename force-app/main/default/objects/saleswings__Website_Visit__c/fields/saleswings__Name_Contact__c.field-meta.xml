@@ -3,7 +3,7 @@
     <fullName>saleswings__Name_Contact__c</fullName>
     <deprecated>false</deprecated>
     <externalId>false</externalId>
-    <formula>saleswings__Contact__r.FirstName + &#39; &#39; +   saleswings__Contact__r.LastName</formula>
+    <formula>saleswings__Contact__r.FirstName + &apos; &apos; +   saleswings__Contact__r.LastName</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Contact Name</label>
     <required>false</required>

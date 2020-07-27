@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <formula>CreatedBy.FirstName &amp; &quot; &quot; &amp; CreatedBy.LastName</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>Created by User&#39;s Name</label>
+    <label>Created by User&apos;s Name</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <type>Text</type>

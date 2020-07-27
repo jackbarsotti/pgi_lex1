@@ -178,4 +178,11 @@ public with sharing class kanbanActiveSprintTest {
         System.assertEquals('Success', kanbanActiveSprint.getUpdateStage(recId, kanbanField, kanbanNewValue, isForBackLog,groupselected));
         Test.stopTest();
     }
+     @isTest
+    public static void testGetInbetweenNumer(){
+        Test.startTest();
+        decimal getBetweenNo=kanbanActiveSprint.getInbetweenNumer(10, 15);
+        system.assert(getBetweenNo>0);
+        Test.stopTest();
+    }
 }

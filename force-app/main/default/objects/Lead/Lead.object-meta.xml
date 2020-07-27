@@ -267,6 +267,8 @@
         <customTabListAdditionalFields>LEAD.STATUS</customTabListAdditionalFields>
         <customTabListAdditionalFields>CORE.USERS.LAST_NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>LEAD.LAST_ACTIVITY</customTabListAdditionalFields>
+        <listViewButtons>SalesLoft_Import_Lead_List</listViewButtons>
+        <listViewButtons>SalesLoft_Import_Lead_List_Lex</listViewButtons>
         <lookupDialogsAdditionalFields>FULL_NAME</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>LEAD.RECORDTYPE</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>LEAD.EMAIL</lookupDialogsAdditionalFields>
@@ -293,6 +295,7 @@
         <searchResultsAdditionalFields>LEAD.STATUS</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CORE.USERS.LAST_NAME</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Last_Activity_Date__c</searchResultsAdditionalFields>
+        <searchResultsCustomButtons>SalesLoft_Import_Lead_List_Lex</searchResultsCustomButtons>
     </searchLayouts>
     <sharingModel>Private</sharingModel>
 </CustomObject>

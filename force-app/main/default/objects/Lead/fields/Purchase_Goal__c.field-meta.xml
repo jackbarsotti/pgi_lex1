@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Purchase_Goal__c</fullName>
-    <description>This was &#39;[Custom Field: Purchase Goal]  Purchase_goal__c&#39; in Pardot-SugarCRM</description>
+    <description>This was &apos;[Custom Field: Purchase Goal]  Purchase_goal__c&apos; in Pardot-SugarCRM</description>
     <externalId>false</externalId>
     <label>Purchase Goal</label>
     <required>false</required>

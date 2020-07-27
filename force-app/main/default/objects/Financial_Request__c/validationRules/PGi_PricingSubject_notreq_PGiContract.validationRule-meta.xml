@@ -5,10 +5,10 @@
     <description>Unless the Origin is marked as &quot;PGi Contract&quot;, a  Subject is required</description>
     <errorConditionFormula>AND(
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
-NOT (ispickval( Origin__c, &#39;PGi Contract&#39;)),
-NOT (ispickval( Origin__c, &#39;Email&#39;)),
+NOT (ispickval( Origin__c, &apos;PGi Contract&apos;)),
+NOT (ispickval( Origin__c, &apos;Email&apos;)),
 isblank(Subject__c),
-RecordType.DeveloperName = &#39;PGi_Pricing_Help_Request&#39;)</errorConditionFormula>
+RecordType.DeveloperName = &apos;PGi_Pricing_Help_Request&apos;)</errorConditionFormula>
     <errorDisplayField>Subject__c</errorDisplayField>
     <errorMessage>Subject line is required.</errorMessage>
 </ValidationRule>

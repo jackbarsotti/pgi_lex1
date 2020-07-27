@@ -1,6 +1,6 @@
 public class CloneChildFinReqLEXController {
     @AuraEnabled
-   public static String cloneAnySobjet(String recordId, String objectName){
+   public static Financial_Request__c cloneAnySobjet(String recordId, String objectName){
         
        Set <String> fieldMap = Schema.getGlobalDescribe().get(objectName).getDescribe().fields.getMap().keySet();
         String soqlQuery = 'SELECT ' ; 
@@ -16,20 +16,11 @@ public class CloneChildFinReqLEXController {
         Financial_Request__c clondedFinReqRec= parentFinReqRec.clone(false, false, false, false);
         clondedFinReqRec.Related_FinReq__c=recordId;
         try{
-            insert clondedFinReqRec ;
-            return clondedFinReqRec.id ;
+            return clondedFinReqRec;
         }catch(Exception e){
-            return '' ;
+            return null ;
         }
         
     }
-    
-  /*  @AuraEnabled
-    public static void deleteCloneRecord(String cloneRecId){
-        System.debug('inCacel');
-        Financial_Request__c finReqObj=[SELECT id, Name FROM Financial_Request__c 
-                                        WHERE id=:cloneRecId];
-        DELETE finReqObj;
-    } */
 
 }

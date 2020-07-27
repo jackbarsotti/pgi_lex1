@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Submitters_Email__c</fullName>
-    <description>Submitter&#39;s Email</description>
+    <description>Submitter&apos;s Email</description>
     <externalId>false</externalId>
     <formula>Owner:User.Email</formula>
-    <inlineHelpText>Submitter&#39;s Email</inlineHelpText>
+    <inlineHelpText>Submitter&apos;s Email</inlineHelpText>
     <label>Email</label>
     <required>false</required>
     <trackHistory>false</trackHistory>

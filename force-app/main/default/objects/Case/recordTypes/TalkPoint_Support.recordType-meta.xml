@@ -151,6 +151,26 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Done %28Closed%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Done %28Ready%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress %28PO Review%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress %28QE%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Peer Reviewed</fullName>
             <default>false</default>
         </values>

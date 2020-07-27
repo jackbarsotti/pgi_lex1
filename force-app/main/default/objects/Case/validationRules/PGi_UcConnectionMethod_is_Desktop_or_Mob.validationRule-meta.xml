@@ -7,8 +7,8 @@
     $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
 NOT(ISCHANGED(IsUpdateFromCaseComment__c)),
     (
-    ISPICKVAL(Phone_Device_Type__c,&#39;GM Desktop App&#39;) ||
-    ISPICKVAL(Phone_Device_Type__c,&#39;Mobile Device&#39;)
+    ISPICKVAL(Phone_Device_Type__c,&apos;GM Desktop App&apos;) ||
+    ISPICKVAL(Phone_Device_Type__c,&apos;Mobile Device&apos;)
     ),
     (
     ISBLANK( GM_App_Version__c ) ||

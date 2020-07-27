@@ -2,9 +2,9 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Logo_Approved_for_Use__c</fullName>
     <defaultValue>false</defaultValue>
-    <description>A check box indicating that the client&#39;s logo is approved for use in RT&#39;s marketing materials.  The box is checked by default whenever a new account is created after 23 May 2014 when RT&#39;s Terms &amp; Conditions were updated to reflect that RT can use client&#39;s logo for use in RT&#39;s marketing materials upon agreeing to use RT&#39;s services</description>
+    <description>A check box indicating that the client&apos;s logo is approved for use in RT&apos;s marketing materials.  The box is checked by default whenever a new account is created after 23 May 2014 when RT&apos;s Terms &amp; Conditions were updated to reflect that RT can use client&apos;s logo for use in RT&apos;s marketing materials upon agreeing to use RT&apos;s services</description>
     <externalId>false</externalId>
-    <inlineHelpText>A check box indicating that the client&#39;s logo is approved for use in RT&#39;s marketing materials.  Uncheck is client wants to Opt Out</inlineHelpText>
+    <inlineHelpText>A check box indicating that the client&apos;s logo is approved for use in RT&apos;s marketing materials.  Uncheck is client wants to Opt Out</inlineHelpText>
     <label>Logo Approved for Use</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

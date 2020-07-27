@@ -4,12 +4,12 @@
     <active>true</active>
     <description>Lock the Type field if the Status is not Draft</description>
     <errorConditionFormula>AND(
-ISPICKVAL(Status__c,&#39;Approved&#39;) ||
-ISPICKVAL(Status__c,&#39;Pending Approval(s)&#39;) ||
-ISPICKVAL(Status__c,&#39;Canceled&#39;) ||
-ISPICKVAL(Status__c,&#39;Complete&#39;) ||
-ISPICKVAL(Status__c,&#39;Unsuccessful&#39;) ||
-ISPICKVAL(Status__c,&#39;CAB Approved&#39;),
+ISPICKVAL(Status__c,&apos;Approved&apos;) ||
+ISPICKVAL(Status__c,&apos;Pending Approval(s)&apos;) ||
+ISPICKVAL(Status__c,&apos;Canceled&apos;) ||
+ISPICKVAL(Status__c,&apos;Complete&apos;) ||
+ISPICKVAL(Status__c,&apos;Unsuccessful&apos;) ||
+ISPICKVAL(Status__c,&apos;CAB Approved&apos;),
 ISCHANGED( Type__c ) 
 )</errorConditionFormula>
     <errorDisplayField>Type__c</errorDisplayField>

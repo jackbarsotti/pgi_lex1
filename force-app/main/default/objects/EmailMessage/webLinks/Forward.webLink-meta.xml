@@ -9,5 +9,5 @@
     <protected>false</protected>
     <url>{!REQUIRESCRIPT(&quot;/soap/ajax/20.0/connection.js&quot;)}
 {!REQUIRESCRIPT(&quot;/soap/ajax/20.0/apex.js&quot;)}
-window.location.href = &#39;/apex/SendAnEmail?replyMailId={!EmailMessage.Id }&amp;id={!EmailMessage.ParentId}&amp;isFwd=true&#39;;</url>
+window.location.href = &apos;/apex/SendAnEmail?replyMailId={!EmailMessage.Id }&amp;id={!EmailMessage.ParentId}&amp;isFwd=true&apos;;</url>
 </WebLink>

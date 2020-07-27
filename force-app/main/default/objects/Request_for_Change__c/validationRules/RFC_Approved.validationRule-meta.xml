@@ -4,11 +4,11 @@
     <active>true</active>
     <description>prevent changes from the RFC if status = Approved</description>
     <errorConditionFormula>AND(
-NOT(ISPICKVAL( Type__c , &#39;Vendor&#39;)) ||
-NOT(ISPICKVAL( Type__c , &#39;Release&#39;)),
+NOT(ISPICKVAL( Type__c , &apos;Vendor&apos;)) ||
+NOT(ISPICKVAL( Type__c , &apos;Release&apos;)),
  isWithdrawRequestClicked__c  = false,
-$User.ProfileId &lt;&gt; &#39;00e30000001kms9&#39;,
-ISPICKVAL( Status__c , &#39;Approved&#39;),
+$User.ProfileId &lt;&gt; &apos;00e30000001kms9&apos;,
+ISPICKVAL( Status__c , &apos;Approved&apos;),
 ISCHANGED( Risk__c ),
 ISCHANGED( Planned_Start_Date_Time__c ),
 ISCHANGED( Planned_End_Date_Time__c ),

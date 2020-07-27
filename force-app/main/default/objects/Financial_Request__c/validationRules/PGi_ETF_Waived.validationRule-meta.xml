@@ -5,7 +5,7 @@
     <description>If ETF does not apply due to being Waived, you must capture who approved the waive</description>
     <errorConditionFormula>AND(
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
-ISPICKVAL( ETFDoesNotApply__c , &#39;Approved to Waive&#39;) ,
+ISPICKVAL( ETFDoesNotApply__c , &apos;Approved to Waive&apos;) ,
 ISBLANK( ETFWaiverApprovedBy__c ) 
 )</errorConditionFormula>
     <errorDisplayField>ETFWaiverApprovedBy__c</errorDisplayField>

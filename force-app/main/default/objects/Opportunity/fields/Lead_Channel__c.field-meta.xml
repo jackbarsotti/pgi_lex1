@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Lead_Channel__c</fullName>
-    <description>[12/9/16, JK]: MAPPED FROM LEAD OBJECT - Requested by Cohry Osborne to identify Inbound Leads vs Outbound Leads. Traditionally this is identified by Lead Owner, but this isn&#39;t always the case, which is why we need this field</description>
+    <description>[12/9/16, JK]: MAPPED FROM LEAD OBJECT - Requested by Cohry Osborne to identify Inbound Leads vs Outbound Leads. Traditionally this is identified by Lead Owner, but this isn&apos;t always the case, which is why we need this field</description>
     <externalId>false</externalId>
     <label>Lead Channel</label>
     <required>false</required>

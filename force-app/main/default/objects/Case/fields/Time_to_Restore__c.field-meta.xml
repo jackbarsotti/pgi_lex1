@@ -11,7 +11,7 @@
             / minutes /
             TEXT(
 				ABS(FLOOR(MOD((Restored_or_Scheduled_Restore__c - NOW())*1440*6,360) / 6)) 
-            )), &#39;:&#39;)*/
+            )), &apos;:&apos;)*/
 												
 												IF(NOT(ISBLANK(Scheduled_Restore_Time__c)), IF(NOT(ISBLANK(Restore_Pause_Time__c)), Restore_Pause_Time__c, if(Scheduled_Restore_Time__c - NOW() &lt; 0, &quot;-&quot;, &quot;&quot;) +
 																																																											/* hours */
@@ -23,7 +23,7 @@
 																																																											IF(ABS(FLOOR(MOD((Scheduled_Restore_Time__c - NOW())*1440*6,360) / 6)) &lt; 10, &quot;0&quot;, &quot;&quot;) +
 																																																											TEXT(
 																																																															ABS(FLOOR(MOD((Scheduled_Restore_Time__c - NOW())*1440*6,360) / 6)) 
-																																																											)), &#39;:&#39;)</formula>
+																																																											)), &apos;:&apos;)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Time to Restore</label>
     <required>false</required>

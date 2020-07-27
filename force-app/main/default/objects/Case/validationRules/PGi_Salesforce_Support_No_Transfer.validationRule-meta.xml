@@ -4,9 +4,9 @@
     <active>true</active>
     <description>If the Case Owner is Salesforce Support then the ownership is not allowed by to be changed by anyone except system admins.</description>
     <errorConditionFormula>AND(
-PRIORVALUE(OwnerId) = &#39;00Ga0000003d8it&#39;,
+PRIORVALUE(OwnerId) = &apos;00Ga0000003d8it&apos;,
 ISCHANGED(OwnerId),
-$User.ProfileId &lt;&gt; &#39;00e30000001kms9&#39;,
+$User.ProfileId &lt;&gt; &apos;00e30000001kms9&apos;,
 NOT(ISCHANGED(IsUpdateFromCaseComment__c))
 )</errorConditionFormula>
     <errorMessage>Only System Admins may move cases from the Salesforce Support queue.  If you feel that the Salesforce Support team has a case that should belong to your group, please reach out to us!</errorMessage>

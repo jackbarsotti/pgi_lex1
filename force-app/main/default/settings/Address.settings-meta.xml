@@ -1527,9 +1527,9 @@
         </countries>
         <countries>
             <active>true</active>
-            <integrationValue>Cote d&#39;Ivoire</integrationValue>
+            <integrationValue>Cote d&apos;Ivoire</integrationValue>
             <isoCode>CI</isoCode>
-            <label>Cote d&#39;Ivoire</label>
+            <label>Cote d&apos;Ivoire</label>
             <orgDefault>false</orgDefault>
             <standard>true</standard>
             <visible>true</visible>
@@ -6794,9 +6794,9 @@
             </states>
             <states>
                 <active>true</active>
-                <integrationValue>L&#39;Aquila</integrationValue>
+                <integrationValue>L&apos;Aquila</integrationValue>
                 <isoCode>AQ</isoCode>
-                <label>L&#39;Aquila</label>
+                <label>L&apos;Aquila</label>
                 <standard>true</standard>
                 <visible>true</visible>
             </states>

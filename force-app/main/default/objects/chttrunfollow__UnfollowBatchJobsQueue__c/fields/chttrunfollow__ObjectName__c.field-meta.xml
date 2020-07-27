@@ -3,7 +3,7 @@
     <fullName>chttrunfollow__ObjectName__c</fullName>
     <caseSensitive>false</caseSensitive>
     <deprecated>false</deprecated>
-    <description>Stores the object who&#39;s rules are queued in here.</description>
+    <description>Stores the object who&apos;s rules are queued in here.</description>
     <externalId>false</externalId>
     <label>ObjectName</label>
     <length>255</length>

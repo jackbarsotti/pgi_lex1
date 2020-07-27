@@ -9,5 +9,5 @@ DATEVALUE(Opportunity.CreatedDate) &gt;= DATE (2020,01,20),
 NOT(ISPICKVAL(Opportunity.Opportunity_Deal_Type__c,&quot;Up-Sell (Rev Increase)&quot;)),
 Opportunity.RecordType.Name = &quot;PGi Opportunity&quot;
 )</errorConditionFormula>
-    <errorMessage>PGi&#39;s UCaaS Products are not allowed to be sold anymore for new business deals, please select a TPX UCaaS Product offering.</errorMessage>
+    <errorMessage>PGi&apos;s UCaaS Products are not allowed to be sold anymore for new business deals, please select a TPX UCaaS Product offering.</errorMessage>
 </ValidationRule>

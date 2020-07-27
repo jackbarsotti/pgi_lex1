@@ -5,7 +5,7 @@
     <description>This field will be populated with a link to a public site when the &quot;Available for external sharing&quot; checkbox is checked</description>
     <externalId>false</externalId>
     <formula>IF( TASKRAY__trAvailableExternal__c ,
-  HYPERLINK( $Setup.TASKRAY__trGlobalSettings__c.TASKRAY__trPublicSiteURL__c +&#39;?pid=&#39;+ Id +&#39;&amp;fullScreen=true&amp;view=planning&#39;, $Setup.TASKRAY__trGlobalSettings__c.TASKRAY__trPublicSiteURL__c +&#39;?pid=&#39;+ Id +&#39;&amp;fullScreen=true&amp;view=planning&#39;),
+  HYPERLINK( $Setup.TASKRAY__trGlobalSettings__c.TASKRAY__trPublicSiteURL__c +&apos;?pid=&apos;+ Id +&apos;&amp;fullScreen=true&amp;view=planning&apos;, $Setup.TASKRAY__trGlobalSettings__c.TASKRAY__trPublicSiteURL__c +&apos;?pid=&apos;+ Id +&apos;&amp;fullScreen=true&amp;view=planning&apos;),
   null)</formula>
     <label>External Sharing Link</label>
     <required>false</required>

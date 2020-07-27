@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Purchasing_Timeline__c</fullName>
-    <description>This was &#39;[Custom Field: Buying Mode] cd_buying_mode_c&#39; in Pardot=SugarCRM</description>
+    <description>This was &apos;[Custom Field: Buying Mode] cd_buying_mode_c&apos; in Pardot=SugarCRM</description>
     <externalId>false</externalId>
     <label>Purchasing Timeline</label>
     <required>false</required>

@@ -2,22 +2,22 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Total_Product_Revenue__c</fullName>
     <externalId>false</externalId>
-    <formula>IF(isReportable_Text__c = &#39;Invalid&#39;, 0, 
-IF(ISPICKVAL(Billing_Frequency__c,&#39;Annually&#39;), ((New_Sales_Price__c* New_Quantity__c)/12)*Contract_Term__c, 
-IF(ISPICKVAL(Billing_Frequency__c ,&#39;Quarterly&#39;),((New_Sales_Price__c* New_Quantity__c)/3)*Contract_Term__c, 
+    <formula>IF(isReportable_Text__c = &apos;Invalid&apos;, 0, 
+IF(ISPICKVAL(Billing_Frequency__c,&apos;Annually&apos;), ((New_Sales_Price__c* New_Quantity__c)/12)*Contract_Term__c, 
+IF(ISPICKVAL(Billing_Frequency__c ,&apos;Quarterly&apos;),((New_Sales_Price__c* New_Quantity__c)/3)*Contract_Term__c, 
 (New_Sales_Price__c* New_Quantity__c)*Contract_Term__c 
 ))) 
 
-/* Code prior to 2/24/2017 release that exempted existing services  from this calculationIF(isReportable_Text__c = &#39;Invalid&#39;, 0, 
+/* Code prior to 2/24/2017 release that exempted existing services  from this calculationIF(isReportable_Text__c = &apos;Invalid&apos;, 0, 
 IF(Existing_Service__c = True, 0, 
-IF(ISPICKVAL(Billing_Frequency__c,&#39;Annually&#39;), ((New_Sales_Price__c* New_Quantity__c)/12)*Contract_Term__c, 
-IF(ISPICKVAL(Billing_Frequency__c ,&#39;Quarterly&#39;),((New_Sales_Price__c* New_Quantity__c)/3)*Contract_Term__c, 
+IF(ISPICKVAL(Billing_Frequency__c,&apos;Annually&apos;), ((New_Sales_Price__c* New_Quantity__c)/12)*Contract_Term__c, 
+IF(ISPICKVAL(Billing_Frequency__c ,&apos;Quarterly&apos;),((New_Sales_Price__c* New_Quantity__c)/3)*Contract_Term__c, 
 (New_Sales_Price__c* New_Quantity__c)*Contract_Term__c 
 )))) */
 /* Code prior to 7/10/2015 release that changed MRR and we needed to decouple MRR from this calculation 
 IF( 
 AND( 
-isReportable_Text__c = &#39;Valid&#39;, 
+isReportable_Text__c = &apos;Valid&apos;, 
 Existing_Service__c = false 
 ), 
 MRR__c * Contract_Term__c, 

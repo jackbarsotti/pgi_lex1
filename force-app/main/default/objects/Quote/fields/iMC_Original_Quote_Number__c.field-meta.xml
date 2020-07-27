@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>iMC_Original_Quote_Number__c</fullName>
-    <description>This field holds the original quote number from iMC&#39;s Salesforce Instance.</description>
+    <description>This field holds the original quote number from iMC&apos;s Salesforce Instance.</description>
     <externalId>false</externalId>
     <label>iMC Original Quote Number</label>
     <precision>7</precision>

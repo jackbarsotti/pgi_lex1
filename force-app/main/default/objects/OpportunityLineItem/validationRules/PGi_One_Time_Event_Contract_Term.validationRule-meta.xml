@@ -6,7 +6,7 @@
     <errorConditionFormula>AND(  
 $User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;, 
 CONTAINS(Opportunity.RecordType.Name, &quot;PGi&quot;), 
-ISPICKVAL(Billing_Frequency__c, &#39;One Time Event&#39;), Contract_Term__c != 1, $User.Override_Validation_Rules__c = False )</errorConditionFormula>
+ISPICKVAL(Billing_Frequency__c, &apos;One Time Event&apos;), Contract_Term__c != 1, $User.Override_Validation_Rules__c = False )</errorConditionFormula>
     <errorDisplayField>Contract_Term__c</errorDisplayField>
     <errorMessage>The Contract Term can only be a value of 1 when One Time Event is selected as the Billing Frequency.</errorMessage>
 </ValidationRule>

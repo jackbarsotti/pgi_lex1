@@ -3,9 +3,9 @@
     <fullName>Customer_s_Case_Number_for_Review__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
-    <label>Customer&#39;s Case Number for Review</label>
+    <label>Customer&apos;s Case Number for Review</label>
     <referenceTo>Case</referenceTo>
-    <relationshipLabel>Cases (Customer&#39;s Case Number for Review)</relationshipLabel>
+    <relationshipLabel>Cases (Customer&apos;s Case Number for Review)</relationshipLabel>
     <relationshipName>CaseIncidentReview</relationshipName>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

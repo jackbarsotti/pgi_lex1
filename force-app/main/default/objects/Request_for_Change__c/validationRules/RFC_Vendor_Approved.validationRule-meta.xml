@@ -5,7 +5,7 @@
     <description>When the Vendor Change Form is approved only Status and Detailed Description can be updated.</description>
     <errorConditionFormula>AND(
 RecordType.Name = &quot;Vendor Change Request&quot;,
-ISPICKVAL(  Status__c  , &#39;Approved&#39;),
+ISPICKVAL(  Status__c  , &apos;Approved&apos;),
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
 OR(
 ISCHANGED(  Related_Vendor__c ),

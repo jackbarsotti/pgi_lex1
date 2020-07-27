@@ -20,7 +20,7 @@ public with sharing class EscalateUnavailableChat {
         Output output = new Output();
         
         switch on currentChatTranscript.Query_Topic__c {
-            when 'Web or Audio Meetings' {
+            when 'Web or Audio Meetings', 'Unknown' {
                 Case newCase = new Case(
                     Origin = 'Chat', 
                     RecordTypeId = [SELECT Id FROM RecordType WHERE name LIKE '%Inbound Email Support%' and SobjectType = 'Case' LIMIT 1].Id,

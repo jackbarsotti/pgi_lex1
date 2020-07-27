@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <formula>TEXT(CreatedBy.User_Region__c)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>Created By User&#39;s Region</label>
+    <label>Created By User&apos;s Region</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <type>Text</type>

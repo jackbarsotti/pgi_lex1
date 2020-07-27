@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Canada_Hidden_Email__c</fullName>
-    <description>This field is populated with the lead&#39;s email until the lead has opted-in to receiving communication.  This is so that sales/marketing do not email the lead and break CASL standards</description>
+    <description>This field is populated with the lead&apos;s email until the lead has opted-in to receiving communication.  This is so that sales/marketing do not email the lead and break CASL standards</description>
     <externalId>false</externalId>
     <label>Canada Hidden Email</label>
     <required>false</required>

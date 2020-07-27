@@ -4,7 +4,7 @@
     <description>Fully configurable section. 2-Columns.
 
 Note the following is in Apex Code:
-* The Company Name, Address 1, Address 2, City, State, Postal Code, and Country fields are pre-populated from the Account&#39;s Billing Address, so they should always have data even if Sales did not put any in or it&#39;s not on the layout
+* The Company Name, Address 1, Address 2, City, State, Postal Code, and Country fields are pre-populated from the Account&apos;s Billing Address, so they should always have data even if Sales did not put any in or it&apos;s not on the layout
 * The same fields are also used during a validation procedure</description>
     <displayedFields>
         <field>NCS_SFDC_Account_ID__c</field>

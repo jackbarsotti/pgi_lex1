@@ -1,4 +1,4 @@
-<apex:page standardController="Matching_Rule__c" extensions="MatchingServiceController"   >
+<apex:page standardController="Matching_Rule__c" extensions="MatchingServiceController" showHeader="false" lightningStylesheets="true">
     <apex:includeLightning />
     <apex:includeScript value="/support/console/45.0/integration.js"/>
     <div  style="width:79vw;" id="MachingRuleCreation"  />

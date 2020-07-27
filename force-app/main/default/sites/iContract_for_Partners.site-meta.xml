@@ -13,7 +13,7 @@
     <clickjackProtectionLevel>AllowAllFraming</clickjackProtectionLevel>
     <contentSniffingProtection>false</contentSniffingProtection>
     <cspUpgradeInsecureRequests>false</cspUpgradeInsecureRequests>
-    <description>This site simply allows people without Salesforce logins  to view iContract&#39;s VisualForce pages, provided they come from iContract.</description>
+    <description>This site simply allows people without Salesforce logins  to view iContract&apos;s VisualForce pages, provided they come from iContract.</description>
     <enableAuraRequests>true</enableAuraRequests>
     <fileNotFoundPage>FileNotFound</fileNotFoundPage>
     <genericErrorPage>Exception</genericErrorPage>

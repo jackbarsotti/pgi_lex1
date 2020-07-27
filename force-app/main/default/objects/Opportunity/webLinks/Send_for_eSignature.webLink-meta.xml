@@ -25,13 +25,13 @@ var MasterObjectId = document.URL.split(&quot;/&quot;)[3];
 //
 var MasterObjectType;
 switch ( MasterObjectId.substring(0, 3) ) {
-case &#39;001&#39;: MasterObjectType = &#39;Account&#39;; break;
-case &#39;003&#39;: MasterObjectType = &#39;Contact&#39;; break;
-case &#39;005&#39;: MasterObjectType = &#39;User&#39;; break;
-case &#39;006&#39;: MasterObjectType = &#39;Opportunity&#39;; break;
-case &#39;800&#39;: MasterObjectType = &#39;Contract&#39;; break;
-case &#39;500&#39;: MasterObjectType = &#39;Case&#39;; break;
-case &#39;00Q&#39;: MasterObjectType = &#39;Lead&#39;; break;
+case &apos;001&apos;: MasterObjectType = &apos;Account&apos;; break;
+case &apos;003&apos;: MasterObjectType = &apos;Contact&apos;; break;
+case &apos;005&apos;: MasterObjectType = &apos;User&apos;; break;
+case &apos;006&apos;: MasterObjectType = &apos;Opportunity&apos;; break;
+case &apos;800&apos;: MasterObjectType = &apos;Contract&apos;; break;
+case &apos;500&apos;: MasterObjectType = &apos;Case&apos;; break;
+case &apos;00Q&apos;: MasterObjectType = &apos;Lead&apos;; break;
 
 // If you are using a custom object, or one not listed above,
 // Change the default below
@@ -51,27 +51,27 @@ var incumbent = &quot;{!Opportunity.Incumbent__c}&quot;;
 var competitor = &quot;{!Opportunity.Competitor_s__c}&quot;;
 var oppid = &quot;{!Opportunity.Id}&quot;;
 
-var agreementstatus = sforce.connection.query( &quot;select id,ECHOSIGN_DEV1__STATUSVISIBLE__C from echosign_dev1__SIGN_Agreement__c where ECHOSIGN_DEV1__OPPORTUNITY__C = &#39;&quot;+oppid+&quot;&#39; and ECHOSIGN_DEV1__STATUSVISIBLE__C IN (&#39;Draft&#39;,&#39;Pre-Send&#39;,&#39;Out for Signature&#39;,&#39;Waiting for Counter-Signature&#39;,&#39;Send in Progress&#39;,&#39;Waiting for Counter-Approval&#39;,&#39;Out for Approval&#39;,&#39;Created&#39;)&quot; );
+var agreementstatus = sforce.connection.query( &quot;select id,ECHOSIGN_DEV1__STATUSVISIBLE__C from echosign_dev1__SIGN_Agreement__c where ECHOSIGN_DEV1__OPPORTUNITY__C = &apos;&quot;+oppid+&quot;&apos; and ECHOSIGN_DEV1__STATUSVISIBLE__C IN (&apos;Draft&apos;,&apos;Pre-Send&apos;,&apos;Out for Signature&apos;,&apos;Waiting for Counter-Signature&apos;,&apos;Send in Progress&apos;,&apos;Waiting for Counter-Approval&apos;,&apos;Out for Approval&apos;,&apos;Created&apos;)&quot; );
 
 // Get array of related Agreement Templates
 aggrecords = agreementstatus.getArray( &quot;records&quot; );
 
 if( aggrecords.length &gt;= 1) {
-alert(&#39;There is already an open Adobe Agreement against this opportunity&#39;);}
+alert(&apos;There is already an open Adobe Agreement against this opportunity&apos;);}
 
 else
 {
-if (oppstage == &#39;Awareness&#39;) 
-alert(&#39;eSignature is not available for opportunities that are in the Awareness stage. Please move this opportunity beyond Awareness before using eSignature&#39;); 
+if (oppstage == &apos;Awareness&apos;) 
+alert(&apos;eSignature is not available for opportunities that are in the Awareness stage. Please move this opportunity beyond Awareness before using eSignature&apos;); 
 
-else if (oppstage == &#39;Closed Lost&#39; || oppstage == &#39;Closed Won&#39;)
-alert(&#39;eSignature is not available for Closed opportunities&#39;);
+else if (oppstage == &apos;Closed Lost&apos; || oppstage == &apos;Closed Won&apos;)
+alert(&apos;eSignature is not available for Closed opportunities&apos;);
 
 
 else
 {
-if (wonreason == &#39;&#39; || secreason == &#39;&#39; || terreason == &#39;&#39; || winfactors == &#39;&#39; || incumbent == &#39;&#39; || competitor == &#39;&#39; )
-alert(&#39;Please fill in all the Closed Won Reason fields to generate a eSignature request - Primary Won Reason, Secondary Won Reason, Territory Won Reason, Differentiating Win Factors, Competitor and Incumbent&#39;);
+if (wonreason == &apos;&apos; || secreason == &apos;&apos; || terreason == &apos;&apos; || winfactors == &apos;&apos; || incumbent == &apos;&apos; || competitor == &apos;&apos; )
+alert(&apos;Please fill in all the Closed Won Reason fields to generate a eSignature request - Primary Won Reason, Secondary Won Reason, Territory Won Reason, Differentiating Win Factors, Competitor and Incumbent&apos;);
 else 
 { 
 
@@ -82,17 +82,17 @@ var userchannel = &quot;{!TEXT($User.Channel__c)}&quot;;
 // Find Agreement templates related to MasterObjectType
 // Change the query as needed to add additional filters for the agreement templates
 
-if(userchannel == &#39;Partners&#39; || userchannel == &#39;Carrier&#39;)
-userregion = &#39;Partner&#39;;
+if(userchannel == &apos;Partners&apos; || userchannel == &apos;Carrier&apos;)
+userregion = &apos;Partner&apos;;
 
 else
 {
-if(usercountry == &#39;India&#39;)
-userregion = &#39;EMEA&#39;;
+if(usercountry == &apos;India&apos;)
+userregion = &apos;EMEA&apos;;
 }
 //alert(userchannel);
 //alert(userregion);
-var agreements = sforce.connection.query( &quot;SELECT Id, Name FROM echosign_dev1__Agreement_Template__c WHERE Name LIKE &#39;&quot;+userregion+&quot;%&#39; and echosign_dev1__Master_Object_Type__c = &#39;&quot; + MasterObjectType + &quot;&#39;&quot; );
+var agreements = sforce.connection.query( &quot;SELECT Id, Name FROM echosign_dev1__Agreement_Template__c WHERE Name LIKE &apos;&quot;+userregion+&quot;%&apos; and echosign_dev1__Master_Object_Type__c = &apos;&quot; + MasterObjectType + &quot;&apos;&quot; );
 
 // Get array of related Agreement Templates
 records = agreements.getArray( &quot;records&quot; );
@@ -100,12 +100,12 @@ records = agreements.getArray( &quot;records&quot; );
 // If there are zero templates, alert user and do nothing
 if( records.length == 0) {
 
-alert(&#39;There are no agreement templates to choose from.&#39;);
+alert(&apos;There are no agreement templates to choose from.&apos;);
 
 // If there is ONE template, there is no need to choose one. Navigate user forward
 } else if(records.length == 1) {
 
-location.href = &#39;/apex/echosign_dev1__AgreementTemplateProcess?masterId=&#39; + MasterObjectId + &#39;&amp;TemplateId=&#39; + records[0].Id;
+location.href = &apos;/apex/echosign_dev1__AgreementTemplateProcess?masterId=&apos; + MasterObjectId + &apos;&amp;TemplateId=&apos; + records[0].Id;
 
 // If there are more than one, Let the user choose which template to user
 } else {
@@ -113,24 +113,24 @@ location.href = &#39;/apex/echosign_dev1__AgreementTemplateProcess?masterId=&#39
 
 
 // Declare HTML string for popup
-var agreementListHtml = &#39;&lt;br /&gt;&#39;;
+var agreementListHtml = &apos;&lt;br /&gt;&apos;;
 
 // Build HTML to show in modal.
 for (var i=0; i&lt; records.length; i++) {
 
-agreementListHtml += &#39;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;h3&gt;&lt;a href=&quot;/apex/echosign_dev1__AgreementTemplateProcess?masterId=&#39; + MasterObjectId + &#39;&amp;TemplateId=&#39; + records[i].Id + &#39;&quot; title=&quot;&#39; + records[i].Id + &#39;&quot;&gt;&#39; + records[i].Name + &#39;&lt;/a&gt;&lt;/h3&gt;&#39;;
+agreementListHtml += &apos;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;h3&gt;&lt;a href=&quot;/apex/echosign_dev1__AgreementTemplateProcess?masterId=&apos; + MasterObjectId + &apos;&amp;TemplateId=&apos; + records[i].Id + &apos;&quot; title=&quot;&apos; + records[i].Id + &apos;&quot;&gt;&apos; + records[i].Name + &apos;&lt;/a&gt;&lt;/h3&gt;&apos;;
 
 
 if( i&lt; records.length ) {
 
-agreementListHtml += &#39;&lt;br /&gt;&lt;br /&gt;&#39;;
+agreementListHtml += &apos;&lt;br /&gt;&lt;br /&gt;&apos;;
 
 } // &lt;/if
 
 } // &lt;/for
 
 // HTML for close button that is included at the bottom of the modal
-var closeButtonHtml = &quot;&lt;p style=&#39;text-align:right;&#39;&gt;&lt;button class=&#39;btn&#39; onclick=&#39;window.parent.sd.hide(); return false;&#39;&gt;&amp;nbsp;Close&amp;nbsp;&lt;/button&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&quot;;
+var closeButtonHtml = &quot;&lt;p style=&apos;text-align:right;&apos;&gt;&lt;button class=&apos;btn&apos; onclick=&apos;window.parent.sd.hide(); return false;&apos;&gt;&amp;nbsp;Close&amp;nbsp;&lt;/button&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&quot;;
 
 // Use salesforce.com native SimpleDialog() to show modal
 var sd = new SimpleDialog( &quot;Agreement Template Chooser&quot; + Math.random(), false );

@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Toolbar_in_user_s_computer_programs__c</fullName>
     <externalId>false</externalId>
-    <label>Toolbar in user&#39;s computer programs?</label>
+    <label>Toolbar in user&apos;s computer programs?</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

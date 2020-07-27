@@ -3,7 +3,7 @@
     <fullName>Full_Event_Moderation_Add_l_Minutes__c</fullName>
     <defaultValue>100</defaultValue>
     <externalId>false</externalId>
-    <label>Full Event Moderation Add&#39;l Minutes</label>
+    <label>Full Event Moderation Add&apos;l Minutes</label>
     <precision>18</precision>
     <required>false</required>
     <scale>2</scale>

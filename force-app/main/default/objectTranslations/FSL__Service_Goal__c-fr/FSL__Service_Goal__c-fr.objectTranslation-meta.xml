@@ -9,11 +9,16 @@
         <value>Objectifs de service</value>
     </caseValues>
     <gender>Masculine</gender>
-    <nameFieldLabel>Nom de l&#39;objectif de service</nameFieldLabel>
+    <nameFieldLabel>Nom de l&apos;objectif de service</nameFieldLabel>
     <recordTypes>
         <description><!-- Schedule as soon as possible --></description>
         <label><!-- ASAP --></label>
         <name>FSL__Objective_Asap</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Custom Objective --></description>
+        <label><!-- Custom Objective --></label>
+        <name>FSL__Objective_Custom_Logic</name>
     </recordTypes>
     <recordTypes>
         <description><!-- Minimize the use of overtime --></description>

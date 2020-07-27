@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Wrapup_Time__c</fullName>
-    <description>If the agent was using the Natterbox CTI, this is the amount of time between the call being completed and the agent pressing the &#39;Done&#39; button on the CTI. If the agent is not making use of the CTI, this field will be left blank.</description>
+    <description>If the agent was using the Natterbox CTI, this is the amount of time between the call being completed and the agent pressing the &apos;Done&apos; button on the CTI. If the agent is not making use of the CTI, this field will be left blank.</description>
     <externalId>false</externalId>
-    <inlineHelpText>If the agent was using the Natterbox CTI, this is the amount of time between the call being completed and the agent pressing the &#39;Done&#39; button on the CTI. If the agent is not making use of the CTI, this field will be left blank.</inlineHelpText>
+    <inlineHelpText>If the agent was using the Natterbox CTI, this is the amount of time between the call being completed and the agent pressing the &apos;Done&apos; button on the CTI. If the agent is not making use of the CTI, this field will be left blank.</inlineHelpText>
     <label>Wrapup Time</label>
     <precision>10</precision>
     <required>false</required>

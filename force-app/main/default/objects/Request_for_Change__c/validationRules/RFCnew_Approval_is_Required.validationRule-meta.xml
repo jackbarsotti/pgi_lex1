@@ -2,12 +2,12 @@
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>RFCnew_Approval_is_Required</fullName>
     <active>true</active>
-    <description>You can&#39;t complete the &#39;Complete RFC&#39; field until the Status = Approved</description>
+    <description>You can&apos;t complete the &apos;Complete RFC&apos; field until the Status = Approved</description>
     <errorConditionFormula>AND(
-NOT(ISPICKVAL( Status__c,&#39;Approved&#39; )),
-NOT(ISPICKVAL( Status__c,&#39;Complete&#39; )),
-NOT(ISPICKVAL( Status__c,&#39;Unsuccessful&#39; )),
-NOT(ISPICKVAL( Complete_RFC__c , &#39;&#39; ))
+NOT(ISPICKVAL( Status__c,&apos;Approved&apos; )),
+NOT(ISPICKVAL( Status__c,&apos;Complete&apos; )),
+NOT(ISPICKVAL( Status__c,&apos;Unsuccessful&apos; )),
+NOT(ISPICKVAL( Complete_RFC__c , &apos;&apos; ))
 )</errorConditionFormula>
     <errorDisplayField>Complete_RFC__c</errorDisplayField>
     <errorMessage>You can not complete an RFC until the Status = Approved</errorMessage>

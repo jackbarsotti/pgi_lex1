@@ -14,7 +14,7 @@
 var userProfile = &quot;{!$Profile.Id}&quot;;
 var opptyStage = &quot;{!Opportunity.StageName}&quot;;
 
-var query = &quot;SELECT Count(Id) FROM OpportunityLineItem WHERE OpportunityId = &#39;{!Opportunity.Id}&#39;&quot;;
+var query = &quot;SELECT Count(Id) FROM OpportunityLineItem WHERE OpportunityId = &apos;{!Opportunity.Id}&apos;&quot;;
 var result = sforce.connection.query(query);
 var records = result.getArray(&quot;records&quot;);
 var opptyLineItemCount = records[0].expr0;

@@ -3,9 +3,9 @@
     <fullName>CallLog_EscalationRequired</fullName>
     <active>true</active>
     <errorConditionFormula>AND(
-ISPICKVAL ( Call_Status__c , &#39;Escalation Needed&#39;),
-ISPICKVAL ( Escalation_Type__c , &#39;&#39;) ||
-ISPICKVAL ( Escalation_Record_Type__c  , &#39;&#39;)
+ISPICKVAL ( Call_Status__c , &apos;Escalation Needed&apos;),
+ISPICKVAL ( Escalation_Type__c , &apos;&apos;) ||
+ISPICKVAL ( Escalation_Record_Type__c  , &apos;&apos;)
 )</errorConditionFormula>
     <errorDisplayField>Call_Status__c</errorDisplayField>
     <errorMessage>If Call Status = Escalation Needed then you must pick an Escalation Type and Record Type</errorMessage>

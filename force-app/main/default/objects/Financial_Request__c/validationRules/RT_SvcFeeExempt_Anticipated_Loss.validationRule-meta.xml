@@ -4,9 +4,9 @@
     <active>true</active>
     <description>If Type value is Service Fee Exemption, then Anticipated Annual Revenue Loss is required in ReadyTalk records</description>
     <errorConditionFormula>AND(
-ispickval(  Type__c , &#39;Service Fee Exemption&#39;),
+ispickval(  Type__c , &apos;Service Fee Exemption&apos;),
  isblank( Anticipated_Annual_Revenue_Loss__c ),
-  RecordType.DeveloperName = &#39;ReadyTalk Exemption Request&#39;)</errorConditionFormula>
+  RecordType.DeveloperName = &apos;ReadyTalk Exemption Request&apos;)</errorConditionFormula>
     <errorDisplayField>Anticipated_Annual_Revenue_Loss__c</errorDisplayField>
     <errorMessage>Anticipated Annual Revenue Loss is required.</errorMessage>
 </ValidationRule>

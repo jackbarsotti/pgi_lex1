@@ -5,8 +5,8 @@
 When the status of a contact is equal to Active or Not Provisioned, the box is checked. This is then used as filter criteria on the Contact Opt In Flow.</description>
     <externalId>false</externalId>
     <formula>OR(
-   TEXT( Status__c ) = &#39;Active&#39;,
-   TEXT( Status__c ) = &#39;Not Provisioned&#39;
+   TEXT( Status__c ) = &apos;Active&apos;,
+   TEXT( Status__c ) = &apos;Not Provisioned&apos;
 )</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Status Active or Not Provisioned</label>

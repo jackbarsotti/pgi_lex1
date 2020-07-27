@@ -3,7 +3,7 @@
     <fullName>rh2__Rollup_Link__c</fullName>
     <deprecated>false</deprecated>
     <externalId>false</externalId>
-    <formula>IF(!ISBLANK(rh2__Rollup_Name__c), HYPERLINK(&quot;/apex/PS_RollupType?s=&quot; &amp;  rh2__Rollup_Name__c, &quot;Link to the Rollup&quot;), &#39;No rollup link available.&#39;)</formula>
+    <formula>IF(!ISBLANK(rh2__Rollup_Name__c), HYPERLINK(&quot;/apex/PS_RollupType?s=&quot; &amp;  rh2__Rollup_Name__c, &quot;Link to the Rollup&quot;), &apos;No rollup link available.&apos;)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Rollup Link</label>
     <required>false</required>

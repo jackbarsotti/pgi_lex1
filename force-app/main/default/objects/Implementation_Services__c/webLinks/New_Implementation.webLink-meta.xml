@@ -5,9 +5,11 @@
     <displayType>massActionButton</displayType>
     <encodingKey>UTF-8</encodingKey>
     <linkType>url</linkType>
-    <masterLabel>New Implementation</masterLabel>
+    <masterLabel>New Implementation1</masterLabel>
     <openType>replace</openType>
     <protected>false</protected>
     <requireRowSelection>true</requireRowSelection>
-    <url>/a0f/e?CF00Na000000AR5Da={!Opportunity.Name}&amp;CF00Na000000AR5Dl={!$User.FirstName}+{!$User.LastName}&amp;retURL=%2F006a000000wY8lE</url>
+    <url>{!URLFOR(IF($User.UITheme != &apos;Theme4&apos;,
+&apos;/a0f/e?CF00Na000000AR5Da=&apos;+Opportunity.Name+&apos;&amp;CF00Na000000AR5Dl=&apos;+$User.FirstName+&apos; &apos;+$User.LastName+&apos;&amp;retURL=%2F006a000000wY8lEe&apos;,
+&apos;/lightning/o/Implementation_Services__c/new?defaultFieldValues=Implementation_Owner__c=&apos;+User.Id))}</url>
 </WebLink>

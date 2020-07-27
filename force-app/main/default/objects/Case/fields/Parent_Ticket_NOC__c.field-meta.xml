@@ -3,7 +3,7 @@
     <fullName>Parent_Ticket_NOC__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
-    <inlineHelpText>If the Customer&#39;s Case # for Review has a NOC Ticket then this field will auto populate, if it does not or if you manually populate this field then it will be subjective to you to enter the details.</inlineHelpText>
+    <inlineHelpText>If the Customer&apos;s Case # for Review has a NOC Ticket then this field will auto populate, if it does not or if you manually populate this field then it will be subjective to you to enter the details.</inlineHelpText>
     <label>Parent Ticket (NOC)</label>
     <lookupFilter>
         <active>false</active>

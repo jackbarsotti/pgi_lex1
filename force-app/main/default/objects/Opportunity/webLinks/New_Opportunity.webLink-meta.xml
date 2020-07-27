@@ -9,5 +9,5 @@
     <openType>onClickJavaScript</openType>
     <protected>false</protected>
     <requireRowSelection>false</requireRowSelection>
-    <url>navigateToUrl(&#39;/setup/ui/recordtypeselect.jsp?ent=Opportunity&amp;retURL={!Contact.Id}&amp;save_new_url=/006/e?retURL={!Contact.Id}&#39;,null,&#39;new&#39;);</url>
+    <url>navigateToUrl(&apos;/setup/ui/recordtypeselect.jsp?ent=Opportunity&amp;retURL={!Contact.Id}&amp;save_new_url=/006/e?retURL={!Contact.Id}&apos;,null,&apos;new&apos;);</url>
 </WebLink>

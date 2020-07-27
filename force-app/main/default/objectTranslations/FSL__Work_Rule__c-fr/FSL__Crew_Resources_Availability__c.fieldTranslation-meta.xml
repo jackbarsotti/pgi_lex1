@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help>Lorsque cette option est sélectionnée, comparez le champ Taille d&#39;équipe minimale de l&#39;ordre d&#39;exécution aux membres d&#39;équipe de service actuellement disponibles. 
-Sinon, comparez la Taille d&#39;équipe minimale au champ de taille de l&#39;équipe de service.</help>
+    <help>Lorsque cette option est sélectionnée, comparez le champ Taille d&apos;équipe minimale de l&apos;ordre d&apos;exécution aux membres d&apos;équipe de service actuellement disponibles. 
+Sinon, comparez la Taille d&apos;équipe minimale au champ de taille de l&apos;équipe de service.</help>
     <label><!-- Consider Service Crew Membership --></label>
     <name>FSL__Crew_Resources_Availability__c</name>
 </CustomFieldTranslation>

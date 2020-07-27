@@ -3,7 +3,7 @@
     <fullName>z_Round_Robin_EMEA_Direct_Sales_UK__c</fullName>
     <description>When Lead: Owner Region EQUALS EMEA_Direct_Sales_UK
 I need the lead to go into the following round robin:
-0 goes to Aaron O&#39;Neill
+0 goes to Aaron O&apos;Neill
 1 goes to Farrukh Nasiri
 2 goes to Shaun Choo
 3 goes to Bissa Kembetia

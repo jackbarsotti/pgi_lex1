@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NavigationMenu xmlns="http://soap.sforce.com/2006/04/metadata">
+    <container>Streamlined Communications</container>
+    <containerType>Network</containerType>
+    <label>Videos</label>
+    <navigationMenuItem>
+        <label>Ask an Expert (live)</label>
+        <position>1</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>https://event.webcasts.com/starthere.jsp?ei=1216260&amp;tp_key=205850f54e</target>
+        <type>ExternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Quick Start Training</label>
+        <position>2</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/article/kA01B000000do1n</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Event Setup Training</label>
+        <position>3</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/article/kA01B000000do22</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Live Studio Training</label>
+        <position>4</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/article/kA01B000000h8IQ</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>OD/Sim-Live Studio Training</label>
+        <position>5</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/article/kA01B000000do0k</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Reporting Training</label>
+        <position>6</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/article/kA01B000000do0z</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Guest Admin Training</label>
+        <position>7</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/article/kA01B000000do3A</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Feature Training</label>
+        <position>8</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/feature-trainings</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+</NavigationMenu>

@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <formula>OpportunityScore.Score</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <inlineHelpText>This score is based off of a comparison against the past 6 months worth of deals that have closed as won.  It is a measurement of likelihood of this deal closing as won based off of this deal&#39;s age, activity, stage progression, and completeness of detail.</inlineHelpText>
+    <inlineHelpText>This score is based off of a comparison against the past 6 months worth of deals that have closed as won.  It is a measurement of likelihood of this deal closing as won based off of this deal&apos;s age, activity, stage progression, and completeness of detail.</inlineHelpText>
     <label>Einstein Score</label>
     <precision>18</precision>
     <required>false</required>

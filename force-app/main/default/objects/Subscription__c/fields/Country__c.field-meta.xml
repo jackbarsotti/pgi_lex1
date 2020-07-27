@@ -278,9 +278,9 @@
                 <label>Costa Rica</label>
             </value>
             <value>
-                <fullName>Cote d&#39;Ivoire</fullName>
+                <fullName>Cote d&apos;Ivoire</fullName>
                 <default>false</default>
-                <label>Cote d&#39;Ivoire</label>
+                <label>Cote d&apos;Ivoire</label>
             </value>
             <value>
                 <fullName>Croatia</fullName>
@@ -598,9 +598,9 @@
                 <label>Kyrgyzstan</label>
             </value>
             <value>
-                <fullName>Lao People&#39;s Democratic Republic Of</fullName>
+                <fullName>Lao People&apos;s Democratic Republic Of</fullName>
                 <default>false</default>
-                <label>Lao People&#39;s Democratic Republic Of</label>
+                <label>Lao People&apos;s Democratic Republic Of</label>
             </value>
             <value>
                 <fullName>Latvia</fullName>

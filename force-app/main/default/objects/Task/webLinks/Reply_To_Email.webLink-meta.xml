@@ -11,15 +11,15 @@
 {!REQUIRESCRIPT(&quot;/soap/ajax/45.0/connection.js&quot;)}
 {!REQUIRESCRIPT(&quot;/support/console/45.0/integration.js&quot;)}
 function() {
-var fromEmail = &#39;noreplylesforcecrmsupport@pgi.com&#39;;
+var fromEmail = &apos;noreplylesforcecrmsupport@pgi.com&apos;;
 
 
-//var pageUrl = &#39;/email/author/emailauthor.jsp?retURL=/{!Financial_Request__c.Id}&amp;p3_lkid={!Financial_Request__c.Id}&amp;rtype=003&amp;p2_lkid={!Financial_Request__c.RequestorsEmail__c}&amp;template_id=&#39;+templateId+&#39;&amp;p24={!Financial_Request__c.RequestorsEmail__c},{!Financial_Request__c.Requested_For__c}&amp;p26=&#39;+fromEmail+&#39;&amp;p6= Replay:{!Financial_Request__c.Subject__c}&#39;;
+//var pageUrl = &apos;/email/author/emailauthor.jsp?retURL=/{!Financial_Request__c.Id}&amp;p3_lkid={!Financial_Request__c.Id}&amp;rtype=003&amp;p2_lkid={!Financial_Request__c.RequestorsEmail__c}&amp;template_id=&apos;+templateId+&apos;&amp;p24={!Financial_Request__c.RequestorsEmail__c},{!Financial_Request__c.Requested_For__c}&amp;p26=&apos;+fromEmail+&apos;&amp;p6= Replay:{!Financial_Request__c.Subject__c}&apos;;
 var pageUrl;
-if(&#39;{!Financial_Request__c.RequestorsEmail__c}&#39; == &#39;{!Financial_Request__c.Requested_For__c}&#39;) {
-pageUrl = &#39;/email/author/emailauthor.jsp?retURL=/{!Financial_Request__c.Id}&amp;p3_lkid={!Financial_Request__c.Id}&amp;rtype=003&amp;p2_lkid={!Financial_Request__c.RequestorsEmail__c}&amp;p24={!Financial_Request__c.Requested_For__c}&amp;p26=&#39;+fromEmail+&#39;&amp;p6= Replay:{!Financial_Request__c.Subject__c}&#39;;
+if(&apos;{!Financial_Request__c.RequestorsEmail__c}&apos; == &apos;{!Financial_Request__c.Requested_For__c}&apos;) {
+pageUrl = &apos;/email/author/emailauthor.jsp?retURL=/{!Financial_Request__c.Id}&amp;p3_lkid={!Financial_Request__c.Id}&amp;rtype=003&amp;p2_lkid={!Financial_Request__c.RequestorsEmail__c}&amp;p24={!Financial_Request__c.Requested_For__c}&amp;p26=&apos;+fromEmail+&apos;&amp;p6= Replay:{!Financial_Request__c.Subject__c}&apos;;
 } else {
-pageUrl = &#39;/email/author/emailauthor.jsp?retURL=/{!Financial_Request__c.Id}&amp;p3_lkid={!Financial_Request__c.Id}&amp;rtype=003&amp;p2_lkid={!Financial_Request__c.RequestorsEmail__c}&amp;p24={!Financial_Request__c.RequestorsEmail__c},{!Financial_Request__c.Requested_For__c}&amp;p26=&#39;+fromEmail+&#39;&amp;p6= Replay:{!Financial_Request__c.Subject__c}&#39;;
+pageUrl = &apos;/email/author/emailauthor.jsp?retURL=/{!Financial_Request__c.Id}&amp;p3_lkid={!Financial_Request__c.Id}&amp;rtype=003&amp;p2_lkid={!Financial_Request__c.RequestorsEmail__c}&amp;p24={!Financial_Request__c.RequestorsEmail__c},{!Financial_Request__c.Requested_For__c}&amp;p26=&apos;+fromEmail+&apos;&amp;p6= Replay:{!Financial_Request__c.Subject__c}&apos;;
 }
 if (sforce.console.isInConsole()) {
 sforce.console.openPrimaryTab(null, pageUrl ,true);

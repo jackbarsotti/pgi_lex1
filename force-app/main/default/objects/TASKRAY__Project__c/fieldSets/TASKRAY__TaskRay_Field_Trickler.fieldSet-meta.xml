@@ -6,7 +6,7 @@
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
     </availableFields>
-    <description>This fieldset is the list of fields which will propagate throughout a project&#39;s subprojects, tasks, and checklist items</description>
+    <description>This fieldset is the list of fields which will propagate throughout a project&apos;s subprojects, tasks, and checklist items</description>
     <displayedFields>
         <field>TASKRAY__trOpportunity__c</field>
         <isFieldManaged>false</isFieldManaged>

@@ -9,8 +9,8 @@ AND(
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
 RecordType.Name = &quot;PGi-RFC Task&quot;,
 OR(
-ISPICKVAL( Status , &#39;Pending Approval(s)&#39;), 
-ISPICKVAL( Status , &#39;Approved&#39;)
+ISPICKVAL( Status , &apos;Pending Approval(s)&apos;), 
+ISPICKVAL( Status , &apos;Approved&apos;)
 ),
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
 OR(
@@ -26,9 +26,9 @@ ISCHANGED( Implementation_Task__c  )
 AND(
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
 RecordType.Name = &quot;PGi-RFC Task&quot;,
-ISPICKVAL( Status , &#39;Complete&#39;),
-NOT(ISPICKVAL(Related_RFC__r.Status__c, &#39;Approved&#39;)),
-NOT(ISPICKVAL( Related_RFC__r.Type__c, &#39;Unauthorized&#39;))
+ISPICKVAL( Status , &apos;Complete&apos;),
+NOT(ISPICKVAL(Related_RFC__r.Status__c, &apos;Approved&apos;)),
+NOT(ISPICKVAL( Related_RFC__r.Type__c, &apos;Unauthorized&apos;))
 )
 )</errorConditionFormula>
     <errorMessage>Only the Assigned To &amp; Status fields may be changed while the RFC Task is Pending Approval or Approved unless your trying to mark the Status as Complete while the RFC is still pending approval then Status field is blocked from changes as well.</errorMessage>

@@ -10,7 +10,7 @@
     <url>if(&quot;{!JSENCODE(Lead.Account__c)}&quot;===&quot;&quot;) {
 alert(&quot;A Related Account is required to add a Contact to this Lead record.&quot;);
 } else {
-var LeadID = &#39;{!Lead.Id}&#39;;
-window.parent.location.href = &#39;/apex/Adding_Contacts_from_Lead_Page?LeadID={!Lead.Id}&#39;;
+var LeadID = &apos;{!Lead.Id}&apos;;
+window.parent.location.href = &apos;/apex/Adding_Contacts_from_Lead_Page?LeadID={!Lead.Id}&apos;;
 }</url>
 </WebLink>

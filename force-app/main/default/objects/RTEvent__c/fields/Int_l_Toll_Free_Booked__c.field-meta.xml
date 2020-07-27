@@ -6,7 +6,7 @@
 Customer requested that International Toll Free numbers are booked for the RT Event.</description>
     <externalId>false</externalId>
     <inlineHelpText>Were ITFs booked?</inlineHelpText>
-    <label>Int&#39;l Toll Free Booked</label>
+    <label>Int&apos;l Toll Free Booked</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

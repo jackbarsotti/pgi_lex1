@@ -3,9 +3,9 @@
     <fullName>PGi_Cancel_Reason_Changing_Providers</fullName>
     <active>true</active>
     <errorConditionFormula>AND( 
-ispickval( ReasonforCancellation__c , &#39;Changing Providers&#39;), 
+ispickval( ReasonforCancellation__c , &apos;Changing Providers&apos;), 
 isblank( Cancelled_Reason_Additional_Info__c ), 
-RecordType.DeveloperName = &#39;PGi_Company_Cancellation_Request&#39;)</errorConditionFormula>
+RecordType.DeveloperName = &apos;PGi_Company_Cancellation_Request&apos;)</errorConditionFormula>
     <errorDisplayField>Cancelled_Reason_Additional_Info__c</errorDisplayField>
     <errorMessage>When the Reason for Cancellation is &quot;Changing Providers&quot;, please update the Cancelled Reason Additional Info.</errorMessage>
 </ValidationRule>

@@ -1215,10 +1215,6 @@
         <name>Assign_to_MeLex</name>
     </quickActions>
     <quickActions>
-        <label><!-- Assign to Me --></label>
-        <name>Assign_to_Me_listbuttonLex</name>
-    </quickActions>
-    <quickActions>
         <label><!-- Escalate Email Case --></label>
         <name>Escalate_Email_Case_Lex</name>
     </quickActions>
@@ -1558,8 +1554,8 @@
         <name>Assign_to_Me</name>
     </webLinks>
     <webLinks>
-        <label><!-- Assign_to_Me_listbutton --></label>
-        <name>Assign_to_Me_listbutton</name>
+        <label><!-- Assign_to_Me_ListBtn_Lex --></label>
+        <name>Assign_to_Me_ListBtn_Lex</name>
     </webLinks>
     <webLinks>
         <label><!-- Collapse --></label>
@@ -1582,6 +1578,10 @@
         <name>Escalate_Email_Case_Lex</name>
     </webLinks>
     <webLinks>
+        <label><!-- NewCase_Test --></label>
+        <name>NewCase_Test</name>
+    </webLinks>
+    <webLinks>
         <label><!-- New_Case --></label>
         <name>New_Case</name>
     </webLinks>
@@ -1592,10 +1592,6 @@
     <webLinks>
         <label><!-- New_RFC_Case --></label>
         <name>New_RFC_Case</name>
-    </webLinks>
-    <webLinks>
-        <label><!-- New_RFC_Case_Quick_Create --></label>
-        <name>New_RFC_Case_Quick_Create</name>
     </webLinks>
     <webLinks>
         <label><!-- Priority_Matrix --></label>

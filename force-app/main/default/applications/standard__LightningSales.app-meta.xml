@@ -38,5 +38,6 @@
     <tabs>DataRetentionManager</tabs>
     <tabs>PGIServicesInformation__c</tabs>
     <tabs>Rate__c</tabs>
+    <tabs>Batch_Import_Revenue__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

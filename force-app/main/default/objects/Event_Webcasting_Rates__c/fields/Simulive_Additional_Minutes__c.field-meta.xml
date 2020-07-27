@@ -2,9 +2,9 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Simulive_Additional_Minutes__c</fullName>
     <defaultValue>75</defaultValue>
-    <description>Per add&#39;l 30 minutes (past initial 60 minutes)</description>
+    <description>Per add&apos;l 30 minutes (past initial 60 minutes)</description>
     <externalId>false</externalId>
-    <inlineHelpText>Per add&#39;l 30 minutes (past initial 60 minutes)</inlineHelpText>
+    <inlineHelpText>Per add&apos;l 30 minutes (past initial 60 minutes)</inlineHelpText>
     <label>Simulive Additional Minutes</label>
     <precision>10</precision>
     <required>false</required>

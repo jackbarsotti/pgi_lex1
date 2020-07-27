@@ -33,22 +33,22 @@ this.openPopup = function(){
 
 var top = screen.height - (screen.height * .5) - 100; 
 var left = screen.width - (screen.width * .5) - 187; 
-var params = &#39;dependent = yes,resizable=false,scrollbars=false,toolbar=false,menubar=false,location=false,status=true,directories=false,width=375,height=160,top=&#39;;
+var params = &apos;dependent = yes,resizable=false,scrollbars=false,toolbar=false,menubar=false,location=false,status=true,directories=false,width=375,height=160,top=&apos;;
 params += top.toString(); 
-params += &#39;,left=&#39; + left.toString() + &#39;\&#39;&#39;; 
+params += &apos;,left=&apos; + left.toString() + &apos;\&apos;&apos;; 
 
-var win = window.open(&#39;/apex/quote_status?whence=&#39; + &quot;{!Opportunity.Id}&quot;, &#39;NetSuite_Synchronization&#39;, params); 
+var win = window.open(&apos;/apex/quote_status?whence=&apos; + &quot;{!Opportunity.Id}&quot;, &apos;NetSuite_Synchronization&apos;, params); 
 }; 
 
 this.checkSyncStatus = function(){ 
 
 var url = window.location.href; 
-var endEx = url.lastIndexOf(&#39;?&#39;) &gt; -1 ? url.lastIndexOf(&#39;/&#39;) : url.length; 
+var endEx = url.lastIndexOf(&apos;?&apos;) &gt; -1 ? url.lastIndexOf(&apos;/&apos;) : url.length; 
 
-var result = sforce.connection.query(&quot;select Id, Celigo_Sync_Helper__c, Send_to_NetSuite__c, NS_Sync__c from Opportunity where Id = &#39;&quot;+ &quot;{!Opportunity.Id}&quot; +&quot;&#39;&quot;, { 
+var result = sforce.connection.query(&quot;select Id, Celigo_Sync_Helper__c, Send_to_NetSuite__c, NS_Sync__c from Opportunity where Id = &apos;&quot;+ &quot;{!Opportunity.Id}&quot; +&quot;&apos;&quot;, { 
 onSuccess: function(result){ 
 var records = result.getArray(&quot;records&quot;); 
-if (records[0].Celigo_Sync_Helper__c === &#39;true&#39; &amp;&amp; records[0].Send_to_NetSuite__c === &#39;false&#39; &amp;&amp; records[0].NS_Sync__c === null) 
+if (records[0].Celigo_Sync_Helper__c === &apos;true&apos; &amp;&amp; records[0].Send_to_NetSuite__c === &apos;false&apos; &amp;&amp; records[0].NS_Sync__c === null) 
 window.location.href = window.location.href; 
 else if(retries &lt; maxRetries){ 
 retries++; 
@@ -56,7 +56,7 @@ window.setTimeout(that.checkSyncStatus, 5000);
 } 
 }, 
 onFailure: function(error){ 
-alert(&#39;An error has occurred, please contact your Celigo representative: &#39; + error); 
+alert(&apos;An error has occurred, please contact your Celigo representative: &apos; + error); 
 } 
 }); 
 }; 
@@ -66,9 +66,9 @@ return { //public members
 main: function(){ 
 try { 
 {!REQUIRESCRIPT(&quot;/soap/ajax/13.0/connection.js&quot;)} 
-var inProg= sforce.connection.query(&quot;select Id, Send_to_NetSuite__c from Opportunity where Id = &#39;&quot;+ &quot;{!Opportunity.Id}&quot; + &quot;&#39;&quot;);
-                        var records = inProg.getArray(&#39;records&#39;);
-                        if (records[0].Send_to_NetSuite__c === &#39;true&#39;) 
+var inProg= sforce.connection.query(&quot;select Id, Send_to_NetSuite__c from Opportunity where Id = &apos;&quot;+ &quot;{!Opportunity.Id}&quot; + &quot;&apos;&quot;);
+                        var records = inProg.getArray(&apos;records&apos;);
+                        if (records[0].Send_to_NetSuite__c === &apos;true&apos;) 
                             alert(&quot;Sync already in progress.&quot;);
 else {
 var qsm = new QuoteSyncManager(); 
@@ -78,7 +78,7 @@ window.setTimeout(qsm.checkSyncStatus, 5000);
 }
 } 
 catch (e) { 
-alert(&#39;An error has occurred, please contact your Celigo representative: &#39; + e.name + &#39; - &#39; + e.message); 
+alert(&apos;An error has occurred, please contact your Celigo representative: &apos; + e.name + &apos; - &apos; + e.message); 
 } 
 } 
 } 

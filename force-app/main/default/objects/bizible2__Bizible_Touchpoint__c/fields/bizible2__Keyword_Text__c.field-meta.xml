@@ -2,9 +2,9 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>bizible2__Keyword_Text__c</fullName>
     <deprecated>false</deprecated>
-    <description>Keywords chosen by the advertiser that match the user&#39;s search results</description>
+    <description>Keywords chosen by the advertiser that match the user&apos;s search results</description>
     <externalId>false</externalId>
-    <inlineHelpText>Keywords chosen by the advertiser that match the user&#39;s search results</inlineHelpText>
+    <inlineHelpText>Keywords chosen by the advertiser that match the user&apos;s search results</inlineHelpText>
     <label>Keyword Text</label>
     <length>255</length>
     <required>false</required>

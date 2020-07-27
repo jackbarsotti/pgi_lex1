@@ -2,9 +2,9 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>TASKRAY__filterType__c</fullName>
     <deprecated>false</deprecated>
-    <description>Possible values: (&#39;task&#39;, &#39;project&#39;)</description>
+    <description>Possible values: (&apos;task&apos;, &apos;project&apos;)</description>
     <externalId>false</externalId>
-    <inlineHelpText>Possible values: (&#39;task&#39;, &#39;project&#39;)</inlineHelpText>
+    <inlineHelpText>Possible values: (&apos;task&apos;, &apos;project&apos;)</inlineHelpText>
     <label>Filter Type</label>
     <length>255</length>
     <required>false</required>

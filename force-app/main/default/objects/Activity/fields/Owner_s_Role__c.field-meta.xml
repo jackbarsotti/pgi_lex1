@@ -3,7 +3,7 @@
     <fullName>Owner_s_Role__c</fullName>
     <externalId>false</externalId>
     <formula>Owner:User.UserRole.Name</formula>
-    <label>Owner&#39;s Role</label>
+    <label>Owner&apos;s Role</label>
     <required>false</required>
     <type>Text</type>
     <unique>false</unique>

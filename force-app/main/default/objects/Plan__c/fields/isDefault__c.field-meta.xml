@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>isDefault__c</fullName>
     <defaultValue>false</defaultValue>
-    <description>This is the default plan used (for plan&#39;s on this Account).</description>
+    <description>This is the default plan used (for plan&apos;s on this Account).</description>
     <externalId>false</externalId>
     <label>isDefault</label>
     <trackHistory>true</trackHistory>

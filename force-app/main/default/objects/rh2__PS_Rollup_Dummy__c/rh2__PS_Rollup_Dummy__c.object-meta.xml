@@ -156,14 +156,14 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
-    <label>Rollup Dummy</label>
+    <label>Describe</label>
     <nameField>
         <displayFormat>RDM-{000}</displayFormat>
         <label>Rollup Dummy Name</label>
         <trackHistory>false</trackHistory>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Rollup Dummies</pluralLabel>
+    <pluralLabel>Describes</pluralLabel>
     <searchLayouts/>
     <sharingModel>Private</sharingModel>
     <visibility>Public</visibility>

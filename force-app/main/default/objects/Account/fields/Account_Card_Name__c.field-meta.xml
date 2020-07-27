@@ -4,7 +4,7 @@
     <description>CAUTION - USED IN INTEGRATIONS
 This will be the name of the company that gets printed on the card and input into Peachtree.</description>
     <externalId>false</externalId>
-    <inlineHelpText>Account name printed on customer&#39;s wallet card (30 character limit).</inlineHelpText>
+    <inlineHelpText>Account name printed on customer&apos;s wallet card (30 character limit).</inlineHelpText>
     <label>Account Card Name</label>
     <length>100</length>
     <required>false</required>

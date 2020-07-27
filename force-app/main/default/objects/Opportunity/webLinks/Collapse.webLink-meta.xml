@@ -7,9 +7,9 @@
     <masterLabel>+/-</masterLabel>
     <openType>onClickJavaScript</openType>
     <protected>false</protected>
-    <url>imgs = window.top.document.getElementsByTagName(&#39;img&#39;); 
+    <url>imgs = window.top.document.getElementsByTagName(&apos;img&apos;); 
 for(var x in imgs) 
-if(imgs[x].className==&#39;hideListButton&#39; 
-|| imgs[x].className==&#39;showListButton&#39;) 
+if(imgs[x].className==&apos;hideListButton&apos; 
+|| imgs[x].className==&apos;showListButton&apos;) 
 twistSection(imgs[x])</url>
 </WebLink>

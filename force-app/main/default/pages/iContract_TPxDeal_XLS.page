@@ -1,5 +1,5 @@
 <apex:page id="pg" showHeader="false" applyBodyTag="false" standardController="CONMAN_Contract__c" applyHtmlTag="false" standardStylesheets="false"
-    contentType="application/vnd.ms-excel#contract.xml" extensions="iContract_NA_Master_Controller">
+    contentType="application/vnd.ms-excel#contract.xml" extensions="iContract_NA_Master_Controller" >
     {!xmlheader}
     <Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel"
         xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40">

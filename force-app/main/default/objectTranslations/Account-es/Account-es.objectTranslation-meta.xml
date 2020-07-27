@@ -62,10 +62,6 @@
             <section>ABM</section>
         </sections>
         <sections>
-            <label><!-- Account Hierarchy --></label>
-            <section>Account Hierarchy</section>
-        </sections>
-        <sections>
             <label><!-- Account Information --></label>
             <section>Account Information</section>
         </sections>
@@ -487,10 +483,6 @@
     <webLinks>
         <label><!-- Account_Revenue_Usage_Snapshot --></label>
         <name>Account_Revenue_Usage_Snapshot</name>
-    </webLinks>
-    <webLinks>
-        <label><!-- Account_Team --></label>
-        <name>Account_Team</name>
     </webLinks>
     <webLinks>
         <label><!-- Active_Access_Codes_by_Account --></label>

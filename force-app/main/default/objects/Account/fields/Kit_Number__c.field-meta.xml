@@ -3,8 +3,8 @@
     <fullName>Kit_Number__c</fullName>
     <description>CAUTION - USED IN INTEGRATIONS</description>
     <externalId>false</externalId>
-    <inlineHelpText>URL to complete list of Int&#39;l numbers or select specific Int&#39;l # for customer&#39;s country of residence.</inlineHelpText>
-    <label>Int&#39;l Kit Number</label>
+    <inlineHelpText>URL to complete list of Int&apos;l numbers or select specific Int&apos;l # for customer&apos;s country of residence.</inlineHelpText>
+    <label>Int&apos;l Kit Number</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Last_13_Months_Billed_Revenue__c</fullName>
     <externalId>false</externalId>
-    <label>Last 13 Month&#39;s Billed Revenue</label>
+    <label>Last 13 Month&apos;s Billed Revenue</label>
     <precision>18</precision>
     <required>false</required>
     <scale>2</scale>

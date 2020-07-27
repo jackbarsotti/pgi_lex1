@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Owner_Email_Address__c</fullName>
     <externalId>false</externalId>
-    <formula>IF(OR(Owner.Alias = &#39;Mark&#39;,Owner.Alias = &#39;acco&#39;,Owner.Alias = &#39;sfadmin&#39;,Owner.Alias = &#39;lbypa&#39;,Owner.Alias = &#39;datanyze&#39;,Owner.Alias = &#39;sfdev&#39; ,Owner.Alias = &#39;leven&#39;,Owner.Alias = &#39;webform&#39;,Owner.Alias = &#39;lgene&#39;,Owner.Alias = &#39;cmark&#39;,Owner.Alias = &#39;celi&#39;,Owner.Alias = &#39;isale&#39;,Owner.Alias = &#39;sfsherpa&#39;,Owner.Alias = &#39;kwach&#39; ,Owner.Alias = &#39;integrat&#39;,Owner.Alias = &#39;Marketo&#39;,Owner.Alias = &#39;intweb&#39;,CONTAINS( Owner.FirstName,&#39;Inactive&#39;)), &#39;&#39;,Owner.Email)</formula>
+    <formula>IF(OR(Owner.Alias = &apos;Mark&apos;,Owner.Alias = &apos;acco&apos;,Owner.Alias = &apos;sfadmin&apos;,Owner.Alias = &apos;lbypa&apos;,Owner.Alias = &apos;datanyze&apos;,Owner.Alias = &apos;sfdev&apos; ,Owner.Alias = &apos;leven&apos;,Owner.Alias = &apos;webform&apos;,Owner.Alias = &apos;lgene&apos;,Owner.Alias = &apos;cmark&apos;,Owner.Alias = &apos;celi&apos;,Owner.Alias = &apos;isale&apos;,Owner.Alias = &apos;sfsherpa&apos;,Owner.Alias = &apos;kwach&apos; ,Owner.Alias = &apos;integrat&apos;,Owner.Alias = &apos;Marketo&apos;,Owner.Alias = &apos;intweb&apos;,CONTAINS( Owner.FirstName,&apos;Inactive&apos;)), &apos;&apos;,Owner.Email)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Owner Email Address</label>
     <required>false</required>

@@ -234,6 +234,10 @@
             <fullName>Subscription License Order</fullName>
             <default>true</default>
         </values>
+        <values>
+            <fullName>TPx Service Agreement</fullName>
+            <default>false</default>
+        </values>
     </picklistValues>
     <picklistValues>
         <picklist>Docusign_Contract_Type__c</picklist>

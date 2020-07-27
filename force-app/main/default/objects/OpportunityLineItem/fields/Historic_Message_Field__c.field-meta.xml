@@ -3,7 +3,7 @@
     <fullName>Historic_Message_Field__c</fullName>
     <description>Display custom message when product line item is a legacy value.</description>
     <externalId>false</externalId>
-    <formula>IF(Historic_Line_Item__c = TRUE, &#39;Please create new line items and delete this line item.&#39;, null)</formula>
+    <formula>IF(Historic_Line_Item__c = TRUE, &apos;Please create new line items and delete this line item.&apos;, null)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Historic Message Field</label>
     <required>false</required>

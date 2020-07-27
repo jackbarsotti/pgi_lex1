@@ -4,7 +4,7 @@
     <description>CAUTION - USED IN INTEGRATIONS
 Client has requested additional live event support (yes or no)</description>
     <externalId>false</externalId>
-    <inlineHelpText>Select &quot;Yes&quot; if client has requested add&#39;l live event support.</inlineHelpText>
+    <inlineHelpText>Select &quot;Yes&quot; if client has requested add&apos;l live event support.</inlineHelpText>
     <label>EM Requested</label>
     <required>false</required>
     <trackFeedHistory>true</trackFeedHistory>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>BP_Bill_Code__c</fullName>
-    <description>Bill Code for this Rate. If there&#39;s multiple Bill Codes, they&#39;re separated with a Double-Pipe: ||</description>
+    <description>Bill Code for this Rate. If there&apos;s multiple Bill Codes, they&apos;re separated with a Double-Pipe: ||</description>
     <externalId>false</externalId>
-    <inlineHelpText>Bill Code for this Rate. If there&#39;s multiple Bill Codes, they&#39;re separated with a Double-Pipe: ||</inlineHelpText>
+    <inlineHelpText>Bill Code for this Rate. If there&apos;s multiple Bill Codes, they&apos;re separated with a Double-Pipe: ||</inlineHelpText>
     <label>BP Bill Code</label>
     <length>1000</length>
     <trackHistory>false</trackHistory>

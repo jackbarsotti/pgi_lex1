@@ -6,10 +6,10 @@
     <errorConditionFormula>AND(
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
 NOT(ISCHANGED(IsUpdateFromCaseComment__c)),
-ISPICKVAL(Area_of_Focus__c,&#39;Mobile Support&#39;),
+ISPICKVAL(Area_of_Focus__c,&apos;Mobile Support&apos;),
 (
-ISPICKVAL( Mobile_Customer_s_Operation_System_Lang__c , &#39;&#39;) ||
+ISPICKVAL( Mobile_Customer_s_Operation_System_Lang__c , &apos;&apos;) ||
 ISBLANK( Mobile_Customer_s_Operating_System__c )
 ))</errorConditionFormula>
-    <errorMessage>If your Area of Focus is Mobile Support, then you must populate a value in the following fields: Mobile OS Version, and Mobile Customer&#39;s Operating System Language</errorMessage>
+    <errorMessage>If your Area of Focus is Mobile Support, then you must populate a value in the following fields: Mobile OS Version, and Mobile Customer&apos;s Operating System Language</errorMessage>
 </ValidationRule>

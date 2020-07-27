@@ -4,7 +4,7 @@
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
     <externalId>false</externalId>
-    <inlineHelpText>Check this if you are receiving time-out issues during a data load.  Removes non-essential processing such as filtering out fields that don&#39;t need to be updated.</inlineHelpText>
+    <inlineHelpText>Check this if you are receiving time-out issues during a data load.  Removes non-essential processing such as filtering out fields that don&apos;t need to be updated.</inlineHelpText>
     <label>zDeprecated</label>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>

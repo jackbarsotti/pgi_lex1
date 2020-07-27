@@ -31,7 +31,7 @@
         <operation>notContain</operation>
         <value>lisko,rambo,mejia,nic,nancy</value>
     </filters>
-    <label>Gina&#39;s Unassigned Implementations</label>
+    <label>Gina&apos;s Unassigned Implementations</label>
     <language>en_US</language>
     <sharedTo/>
 </ListView>

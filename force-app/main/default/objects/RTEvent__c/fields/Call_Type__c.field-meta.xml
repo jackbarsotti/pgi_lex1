@@ -3,7 +3,7 @@
     <fullName>Call_Type__c</fullName>
     <description>Denotes type of customer event (marketing, PR, demo, etc...)</description>
     <externalId>false</externalId>
-    <inlineHelpText>Indicate the customer&#39;s type of event.</inlineHelpText>
+    <inlineHelpText>Indicate the customer&apos;s type of event.</inlineHelpText>
     <label>Call Type</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

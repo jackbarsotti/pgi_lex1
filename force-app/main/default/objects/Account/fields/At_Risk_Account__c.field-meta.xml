@@ -2,9 +2,9 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>At_Risk_Account__c</fullName>
     <defaultValue>false</defaultValue>
-    <description>Indicates that the account is currently At-Risk. See the At-Risk Opportunity for add&#39;l info.</description>
+    <description>Indicates that the account is currently At-Risk. See the At-Risk Opportunity for add&apos;l info.</description>
     <externalId>false</externalId>
-    <inlineHelpText>Indicates that the account is currently At-Risk. See the At-Risk Opportunity for add&#39;l info.</inlineHelpText>
+    <inlineHelpText>Indicates that the account is currently At-Risk. See the At-Risk Opportunity for add&apos;l info.</inlineHelpText>
     <label>At-Risk Account</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

@@ -7,9 +7,9 @@ RecordType.Name = &quot;TalkPoint Opty&quot;,
 $User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;, 
 CONTAINS($User.Profile_Name_Text__c , &quot;Sales User&quot;) || 
 CONTAINS($User.Profile_Name_Text__c , &quot;Sales Manager&quot;), 
-NOT(ISPICKVAL(StageName,&#39;Awareness&#39;)),
+NOT(ISPICKVAL(StageName,&apos;Awareness&apos;)),
 NOT(Primary_Contact_Assigned__c),
-NOT($User.ProfileId = &#39;00ea0000001sYR8&#39;),
+NOT($User.ProfileId = &apos;00ea0000001sYR8&apos;),
 $User.Override_Validation_Rules__c = FALSE
 )</errorConditionFormula>
     <errorMessage>A Primary Contact must be selected before an opportunity can move beyond Awareness. Hover over Contact Roles at the top of the page and click New to select the proper Contact for this Opportunity.</errorMessage>

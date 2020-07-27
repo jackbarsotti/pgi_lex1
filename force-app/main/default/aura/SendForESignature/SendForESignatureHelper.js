@@ -16,8 +16,22 @@
                         "url": '/apex/echosign_dev1__AgreementTemplateProcess?masterId='+id+'&TemplateId='+result.Id
                     });
                     urlEvent.fire();
-                    console.log('>> after fire event >>');
-             }
+            }else if (state === "ERROR") {
+                var errors = response.getError();
+                if (errors) {
+                    if (errors[0] && errors[0].message) {
+                        title = 'Error';
+                        type = 'error';
+                        message =  errors[0].message;
+                        helper.showToastMsg(component, event,title,type,message);
+                    }
+                } else {
+                    title = 'Error';
+                    type = 'error';
+                    message = 'Unknown error';
+                    helper.showToastMsg(component, event,title,type,message);
+                }
+            }
         });
         $A.enqueueAction(actionAT);
     },    
@@ -28,6 +42,9 @@
         });
         action.setCallback(this, function(response){
             var state = response.getState();
+            var title = '';
+            var type = '' ;
+            var message = '';
             console.log('state for sign Agreement: ',state);
             if (state === "SUCCESS") {
                 var res = response.getReturnValue();
@@ -43,6 +60,21 @@
                 //     });
                 //     toastEvent.fire();
                 // }
+            }else if (state === "ERROR") {
+                var errors = response.getError();
+                if (errors) {
+                    if (errors[0] && errors[0].message) {
+                        title = 'Error';
+                        type = 'error';
+                        message =  errors[0].message;
+                        helper.showToastMsg(component, event,title,type,message);
+                    }
+                } else {
+                    title = 'Error';
+                    type = 'error';
+                    message = 'Unknown error';
+                    helper.showToastMsg(component, event,title,type,message);
+                }
             }
         });
         $A.enqueueAction(action);
@@ -54,6 +86,9 @@
         });
         action.setCallback(this, function(response){
             var state = response.getState();
+            var title = '';
+            var type = '' ;
+            var message = '';
             console.log('>> state :  ',state);
             if (state === "SUCCESS") {
                 var opp = response.getReturnValue();
@@ -103,8 +138,23 @@
                     }
                 }
             }
-            }else{
-                helper.showToast(component,event,"This User is not Permitted");
+            }
+            else if (state === "ERROR") {
+                var errors = response.getError();
+                if (errors) {
+                    if (errors[0] && errors[0].message) {
+                        title = 'Error';
+                        type = 'error';
+                        message =  errors[0].message;
+                        helper.showToastMsg(component, event,title,type,message);
+                    }
+                } else {
+                    title = 'Error';
+                    type = 'error';
+                    message = 'Unknown error';
+                    console.log('>>>>message >> ',message);
+                    helper.showToastMsg(component, event,title,type,message);
+                }
             }
            
         })
@@ -132,5 +182,16 @@
         toastEvent.fire();
         var dismissActionPanel = $A.get("e.force:closeQuickAction");
         dismissActionPanel.fire();
+    },
+    showToastMsg : function(component, event,title,type,message) {
+        console.log('>> from toast >>');
+        var toastEvent = $A.get("e.force:showToast");
+        toastEvent.setParams({
+            "title": title,
+            "type" : type,
+            "message": message
+        });
+        toastEvent.fire();
+       
     }
 })

@@ -3,7 +3,7 @@
     <fullName>Client_s_Country__c</fullName>
     <description>UCaaS - Global picklist - do NOT unrestrict!!</description>
     <externalId>false</externalId>
-    <label>Client&#39;s Country</label>
+    <label>Client&apos;s Country</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

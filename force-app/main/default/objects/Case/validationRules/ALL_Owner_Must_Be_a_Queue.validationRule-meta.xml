@@ -6,11 +6,11 @@
     <errorConditionFormula>AND( 
 NOT(ISCHANGED(IsUpdateFromCaseComment__c)),
 
-($User.Id &lt;&gt; &#39;0051B000009MZdY&#39;), 
-($User.Id &lt;&gt; &#39;0051300000CC9uZ&#39;), 
-($User.Id &lt;&gt; &#39;0051B000009MZdk&#39;), 
+($User.Id &lt;&gt; &apos;0051B000009MZdY&apos;), 
+($User.Id &lt;&gt; &apos;0051300000CC9uZ&apos;), 
+($User.Id &lt;&gt; &apos;0051B000009MZdk&apos;), 
 ISCHANGED(OwnerId) , 
-LEFT( OwnerId , 3) = &#39;005&#39; 
+LEFT( OwnerId , 3) = &apos;005&apos; 
 )</errorConditionFormula>
     <errorMessage>Case Ownership must be a Queue and not a User. Users are to be assigned in the Assigned To area.</errorMessage>
 </ValidationRule>

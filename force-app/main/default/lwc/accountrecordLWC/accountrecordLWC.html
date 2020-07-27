@@ -1,0 +1,35 @@
+<template>
+    <header class="slds-modal__header">
+        <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">New Opportunity</h2>
+    </header>
+    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+        <lightning-input type="text" data-id='oppname' label="Opportunty Name" value={accounts} required
+            style="padding-bottom: 0.5cm;">
+        </lightning-input>
+        <template if:true={showpill}>
+
+            *Opporutunity Owner <br />
+            <lightning-pill label={name} onremove={handleRemove} style="width: 100%;height:100%">
+                <lightning-icon icon-name="standard:user" variant="circle" alternative-text="account">
+                </lightning-icon>
+            </lightning-pill>
+
+        </template>
+        <template if:false={showpill}>
+
+            <c-lookupuser value={userid}></c-lookupuser>
+        </template>
+
+        <lightning-checkbox-group name="Checkbox Group" label="select Experiment" options={experiments}
+            value={experiments} onchange={handleChanges}></lightning-checkbox-group>
+
+
+
+    </div>
+    <footer class="slds-modal__footer">
+        <button class="slds-button slds-button_neutral" onclick={cancel}>Cancel</button>
+        <button class="slds-button slds-button_brand" onclick={save}> save </button>
+
+
+    </footer>
+</template>

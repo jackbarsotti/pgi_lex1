@@ -10,14 +10,14 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Unlimited Web Meetings for up to 25 participants (incl. chairperson), unlimited VoIP Audio &amp; 1,000 minutes per month of US/CAN Toll &amp; Toll-Free On-Demand Audio Conferencing. See Add&#39;l Web Meeting Participant and On-Demand Audio rates for overages.</fullName>
+                <fullName>Unlimited Web Meetings for up to 25 participants (incl. chairperson), unlimited VoIP Audio &amp; 1,000 minutes per month of US/CAN Toll &amp; Toll-Free On-Demand Audio Conferencing. See Add&apos;l Web Meeting Participant and On-Demand Audio rates for overages.</fullName>
                 <default>false</default>
-                <label>Unlimited Web Meetings for up to 25 participants (incl. chairperson), unlimited VoIP Audio &amp; 1,000 minutes per month of US/CAN Toll &amp; Toll-Free On-Demand Audio Conferencing. See Add&#39;l Web Meeting Participant and On-Demand Audio rates for overages.</label>
+                <label>Unlimited Web Meetings for up to 25 participants (incl. chairperson), unlimited VoIP Audio &amp; 1,000 minutes per month of US/CAN Toll &amp; Toll-Free On-Demand Audio Conferencing. See Add&apos;l Web Meeting Participant and On-Demand Audio rates for overages.</label>
             </value>
             <value>
-                <fullName>Unlimited Web Meetings for up to 25 participants (incl. chairperson), unlimited VoIP Audio &amp; 3,000 minutes per month of US/CAN Toll On-Demand Audio Conferencing. See Add&#39;l Web Meeting Participant and On-Demand Audio rates for overages.</fullName>
+                <fullName>Unlimited Web Meetings for up to 25 participants (incl. chairperson), unlimited VoIP Audio &amp; 3,000 minutes per month of US/CAN Toll On-Demand Audio Conferencing. See Add&apos;l Web Meeting Participant and On-Demand Audio rates for overages.</fullName>
                 <default>false</default>
-                <label>Unlimited Web Meetings for up to 25 participants (incl. chairperson), unlimited VoIP Audio &amp; 3,000 minutes per month of US/CAN Toll On-Demand Audio Conferencing. See Add&#39;l Web Meeting Participant and On-Demand Audio rates for overages.</label>
+                <label>Unlimited Web Meetings for up to 25 participants (incl. chairperson), unlimited VoIP Audio &amp; 3,000 minutes per month of US/CAN Toll On-Demand Audio Conferencing. See Add&apos;l Web Meeting Participant and On-Demand Audio rates for overages.</label>
             </value>
             <value>
                 <fullName>Unlimited Web Meetings for up to 25 participants (incl. chairperson), unlimited US/CAN Toll On-Demand Audio Conferencing &amp; VoIP Audio plus 1,000 minutes per month of US/CAN Toll-Free On-Demand Audio Conferencing</fullName>

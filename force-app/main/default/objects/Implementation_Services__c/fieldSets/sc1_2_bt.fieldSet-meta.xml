@@ -4,7 +4,7 @@
     <description>Any fields here will only show up if &quot;Use Existing Bill-to Client ID&quot; is unchecked. 2-Columns.
 
 Note the following is in Apex Code:
-* The Bill-to First/Last Name, Address 1, City, State, Postal Code, and Country fields are pre-populated from the Opportunity&#39;s &#39;Agreement Signer&#39; or &#39;Primary&#39; Contact, so they should always have data even if Sales did not put any in or it&#39;s not on the layout
+* The Bill-to First/Last Name, Address 1, City, State, Postal Code, and Country fields are pre-populated from the Opportunity&apos;s &apos;Agreement Signer&apos; or &apos;Primary&apos; Contact, so they should always have data even if Sales did not put any in or it&apos;s not on the layout
 * The same information (except First/Last Name) is also used during a validation procedure
 * The fields in this Field Set, and the Address-related fields from above, are cleared if &quot;Use Existing Bill-To Client ID&quot; is checked</description>
     <displayedFields>

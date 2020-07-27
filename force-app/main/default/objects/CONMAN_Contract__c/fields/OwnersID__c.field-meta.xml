@@ -3,7 +3,7 @@
     <fullName>OwnersID__c</fullName>
     <externalId>false</externalId>
     <formula>Owner:User.SFDC_18_ID__c</formula>
-    <label>Owner&#39;s ID</label>
+    <label>Owner&apos;s ID</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

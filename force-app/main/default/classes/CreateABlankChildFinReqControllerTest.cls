@@ -4,8 +4,12 @@ public class CreateABlankChildFinReqControllerTest {
  static testMethod void testGetFields(){
          Test.startTest();
         
-        Profile profile = [SELECT Id FROM Profile WHERE name = 'System Administrator'];
-        UserRole portalRole = [SELECT Id FROM UserRole WHERE PortalType = 'None' LIMIT 1];
+        Profile profile = [SELECT Id 
+                                   FROM Profile 
+                                   WHERE name = 'System Administrator'];
+        UserRole portalRole = [SELECT Id 
+                                   FROM UserRole 
+                                   WHERE PortalType = 'None' LIMIT 1];
         
         User u = new User(
             UserRoleId = portalRole.Id,

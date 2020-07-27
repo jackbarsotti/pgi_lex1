@@ -13,9 +13,9 @@
 //sforce.apex.execute(&quot;Inactive_Contact&quot;,&quot;inactivecontact&quot;);
 
 
-var p = new sforce.SObject(&#39;Contact&#39;);
+var p = new sforce.SObject(&apos;Contact&apos;);
 p.id = &quot;{!Contact.Id}&quot;;
-p.firstname=&#39;None&#39;;
+p.firstname=&apos;None&apos;;
 p.inactive__c = true;
 result = sforce.connection.update([p]);
 location.reload(true);

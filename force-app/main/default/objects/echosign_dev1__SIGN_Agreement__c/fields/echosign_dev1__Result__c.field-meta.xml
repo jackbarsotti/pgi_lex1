@@ -3,11 +3,11 @@
     <fullName>echosign_dev1__Result__c</fullName>
     <deprecated>false</deprecated>
     <externalId>false</externalId>
-    <formula>IF( AND(LEN(echosign_dev1__ErrorMessage__c) &gt; 0, ISPICKVAL( echosign_dev1__Status__c , &#39;Draft&#39;)), 
-      IMAGE(&#39;https://secure.echosignforsalesforce.com/images/salesforce-error.gif&#39;, &#39;Error&#39;) &amp; &#39; &#39; &amp; echosign_dev1__ErrorMessage__c, 
-      IF( AND(LEN(echosign_dev1__SignedPDF__c) &gt; 0, ISPICKVAL( echosign_dev1__Status__c , &#39;Signed&#39;)), 
-           HYPERLINK( echosign_dev1__SignedPDF__c , IMAGE(&#39;https://secure.echosignforsalesforce.com/images/salesforce-pdf-icon.gif&#39;, &#39;PDF&#39;) &amp; &#39; &#39; &amp; Name &amp; &#39; - signed.pdf&#39;), 
-           &#39;&#39;))</formula>
+    <formula>IF( AND(LEN(echosign_dev1__ErrorMessage__c) &gt; 0, ISPICKVAL( echosign_dev1__Status__c , &apos;Draft&apos;)), 
+      IMAGE(&apos;https://secure.echosignforsalesforce.com/images/salesforce-error.gif&apos;, &apos;Error&apos;) &amp; &apos; &apos; &amp; echosign_dev1__ErrorMessage__c, 
+      IF( AND(LEN(echosign_dev1__SignedPDF__c) &gt; 0, ISPICKVAL( echosign_dev1__Status__c , &apos;Signed&apos;)), 
+           HYPERLINK( echosign_dev1__SignedPDF__c , IMAGE(&apos;https://secure.echosignforsalesforce.com/images/salesforce-pdf-icon.gif&apos;, &apos;PDF&apos;) &amp; &apos; &apos; &amp; Name &amp; &apos; - signed.pdf&apos;), 
+           &apos;&apos;))</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Result</label>
     <required>false</required>

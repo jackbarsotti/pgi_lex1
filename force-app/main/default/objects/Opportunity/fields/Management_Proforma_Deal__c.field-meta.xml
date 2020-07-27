@@ -3,7 +3,7 @@
     <fullName>Management_Proforma_Deal__c</fullName>
     <defaultValue>false</defaultValue>
     <externalId>false</externalId>
-    <inlineHelpText>These are deals that management feels will close even though all four &#39;Management Criteria&#39; are not met.</inlineHelpText>
+    <inlineHelpText>These are deals that management feels will close even though all four &apos;Management Criteria&apos; are not met.</inlineHelpText>
     <label>Management Proforma Deal</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

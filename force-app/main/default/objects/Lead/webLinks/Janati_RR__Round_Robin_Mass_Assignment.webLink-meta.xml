@@ -13,7 +13,7 @@
 
 var selectedIds = {!GETRECORDIDS($ObjectType.Lead)};
 if(!selectedIds.length){
-	alert(&#39;Please select at least one record!&#39;);
+	alert(&apos;Please select at least one record!&apos;);
 }else{
 	if(confirm(&quot;The selected &quot; + selectedIds.length + &quot; records will be processed by Round Robin.&quot;)){
 		var res = sforce.apex.execute(&quot;Janati_RR.AssignmentControllerMultiple&quot;,&quot;assignLeads_v2&quot;,{leadIds: selectedIds });
@@ -25,7 +25,7 @@ if(!selectedIds.length){
                 if(moreThanFive &gt; 0){
                     res.length = 5;
                 }
-                alert(&#39;You must have Write access to all leads selected.  No write access for leads for:  &#39; + res.join(&#39;, &#39;) + (moreThanFive &gt; 0 ? (&#39; + &#39; + moreThanFive + &#39; more&#39;) : &#39;&#39;));
+                alert(&apos;You must have Write access to all leads selected.  No write access for leads for:  &apos; + res.join(&apos;, &apos;) + (moreThanFive &gt; 0 ? (&apos; + &apos; + moreThanFive + &apos; more&apos;) : &apos;&apos;));
             }
         }else{
           if(ListViewport &amp;&amp; ListViewport.instances){ 

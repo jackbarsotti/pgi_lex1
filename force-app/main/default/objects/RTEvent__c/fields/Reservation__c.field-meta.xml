@@ -2,8 +2,8 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Reservation__c</fullName>
     <externalId>false</externalId>
-    <inlineHelpText>ReadyTalk and L3&#39;s Reservation ID
-InterCall&#39;s Conference ID</inlineHelpText>
+    <inlineHelpText>ReadyTalk and L3&apos;s Reservation ID
+InterCall&apos;s Conference ID</inlineHelpText>
     <label>Confirmation Code</label>
     <length>12</length>
     <required>false</required>

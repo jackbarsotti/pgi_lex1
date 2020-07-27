@@ -1,4 +1,4 @@
-<apex:page controller="Redirect">
+<apex:page controller="Redirect" showHeader="false"  lightningStylesheets="true">
     <apex:form >
         <apex:commandButton value="Send An Email" action="{!fetchRecords}"/>
     </apex:form>

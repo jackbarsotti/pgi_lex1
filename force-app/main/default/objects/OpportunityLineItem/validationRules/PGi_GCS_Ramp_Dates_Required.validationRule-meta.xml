@@ -11,9 +11,9 @@ Existing_Service__c = False,
 OR(ISBLANK(Initial_Bill_Date__c),
 ISBLANK(X100_Ramp_Date__c)),
 OR(
-ISPICKVAL(Opportunity.StageName,&#39;Purchase&#39;), 
-ISPICKVAL(Opportunity.StageName,&#39;Closed Won&#39;),
-ISPICKVAL(Opportunity.StageName, &#39;Closed Pending Approval&#39;))
+ISPICKVAL(Opportunity.StageName,&apos;Purchase&apos;), 
+ISPICKVAL(Opportunity.StageName,&apos;Closed Won&apos;),
+ISPICKVAL(Opportunity.StageName, &apos;Closed Pending Approval&apos;))
  
 )</errorConditionFormula>
     <errorMessage>Both Initial Bill Date and 100% Ramp Date are required for any product that is not an Existing Service before setting Stage to Purchase or Closed Won.</errorMessage>

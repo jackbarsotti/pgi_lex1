@@ -4,7 +4,7 @@
     <deprecated>false</deprecated>
     <description>Minutes</description>
     <externalId>false</externalId>
-    <inlineHelpText>Calculates the Due Date by adding Minutes to the Service creation time, reflecting the organisation&#39;s internal SLA</inlineHelpText>
+    <inlineHelpText>Calculates the Due Date by adding Minutes to the Service creation time, reflecting the organisation&apos;s internal SLA</inlineHelpText>
     <label>Due Date Offset</label>
     <precision>9</precision>
     <required>false</required>

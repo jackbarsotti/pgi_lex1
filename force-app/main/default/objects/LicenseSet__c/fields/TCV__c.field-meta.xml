@@ -3,9 +3,9 @@
     <fullName>TCV__c</fullName>
     <externalId>false</externalId>
     <formula>IF ( NOT ( ISBLANK(Price__c)), 
-IF(ISPICKVAL(Billing_Frequency__c,&#39;Monthly&#39;),Price__c*Number_of_Licensed_Named_Users__c *(Subscription_License_Term_Months__c- Promotional_Terms_Months__c ), 
-IF(ISPICKVAL(Billing_Frequency__c,&#39;Quarterly&#39;),((Price__c* Number_of_Licensed_Named_Users__c )/3)* (Subscription_License_Term_Months__c- Promotional_Terms_Months__c ), 
-IF(ISPICKVAL(Billing_Frequency__c,&#39;Annually&#39;),Price__c* Number_of_Licensed_Named_Users__c *( (Subscription_License_Term_Months__c- Promotional_Terms_Months__c)/12),Price__c*Number_of_Licensed_Named_Users__c 
+IF(ISPICKVAL(Billing_Frequency__c,&apos;Monthly&apos;),Price__c*Number_of_Licensed_Named_Users__c *(Subscription_License_Term_Months__c- Promotional_Terms_Months__c ), 
+IF(ISPICKVAL(Billing_Frequency__c,&apos;Quarterly&apos;),((Price__c* Number_of_Licensed_Named_Users__c )/3)* (Subscription_License_Term_Months__c- Promotional_Terms_Months__c ), 
+IF(ISPICKVAL(Billing_Frequency__c,&apos;Annually&apos;),Price__c* Number_of_Licensed_Named_Users__c *( (Subscription_License_Term_Months__c- Promotional_Terms_Months__c)/12),Price__c*Number_of_Licensed_Named_Users__c 
 ))),
 
 MRR__c  *  Subscription_License_Term_Months__c)</formula>

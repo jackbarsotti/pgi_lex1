@@ -16,7 +16,7 @@
     <filters>
         <field>CASES.SUBJECT</field>
         <operation>notEqual</operation>
-        <value>Undeliverable: Mattar,Rima&#39;s Weekly Rep Account Usage Report | All Minute Gener</value>
+        <value>Undeliverable: Mattar,Rima&apos;s Weekly Rep Account Usage Report | All Minute Gener</value>
     </filters>
     <filters>
         <field>CASES.SUBJECT</field>

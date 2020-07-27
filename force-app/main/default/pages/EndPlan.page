@@ -1,4 +1,5 @@
 <apex:page standardcontroller="Account" extensions="EndPlanController">   
+  <apex:pageBlock rendered="{!$User.UITheme == 'Theme3'}">  
   <apex:stylesheet value="{!URLFOR($Resource.RTResources, 'css/jquery-ui.min.css')}"/>
   <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery.js')}"/>
   <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery-ui.min.js')}"/>
@@ -237,5 +238,11 @@
       </script>
     </apex:pageBlock>
   </apex:outputPanel>  
-
+</apex:pageBlock>
+<apex:pageBlock rendered="{!$User.UITheme != 'Theme3'}">
+        <script type="text/javascript">
+            { window.alert("Please Switch to Salesforce Classic"); }
+        </script>
+        <apex:pageMessage severity="Info" summary="You must switch to salesforce classic to access this page." strength="1"/>
+    </apex:pageBlock>
 </apex:page>

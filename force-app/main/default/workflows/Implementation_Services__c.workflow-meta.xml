@@ -455,8 +455,8 @@
         </actions>
         <active>false</active>
         <description>Replaced Gina Marshall</description>
-        <formula>AND( ISCHANGED(Implementation_Owner__c),  Implementation_Owner__c &lt;&gt; &quot;00530000007dKU2&quot;,  Implementation_Owner__c &lt;&gt; &quot;005300000065o6P&quot;,  Implementation_Owner__c &lt;&gt; &quot;0053000000620A0&quot;,  Implementation_Owner__c &lt;&gt; &quot;005a000000AoISB&quot;,  !ISNEW(),  Owner_Region__c = &quot;NA&quot;, NOT(ISPICKVAL(Implementation_Type__c, &#39;Small Projects&#39;)), NOT(ISPICKVAL(Implementation_Type__c,
-&#39;Enterprise Setup&#39;)))</formula>
+        <formula>AND( ISCHANGED(Implementation_Owner__c),  Implementation_Owner__c &lt;&gt; &quot;00530000007dKU2&quot;,  Implementation_Owner__c &lt;&gt; &quot;005300000065o6P&quot;,  Implementation_Owner__c &lt;&gt; &quot;0053000000620A0&quot;,  Implementation_Owner__c &lt;&gt; &quot;005a000000AoISB&quot;,  !ISNEW(),  Owner_Region__c = &quot;NA&quot;, NOT(ISPICKVAL(Implementation_Type__c, &apos;Small Projects&apos;)), NOT(ISPICKVAL(Implementation_Type__c,
+&apos;Enterprise Setup&apos;)))</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>

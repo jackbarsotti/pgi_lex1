@@ -3,7 +3,7 @@
     <fullName>Required_Approval_Report_URL__c</fullName>
     <description>Because we need to get the proper Instance URL and Report in an email template, this Formula is necessary.</description>
     <externalId>false</externalId>
-    <formula>LEFT($Api.Enterprise_Server_URL_300, FIND(&#39;/services&#39;,$Api.Enterprise_Server_URL_300)) &amp; &quot;00O13000008pigh?pv0=&quot; &amp; Name</formula>
+    <formula>LEFT($Api.Enterprise_Server_URL_300, FIND(&apos;/services&apos;,$Api.Enterprise_Server_URL_300)) &amp; &quot;00O13000008pigh?pv0=&quot; &amp; Name</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Required Approval Report URL</label>
     <required>false</required>

@@ -25,6 +25,9 @@
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
     <siteAdmin>jessica.combs@pgi.com</siteAdmin>
     <siteGuestRecordDefaultOwner>test.user@pgi.com</siteGuestRecordDefaultOwner>
+    <siteIframeWhiteListUrls>
+        <url>youtube.com</url>
+    </siteIframeWhiteListUrls>
     <siteType>ChatterNetwork</siteType>
     <subdomain>partnersite</subdomain>
     <urlPathPrefix>TalkPoint</urlPathPrefix>

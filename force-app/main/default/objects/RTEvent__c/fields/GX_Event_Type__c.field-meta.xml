@@ -3,7 +3,7 @@
     <fullName>GX_Event_Type__c</fullName>
     <description>CAUTION - USED IN INTEGRATIONS</description>
     <externalId>false</externalId>
-    <inlineHelpText>Event type in Global&#39;s terms</inlineHelpText>
+    <inlineHelpText>Event type in Global&apos;s terms</inlineHelpText>
     <label>Audio Type</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

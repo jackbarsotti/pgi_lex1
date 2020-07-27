@@ -3,7 +3,7 @@
     <fullName>CallLog_CaseRelationshipNeeded</fullName>
     <active>true</active>
     <errorConditionFormula>AND(
-ISPICKVAL( Call_Status__c , &#39;Follow Up On Existing Case&#39;),
+ISPICKVAL( Call_Status__c , &apos;Follow Up On Existing Case&apos;),
 ISBLANK( Related_Case__c )
 )</errorConditionFormula>
     <errorDisplayField>Related_Case__c</errorDisplayField>

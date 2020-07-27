@@ -74,6 +74,7 @@ public without sharing class OpportunityTriggerHandler extends TriggerHandler {
             oppty.Opportunity_Product_Families__c = collectionString;
         }
         
+        
     }
     private Map<Id, Account> relatedAccounts {get {
         if(relatedAccounts == null) {
@@ -86,6 +87,7 @@ public without sharing class OpportunityTriggerHandler extends TriggerHandler {
                                                     (SELECT Id FROM Opportunities WHERE RecordType.Name =: PGI_RENEWAL_RT AND IsClosed = false AND Opportunity_Product_Families__c LIKE '%Unified Communications%') 
                                                     FROM Account WHERE Id IN: accountIds]);
         }
+        System.debug('The Map'+relatedAccounts);
         return relatedAccounts;
     } set;}
 
@@ -93,6 +95,8 @@ public without sharing class OpportunityTriggerHandler extends TriggerHandler {
         Set<Id> accountIds = new Set<Id>();
         Map<Id, Account> accountMap = relatedAccounts;
         for(Opportunity o: (List<Opportunity>)Trigger.new) {
+            System.debug('AccEl'+accountMap.get(o.AccountId));
+            System.debug('AccEl'+accountMap.get(o.AccountId).Opportunities.size());
             if(accountMap.get(o.AccountId) != null && accountMap.get(o.AccountId).Opportunities != null && accountMap.get(o.AccountId).Opportunities.size() > 1) {
                 o.addError('You are only allow to have one open renewal opportunity with Unified Communications at a time.');
             }
@@ -161,6 +165,7 @@ public without sharing class OpportunityTriggerHandler extends TriggerHandler {
             }
             if(justNowClosedWon(opp) && (opp.Opportunity_Deal_Type__c == 'New Business' || opp.Opportunity_Deal_Type__c == 'Renewal (No Rev Change)')) {
                 Opportunity oppWithRelated = oppsWithRelated.get(opp.Id);
+                System.debug('>> oppWithRelated >>'+oppWithRelated);
                 System.debug('opp.Opportunity_Product_Families__c'+opp.Opportunity_Product_Families__c);
                 System.debug('openUCRenewalOppsByAccountId.get(opp.AccountId).size()'+openUCRenewalOppsByAccountId.get(opp.AccountId).size());
                 if(String.isNotBlank(opp.Opportunity_Product_Families__c) && opp.Opportunity_Product_Families__c.contains('Unified Communications') && openUCRenewalOppsByAccountId.get(opp.AccountId) != null && openUCRenewalOppsByAccountId.get(opp.AccountId).size() > 0) {
@@ -188,6 +193,7 @@ public without sharing class OpportunityTriggerHandler extends TriggerHandler {
     }
     //1664 automation trigger for amendments, so that when an Account already has an OPEN PGi Renewal Opportunity, 
     private void syncAmendments(List<Opportunity> amendmentsToSync) {
+        System.debug('>> amendmentsToSync >>'+amendmentsToSync);
         Map<Id, List<Opportunity_Line_Amendment__c>> oppLineAmendmentsByOppId = oppSelector.getOppLineAmendmentsByOppId(amendmentsToSync);
         Map<Id, List<Opportunity>> openUCRenewalOppsByAccountId = oppSelector.getOpenPGIRenewalOppsByAccountId(amendmentsToSync);
         for(Opportunity amendmentOpp: amendmentsToSync) {
@@ -248,6 +254,7 @@ public without sharing class OpportunityTriggerHandler extends TriggerHandler {
         //contactRolesToInsert.addAll(syncContactRoles(amendmentOppWithRelated, renewalOpp));
         syncLineItems(amendmentOppWithRelated, renewalOpp, oppLineAmendmentsByOppId);
     }
+    @TestVisible
     private List<OpportunityTeamMember> syncOppTeam(Opportunity amendmentOppWithRelated, Opportunity renewalOpp){
         List<OpportunityTeamMember> returnList = new List<OpportunityTeamMember>();
         Set<String> existingKeys = new Set<String>();
@@ -549,6 +556,8 @@ Opportunity Team = clone from origin
     private static Set<Id> otmProcessed = new Set<Id>();
     private List<OpportunityTeamMember> cloneOppTeamMembers(Opportunity clonedOpp) {
         List<OpportunityTeamMember> returnList = new List<OpportunityTeamMember>();
+        System.debug('The Opportunity cloned is'+oppsWithRelated.get(clonedOpp.External_Opportunity_ID__c));
+        System.debug('The Opportunity cloned is'+ oppsWithRelated.get(clonedOpp.External_Opportunity_ID__c).OpportunityTeamMembers);
         if(clonedOpp.Id == null || oppsWithRelated.get(clonedOpp.External_Opportunity_ID__c) == null || oppsWithRelated.get(clonedOpp.External_Opportunity_ID__c).OpportunityTeamMembers == null || oppsWithRelated.get(clonedOpp.External_Opportunity_ID__c).OpportunityTeamMembers.size() == 0) {
             return returnList;
         }
@@ -569,6 +578,8 @@ Opportunity Team = clone from origin
     private static Set<Id> ocrProcessed = new Set<Id>();
     private List<OpportunityContactRole> cloneOppContactRole(Opportunity clonedOpp) {
         List<OpportunityContactRole> returnList = new List<OpportunityContactRole>();
+        System.debug('The  opportunity cloned'+oppsWithRelated.get(clonedOpp.External_Opportunity_ID__c));
+        System.debug('The  opportunity cloned'+oppsWithRelated.get(clonedOpp.External_Opportunity_ID__c).OpportunityContactRoles);
         if(clonedOpp.Id == null || oppsWithRelated.get(clonedOpp.External_Opportunity_ID__c) == null || oppsWithRelated.get(clonedOpp.External_Opportunity_ID__c).OpportunityContactRoles == null || oppsWithRelated.get(clonedOpp.External_Opportunity_ID__c).OpportunityContactRoles.size() == 0) {
             return returnList;
         }
@@ -610,14 +621,18 @@ Opportunity Team = clone from origin
         Set<Id> upsellDownSellIds = new Set<Id>();
         // loop through PGi Opps
         for(Opportunity opp : filterPGiOpps((List<Opportunity>)Trigger.new)) {
+            System.debug('>> opp.stageName >>'+opp.StageName);
             if(!superUserProfile()) {
+                System.debug('>> opp.stageName 1 >>'+opp.StageName);
+                System.debug('>> IsChanged(StageName, opp) >>'+IsChanged('StageName', opp)+'>>>>'+opp);
                 if(IsChanged('StageName', opp) && (opp.StageName == 'Closed Won' || opp.StageName == 'Closed Pending Approval')) {
-                    
+                  System.debug('Entering');  
                     // closed won PGi Opps must meet the following criteria or an error will be displayed to the user
                     // formula text - Initial_Product_Family_Interest__c CONTAINS 'Web: GlobalMeet' or 'Conversion Project'
                     // picklist - Opportunity_Deal_Type__c = 'Conversion' or 'New Business'
                     // picklist - Channel__c = 'Cloud' or 'Major Accounts' or 'APAC' or 'JAPAN' or 'Tier One' ORRRRR
                     // Channel__c = 'Partners' AND Account_Type__c = 'End User – Agent' or 'Direct'
+                     //02266649
                     if(opp.Opportunity_Product_Families__c.contains('TPx') || (opp.Opportunity_Deal_Type__c != null &&
                                                                                opp.Channel__c != null &&
                                                                                ((opp.Opportunity_Deal_Type__c == 'Conversion' ||
@@ -648,6 +663,7 @@ Opportunity Team = clone from origin
         // query for related PGi Contract (CONMAN_Contract__c)
         // Contract_Start_Date__c Contract_Renewal_Date__c Has_Attachment__c
         // Opportunity__c
+        System.debug('The  oppSize'+oppIds.size());
         if(oppIds.size() > 0) {
             Set<Id> oppIdsWithRelatedPGiContract = new Set<Id>();
             Set<Id> contractsWithStartAndRenewalDates = new Set<Id>();
@@ -674,7 +690,11 @@ Opportunity Team = clone from origin
             // if no valid PGi Contract, then display error message to the User
             for(Id oppId : oppIds.keySet()) {
                 Opportunity opp = (Opportunity)Trigger.newMap.get(oppId);
-                if(String.isNotBlank(opp.Opportunity_Product_Families__c) && opp.Opportunity_Product_Families__c.contains('TPx')) {
+                if(opp.Opportunity_Product_Families__c == 'Webcast' || opp.Opportunity_Product_Families__c == 'Webcast;') {
+                    if(!oppIdsWithAttachment.contains(oppId)) {
+                        Trigger.newMap.get(oppId).addError('Please ensure a contract has been attached to this opportunity.');
+                    }
+                } else if(String.isNotBlank(opp.Opportunity_Product_Families__c) && opp.Opportunity_Product_Families__c.contains('TPx')) {
                     if(!oppIdsWithAttachment.contains(oppId)) {
                         Trigger.newMap.get(oppId).addError('Please ensure a contract has been attached to this opportunity.');
                     }
@@ -707,6 +727,7 @@ Opportunity Team = clone from origin
                 pgiOpportunitys.add(opp);
             }
         }
+        System.debug('>> pgiOpportunitys >>'+pgiOpportunitys);
         return pgiOpportunitys;
     }
     
@@ -1111,6 +1132,7 @@ Matches Pricebook name with the exception that PGi uses the standard Pricebook
         //* PGi-Base Conversion 
         
         UPDATE accToUpdateById.values(); 
+        System.debug('>> opportunitiesIDSet.size() >>'+opportunitiesIDSet.size());
         if(opportunitiesIDSet.size() > 0){
             // update Implementation_Services__c // update the Cancelled Notes in Implementation_Services__c
             List<Implementation_Services__c> ImplementationServiceList = new List<Implementation_Services__c>();
@@ -1371,14 +1393,7 @@ Ticket No: RT-164
             for (Database.SaveResult sr : results) {
                 if (sr.isSuccess()) {
                     System.debug('Successfully published event.');
-                } else {
-                    for(Database.Error err : sr.getErrors()) {
-                        System.debug('Error returned: ' +
-                                     err.getStatusCode() +
-                                     ' - ' +
-                                     err.getMessage());
-                    }
-                }
+                } 
                 
             }
         }
@@ -1417,9 +1432,6 @@ Ticket No: RT-164
                     System.debug('The New Updates');
                     opp1.Converted_from_MQA__c =true;
                }
-                else {
-                   opp1.Converted_from_MQA__c = false; 
-                }
             }
             
         }

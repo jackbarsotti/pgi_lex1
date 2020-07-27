@@ -3,7 +3,7 @@
     <fullName>How_useful_was_today_s_webinar__c</fullName>
     <externalId>false</externalId>
     <inlineHelpText>Select 1-5</inlineHelpText>
-    <label>How useful was today&#39;s webinar?</label>
+    <label>How useful was today&apos;s webinar?</label>
     <precision>1</precision>
     <required>false</required>
     <scale>0</scale>

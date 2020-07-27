@@ -63,10 +63,6 @@
         <label><!-- Assign to Me --></label>
         <name>Assign_to_Me_RFCLex</name>
     </quickActions>
-    <quickActions>
-        <label><!-- Assign to Me --></label>
-        <name>Assign_to_Me_RFCListLex</name>
-    </quickActions>
     <recordTypes>
         <label><!-- Request for Change --></label>
         <name>Request_for_Change</name>
@@ -149,24 +145,16 @@
         <name>RFCnew_VendorRequired</name>
     </validationRules>
     <webLinks>
+        <label><!-- Assign_To_Me_ListBtn_Lex --></label>
+        <name>Assign_To_Me_ListBtn_Lex</name>
+    </webLinks>
+    <webLinks>
         <label><!-- Assign_To_Me_RFC --></label>
         <name>Assign_To_Me_RFC</name>
     </webLinks>
     <webLinks>
-        <label><!-- Assign_to_Me_RFCList --></label>
-        <name>Assign_to_Me_RFCList</name>
-    </webLinks>
-    <webLinks>
         <label><!-- Drag_Drop_Attachments --></label>
         <name>Drag_Drop_Attachments</name>
-    </webLinks>
-    <webLinks>
-        <label><!-- Pickup_RFC --></label>
-        <name>Pickup_RFC</name>
-    </webLinks>
-    <webLinks>
-        <label><!-- Submit_for_Approval --></label>
-        <name>Submit_for_Approval</name>
     </webLinks>
     <webLinks>
         <label><!-- Withdraw_Request2 --></label>

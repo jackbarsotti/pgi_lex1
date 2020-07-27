@@ -4,7 +4,7 @@
     <label><!-- Knowledge of PGi Solution/Services? --></label>
     <name>Knowledge_of_PGi_Solution_Services__c</name>
     <picklistValues>
-        <masterLabel>Customer is not familiar with PGi&#39;s products/services</masterLabel>
+        <masterLabel>Customer is not familiar with PGi&apos;s products/services</masterLabel>
         <translation><!-- Customer is not familiar with PGi&apos;s products/services --></translation>
     </picklistValues>
     <picklistValues>

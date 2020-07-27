@@ -2,7 +2,7 @@
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>No_parent_org_id_dont_allow_provision</fullName>
     <active>true</active>
-    <description>If the parent org id is not entered for one reason or another (user deletes it or dept was created without account being provisioned), then the provision checkbox shouldn&#39;t be allowed to be checked.</description>
+    <description>If the parent org id is not entered for one reason or another (user deletes it or dept was created without account being provisioned), then the provision checkbox shouldn&apos;t be allowed to be checked.</description>
     <errorConditionFormula>AND( Provision__c,  LEN(Parent_Account_Number__c)=0 )</errorConditionFormula>
     <errorMessage>This department cannot be provisioned at this time. Please notify a system administrator.</errorMessage>
 </ValidationRule>

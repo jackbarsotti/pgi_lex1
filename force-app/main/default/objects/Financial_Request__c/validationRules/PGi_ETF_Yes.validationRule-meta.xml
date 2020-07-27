@@ -5,7 +5,7 @@
     <description>If ETF is to be Applied then the Invoice Date must be captured</description>
     <errorConditionFormula>AND(
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
-ISPICKVAL( ETFApply__c , &#39;Yes&#39;) ,
+ISPICKVAL( ETFApply__c , &apos;Yes&apos;) ,
 ISBLANK( InvoiceDateETFApplied__c ) 
 )</errorConditionFormula>
     <errorDisplayField>InvoiceDateETFApplied__c</errorDisplayField>

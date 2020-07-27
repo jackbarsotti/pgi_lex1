@@ -2,9 +2,9 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>TASKRAY__trDealHandoffNotes__c</fullName>
     <deprecated>false</deprecated>
-    <description>Key information about a deal that can be referenced during a customer&#39;s onboarding project.</description>
+    <description>Key information about a deal that can be referenced during a customer&apos;s onboarding project.</description>
     <externalId>false</externalId>
-    <inlineHelpText>Use this field to store key information about a deal that can be referenced during a customer&#39;s onboarding project.</inlineHelpText>
+    <inlineHelpText>Use this field to store key information about a deal that can be referenced during a customer&apos;s onboarding project.</inlineHelpText>
     <label>Deal Handoff Notes</label>
     <length>32768</length>
     <trackFeedHistory>false</trackFeedHistory>

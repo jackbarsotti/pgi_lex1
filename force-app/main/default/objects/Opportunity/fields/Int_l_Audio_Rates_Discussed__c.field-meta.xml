@@ -2,8 +2,8 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Int_l_Audio_Rates_Discussed__c</fullName>
     <externalId>false</externalId>
-    <inlineHelpText>Indicate if Int&#39;l on-demand or op-assist audio was discussed/reviewed with customer during sale.</inlineHelpText>
-    <label>Int&#39;l Audio Rates Discussed?</label>
+    <inlineHelpText>Indicate if Int&apos;l on-demand or op-assist audio was discussed/reviewed with customer during sale.</inlineHelpText>
+    <label>Int&apos;l Audio Rates Discussed?</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

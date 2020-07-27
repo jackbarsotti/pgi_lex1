@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <formula>LastModifiedBy.Profile.Name</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>Last Modified User&#39;s Profile</label>
+    <label>Last Modified User&apos;s Profile</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <type>Text</type>

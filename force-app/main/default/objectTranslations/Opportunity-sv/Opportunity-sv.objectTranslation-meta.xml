@@ -767,10 +767,6 @@ Solution --></errorMessage>
         <name>dsfs__Verify_with_DNB</name>
     </webLinks>
     <webLinks>
-        <label><!-- eSignature --></label>
-        <name>eSignature</name>
-    </webLinks>
-    <webLinks>
         <label><!-- Conga_Send_to_EchoSign --></label>
         <name>echosign_dev1__Conga_Send_to_EchoSign</name>
     </webLinks>
@@ -781,10 +777,6 @@ Solution --></errorMessage>
     <webLinks>
         <label><!-- iContract --></label>
         <name>iContract</name>
-    </webLinks>
-    <webLinks>
-        <label><!-- iMC_Commission_Wizard --></label>
-        <name>iMC_Commission_Wizard</name>
     </webLinks>
     <workflowTasks>
         <description><!-- Please call and send email via Eloqua to prospect based on messaging selected. --></description>

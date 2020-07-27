@@ -1,5 +1,13 @@
 <apex:page standardController="Subscription__c" extensions="NewSubscription" action="{!doInit}" tabStyle="Subscription__c">
-    <p>
-        Not Allowed...
-    </p>
+    <apex:pageBlock rendered="{!$User.UITheme == 'Theme3'}">
+        <p>
+            Not Allowed...
+        </p>
+    </apex:pageBlock>
+    <apex:pageBlock rendered="{!$User.UITheme != 'Theme3'}">
+        <script type="text/javascript">
+            { window.alert("Please Switch to Salesforce Classic"); }
+        </script>
+        <apex:pageMessage severity="Info" summary="You must switch to salesforce classic to access this page." strength="1" />
+    </apex:pageBlock>
 </apex:page>

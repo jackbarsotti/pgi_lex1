@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NavigationMenu xmlns="http://soap.sforce.com/2006/04/metadata">
+    <container>TalkPoint</container>
+    <containerType>Network</containerType>
+    <label>TileMenu</label>
+    <navigationMenuItem>
+        <label>Event Content</label>
+        <position>0</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/event-content</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Security Settings</label>
+        <position>1</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/topic/0TO1B000000P3XIWA0</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Emails &amp; Marketing</label>
+        <position>2</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/emails-marketing</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Event Summary</label>
+        <position>3</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/event-summary</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+</NavigationMenu>

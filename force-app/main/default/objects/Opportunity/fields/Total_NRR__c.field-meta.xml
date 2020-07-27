@@ -2,9 +2,9 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Total_NRR__c</fullName>
     <externalId>false</externalId>
-    <formula>IF(RecordTypeId = &#39;0121B000001hgTt&#39; &amp;&amp; ISPICKVAL(MRR__c,&quot;No&quot;), (TPSummaryofAnnualizedProducts__c/12) + TPSummaryofNonAnnualizedProducts__c,
-IF(RecordTypeId = &#39;0121B000001q5Wh&#39; &amp;&amp; ISPICKVAL(Service_Term__c, &quot;1 Time Event&quot;), Amount,
-IF(RecordTypeId = &#39;0121B000001q5Wi&#39; &amp;&amp; ISPICKVAL(Service_Term__c, &quot;1 Time Event&quot;), Amount,
+    <formula>IF(RecordTypeId = &apos;0121B000001hgTt&apos; &amp;&amp; ISPICKVAL(MRR__c,&quot;No&quot;), (TPSummaryofAnnualizedProducts__c/12) + TPSummaryofNonAnnualizedProducts__c,
+IF(RecordTypeId = &apos;0121B000001q5Wh&apos; &amp;&amp; ISPICKVAL(Service_Term__c, &quot;1 Time Event&quot;), Amount,
+IF(RecordTypeId = &apos;0121B000001q5Wi&apos; &amp;&amp; ISPICKVAL(Service_Term__c, &quot;1 Time Event&quot;), Amount,
 Total_NRR_Formula__c)))</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Total NRR</label>

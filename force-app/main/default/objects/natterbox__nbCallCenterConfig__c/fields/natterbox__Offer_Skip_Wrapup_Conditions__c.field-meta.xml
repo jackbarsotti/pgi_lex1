@@ -3,9 +3,9 @@
     <fullName>natterbox__Offer_Skip_Wrapup_Conditions__c</fullName>
     <defaultValue>&quot;never&quot;</defaultValue>
     <deprecated>false</deprecated>
-    <description>When should CTI wrapup show the &#39;disregard call&#39; button which when pressed skips logging the call in SF</description>
+    <description>When should CTI wrapup show the &apos;disregard call&apos; button which when pressed skips logging the call in SF</description>
     <externalId>false</externalId>
-    <inlineHelpText>When should CTI wrapup show the &#39;disregard call&#39; button which when pressed skips logging the call in SF</inlineHelpText>
+    <inlineHelpText>When should CTI wrapup show the &apos;disregard call&apos; button which when pressed skips logging the call in SF</inlineHelpText>
     <label>Offer Skip Wrapup Conditions</label>
     <length>255</length>
     <required>false</required>

@@ -13,6 +13,6 @@ alert(&quot;{!$Label.dsfs__statusvoidenvelopeerror}&quot;);
 }
 else
 {
-window.location.href=&#39;/apex/dsfs__DocuSign_ResendEnvelope?id={!dsfs__DocuSign_Status__c.Id}&#39;;
+window.location.href=&apos;/apex/dsfs__DocuSign_ResendEnvelope?id={!dsfs__DocuSign_Status__c.Id}&apos;;
 }</url>
 </WebLink>

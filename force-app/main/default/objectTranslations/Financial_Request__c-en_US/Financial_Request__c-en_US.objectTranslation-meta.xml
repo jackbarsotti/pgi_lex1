@@ -391,10 +391,6 @@
         <name>Assign_to_MeLex</name>
     </quickActions>
     <quickActions>
-        <label><!-- Assign to Me --></label>
-        <name>Assign_to_Me_listbuttonLex</name>
-    </quickActions>
-    <quickActions>
         <label><!-- Change Status --></label>
         <name>Change_Status</name>
     </quickActions>
@@ -577,8 +573,8 @@
         <name>Assign_to_Me</name>
     </webLinks>
     <webLinks>
-        <label><!-- Assign_to_Me_listbutton --></label>
-        <name>Assign_to_Me_listbutton</name>
+        <label><!-- Assign_to_Me_ListBtn_Lex --></label>
+        <name>Assign_to_Me_ListBtn_Lex</name>
     </webLinks>
     <webLinks>
         <label><!-- Clone_As_Child --></label>

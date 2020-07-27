@@ -3,7 +3,7 @@
     <fullName>et4ae5__DateBounced__c</fullName>
     <deprecated>false</deprecated>
     <externalId>false</externalId>
-    <inlineHelpText>The date and time when this subscriber&#39;s email address bounced</inlineHelpText>
+    <inlineHelpText>The date and time when this subscriber&apos;s email address bounced</inlineHelpText>
     <label>Date Bounced</label>
     <required>false</required>
     <trackTrending>false</trackTrending>

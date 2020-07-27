@@ -2,9 +2,9 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>zisf__Person_Employment_History__c</fullName>
     <deprecated>false</deprecated>
-    <description>Person&#39;s employment history.</description>
+    <description>Person&apos;s employment history.</description>
     <externalId>false</externalId>
-    <inlineHelpText>Person&#39;s employment history.</inlineHelpText>
+    <inlineHelpText>Person&apos;s employment history.</inlineHelpText>
     <label>Person Employment History</label>
     <length>15000</length>
     <trackTrending>false</trackTrending>

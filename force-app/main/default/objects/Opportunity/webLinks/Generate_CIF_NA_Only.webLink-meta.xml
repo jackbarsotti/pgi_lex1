@@ -11,11 +11,11 @@
 {!REQUIRESCRIPT(&quot;/soap/ajax/29.0/apex.js&quot;)}
 var isWon = &quot;{!Opportunity.IsWon}&quot;;
 
-// we&#39;re getting profile as merge field instead of with SOQL below b/c most users don&#39;t have permissions to see ProfileId field
+// we&apos;re getting profile as merge field instead of with SOQL below b/c most users don&apos;t have permissions to see ProfileId field
 var userProfile = &quot;{!$Profile.Id}&quot;;
 
-// can&#39;t use merge fields to get picklist values that aren&#39;t in the DOM, so using SOQL to get user region
-var query = &quot;SELECT User_Region__c from User WHERE Id = &#39;{!$User.Id}&#39;&quot;;
+// can&apos;t use merge fields to get picklist values that aren&apos;t in the DOM, so using SOQL to get user region
+var query = &quot;SELECT User_Region__c from User WHERE Id = &apos;{!$User.Id}&apos;&quot;;
 var result = sforce.connection.query(query);
 var records = result.getArray(&quot;records&quot;);
 var userRegion = records[0].User_Region__c;

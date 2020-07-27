@@ -3,11 +3,11 @@
     <fullName>Selected_Web_Sub_Size__c</fullName>
     <externalId>false</externalId>
     <formula>CASE( Web_Sub_Default_Type__c ,
-&#39;Web Meeting Pro (25)&#39;, 25,
-&#39;Web Meeting Pro (150)&#39;, 150,
-&#39;Webinar (500)&#39;, 500,
-&#39;Webinar (150)&#39;, 150,
-&#39;Webinar (3000)&#39;, 3000,
+&apos;Web Meeting Pro (25)&apos;, 25,
+&apos;Web Meeting Pro (150)&apos;, 150,
+&apos;Webinar (500)&apos;, 500,
+&apos;Webinar (150)&apos;, 150,
+&apos;Webinar (3000)&apos;, 3000,
 0)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <inlineHelpText>Indicates participant size for web subscription/webinars (system populates upon first bill run).</inlineHelpText>

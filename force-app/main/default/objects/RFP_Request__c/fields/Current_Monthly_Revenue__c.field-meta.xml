@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <formula>Opportunity_Name__r.MRR_Total__c</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <inlineHelpText>Opportunity&#39;s Total MRR</inlineHelpText>
+    <inlineHelpText>Opportunity&apos;s Total MRR</inlineHelpText>
     <label>Current Monthly Revenue</label>
     <precision>18</precision>
     <required>false</required>

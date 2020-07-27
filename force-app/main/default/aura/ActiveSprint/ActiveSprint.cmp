@@ -78,7 +78,7 @@
     </div>
 
     <div class="slds-col slds-size_2-of-12" style="width:15vw;margin-top: 19px;">
-      <lightning:button class="deselectAllitem"  onclick="{! c.docheckClick }" name="Test" label="Show only mine" title="Test" />
+      <lightning:button class="deselectAllitem" aura:id="switchUser" onclick="{! c.docheckClick }" name="Test" label="Show only mine" title="Test" />
     </div>
     
   </div>

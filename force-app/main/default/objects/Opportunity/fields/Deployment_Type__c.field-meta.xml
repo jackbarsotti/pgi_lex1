@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Deployment_Type__c</fullName>
     <externalId>false</externalId>
-    <inlineHelpText>Please select Cloud PBX/SfB Online where all users will be homed in the cloud and thus driving Microsoft&#39;s consumption targets, select On-Prem / Private Cloud where all users will be homed on Server or select Mixed Deployment if a mixture of both.</inlineHelpText>
+    <inlineHelpText>Please select Cloud PBX/SfB Online where all users will be homed in the cloud and thus driving Microsoft&apos;s consumption targets, select On-Prem / Private Cloud where all users will be homed on Server or select Mixed Deployment if a mixture of both.</inlineHelpText>
     <label>Deployment Type</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

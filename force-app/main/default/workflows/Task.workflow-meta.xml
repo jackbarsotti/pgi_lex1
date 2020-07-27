@@ -56,7 +56,7 @@
     </fieldUpdates>
     <fieldUpdates>
         <fullName>RT_Gainsight_CTA_Task_Type</fullName>
-        <description>Sets task type on Gainsight CTA&#39;s</description>
+        <description>Sets task type on Gainsight CTA&apos;s</description>
         <field>Type</field>
         <literalValue>CTA</literalValue>
         <name>RT_Gainsight CTA Task Type</name>
@@ -348,7 +348,7 @@
         <criteriaItems>
             <field>Task.Subject</field>
             <operation>equals</operation>
-            <value>Access Information for ReadyTalk&#39;s Administration Center</value>
+            <value>Access Information for ReadyTalk&apos;s Administration Center</value>
         </criteriaItems>
         <criteriaItems>
             <field>Task.RecordTypeId</field>
@@ -427,7 +427,7 @@
             <operation>equals</operation>
             <value>ReadyTalk Task</value>
         </criteriaItems>
-        <description>This workflow is used to run reports and formulas for Activity Type since current Salesforce reporting doesn&#39;t allow it. The Cost Activity Type is updated via a workflow</description>
+        <description>This workflow is used to run reports and formulas for Activity Type since current Salesforce reporting doesn&apos;t allow it. The Cost Activity Type is updated via a workflow</description>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -458,7 +458,7 @@
             <operation>equals</operation>
             <value>ReadyTalk Task</value>
         </criteriaItems>
-        <description>Sets the task type to &quot;CTA&quot; for tasks created from Gainsight CTA&#39;s</description>
+        <description>Sets the task type to &quot;CTA&quot; for tasks created from Gainsight CTA&apos;s</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
@@ -669,7 +669,7 @@
         </actions>
         <active>true</active>
         <description>InGenius Workflow</description>
-        <formula>AND( ispickval(CallType, &quot;Inbound&quot;)&amp;&amp; not(ispickval(Type ,&quot;Meeting&quot;))&amp;&amp; not(ispickval(Type ,&quot;Demo&quot;))&amp;&amp;   RecordType.DeveloperName= &#39;ReadyTalk Task&#39;)</formula>
+        <formula>AND( ispickval(CallType, &quot;Inbound&quot;)&amp;&amp; not(ispickval(Type ,&quot;Meeting&quot;))&amp;&amp; not(ispickval(Type ,&quot;Demo&quot;))&amp;&amp;   RecordType.DeveloperName= &apos;ReadyTalk Task&apos;)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -680,7 +680,7 @@
         </actions>
         <active>true</active>
         <description>InGenius Workflow</description>
-        <formula>AND( ispickval(CallType, &quot;Outbound&quot;)&amp;&amp;not(ispickval(Type ,&quot;Meeting&quot;))&amp;&amp;not(ispickval(Type ,&quot;Demo&quot;))&amp;&amp; RecordType.DeveloperName= &#39;ReadyTalk Task&#39;)</formula>
+        <formula>AND( ispickval(CallType, &quot;Outbound&quot;)&amp;&amp;not(ispickval(Type ,&quot;Meeting&quot;))&amp;&amp;not(ispickval(Type ,&quot;Demo&quot;))&amp;&amp; RecordType.DeveloperName= &apos;ReadyTalk Task&apos;)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -706,7 +706,7 @@
         </actions>
         <active>true</active>
         <description>Updates the &quot;Subject&quot; with the &quot;Discovery Call&quot; with the &quot;Type&quot; filed is Discovery Call.</description>
-        <formula>AND(  RecordType.DeveloperName = &#39;iMC Task&#39;,  ISPICKVAL( Type , &quot;Discovery Call&quot;)&amp;&amp;  LEFT( Subject , 15) &lt;&gt; &quot;Discovery Call:&quot;  )</formula>
+        <formula>AND(  RecordType.DeveloperName = &apos;iMC Task&apos;,  ISPICKVAL( Type , &quot;Discovery Call&quot;)&amp;&amp;  LEFT( Subject , 15) &lt;&gt; &quot;Discovery Call:&quot;  )</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
 </Workflow>

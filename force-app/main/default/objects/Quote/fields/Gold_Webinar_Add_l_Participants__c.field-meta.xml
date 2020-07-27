@@ -3,7 +3,7 @@
     <fullName>Gold_Webinar_Add_l_Participants__c</fullName>
     <defaultValue>500</defaultValue>
     <externalId>false</externalId>
-    <label>Gold Webinar Add&#39;l Participants</label>
+    <label>Gold Webinar Add&apos;l Participants</label>
     <precision>18</precision>
     <required>false</required>
     <scale>0</scale>

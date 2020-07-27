@@ -255,6 +255,10 @@
         <label><!-- Inactive --></label>
         <name>Inactive_Lex</name>
     </quickActions>
+    <quickActions>
+        <label><!-- SalesLoft Import Contact --></label>
+        <name>SalesLoft_Import_Contact_LEX</name>
+    </quickActions>
     <recordTypes>
         <label><!-- PGi Contact --></label>
         <name>PGi_Contact</name>
@@ -355,6 +359,18 @@
     <webLinks>
         <label><!-- Restore --></label>
         <name>Restore</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SalesLoft_Import_Contact --></label>
+        <name>SalesLoft_Import_Contact</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SalesLoft_Import_Lead_Contact --></label>
+        <name>SalesLoft_Import_Lead_Contact</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SalesLoft_Import_Lead_Contact_Lex --></label>
+        <name>SalesLoft_Import_Lead_Contact_Lex</name>
     </webLinks>
     <webLinks>
         <label><!-- Sales_Nurture_Track_Process --></label>

@@ -13,6 +13,6 @@
 }
 else
 {
-window.location.href=&#39;/apex/dsfs__DocuSignAdvCorrectStandalone?e={!dsfs__DocuSign_Status__c.dsfs__DocuSign_Envelope_ID__c}&#39;
+window.location.href=&apos;/apex/dsfs__DocuSignAdvCorrectStandalone?e={!dsfs__DocuSign_Status__c.dsfs__DocuSign_Envelope_ID__c}&apos;
 }</url>
 </WebLink>

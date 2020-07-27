@@ -2,9 +2,9 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>TASKRAY__trDesiredOutcomes__c</fullName>
     <deprecated>false</deprecated>
-    <description>A customer&#39;s desired outcome(s) for their onboarding process.</description>
+    <description>A customer&apos;s desired outcome(s) for their onboarding process.</description>
     <externalId>false</externalId>
-    <inlineHelpText>Use this field to capture a customer&#39;s desired outcome(s) for their onboarding process.</inlineHelpText>
+    <inlineHelpText>Use this field to capture a customer&apos;s desired outcome(s) for their onboarding process.</inlineHelpText>
     <label>Desired Outcomes</label>
     <length>32768</length>
     <trackFeedHistory>false</trackFeedHistory>

@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <formula>Related_Opportunity__r.Account.Name</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>Related Oppty&#39;s Account</label>
+    <label>Related Oppty&apos;s Account</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

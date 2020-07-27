@@ -20,5 +20,5 @@ AND(
                     LOWER(PRIORVALUE(Username)) = &quot;pgiintegration@pgi.com&quot;
 )
 )</errorConditionFormula>
-    <errorMessage>User&#39;s name or Username cannot be changed.</errorMessage>
+    <errorMessage>User&apos;s name or Username cannot be changed.</errorMessage>
 </ValidationRule>

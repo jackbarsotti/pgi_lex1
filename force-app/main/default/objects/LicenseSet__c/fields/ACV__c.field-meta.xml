@@ -6,11 +6,11 @@
  
 If ( NOT(ISBLANK(Price__c)) &amp;&amp; Subscription_License_Term_Months__c &gt;= 12, MRR__c * 12,
 
-IF (ISBLANK (Price__c) &amp;&amp; ISBLANK ( Committed_Rate__c ) &amp;&amp; ISPICKVAL ( Billing_Frequency__c, &#39;Quarterly&#39;), Commitment_Amount__c * 4,
+IF (ISBLANK (Price__c) &amp;&amp; ISBLANK ( Committed_Rate__c ) &amp;&amp; ISPICKVAL ( Billing_Frequency__c, &apos;Quarterly&apos;), Commitment_Amount__c * 4,
 
-IF (ISBLANK (Price__c) &amp;&amp; ISBLANK (Committed_Rate__c) &amp;&amp; ISPICKVAL ( Billing_Frequency__c, &#39;Annually&#39;), Commitment_Amount__c,
+IF (ISBLANK (Price__c) &amp;&amp; ISBLANK (Committed_Rate__c) &amp;&amp; ISPICKVAL ( Billing_Frequency__c, &apos;Annually&apos;), Commitment_Amount__c,
  
-IF (ISBLANK (Price__c) &amp;&amp; ISBLANK (Committed_Rate__c) &amp;&amp; ISPICKVAL ( Billing_Frequency__c, &#39;Monthly&#39;), Commitment_Amount__c *12,
+IF (ISBLANK (Price__c) &amp;&amp; ISBLANK (Committed_Rate__c) &amp;&amp; ISPICKVAL ( Billing_Frequency__c, &apos;Monthly&apos;), Commitment_Amount__c *12,
 
 If (ISBLANK (Price__c) &amp;&amp; Subscription_License_Term_Months__c &lt;= 12, Committed_Rate__c *  Committed_Minutes__c * Subscription_License_Term_Months__c,
 

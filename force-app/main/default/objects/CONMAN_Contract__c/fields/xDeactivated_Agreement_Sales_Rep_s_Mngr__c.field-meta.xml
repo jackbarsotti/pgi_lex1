@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <formula>xDeactivated_Agreement_Sales_Rep__r.Manager_Copy__c</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>xDeactivated Agreement Sales Rep&#39;s Mngr</label>
+    <label>xDeactivated Agreement Sales Rep&apos;s Mngr</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

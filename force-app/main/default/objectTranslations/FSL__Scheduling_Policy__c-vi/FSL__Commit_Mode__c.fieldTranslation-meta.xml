@@ -4,10 +4,10 @@
     <name>FSL__Commit_Mode__c</name>
     <picklistValues>
         <masterLabel>AlwaysCommit</masterLabel>
-        <translation><!-- AlwaysCommit --></translation>
+        <translation>AlwaysCommit</translation>
     </picklistValues>
     <picklistValues>
         <masterLabel>Rollback</masterLabel>
-        <translation><!-- Rollback --></translation>
+        <translation>Hủy</translation>
     </picklistValues>
 </CustomFieldTranslation>

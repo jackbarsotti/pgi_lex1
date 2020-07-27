@@ -2,7 +2,7 @@
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>PGi_SE_Event</fullName>
     <active>true</active>
-    <description>RT for SE&#39;s.  Only difference in PGi Event is &quot;Type&quot;</description>
+    <description>RT for SE&apos;s.  Only difference in PGi Event is &quot;Type&quot;</description>
     <label>PGi SE Event</label>
     <picklistValues>
         <picklist>Event_Status__c</picklist>

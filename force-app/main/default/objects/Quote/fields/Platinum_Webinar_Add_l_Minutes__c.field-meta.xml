@@ -3,7 +3,7 @@
     <fullName>Platinum_Webinar_Add_l_Minutes__c</fullName>
     <defaultValue>250</defaultValue>
     <externalId>false</externalId>
-    <label>Platinum Webinar Add&#39;l Minutes</label>
+    <label>Platinum Webinar Add&apos;l Minutes</label>
     <precision>18</precision>
     <required>false</required>
     <scale>0</scale>

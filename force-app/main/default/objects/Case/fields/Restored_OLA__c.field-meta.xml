@@ -15,7 +15,7 @@ Total_Paused_Time__c))),86400)/3600)) +
 /* minutes */
 TEXT(FLOOR(MOD(((Restored__c - CreatedDate)*1440*60 - (IF(ISNULL(Total_Paused_Time__c),0,
 Total_Paused_Time__c))),3600)/60)),
-&#39;&#39;),
+&apos;&apos;),
 IF((Actual_Restore_Time__c - CreatedDate)*1440*60 - IF(ISNULL(Total_Paused_Time__c),0, Total_Paused_Time__c) &gt; 0,
 /* days */
 TEXT(FLOOR(((Actual_Restore_Time__c - CreatedDate)*1440*60 - (IF(ISNULL(Total_Paused_Time__c),0,
@@ -28,7 +28,7 @@ Total_Paused_Time__c))),86400)/3600)) +
 /* minutes */
 TEXT(FLOOR(MOD(((Actual_Restore_Time__c - CreatedDate)*1440*60 - (IF(ISNULL(Total_Paused_Time__c),0,
 Total_Paused_Time__c))),3600)/60)),
-&#39;&#39;))</formula>
+&apos;&apos;))</formula>
     <inlineHelpText>Difference between when the case was created and the Service Restored checkbox was checked (minus the time the case was in a Pending Client Action/Info Status)</inlineHelpText>
     <label>Restored OLA</label>
     <required>false</required>

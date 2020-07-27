@@ -3,9 +3,9 @@
     <fullName>Account_Cancellation_Probability__c</fullName>
     <externalId>false</externalId>
     <formula>IF( 
-	RecordTypeId = &#39;012d0000000sTEJ&#39;  ||
-	RecordTypeId = &#39;012d0000000sTEL&#39;  || 
-	RecordTypeId = &#39;012d0000000sTEK&#39;   , 
+	RecordTypeId = &apos;012d0000000sTEJ&apos;  ||
+	RecordTypeId = &apos;012d0000000sTEL&apos;  || 
+	RecordTypeId = &apos;012d0000000sTEK&apos;   , 
 		Account.Cancellation_Probability__c,
 		NULL
 	)</formula>

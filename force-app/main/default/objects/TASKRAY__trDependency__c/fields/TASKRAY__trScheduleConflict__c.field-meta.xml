@@ -5,10 +5,10 @@
     <externalId>false</externalId>
     <formula>IF( NOT(TASKRAY__trSuccessorTask__r.TASKRAY__trLockDates__c), false,
   IF(TASKRAY__trSuccessorTask__r.TASKRAY__trLockDates__c &amp;&amp;  TASKRAY__trSuccessorTask__r.TASKRAY__trIsMilestone__c &amp;&amp; TASKRAY__trPredecessorTask__r.TASKRAY__Deadline__c &gt; TASKRAY__trSuccessorTask__r.TASKRAY__Deadline__c, true,
-  IF(ISPICKVAL(TASKRAY__trDependencyType__c , &#39;Finish-To-Start&#39;), TASKRAY__trPredecessorTask__r.TASKRAY__Deadline__c &gt; TASKRAY__trSuccessorTask__r.TASKRAY__trStartDate__c,
-  IF(ISPICKVAL(TASKRAY__trDependencyType__c , &#39;Finish-To-Finish&#39;), TASKRAY__trPredecessorTask__r.TASKRAY__Deadline__c &gt; TASKRAY__trSuccessorTask__r.TASKRAY__Deadline__c,
-  IF(ISPICKVAL(TASKRAY__trDependencyType__c , &#39;Start-To-Start&#39;), TASKRAY__trPredecessorTask__r.TASKRAY__trStartDate__c &gt; TASKRAY__trSuccessorTask__r.TASKRAY__trStartDate__c,
-  IF(ISPICKVAL(TASKRAY__trDependencyType__c , &#39;Start-To-Finish&#39;), TASKRAY__trPredecessorTask__r.TASKRAY__trStartDate__c &gt; TASKRAY__trSuccessorTask__r.TASKRAY__Deadline__c, false))))))</formula>
+  IF(ISPICKVAL(TASKRAY__trDependencyType__c , &apos;Finish-To-Start&apos;), TASKRAY__trPredecessorTask__r.TASKRAY__Deadline__c &gt; TASKRAY__trSuccessorTask__r.TASKRAY__trStartDate__c,
+  IF(ISPICKVAL(TASKRAY__trDependencyType__c , &apos;Finish-To-Finish&apos;), TASKRAY__trPredecessorTask__r.TASKRAY__Deadline__c &gt; TASKRAY__trSuccessorTask__r.TASKRAY__Deadline__c,
+  IF(ISPICKVAL(TASKRAY__trDependencyType__c , &apos;Start-To-Start&apos;), TASKRAY__trPredecessorTask__r.TASKRAY__trStartDate__c &gt; TASKRAY__trSuccessorTask__r.TASKRAY__trStartDate__c,
+  IF(ISPICKVAL(TASKRAY__trDependencyType__c , &apos;Start-To-Finish&apos;), TASKRAY__trPredecessorTask__r.TASKRAY__trStartDate__c &gt; TASKRAY__trSuccessorTask__r.TASKRAY__Deadline__c, false))))))</formula>
     <label>In Schedule Conflict</label>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

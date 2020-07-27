@@ -1,0 +1,5 @@
+<aura:component 
+ implements="lightning:actionOverride,force:appHostable,force:lightningQuickAction,force:hasRecordId,flexipage:availableForAllPageTypes" access="global" 
+>
+    <c:caseRTSelection/>
+</aura:component>

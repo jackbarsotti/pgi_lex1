@@ -3,8 +3,8 @@
     <fullName>Broadcast_Audio_Additional_Participants__c</fullName>
     <defaultValue>100</defaultValue>
     <externalId>false</externalId>
-    <inlineHelpText>Amount charged for every add&#39;l 100 participants.</inlineHelpText>
-    <label>Broadcast Audio Add&#39;l Participants</label>
+    <inlineHelpText>Amount charged for every add&apos;l 100 participants.</inlineHelpText>
+    <label>Broadcast Audio Add&apos;l Participants</label>
     <precision>12</precision>
     <required>false</required>
     <scale>2</scale>

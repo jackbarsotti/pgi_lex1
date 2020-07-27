@@ -1,0 +1,12 @@
+<apex:page controller="ToDelete1">
+    <script>
+        function saveCheck(){
+            var key ='{!layoutSections}';
+            console.log('Test',key);
+        }
+        </script>
+<!-- Begin Default Content REMOVE THIS -->
+<apex:form >
+    <apex:commandButton onclick="saveCheck();return false;" value="Save" reRender="pm"/>
+</apex:form>
+</apex:page>

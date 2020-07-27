@@ -5,7 +5,7 @@
     <description>By knowing the metadata type, a formula can generate a link to the metadata component in Salesforce, making it easy for an admin to inspect the component.</description>
     <externalId>false</externalId>
     <formula>HYPERLINK(
-            (LEFT($Api.Partner_Server_URL_260, FIND( &#39;/services&#39;, $Api.Partner_Server_URL_260)) + ddcdf__Component_Id__c),
+            (LEFT($Api.Partner_Server_URL_260, FIND( &apos;/services&apos;, $Api.Partner_Server_URL_260)) + ddcdf__Component_Id__c),
             ddcdf__Metadata__c, &quot;_self&quot;
             )</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>

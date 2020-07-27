@@ -4,8 +4,12 @@ public class AssignToMeLEXControllerTest {
     static testmethod void testupdateRecord(){
         Test.startTest();
         
-        Profile profile = [SELECT Id FROM Profile WHERE name = 'System Administrator'];
-        UserRole portalRole = [SELECT Id FROM UserRole WHERE PortalType = 'None' LIMIT 1];
+        Profile profile = [SELECT Id 
+                           FROM Profile 
+                           WHERE name = 'System Administrator'];
+        UserRole portalRole = [SELECT Id 
+                               FROM UserRole 
+                               WHERE PortalType = 'None' LIMIT 1];
         
         User u = new User(
             UserRoleId = portalRole.Id,
@@ -23,7 +27,9 @@ public class AssignToMeLEXControllerTest {
         INSERT u;
         System.debug('User: '+u);
         
-        User objUser = [SELECT Id FROM User WHERE Id =: u.Id LIMIT 1];
+        User objUser = [SELECT Id 
+                        FROM User 
+                        WHERE Id =: u.Id LIMIT 1];
         
         System.runas(objUser) {
             
@@ -55,13 +61,19 @@ public class AssignToMeLEXControllerTest {
             AssignToMeLEXController.updateRecord(c.Id,'Case');
             AssignToMeLEXController.updateRecord(objRFC.Id,'Request_for_Change__c'); 
             
-            Financial_Request__c finReqObject = [SELECT Assigned_To__c FROM Financial_Request__c WHERE Id =: objFinReq.Id];
+            Financial_Request__c finReqObject = [SELECT Assigned_To__c 
+                                                 FROM Financial_Request__c 
+                                                 WHERE Id =: objFinReq.Id];
             System.assertEquals(finReqObject.Assigned_To__c, objUser.Id);
             
-            Case caseObject = [SELECT Assigned_To__c FROM Case WHERE Id =:c.Id];
+            Case caseObject = [SELECT Assigned_To__c 
+                               FROM Case 
+                               WHERE Id =:c.Id];
             System.assertEquals(caseObject.Assigned_To__c, objUser.Id);
             
-            Request_for_Change__c reqForChangeObj = [SELECT Assigned_To__c FROM Request_for_Change__c WHERE Id =:objRFC.Id]; 
+            Request_for_Change__c reqForChangeObj = [SELECT Assigned_To__c 
+                                                     FROM Request_for_Change__c 
+                                                     WHERE Id =:objRFC.Id]; 
             System.assertEquals(reqForChangeObj.Assigned_To__c, objUser.Id); 
             
         }

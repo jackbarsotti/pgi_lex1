@@ -11,13 +11,13 @@
     <url>{!REQUIRESCRIPT(&quot;/apex/dsfs__DocuSign_JavaScript&quot;)}
 var recipients= {!GETRECORDIDS($ObjectType.dsfs__DocuSign_Recipient_Status__c)};
 if (recipients[0] == null) {
-alert(&quot;Select one or more Recipients in the &#39;Send&#39; or &#39;Delivered&#39; state to Resend DocuSign Email.&quot;);
+alert(&quot;Select one or more Recipients in the &apos;Send&apos; or &apos;Delivered&apos; state to Resend DocuSign Email.&quot;);
 }
 else
 {
 var sourceId=DSGetPageIDFromHref();
-var dsid=&#39;&#39;;
+var dsid=&apos;&apos;;
 if (&quot;{!dsfs__DocuSign_Status__c.Id}&quot; != &quot;&quot;) dsid=&quot;id={!dsfs__DocuSign_Status__c.Id}&amp;&quot;;
-window.location.href=&#39;/apex/dsfs__DocuSign_ResendEnvelope?&#39; + dsid + &#39;sr=&#39;+recipients+&quot;&amp;SourceID=&quot;+sourceId;
+window.location.href=&apos;/apex/dsfs__DocuSign_ResendEnvelope?&apos; + dsid + &apos;sr=&apos;+recipients+&quot;&amp;SourceID=&quot;+sourceId;
 }</url>
 </WebLink>

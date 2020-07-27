@@ -310,6 +310,8 @@
         }
         var setClientInfo = function() {
             console.log('setClientInfo');
+            var layour ='{!layoutSections}';
+        console.log('-----console save----->',layour);
             var conferenceValue = j$('[id="'+ conferenceFieldId + '"]').val();
             if(conferenceValue != undefined && conferenceValue != '') {
                 setConferenceInfo();

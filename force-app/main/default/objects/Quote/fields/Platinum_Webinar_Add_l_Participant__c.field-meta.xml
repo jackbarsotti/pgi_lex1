@@ -3,7 +3,7 @@
     <fullName>Platinum_Webinar_Add_l_Participant__c</fullName>
     <defaultValue>500</defaultValue>
     <externalId>false</externalId>
-    <label>Platinum Webinar Add&#39;l Participants</label>
+    <label>Platinum Webinar Add&apos;l Participants</label>
     <precision>18</precision>
     <required>false</required>
     <scale>0</scale>

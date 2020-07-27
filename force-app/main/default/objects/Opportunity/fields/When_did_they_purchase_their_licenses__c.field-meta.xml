@@ -31,9 +31,9 @@
                 <label>Less than 3 mths ago</label>
             </value>
             <value>
-                <fullName>I don&#39;t know</fullName>
+                <fullName>I don&apos;t know</fullName>
                 <default>false</default>
-                <label>I don&#39;t know</label>
+                <label>I don&apos;t know</label>
             </value>
         </valueSetDefinition>
     </valueSet>

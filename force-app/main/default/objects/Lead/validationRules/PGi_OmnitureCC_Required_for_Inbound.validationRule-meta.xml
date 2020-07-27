@@ -6,7 +6,7 @@
     <errorConditionFormula>AND(
 $User.Alias &lt;&gt; &quot;autocln&quot;,
 CONTAINS(RecordType.Name, &quot;PGi&quot;), 
-ISPICKVAL( LeadSource, &#39;Inbound Call&#39;),
+ISPICKVAL( LeadSource, &apos;Inbound Call&apos;),
 ISBLANK(TEXT(Omniture_Campaign_Code__c)),
 CONTAINS($UserRole.Name, &quot;ISO Inbound&quot;),
 $User.Override_Validation_Rules__c = False,

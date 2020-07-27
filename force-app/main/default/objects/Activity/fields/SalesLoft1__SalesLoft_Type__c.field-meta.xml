@@ -3,19 +3,19 @@
     <fullName>SalesLoft1__SalesLoft_Type__c</fullName>
     <deprecated>false</deprecated>
     <externalId>false</externalId>
-    <formula>IF(BEGINS(Subject,&#39;Email:&#39;),&#39;Email&#39;,
-IF(BEGINS(Subject,&#39;Sent Email:&#39;),&#39;Email&#39;,
-IF(BEGINS(Subject,&#39;Call&#39;),&#39;Call&#39;,
-IF(BEGINS(Subject,&#39;LinkedIn Sales Navigator: InMail&#39;),&#39;LinkedIn - InMail&#39;,
-IF(BEGINS(Subject,&#39;LinkedIn Sales Navigator: Research&#39;),&#39;LinkedIn - Research&#39;,
-IF(BEGINS(Subject,&#39;LinkedIn Sales Navigator: Connection Request&#39;),&#39;LinkedIn - Connection Request&#39;,
-IF(BEGINS(Subject,&#39;LinkedIn Sales Navigator: Ask for an Introduction&#39;),&#39;LinkedIn - Ask for an Introduction&#39;,
-IF(BEGINS(Subject,&#39;Meeting Booked:&#39;),&#39;Meeting&#39;,
-IF(BEGINS(Subject,&#39;Other:&#39;),&#39;Other&#39;,
-IF(BEGINS(Subject,&#39;Reply:&#39;),&#39;Reply&#39;,
-IF(BEGINS(Subject,&#39;Note&#39;),&#39;Note&#39;,
-IF(BEGINS(Subject,&#39;Hot Lead:&#39;),&#39;Hot Lead&#39;,
-IF(BEGINS(Subject,&#39;Recording:&#39;),&#39;Conversation Intelligence Recording&#39;,
+    <formula>IF(BEGINS(Subject,&apos;Email:&apos;),&apos;Email&apos;,
+IF(BEGINS(Subject,&apos;Sent Email:&apos;),&apos;Email&apos;,
+IF(BEGINS(Subject,&apos;Call&apos;),&apos;Call&apos;,
+IF(BEGINS(Subject,&apos;LinkedIn Sales Navigator: InMail&apos;),&apos;LinkedIn - InMail&apos;,
+IF(BEGINS(Subject,&apos;LinkedIn Sales Navigator: Research&apos;),&apos;LinkedIn - Research&apos;,
+IF(BEGINS(Subject,&apos;LinkedIn Sales Navigator: Connection Request&apos;),&apos;LinkedIn - Connection Request&apos;,
+IF(BEGINS(Subject,&apos;LinkedIn Sales Navigator: Ask for an Introduction&apos;),&apos;LinkedIn - Ask for an Introduction&apos;,
+IF(BEGINS(Subject,&apos;Meeting Booked:&apos;),&apos;Meeting&apos;,
+IF(BEGINS(Subject,&apos;Other:&apos;),&apos;Other&apos;,
+IF(BEGINS(Subject,&apos;Reply:&apos;),&apos;Reply&apos;,
+IF(BEGINS(Subject,&apos;Note&apos;),&apos;Note&apos;,
+IF(BEGINS(Subject,&apos;Hot Lead:&apos;),&apos;Hot Lead&apos;,
+IF(BEGINS(Subject,&apos;Recording:&apos;),&apos;Conversation Intelligence Recording&apos;,
 NULL)))))))))))))</formula>
     <label>SalesLoft Type</label>
     <required>false</required>

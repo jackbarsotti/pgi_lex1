@@ -1,5 +1,5 @@
-<apex:page showHeader="true" sidebar="true" standardController="Case_Template__c" extensions="CaseTemplateExtension">
-	
+<apex:page showHeader="true" sidebar="true" standardController="Case_Template__c" extensions="CaseTemplateExtension" lightningStylesheets="true">
+    <apex:includeLightning />
 	<apex:form >
 		<apex:pageMessages />
 		<apex:pageBlock >

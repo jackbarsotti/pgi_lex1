@@ -4,7 +4,7 @@
     <active>false</active>
     <description>If Vendor Outage is TRUE then Outage Duration and Description must be populated</description>
     <errorConditionFormula>AND(
-ISPICKVAL(Vendor_Outage__c, &#39;Yes&#39;),
+ISPICKVAL(Vendor_Outage__c, &apos;Yes&apos;),
 OR(
 ISBLANK(  Vendor_Outage_Description__c  ), 
 ISBLANK( Outage_Duration__c )

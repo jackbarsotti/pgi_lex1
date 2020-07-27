@@ -30,7 +30,7 @@
             <operation>notEqual</operation>
             <value>0</value>
         </criteriaItems>
-        <description>If all the related TaskRay Tasks are not completed, then mark the &#39;Completed&#39; checkbox as FALSE on the TaskRay Project.</description>
+        <description>If all the related TaskRay Tasks are not completed, then mark the &apos;Completed&apos; checkbox as FALSE on the TaskRay Project.</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
@@ -40,7 +40,7 @@
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>
-        <description>If all the related TaskRay Tasks are completed, then mark the &#39;Completed&#39; checkbox as TRUE on the TaskRay Project.</description>
+        <description>If all the related TaskRay Tasks are completed, then mark the &apos;Completed&apos; checkbox as TRUE on the TaskRay Project.</description>
         <formula>AND( NOT(ISNEW()), Open_Tasks__c = 0 )</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>

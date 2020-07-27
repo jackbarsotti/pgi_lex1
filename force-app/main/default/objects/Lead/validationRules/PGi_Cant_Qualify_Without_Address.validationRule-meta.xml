@@ -2,7 +2,7 @@
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>PGi_Cant_Qualify_Without_Address</fullName>
     <active>false</active>
-    <description>Requires leads to have an Address (Street, City, State, Zip, Country, Phone and Email) to be populated before the status can be set to Qualifying. Update: COD-1445, If Lead Source equals &#39;ZoomInfo&#39;, then Country not required.</description>
+    <description>Requires leads to have an Address (Street, City, State, Zip, Country, Phone and Email) to be populated before the status can be set to Qualifying. Update: COD-1445, If Lead Source equals &apos;ZoomInfo&apos;, then Country not required.</description>
     <errorConditionFormula>AND( 
 $User.Alias &lt;&gt; &quot;autocln&quot;, 
 $User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;, 

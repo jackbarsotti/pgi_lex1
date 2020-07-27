@@ -3,7 +3,7 @@
     <fullName>saleswings__Type__c</fullName>
     <deprecated>false</deprecated>
     <externalId>false</externalId>
-    <formula>IF(saleswings__Contact__c != null, &#39;Contact&#39;, &#39;Lead&#39;)</formula>
+    <formula>IF(saleswings__Contact__c != null, &apos;Contact&apos;, &apos;Lead&apos;)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Type</label>
     <required>false</required>

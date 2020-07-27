@@ -3,7 +3,7 @@
     <fullName>Current_Customer_s_spend_with_PGi__c</fullName>
     <externalId>false</externalId>
     <inlineHelpText>If a current customer, what is their current spend with PGi?</inlineHelpText>
-    <label>Current Customer&#39;s spend with PGi?</label>
+    <label>Current Customer&apos;s spend with PGi?</label>
     <length>500</length>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

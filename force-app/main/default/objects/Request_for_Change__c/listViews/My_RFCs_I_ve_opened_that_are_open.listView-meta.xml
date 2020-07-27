@@ -21,7 +21,7 @@
         <operation>equals</operation>
         <value>New,Draft,Pending Approval(s),Approved,CAB Approved</value>
     </filters>
-    <label>*My RFCs I&#39;ve opened &amp; that are open</label>
+    <label>*My RFCs I&apos;ve opened &amp; that are open</label>
     <language>en_US</language>
     <sharedTo>
         <allInternalUsers/>

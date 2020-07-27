@@ -25,12 +25,12 @@ var intentscore = &quot;{!sixsense__X6sense_New_Company__c.sixsense__Intent_Scor
 var profilefit = &quot;{!sixsense__X6sense_New_Company__c.sixsense__Profile_Fit__c}&quot;; 
 
 
-if (street == &#39;&#39; || typevalue == &#39;&#39; || website == &#39;&#39; || country == &#39;&#39; || city == &#39;&#39; || zipcode == &#39;&#39; || state == &#39;&#39; || buystage == &#39;&#39; || intentscore == &#39;&#39; || profilefit == &#39;&#39; ) 
-alert(&#39;Please fill in all the following fields to convert to an account - Account Type, Website, Country, State, City, Street Address,ZipCode, Buying Stage, IntentScore and ProfileFit&#39;); 
+if (street == &apos;&apos; || typevalue == &apos;&apos; || website == &apos;&apos; || country == &apos;&apos; || city == &apos;&apos; || zipcode == &apos;&apos; || state == &apos;&apos; || buystage == &apos;&apos; || intentscore == &apos;&apos; || profilefit == &apos;&apos; ) 
+alert(&apos;Please fill in all the following fields to convert to an account - Account Type, Website, Country, State, City, Street Address,ZipCode, Buying Stage, IntentScore and ProfileFit&apos;); 
 
 else 
 { 
-var acc = new sforce.SObject(&#39;Account&#39;); 
+var acc = new sforce.SObject(&apos;Account&apos;); 
 /* 
 alert(name); 
 alert(typevalue); 
@@ -42,7 +42,7 @@ alert(street);
 alert(zipcode); 
 */ 
 acc.Name = name; 
-acc.AccountSource = &#39;6Sense New Account&#39;; 
+acc.AccountSource = &apos;6Sense New Account&apos;; 
 acc.Type = typevalue ; 
 acc.website = website; 
 acc.billingcountry = country; 
@@ -57,12 +57,12 @@ acc.billingpostalcode = zipcode;
 
 result = sforce.connection.create([acc]); 
 
-if(result[0].success == &#39;true&#39;) 
-alert(&#39;Account created successfully&#39;); 
+if(result[0].success == &apos;true&apos;) 
+alert(&apos;Account created successfully&apos;); 
 else 
 { 
 alert(result); 
-alert(&#39;Unable to create account&#39;); 
+alert(&apos;Unable to create account&apos;); 
 } 
 
 

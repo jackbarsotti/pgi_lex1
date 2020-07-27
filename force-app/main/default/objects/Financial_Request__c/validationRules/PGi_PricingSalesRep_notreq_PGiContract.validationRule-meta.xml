@@ -5,11 +5,11 @@
     <description>Unless the Origin is marked as &quot;PGi Contract&quot;, a  Sales Rep is required</description>
     <errorConditionFormula>AND(
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
-NOT (ispickval( Origin__c, &#39;PGi Contract&#39;)),
-NOT (ispickval( Origin__c, &#39;Email&#39;)),
-NOT (ispickval( Request_Type__c, &#39;HR Request&#39;)),
+NOT (ispickval( Origin__c, &apos;PGi Contract&apos;)),
+NOT (ispickval( Origin__c, &apos;Email&apos;)),
+NOT (ispickval( Request_Type__c, &apos;HR Request&apos;)),
 isblank( Sales_Rep__c ),
-RecordType.DeveloperName = &#39;PGi_Pricing_Help_Request&#39;)</errorConditionFormula>
+RecordType.DeveloperName = &apos;PGi_Pricing_Help_Request&apos;)</errorConditionFormula>
     <errorDisplayField>Sales_Rep__c</errorDisplayField>
     <errorMessage>Sales Rep is required.</errorMessage>
 </ValidationRule>

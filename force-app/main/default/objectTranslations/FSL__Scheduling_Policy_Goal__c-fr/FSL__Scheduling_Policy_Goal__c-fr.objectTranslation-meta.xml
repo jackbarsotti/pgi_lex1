@@ -9,7 +9,7 @@
         <value>Objectifs de stratégie de planification</value>
     </caseValues>
     <gender>Masculine</gender>
-    <nameFieldLabel>Nom de l&#39;objectif de la stratégie de pla</nameFieldLabel>
+    <nameFieldLabel>Nom de l&apos;objectif de la stratégie de pla</nameFieldLabel>
     <startsWith>Vowel</startsWith>
     <validationRules>
         <errorMessage><!-- Weight can&apos;t have zero value --></errorMessage>

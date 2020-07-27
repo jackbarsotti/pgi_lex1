@@ -3,9 +3,9 @@
     <fullName>TASKRAY__trProjectCompletionOption__c</fullName>
     <defaultValue>&quot;Choice&quot;</defaultValue>
     <deprecated>false</deprecated>
-    <description>This setting controls how TaskRay Projects can be completed via the &#39;Complete&#39; button.  &quot;Simple&quot; offers the choice to set the &#39;Completed&#39; checkbox on a Project; &quot;Choice&quot; will prompt the user to choose between completing the Project or launching the Flow specified in the &#39;Completion Flow&#39; custom setting; &quot;Flow&quot; will automatically launch the Flow specified in the &#39;Completion Flow&#39; custom setting.</description>
+    <description>This setting controls how TaskRay Projects can be completed via the &apos;Complete&apos; button.  &quot;Simple&quot; offers the choice to set the &apos;Completed&apos; checkbox on a Project; &quot;Choice&quot; will prompt the user to choose between completing the Project or launching the Flow specified in the &apos;Completion Flow&apos; custom setting; &quot;Flow&quot; will automatically launch the Flow specified in the &apos;Completion Flow&apos; custom setting.</description>
     <externalId>false</externalId>
-    <inlineHelpText>TaskRay Projects can be completed via the &#39;Complete&#39; button.  &quot;Simple&quot; offers the choice to set the &#39;Completed&#39; checkbox on a Project; &quot;Choice&quot; will prompt the user to choose how to complete the project.</inlineHelpText>
+    <inlineHelpText>TaskRay Projects can be completed via the &apos;Complete&apos; button.  &quot;Simple&quot; offers the choice to set the &apos;Completed&apos; checkbox on a Project; &quot;Choice&quot; will prompt the user to choose how to complete the project.</inlineHelpText>
     <label>Project Completion Option</label>
     <length>255</length>
     <required>false</required>

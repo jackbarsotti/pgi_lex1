@@ -315,7 +315,7 @@
         <fullName>RFC_Set_Assigned_To_s_Manager_s_Email</fullName>
         <field>Assigned_To_s_Manager_s_Email__c</field>
         <formula>Assigned_To__r.Manager.Email</formula>
-        <name>RFC - Set Assigned To&#39;s Manager&#39;s Email</name>
+        <name>RFC - Set Assigned To&apos;s Manager&apos;s Email</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Formula</operation>
         <protected>false</protected>

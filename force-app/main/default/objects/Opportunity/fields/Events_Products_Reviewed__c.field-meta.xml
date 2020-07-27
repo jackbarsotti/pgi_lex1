@@ -42,9 +42,9 @@
                 <label>Simulive</label>
             </value>
             <value>
-                <fullName>Add&#39;l Event Services</fullName>
+                <fullName>Add&apos;l Event Services</fullName>
                 <default>false</default>
-                <label>Add&#39;l Event Services</label>
+                <label>Add&apos;l Event Services</label>
             </value>
         </valueSetDefinition>
     </valueSet>

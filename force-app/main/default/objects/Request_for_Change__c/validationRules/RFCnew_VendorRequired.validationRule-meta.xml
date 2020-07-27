@@ -4,7 +4,7 @@
     <active>true</active>
     <description>If Vendor is selected as the Type then the Related Vendor is required</description>
     <errorConditionFormula>AND(
-ISPICKVAL(Type__c,&#39;Vendor&#39;),
+ISPICKVAL(Type__c,&apos;Vendor&apos;),
 ISBLANK( Related_Vendor__c ) 
 )</errorConditionFormula>
     <errorDisplayField>Related_Vendor__c</errorDisplayField>

@@ -9,7 +9,7 @@
         <value>Envois déclenchés</value>
     </caseValues>
     <gender>Masculine</gender>
-    <nameFieldLabel>Nom de l&#39;envoi déclenché</nameFieldLabel>
+    <nameFieldLabel>Nom de l&apos;envoi déclenché</nameFieldLabel>
     <recordTypes>
         <label><!-- Active --></label>
         <name>et4ae5__Active</name>

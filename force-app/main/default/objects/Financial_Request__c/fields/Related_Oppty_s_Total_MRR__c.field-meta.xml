@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <formula>Related_Opportunity__r.MRR_Total__c</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>Related Oppty&#39;s Total MRR</label>
+    <label>Related Oppty&apos;s Total MRR</label>
     <precision>18</precision>
     <required>false</required>
     <scale>2</scale>

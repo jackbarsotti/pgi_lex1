@@ -3,7 +3,7 @@
     <fullName>PGi_s_solution_to_address_client_needs__c</fullName>
     <externalId>false</externalId>
     <inlineHelpText>Please summarize the customer’s requirements, &amp; why you feel PGi’s services are the right fit for this customer.  How does our solution address customer’s needs?  What value does our solution give them?  What proof do you want to demonstrate in Proposal?</inlineHelpText>
-    <label>PGi&#39;s solution to address client needs?</label>
+    <label>PGi&apos;s solution to address client needs?</label>
     <length>3000</length>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

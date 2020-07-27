@@ -291,11 +291,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoU</field>
-            <label>Account&#39;s Parent Name</label>
+            <label>Account&apos;s Parent Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMot</field>
-            <label>Account&#39;s Partner Name</label>
+            <label>Account&apos;s Partner Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhB</field>
@@ -811,7 +811,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhW</field>
-            <label>Int&#39;l Audio Rates Discussed?</label>
+            <label>Int&apos;l Audio Rates Discussed?</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUj</field>
@@ -843,7 +843,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BD2e2</field>
-            <label>Last Modified User&#39;s Profile</label>
+            <label>Last Modified User&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUk</field>
@@ -1027,7 +1027,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNmj</field>
-            <label>No&#39; of SfB Online Users</label>
+            <label>No&apos; of SfB Online Users</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsS39</field>
@@ -1179,7 +1179,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGzAr</field>
-            <label>Oppty Owner&#39;s Territory Code</label>
+            <label>Oppty Owner&apos;s Territory Code</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUr</field>
@@ -1211,47 +1211,47 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obE8</field>
-            <label>Owner&#39;s Channel</label>
+            <label>Owner&apos;s Channel</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4Aa</field>
-            <label>Owner&#39;s Company</label>
+            <label>Owner&apos;s Company</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARiTf</field>
-            <label>Owner&#39;s Country</label>
+            <label>Owner&apos;s Country</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxTMR</field>
-            <label>Owner&#39;s Manager</label>
+            <label>Owner&apos;s Manager</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008pd9y</field>
-            <label>Owner&#39;s Manager&#39;s Email</label>
+            <label>Owner&apos;s Manager&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obEH</field>
-            <label>Owner&#39;s Mngt Level Report</label>
+            <label>Owner&apos;s Mngt Level Report</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGcij</field>
-            <label>Owner&#39;s Profile</label>
+            <label>Owner&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008oC5S</field>
-            <label>Owner&#39;s Region</label>
+            <label>Owner&apos;s Region</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BL4xe</field>
-            <label>Owner&#39;s Role</label>
+            <label>Owner&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OF</field>
-            <label>Owner&#39;s RVP</label>
+            <label>Owner&apos;s RVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OG</field>
-            <label>Owner&#39;s SVP</label>
+            <label>Owner&apos;s SVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxU7j</field>
@@ -1271,11 +1271,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoA</field>
-            <label>Partner Rep&#39;s Email</label>
+            <label>Partner Rep&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoP</field>
-            <label>Partner Rep&#39;s Phone</label>
+            <label>Partner Rep&apos;s Phone</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BCzrc</field>
@@ -1383,11 +1383,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ6L</field>
-            <label>Primary Contact&#39;s Buyer Persona</label>
+            <label>Primary Contact&apos;s Buyer Persona</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ45</field>
-            <label>Primary Contact&#39;s Role</label>
+            <label>Primary Contact&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BKvbP</field>
@@ -1831,7 +1831,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARjy8</field>
-            <label>TCV (SE&#39;s)</label>
+            <label>TCV (SE&apos;s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn3</field>
@@ -1923,7 +1923,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn6</field>
-            <label>Total No&#39; of Seats</label>
+            <label>Total No&apos; of Seats</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn7</field>
@@ -2886,11 +2886,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoU</field>
-            <label>Account&#39;s Parent Name</label>
+            <label>Account&apos;s Parent Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMot</field>
-            <label>Account&#39;s Partner Name</label>
+            <label>Account&apos;s Partner Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhB</field>
@@ -3406,7 +3406,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhW</field>
-            <label>Int&#39;l Audio Rates Discussed?</label>
+            <label>Int&apos;l Audio Rates Discussed?</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUj</field>
@@ -3438,7 +3438,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BD2e2</field>
-            <label>Last Modified User&#39;s Profile</label>
+            <label>Last Modified User&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUk</field>
@@ -3622,7 +3622,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNmj</field>
-            <label>No&#39; of SfB Online Users</label>
+            <label>No&apos; of SfB Online Users</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsS39</field>
@@ -3774,7 +3774,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGzAr</field>
-            <label>Oppty Owner&#39;s Territory Code</label>
+            <label>Oppty Owner&apos;s Territory Code</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUr</field>
@@ -3806,47 +3806,47 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obE8</field>
-            <label>Owner&#39;s Channel</label>
+            <label>Owner&apos;s Channel</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4Aa</field>
-            <label>Owner&#39;s Company</label>
+            <label>Owner&apos;s Company</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARiTf</field>
-            <label>Owner&#39;s Country</label>
+            <label>Owner&apos;s Country</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxTMR</field>
-            <label>Owner&#39;s Manager</label>
+            <label>Owner&apos;s Manager</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008pd9y</field>
-            <label>Owner&#39;s Manager&#39;s Email</label>
+            <label>Owner&apos;s Manager&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obEH</field>
-            <label>Owner&#39;s Mngt Level Report</label>
+            <label>Owner&apos;s Mngt Level Report</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGcij</field>
-            <label>Owner&#39;s Profile</label>
+            <label>Owner&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008oC5S</field>
-            <label>Owner&#39;s Region</label>
+            <label>Owner&apos;s Region</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BL4xe</field>
-            <label>Owner&#39;s Role</label>
+            <label>Owner&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OF</field>
-            <label>Owner&#39;s RVP</label>
+            <label>Owner&apos;s RVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OG</field>
-            <label>Owner&#39;s SVP</label>
+            <label>Owner&apos;s SVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxU7j</field>
@@ -3866,11 +3866,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoA</field>
-            <label>Partner Rep&#39;s Email</label>
+            <label>Partner Rep&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoP</field>
-            <label>Partner Rep&#39;s Phone</label>
+            <label>Partner Rep&apos;s Phone</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BCzrc</field>
@@ -3978,11 +3978,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ6L</field>
-            <label>Primary Contact&#39;s Buyer Persona</label>
+            <label>Primary Contact&apos;s Buyer Persona</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ45</field>
-            <label>Primary Contact&#39;s Role</label>
+            <label>Primary Contact&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BKvbP</field>
@@ -4426,7 +4426,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARjy8</field>
-            <label>TCV (SE&#39;s)</label>
+            <label>TCV (SE&apos;s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn3</field>
@@ -4518,7 +4518,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn6</field>
-            <label>Total No&#39; of Seats</label>
+            <label>Total No&apos; of Seats</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn7</field>
@@ -5485,11 +5485,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoU</field>
-            <label>Account&#39;s Parent Name</label>
+            <label>Account&apos;s Parent Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMot</field>
-            <label>Account&#39;s Partner Name</label>
+            <label>Account&apos;s Partner Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhB</field>
@@ -6001,7 +6001,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhW</field>
-            <label>Int&#39;l Audio Rates Discussed?</label>
+            <label>Int&apos;l Audio Rates Discussed?</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUj</field>
@@ -6033,7 +6033,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BD2e2</field>
-            <label>Last Modified User&#39;s Profile</label>
+            <label>Last Modified User&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUk</field>
@@ -6217,7 +6217,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNmj</field>
-            <label>No&#39; of SfB Online Users</label>
+            <label>No&apos; of SfB Online Users</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsS39</field>
@@ -6369,7 +6369,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGzAr</field>
-            <label>Oppty Owner&#39;s Territory Code</label>
+            <label>Oppty Owner&apos;s Territory Code</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUr</field>
@@ -6401,47 +6401,47 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obE8</field>
-            <label>Owner&#39;s Channel</label>
+            <label>Owner&apos;s Channel</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4Aa</field>
-            <label>Owner&#39;s Company</label>
+            <label>Owner&apos;s Company</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARiTf</field>
-            <label>Owner&#39;s Country</label>
+            <label>Owner&apos;s Country</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxTMR</field>
-            <label>Owner&#39;s Manager</label>
+            <label>Owner&apos;s Manager</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008pd9y</field>
-            <label>Owner&#39;s Manager&#39;s Email</label>
+            <label>Owner&apos;s Manager&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obEH</field>
-            <label>Owner&#39;s Mngt Level Report</label>
+            <label>Owner&apos;s Mngt Level Report</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGcij</field>
-            <label>Owner&#39;s Profile</label>
+            <label>Owner&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008oC5S</field>
-            <label>Owner&#39;s Region</label>
+            <label>Owner&apos;s Region</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BL4xe</field>
-            <label>Owner&#39;s Role</label>
+            <label>Owner&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OF</field>
-            <label>Owner&#39;s RVP</label>
+            <label>Owner&apos;s RVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OG</field>
-            <label>Owner&#39;s SVP</label>
+            <label>Owner&apos;s SVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxU7j</field>
@@ -6461,11 +6461,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoA</field>
-            <label>Partner Rep&#39;s Email</label>
+            <label>Partner Rep&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoP</field>
-            <label>Partner Rep&#39;s Phone</label>
+            <label>Partner Rep&apos;s Phone</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BCzrc</field>
@@ -6573,11 +6573,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ6L</field>
-            <label>Primary Contact&#39;s Buyer Persona</label>
+            <label>Primary Contact&apos;s Buyer Persona</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ45</field>
-            <label>Primary Contact&#39;s Role</label>
+            <label>Primary Contact&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BKvbP</field>
@@ -7021,7 +7021,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARjy8</field>
-            <label>TCV (SE&#39;s)</label>
+            <label>TCV (SE&apos;s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn3</field>
@@ -7113,7 +7113,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn6</field>
-            <label>Total No&#39; of Seats</label>
+            <label>Total No&apos; of Seats</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn7</field>
@@ -8080,11 +8080,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoU</field>
-            <label>Account&#39;s Parent Name</label>
+            <label>Account&apos;s Parent Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMot</field>
-            <label>Account&#39;s Partner Name</label>
+            <label>Account&apos;s Partner Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhB</field>
@@ -8596,7 +8596,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhW</field>
-            <label>Int&#39;l Audio Rates Discussed?</label>
+            <label>Int&apos;l Audio Rates Discussed?</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUj</field>
@@ -8628,7 +8628,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BD2e2</field>
-            <label>Last Modified User&#39;s Profile</label>
+            <label>Last Modified User&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUk</field>
@@ -8812,7 +8812,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNmj</field>
-            <label>No&#39; of SfB Online Users</label>
+            <label>No&apos; of SfB Online Users</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsS39</field>
@@ -8964,7 +8964,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGzAr</field>
-            <label>Oppty Owner&#39;s Territory Code</label>
+            <label>Oppty Owner&apos;s Territory Code</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUr</field>
@@ -8996,47 +8996,47 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obE8</field>
-            <label>Owner&#39;s Channel</label>
+            <label>Owner&apos;s Channel</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4Aa</field>
-            <label>Owner&#39;s Company</label>
+            <label>Owner&apos;s Company</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARiTf</field>
-            <label>Owner&#39;s Country</label>
+            <label>Owner&apos;s Country</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxTMR</field>
-            <label>Owner&#39;s Manager</label>
+            <label>Owner&apos;s Manager</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008pd9y</field>
-            <label>Owner&#39;s Manager&#39;s Email</label>
+            <label>Owner&apos;s Manager&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obEH</field>
-            <label>Owner&#39;s Mngt Level Report</label>
+            <label>Owner&apos;s Mngt Level Report</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGcij</field>
-            <label>Owner&#39;s Profile</label>
+            <label>Owner&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008oC5S</field>
-            <label>Owner&#39;s Region</label>
+            <label>Owner&apos;s Region</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BL4xe</field>
-            <label>Owner&#39;s Role</label>
+            <label>Owner&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OF</field>
-            <label>Owner&#39;s RVP</label>
+            <label>Owner&apos;s RVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OG</field>
-            <label>Owner&#39;s SVP</label>
+            <label>Owner&apos;s SVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxU7j</field>
@@ -9056,11 +9056,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoA</field>
-            <label>Partner Rep&#39;s Email</label>
+            <label>Partner Rep&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoP</field>
-            <label>Partner Rep&#39;s Phone</label>
+            <label>Partner Rep&apos;s Phone</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BCzrc</field>
@@ -9168,11 +9168,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ6L</field>
-            <label>Primary Contact&#39;s Buyer Persona</label>
+            <label>Primary Contact&apos;s Buyer Persona</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ45</field>
-            <label>Primary Contact&#39;s Role</label>
+            <label>Primary Contact&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BKvbP</field>
@@ -9616,7 +9616,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARjy8</field>
-            <label>TCV (SE&#39;s)</label>
+            <label>TCV (SE&apos;s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn3</field>
@@ -9708,7 +9708,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn6</field>
-            <label>Total No&#39; of Seats</label>
+            <label>Total No&apos; of Seats</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn7</field>
@@ -10667,11 +10667,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoU</field>
-            <label>Account&#39;s Parent Name</label>
+            <label>Account&apos;s Parent Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMot</field>
-            <label>Account&#39;s Partner Name</label>
+            <label>Account&apos;s Partner Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhB</field>
@@ -11187,7 +11187,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhW</field>
-            <label>Int&#39;l Audio Rates Discussed?</label>
+            <label>Int&apos;l Audio Rates Discussed?</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUj</field>
@@ -11219,7 +11219,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BD2e2</field>
-            <label>Last Modified User&#39;s Profile</label>
+            <label>Last Modified User&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUk</field>
@@ -11403,7 +11403,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNmj</field>
-            <label>No&#39; of SfB Online Users</label>
+            <label>No&apos; of SfB Online Users</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsS39</field>
@@ -11555,7 +11555,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGzAr</field>
-            <label>Oppty Owner&#39;s Territory Code</label>
+            <label>Oppty Owner&apos;s Territory Code</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUr</field>
@@ -11587,47 +11587,47 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obE8</field>
-            <label>Owner&#39;s Channel</label>
+            <label>Owner&apos;s Channel</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4Aa</field>
-            <label>Owner&#39;s Company</label>
+            <label>Owner&apos;s Company</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARiTf</field>
-            <label>Owner&#39;s Country</label>
+            <label>Owner&apos;s Country</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxTMR</field>
-            <label>Owner&#39;s Manager</label>
+            <label>Owner&apos;s Manager</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008pd9y</field>
-            <label>Owner&#39;s Manager&#39;s Email</label>
+            <label>Owner&apos;s Manager&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obEH</field>
-            <label>Owner&#39;s Mngt Level Report</label>
+            <label>Owner&apos;s Mngt Level Report</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGcij</field>
-            <label>Owner&#39;s Profile</label>
+            <label>Owner&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008oC5S</field>
-            <label>Owner&#39;s Region</label>
+            <label>Owner&apos;s Region</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BL4xe</field>
-            <label>Owner&#39;s Role</label>
+            <label>Owner&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OF</field>
-            <label>Owner&#39;s RVP</label>
+            <label>Owner&apos;s RVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OG</field>
-            <label>Owner&#39;s SVP</label>
+            <label>Owner&apos;s SVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxU7j</field>
@@ -11647,11 +11647,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoA</field>
-            <label>Partner Rep&#39;s Email</label>
+            <label>Partner Rep&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoP</field>
-            <label>Partner Rep&#39;s Phone</label>
+            <label>Partner Rep&apos;s Phone</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BCzrc</field>
@@ -11759,11 +11759,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ6L</field>
-            <label>Primary Contact&#39;s Buyer Persona</label>
+            <label>Primary Contact&apos;s Buyer Persona</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ45</field>
-            <label>Primary Contact&#39;s Role</label>
+            <label>Primary Contact&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BKvbP</field>
@@ -12207,7 +12207,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARjy8</field>
-            <label>TCV (SE&#39;s)</label>
+            <label>TCV (SE&apos;s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn3</field>
@@ -12299,7 +12299,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn6</field>
-            <label>Total No&#39; of Seats</label>
+            <label>Total No&apos; of Seats</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn7</field>
@@ -13252,11 +13252,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoU</field>
-            <label>Account&#39;s Parent Name</label>
+            <label>Account&apos;s Parent Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMot</field>
-            <label>Account&#39;s Partner Name</label>
+            <label>Account&apos;s Partner Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhB</field>
@@ -13772,7 +13772,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhW</field>
-            <label>Int&#39;l Audio Rates Discussed?</label>
+            <label>Int&apos;l Audio Rates Discussed?</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUj</field>
@@ -13804,7 +13804,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BD2e2</field>
-            <label>Last Modified User&#39;s Profile</label>
+            <label>Last Modified User&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUk</field>
@@ -13988,7 +13988,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNmj</field>
-            <label>No&#39; of SfB Online Users</label>
+            <label>No&apos; of SfB Online Users</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsS39</field>
@@ -14140,7 +14140,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGzAr</field>
-            <label>Oppty Owner&#39;s Territory Code</label>
+            <label>Oppty Owner&apos;s Territory Code</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUr</field>
@@ -14172,47 +14172,47 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obE8</field>
-            <label>Owner&#39;s Channel</label>
+            <label>Owner&apos;s Channel</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4Aa</field>
-            <label>Owner&#39;s Company</label>
+            <label>Owner&apos;s Company</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARiTf</field>
-            <label>Owner&#39;s Country</label>
+            <label>Owner&apos;s Country</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxTMR</field>
-            <label>Owner&#39;s Manager</label>
+            <label>Owner&apos;s Manager</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008pd9y</field>
-            <label>Owner&#39;s Manager&#39;s Email</label>
+            <label>Owner&apos;s Manager&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obEH</field>
-            <label>Owner&#39;s Mngt Level Report</label>
+            <label>Owner&apos;s Mngt Level Report</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGcij</field>
-            <label>Owner&#39;s Profile</label>
+            <label>Owner&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008oC5S</field>
-            <label>Owner&#39;s Region</label>
+            <label>Owner&apos;s Region</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BL4xe</field>
-            <label>Owner&#39;s Role</label>
+            <label>Owner&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OF</field>
-            <label>Owner&#39;s RVP</label>
+            <label>Owner&apos;s RVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OG</field>
-            <label>Owner&#39;s SVP</label>
+            <label>Owner&apos;s SVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxU7j</field>
@@ -14232,11 +14232,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoA</field>
-            <label>Partner Rep&#39;s Email</label>
+            <label>Partner Rep&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoP</field>
-            <label>Partner Rep&#39;s Phone</label>
+            <label>Partner Rep&apos;s Phone</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BCzrc</field>
@@ -14344,11 +14344,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ6L</field>
-            <label>Primary Contact&#39;s Buyer Persona</label>
+            <label>Primary Contact&apos;s Buyer Persona</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ45</field>
-            <label>Primary Contact&#39;s Role</label>
+            <label>Primary Contact&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BKvbP</field>
@@ -14792,7 +14792,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARjy8</field>
-            <label>TCV (SE&#39;s)</label>
+            <label>TCV (SE&apos;s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn3</field>
@@ -14884,7 +14884,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn6</field>
-            <label>Total No&#39; of Seats</label>
+            <label>Total No&apos; of Seats</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn7</field>
@@ -15840,11 +15840,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoU</field>
-            <label>Account&#39;s Parent Name</label>
+            <label>Account&apos;s Parent Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMot</field>
-            <label>Account&#39;s Partner Name</label>
+            <label>Account&apos;s Partner Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhB</field>
@@ -16360,7 +16360,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhW</field>
-            <label>Int&#39;l Audio Rates Discussed?</label>
+            <label>Int&apos;l Audio Rates Discussed?</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUj</field>
@@ -16392,7 +16392,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BD2e2</field>
-            <label>Last Modified User&#39;s Profile</label>
+            <label>Last Modified User&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUk</field>
@@ -16576,7 +16576,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNmj</field>
-            <label>No&#39; of SfB Online Users</label>
+            <label>No&apos; of SfB Online Users</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsS39</field>
@@ -16728,7 +16728,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGzAr</field>
-            <label>Oppty Owner&#39;s Territory Code</label>
+            <label>Oppty Owner&apos;s Territory Code</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUr</field>
@@ -16760,47 +16760,47 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obE8</field>
-            <label>Owner&#39;s Channel</label>
+            <label>Owner&apos;s Channel</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4Aa</field>
-            <label>Owner&#39;s Company</label>
+            <label>Owner&apos;s Company</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARiTf</field>
-            <label>Owner&#39;s Country</label>
+            <label>Owner&apos;s Country</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxTMR</field>
-            <label>Owner&#39;s Manager</label>
+            <label>Owner&apos;s Manager</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008pd9y</field>
-            <label>Owner&#39;s Manager&#39;s Email</label>
+            <label>Owner&apos;s Manager&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obEH</field>
-            <label>Owner&#39;s Mngt Level Report</label>
+            <label>Owner&apos;s Mngt Level Report</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGcij</field>
-            <label>Owner&#39;s Profile</label>
+            <label>Owner&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008oC5S</field>
-            <label>Owner&#39;s Region</label>
+            <label>Owner&apos;s Region</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BL4xe</field>
-            <label>Owner&#39;s Role</label>
+            <label>Owner&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OF</field>
-            <label>Owner&#39;s RVP</label>
+            <label>Owner&apos;s RVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OG</field>
-            <label>Owner&#39;s SVP</label>
+            <label>Owner&apos;s SVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxU7j</field>
@@ -16820,11 +16820,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoA</field>
-            <label>Partner Rep&#39;s Email</label>
+            <label>Partner Rep&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoP</field>
-            <label>Partner Rep&#39;s Phone</label>
+            <label>Partner Rep&apos;s Phone</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BCzrc</field>
@@ -16932,11 +16932,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ6L</field>
-            <label>Primary Contact&#39;s Buyer Persona</label>
+            <label>Primary Contact&apos;s Buyer Persona</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ45</field>
-            <label>Primary Contact&#39;s Role</label>
+            <label>Primary Contact&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BKvbP</field>
@@ -17380,7 +17380,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARjy8</field>
-            <label>TCV (SE&#39;s)</label>
+            <label>TCV (SE&apos;s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn3</field>
@@ -17472,7 +17472,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn6</field>
-            <label>Total No&#39; of Seats</label>
+            <label>Total No&apos; of Seats</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn7</field>
@@ -18425,11 +18425,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoU</field>
-            <label>Account&#39;s Parent Name</label>
+            <label>Account&apos;s Parent Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMot</field>
-            <label>Account&#39;s Partner Name</label>
+            <label>Account&apos;s Partner Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhB</field>
@@ -18945,7 +18945,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhW</field>
-            <label>Int&#39;l Audio Rates Discussed?</label>
+            <label>Int&apos;l Audio Rates Discussed?</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUj</field>
@@ -18977,7 +18977,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BD2e2</field>
-            <label>Last Modified User&#39;s Profile</label>
+            <label>Last Modified User&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUk</field>
@@ -19161,7 +19161,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNmj</field>
-            <label>No&#39; of SfB Online Users</label>
+            <label>No&apos; of SfB Online Users</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsS39</field>
@@ -19313,7 +19313,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGzAr</field>
-            <label>Oppty Owner&#39;s Territory Code</label>
+            <label>Oppty Owner&apos;s Territory Code</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUr</field>
@@ -19345,47 +19345,47 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obE8</field>
-            <label>Owner&#39;s Channel</label>
+            <label>Owner&apos;s Channel</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4Aa</field>
-            <label>Owner&#39;s Company</label>
+            <label>Owner&apos;s Company</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARiTf</field>
-            <label>Owner&#39;s Country</label>
+            <label>Owner&apos;s Country</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxTMR</field>
-            <label>Owner&#39;s Manager</label>
+            <label>Owner&apos;s Manager</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008pd9y</field>
-            <label>Owner&#39;s Manager&#39;s Email</label>
+            <label>Owner&apos;s Manager&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obEH</field>
-            <label>Owner&#39;s Mngt Level Report</label>
+            <label>Owner&apos;s Mngt Level Report</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGcij</field>
-            <label>Owner&#39;s Profile</label>
+            <label>Owner&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008oC5S</field>
-            <label>Owner&#39;s Region</label>
+            <label>Owner&apos;s Region</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BL4xe</field>
-            <label>Owner&#39;s Role</label>
+            <label>Owner&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OF</field>
-            <label>Owner&#39;s RVP</label>
+            <label>Owner&apos;s RVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OG</field>
-            <label>Owner&#39;s SVP</label>
+            <label>Owner&apos;s SVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxU7j</field>
@@ -19405,11 +19405,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoA</field>
-            <label>Partner Rep&#39;s Email</label>
+            <label>Partner Rep&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoP</field>
-            <label>Partner Rep&#39;s Phone</label>
+            <label>Partner Rep&apos;s Phone</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BCzrc</field>
@@ -19517,11 +19517,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ6L</field>
-            <label>Primary Contact&#39;s Buyer Persona</label>
+            <label>Primary Contact&apos;s Buyer Persona</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ45</field>
-            <label>Primary Contact&#39;s Role</label>
+            <label>Primary Contact&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BKvbP</field>
@@ -19965,7 +19965,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARjy8</field>
-            <label>TCV (SE&#39;s)</label>
+            <label>TCV (SE&apos;s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn3</field>
@@ -20057,7 +20057,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn6</field>
-            <label>Total No&#39; of Seats</label>
+            <label>Total No&apos; of Seats</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn7</field>
@@ -21013,11 +21013,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoU</field>
-            <label>Account&#39;s Parent Name</label>
+            <label>Account&apos;s Parent Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMot</field>
-            <label>Account&#39;s Partner Name</label>
+            <label>Account&apos;s Partner Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhB</field>
@@ -21533,7 +21533,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhW</field>
-            <label>Int&#39;l Audio Rates Discussed?</label>
+            <label>Int&apos;l Audio Rates Discussed?</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUj</field>
@@ -21565,7 +21565,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BD2e2</field>
-            <label>Last Modified User&#39;s Profile</label>
+            <label>Last Modified User&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUk</field>
@@ -21749,7 +21749,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNmj</field>
-            <label>No&#39; of SfB Online Users</label>
+            <label>No&apos; of SfB Online Users</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsS39</field>
@@ -21901,7 +21901,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGzAr</field>
-            <label>Oppty Owner&#39;s Territory Code</label>
+            <label>Oppty Owner&apos;s Territory Code</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUr</field>
@@ -21933,47 +21933,47 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obE8</field>
-            <label>Owner&#39;s Channel</label>
+            <label>Owner&apos;s Channel</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4Aa</field>
-            <label>Owner&#39;s Company</label>
+            <label>Owner&apos;s Company</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARiTf</field>
-            <label>Owner&#39;s Country</label>
+            <label>Owner&apos;s Country</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxTMR</field>
-            <label>Owner&#39;s Manager</label>
+            <label>Owner&apos;s Manager</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008pd9y</field>
-            <label>Owner&#39;s Manager&#39;s Email</label>
+            <label>Owner&apos;s Manager&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obEH</field>
-            <label>Owner&#39;s Mngt Level Report</label>
+            <label>Owner&apos;s Mngt Level Report</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGcij</field>
-            <label>Owner&#39;s Profile</label>
+            <label>Owner&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008oC5S</field>
-            <label>Owner&#39;s Region</label>
+            <label>Owner&apos;s Region</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BL4xe</field>
-            <label>Owner&#39;s Role</label>
+            <label>Owner&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OF</field>
-            <label>Owner&#39;s RVP</label>
+            <label>Owner&apos;s RVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OG</field>
-            <label>Owner&#39;s SVP</label>
+            <label>Owner&apos;s SVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxU7j</field>
@@ -21993,11 +21993,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoA</field>
-            <label>Partner Rep&#39;s Email</label>
+            <label>Partner Rep&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoP</field>
-            <label>Partner Rep&#39;s Phone</label>
+            <label>Partner Rep&apos;s Phone</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BCzrc</field>
@@ -22105,11 +22105,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ6L</field>
-            <label>Primary Contact&#39;s Buyer Persona</label>
+            <label>Primary Contact&apos;s Buyer Persona</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ45</field>
-            <label>Primary Contact&#39;s Role</label>
+            <label>Primary Contact&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BKvbP</field>
@@ -22553,7 +22553,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARjy8</field>
-            <label>TCV (SE&#39;s)</label>
+            <label>TCV (SE&apos;s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn3</field>
@@ -22645,7 +22645,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn6</field>
-            <label>Total No&#39; of Seats</label>
+            <label>Total No&apos; of Seats</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn7</field>
@@ -23598,11 +23598,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoU</field>
-            <label>Account&#39;s Parent Name</label>
+            <label>Account&apos;s Parent Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMot</field>
-            <label>Account&#39;s Partner Name</label>
+            <label>Account&apos;s Partner Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhB</field>
@@ -24118,7 +24118,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhW</field>
-            <label>Int&#39;l Audio Rates Discussed?</label>
+            <label>Int&apos;l Audio Rates Discussed?</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUj</field>
@@ -24150,7 +24150,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BD2e2</field>
-            <label>Last Modified User&#39;s Profile</label>
+            <label>Last Modified User&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUk</field>
@@ -24334,7 +24334,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNmj</field>
-            <label>No&#39; of SfB Online Users</label>
+            <label>No&apos; of SfB Online Users</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsS39</field>
@@ -24486,7 +24486,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGzAr</field>
-            <label>Oppty Owner&#39;s Territory Code</label>
+            <label>Oppty Owner&apos;s Territory Code</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUr</field>
@@ -24518,47 +24518,47 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obE8</field>
-            <label>Owner&#39;s Channel</label>
+            <label>Owner&apos;s Channel</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4Aa</field>
-            <label>Owner&#39;s Company</label>
+            <label>Owner&apos;s Company</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARiTf</field>
-            <label>Owner&#39;s Country</label>
+            <label>Owner&apos;s Country</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxTMR</field>
-            <label>Owner&#39;s Manager</label>
+            <label>Owner&apos;s Manager</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008pd9y</field>
-            <label>Owner&#39;s Manager&#39;s Email</label>
+            <label>Owner&apos;s Manager&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obEH</field>
-            <label>Owner&#39;s Mngt Level Report</label>
+            <label>Owner&apos;s Mngt Level Report</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGcij</field>
-            <label>Owner&#39;s Profile</label>
+            <label>Owner&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008oC5S</field>
-            <label>Owner&#39;s Region</label>
+            <label>Owner&apos;s Region</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BL4xe</field>
-            <label>Owner&#39;s Role</label>
+            <label>Owner&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OF</field>
-            <label>Owner&#39;s RVP</label>
+            <label>Owner&apos;s RVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OG</field>
-            <label>Owner&#39;s SVP</label>
+            <label>Owner&apos;s SVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxU7j</field>
@@ -24578,11 +24578,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoA</field>
-            <label>Partner Rep&#39;s Email</label>
+            <label>Partner Rep&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoP</field>
-            <label>Partner Rep&#39;s Phone</label>
+            <label>Partner Rep&apos;s Phone</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BCzrc</field>
@@ -24690,11 +24690,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ6L</field>
-            <label>Primary Contact&#39;s Buyer Persona</label>
+            <label>Primary Contact&apos;s Buyer Persona</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ45</field>
-            <label>Primary Contact&#39;s Role</label>
+            <label>Primary Contact&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BKvbP</field>
@@ -25138,7 +25138,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARjy8</field>
-            <label>TCV (SE&#39;s)</label>
+            <label>TCV (SE&apos;s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn3</field>
@@ -25230,7 +25230,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn6</field>
-            <label>Total No&#39; of Seats</label>
+            <label>Total No&apos; of Seats</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn7</field>
@@ -26186,11 +26186,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoU</field>
-            <label>Account&#39;s Parent Name</label>
+            <label>Account&apos;s Parent Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMot</field>
-            <label>Account&#39;s Partner Name</label>
+            <label>Account&apos;s Partner Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhB</field>
@@ -26706,7 +26706,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhW</field>
-            <label>Int&#39;l Audio Rates Discussed?</label>
+            <label>Int&apos;l Audio Rates Discussed?</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUj</field>
@@ -26738,7 +26738,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BD2e2</field>
-            <label>Last Modified User&#39;s Profile</label>
+            <label>Last Modified User&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUk</field>
@@ -26922,7 +26922,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNmj</field>
-            <label>No&#39; of SfB Online Users</label>
+            <label>No&apos; of SfB Online Users</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsS39</field>
@@ -27074,7 +27074,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGzAr</field>
-            <label>Oppty Owner&#39;s Territory Code</label>
+            <label>Oppty Owner&apos;s Territory Code</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUr</field>
@@ -27106,47 +27106,47 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obE8</field>
-            <label>Owner&#39;s Channel</label>
+            <label>Owner&apos;s Channel</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4Aa</field>
-            <label>Owner&#39;s Company</label>
+            <label>Owner&apos;s Company</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARiTf</field>
-            <label>Owner&#39;s Country</label>
+            <label>Owner&apos;s Country</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxTMR</field>
-            <label>Owner&#39;s Manager</label>
+            <label>Owner&apos;s Manager</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008pd9y</field>
-            <label>Owner&#39;s Manager&#39;s Email</label>
+            <label>Owner&apos;s Manager&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obEH</field>
-            <label>Owner&#39;s Mngt Level Report</label>
+            <label>Owner&apos;s Mngt Level Report</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGcij</field>
-            <label>Owner&#39;s Profile</label>
+            <label>Owner&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008oC5S</field>
-            <label>Owner&#39;s Region</label>
+            <label>Owner&apos;s Region</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BL4xe</field>
-            <label>Owner&#39;s Role</label>
+            <label>Owner&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OF</field>
-            <label>Owner&#39;s RVP</label>
+            <label>Owner&apos;s RVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OG</field>
-            <label>Owner&#39;s SVP</label>
+            <label>Owner&apos;s SVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxU7j</field>
@@ -27166,11 +27166,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoA</field>
-            <label>Partner Rep&#39;s Email</label>
+            <label>Partner Rep&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoP</field>
-            <label>Partner Rep&#39;s Phone</label>
+            <label>Partner Rep&apos;s Phone</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BCzrc</field>
@@ -27278,11 +27278,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ6L</field>
-            <label>Primary Contact&#39;s Buyer Persona</label>
+            <label>Primary Contact&apos;s Buyer Persona</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ45</field>
-            <label>Primary Contact&#39;s Role</label>
+            <label>Primary Contact&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BKvbP</field>
@@ -27726,7 +27726,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARjy8</field>
-            <label>TCV (SE&#39;s)</label>
+            <label>TCV (SE&apos;s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn3</field>
@@ -27818,7 +27818,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn6</field>
-            <label>Total No&#39; of Seats</label>
+            <label>Total No&apos; of Seats</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn7</field>
@@ -28771,11 +28771,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoU</field>
-            <label>Account&#39;s Parent Name</label>
+            <label>Account&apos;s Parent Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMot</field>
-            <label>Account&#39;s Partner Name</label>
+            <label>Account&apos;s Partner Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhB</field>
@@ -29291,7 +29291,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhW</field>
-            <label>Int&#39;l Audio Rates Discussed?</label>
+            <label>Int&apos;l Audio Rates Discussed?</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUj</field>
@@ -29323,7 +29323,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BD2e2</field>
-            <label>Last Modified User&#39;s Profile</label>
+            <label>Last Modified User&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUk</field>
@@ -29507,7 +29507,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNmj</field>
-            <label>No&#39; of SfB Online Users</label>
+            <label>No&apos; of SfB Online Users</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsS39</field>
@@ -29659,7 +29659,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGzAr</field>
-            <label>Oppty Owner&#39;s Territory Code</label>
+            <label>Oppty Owner&apos;s Territory Code</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUr</field>
@@ -29691,47 +29691,47 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obE8</field>
-            <label>Owner&#39;s Channel</label>
+            <label>Owner&apos;s Channel</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4Aa</field>
-            <label>Owner&#39;s Company</label>
+            <label>Owner&apos;s Company</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARiTf</field>
-            <label>Owner&#39;s Country</label>
+            <label>Owner&apos;s Country</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxTMR</field>
-            <label>Owner&#39;s Manager</label>
+            <label>Owner&apos;s Manager</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008pd9y</field>
-            <label>Owner&#39;s Manager&#39;s Email</label>
+            <label>Owner&apos;s Manager&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obEH</field>
-            <label>Owner&#39;s Mngt Level Report</label>
+            <label>Owner&apos;s Mngt Level Report</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGcij</field>
-            <label>Owner&#39;s Profile</label>
+            <label>Owner&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008oC5S</field>
-            <label>Owner&#39;s Region</label>
+            <label>Owner&apos;s Region</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BL4xe</field>
-            <label>Owner&#39;s Role</label>
+            <label>Owner&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OF</field>
-            <label>Owner&#39;s RVP</label>
+            <label>Owner&apos;s RVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OG</field>
-            <label>Owner&#39;s SVP</label>
+            <label>Owner&apos;s SVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxU7j</field>
@@ -29751,11 +29751,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoA</field>
-            <label>Partner Rep&#39;s Email</label>
+            <label>Partner Rep&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoP</field>
-            <label>Partner Rep&#39;s Phone</label>
+            <label>Partner Rep&apos;s Phone</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BCzrc</field>
@@ -29863,11 +29863,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ6L</field>
-            <label>Primary Contact&#39;s Buyer Persona</label>
+            <label>Primary Contact&apos;s Buyer Persona</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ45</field>
-            <label>Primary Contact&#39;s Role</label>
+            <label>Primary Contact&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BKvbP</field>
@@ -30311,7 +30311,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARjy8</field>
-            <label>TCV (SE&#39;s)</label>
+            <label>TCV (SE&apos;s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn3</field>
@@ -30403,7 +30403,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn6</field>
-            <label>Total No&#39; of Seats</label>
+            <label>Total No&apos; of Seats</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn7</field>
@@ -31359,11 +31359,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoU</field>
-            <label>Account&#39;s Parent Name</label>
+            <label>Account&apos;s Parent Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMot</field>
-            <label>Account&#39;s Partner Name</label>
+            <label>Account&apos;s Partner Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhB</field>
@@ -31879,7 +31879,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhW</field>
-            <label>Int&#39;l Audio Rates Discussed?</label>
+            <label>Int&apos;l Audio Rates Discussed?</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUj</field>
@@ -31911,7 +31911,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BD2e2</field>
-            <label>Last Modified User&#39;s Profile</label>
+            <label>Last Modified User&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUk</field>
@@ -32095,7 +32095,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNmj</field>
-            <label>No&#39; of SfB Online Users</label>
+            <label>No&apos; of SfB Online Users</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsS39</field>
@@ -32243,7 +32243,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGzAr</field>
-            <label>Oppty Owner&#39;s Territory Code</label>
+            <label>Oppty Owner&apos;s Territory Code</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUr</field>
@@ -32275,47 +32275,47 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obE8</field>
-            <label>Owner&#39;s Channel</label>
+            <label>Owner&apos;s Channel</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4Aa</field>
-            <label>Owner&#39;s Company</label>
+            <label>Owner&apos;s Company</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARiTf</field>
-            <label>Owner&#39;s Country</label>
+            <label>Owner&apos;s Country</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxTMR</field>
-            <label>Owner&#39;s Manager</label>
+            <label>Owner&apos;s Manager</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008pd9y</field>
-            <label>Owner&#39;s Manager&#39;s Email</label>
+            <label>Owner&apos;s Manager&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obEH</field>
-            <label>Owner&#39;s Mngt Level Report</label>
+            <label>Owner&apos;s Mngt Level Report</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGcij</field>
-            <label>Owner&#39;s Profile</label>
+            <label>Owner&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008oC5S</field>
-            <label>Owner&#39;s Region</label>
+            <label>Owner&apos;s Region</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BL4xe</field>
-            <label>Owner&#39;s Role</label>
+            <label>Owner&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OF</field>
-            <label>Owner&#39;s RVP</label>
+            <label>Owner&apos;s RVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OG</field>
-            <label>Owner&#39;s SVP</label>
+            <label>Owner&apos;s SVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxU7j</field>
@@ -32335,11 +32335,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoA</field>
-            <label>Partner Rep&#39;s Email</label>
+            <label>Partner Rep&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoP</field>
-            <label>Partner Rep&#39;s Phone</label>
+            <label>Partner Rep&apos;s Phone</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BCzrc</field>
@@ -32447,11 +32447,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ6L</field>
-            <label>Primary Contact&#39;s Buyer Persona</label>
+            <label>Primary Contact&apos;s Buyer Persona</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ45</field>
-            <label>Primary Contact&#39;s Role</label>
+            <label>Primary Contact&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BKvbP</field>
@@ -32895,7 +32895,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARjy8</field>
-            <label>TCV (SE&#39;s)</label>
+            <label>TCV (SE&apos;s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn3</field>
@@ -32987,7 +32987,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn6</field>
-            <label>Total No&#39; of Seats</label>
+            <label>Total No&apos; of Seats</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn7</field>
@@ -33939,11 +33939,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoU</field>
-            <label>Account&#39;s Parent Name</label>
+            <label>Account&apos;s Parent Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMot</field>
-            <label>Account&#39;s Partner Name</label>
+            <label>Account&apos;s Partner Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhB</field>
@@ -34459,7 +34459,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhW</field>
-            <label>Int&#39;l Audio Rates Discussed?</label>
+            <label>Int&apos;l Audio Rates Discussed?</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUj</field>
@@ -34491,7 +34491,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BD2e2</field>
-            <label>Last Modified User&#39;s Profile</label>
+            <label>Last Modified User&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUk</field>
@@ -34675,7 +34675,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNmj</field>
-            <label>No&#39; of SfB Online Users</label>
+            <label>No&apos; of SfB Online Users</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsS39</field>
@@ -34827,7 +34827,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGzAr</field>
-            <label>Oppty Owner&#39;s Territory Code</label>
+            <label>Oppty Owner&apos;s Territory Code</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUr</field>
@@ -34859,47 +34859,47 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obE8</field>
-            <label>Owner&#39;s Channel</label>
+            <label>Owner&apos;s Channel</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4Aa</field>
-            <label>Owner&#39;s Company</label>
+            <label>Owner&apos;s Company</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARiTf</field>
-            <label>Owner&#39;s Country</label>
+            <label>Owner&apos;s Country</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxTMR</field>
-            <label>Owner&#39;s Manager</label>
+            <label>Owner&apos;s Manager</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008pd9y</field>
-            <label>Owner&#39;s Manager&#39;s Email</label>
+            <label>Owner&apos;s Manager&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obEH</field>
-            <label>Owner&#39;s Mngt Level Report</label>
+            <label>Owner&apos;s Mngt Level Report</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGcij</field>
-            <label>Owner&#39;s Profile</label>
+            <label>Owner&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008oC5S</field>
-            <label>Owner&#39;s Region</label>
+            <label>Owner&apos;s Region</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BL4xe</field>
-            <label>Owner&#39;s Role</label>
+            <label>Owner&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OF</field>
-            <label>Owner&#39;s RVP</label>
+            <label>Owner&apos;s RVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OG</field>
-            <label>Owner&#39;s SVP</label>
+            <label>Owner&apos;s SVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxU7j</field>
@@ -34919,11 +34919,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoA</field>
-            <label>Partner Rep&#39;s Email</label>
+            <label>Partner Rep&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoP</field>
-            <label>Partner Rep&#39;s Phone</label>
+            <label>Partner Rep&apos;s Phone</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BCzrc</field>
@@ -35031,11 +35031,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ6L</field>
-            <label>Primary Contact&#39;s Buyer Persona</label>
+            <label>Primary Contact&apos;s Buyer Persona</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ45</field>
-            <label>Primary Contact&#39;s Role</label>
+            <label>Primary Contact&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BKvbP</field>
@@ -35479,7 +35479,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARjy8</field>
-            <label>TCV (SE&#39;s)</label>
+            <label>TCV (SE&apos;s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn3</field>
@@ -35571,7 +35571,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn6</field>
-            <label>Total No&#39; of Seats</label>
+            <label>Total No&apos; of Seats</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn7</field>
@@ -36527,11 +36527,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoU</field>
-            <label>Account&#39;s Parent Name</label>
+            <label>Account&apos;s Parent Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMot</field>
-            <label>Account&#39;s Partner Name</label>
+            <label>Account&apos;s Partner Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhB</field>
@@ -37047,7 +37047,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhW</field>
-            <label>Int&#39;l Audio Rates Discussed?</label>
+            <label>Int&apos;l Audio Rates Discussed?</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUj</field>
@@ -37079,7 +37079,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BD2e2</field>
-            <label>Last Modified User&#39;s Profile</label>
+            <label>Last Modified User&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUk</field>
@@ -37263,7 +37263,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNmj</field>
-            <label>No&#39; of SfB Online Users</label>
+            <label>No&apos; of SfB Online Users</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsS39</field>
@@ -37415,7 +37415,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGzAr</field>
-            <label>Oppty Owner&#39;s Territory Code</label>
+            <label>Oppty Owner&apos;s Territory Code</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUr</field>
@@ -37447,47 +37447,47 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obE8</field>
-            <label>Owner&#39;s Channel</label>
+            <label>Owner&apos;s Channel</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4Aa</field>
-            <label>Owner&#39;s Company</label>
+            <label>Owner&apos;s Company</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARiTf</field>
-            <label>Owner&#39;s Country</label>
+            <label>Owner&apos;s Country</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxTMR</field>
-            <label>Owner&#39;s Manager</label>
+            <label>Owner&apos;s Manager</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008pd9y</field>
-            <label>Owner&#39;s Manager&#39;s Email</label>
+            <label>Owner&apos;s Manager&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obEH</field>
-            <label>Owner&#39;s Mngt Level Report</label>
+            <label>Owner&apos;s Mngt Level Report</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGcij</field>
-            <label>Owner&#39;s Profile</label>
+            <label>Owner&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008oC5S</field>
-            <label>Owner&#39;s Region</label>
+            <label>Owner&apos;s Region</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BL4xe</field>
-            <label>Owner&#39;s Role</label>
+            <label>Owner&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OF</field>
-            <label>Owner&#39;s RVP</label>
+            <label>Owner&apos;s RVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OG</field>
-            <label>Owner&#39;s SVP</label>
+            <label>Owner&apos;s SVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxU7j</field>
@@ -37507,11 +37507,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoA</field>
-            <label>Partner Rep&#39;s Email</label>
+            <label>Partner Rep&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoP</field>
-            <label>Partner Rep&#39;s Phone</label>
+            <label>Partner Rep&apos;s Phone</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BCzrc</field>
@@ -37619,11 +37619,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ6L</field>
-            <label>Primary Contact&#39;s Buyer Persona</label>
+            <label>Primary Contact&apos;s Buyer Persona</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ45</field>
-            <label>Primary Contact&#39;s Role</label>
+            <label>Primary Contact&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BKvbP</field>
@@ -38067,7 +38067,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARjy8</field>
-            <label>TCV (SE&#39;s)</label>
+            <label>TCV (SE&apos;s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn3</field>
@@ -38159,7 +38159,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn6</field>
-            <label>Total No&#39; of Seats</label>
+            <label>Total No&apos; of Seats</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn7</field>
@@ -39112,11 +39112,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoU</field>
-            <label>Account&#39;s Parent Name</label>
+            <label>Account&apos;s Parent Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMot</field>
-            <label>Account&#39;s Partner Name</label>
+            <label>Account&apos;s Partner Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhB</field>
@@ -39632,7 +39632,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BZbhW</field>
-            <label>Int&#39;l Audio Rates Discussed?</label>
+            <label>Int&apos;l Audio Rates Discussed?</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUj</field>
@@ -39664,7 +39664,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BD2e2</field>
-            <label>Last Modified User&#39;s Profile</label>
+            <label>Last Modified User&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUk</field>
@@ -39848,7 +39848,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNmj</field>
-            <label>No&#39; of SfB Online Users</label>
+            <label>No&apos; of SfB Online Users</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsS39</field>
@@ -40000,7 +40000,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGzAr</field>
-            <label>Oppty Owner&#39;s Territory Code</label>
+            <label>Oppty Owner&apos;s Territory Code</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxRUr</field>
@@ -40032,47 +40032,47 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obE8</field>
-            <label>Owner&#39;s Channel</label>
+            <label>Owner&apos;s Channel</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4Aa</field>
-            <label>Owner&#39;s Company</label>
+            <label>Owner&apos;s Company</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARiTf</field>
-            <label>Owner&#39;s Country</label>
+            <label>Owner&apos;s Country</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxTMR</field>
-            <label>Owner&#39;s Manager</label>
+            <label>Owner&apos;s Manager</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008pd9y</field>
-            <label>Owner&#39;s Manager&#39;s Email</label>
+            <label>Owner&apos;s Manager&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008obEH</field>
-            <label>Owner&#39;s Mngt Level Report</label>
+            <label>Owner&apos;s Mngt Level Report</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BGcij</field>
-            <label>Owner&#39;s Profile</label>
+            <label>Owner&apos;s Profile</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N30000008oC5S</field>
-            <label>Owner&#39;s Region</label>
+            <label>Owner&apos;s Region</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BL4xe</field>
-            <label>Owner&#39;s Role</label>
+            <label>Owner&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OF</field>
-            <label>Owner&#39;s RVP</label>
+            <label>Owner&apos;s RVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BV4OG</field>
-            <label>Owner&#39;s SVP</label>
+            <label>Owner&apos;s SVP</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxU7j</field>
@@ -40092,11 +40092,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoA</field>
-            <label>Partner Rep&#39;s Email</label>
+            <label>Partner Rep&apos;s Email</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000BdMoP</field>
-            <label>Partner Rep&#39;s Phone</label>
+            <label>Partner Rep&apos;s Phone</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BCzrc</field>
@@ -40204,11 +40204,11 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ6L</field>
-            <label>Primary Contact&#39;s Buyer Persona</label>
+            <label>Primary Contact&apos;s Buyer Persona</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AsQ45</field>
-            <label>Primary Contact&#39;s Role</label>
+            <label>Primary Contact&apos;s Role</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1300000BKvbP</field>
@@ -40652,7 +40652,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00Na000000ARjy8</field>
-            <label>TCV (SE&#39;s)</label>
+            <label>TCV (SE&apos;s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn3</field>
@@ -40744,7 +40744,7 @@
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn6</field>
-            <label>Total No&#39; of Seats</label>
+            <label>Total No&apos; of Seats</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N1B00000AxNn7</field>

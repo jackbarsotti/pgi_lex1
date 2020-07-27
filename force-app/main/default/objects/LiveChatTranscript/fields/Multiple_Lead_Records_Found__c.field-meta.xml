@@ -3,7 +3,7 @@
     <fullName>Multiple_Lead_Records_Found__c</fullName>
     <defaultValue>false</defaultValue>
     <externalId>false</externalId>
-    <inlineHelpText>If checked, indicates multiple Lead records were found with the chat visitor&#39;s email address. Please search the email address to locate the correct Lead.</inlineHelpText>
+    <inlineHelpText>If checked, indicates multiple Lead records were found with the chat visitor&apos;s email address. Please search the email address to locate the correct Lead.</inlineHelpText>
     <label>Multiple Lead Records Found</label>
     <trackHistory>false</trackHistory>
     <type>Checkbox</type>

@@ -11,7 +11,7 @@
     <columns>TASK.LAST_UPDATE</columns>
     <columns>UPDATEDBY_USER.ALIAS</columns>
     <filterScope>Team</filterScope>
-    <label>xxMy Team&#39;s Activities</label>
+    <label>xxMy Team&apos;s Activities</label>
     <sharedTo>
         <allInternalUsers/>
     </sharedTo>

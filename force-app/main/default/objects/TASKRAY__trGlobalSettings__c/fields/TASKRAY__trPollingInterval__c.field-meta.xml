@@ -3,7 +3,7 @@
     <fullName>TASKRAY__trPollingInterval__c</fullName>
     <defaultValue>10.000</defaultValue>
     <deprecated>false</deprecated>
-    <description>Sets the polling interval in seconds for Taskray&#39;s concurrency feature.</description>
+    <description>Sets the polling interval in seconds for Taskray&apos;s concurrency feature.</description>
     <externalId>false</externalId>
     <inlineHelpText>This value is the interval that TaskRay checks for updates from other users. This value can range from 5 to 99 seconds, with a default value of 10. Higher values reduce Salesforce server impact but increase the time period between update notifications.</inlineHelpText>
     <label>Polling Interval</label>

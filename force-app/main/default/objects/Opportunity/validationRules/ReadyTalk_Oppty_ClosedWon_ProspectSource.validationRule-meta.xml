@@ -5,7 +5,7 @@
     <description>For Sales Opportunities, Must Populate Prospect Source Field to Mark Closed Won</description>
     <errorConditionFormula>AND( $RecordType.Name = &quot;ReadyTalk Opportunity&quot;, 
 $User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;,
-ISPICKVAL(StageName, &#39;Closed Won&#39;), 
+ISPICKVAL(StageName, &apos;Closed Won&apos;), 
 ISBLANK( TEXT( Prospect_Status__c )))</errorConditionFormula>
     <errorDisplayField>Prospect_Status__c</errorDisplayField>
     <errorMessage>Prospect Source is required for an opportunity to be marked as Closed Won.</errorMessage>

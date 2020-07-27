@@ -71,6 +71,10 @@
         <translation><!-- Subscription License Order --></translation>
     </picklistValues>
     <picklistValues>
+        <masterLabel>TPx Service Agreement</masterLabel>
+        <translation><!-- TPx Service Agreement --></translation>
+    </picklistValues>
+    <picklistValues>
         <masterLabel>WebEx Agreement</masterLabel>
         <translation><!-- WebEx Agreement --></translation>
     </picklistValues>

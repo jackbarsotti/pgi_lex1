@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Storage_Space_Size__c</fullName>
     <externalId>false</externalId>
-    <inlineHelpText>If uncertain, you are welcome to answer &quot;I don&#39;t know&quot;.</inlineHelpText>
+    <inlineHelpText>If uncertain, you are welcome to answer &quot;I don&apos;t know&quot;.</inlineHelpText>
     <label>Storage Space Size</label>
     <length>30</length>
     <required>false</required>

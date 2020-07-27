@@ -638,7 +638,7 @@
     </fieldUpdates>
     <fieldUpdates>
         <fullName>RT_Reservation_Comments_Field_Update</fullName>
-        <description>If Custom Scripted Rec&#39;d = TBD, then Reservation Comments field gets automatically filled in.</description>
+        <description>If Custom Scripted Rec&apos;d = TBD, then Reservation Comments field gets automatically filled in.</description>
         <field>Comments__c</field>
         <formula>&quot;IMPORTANT: Please send your customized script to events@readytalk.com at least 24hrs in advance. This ensures we have time to upload it and the operator has time to prepare for it.&quot;</formula>
         <name>RT_Reservation Comments Field Update</name>
@@ -940,7 +940,7 @@
             <operation>lessOrEqual</operation>
             <value>TODAY</value>
         </criteriaItems>
-        <description>This workflow sends an email to the Account Manager when a Meeting Organizer&#39;s first RT Event is completed.</description>
+        <description>This workflow sends an email to the Account Manager when a Meeting Organizer&apos;s first RT Event is completed.</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
@@ -976,7 +976,7 @@
             <operation>equals</operation>
             <value>True</value>
         </criteriaItems>
-        <description>This workflow sends an email to the Account Executive and Account Owner when a Meeting Organizer&#39;s first RT Event is booked.</description>
+        <description>This workflow sends an email to the Account Executive and Account Owner when a Meeting Organizer&apos;s first RT Event is booked.</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
@@ -1387,7 +1387,7 @@
             <operation>equals</operation>
             <value>False</value>
         </criteriaItems>
-        <description>Sends email to event creator to ensure event wasn&#39;t set to closed in error.</description>
+        <description>Sends email to event creator to ensure event wasn&apos;t set to closed in error.</description>
         <triggerType>onCreateOnly</triggerType>
     </rules>
     <rules>
@@ -1578,7 +1578,7 @@
             <operation>equals</operation>
             <value>&quot;No, TBD&quot;</value>
         </criteriaItems>
-        <description>The Customer Script Text will be automatically updated on Webinar, Gold, Platinum and Premium Event Templates if the Custom Scripted Rec&#39;d field equals TBD</description>
+        <description>The Customer Script Text will be automatically updated on Webinar, Gold, Platinum and Premium Event Templates if the Custom Scripted Rec&apos;d field equals TBD</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>

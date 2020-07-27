@@ -7,5 +7,5 @@
     <masterLabel>Clone This User - Classic</masterLabel>
     <openType>onClickJavaScript</openType>
     <protected>false</protected>
-    <url>window.open(&#39;/apex/ctu__CloneThisUser?Id={!User.Id}&amp;Desktop=true&#39;);</url>
+    <url>window.open(&apos;/apex/ctu__CloneThisUser?Id={!User.Id}&amp;Desktop=true&apos;);</url>
 </WebLink>

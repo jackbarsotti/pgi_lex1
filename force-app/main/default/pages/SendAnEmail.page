@@ -1,5 +1,5 @@
 <apex:page sidebar="{!IF(passedInFrom != null, false , true)}" showHeader="{!IF(passedInFrom != null, false , true)}" controller="EmailComposer"
-    id="page" action="{!init}" extensions="CustomEmailTemplateLookupController" docType="html-5.0">
+    id="page" action="{!init}" extensions="CustomEmailTemplateLookupController" docType="html-5.0" lightningStylesheets="true">
     <apex:includeLightning />
     <script type="text/javascript">
         sforce.connection.sessionId = '{!GETSESSIONID()}';
@@ -259,6 +259,7 @@ $('#toEmailsPillbox').on('added.fu.pillbox', function (event, item) {
                             <script src="/ckeditor/ckeditor-3.6.2/ckeditor.js?t=3.6.2.3" type="text/javascript"/>
                             <script>CKEDITOR.timestamp = '3.6.2.1';
                             var prototocolAndHost = window.location.protocol + '//' + window.location.host;
+                              console.log('prototocolAndHost>>',prototocolAndHost);
                             var editor = CKEDITOR.replace('{!$Component.form.pb.op.tbl.td.rich.rta}', {baseHref : prototocolAndHost + '/ckeditor/ckeditor-3.6.2/', customConfig : '/ckeditor/ckeditor-3.6.2/ckeditor.config.js', height : '425', bodyId : 'articleEdit:createDocumentForm:sectionRepeat:0:fieldRepeat:0:fieldName:textAreaDelegate_00NG0000009Thtt_rta_body', toolbar : 'Full', sharedSpaces : { top : 'cke_topSpace', bottom : ' cke_bottomSpace' }, filebrowserImageUploadUrl : '/_ui/common/request/servlet/RtaImageUploadServlet', contentsCss : ['/sCSS/27.0/sprites/1362621144000/Theme3/default/gc/ArticleHtmlDetailElem.css'], disableNativeSpellChecker : false,language : 'en-us',sfdcLabels : { CkeMediaEmbed : { title : 'Embed Multimedia Content', description : 'Use &lt;iframe&gt; code from DailyMotion, Vimeo, and Youtube.', subtitle : 'Paste &amp;lt;iframe&amp;gt; code here:', exampleTitle : 'Example:', example : '\n            \n                &lt;iframe width=\&quot;560\&quot; height=\&quot;315\&quot; src=\&quot;https://www.youtube.com/embed/KcOm0TNvKBA\&quot; frameborder=\&quot;0\&quot; allowfullscreen&gt;&lt;/iframe&gt;\n            \n        ', iframeMissing : 'Invalid &lt;iframe&gt; element. Please use valid code from the approved sites.'}, sfdcSwitchToText : { sfdcSwitchToTextAlt : 'Use plain text'}, CkeImageDialog : { uploadTab : 'Upload Image', infoTab_url : 'URL', error : 'Error:', uploadTab_desc_info : 'Enter a description of the image for visually impaired users', uploadTab_desc : 'Description', infoTab_url_info : 'Example: http://www.mysite.com/myimage.jpg', btn_insert : 'Insert', missingUrlError : 'You must enter a URL', uploadTab_file : 'Select Image', infoTab_desc : 'Description', btn_upadte : 'Update', wrongFileTypeError : 'You can insert only .gif .jpeg and .png files.', infoTab : 'Web Address', title : 'Insert Image', infoTab_desc_info : 'Enter a description of the image for visually impaired users', uploadTab_file_info : 'Maximum size 1 MB. Only png, gif or jpeg'}, CkeImagePaste : { CkeImagePasteWarning : 'Pasting an image is not working properly with Firefox, please use [Copy Image location] instead.'}}});
                             </script> -->
 
@@ -270,7 +271,8 @@ $('#toEmailsPillbox').on('added.fu.pillbox', function (event, item) {
             <apex:outputPanel rendered="{!composeOnLoad && !showForm}">
                 <apex:actionFunction name="composeEmail" action="{!composeEmail}" />
                 <script>
-                    var pageLoad = window.onload;
+                            var pageLoad = window.onload;
+                      console.log('pageLoad>>',pageLoad);
                     window.onload = function () {
                         if (pageLoad && typeof pageLoad == 'function') {
                             pageLoad(); //standard page load

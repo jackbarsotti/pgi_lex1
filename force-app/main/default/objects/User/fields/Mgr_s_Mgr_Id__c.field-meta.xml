@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <formula>Manager.Manager.Id</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>Mgr&#39;s Mgr Id</label>
+    <label>Mgr&apos;s Mgr Id</label>
     <required>false</required>
     <type>Text</type>
     <unique>false</unique>

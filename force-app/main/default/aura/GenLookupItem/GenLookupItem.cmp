@@ -6,13 +6,13 @@
     
     <aura:handler name="init" value="{!this}" action="{!c.init}"/>
     <aura:registerEvent name="lookUpOnItemSelect" type="c:GenLookupItemSelectedEvent"/>
-    <li role="presentation">
+    <li role="presentation" onclick="{!c.onItemSelect }">
     	<span class="slds-lookup__item-action slds-media slds-media--center" role="option">
         	<div class="slds-media__body">
             	<div class="slds-input-has-icon slds-input-has-icon--right">
                 	<!--c:SVGComponent ariaHidden="true" class="slds-input__icon" xlinkHref="/apexpages/slds/latest/assets/icons/standard-sprite/svg/symbols.svg#contact"/-->
   					<div class="slds-lookup__result-text">
-                        <a id="{!globalId + '_id_' + v.item.SObjectId}" role="option" onclick="{!c.onItemSelect }">
+                        <a id="{!globalId + '_id_' + v.item.SObjectId}" role="option" >
                             <c:CJ_Svg svgPath="{!v.listIconSVGPath}" 
                                       category="standard" size="small"
                                       class="{!'slds-icon ' + v.listIconClass + ' slds-icon--small'}"

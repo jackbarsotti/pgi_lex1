@@ -8,8 +8,8 @@ $User.Alias &lt;&gt; &quot;autocln&quot;,
 $User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;,
 !$User.Override_Validation_Rules__c = TRUE, 
 !$Setup.BypassRules__c.Disable_Validation_Rules__c,
-$Profile.Name &lt;&gt; &#39;PGi Implementation Services&#39;,
-BillingCountry = &#39;United States&#39;, 
+$Profile.Name &lt;&gt; &apos;PGi Implementation Services&apos;,
+BillingCountry = &apos;United States&apos;, 
 ISBLANK(BillingPostalCode)
 )</errorConditionFormula>
     <errorDisplayField>BillingPostalCode</errorDisplayField>

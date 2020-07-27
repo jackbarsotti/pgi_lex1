@@ -39,6 +39,7 @@
     <tabs>standard-Forecasting3</tabs>
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-WaveHomeLightning</tabs>
+    <tabs>Batch_Import_Revenue__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Executive_View_Lightning_UtilityBar</utilityBar>
 </CustomApplication>

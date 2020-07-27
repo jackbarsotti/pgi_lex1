@@ -3,7 +3,7 @@
     <fullName>Agent_s_Manager__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
-    <label>Agent&#39;s Manager</label>
+    <label>Agent&apos;s Manager</label>
     <referenceTo>User</referenceTo>
     <relationshipName>CSI2</relationshipName>
     <required>false</required>

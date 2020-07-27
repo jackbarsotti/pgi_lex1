@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <formula>Event_Webcasting_Rates__r.Full_Event_Moderation_Add_l_Min__c</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>Full Event Moderation Add&#39;l Min</label>
+    <label>Full Event Moderation Add&apos;l Min</label>
     <precision>18</precision>
     <required>false</required>
     <scale>2</scale>

@@ -5,7 +5,7 @@
     <description>The Credit Requests &quot;Service Date&quot; must be within the last 60 days</description>
     <errorConditionFormula>AND(
 Service_Date__c - TODAY () &lt; -60,
-RecordType.DeveloperName = &#39;ReadyTalk_Credit_Request&#39;)</errorConditionFormula>
+RecordType.DeveloperName = &apos;ReadyTalk_Credit_Request&apos;)</errorConditionFormula>
     <errorDisplayField>Service_Date__c</errorDisplayField>
     <errorMessage>The Service Date must be within the lat 60 days.</errorMessage>
 </ValidationRule>

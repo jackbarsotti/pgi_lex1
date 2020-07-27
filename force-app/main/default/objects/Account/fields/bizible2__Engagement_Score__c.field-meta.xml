@@ -2,9 +2,9 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>bizible2__Engagement_Score__c</fullName>
     <deprecated>false</deprecated>
-    <description>Bizible&#39;s predictive metric using historical data to indicate how engaged an account is</description>
+    <description>Bizible&apos;s predictive metric using historical data to indicate how engaged an account is</description>
     <externalId>false</externalId>
-    <inlineHelpText>Bizible&#39;s predictive metric using historical data to indicate how engaged an account is</inlineHelpText>
+    <inlineHelpText>Bizible&apos;s predictive metric using historical data to indicate how engaged an account is</inlineHelpText>
     <label>Predictive Engagement Score</label>
     <length>255</length>
     <required>false</required>

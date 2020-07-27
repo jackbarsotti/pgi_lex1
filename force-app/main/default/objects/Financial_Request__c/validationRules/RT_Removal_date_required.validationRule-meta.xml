@@ -4,9 +4,9 @@
     <active>true</active>
     <description>When the Exclusion Duration is marked as &quot;Temporary&quot;, an Exemption Date is required</description>
     <errorConditionFormula>AND(
-ispickval( Duration__c, &#39;Temporary&#39;),
+ispickval( Duration__c, &apos;Temporary&apos;),
 isblank(Exemption_Removal_Date__c),
-RecordType.DeveloperName = &#39;ReadyTalk_Exemption_Request&#39;)</errorConditionFormula>
+RecordType.DeveloperName = &apos;ReadyTalk_Exemption_Request&apos;)</errorConditionFormula>
     <errorDisplayField>Exemption_Removal_Date__c</errorDisplayField>
     <errorMessage>When the Duration is marked as &quot;Temporary&quot;, an Exemption Removal Date is required.</errorMessage>
 </ValidationRule>

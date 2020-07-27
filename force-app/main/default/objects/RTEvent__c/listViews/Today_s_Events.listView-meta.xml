@@ -19,6 +19,6 @@
         <operation>equals</operation>
         <value>TODAY</value>
     </filters>
-    <label>Today&#39;s Events</label>
+    <label>Today&apos;s Events</label>
     <language>en_US</language>
 </ListView>

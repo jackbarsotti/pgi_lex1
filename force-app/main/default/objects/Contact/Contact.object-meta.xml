@@ -340,6 +340,8 @@
         <customTabListAdditionalFields>CONTACT.EMAIL</customTabListAdditionalFields>
         <customTabListAdditionalFields>CONTACT.LAST_ACTIVITY</customTabListAdditionalFields>
         <customTabListAdditionalFields>CORE.USERS.LAST_NAME</customTabListAdditionalFields>
+        <listViewButtons>SalesLoft_Import_Lead_Contact_Lex</listViewButtons>
+        <listViewButtons>SalesLoft_Import_Lead_Contact</listViewButtons>
         <lookupDialogsAdditionalFields>FULL_NAME</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>CONTACT.RECORDTYPE</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>

@@ -961,9 +961,9 @@
                 <label>XO Communications</label>
             </value>
             <value>
-                <fullName>Your Audience Isn&#39;t Listening</fullName>
+                <fullName>Your Audience Isn&apos;t Listening</fullName>
                 <default>false</default>
-                <label>Your Audience Isn&#39;t Listening</label>
+                <label>Your Audience Isn&apos;t Listening</label>
             </value>
         </valueSetDefinition>
     </valueSet>

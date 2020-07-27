@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <formula>Amount__c</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>TCV (SE&#39;s)</label>
+    <label>TCV (SE&apos;s)</label>
     <precision>18</precision>
     <required>false</required>
     <scale>2</scale>

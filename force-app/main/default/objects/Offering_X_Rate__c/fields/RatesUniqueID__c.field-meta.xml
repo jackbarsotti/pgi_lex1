@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <formula>Rate__r.Unique_ID__c</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>Rate&#39;s Unique ID</label>
+    <label>Rate&apos;s Unique ID</label>
     <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Text</type>

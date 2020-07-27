@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Customer_s_Operating_System__c</fullName>
     <externalId>false</externalId>
-    <label>Customer&#39;s Operating System</label>
+    <label>Customer&apos;s Operating System</label>
     <length>50</length>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

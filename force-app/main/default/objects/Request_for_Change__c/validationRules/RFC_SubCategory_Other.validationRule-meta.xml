@@ -4,7 +4,7 @@
     <active>false</active>
     <description>When the Sub Category is Other</description>
     <errorConditionFormula>AND(
-ISPICKVAL(   Sub_Category__c   , &#39;Other&#39;),
+ISPICKVAL(   Sub_Category__c   , &apos;Other&apos;),
 ISBLANK ( If_Other__c )
 )</errorConditionFormula>
     <errorDisplayField>If_Other__c</errorDisplayField>

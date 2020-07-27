@@ -4,9 +4,9 @@
     <active>true</active>
     <description>When the Duration is marked as &quot;Permanent&quot;, an Exemption Date is not required</description>
     <errorConditionFormula>AND(
-ispickval( Duration__c, &#39;Permanent&#39;),
+ispickval( Duration__c, &apos;Permanent&apos;),
 NOT (isblank(Exemption_Removal_Date__c)),
-RecordType.DeveloperName = &#39;ReadyTalk_Exemption_Request&#39;)</errorConditionFormula>
+RecordType.DeveloperName = &apos;ReadyTalk_Exemption_Request&apos;)</errorConditionFormula>
     <errorDisplayField>Exemption_Removal_Date__c</errorDisplayField>
     <errorMessage>When the Duration is marked as &quot;Permanent&quot;, Exemption Removal datee should be blank.</errorMessage>
 </ValidationRule>

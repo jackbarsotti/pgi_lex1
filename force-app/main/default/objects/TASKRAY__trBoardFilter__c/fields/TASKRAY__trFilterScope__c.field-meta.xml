@@ -2,9 +2,9 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>TASKRAY__trFilterScope__c</fullName>
     <deprecated>false</deprecated>
-    <description>Possible Task values: (&#39;allTasks&#39;, &#39;myTasks&#39;). Possible Project values: (&#39;allProjects&#39;, &#39;myProjects&#39;)</description>
+    <description>Possible Task values: (&apos;allTasks&apos;, &apos;myTasks&apos;). Possible Project values: (&apos;allProjects&apos;, &apos;myProjects&apos;)</description>
     <externalId>true</externalId>
-    <inlineHelpText>Possible Task values: (&#39;allTasks&#39;, &#39;myTasks&#39;). Possible Project values: (&#39;allProjects&#39;, &#39;myProjects&#39;)</inlineHelpText>
+    <inlineHelpText>Possible Task values: (&apos;allTasks&apos;, &apos;myTasks&apos;). Possible Project values: (&apos;allProjects&apos;, &apos;myProjects&apos;)</inlineHelpText>
     <label>Filter Scope</label>
     <length>255</length>
     <required>false</required>

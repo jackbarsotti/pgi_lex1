@@ -4,7 +4,7 @@
     <defaultValue>&quot;TASKRAY/TaskRay_Customer_Onboarding_Completion_Flow&quot;</defaultValue>
     <deprecated>false</deprecated>
     <externalId>false</externalId>
-    <inlineHelpText>The API Name of the Screen Flow to run when TaskRay Projects are completed via the &#39;Complete&#39; button. Works with the &#39;Project Completion Option&#39; custom setting.</inlineHelpText>
+    <inlineHelpText>The API Name of the Screen Flow to run when TaskRay Projects are completed via the &apos;Complete&apos; button. Works with the &apos;Project Completion Option&apos; custom setting.</inlineHelpText>
     <label>Project Completion Flow</label>
     <length>255</length>
     <required>false</required>

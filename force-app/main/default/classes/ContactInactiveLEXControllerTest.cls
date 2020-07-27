@@ -7,7 +7,9 @@ public class ContactInactiveLEXControllerTest{
         INSERT conObj;
         
         ContactInactiveLEXController.updateContact(conObj.Id);
-        Contact contactObj=[SELECT Id,Inactive__c FROM Contact WHERE Id=:conObj.Id];
+        Contact contactObj=[SELECT Id,Inactive__c 
+                            FROM Contact 
+                            WHERE Id=:conObj.Id];
         System.assertEquals(true, contactObj.Inactive__c);
     }
     

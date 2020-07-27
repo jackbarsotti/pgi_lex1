@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Technology_Platforms__c</fullName>
     <externalId>false</externalId>
-    <inlineHelpText>Indicate account&#39;s primary technology platforms for IM, Calendaring, CRM, Email and Marketing Automation systems.</inlineHelpText>
+    <inlineHelpText>Indicate account&apos;s primary technology platforms for IM, Calendaring, CRM, Email and Marketing Automation systems.</inlineHelpText>
     <label>Technology Platforms</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

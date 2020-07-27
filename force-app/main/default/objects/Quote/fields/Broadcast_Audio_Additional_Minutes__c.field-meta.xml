@@ -3,7 +3,7 @@
     <fullName>Broadcast_Audio_Additional_Minutes__c</fullName>
     <defaultValue>50</defaultValue>
     <externalId>false</externalId>
-    <label>Broadcast Audio Add&#39;l Minutes</label>
+    <label>Broadcast Audio Add&apos;l Minutes</label>
     <precision>12</precision>
     <required>false</required>
     <scale>2</scale>

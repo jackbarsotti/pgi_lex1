@@ -2127,4 +2127,40 @@ private class iContract_NA_Master_Controller_Test {
 
         test.stopTest();
     }
+ /*   static testMethod void TestEmailDelRegidtration() {
+       
+        Account accttest = PGITestUtilities.getAccountDetails();
+        insert accttest;
+
+        Opportunity opptytest = PGITestUtilities.getOpportunityDetails();
+        insert opptytest;
+
+        Contact cntcttest = PGITestUtilities.getContactDetails(accttest.id);
+        insert cntcttest;
+
+        OpportunityContactRole opptyCntcRole = new OpportunityContactRole();
+        opptyCntcRole.ContactId = cntcttest.Id;
+        opptyCntcRole.OpportunityId = opptytest.Id;
+        opptyCntcRole.IsPrimary = true;
+        insert opptyCntcRole;
+
+        ConMan_Contract__c ctrctest = PGITestUtilities.getConManContractDetails(accttest.id, opptytest.id);
+        ctrctest.Contract_Status__c = 'New';
+        insert ctrctest;
+
+        LicenseSet__c licSet = new LicenseSet__c(name='Billing Services', PGi_Contract__c = ctrctest.id);
+        insert licSet;
+
+        test.startTest();
+
+        ApexPages.currentPage().getParameters().put('id', ctrctest.Id);
+        iContract_NA_Master_Controller cd = new iContract_NA_Master_Controller();
+        cd.emailDelRegidtration();
+       // cd.emailQuoteEvent();
+         cd.showAgreement();
+         cd.showQuote();
+       
+        test.stopTest();
+
+    } */
 }

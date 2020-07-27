@@ -609,9 +609,9 @@
                 <label>V-Cube Hybrid/API</label>
             </value>
             <value>
-                <fullName>Video API&#39;s</fullName>
+                <fullName>Video API&apos;s</fullName>
                 <default>false</default>
-                <label>Video API&#39;s</label>
+                <label>Video API&apos;s</label>
             </value>
             <value>
                 <fullName>Video - Hosted Services</fullName>

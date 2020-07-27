@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Total_MRR_Formula__c</fullName>
     <externalId>false</externalId>
-    <inlineHelpText>Calculated from the total of all Product MRR&#39;s associated with this opportunity.</inlineHelpText>
+    <inlineHelpText>Calculated from the total of all Product MRR&apos;s associated with this opportunity.</inlineHelpText>
     <label>MRR Value</label>
     <summarizedField>OpportunityLineItem.MRR__c</summarizedField>
     <summaryFilterItems>

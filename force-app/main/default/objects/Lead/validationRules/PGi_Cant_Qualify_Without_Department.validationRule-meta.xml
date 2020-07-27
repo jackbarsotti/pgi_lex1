@@ -13,5 +13,5 @@ OR(ISPICKVAL( Department__c , &quot;Unknown&quot;),
  ISBLANK(TEXT(Department__c))
 ))</errorConditionFormula>
     <errorDisplayField>Department__c</errorDisplayField>
-    <errorMessage>The Department can&#39;t be &quot;Unknown&quot; or blank to save the lead with a Status as Qualifying.</errorMessage>
+    <errorMessage>The Department can&apos;t be &quot;Unknown&quot; or blank to save the lead with a Status as Qualifying.</errorMessage>
 </ValidationRule>

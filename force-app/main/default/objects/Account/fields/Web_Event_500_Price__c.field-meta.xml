@@ -4,7 +4,7 @@
     <defaultValue>399.00</defaultValue>
     <description>Default price for Webinar (500) subscription.</description>
     <externalId>false</externalId>
-    <inlineHelpText>Unlimited webinars with up to 500 attendees each (incl. chairperson). Broadcast Audio included. Add&#39;l Web Meeting Participant Rate and Direct/Premium Operator Assist Rates (applied to dial-in participants/chairperson) applied for overages.</inlineHelpText>
+    <inlineHelpText>Unlimited webinars with up to 500 attendees each (incl. chairperson). Broadcast Audio included. Add&apos;l Web Meeting Participant Rate and Direct/Premium Operator Assist Rates (applied to dial-in participants/chairperson) applied for overages.</inlineHelpText>
     <label>Webinar (500) Price</label>
     <precision>12</precision>
     <required>false</required>

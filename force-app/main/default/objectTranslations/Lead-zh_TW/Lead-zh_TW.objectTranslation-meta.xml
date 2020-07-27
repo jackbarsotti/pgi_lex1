@@ -102,6 +102,10 @@
         <label><!-- Ready to Convert --></label>
         <name>Convert_JScriptLex</name>
     </quickActions>
+    <quickActions>
+        <label><!-- SalesLoft Import Lead --></label>
+        <name>SalesLoft_Import_Lead_LEX</name>
+    </quickActions>
     <recordTypes>
         <label><!-- PGi Leads --></label>
         <name>PGi_Leads</name>
@@ -229,6 +233,18 @@
     <webLinks>
         <label><!-- LinkedIn --></label>
         <name>LinkedIn</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SalesLoft_Import_Lead --></label>
+        <name>SalesLoft_Import_Lead</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SalesLoft_Import_Lead_List --></label>
+        <name>SalesLoft_Import_Lead_List</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SalesLoft_Import_Lead_List_Lex --></label>
+        <name>SalesLoft_Import_Lead_List_Lex</name>
     </webLinks>
     <webLinks>
         <label><!-- Sales_Nurture_Track_Process --></label>

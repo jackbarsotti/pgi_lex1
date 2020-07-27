@@ -4,8 +4,8 @@
     <active>true</active>
     <errorConditionFormula>AND ( 
     ISCHANGED(Name),
-    RecordTypeId = &#39;012500000000uT1&#39;,
-    $User.Id &lt;&gt;&#39;00550000000yfEe&#39;,
+    RecordTypeId = &apos;012500000000uT1&apos;,
+    $User.Id &lt;&gt;&apos;00550000000yfEe&apos;,
 $Profile.Name &lt;&gt; &quot;System Administrator&quot; 
 )</errorConditionFormula>
     <errorDisplayField>Name</errorDisplayField>

@@ -2,8 +2,8 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Add_l_Provisioning_Email_Addresses__c</fullName>
     <externalId>false</externalId>
-    <inlineHelpText>Separate add&#39;l email addresses with a semi-colon, comma or hard return.</inlineHelpText>
-    <label>Add&#39;l Provisioning Email Addresses</label>
+    <inlineHelpText>Separate add&apos;l email addresses with a semi-colon, comma or hard return.</inlineHelpText>
+    <label>Add&apos;l Provisioning Email Addresses</label>
     <length>32000</length>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>true</trackHistory>

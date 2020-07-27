@@ -3,7 +3,7 @@
     <fullName>Requested_By_s_Email__c</fullName>
     <externalId>false</externalId>
     <inlineHelpText>If left blank will auto populate to Creator</inlineHelpText>
-    <label>Requested By&#39;s Email</label>
+    <label>Requested By&apos;s Email</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

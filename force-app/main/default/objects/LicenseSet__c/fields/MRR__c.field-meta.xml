@@ -6,22 +6,22 @@
 IF( 
 OR( 
 Subscription_License_Term_Months__c = 0, 
-ISPICKVAL( Billing_Frequency__c ,&#39;One Time Event&#39;)),0, 
+ISPICKVAL( Billing_Frequency__c ,&apos;One Time Event&apos;)),0, 
 IF( 
-ISPICKVAL(Billing_Frequency__c,&#39;Annually&#39;),((Price__c* Number_of_Licensed_Named_Users__c )/ 12), 
+ISPICKVAL(Billing_Frequency__c,&apos;Annually&apos;),((Price__c* Number_of_Licensed_Named_Users__c )/ 12), 
 IF( 
-ISPICKVAL(Billing_Frequency__c,&#39;Quarterly&#39;), ((Price__c* Number_of_Licensed_Named_Users__c )/ 3) 
+ISPICKVAL(Billing_Frequency__c,&apos;Quarterly&apos;), ((Price__c* Number_of_Licensed_Named_Users__c )/ 3) 
 ,Price__c* Number_of_Licensed_Named_Users__c 
 ))),
 
 If ( 
 Or ( 
 Subscription_License_Term_Months__c = 0, 
-ISPICKVAL(  Commitment_Reoccurence__c  ,&#39;month&#39;)),0, 
+ISPICKVAL(  Commitment_Reoccurence__c  ,&apos;month&apos;)),0, 
 If ( 
-ISPICKVAL(Commitment_Reoccurence__c ,&#39;year&#39;),(( Committed_Rate__c *  Committed_Minutes__c  )/ 12), 
+ISPICKVAL(Commitment_Reoccurence__c ,&apos;year&apos;),(( Committed_Rate__c *  Committed_Minutes__c  )/ 12), 
 If ( 
-ISPICKVAL(Commitment_Reoccurence__c ,&#39;quarter&#39;), ((Committed_Rate__c *  Committed_Minutes__c  )/ 3) 
+ISPICKVAL(Commitment_Reoccurence__c ,&apos;quarter&apos;), ((Committed_Rate__c *  Committed_Minutes__c  )/ 3) 
 ,Committed_Rate__c *  Committed_Minutes__c 
 ) 
 )

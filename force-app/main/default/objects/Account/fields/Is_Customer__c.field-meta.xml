@@ -9,7 +9,7 @@ OR(
 Active_Access_Codes__c &gt; 0, 
 Active_FoxDen_Users__c &gt; 0
 ),
-ISPICKVAL(Status__c,&#39;Active&#39;), 
+ISPICKVAL(Status__c,&apos;Active&apos;), 
 Bill_Account__c = TRUE),
 TRUE,FALSE)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>

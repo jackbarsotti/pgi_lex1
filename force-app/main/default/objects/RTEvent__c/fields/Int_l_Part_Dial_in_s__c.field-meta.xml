@@ -3,8 +3,8 @@
     <fullName>Int_l_Part_Dial_in_s__c</fullName>
     <description>Enter dial in numbers</description>
     <externalId>false</externalId>
-    <inlineHelpText>Int&#39;l TOLL participant dial in #</inlineHelpText>
-    <label>Int&#39;l TOLL Part Dial in #&#39;s</label>
+    <inlineHelpText>Int&apos;l TOLL participant dial in #</inlineHelpText>
+    <label>Int&apos;l TOLL Part Dial in #&apos;s</label>
     <length>255</length>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

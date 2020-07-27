@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <formula>No__c +   No_of_SfB__c</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>Total No&#39; of Seats</label>
+    <label>Total No&apos; of Seats</label>
     <precision>18</precision>
     <required>false</required>
     <scale>0</scale>

@@ -1,0 +1,21 @@
+<apex:page standardController="Case" recordSetVar="logs" action="{!assignRecords}" extensions="AssignToMeListBtnCaseController"
+  lightningStylesheets="true">
+  <apex:form id="form">
+    <apex:actionFunction action="{!returnToHomepage}" name="returnToHomepage" rerender="nPbt"></apex:actionFunction>
+  </apex:form>
+  <script>
+
+    window.document.onload = new function (e) {
+      if ({!noRecords
+    })
+    {
+      alert("Please select at least one Record");
+      returnToHomepage();
+    }
+      else
+    {
+      returnToHomepage();
+    }
+    }
+  </script>
+</apex:page>

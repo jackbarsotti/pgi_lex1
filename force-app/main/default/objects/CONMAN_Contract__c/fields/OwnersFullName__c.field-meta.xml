@@ -2,8 +2,8 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>OwnersFullName__c</fullName>
     <externalId>false</externalId>
-    <formula>Owner:User.FirstName + &#39; &#39; + Owner:User.LastName</formula>
-    <label>Owner&#39;s Full Name</label>
+    <formula>Owner:User.FirstName + &apos; &apos; + Owner:User.LastName</formula>
+    <label>Owner&apos;s Full Name</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

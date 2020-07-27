@@ -10,9 +10,9 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Unlimited webinars with up to 3,000 attendees each (incl. chairperson).  Broadcast Audio included.  See Add&#39;l Web Meeting Participant Rate and Direct/Premium Operator Assist Rates (applied to dial-in participants/chairperson) listed below for overages.</fullName>
+                <fullName>Unlimited webinars with up to 3,000 attendees each (incl. chairperson).  Broadcast Audio included.  See Add&apos;l Web Meeting Participant Rate and Direct/Premium Operator Assist Rates (applied to dial-in participants/chairperson) listed below for overages.</fullName>
                 <default>false</default>
-                <label>Unlimited webinars with up to 3,000 attendees each (incl. chairperson).  Broadcast Audio included.  See Add&#39;l Web Meeting Participant Rate and Direct/Premium Operator Assist Rates (applied to dial-in participants/chairperson) listed below for overages.</label>
+                <label>Unlimited webinars with up to 3,000 attendees each (incl. chairperson).  Broadcast Audio included.  See Add&apos;l Web Meeting Participant Rate and Direct/Premium Operator Assist Rates (applied to dial-in participants/chairperson) listed below for overages.</label>
             </value>
             <value>
                 <fullName>Unlimited Broadcast Audio webinars with up to 3000 audience members (including Host). Unlimited reservationless VoIP, US/CAN Toll and US/CAN Dial-Out audio conferencing, subject to an audio port capacity of 150</fullName>

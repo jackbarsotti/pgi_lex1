@@ -3,7 +3,7 @@
     <fullName>Partner__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
-    <inlineHelpText>The Partner that this Account buys PGi&#39;s services from.</inlineHelpText>
+    <inlineHelpText>The Partner that this Account buys PGi&apos;s services from.</inlineHelpText>
     <label>Partner</label>
     <lookupFilter>
         <active>false</active>

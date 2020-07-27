@@ -1,3 +1,5 @@
-<apex:page standardController="Contact" extensions="NewContact" action="{!doInit}" tabStyle="Contact">
-    <p>New contacts should be created from the related account page.</p>  
+<apex:page standardController="Contact" extensions="NewContact" action="{!doInit}" tabStyle="Contact" lightningStylesheets="true">
+    <apex:pageBlock >
+        <p>New contacts should be created from the related account page.</p>
+    </apex:pageBlock>
 </apex:page>

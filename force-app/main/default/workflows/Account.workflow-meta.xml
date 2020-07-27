@@ -1828,7 +1828,7 @@ IF(CONTAINS( $RecordType.Name, &quot;iMC&quot;), &quot;iMC&quot;, NULL)))))</for
         </actions>
         <active>true</active>
         <description>These accounts should not be cleaned by Data.com</description>
-        <formula>OR( Id = &#39;001300000106U1c&#39;,  Id = &#39;001300000106U2C&#39;,  Id = &#39;001300000106U2G&#39;)</formula>
+        <formula>OR( Id = &apos;001300000106U1c&apos;,  Id = &apos;001300000106U2C&apos;,  Id = &apos;001300000106U2G&apos;)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -2393,7 +2393,7 @@ Total Closed Won Ops is 0</description>
         </actions>
         <active>true</active>
         <description>If the Lead or Account have a Clean Status = Skipped then to update the Clean Status field back to blank.</description>
-        <formula>AND( CONTAINS(RecordType.Name, &quot;PGi&quot;),  ISPICKVAL(CleanStatus, &quot;Skipped&quot;),  Id &lt;&gt; &#39;001300000106U1c&#39;,  Id &lt;&gt; &#39;001300000106U2C&#39;,  Id &lt;&gt; &#39;001300000106U2G&#39;)</formula>
+        <formula>AND( CONTAINS(RecordType.Name, &quot;PGi&quot;),  ISPICKVAL(CleanStatus, &quot;Skipped&quot;),  Id &lt;&gt; &apos;001300000106U1c&apos;,  Id &lt;&gt; &apos;001300000106U2C&apos;,  Id &lt;&gt; &apos;001300000106U2G&apos;)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -2718,7 +2718,7 @@ RecordTypeId = &quot;0121B000001q5WT&quot;
         <formula>AND( 
 Provisioned__c  = true, 
 $User.ReadyTalk_Exempt__c = FALSE,
-RecordType.DeveloperName = &#39;ReadyTalk_Account&#39;, NOT(ISPICKVAL(Status__c, &#39;Deleting&#39;)))</formula>
+RecordType.DeveloperName = &apos;ReadyTalk_Account&apos;, NOT(ISPICKVAL(Status__c, &apos;Deleting&apos;)))</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -3392,7 +3392,7 @@ RecordType.DeveloperName = &#39;ReadyTalk_Account&#39;, NOT(ISPICKVAL(Status__c,
             <operation>equals</operation>
             <value>False</value>
         </criteriaItems>
-        <description>A check box indicating that the client&#39;s logo is approved for use in RT&#39;s marketing materials.  Box is checked anytime a new account is created after 23 May 2014.</description>
+        <description>A check box indicating that the client&apos;s logo is approved for use in RT&apos;s marketing materials.  Box is checked anytime a new account is created after 23 May 2014.</description>
         <triggerType>onCreateOnly</triggerType>
     </rules>
     <rules>
@@ -3495,7 +3495,7 @@ RecordType.DeveloperName = &#39;ReadyTalk_Account&#39;, NOT(ISPICKVAL(Status__c,
         </actions>
         <active>true</active>
         <description>When Quickstart is checked at the account level, this workflow will trigger an email to be sent to the account owner asking if they want to apply configuration to all existing access codes.formula</description>
-        <formula>AND(  ISCHANGED( Quickstart__c ),  Quickstart__c = TRUE,  RecordType.DeveloperName = &#39;ReadyTalk_Account&#39;,  $User.Admin_Exempt__c = False)</formula>
+        <formula>AND(  ISCHANGED( Quickstart__c ),  Quickstart__c = TRUE,  RecordType.DeveloperName = &apos;ReadyTalk_Account&apos;,  $User.Admin_Exempt__c = False)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -3506,7 +3506,7 @@ RecordType.DeveloperName = &#39;ReadyTalk_Account&#39;, NOT(ISPICKVAL(Status__c,
         </actions>
         <active>true</active>
         <description>Automatically truncate the account card name to 30 characters-formula</description>
-        <formula>AND( LEN(Account_Card_Name__c) &gt; 30, RecordType.DeveloperName = &#39;ReadyTalk_Account&#39;, $User.Admin_Exempt__c = false )</formula>
+        <formula>AND( LEN(Account_Card_Name__c) &gt; 30, RecordType.DeveloperName = &apos;ReadyTalk_Account&apos;, $User.Admin_Exempt__c = false )</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>

@@ -3,7 +3,7 @@
     <label><!-- Open to further conversations with PGi? --></label>
     <name>Open_to_further_conversations_with_PGi__c</name>
     <picklistValues>
-        <masterLabel>Don&#39;t Know</masterLabel>
+        <masterLabel>Don&apos;t Know</masterLabel>
         <translation><!-- Don&apos;t Know --></translation>
     </picklistValues>
     <picklistValues>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Channel_to_Include__c</fullName>
-    <description>Might need to make this a multi-select at some point as might be excluding partner channel from certain products. Will override Region match to show product if Channel matches but region doesn&#39;t</description>
+    <description>Might need to make this a multi-select at some point as might be excluding partner channel from certain products. Will override Region match to show product if Channel matches but region doesn&apos;t</description>
     <externalId>false</externalId>
     <label>xChannel to Include</label>
     <length>255</length>

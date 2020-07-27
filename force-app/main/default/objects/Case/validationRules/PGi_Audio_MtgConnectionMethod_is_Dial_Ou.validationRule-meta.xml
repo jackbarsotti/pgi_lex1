@@ -7,10 +7,10 @@
     $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
 NOT(ISCHANGED(IsUpdateFromCaseComment__c)),
     (
-    ISPICKVAL( Meeting_Connection_Method__c , &#39;PSTN Dial Out&#39;) ||
-    ISPICKVAL( Meeting_Connection_Method__c , &#39;VoIP&#39;)
+    ISPICKVAL( Meeting_Connection_Method__c , &apos;PSTN Dial Out&apos;) ||
+    ISPICKVAL( Meeting_Connection_Method__c , &apos;VoIP&apos;)
     ),
     ISBLANK (  User_s_Number_Dialed__c  )
 )</errorConditionFormula>
-    <errorMessage>You must provide User&#39;s Number Dialed/ANI</errorMessage>
+    <errorMessage>You must provide User&apos;s Number Dialed/ANI</errorMessage>
 </ValidationRule>

@@ -4,7 +4,7 @@
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
     <externalId>false</externalId>
-    <inlineHelpText>If call policy has specified ID of a record to screen pop, then don&#39;t show other number lookup results</inlineHelpText>
+    <inlineHelpText>If call policy has specified ID of a record to screen pop, then don&apos;t show other number lookup results</inlineHelpText>
     <label>Show Policy Pop Record Only</label>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>

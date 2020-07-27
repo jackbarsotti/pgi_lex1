@@ -146,7 +146,7 @@
     <deprecated>false</deprecated>
     <description>EDIT AT YOUR OWN RISK.  
 
-This object is meant to handle the 5 concurrent batch apex jobs limit in Apex.  Each time the rules are queued up to run, each different object such as Opportunity or Case takes up one job from the limit.  If you have 6 objects, one won&#39;t be able to run at the same time as the others.
+This object is meant to handle the 5 concurrent batch apex jobs limit in Apex.  Each time the rules are queued up to run, each different object such as Opportunity or Case takes up one job from the limit.  If you have 6 objects, one won&apos;t be able to run at the same time as the others.
 
 This queue stores the unrun job, and tries to schedule it at a later time, after the other jobs have finished.
 

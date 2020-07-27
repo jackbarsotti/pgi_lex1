@@ -12,7 +12,7 @@ BEGINS(Phone, &quot;(866&quot;),
 BEGINS(Phone, &quot;(877&quot;), 
 BEGINS(Phone, &quot;(855&quot;), 
 BEGINS(Phone, &quot;(888&quot;) 
-), $User.Id &lt;&gt; &#39;00550000000yfEe&#39; 
+), $User.Id &lt;&gt; &apos;00550000000yfEe&apos; 
 )</errorConditionFormula>
     <errorDisplayField>Phone</errorDisplayField>
     <errorMessage>Phone number may not begin with 1, 800, 855, 866, 877 or 888.</errorMessage>

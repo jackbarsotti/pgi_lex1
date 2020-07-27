@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <formula>Owner.Manager_Copy__c</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>Owner&#39;s Manager</label>
+    <label>Owner&apos;s Manager</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <type>Text</type>

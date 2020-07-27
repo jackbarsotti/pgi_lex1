@@ -3,8 +3,8 @@
     <fullName>Included_Audio_Minutes__c</fullName>
     <externalId>false</externalId>
     <formula>CASE( Web_Sub_Default_Type__c ,
-&#39;Web Meeting Pro (25)&#39;, 1000,
-&#39;Web Meeting Pro (150)&#39;, 2500,
+&apos;Web Meeting Pro (25)&apos;, 1000,
+&apos;Web Meeting Pro (150)&apos;, 2500,
 0)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <inlineHelpText>Indicates # of on-demand minutes included with with a web subscription (system populates upon first bill run).</inlineHelpText>

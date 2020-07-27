@@ -60,7 +60,7 @@ public with sharing class OtherChargesCreditsController {
     public PageReference goBack() {
         //Redirect back to the owning subscription page
         Subscription__c subscription = [select id from Subscription__c where id = : accessCodeID];
-          
+        
         PageReference subscriptionPage = new ApexPages.StandardController(subscription).view();
         subscriptionPage.setRedirect(true);
 

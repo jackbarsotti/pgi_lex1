@@ -82,7 +82,7 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Oppty&#39;s Account Details</label>
+        <label>Oppty&apos;s Account Details</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>

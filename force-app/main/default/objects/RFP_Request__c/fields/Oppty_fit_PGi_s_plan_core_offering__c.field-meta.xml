@@ -3,7 +3,7 @@
     <fullName>Oppty_fit_PGi_s_plan_core_offering__c</fullName>
     <externalId>false</externalId>
     <inlineHelpText>Does this opportunity fit PGi’s business plan and core offering?</inlineHelpText>
-    <label>Oppty fit PGi&#39;s plan/core offering?</label>
+    <label>Oppty fit PGi&apos;s plan/core offering?</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

@@ -1,0 +1,11 @@
+<aura:component implements="lightning:isUrlAddressable,force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+    <div style="background-color: white;">
+
+        <label class="slds-form-element__label" for="sample1">
+            <b>Implementation Automation (mgrs only)</b>
+        </label><br/><br/>
+        
+        <a href="" onclick="{!c.handleClick}" >Implementation Automation</a>
+        <br/>
+    </div>
+</aura:component>

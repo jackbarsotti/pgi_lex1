@@ -3,7 +3,7 @@
     <fullName>Opp_Owner_s_Country_del__c</fullName>
     <externalId>false</externalId>
     <formula>Owner.Country</formula>
-    <label>Owner&#39;s Country</label>
+    <label>Owner&apos;s Country</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <type>Text</type>

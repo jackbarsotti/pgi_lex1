@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <formula>Owner:Queue.Name</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>Owner&#39;s Name (if Queue)</label>
+    <label>Owner&apos;s Name (if Queue)</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <type>Text</type>

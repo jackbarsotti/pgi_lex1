@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomPageWebLink xmlns="http://soap.sforce.com/2006/04/metadata">
     <availability>online</availability>
-    <description>Request help with a client&#39;s billing</description>
+    <description>Request help with a client&apos;s billing</description>
     <displayType>link</displayType>
     <encodingKey>UTF-8</encodingKey>
     <hasMenubar>false</hasMenubar>

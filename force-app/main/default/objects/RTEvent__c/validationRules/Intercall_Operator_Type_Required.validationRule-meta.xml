@@ -5,12 +5,12 @@
     <description>Requires the Intercall Operator Type on events created on or after 11/12/15 (to prevent issues with past events) for certain record types</description>
     <errorConditionFormula>AND(ISBLANK(TEXT(Operator_Type__c)),
 DATEVALUE(CreatedDate)&gt;DATEVALUE(&quot;2015-11-11&quot;),
-OR( RecordType.DeveloperName = &#39;Direct_Event&#39;,
-RecordType.DeveloperName = &#39;Premium_Event&#39;,
-RecordType.DeveloperName = &#39;Stand_Alone&#39;,
-RecordType.DeveloperName = &#39;Gold_Event&#39;,
-RecordType.DeveloperName = &#39;Platinum_Event&#39;,
-RecordType.DeveloperName = &#39;Webinar_Subscription&#39;))</errorConditionFormula>
+OR( RecordType.DeveloperName = &apos;Direct_Event&apos;,
+RecordType.DeveloperName = &apos;Premium_Event&apos;,
+RecordType.DeveloperName = &apos;Stand_Alone&apos;,
+RecordType.DeveloperName = &apos;Gold_Event&apos;,
+RecordType.DeveloperName = &apos;Platinum_Event&apos;,
+RecordType.DeveloperName = &apos;Webinar_Subscription&apos;))</errorConditionFormula>
     <errorDisplayField>Operator_Type__c</errorDisplayField>
     <errorMessage>Intercall Operator Type is required for this record type. Please update the field and save again.</errorMessage>
 </ValidationRule>

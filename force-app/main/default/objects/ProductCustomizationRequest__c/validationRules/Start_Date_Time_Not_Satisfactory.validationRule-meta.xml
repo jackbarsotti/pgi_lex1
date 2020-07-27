@@ -4,7 +4,7 @@
     <active>true</active>
     <description>If the Start Date/Time is not satisfactory then the user must advise why.</description>
     <errorConditionFormula>AND(
-ISPICKVAL(Expected_Work_End_Date__c, &#39;No&#39;),
+ISPICKVAL(Expected_Work_End_Date__c, &apos;No&apos;),
 ISBLANK(Why_is_date_time_not_satisfacotry__c)  
 )</errorConditionFormula>
     <errorDisplayField>Why_is_date_time_not_satisfacotry__c</errorDisplayField>

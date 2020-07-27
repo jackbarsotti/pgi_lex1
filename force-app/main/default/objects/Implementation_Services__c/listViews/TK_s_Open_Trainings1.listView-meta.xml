@@ -19,7 +19,7 @@
         <operation>equals</operation>
         <value>Open</value>
     </filters>
-    <label>Nick&#39;s Open Trainings</label>
+    <label>Nick&apos;s Open Trainings</label>
     <language>en_US</language>
     <sharedTo/>
 </ListView>

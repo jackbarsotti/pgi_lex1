@@ -43,9 +43,9 @@
                 <label>Other</label>
             </value>
             <value>
-                <fullName>Customer is not familiar with PGi&#39;s products/services</fullName>
+                <fullName>Customer is not familiar with PGi&apos;s products/services</fullName>
                 <default>false</default>
-                <label>Customer is not familiar with PGi&#39;s products/services</label>
+                <label>Customer is not familiar with PGi&apos;s products/services</label>
             </value>
         </valueSetDefinition>
     </valueSet>

@@ -3,7 +3,7 @@
     <fullName>Addl_Live_Event_Support_Hours__c</fullName>
     <defaultValue>0</defaultValue>
     <externalId>false</externalId>
-    <label>Add&#39;l Live Event Support Hours</label>
+    <label>Add&apos;l Live Event Support Hours</label>
     <precision>2</precision>
     <required>false</required>
     <scale>0</scale>

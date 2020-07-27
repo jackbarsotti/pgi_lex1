@@ -10,8 +10,8 @@
     <url>{!REQUIRESCRIPT(&quot;/soap/ajax/17.0/connection.js&quot;)} 
 
 var obj = new sforce.SObject(&quot;Request_For_Change__c&quot;); 
-obj.Id = &#39;{!Request_for_Change__c.Id}&#39;; 
-obj.Assigned_To__c = &#39;{!$User.Id}&#39;;
+obj.Id = &apos;{!Request_for_Change__c.Id}&apos;; 
+obj.Assigned_To__c = &apos;{!$User.Id}&apos;;
 var result = sforce.connection.update([obj]); 
 window.location.href=window.location.href</url>
 </WebLink>

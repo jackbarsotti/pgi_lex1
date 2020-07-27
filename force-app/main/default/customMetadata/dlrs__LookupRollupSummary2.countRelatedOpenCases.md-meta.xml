@@ -56,7 +56,7 @@
     </values>
     <values>
         <field>dlrs__RelationshipCriteria__c</field>
-        <value xsi:type="xsd:string">Status &lt;&gt; &#39;Closed&#39;</value>
+        <value xsi:type="xsd:string">Status &lt;&gt; &apos;Closed&apos;</value>
     </values>
     <values>
         <field>dlrs__RelationshipField__c</field>

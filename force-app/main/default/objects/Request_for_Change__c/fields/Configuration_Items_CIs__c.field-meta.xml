@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Configuration_Items_CIs__c</fullName>
     <externalId>false</externalId>
-    <label>Configuration Items (CI&#39;s)</label>
+    <label>Configuration Items (CI&apos;s)</label>
     <length>2000</length>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

@@ -4,7 +4,7 @@
     <active>false</active>
     <description>If &quot;Has Backout Been Tested&quot; = No then user must advise why</description>
     <errorConditionFormula>AND(
-ISPICKVAL( Has_Backout_Been_Tested__c , &#39;No&#39;) ,
+ISPICKVAL( Has_Backout_Been_Tested__c , &apos;No&apos;) ,
 ISBLANK( If_not_tested_why__c ) 
 )</errorConditionFormula>
     <errorDisplayField>If_not_tested_why__c</errorDisplayField>

@@ -2,8 +2,8 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Monthly_Recurring_Charge_Amount__c</fullName>
     <externalId>false</externalId>
-    <formula>IF( ISPICKVAL(recurringChargeFrequency__c,&#39;ANNUALLY&#39;), recurringCharge__c /12, 
-IF(AND(ISPICKVAL(recurringChargeFrequency__c,&#39;INVOICE&#39;), ISPICKVAL(negotiatedProduct__r.account__r.BBS_InvoiceFrequency__c,&#39;WEEKLY&#39;)), recurringCharge__c * 4, 
+    <formula>IF( ISPICKVAL(recurringChargeFrequency__c,&apos;ANNUALLY&apos;), recurringCharge__c /12, 
+IF(AND(ISPICKVAL(recurringChargeFrequency__c,&apos;INVOICE&apos;), ISPICKVAL(negotiatedProduct__r.account__r.BBS_InvoiceFrequency__c,&apos;WEEKLY&apos;)), recurringCharge__c * 4, 
 recurringCharge__c ))</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <inlineHelpText>Converts all recurring charges into the monthly amount</inlineHelpText>

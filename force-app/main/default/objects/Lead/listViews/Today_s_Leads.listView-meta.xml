@@ -30,7 +30,7 @@
         <operation>equals</operation>
         <value>1</value>
     </filters>
-    <label>My Leads (Today&#39;s MQL)</label>
+    <label>My Leads (Today&apos;s MQL)</label>
     <language>en_US</language>
     <sharedTo>
         <roleAndSubordinates>PGi_Channel_C_Level</roleAndSubordinates>

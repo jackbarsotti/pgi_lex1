@@ -4,7 +4,7 @@
     <active>true</active>
     <description>If Salesforce is in Logistical Needs, then User to Mimic is required.</description>
     <errorConditionFormula>AND( 
-RecordTypeId  = &#39;0121B000001hgS7&#39;,
+RecordTypeId  = &apos;0121B000001hgS7&apos;,
 $User.Override_Validation_Rules__c = False,
  ISBLANK (User_to_mimic__c),
 OR(

@@ -6,7 +6,7 @@
     <errorConditionFormula>AND
 (
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
-ISPICKVAL(  Log_Attached__c , &#39;Yes&#39;),
+ISPICKVAL(  Log_Attached__c , &apos;Yes&apos;),
 ISBLANK ( Log_Analysis_Detail__c  )
 )</errorConditionFormula>
     <errorDisplayField>Log_Analysis_Detail__c</errorDisplayField>

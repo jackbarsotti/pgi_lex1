@@ -5,7 +5,7 @@
     <description>For PGi Pricing rectype only - either Oppty or Acct is required unless HR request type.</description>
     <errorConditionFormula>AND(
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
-RecordType.DeveloperName = &#39;PGi_Pricing_Help_Request&#39;,
+RecordType.DeveloperName = &apos;PGi_Pricing_Help_Request&apos;,
 NOT (ISPICKVAL( Request_Type__c ,&quot;HR Request&quot;)),
 ISBLANK(  Related_Account__c ),
 ISBLANK(  Related_Opportunity__c ))</errorConditionFormula>

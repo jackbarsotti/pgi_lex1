@@ -2,7 +2,7 @@
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Subscription_AudioSubSize_Required</fullName>
     <active>true</active>
-    <errorConditionFormula>AND(ISPICKVAL(  Audio_subscription_size__c  , &quot;&quot;), $User.ProfileId =&#39;00E50000000tUJf&#39;)</errorConditionFormula>
+    <errorConditionFormula>AND(ISPICKVAL(  Audio_subscription_size__c  , &quot;&quot;), $User.ProfileId =&apos;00E50000000tUJf&apos;)</errorConditionFormula>
     <errorDisplayField>Audio_subscription_size__c</errorDisplayField>
     <errorMessage>Number of Audio Ports field is required.</errorMessage>
 </ValidationRule>

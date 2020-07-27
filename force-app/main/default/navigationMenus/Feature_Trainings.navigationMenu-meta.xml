@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NavigationMenu xmlns="http://soap.sforce.com/2006/04/metadata">
+    <container>Streamlined Communications</container>
+    <containerType>Network</containerType>
+    <label>Feature Trainings</label>
+    <navigationMenuItem>
+        <label>Simulated Live Training</label>
+        <position>1</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/article/kA01B000000do19</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Survey Training</label>
+        <position>2</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/article/kA01B000000do1E</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Certification Training</label>
+        <position>3</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/article/kA01B000000do0u</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Screen Share Training</label>
+        <position>4</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/article/kA01B000000do0u</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Portal Training</label>
+        <position>5</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/article/kA01B000000do0f</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Template Training</label>
+        <position>6</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/article/kA01B000000do1J</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Video Bridge (Webcam) Training</label>
+        <position>7</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/article/kA01B000000do1O</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Video Bridge (Advanced) Training</label>
+        <position>8</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/article/kA01B000000do1T</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+</NavigationMenu>

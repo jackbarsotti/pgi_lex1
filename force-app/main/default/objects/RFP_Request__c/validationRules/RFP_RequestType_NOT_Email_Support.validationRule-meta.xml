@@ -6,23 +6,23 @@
     <errorConditionFormula>AND(
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
 (
-ISPICKVAL(Request_Type__c,&#39;Customer Requested RFP Template&#39;) ||
-ISPICKVAL(Request_Type__c,&#39;Proposal&#39;) ||
-ISPICKVAL(Request_Type__c,&#39;Request for Information (RFI)&#39;) ||
-ISPICKVAL(Request_Type__c,&#39;Request for Proposal (RFP)&#39;) ||
-ISPICKVAL(Request_Type__c,&#39;Request for Quote (RFQ) &#39;) ||
-ISPICKVAL(Request_Type__c,&#39;Security Questionnaire&#39;) ||
-ISPICKVAL(Request_Type__c,&#39;Vendor Registration&#39;) ||
-ISPICKVAL(Request_Type__c,&#39;Vendor Questionnaire&#39;) 
+ISPICKVAL(Request_Type__c,&apos;Customer Requested RFP Template&apos;) ||
+ISPICKVAL(Request_Type__c,&apos;Proposal&apos;) ||
+ISPICKVAL(Request_Type__c,&apos;Request for Information (RFI)&apos;) ||
+ISPICKVAL(Request_Type__c,&apos;Request for Proposal (RFP)&apos;) ||
+ISPICKVAL(Request_Type__c,&apos;Request for Quote (RFQ) &apos;) ||
+ISPICKVAL(Request_Type__c,&apos;Security Questionnaire&apos;) ||
+ISPICKVAL(Request_Type__c,&apos;Vendor Registration&apos;) ||
+ISPICKVAL(Request_Type__c,&apos;Vendor Questionnaire&apos;) 
 ),
 ISBLANK ( Due_Date__c )||
 ISBLANK ( Opportunity_Name__c)||
 ISBLANK (  Sales_Rep_Name__c )||
 
-ISPICKVAL ( PGi_Bidding__c,&#39;&#39;)||
-ISPICKVAL ( Current_Customer__c ,&#39;&#39;)||
-ISPICKVAL ( NDA_in_place__c, &#39;&#39;)||
-ISPICKVAL ( Is_this_an_Online_RFP__c, &#39;&#39;)
+ISPICKVAL ( PGi_Bidding__c,&apos;&apos;)||
+ISPICKVAL ( Current_Customer__c ,&apos;&apos;)||
+ISPICKVAL ( NDA_in_place__c, &apos;&apos;)||
+ISPICKVAL ( Is_this_an_Online_RFP__c, &apos;&apos;)
 )</errorConditionFormula>
     <errorMessage>The following fields are required and must be populated: Due Date, PGi Bidding, Current Customer, Sales Rep, Oppty Name, NDA in Place, and Is this an Online RFP?</errorMessage>
 </ValidationRule>

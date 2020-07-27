@@ -13,7 +13,7 @@
     <columns>OPPORTUNITY.LEAD_SOURCE</columns>
     <columns>OPPORTUNITY.PROBABILITY</columns>
     <columns>OPPORTUNITY.LAST_ACTIVITY</columns>
-    <filterScope>Team</filterScope>
+    <filterScope>SalesTeam</filterScope>
     <filters>
         <field>OPPORTUNITY.RECORDTYPE</field>
         <operation>equals</operation>

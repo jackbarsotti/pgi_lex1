@@ -4,5 +4,5 @@
     <active>true</active>
     <errorConditionFormula>LEN(Justification__c ) &gt; 100</errorConditionFormula>
     <errorDisplayField>Justification__c</errorDisplayField>
-    <errorMessage>Use 100 characters or less as this field can be used on the customer&#39;s invoice.</errorMessage>
+    <errorMessage>Use 100 characters or less as this field can be used on the customer&apos;s invoice.</errorMessage>
 </ValidationRule>

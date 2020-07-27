@@ -2,16 +2,16 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Case_Duration__c</fullName>
     <externalId>false</externalId>
-    <formula>IF(ISBLANK(ClosedDate),&#39;&#39;,
+    <formula>IF(ISBLANK(ClosedDate),&apos;&apos;,
 TEXT(CEILING((5* FLOOR((DATEVALUE(ClosedDate) - DATE(1985,6,24)) /7) + 
 MIN(5, 
 MOD(DATEVALUE(ClosedDate) - DATE(1985,6,24), 7) + 
-MIN(IF(ClosedDate &lt; DATETIMEVALUE(TEXT(DATEVALUE(ClosedDate)) &amp; &#39; &#39; &amp; MID(TEXT(DATETIMEVALUE(TEXT(DATE(1985,6,24)) &amp; &#39; 13:30:00&#39;)),12,8)),0,1), 24 / 9 * (MOD(ClosedDate - DATETIMEVALUE(TEXT(DATE(1985,6,24)) &amp; &#39; 13:30:00&#39;), 1))))) 
+MIN(IF(ClosedDate &lt; DATETIMEVALUE(TEXT(DATEVALUE(ClosedDate)) &amp; &apos; &apos; &amp; MID(TEXT(DATETIMEVALUE(TEXT(DATE(1985,6,24)) &amp; &apos; 13:30:00&apos;)),12,8)),0,1), 24 / 9 * (MOD(ClosedDate - DATETIMEVALUE(TEXT(DATE(1985,6,24)) &amp; &apos; 13:30:00&apos;), 1))))) 
 - 
 (5 * FLOOR((DATEVALUE(CreatedDate) - DATE(1985,6,24)) / 7) + 
 MIN(5, 
 MOD(DATEVALUE(CreatedDate) - DATE(1985,6,24), 7) + 
-MIN(IF(CreatedDate &lt; DATETIMEVALUE(TEXT(DATEVALUE(CreatedDate)) &amp; &#39; &#39; &amp; MID(TEXT(DATETIMEVALUE(TEXT(DATE(1985,6,24)) &amp; &#39; 13:30:00&#39;)),12,8)),0,1), 24 / 9 * (MOD(CreatedDate - DATETIMEVALUE(TEXT(DATE(1985,6,24)) &amp; &#39; 13:30:00&#39;), 1))))))))</formula>
+MIN(IF(CreatedDate &lt; DATETIMEVALUE(TEXT(DATEVALUE(CreatedDate)) &amp; &apos; &apos; &amp; MID(TEXT(DATETIMEVALUE(TEXT(DATE(1985,6,24)) &amp; &apos; 13:30:00&apos;)),12,8)),0,1), 24 / 9 * (MOD(CreatedDate - DATETIMEVALUE(TEXT(DATE(1985,6,24)) &amp; &apos; 13:30:00&apos;), 1))))))))</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Case Duration</label>
     <required>false</required>

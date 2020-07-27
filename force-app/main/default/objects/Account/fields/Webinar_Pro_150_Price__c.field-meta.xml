@@ -4,7 +4,7 @@
     <defaultValue>99.00</defaultValue>
     <description>Default Pricing for Web Meeting Pro (15) subscription.</description>
     <externalId>false</externalId>
-    <inlineHelpText>Unlimited Web Meetings for up to 150 participants (incl. chairperson) &amp; 2,500 mins. of US/CAN Toll/Toll-Free On-Demand audio minutes.  Add&#39;l Web Meeting Participant Rate applies for overages.</inlineHelpText>
+    <inlineHelpText>Unlimited Web Meetings for up to 150 participants (incl. chairperson) &amp; 2,500 mins. of US/CAN Toll/Toll-Free On-Demand audio minutes.  Add&apos;l Web Meeting Participant Rate applies for overages.</inlineHelpText>
     <label>Web Meeting Pro (150) Price</label>
     <precision>12</precision>
     <required>false</required>

@@ -5,8 +5,8 @@
     <description>If ETF does not apply then capture why</description>
     <errorConditionFormula>AND(
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
-ISPICKVAL( ETFApply__c , &#39;No&#39;) ,
-ISPICKVAL( ETFDoesNotApply__c , &#39;&#39;) 
+ISPICKVAL( ETFApply__c , &apos;No&apos;) ,
+ISPICKVAL( ETFDoesNotApply__c , &apos;&apos;) 
 )</errorConditionFormula>
     <errorDisplayField>ETFDoesNotApply__c</errorDisplayField>
     <errorMessage>You must populate why the ETF does not apply</errorMessage>

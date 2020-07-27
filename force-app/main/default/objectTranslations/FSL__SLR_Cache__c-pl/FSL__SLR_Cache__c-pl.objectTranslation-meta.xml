@@ -3,12 +3,12 @@
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>false</plural>
-        <value>Pamięć podręczna SLR</value>
+        <value>Pamięć Cache SLR</value>
     </caseValues>
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
-        <value>Pamięci podręczne SLR</value>
+        <value>Pamięci Cache SLR</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>

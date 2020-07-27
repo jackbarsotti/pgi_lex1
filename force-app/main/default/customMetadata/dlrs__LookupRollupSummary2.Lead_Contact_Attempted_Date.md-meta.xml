@@ -56,7 +56,7 @@
     </values>
     <values>
         <field>dlrs__RelationshipCriteria__c</field>
-        <value xsi:type="xsd:string">isDeleted = false AND createdby.userroleid = &#39;00E50000000tUIr&#39; AND result__c = &#39;Contact Attempted&#39;</value>
+        <value xsi:type="xsd:string">isDeleted = false AND createdby.userroleid = &apos;00E50000000tUIr&apos; AND result__c = &apos;Contact Attempted&apos;</value>
     </values>
     <values>
         <field>dlrs__RelationshipField__c</field>

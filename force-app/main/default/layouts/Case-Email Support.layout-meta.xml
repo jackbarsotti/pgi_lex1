@@ -36,10 +36,10 @@
         <label>Email</label>
         <layoutColumns>
             <layoutItems>
-                <height>500</height>
-                <page>CaseEmailRelatedListCare</page>
+                <height>200</height>
+                <page>CaseEmailRelatedList</page>
                 <showLabel>false</showLabel>
-                <showScrollbars>true</showScrollbars>
+                <showScrollbars>false</showScrollbars>
                 <width>100%</width>
             </layoutItems>
         </layoutColumns>

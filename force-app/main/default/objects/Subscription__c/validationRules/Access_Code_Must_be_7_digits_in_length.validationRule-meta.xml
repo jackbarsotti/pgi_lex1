@@ -11,7 +11,7 @@ NOT(CONTAINS(&quot;0123456789&quot;, MID( Name , 4, 1))),
 NOT(CONTAINS(&quot;0123456789&quot;, MID( Name , 5, 1))),
 NOT(CONTAINS(&quot;0123456789&quot;, MID( Name , 6, 1))),
 NOT(CONTAINS(&quot;0123456789&quot;, MID( Name , 7, 1)))
-),  $User.Id &lt;&gt;&#39;00550000000yfEe&#39;,
+),  $User.Id &lt;&gt;&apos;00550000000yfEe&apos;,
 $Profile.Name &lt;&gt; &quot;System Administrator&quot; )</errorConditionFormula>
     <errorDisplayField>Name</errorDisplayField>
     <errorMessage>Access Code must be 7 digits.</errorMessage>

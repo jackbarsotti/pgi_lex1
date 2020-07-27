@@ -4,7 +4,7 @@
     <defaultValue>TODAY()</defaultValue>
     <description>Date these shown rates began to apply to this account</description>
     <externalId>false</externalId>
-    <inlineHelpText>This date shows when the rates for on-demand/per-minute audio and web rates, event and Custom Int&#39;l Audio Schedule rates begin to apply to this account.</inlineHelpText>
+    <inlineHelpText>This date shows when the rates for on-demand/per-minute audio and web rates, event and Custom Int&apos;l Audio Schedule rates begin to apply to this account.</inlineHelpText>
     <label>Rate Start Date</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

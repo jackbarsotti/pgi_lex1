@@ -14,15 +14,15 @@
     //var o = new sforce.SObject(&quot;Opportunity&quot;);
     //var previousRecordType = &quot;{!Opportunity.RecordTypeId}&quot;
 
-    //var recType = sforce.connection.query(&quot;SELECT name, Id from RecordType where developername = &#39;Pricing_Approval&#39;&quot;);
+    //var recType = sforce.connection.query(&quot;SELECT name, Id from RecordType where developername = &apos;Pricing_Approval&apos;&quot;);
     //var records = recType.getArray(&quot;records&quot;);
      
-    if (&#39;{!Opportunity.Count_of_Products__c}&#39; == 0) {
+    if (&apos;{!Opportunity.Count_of_Products__c}&apos; == 0) {
         alert(&quot;Add products before submitting for Pricing Approval.&quot;);
     }
     else {
 
-      var flowURI = encodeURI(&#39;/flow/PricingApproval?oppyId={!Opportunity.Id}&amp;retURL=/{!Opportunity.Id}&#39;);
+      var flowURI = encodeURI(&apos;/flow/PricingApproval?oppyId={!Opportunity.Id}&amp;retURL=/{!Opportunity.Id}&apos;);
       window.open(flowURI);
     /*o.id =&quot;{!Opportunity.Id}&quot;; 
     o.RecordTypeId = records[0].Id;

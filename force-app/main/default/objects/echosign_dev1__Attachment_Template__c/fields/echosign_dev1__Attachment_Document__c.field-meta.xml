@@ -3,7 +3,7 @@
     <fullName>echosign_dev1__Attachment_Document__c</fullName>
     <deprecated>false</deprecated>
     <externalId>false</externalId>
-    <label>Attachment Document ID&#39;s</label>
+    <label>Attachment Document ID&apos;s</label>
     <length>255</length>
     <required>false</required>
     <trackTrending>false</trackTrending>

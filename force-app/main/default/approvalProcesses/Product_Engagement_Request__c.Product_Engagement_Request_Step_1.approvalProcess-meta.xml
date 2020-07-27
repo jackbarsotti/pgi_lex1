@@ -345,7 +345,7 @@
             <type>RejectRequest</type>
         </rejectBehavior>
     </approvalStep>
-    <description>In this Step, the initial approval request goes to the PM. If the PM approves, the SE is advised to get customer approval. If the PM rejects the approval, then Step 2 of the approval process is activated. Step 2 seeks an Executive approval to override the PM&#39;s rejection.</description>
+    <description>In this Step, the initial approval request goes to the PM. If the PM approves, the SE is advised to get customer approval. If the PM rejects the approval, then Step 2 of the approval process is activated. Step 2 seeks an Executive approval to override the PM&apos;s rejection.</description>
     <emailTemplate>Assigned_to_Templates/Product_Engagement_Approval_Request</emailTemplate>
     <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
     <finalApprovalActions>

@@ -1,4 +1,5 @@
-<apex:page standardController="OpportunityLineItem" extensions="OpportunityProductExtension">
+<apex:page standardController="OpportunityLineItem" extensions="OpportunityProductExtension" lightningStylesheets="true">
+    <apex:includeLightning />
     <apex:form >
 	    <apex:pageBlock >
 	    	<apex:pageBlockSection collapsible="false" columns="2" >

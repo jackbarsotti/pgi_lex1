@@ -1,4 +1,5 @@
 <apex:page controller="ContactController" tabStyle="Contact" action="{!init}">
+    <apex:pageBlock rendered="{!$User.UITheme == 'Theme3'}">
 <apex:sectionHeader title="Contact Edit" subtitle="New Contact" description="Contacts not associated with accounts are private and cannot be viewed by other users or included in reports." help="Help for this Page"/>
     
 <apex:pageMessages escape="false"/>
@@ -156,5 +157,11 @@ label { white-space:nowrap;}
     </apex:outputPanel>     
     
 </apex:form>
-        
+    </apex:pageBlock>
+    <apex:pageBlock rendered="{!$User.UITheme != 'Theme3'}">
+        <script type="text/javascript">
+            { window.alert("Please Switch to Salesforce Classic"); }
+        </script>
+        <apex:pageMessage severity="Info" summary="You must switch to salesforce classic to access this page." strength="1"/>
+    </apex:pageBlock>
 </apex:page>

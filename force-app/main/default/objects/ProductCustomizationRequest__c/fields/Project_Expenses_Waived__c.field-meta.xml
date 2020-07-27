@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <formula>Total_Project_Expense__c - Oppty_s_NRR__c</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <inlineHelpText>Total Project Expense - Oppty&#39;s NRR</inlineHelpText>
+    <inlineHelpText>Total Project Expense - Oppty&apos;s NRR</inlineHelpText>
     <label>Project Expenses Waived</label>
     <precision>18</precision>
     <required>false</required>

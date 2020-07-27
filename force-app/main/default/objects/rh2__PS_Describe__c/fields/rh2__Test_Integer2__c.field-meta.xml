@@ -4,7 +4,7 @@
     <deprecated>false</deprecated>
     <description>Used in validation rule exception test methods</description>
     <externalId>false</externalId>
-    <label>Test Integer2</label>
+    <label>Test Integer</label>
     <precision>18</precision>
     <required>false</required>
     <scale>0</scale>

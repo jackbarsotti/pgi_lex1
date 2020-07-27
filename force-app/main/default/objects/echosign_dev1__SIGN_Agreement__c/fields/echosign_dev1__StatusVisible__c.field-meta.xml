@@ -5,12 +5,12 @@
     <externalId>false</externalId>
     <formula>CASE(
 TEXT(echosign_dev1__Status__c), 
-&#39;Waiting for Counter-Signature&#39;, &#39;Out for Signature&#39;, 
-&#39;Waiting for Counter-Approval&#39;, &#39;Out for Approval&#39;, 
-&#39;Waiting for Counter-Acceptance&#39;, &#39;Out for Acceptance&#39;, 
-&#39;Waiting for Counter-Form-Filling&#39;, &#39;Out for Form-Filling&#39;, 
-&#39;Waiting for Counter-Delivery&#39;, &#39;Out for Delivery&#39;, 
-&#39;Pre-Send&#39;, &#39;Not Yet Sent for Signature&#39;,
+&apos;Waiting for Counter-Signature&apos;, &apos;Out for Signature&apos;, 
+&apos;Waiting for Counter-Approval&apos;, &apos;Out for Approval&apos;, 
+&apos;Waiting for Counter-Acceptance&apos;, &apos;Out for Acceptance&apos;, 
+&apos;Waiting for Counter-Form-Filling&apos;, &apos;Out for Form-Filling&apos;, 
+&apos;Waiting for Counter-Delivery&apos;, &apos;Out for Delivery&apos;, 
+&apos;Pre-Send&apos;, &apos;Not Yet Sent for Signature&apos;,
 TEXT(echosign_dev1__Status__c))</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Status</label>

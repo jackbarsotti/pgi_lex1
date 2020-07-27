@@ -6,7 +6,7 @@
     <errorConditionFormula>AND
 (
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
-ISPICKVAL(   Issue_Replicated__c  , &#39;No&#39;),
+ISPICKVAL(   Issue_Replicated__c  , &apos;No&apos;),
 ISBLANK (  No_Issue_Replicated_Reason__c  )
 )</errorConditionFormula>
     <errorDisplayField>No_Issue_Replicated_Reason__c</errorDisplayField>

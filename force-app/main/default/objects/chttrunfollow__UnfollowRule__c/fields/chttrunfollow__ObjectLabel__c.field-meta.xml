@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>chttrunfollow__ObjectLabel__c</fullName>
     <deprecated>false</deprecated>
-    <description>Label of the object that corresponds to it&#39;s API name.  For example, custom objects have an ObjectName of something like Projects__c where the label might be Projects.</description>
+    <description>Label of the object that corresponds to it&apos;s API name.  For example, custom objects have an ObjectName of something like Projects__c where the label might be Projects.</description>
     <externalId>false</externalId>
     <label>Object Label</label>
     <length>255</length>

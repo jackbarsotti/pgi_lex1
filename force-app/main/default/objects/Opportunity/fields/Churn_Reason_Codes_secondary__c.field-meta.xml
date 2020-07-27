@@ -77,9 +77,9 @@
                 <label>Poor customer service experiences</label>
             </value>
             <value>
-                <fullName>Product didn&#39;t solve problem</fullName>
+                <fullName>Product didn&apos;t solve problem</fullName>
                 <default>false</default>
-                <label>Product didn&#39;t solve problem</label>
+                <label>Product didn&apos;t solve problem</label>
             </value>
             <value>
                 <fullName>Project ended</fullName>
@@ -134,7 +134,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Product didn&#39;t solve problem</valueName>
+            <valueName>Product didn&apos;t solve problem</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Product</controllingFieldValue>

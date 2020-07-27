@@ -4,7 +4,7 @@
     <active>true</active>
     <errorConditionFormula>AND(
 Credit_Amount__c &gt; 0,
-RecordType.DeveloperName = &#39;ReadyTalk_Credit_Request&#39;)</errorConditionFormula>
+RecordType.DeveloperName = &apos;ReadyTalk_Credit_Request&apos;)</errorConditionFormula>
     <errorDisplayField>Credit_Amount__c</errorDisplayField>
     <errorMessage>Credit Entry must be a negative number.</errorMessage>
 </ValidationRule>

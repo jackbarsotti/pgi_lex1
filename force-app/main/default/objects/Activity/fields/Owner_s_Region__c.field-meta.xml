@@ -3,7 +3,7 @@
     <fullName>Owner_s_Region__c</fullName>
     <externalId>false</externalId>
     <formula>TEXT (Owner:User.User_Region__c)</formula>
-    <label>Owner&#39;s Region</label>
+    <label>Owner&apos;s Region</label>
     <required>false</required>
     <type>Text</type>
     <unique>false</unique>

@@ -6,10 +6,10 @@
     <errorConditionFormula>AND(
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;, 
 NOT(ISCHANGED(IsUpdateFromCaseComment__c)),
-ISPICKVAL(Status, &#39;Resolved&#39;) ||
-ISPICKVAL(Status, &#39;Closed&#39;),
-RecordType.Name = &#39;PGi-Client External Support&#39;,
-ISPICKVAL(Tracking_Root_Category__c , &#39;Root Category Under Review&#39;)
+ISPICKVAL(Status, &apos;Resolved&apos;) ||
+ISPICKVAL(Status, &apos;Closed&apos;),
+RecordType.Name = &apos;PGi-Client External Support&apos;,
+ISPICKVAL(Tracking_Root_Category__c , &apos;Root Category Under Review&apos;)
 )</errorConditionFormula>
     <errorDisplayField>Tracking_Root_Category__c</errorDisplayField>
     <errorMessage>You can not use Root Category Under Review when the Status is Resolved or Closed.</errorMessage>

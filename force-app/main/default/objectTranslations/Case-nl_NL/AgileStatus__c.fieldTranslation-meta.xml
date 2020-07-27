@@ -15,6 +15,26 @@
         <translation><!-- Dev --></translation>
     </picklistValues>
     <picklistValues>
+        <masterLabel>Done (Closed)</masterLabel>
+        <translation><!-- Done (Closed) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Done (Ready)</masterLabel>
+        <translation><!-- Done (Ready) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Progress</masterLabel>
+        <translation><!-- In Progress --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Progress (PO Review)</masterLabel>
+        <translation><!-- In Progress (PO Review) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Progress (QE)</masterLabel>
+        <translation><!-- In Progress (QE) --></translation>
+    </picklistValues>
+    <picklistValues>
         <masterLabel>Peer Reviewed</masterLabel>
         <translation><!-- Peer Reviewed --></translation>
     </picklistValues>

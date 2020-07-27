@@ -4,7 +4,7 @@
     <name>FSL__Failure_Reason__c</name>
     <picklistValues>
         <masterLabel>Already Running</masterLabel>
-        <translation>En cours d&#39;exécution</translation>
+        <translation>En cours d&apos;exécution</translation>
     </picklistValues>
     <picklistValues>
         <masterLabel>Click Authorize</masterLabel>
@@ -24,6 +24,6 @@
     </picklistValues>
     <picklistValues>
         <masterLabel>User Aborted</masterLabel>
-        <translation>Abandonné par l&#39;utilisateur</translation>
+        <translation>Abandonné par l&apos;utilisateur</translation>
     </picklistValues>
 </CustomFieldTranslation>

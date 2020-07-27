@@ -10,10 +10,10 @@ RecordType.Name &lt;&gt; &quot;PGi-SFDC Support&quot;,
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
 NOT(ISCHANGED(IsUpdateFromCaseComment__c)),
 OR(
-ISPICKVAL(Status, &#39;Closed&#39;),
-ISPICKVAL(Status, &#39;Closed - Not Needed&#39;),
-ISPICKVAL(Status, &#39;Closed - Rejected&#39;),
-ISPICKVAL(Status, &#39;Complete&#39;)
+ISPICKVAL(Status, &apos;Closed&apos;),
+ISPICKVAL(Status, &apos;Closed - Not Needed&apos;),
+ISPICKVAL(Status, &apos;Closed - Rejected&apos;),
+ISPICKVAL(Status, &apos;Complete&apos;)
 )
 )</errorConditionFormula>
     <errorDisplayField>Status</errorDisplayField>

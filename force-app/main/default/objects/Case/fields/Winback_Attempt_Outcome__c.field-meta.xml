@@ -12,9 +12,9 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Couldn&#39;t Save Cutomer</fullName>
+                <fullName>Couldn&apos;t Save Cutomer</fullName>
                 <default>false</default>
-                <label>Couldn&#39;t Save Cutomer</label>
+                <label>Couldn&apos;t Save Cutomer</label>
             </value>
             <value>
                 <fullName>Successful Recovery</fullName>

@@ -4,7 +4,7 @@
     <defaultValue>false</defaultValue>
     <description>If the account has not paid its bills, etc, this should be checked.</description>
     <externalId>false</externalId>
-    <inlineHelpText>If checked, indicates that all active subscribers&#39; access codes have been deactivated until balance due is paid.</inlineHelpText>
+    <inlineHelpText>If checked, indicates that all active subscribers&apos; access codes have been deactivated until balance due is paid.</inlineHelpText>
     <label>Suspend Account</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>true</trackHistory>

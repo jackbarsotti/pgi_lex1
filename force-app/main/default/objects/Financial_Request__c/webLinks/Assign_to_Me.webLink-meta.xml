@@ -11,8 +11,8 @@
     <url>{!REQUIRESCRIPT(&quot;/soap/ajax/17.0/connection.js&quot;)} 
 
 var Financial_Request__cObj = new sforce.SObject(&quot;Financial_Request__c&quot;); 
-Financial_Request__cObj.Id = &#39;{!Financial_Request__c.Id}&#39;; 
-Financial_Request__cObj.Assigned_To__c = &#39;{!$User.Id}&#39;; 
+Financial_Request__cObj.Id = &apos;{!Financial_Request__c.Id}&apos;; 
+Financial_Request__cObj.Assigned_To__c = &apos;{!$User.Id}&apos;; 
 var result = sforce.connection.update([Financial_Request__cObj]); 
 window.location.href=window.location.href</url>
 </WebLink>

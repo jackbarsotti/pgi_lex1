@@ -3,7 +3,7 @@
     <fullName>Limited_Web_Sub_Addl_Minute_Rate__c</fullName>
     <defaultValue>0.15</defaultValue>
     <externalId>false</externalId>
-    <inlineHelpText>Per minute rate applied to each add&#39;l webparticipant over the Web Mtg Pro (25), (150) or old, Web Meeting web sub size.</inlineHelpText>
+    <inlineHelpText>Per minute rate applied to each add&apos;l webparticipant over the Web Mtg Pro (25), (150) or old, Web Meeting web sub size.</inlineHelpText>
     <label>Addl Web Meeting Participant Rate</label>
     <precision>13</precision>
     <required>false</required>

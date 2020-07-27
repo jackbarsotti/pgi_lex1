@@ -3,10 +3,10 @@
     <fullName>Cannot_chg_Top10_Mgr_Notes_Unless_Mgr</fullName>
     <active>true</active>
     <errorConditionFormula>AND(
-$User.Id &lt;&gt; &#39;0053000000620A0&#39;,
-$User.Id &lt;&gt; &#39;005a0000009WIUc&#39;,
-$User.Id &lt;&gt; &#39;005300000065o6P&#39;,
-$User.Id &lt;&gt; &#39;00530000007dKU2&#39;,
+$User.Id &lt;&gt; &apos;0053000000620A0&apos;,
+$User.Id &lt;&gt; &apos;005a0000009WIUc&apos;,
+$User.Id &lt;&gt; &apos;005300000065o6P&apos;,
+$User.Id &lt;&gt; &apos;00530000007dKU2&apos;,
 OR(
 ISCHANGED(Manager_Only_Notes__c)
 )

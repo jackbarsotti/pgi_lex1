@@ -5,7 +5,7 @@
     <description>This is to ensure Problem Ticket owner = a queue and not a user.</description>
     <errorConditionFormula>AND(
 ISCHANGED(OwnerId) ,
-LEFT( OwnerId , 3) = &#39;005&#39;
+LEFT( OwnerId , 3) = &apos;005&apos;
 )</errorConditionFormula>
     <errorMessage>Problem Ticket Ownership must be a Queue and not a User. Users are to be assigned in the Assigned To area.</errorMessage>
 </ValidationRule>

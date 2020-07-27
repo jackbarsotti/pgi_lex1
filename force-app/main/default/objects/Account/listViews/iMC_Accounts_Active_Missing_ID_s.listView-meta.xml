@@ -33,7 +33,7 @@
         <field>Customer_Company_ID__c</field>
         <operation>equals</operation>
     </filters>
-    <label>iMC Accounts - Active, Missing ID&#39;s</label>
+    <label>iMC Accounts - Active, Missing ID&apos;s</label>
     <language>en_US</language>
     <sharedTo>
         <group>iMC_All_iMC_Users</group>

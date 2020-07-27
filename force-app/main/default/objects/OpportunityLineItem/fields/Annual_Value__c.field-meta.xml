@@ -15,9 +15,9 @@ IF(ISPICKVAL(Billing_Frequency__c, &quot;One Time Event&quot;), 0,
 IF(ISPICKVAL(Unit_Type__c, &quot;Ancillary&quot;), 0, 
 IF(isReportable_Text__c = &quot;Invalid&quot;, 0, 
 IF( 
-ISPICKVAL(Billing_Frequency__c,&#39;Annually&#39;), 
+ISPICKVAL(Billing_Frequency__c,&apos;Annually&apos;), 
 New_Sales_Price__c* New_Quantity__c, IF( 
-ISPICKVAL(Billing_Frequency__c,&#39;Quarterly&#39;), 
+ISPICKVAL(Billing_Frequency__c,&apos;Quarterly&apos;), 
 New_Sales_Price__c * New_Quantity__c * 4, 
 IF( 
 AND( 

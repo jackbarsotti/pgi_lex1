@@ -3,7 +3,7 @@
     <fullName>OwnersTitle__c</fullName>
     <externalId>false</externalId>
     <formula>Owner.Title</formula>
-    <label>Owner&#39;s Title</label>
+    <label>Owner&apos;s Title</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <type>Text</type>

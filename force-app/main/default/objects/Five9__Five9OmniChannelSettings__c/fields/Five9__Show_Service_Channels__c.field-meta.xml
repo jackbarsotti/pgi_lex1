@@ -4,7 +4,7 @@
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
     <externalId>false</externalId>
-    <inlineHelpText>Controls what should be displayed in Ready For... dialog. When it&#39;s disabled the selected Online Presence Statuses are shown. Otherwise Service Channels associated with the selected statuses are shown.</inlineHelpText>
+    <inlineHelpText>Controls what should be displayed in Ready For... dialog. When it&apos;s disabled the selected Online Presence Statuses are shown. Otherwise Service Channels associated with the selected statuses are shown.</inlineHelpText>
     <label>Show Service Channels</label>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>

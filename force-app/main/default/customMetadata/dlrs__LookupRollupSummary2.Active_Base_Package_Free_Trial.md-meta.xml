@@ -56,7 +56,7 @@
     </values>
     <values>
         <field>dlrs__RelationshipCriteria__c</field>
-        <value xsi:type="xsd:string">isDeleted = false AND basepackage__r.name = &#39;Free Trial&#39;</value>
+        <value xsi:type="xsd:string">isDeleted = false AND basepackage__r.name = &apos;Free Trial&apos;</value>
     </values>
     <values>
         <field>dlrs__RelationshipField__c</field>

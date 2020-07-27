@@ -8,21 +8,23 @@
 
 <script>
    function openWin(divName, textName){
-    var divText = document.getElementById(divName).innerText;
+        var divText = document.getElementById(divName).innerText;
+        
+        if(divText.length == 0)
+        {
+        divText =  "<pre>" +  document.getElementById(textName).innerText + "</pre>";
+        }
+        var myWindow = window.open('','','width=600,height=500');
+        var doc = myWindow.document;
+        doc.open();
+        doc.write(divText);
+        doc.close();
+    }
     
-    if(divText.length == 0)
-    {
-    divText =  "<pre>" +  document.getElementById(textName).innerText + "</pre>";
-    }
-    var myWindow = window.open('','','width=600,height=500');
-    var doc = myWindow.document;
-    doc.open();
-    doc.write(divText);
-    doc.close();
-    }
     var url;
     var subject;
     function myNavigation(subjectVar, myVar) {
+        console.log('=link=>',myVar);
         url = myVar;
         subject = subjectVar;
         if (sforce.console.isInConsole()) {

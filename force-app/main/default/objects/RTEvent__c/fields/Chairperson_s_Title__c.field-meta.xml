@@ -3,7 +3,7 @@
     <fullName>Chairperson_s_Title__c</fullName>
     <caseSensitive>false</caseSensitive>
     <externalId>false</externalId>
-    <label>Chairperson&#39;s Title</label>
+    <label>Chairperson&apos;s Title</label>
     <length>30</length>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

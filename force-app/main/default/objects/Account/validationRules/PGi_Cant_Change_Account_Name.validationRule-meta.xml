@@ -34,5 +34,5 @@ UPPER(Name) = &quot;UNIDENTIFIED REGION ACCOUNT&quot;
 )
 )
 )</errorConditionFormula>
-    <errorMessage>We are not allowed to Create/Modify the exceptional account buckets with name starts with &#39;NA Unmatch&#39;, &#39;APAC Unmatch&#39;, &#39;EMEA Unmatch&#39;, &#39;Unidentified Region Account&#39;. These are read only accounts.</errorMessage>
+    <errorMessage>We are not allowed to Create/Modify the exceptional account buckets with name starts with &apos;NA Unmatch&apos;, &apos;APAC Unmatch&apos;, &apos;EMEA Unmatch&apos;, &apos;Unidentified Region Account&apos;. These are read only accounts.</errorMessage>
 </ValidationRule>

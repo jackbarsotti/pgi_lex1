@@ -96,7 +96,7 @@ NOT(ISBLANK(ddcdf__Start_Date__c)),
         </actions>
         <active>true</active>
         <description>When the individual metadata scans are flagged as Canceled the overall scan is updated to Canceled too.</description>
-        <formula>OR( TEXT(ddcdf__Metadata_Class__c) = &#39;Canceled&#39;, TEXT(ddcdf__Metadata_Field_Update__c) = &#39;Canceled&#39;, TEXT(ddcdf__Metadata_Formula_Field__c) = &#39;Canceled&#39;, TEXT(ddcdf__Metadata_Integration_Rule__c) = &#39;Canceled&#39;, TEXT(ddcdf__Metadata_Report__c) = &#39;Canceled&#39;, TEXT(ddcdf__Metadata_Trigger__c) = &#39;Canceled&#39;, TEXT(ddcdf__Metadata_Validation_Rule__c) = &#39;Canceled&#39;, TEXT(ddcdf__Metadata_Workflow__c) = &#39;Canceled&#39; )</formula>
+        <formula>OR( TEXT(ddcdf__Metadata_Class__c) = &apos;Canceled&apos;, TEXT(ddcdf__Metadata_Field_Update__c) = &apos;Canceled&apos;, TEXT(ddcdf__Metadata_Formula_Field__c) = &apos;Canceled&apos;, TEXT(ddcdf__Metadata_Integration_Rule__c) = &apos;Canceled&apos;, TEXT(ddcdf__Metadata_Report__c) = &apos;Canceled&apos;, TEXT(ddcdf__Metadata_Trigger__c) = &apos;Canceled&apos;, TEXT(ddcdf__Metadata_Validation_Rule__c) = &apos;Canceled&apos;, TEXT(ddcdf__Metadata_Workflow__c) = &apos;Canceled&apos; )</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
@@ -119,7 +119,7 @@ NOT(ISBLANK(ddcdf__Start_Date__c)),
         </actions>
         <active>true</active>
         <description>When the individual metadata scans are flagged as complete and there are no recursive fields, the overall scan is updated to complete.</description>
-        <formula>AND( TEXT(ddcdf__Metadata_Class__c) = &#39;Complete&#39;, TEXT(ddcdf__Metadata_Field_Update__c) = &#39;Complete&#39;, TEXT(ddcdf__Metadata_Formula_Field__c) = &#39;Complete&#39;, TEXT(ddcdf__Metadata_Integration_Rule__c) = &#39;Complete&#39;, TEXT(ddcdf__Metadata_Report__c) = &#39;Complete&#39;, TEXT(ddcdf__Metadata_Trigger__c) = &#39;Complete&#39;, TEXT(ddcdf__Metadata_Validation_Rule__c) = &#39;Complete&#39;, TEXT(ddcdf__Metadata_Workflow__c) = &#39;Complete&#39;, ISBLANK( ddcdf__Recursive_Fields__c )  )</formula>
+        <formula>AND( TEXT(ddcdf__Metadata_Class__c) = &apos;Complete&apos;, TEXT(ddcdf__Metadata_Field_Update__c) = &apos;Complete&apos;, TEXT(ddcdf__Metadata_Formula_Field__c) = &apos;Complete&apos;, TEXT(ddcdf__Metadata_Integration_Rule__c) = &apos;Complete&apos;, TEXT(ddcdf__Metadata_Report__c) = &apos;Complete&apos;, TEXT(ddcdf__Metadata_Trigger__c) = &apos;Complete&apos;, TEXT(ddcdf__Metadata_Validation_Rule__c) = &apos;Complete&apos;, TEXT(ddcdf__Metadata_Workflow__c) = &apos;Complete&apos;, ISBLANK( ddcdf__Recursive_Fields__c )  )</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
@@ -130,7 +130,7 @@ NOT(ISBLANK(ddcdf__Start_Date__c)),
         </actions>
         <active>true</active>
         <description>If any of the metadata scans end in error the whole scan will be flagged accordingly</description>
-        <formula>OR(  TEXT(ddcdf__Metadata_Class__c) = &#39;Error&#39;,  TEXT(ddcdf__Metadata_Field_Update__c) = &#39;Error&#39;, TEXT(ddcdf__Metadata_Formula_Field__c) = &#39;Error&#39;,  TEXT(ddcdf__Metadata_Integration_Rule__c) = &#39;Error&#39;, TEXT(ddcdf__Metadata_Report__c) = &#39;Error&#39;, TEXT(ddcdf__Metadata_Trigger__c) = &#39;Error&#39;,  TEXT(ddcdf__Metadata_Validation_Rule__c) = &#39;Error&#39;,  TEXT(ddcdf__Metadata_Workflow__c) = &#39;Error&#39; )</formula>
+        <formula>OR(  TEXT(ddcdf__Metadata_Class__c) = &apos;Error&apos;,  TEXT(ddcdf__Metadata_Field_Update__c) = &apos;Error&apos;, TEXT(ddcdf__Metadata_Formula_Field__c) = &apos;Error&apos;,  TEXT(ddcdf__Metadata_Integration_Rule__c) = &apos;Error&apos;, TEXT(ddcdf__Metadata_Report__c) = &apos;Error&apos;, TEXT(ddcdf__Metadata_Trigger__c) = &apos;Error&apos;,  TEXT(ddcdf__Metadata_Validation_Rule__c) = &apos;Error&apos;,  TEXT(ddcdf__Metadata_Workflow__c) = &apos;Error&apos; )</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
@@ -149,7 +149,7 @@ NOT(ISBLANK(ddcdf__Start_Date__c)),
         </actions>
         <active>true</active>
         <description>When the individual metadata scans are flagged as complete and there are recursive fields, the overall scan is updated to Recursive Required.</description>
-        <formula>AND( TEXT(ddcdf__Metadata_Class__c) = &#39;Complete&#39;, TEXT(ddcdf__Metadata_Field_Update__c) = &#39;Complete&#39;, TEXT(ddcdf__Metadata_Formula_Field__c) = &#39;Complete&#39;, TEXT(ddcdf__Metadata_Integration_Rule__c) = &#39;Complete&#39;, TEXT(ddcdf__Metadata_Report__c) = &#39;Complete&#39;, TEXT(ddcdf__Metadata_Trigger__c) = &#39;Complete&#39;, TEXT(ddcdf__Metadata_Validation_Rule__c) = &#39;Complete&#39;, TEXT(ddcdf__Metadata_Workflow__c) = &#39;Complete&#39;, NOT(ISBLANK( ddcdf__Recursive_Fields__c ))  )</formula>
+        <formula>AND( TEXT(ddcdf__Metadata_Class__c) = &apos;Complete&apos;, TEXT(ddcdf__Metadata_Field_Update__c) = &apos;Complete&apos;, TEXT(ddcdf__Metadata_Formula_Field__c) = &apos;Complete&apos;, TEXT(ddcdf__Metadata_Integration_Rule__c) = &apos;Complete&apos;, TEXT(ddcdf__Metadata_Report__c) = &apos;Complete&apos;, TEXT(ddcdf__Metadata_Trigger__c) = &apos;Complete&apos;, TEXT(ddcdf__Metadata_Validation_Rule__c) = &apos;Complete&apos;, TEXT(ddcdf__Metadata_Workflow__c) = &apos;Complete&apos;, NOT(ISBLANK( ddcdf__Recursive_Fields__c ))  )</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>

@@ -24,7 +24,7 @@
                 <type>userHierarchyField</type>
             </approver>
         </assignedApprover>
-        <description>All Pricing Approvals start with the Owner&#39;s Manager.</description>
+        <description>All Pricing Approvals start with the Owner&apos;s Manager.</description>
         <entryCriteria>
             <criteriaItems>
                 <field>CONMAN_Contract__c.Required_Approval_Pricing_Manager__c</field>

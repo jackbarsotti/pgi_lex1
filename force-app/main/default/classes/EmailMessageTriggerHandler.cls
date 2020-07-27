@@ -36,8 +36,6 @@ Numeric - value in minutes
         setFirstReplyTime();
         setAverageSlaTimeInMinutes();
         setCaseFirstResponseTime();
-        //Vijay RT-510
-        setTotalReplyTime();
     }
     protected override void afterUpdate(){
         updateCase();        
@@ -78,9 +76,13 @@ Numeric - value in minutes
         for(EmailMessage em : (List<EmailMessage>)Trigger.new) {
             emailParentIdSet.add(em.ParentId);
         }
-        for(case caseObj :[Select Id,First_Reply_Time__c,(Select Id,SLA_Time_Capture__c From EmailMessages)from case WHERE Id=:emailParentIdSet]){
-            if(caseObj.EmailMessages.size() == 0 || caseObj.First_Reply_Time__c == null )
-            {
+        for(case caseObj :[Select Id,First_Reply_Time__c,(Select Id,SLA_Time_Capture__c From EmailMessages LIMIT 1)from case WHERE Id=:emailParentIdSet]){
+            Integer count = 0;
+            for(EmailMessage em: caseObj.EmailMessages) {
+                count++;
+                break;
+            }
+            if(count == 0 || caseObj.First_Reply_Time__c == null) {
                 datetime currentTime = datetime.now();
                 caseObj.First_Reply_Time__c=currentTime.format('HH:mm');
                 updateCases.add(caseObj);
@@ -142,7 +144,7 @@ Numeric - value in minutes
                                    }
                                    if(numOfEmails > 0) {
                                        caseObj.Average_SLA_In_Minutes__c = caseTotal / numOfEmails; 
-                                       caseObj.Total_Reply_Time__c = replyTime / 1000 / 60 / 60;
+                                       caseObj.Total_Reply_Time__c = replyTime / 1000 / 60;
                                        caseObj.IsUpdateFromCaseComment__c = !caseObj.IsUpdateFromCaseComment__c;
                                        caseToUpdate.add(caseObj);
                                    }
@@ -151,39 +153,6 @@ Numeric - value in minutes
         if(!caseToUpdate.isEmpty()) {
             update caseToUpdate;
         }
-        
-        
-        
-        
-        //     Set<Decimal> slaInNumber =new Set<Decimal>();
-        //    for(EmailMessage emailMessageObj :[Select Id,ParentId,SLA_Time_Capture__c From EmailMessage WHERE ParentId IN: emailParentIdSet]){
-        //             if(emailMessageObj.SLA_Time_Capture__c != null)
-        //             {  
-        //                 if(!caseEmailMap.containskey(emailMessageObj.ParentId))
-        //                 {
-        //                   caseEmailMap.put(emailMessageObj.ParentId, new List<EmailMessage>{ emailMessageObj });
-        //                 }else{
-        //                     caseEmailMap.get(emailMessageObj.ParentId).add(emailMessageObj);
-        //                 }   
-        //             }
-        //     } 
-        //     for(Case caseObj: [SELECT Id,Average_SLA_Time__c from Case Where Id IN: caseEmailMap.keySet()]){
-        //         Decimal sumOfSla = 0;
-        //         List<EmailMessage> emailMessageList = caseEmailMap.get(caseObj.Id);
-        //         for(EmailMessage emailMessageObj : emailMessageList){
-        //             String slaString =emailMessageObj.SLA_Time_Capture__c.replace(':', '.');
-        //             if(slaString.length() > 1){
-        //             sumOfSla = sumOfSla + Decimal.valueOf(slaString.trim());
-        //             }
-        //         }
-        //         Decimal averageSla =sumOfSla/emailMessageList.size();
-        //         String averageSlaStr =String.valueOf(averageSla.setScale(2));
-        //         caseObj.Average_SLA_Time__c = averageSlaStr.replace('.', ':');
-        //         updateCases.add(caseObj);
-        //     }
-        //     if(!updateCases.isEmpty()) {
-        //         update updateCases;
-        //     }
     }
     // Added by Vijay 
     // RT-407:  When the user sends an outbound email we should capture Case SLA_Time_Remaining2__c time and Populated on Email Message Field SLA_Time_Capture__c
@@ -275,200 +244,7 @@ Numeric - value in minutes
             update upCase;
         }
     }
-    //commented for testcode coverage
-    /* private void updateCaseStatus(){
-List<Case> caseUpdateList = new List<Case>();
-Map<Id, EmailMessage> emailMessageById = (Map<Id, EmailMessage>)Trigger.newMap;
-Map<Id,Case> caseById = new Map<Id, Case>([SELECT ID, Status, LastModifiedDate, IsClosed, IsUpdateFromCaseComment__c
-FROM Case 
-WHERE Id IN (SELECT ParentId 
-FROM EmailMessage 
-WHERE ID =: emailMessageById.keySet())]);
-for(EmailMessage objEM : emailMessageById.values()) {
-if(caseById.containsKey(objEM.ParentId)){
-Case objCase = caseById.get(objEM.ParentId);
-if(objEM.Incoming = true ){
-if(getTimeafterClose(objCase) <= 48 && objCase.isClosed){
-objCase.Status = 'Customer Replied';
-}else if(!objCase.isClosed && objCase.Status != 'New'){
-objCase.Status = 'Customer Replied';
-}
-}
-// code from updateCase()
-Boolean isTrue = objCase.IsUpdateFromCaseComment__c;
-objCase.IsUpdateFromCaseComment__c = isTrue ? false : true;
-caseUpdateList.add(objCase);
-}
-}
-Database.update(caseUpdateList, false);
-}
-private long getTimeafterClose(Case objCase){
-Long convertedHour = 0;
-Long miliseconds =  objCase.LastModifiedDate.getTime() - System.now().getTime(); //ServerTime.getTime();
-if(miliseconds > 1000){
-Long convertedSec = miliseconds/ 1000;
-if(convertedSec > 60){
-Long convertedMin = convertedSec / 60;
-if(convertedMin > 60)
-convertedHour = convertedMin / 60 ;
-}
-}
-return convertedHour;
 
-}*/
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /*
-protected override void beforeInsert(){
-//assignEmailToOldCase();
-}
-
-private String extractMainSubject(String emailSubject)
-{
-if(emailSubject == null || emailSubject.length() < 3)
-return emailSubject;
-String[] prefixes = new String[] {'re: sandbox: re:','fw:','re:', 'automatic reply:', 'out of office autoreply:', 'out of office', 'fwd:'};  
-String target = emailSubject.toLowerCase();
-for(String prefix: prefixes) {
-Integer index = target.indexOf(prefix); 
-if(index == 0 ){
-String mainSubject = emailSubject.substring(prefix.length(),emailSubject.length());
-return mainSubject.trim();
-}  
-}
-return emailSubject;     
-}
-
-//private void emailToCaseFindParentCase(){
-
-//    List<Case> caseUpdateList = new List<Case>();
-//    Map<Id, EmailMessage> emailMessageById = (Map<Id, EmailMessage>)Trigger.newMap;
-//    Map<Id, Case> caseById = new Map<Id, Case>([SELECT ID, Subject, RequestorsEmail__c, Status, LastModifiedDate, CreatedDate, IsClosed,
-//                        (SELECT ID FROM EmailMessages)
-//                        FROM Case 
-//                        WHERE Id IN (SELECT ParentId FROM EmailMessage WHERE ID =: Trigger.newMap.keySet() )]);
-
-//    // {
-//    //     // if(objCase.EmailMessages.Size() > 1){
-//    //     //     caseUpdateList
-//    //     // }
-//    // }
-//}
-
-
-private void emailONError(String strMessage){
-
-Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
-String[] toAddresses = new String[] {'anup@cloudfastener.com'};
-mail.setToAddresses(toAddresses);
-mail.setReplyTo('support@acme.com');
-mail.setSenderDisplayName('Salesforce Support');
-mail.setSubject('Salesforce Email Error');
-mail.setBccSender(false);
-mail.setUseSignature(false);
-mail.setPlainTextBody('Your Case: '+ strMessage);
-Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });
-}
-
-private void assignEmailToOldCase(){
-Map<String, EmailMessage> emailMessageBySubject = new Map<String,  EmailMessage>();
-List<Case> upCase = new List<Case>();
-for(EmailMessage em: (List<EmailMessage>)Trigger.New){
-String emailSubject = em.Subject;       
-emailMessageBySubject.put(emailSubject, em);
-emailMessageBySubject.put(extractMainSubject(emailSubject), em);
-}
-Map<Id,Case> caseUpdateById = new Map<Id, Case>();
-
-Map<Id, Case> caseById = new Map<Id, Case>([SELECT ID, Subject, RequestorsEmail__c, Status, LastModifiedDate, CreatedDate, IsClosed, parentId 
-FROM Case 
-WHERE Id IN (SELECT ParentId FROM EmailMessage WHERE Subject =: EmailMessageBySubject.keySet()) ]);
-
-Map<Id, EmailMessage> emailMessageByCaseID = new Map<Id, EmailMessage>();
-for(EmailMessage objEmail : [SELECT Id, ParentId, HtmlBody, Headers, Subject, FromName, FromAddress, ToAddress, CcAddress, BccAddress 
-FROM EmailMessage 
-WHERE Subject =: EmailMessageBySubject.keySet()  ORDER BY CreatedDate DESC])
-{
-//emailONError('inside of email ');
-EmailMessage em = EmailMessageBySubject.get(objEmail.Subject); // new Email 
-List<String> EmailsList = new List<String>(); //  if we got replay mail from cc.
-if(String.isNotBlank(objEmail.CcAddress)){
-EmailsList.addALL(objEmail.CcAddress.toLowerCase().split(';'));
-}
-if(String.isNotBlank(objEmail.BccAddress)){
-EmailsList.addALL(objEmail.BccAddress.toLowerCase().split(';'));
-}
-if(String.isNotBlank(objEmail.FromAddress)){
-EmailsList.add(objEmail.FromAddress.toLowerCase());
-}
-emailONError('inside of email '+EmailsList.size());
-if(EmailsList.contains(em.FromAddress.toLowerCase()) && em.ParentId != objEmail.ParentId){
-emailONError('inside of email if');
-Case objParentCase = caseById.get(objEmail.ParentId);
-Case newEmailCase = caseById.get(em.ParentId);
-Long miliseconds =  objParentCase.LastModifiedDate.getTime() - objParentCase.CreatedDate.getTime(); //ServerTime.getTime();
-Long convertedSec = miliseconds/ 1000;
-Long convertedMin = convertedSec / 60;
-Long convertedHour = convertedMin / 60 ;
-
-if(objParentCase.IsClosed && convertedHour <= 48 ){  // checking case has been closed in less then 48 hrs
-
-updateCaseFields(caseUpdateById, objParentCase, newEmailCase);
-emailONError(String.valueOf(caseUpdateById.size()));
-
-}else{ 
-// Checking case is not closed.
-updateCaseFields(caseUpdateById, objParentCase, newEmailCase);
-emailONError(String.valueOf(caseUpdateById.size()));
-
-} 
-// TODO: deactivate the workflow.
-}
-}
-
-TriggerHandler.bypass('CaseTriggerHandler');
-if(!caseUpdateById.isEmpty()){
-UPDATE caseUpdateById.values();
-}
-TriggerHandler.clearBypass('CaseTriggerHandler');
-}
-private void updateCaseFields(Map<Id,Case> caseUpdateById, Case objParentCase, Case newEmailCase){
-// check parentCase has a parent Case
-if(objParentCase.parentId != null){
-if(objParentCase.Status != 'New'){
-if(!caseUpdateById.containsKey(objParentCase.parentId)){
-caseUpdateById.put(objParentCase.parentId, new Case(Id =objParentCase.parentId));
-}
-caseUpdateById.get(objParentCase.parentId).Status = 'Customer Replied';
-}
-if(!caseUpdateById.containsKey(newEmailCase.id)){
-caseUpdateById.put(newEmailCase.id, new Case(Id = newEmailCase.id));
-}
-caseUpdateById.get(newEmailCase.parentId).parentId = objParentCase.parentId;
-
-}else{
-if(objParentCase.Status != 'New'){
-if(!caseUpdateById.containsKey(objParentCase.Id)){
-caseUpdateById.put(objParentCase.Id, new Case(Id = objParentCase.Id));
-}
-caseUpdateById.get(objParentCase.Id).Status = 'Customer Replied';
-}
-if(!caseUpdateById.containsKey(newEmailCase.parentId)){
-caseUpdateById.put(newEmailCase.Id, new Case(Id = newEmailCase.Id));
-}
-caseUpdateById.get(newEmailCase.Id).parentId = objParentCase.Id;
-}
-//return caseUpdateById;
-}
-*/
     private static Profile profile {get {
         return PGI_Utility.profile;
     } set; }
@@ -481,84 +257,34 @@ caseUpdateById.get(newEmailCase.Id).parentId = objParentCase.Id;
             }
         }
     }
-    private void setTotalReplyTime() {
-        List<Case> caseToUpdate = new List<Case>();
-        Id outboundCaseRTId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Outbound Email Support').getRecordTypeId();
-         Id InboundCaseRTId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Inbound Email Support').getRecordTypeId();
-        Set<Id> emailParentIdSet = new Set<Id>(); 
-        Set<Id> recordTypeIds = new Set<Id>{outboundCaseRTId,InboundCaseRTId};
-        Map<Id,EmailMessage> emailToReplyTimeMap = new Map<Id,EmailMessage>();
-       for(EmailMessage em : (List<EmailMessage>)Trigger.new) {
-           emailParentIdSet.add(em.ParentId);
-           emailToReplyTimeMap.put(em.ParentId,em);
-         }
-      for(Case objCase :[SELECT Id,Total_Reply_Time__c 
-                            FROM case 
-                            WHERE Id =:emailParentIdSet 
-                         AND RecordTypeId =:recordTypeIds]) {
-                             if(emailToReplyTimeMap.keySet() != null &&  emailToReplyTimeMap.get(objCase.Id).Reply_Time__c !=Null ) {
-                                 if(objCase.Total_Reply_Time__c == null){
-                                //    objCase.Total_Reply_Time__c =  Integer.valueOf(emailToReplyTimeMap.get(objCase.Id).Reply_Time__c/60000);
-                                 caseToUpdate.add(objCase);
-                                 }
-                                 else{
-                                     Integer replyTimeInMin = Integer.valueOf(emailToReplyTimeMap.get(objCase.Id).Reply_Time__c/60000);
-                                    //  objCase.Total_Reply_Time__c = objCase.Total_Reply_Time__c + replyTimeInMin; 
-                                     caseToUpdate.add(objCase);
-                                 }
-                             }
-                         }  
-        if(!caseToUpdate.isEmpty()){
-            UPDATE caseToUpdate;
-        }
-    }
-    
-     //Vijay RT-510 capture total replay time.
-     /*private void setTotalReplyTime() {
-         
-         Set<Id> emailParentIdSet = new Set<Id>();
-         List<Case> caseToUpdateLst = new List<Case>();
-         for(EmailMessage em : (List<EmailMessage>)Trigger.new) {
-             emailParentIdSet.add(em.ParentId);
-         }
-         for(Case objCase :[SELECT Id, First_Response_Time__c,Total_Reply_Time__c 
-                            FROM case 
-                            WHERE Id =:emailParentIdSet 
-                            AND RecordTypeId =:recordTypeIds]) {
-                                 if(objCase.First_Response_Time__c != null ){
-                                     System.debug('The Now >>>>>>>>>>>>>>>>>>'+System.now());
-                                     System.debug('The First_Response_Time__c'+objCase.First_Response_Time__c);
-                                     Integer min1 = System.now().minute();
-                                     Integer min2 = objCase.First_Response_Time__c.minute();
-                                     Integer minutesDifference;
-                                     if(min1 >=min2){
-                                         minutesDifference = min1 -min2; 
-                                     }
-                                     else{
-                                         minutesDifference = min2 -min1;
-                                     }
-                                     System.debug('Minutes Difference'+minutesDifference);
-                                     Long dt1Long = objCase.First_Response_Time__c.getTime();
-                                     Long dt2Long = System.now().getTime();
-                                     Long milliseconds = dt2Long - dt1Long;
-                                     Long seconds = milliseconds / 1000;
-                                     Long minutes = seconds / 60;
-                                     Long hours = minutes / 60;
-                                     Long days = hours / 24;
-                                    System.debug('The Total_Reply_Time__c'+objCase.Total_Reply_Time__c);
-                                    System.debug('The minutes'+minutesDifference);
-                                     System.debug('The minutes'+minutes);
-                                    System.debug('The days between'+days);
-                                     System.debug('The days hours'+hours);
-                                    //Set minutes now no t set Because doubt
-                                        objCase.Total_Reply_Time__c = 0;
-                                     
-                                     caseToUpdateLst.add(objCase);
-                                 }
-                            }
-         if(!caseToUpdateLst.isEmpty()){
-             UPDATE caseToUpdateLst;
-         }            
-     }*/
+    // private void setTotalReplyTime() {
+    //     List<Case> caseToUpdate = new List<Case>();
+    //     Id outboundCaseRTId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Outbound Email Support').getRecordTypeId();
+    //     Id InboundCaseRTId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Inbound Email Support').getRecordTypeId();
+    //     Set<Id> emailParentIdSet = new Set<Id>(); 
+    //     Set<Id> recordTypeIds = new Set<Id>{outboundCaseRTId,InboundCaseRTId};
+        
+    //     for(EmailMessage em : (List<EmailMessage>)Trigger.new) {
+    //         emailParentIdSet.add(em.ParentId);
+    //     }
+    //     for(Case objCase :[SELECT Id,Total_Reply_Time__c, (SELECT Id, Reply_Time__c FROM EmailMessages)
+    //                         FROM case 
+    //                         WHERE Id =:emailParentIdSet 
+    //                      AND RecordTypeId =:recordTypeIds
+    //                      FOR UPDATE]) {
+    //         Integer replyTimeInMs = 0;
+    //         for(EmailMessage em: EmailMessages) {
+    //             if(em.Reply_Time__c != null) {
+    //                 replyTimeInMs += em.Reply_Time__c;
+    //             }
+    //         }
+    //         objCase.Total_Reply_Time__c = Integer.valueOf(replyTimeInMs/60000);
+    //         caseToUpdate.add(objCase);
+    //     }  
+    //     if(!caseToUpdate.isEmpty()){
+    //         UPDATE caseToUpdate;
+    //     }
+    // }
+
     
 }

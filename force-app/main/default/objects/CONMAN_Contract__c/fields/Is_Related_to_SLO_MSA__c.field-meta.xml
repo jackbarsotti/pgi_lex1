@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Is_Related_to_SLO_MSA__c</fullName>
     <externalId>false</externalId>
-    <formula>TEXT(Associated_SLO_Name__c) &lt;&gt; &#39;&#39; &amp;&amp; NOT(ISBLANK(Associated_SLO_Date__c))</formula>
+    <formula>TEXT(Associated_SLO_Name__c) &lt;&gt; &apos;&apos; &amp;&amp; NOT(ISBLANK(Associated_SLO_Date__c))</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Is Related to SLO MSA</label>
     <trackHistory>false</trackHistory>

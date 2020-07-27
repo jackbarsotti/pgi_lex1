@@ -8,7 +8,7 @@ ISBLANK( Account_Updates__c),
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
 $User.Override_Validation_Rules__c = False,
 (
-ISPICKVAL(Account_Risk_Rating__c, &#39;HIGH&#39;)|| ISPICKVAL(Account_Risk_Rating__c, &#39;EXTREME&#39;)
+ISPICKVAL(Account_Risk_Rating__c, &apos;HIGH&apos;)|| ISPICKVAL(Account_Risk_Rating__c, &apos;EXTREME&apos;)
 )
 )</errorConditionFormula>
     <errorMessage>An open text-based action plan must be provided in the Account Updates field if the Account Risk rating is High or Extreme.</errorMessage>

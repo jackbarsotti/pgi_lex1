@@ -5,7 +5,7 @@
     <description>This is to ensure owner = a queue and not a user!</description>
     <errorConditionFormula>AND( 
 ISChanged (OwnerId),
-LEFT( OwnerId , 3) = &#39;005&#39; 
+LEFT( OwnerId , 3) = &apos;005&apos; 
 )</errorConditionFormula>
     <errorMessage>Ownership must be a Queue and not a User. Users are to be assigned in the Assigned To area.</errorMessage>
 </ValidationRule>

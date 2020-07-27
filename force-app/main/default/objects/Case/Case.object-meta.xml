@@ -100,9 +100,7 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>Edit</actionName>
-        <content>CaseTabViewer</content>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Visualforce</type>
+        <type>Default</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>Edit</actionName>
@@ -144,18 +142,20 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>NewCase</actionName>
-        <content>CreateCase</content>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Visualforce</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>NewCase</actionName>
+        <content>caseNewOverrideWrapper</content>
         <formFactor>Large</formFactor>
-        <type>Default</type>
+        <skipRecordTypeSelect>true</skipRecordTypeSelect>
+        <type>LightningComponent</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>NewCase</actionName>
+        <content>caseNewOverrideWrapper</content>
         <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>true</skipRecordTypeSelect>
+        <type>LightningComponent</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewCase</actionName>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -188,9 +188,7 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <content>CaseViewOverride</content>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Visualforce</type>
+        <type>Default</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
@@ -219,7 +217,7 @@
         <excludedStandardButtons>Accept</excludedStandardButtons>
         <excludedStandardButtons>MassClose</excludedStandardButtons>
         <excludedStandardButtons>Forward</excludedStandardButtons>
-        <listViewButtons>Assign_to_Me_listbutton</listViewButtons>
+        <listViewButtons>Assign_to_Me_ListBtn_Lex</listViewButtons>
         <lookupDialogsAdditionalFields>CASES.CASE_NUMBER</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>CASES.RECORDTYPE</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>Current_Owner_s_Name__c</lookupDialogsAdditionalFields>
@@ -237,7 +235,6 @@
         <lookupPhoneDialogsAdditionalFields>CASES.CREATED_DATE</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>CASES.CLOSED_DATE</lookupPhoneDialogsAdditionalFields>
         <massQuickActions>New_Case_Lex</massQuickActions>
-        <massQuickActions>Assign_to_Me_listbuttonLex</massQuickActions>
         <searchFilterFields>CASES.RECORDTYPE</searchFilterFields>
         <searchFilterFields>Current_Owner_s_Name__c</searchFilterFields>
         <searchFilterFields>Assigned_To__c</searchFilterFields>
@@ -252,7 +249,7 @@
         <searchResultsAdditionalFields>CASES.STATUS</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CASES.CREATED_DATE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CASES.CLOSED_DATE</searchResultsAdditionalFields>
-        <searchResultsCustomButtons>Assign_to_Me_listbutton</searchResultsCustomButtons>
+        <searchResultsCustomButtons>Assign_to_Me_ListBtn_Lex</searchResultsCustomButtons>
     </searchLayouts>
     <sharingModel>Private</sharingModel>
 </CustomObject>

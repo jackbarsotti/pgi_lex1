@@ -3,7 +3,7 @@
     <fullName>FSL__Scheduling_Priority__c</fullName>
     <deprecated>false</deprecated>
     <externalId>false</externalId>
-    <formula>CASE(TEXT(Priority), &#39;Critical&#39; , 1 ,&#39;High&#39; ,2,&#39;Medium&#39; ,3 , &#39;Low&#39;, 4, null)</formula>
+    <formula>CASE(TEXT(Priority), &apos;Critical&apos; , 1 ,&apos;High&apos; ,2,&apos;Medium&apos; ,3 , &apos;Low&apos;, 4, null)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Scheduling Priority</label>
     <precision>18</precision>

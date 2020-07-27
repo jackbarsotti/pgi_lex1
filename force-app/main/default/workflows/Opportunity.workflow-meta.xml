@@ -813,11 +813,11 @@
     <fieldUpdates>
         <fullName>All_Set_Forecast_Totals</fullName>
         <field>Forecast_Total__c</field>
-        <formula>IF(RecordTypeId = &#39;01213000001NeTg&#39;, MRR_Total__c,
-IF(RecordTypeId = &#39;0121B000001hgQW&#39;,  MRR_Total__c,
-IF(RecordTypeId = &#39;0121B000001hgTt&#39;,  Amount,
-IF(RecordTypeId = &#39;0121B000001q5Wh&#39;,  Amount,
-IF(RecordTypeId = &#39;0121B000001hgIQ&#39;,  Amount - Third_Party_Total__c,
+        <formula>IF(RecordTypeId = &apos;01213000001NeTg&apos;, MRR_Total__c,
+IF(RecordTypeId = &apos;0121B000001hgQW&apos;,  MRR_Total__c,
+IF(RecordTypeId = &apos;0121B000001hgTt&apos;,  Amount,
+IF(RecordTypeId = &apos;0121B000001q5Wh&apos;,  Amount,
+IF(RecordTypeId = &apos;0121B000001hgIQ&apos;,  Amount - Third_Party_Total__c,
 0)))))</formula>
         <name>All - Set Forecast Totals</name>
         <notifyAssignee>false</notifyAssignee>
@@ -2100,7 +2100,7 @@ Owner_Region__c = &quot;EMEA&quot;
         </actions>
         <active>true</active>
         <description>Sends email to Simon &amp; Jesse when Government Opportunity field is not null</description>
-        <formula>AND( CONTAINS( RecordType.Name, &quot;PGi&quot;), NOT(  ISPICKVAL( GovernmentOpportunity__c ,&#39;&#39;) ) ,  Owner_Region__c == &#39;NA&#39;)</formula>
+        <formula>AND( CONTAINS( RecordType.Name, &quot;PGi&quot;), NOT(  ISPICKVAL( GovernmentOpportunity__c ,&apos;&apos;) ) ,  Owner_Region__c == &apos;NA&apos;)</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
@@ -2113,7 +2113,7 @@ Owner_Region__c = &quot;EMEA&quot;
         <formula>AND(
  Implementation_Review_Request__c = True, 
  Owner_Region__c = &quot;NA&quot;, 
- CONTAINS(RecordType.DeveloperName, &#39;PGi&#39;),
+ CONTAINS(RecordType.DeveloperName, &apos;PGi&apos;),
 OR( 
 ISNEW(), ISCHANGED(Implementation_Review_Request__c)))</formula>
         <triggerType>onAllChanges</triggerType>
@@ -2136,7 +2136,7 @@ ISNEW(), ISCHANGED(Implementation_Review_Request__c)))</formula>
             <type>Alert</type>
         </actions>
         <active>true</active>
-        <description>An Opportunity has finalized its contract and is ready to start Implementation!  for Owner&#39;s Role contains Canada</description>
+        <description>An Opportunity has finalized its contract and is ready to start Implementation!  for Owner&apos;s Role contains Canada</description>
         <formula>AND(    CONTAINS( RecordType.Name, &quot;PGi&quot;),  ISPICKVAL(StageName, &quot;Closed Won&quot;),    $User.Override_Validation_Rules__c = False,   Owner_Region__c = &quot;NA&quot;,   CONTAINS( Owner.UserRole.Name , &quot;Canada&quot;))</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
@@ -2439,7 +2439,7 @@ True, False))</formula>
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>
-        <description>Set&#39;s the Opportunity closed date equal to the current date the first time an opportunity is set to closed.</description>
+        <description>Set&apos;s the Opportunity closed date equal to the current date the first time an opportunity is set to closed.</description>
         <formula>AND(  
 CONTAINS( RecordType.Name, &quot;PGi&quot;), 
 IsClosed = TRUE, 
@@ -3138,7 +3138,7 @@ $User.Override_Validation_Rules__c = False
         </actions>
         <active>true</active>
         <description>Updates Date Activated field when Opportunity moves from Prospect to Active status. formula</description>
-        <formula>ispickval(priorvalue(Opportunity_Status__c),&quot;Prospect&quot;)&amp;&amp; ispickval(Opportunity_Status__c,&quot;Active&quot;) &amp;&amp; Contains( RecordType.DeveloperName, &#39;ReadyTalk&#39;)</formula>
+        <formula>ispickval(priorvalue(Opportunity_Status__c),&quot;Prospect&quot;)&amp;&amp; ispickval(Opportunity_Status__c,&quot;Active&quot;) &amp;&amp; Contains( RecordType.DeveloperName, &apos;ReadyTalk&apos;)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>

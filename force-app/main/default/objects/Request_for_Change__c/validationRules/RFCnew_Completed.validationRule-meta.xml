@@ -4,10 +4,10 @@
     <active>true</active>
     <description>If Completed Unsuccessfully then other fields are required</description>
     <errorConditionFormula>AND(
-ISPICKVAL( Complete_RFC__c , &#39;Unsuccessful&#39;),
-ISPICKVAL ( Unsuccessful_Type__c, &#39;&#39; ),
+ISPICKVAL( Complete_RFC__c , &apos;Unsuccessful&apos;),
+ISPICKVAL ( Unsuccessful_Type__c, &apos;&apos; ),
 ISBLANK( Unsuccessful_Details__c ),
-ISPICKVAL ( NOC_Alert_Created__c, &#39;&#39;)
+ISPICKVAL ( NOC_Alert_Created__c, &apos;&apos;)
 )</errorConditionFormula>
     <errorDisplayField>Complete_RFC__c</errorDisplayField>
     <errorMessage>When an RFC is completed Unsuccessful then the Type, Details, and NOC Alert must be populated</errorMessage>

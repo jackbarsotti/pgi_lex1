@@ -4,9 +4,9 @@
     <active>false</active>
     <description>Multi_Region_made_mandatory</description>
     <errorConditionFormula>AND(
-RecordType.DeveloperName &lt;&gt; &#39;iMC IST&#39;, 
-ISPICKVAL(Multi_Regional_or_Global__c,&#39;&#39; ), 
-ISPICKVAL(IST_Completed_Status__c ,&#39;Completed&#39;)
+RecordType.DeveloperName &lt;&gt; &apos;iMC IST&apos;, 
+ISPICKVAL(Multi_Regional_or_Global__c,&apos;&apos; ), 
+ISPICKVAL(IST_Completed_Status__c ,&apos;Completed&apos;)
 )</errorConditionFormula>
     <errorMessage>Multi-Regional or Global must be selected when the Implementation Status is set to Completed</errorMessage>
 </ValidationRule>

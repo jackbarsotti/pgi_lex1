@@ -3,7 +3,7 @@
     <fullName>PreviousLeadOwnersRole__c</fullName>
     <description>This field will populate with the name of the Role of the previous Lead Owner if the lead is moved into the disqualified queues</description>
     <externalId>false</externalId>
-    <label>Previous Lead Owner&#39;s Role</label>
+    <label>Previous Lead Owner&apos;s Role</label>
     <length>200</length>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

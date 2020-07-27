@@ -2,9 +2,9 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Required_Approval_Pricing_SVP__c</fullName>
     <defaultValue>false</defaultValue>
-    <description>Whether or not this Contract/Amendment requires Pricing Approval from the owner&#39;s SVP.</description>
+    <description>Whether or not this Contract/Amendment requires Pricing Approval from the owner&apos;s SVP.</description>
     <externalId>false</externalId>
-    <inlineHelpText>Whether or not this Contract/Amendment requires Pricing Approval from the owner&#39;s SVP.</inlineHelpText>
+    <inlineHelpText>Whether or not this Contract/Amendment requires Pricing Approval from the owner&apos;s SVP.</inlineHelpText>
     <label>Required Approval: Pricing - SVP</label>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

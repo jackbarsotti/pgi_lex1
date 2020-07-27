@@ -9,20 +9,20 @@ NOT(ISCHANGED(IsUpdateFromCaseComment__c)),
 $Profile.Name &lt;&gt; &quot;Zendesk Profile&quot;,
 RecordType.Name = &quot;PGi-Client External Support&quot;,
 (
-ISPICKVAL(Area_of_Focus__c,&#39;Audio Integration&#39;) ||
-ISPICKVAL(Area_of_Focus__c,&#39;Audio Integration Support&#39;) ||
-ISPICKVAL(Area_of_Focus__c,&#39;Audio Support&#39;) ||
-ISPICKVAL(Area_of_Focus__c,&#39;General Tech Support&#39;) ||
-ISPICKVAL(Area_of_Focus__c,&#39;Mobile Support&#39;) ||
-ISPICKVAL(Area_of_Focus__c,&#39;Recording Support&#39;) ||
-ISPICKVAL(Area_of_Focus__c,&#39;Toolbar Support&#39;) ||
-ISPICKVAL(Area_of_Focus__c,&#39;Video Support&#39;) ||
-ISPICKVAL(Area_of_Focus__c,&#39;Web Support&#39;)
+ISPICKVAL(Area_of_Focus__c,&apos;Audio Integration&apos;) ||
+ISPICKVAL(Area_of_Focus__c,&apos;Audio Integration Support&apos;) ||
+ISPICKVAL(Area_of_Focus__c,&apos;Audio Support&apos;) ||
+ISPICKVAL(Area_of_Focus__c,&apos;General Tech Support&apos;) ||
+ISPICKVAL(Area_of_Focus__c,&apos;Mobile Support&apos;) ||
+ISPICKVAL(Area_of_Focus__c,&apos;Recording Support&apos;) ||
+ISPICKVAL(Area_of_Focus__c,&apos;Toolbar Support&apos;) ||
+ISPICKVAL(Area_of_Focus__c,&apos;Video Support&apos;) ||
+ISPICKVAL(Area_of_Focus__c,&apos;Web Support&apos;)
 ),
 ISBLANK ( Conference_Date_Time__c )||
 ISBLANK ( Incident_Date_Time__c )||
-ISPICKVAL ( Symptom_Main__c ,&#39;&#39;)||
-ISPICKVAL ( Symptom_Sub__c ,&#39;&#39;)
+ISPICKVAL ( Symptom_Main__c ,&apos;&apos;)||
+ISPICKVAL ( Symptom_Sub__c ,&apos;&apos;)
 )</errorConditionFormula>
     <errorMessage>If Area of Focus is anything other than Client Education/Request, you must populate the following fields: Conference Date/Time, Incident Date/Time, Symptom Main, and Symptom Sub</errorMessage>
 </ValidationRule>

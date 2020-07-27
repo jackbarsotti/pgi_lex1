@@ -6,12 +6,12 @@
     <errorConditionFormula>AND(
     $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
 NOT(ISCHANGED(IsUpdateFromCaseComment__c)),
-    ISPICKVAL(Area_of_Focus__c,&#39;Toolbar Support&#39;),
+    ISPICKVAL(Area_of_Focus__c,&apos;Toolbar Support&apos;),
     (
     ISBLANK(  Outlook_Version__c  ) ||
     ISBLANK(  Operating_System__c  ) ||
     ISBLANK(  Exchange_Version__c  ) ||
-    ISPICKVAL( Issue_Replicated_in_OWA__c , &#39;&#39;) ||
+    ISPICKVAL( Issue_Replicated_in_OWA__c , &apos;&apos;) ||
     ISBLANK(  Internet_Explorer_Version__c  )
     )
 )</errorConditionFormula>

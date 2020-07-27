@@ -21,9 +21,9 @@
                 <label>No</label>
             </value>
             <value>
-                <fullName>Don&#39;t Know</fullName>
+                <fullName>Don&apos;t Know</fullName>
                 <default>false</default>
-                <label>Don&#39;t Know</label>
+                <label>Don&apos;t Know</label>
             </value>
         </valueSetDefinition>
     </valueSet>

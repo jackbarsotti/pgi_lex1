@@ -8,5 +8,5 @@
     <masterLabel>View Timesheet</masterLabel>
     <openType>replace</openType>
     <protected>false</protected>
-    <url>{!URLFOR($Site.Prefix+&#39;/apex/TASKRAY__trtaskboard?showTimesheet=true&#39;)}</url>
+    <url>{!URLFOR($Site.Prefix+&apos;/apex/TASKRAY__trtaskboard?showTimesheet=true&apos;)}</url>
 </WebLink>

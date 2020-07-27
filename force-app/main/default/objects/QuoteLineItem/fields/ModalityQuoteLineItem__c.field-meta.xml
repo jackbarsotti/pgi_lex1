@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>ModalityQuoteLineItem__c</fullName>
     <externalId>false</externalId>
-    <formula>CONTAINS(Product2.RecordType.DeveloperName, &#39;Modality&#39;)</formula>
+    <formula>CONTAINS(Product2.RecordType.DeveloperName, &apos;Modality&apos;)</formula>
     <label>Modality Quote Line Item</label>
     <type>Checkbox</type>
 </CustomField>

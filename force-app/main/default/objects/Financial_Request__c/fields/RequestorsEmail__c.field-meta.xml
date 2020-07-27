@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>RequestorsEmail__c</fullName>
     <externalId>false</externalId>
-    <label>Requestor&#39;s Email</label>
+    <label>Requestor&apos;s Email</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

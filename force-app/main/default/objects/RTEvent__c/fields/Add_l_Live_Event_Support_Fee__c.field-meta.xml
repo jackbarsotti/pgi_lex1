@@ -3,7 +3,7 @@
     <fullName>Add_l_Live_Event_Support_Fee__c</fullName>
     <defaultValue>0</defaultValue>
     <externalId>false</externalId>
-    <label>Add&#39;l Live Event Support Fee</label>
+    <label>Add&apos;l Live Event Support Fee</label>
     <precision>4</precision>
     <required>false</required>
     <scale>0</scale>

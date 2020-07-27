@@ -926,8 +926,8 @@ PGi_Company__r.Name</formula>
         <fullName>Case_Pause_Resolve_Time</fullName>
         <field>Resolve_Pause_Time__c</field>
         <formula>IF(IsClosed &amp;&amp; Resolve_Pause_Time__c = &quot;&quot;, Time_to_Resolve__c, 
-IF(NOT(IsClosed) &amp;&amp; TEXT(Status) = &#39;Pending Client Info/Action&#39;, Time_to_Resolve__c, 
-IF(Resolve_Pause_Time__c = &#39;&#39;, &#39;&#39;, Resolve_Pause_Time__c)))</formula>
+IF(NOT(IsClosed) &amp;&amp; TEXT(Status) = &apos;Pending Client Info/Action&apos;, Time_to_Resolve__c, 
+IF(Resolve_Pause_Time__c = &apos;&apos;, &apos;&apos;, Resolve_Pause_Time__c)))</formula>
         <name>Case Pause Resolve Time</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Formula</operation>
@@ -938,8 +938,8 @@ IF(Resolve_Pause_Time__c = &#39;&#39;, &#39;&#39;, Resolve_Pause_Time__c)))</for
         <description>Stamp in the Restore pause time when the case is Restored or when the case goes to Pending Client Action</description>
         <field>Restore_Pause_Time__c</field>
         <formula>IF((IsClosed || NOT(ISNULL(Restored__c))) &amp;&amp; Restore_Pause_Time__c = &quot;&quot;, Time_to_Restore__c, 
-IF(ISNULL(Restored__c) &amp;&amp; TEXT(Status) = &#39;Pending Client Info/Action&#39;, Time_to_Restore__c, 
-IF(Restore_Pause_Time__c = &#39;&#39;, &#39;&#39;, Restore_Pause_Time__c)))</formula>
+IF(ISNULL(Restored__c) &amp;&amp; TEXT(Status) = &apos;Pending Client Info/Action&apos;, Time_to_Restore__c, 
+IF(Restore_Pause_Time__c = &apos;&apos;, &apos;&apos;, Restore_Pause_Time__c)))</formula>
         <name>Case Pause Restore Time</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Formula</operation>
@@ -982,7 +982,7 @@ IF(Restore_Pause_Time__c = &#39;&#39;, &#39;&#39;, Restore_Pause_Time__c)))</for
     <fieldUpdates>
         <fullName>Most_Recent_Paused_Date</fullName>
         <field>Most_Recent_Paused_Time__c</field>
-        <formula>IF(TEXT(Status) = &#39;Pending Client Info/Action&#39;, Now(), null)</formula>
+        <formula>IF(TEXT(Status) = &apos;Pending Client Info/Action&apos;, Now(), null)</formula>
         <name>Most Recent Paused Date</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Formula</operation>
@@ -1466,8 +1466,8 @@ Text(HR_Request_Form__r.System_Access_Separation_Urgency__c)</formula>
         <active>true</active>
         <formula>And(
 Escalated__c = true,
-RecordType.DeveloperName &lt;&gt; &#39;Inbound_Email_Support&#39;,
-RecordType.DeveloperName &lt;&gt; &#39;Outbound_Email_Support&#39;
+RecordType.DeveloperName &lt;&gt; &apos;Inbound_Email_Support&apos;,
+RecordType.DeveloperName &lt;&gt; &apos;Outbound_Email_Support&apos;
 )</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
@@ -1481,10 +1481,10 @@ RecordType.DeveloperName &lt;&gt; &#39;Outbound_Email_Support&#39;
         <description>Notifies the Assigned To person of the case now being assigned to them unless they assign themselves then an email is not sent</description>
         <formula>AND( 
 ISCHANGED(Assigned_To__c), 
-Assigned_To__c &lt;&gt; &#39;005300000063GkeAAE&#39;,
-Assigned_To__c &lt;&gt; &#39;005300000063Gke&#39;,
+Assigned_To__c &lt;&gt; &apos;005300000063GkeAAE&apos;,
+Assigned_To__c &lt;&gt; &apos;005300000063Gke&apos;,
 $User.Id &lt;&gt; Assigned_To__c, 
-$User.Alias &lt;&gt; &#39;ecovate.reports&#39; )</formula>
+$User.Alias &lt;&gt; &apos;ecovate.reports&apos; )</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -1736,7 +1736,7 @@ $User.Alias &lt;&gt; &#39;ecovate.reports&#39; )</formula>
         </actions>
         <active>true</active>
         <description>When Ownership is changed, and prior status is NOT Resolved or Approved, set Case Status to &quot;New - Transferred&quot;.</description>
-        <formula>AND(  NOT(ISNEW()), NOT(PRIORVALUE(Auto_Generated_For_Case__c)),  RecordTypeId &lt;&gt; &#39;0121B000001q5WW&#39;, RecordTypeId &lt;&gt; &#39;0121B000001hgQS&#39;, ISCHANGED(OwnerId),  NOT(ISPICKVAL(Status,&#39;Closed&#39;)),  NOT(ISPICKVAL(Status,&#39;Resolved&#39;)), NOT(ISPICKVAL(Status,&#39;Approved&#39;)) ) &amp;&amp; LEFT(PRIORVALUE(OwnerId), 3) != &#39;005&#39;</formula>
+        <formula>AND(  NOT(ISNEW()), NOT(PRIORVALUE(Auto_Generated_For_Case__c)),  RecordTypeId &lt;&gt; &apos;0121B000001q5WW&apos;, RecordTypeId &lt;&gt; &apos;0121B000001hgQS&apos;, ISCHANGED(OwnerId),  NOT(ISPICKVAL(Status,&apos;Closed&apos;)),  NOT(ISPICKVAL(Status,&apos;Resolved&apos;)), NOT(ISPICKVAL(Status,&apos;Approved&apos;)) ) &amp;&amp; LEFT(PRIORVALUE(OwnerId), 3) != &apos;005&apos;</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -1771,7 +1771,7 @@ ISCHANGED( AgileSprint__c ) )</formula>
         </actions>
         <active>true</active>
         <description>If the Case Owner is changed, reset the &quot;Assigned To&quot; field as blank!</description>
-        <formula>AND( NOT(ISPICKVAL(Status,&#39;Closed&#39;)), ISCHANGED(OwnerId), NOT(ISBLANK(First_Escalation__c)) )</formula>
+        <formula>AND( NOT(ISPICKVAL(Status,&apos;Closed&apos;)), ISCHANGED(OwnerId), NOT(ISBLANK(First_Escalation__c)) )</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -1786,7 +1786,7 @@ ISCHANGED( AgileSprint__c ) )</formula>
         </actions>
         <active>true</active>
         <description>If the Case Owner is changed, reset the &quot;Assigned To&quot; field as blank and also set Escalation Date</description>
-        <formula>AND( NOT(ISNEW()), NOT(PRIORVALUE(Auto_Generated_For_Case__c)),  NOT(ISPICKVAL(Status,&#39;Closed&#39;)), ISCHANGED(OwnerId), ISBLANK(First_Escalation__c) )&amp;&amp; RecordType.Name &lt;&gt; &#39;Outbound Email Support&#39;</formula>
+        <formula>AND( NOT(ISNEW()), NOT(PRIORVALUE(Auto_Generated_For_Case__c)),  NOT(ISPICKVAL(Status,&apos;Closed&apos;)), ISCHANGED(OwnerId), ISBLANK(First_Escalation__c) )&amp;&amp; RecordType.Name &lt;&gt; &apos;Outbound Email Support&apos;</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -2099,8 +2099,8 @@ ISCHANGED( AgileSprint__c ) )</formula>
     TEXT(PRIORVALUE(Status)) = &quot;Closed&quot;,
     TEXT(Status) = &quot;Customer Replied&quot;,
 OR(
-RecordType.Id = &#39;0121B0000018Glj&#39;, 
-RecordType.Id = &#39;0121B000001CHE7&#39;)
+RecordType.Id = &apos;0121B0000018Glj&apos;, 
+RecordType.Id = &apos;0121B000001CHE7&apos;)
 )</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
@@ -3045,7 +3045,7 @@ Service - ReadyTalk outage</description>
         </actions>
         <active>true</active>
         <description>populates the RA Master ID from the associated access code</description>
-        <formula>AND(  RecordType.DeveloperName = &#39;RT_Client_External_Support&#39;, ISNULL( RA_Master_ID__c ),  NOT(ISNULL(Access_Code__c )))</formula>
+        <formula>AND(  RecordType.DeveloperName = &apos;RT_Client_External_Support&apos;, ISNULL( RA_Master_ID__c ),  NOT(ISNULL(Access_Code__c )))</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>

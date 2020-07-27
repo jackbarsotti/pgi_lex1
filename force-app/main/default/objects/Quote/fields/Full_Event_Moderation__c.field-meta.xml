@@ -3,7 +3,7 @@
     <fullName>Full_Event_Moderation__c</fullName>
     <defaultValue>325</defaultValue>
     <externalId>false</externalId>
-    <inlineHelpText>Includes 30 min pre-conf + 60 min live event; prorate for each add&#39;l 30 min</inlineHelpText>
+    <inlineHelpText>Includes 30 min pre-conf + 60 min live event; prorate for each add&apos;l 30 min</inlineHelpText>
     <label>Full Event Moderation</label>
     <precision>18</precision>
     <required>false</required>

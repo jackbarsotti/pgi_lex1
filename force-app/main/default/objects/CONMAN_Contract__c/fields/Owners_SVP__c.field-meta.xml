@@ -3,7 +3,7 @@
     <fullName>Owners_SVP__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
-    <label>Owner&#39;s SVP</label>
+    <label>Owner&apos;s SVP</label>
     <referenceTo>User</referenceTo>
     <relationshipName>SVP_on_Contracts</relationshipName>
     <required>false</required>

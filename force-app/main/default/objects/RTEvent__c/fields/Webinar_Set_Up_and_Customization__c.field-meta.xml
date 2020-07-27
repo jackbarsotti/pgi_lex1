@@ -3,7 +3,7 @@
     <fullName>Webinar_Set_Up_and_Customization__c</fullName>
     <description>Y/N field indicating client preference for this event.</description>
     <externalId>false</externalId>
-    <inlineHelpText>Select &quot;Yes&quot; if the client has requested add&#39;l set-up and customization svcs. for this event.</inlineHelpText>
+    <inlineHelpText>Select &quot;Yes&quot; if the client has requested add&apos;l set-up and customization svcs. for this event.</inlineHelpText>
     <label>Webinar Set-Up and Customization</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

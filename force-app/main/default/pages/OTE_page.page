@@ -1,4 +1,4 @@
-<apex:page standardController="OT_Member__c" extensions="OTE_pageController"   >
+<apex:page standardController="OT_Member__c" extensions="OTE_pageController" showHeader="false" lightningStylesheets="true" >
     <apex:includeLightning />
     <apex:includeScript value="/support/console/45.0/integration.js"/>
     <div  style="width:79vw;" id="OppyTeamEngine"  />

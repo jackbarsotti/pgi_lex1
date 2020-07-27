@@ -41,6 +41,10 @@
         <name>FSL__Service_Appointment_List_Columns</name>
     </fieldSets>
     <fieldSets>
+        <label><!-- Service Appointment List Preview --></label>
+        <name>FSL__Service_Appointment_List_Preview</name>
+    </fieldSets>
+    <fieldSets>
         <label><!-- Service Appt Resource Calendar Display --></label>
         <name>FSL__Service_Appt_Resource_Calendar_Display</name>
     </fieldSets>

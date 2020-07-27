@@ -281,7 +281,7 @@
         <formula>AND
 ($User.ReadyTalk_Exempt__c &lt;&gt; TRUE,
 Provision__c = TRUE,
-!ISPICKVAL(Status__c, &#39;Delete&#39;))</formula>
+!ISPICKVAL(Status__c, &apos;Delete&apos;))</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -514,7 +514,7 @@ Provision__c = TRUE,
         </actions>
         <active>true</active>
         <description>Alerts customer care when a new access code is provisioned on this account to ensure Quickstart gets enabled</description>
-        <formula>AND(ProvisioningEmailSent__c = NOW(),  Account_Number__c = &#39;1033148&#39;)</formula>
+        <formula>AND(ProvisioningEmailSent__c = NOW(),  Account_Number__c = &apos;1033148&apos;)</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
@@ -619,7 +619,7 @@ Template used is &quot;No Usage - 60 Days AM&quot; in the Workflow Templates fol
         <priority>Normal</priority>
         <protected>false</protected>
         <status>Completed</status>
-        <subject>RT_Access Information for ReadyTalk&#39;s Administration Center</subject>
+        <subject>RT_Access Information for ReadyTalk&apos;s Administration Center</subject>
     </tasks>
     <tasks>
         <fullName>RT_CustomersTrialExpiring</fullName>
@@ -631,7 +631,7 @@ Template used is &quot;No Usage - 60 Days AM&quot; in the Workflow Templates fol
         <priority>Normal</priority>
         <protected>false</protected>
         <status>Not Started</status>
-        <subject>RT_Customer&#39;s Trial Expiring</subject>
+        <subject>RT_Customer&apos;s Trial Expiring</subject>
     </tasks>
     <tasks>
         <fullName>RT_EmailSentAEIntro</fullName>

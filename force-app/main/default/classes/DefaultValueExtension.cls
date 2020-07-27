@@ -116,7 +116,8 @@ public without sharing class DefaultValueExtension {
 		} catch (exception e) {
 			dv.put('Value__c',String.valueOf(caseRecord.get(dv.Field_API_Name__c)));
 		}
-		return controller.save();
+		controller.save();
+		return new Pagereference('/'+ct.Id);
 
 	}
 	public Map<String, Default_Value__c> defaultValueByFieldName { get{ 

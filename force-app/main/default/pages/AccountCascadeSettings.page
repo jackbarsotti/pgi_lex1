@@ -4,6 +4,7 @@
   <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery-ui.min.js')}"/>
   <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/messaging.js')}"/>
 
+   <apex:pageBlock rendered="{!$User.UITheme == 'Theme3'}">
   <script>
     $(document).ready(function(){
       $.createConfirmBox("Would you like the Audio and Web Configuration change(s) to be applied to all existing access codes?", "dialog-modal", "OK", function(){
@@ -22,7 +23,8 @@
   <style>
     .checkBox label{max-width: 250px; width: 250px; float: left}
   </style>
-      
+    
+   
   <apex:pageMessages />
   <apex:detail relatedListHover="true" showChatter="false"/>            
 
@@ -92,5 +94,12 @@
       <apex:param name="webConfAllowed" assignTo="{!webConfAllowed}" value=""/>   
     </apex:actionFunction>         
     <apex:pageBlock id="hiddenBlock" rendered="false"></apex:pageBlock>    
-  </apex:form>            
+  </apex:form>   
+    </apex:pageBlock>
+    <apex:pageBlock rendered="{!$User.UITheme != 'Theme3'}">
+        <script type="text/javascript">
+            { window.alert("Please Switch to Salesforce Classic"); }
+        </script>
+        <apex:pageMessage severity="Info" summary="You must switch to salesforce classic to access this page." strength="1" />
+    </apex:pageBlock>
 </apex:page>

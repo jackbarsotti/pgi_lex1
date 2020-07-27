@@ -101,6 +101,14 @@
         <value>True</value>
     </labels>
     <labels>
+        <fullName>Implementation_Automation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Implementation Automation</shortDescription>
+        <value>&lt;a target=&quot;_blank&quot;
+ href=&quot;/lightning/cmp/c__OpportunityImplAutoComp&quot;/&gt;</value>
+    </labels>
+    <labels>
         <fullName>LeadSource</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -304,7 +312,7 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Contains the heading for quotes list.</shortDescription>
-        <value>Q/C Mgmt&#39;s List</value>
+        <value>Q/C Mgmt&apos;s List</value>
     </labels>
     <labels>
         <fullName>PGI_QuotesTab_Name</fullName>

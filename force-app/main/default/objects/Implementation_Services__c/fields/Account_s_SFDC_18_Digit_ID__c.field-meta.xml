@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <formula>Related_Opportunity__r.Account.SFDC_18_ID__c</formula>
     <inlineHelpText>This value is auto populated based off the Account that the Related Opportunity belongs to.  This ID will be used in the NCS process for UCaaS customers only to populate as the CorpCustomer SF Acct ID.</inlineHelpText>
-    <label>Account&#39;s SFDC 18 Digit ID</label>
+    <label>Account&apos;s SFDC 18 Digit ID</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

@@ -8,15 +8,15 @@ $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
 $Profile.Name &lt;&gt; &quot;Zendesk Profile&quot;,
 RecordType.Name = &quot;PGi-Client External Support&quot;,
 (
-ISPICKVAL(Area_of_Focus__c,&#39;Audio Integration&#39;) ||
-ISPICKVAL(Area_of_Focus__c,&#39;Audio Integration Support&#39;) ||
-ISPICKVAL(Area_of_Focus__c,&#39;Audio Support&#39;) ||
-ISPICKVAL(Area_of_Focus__c,&#39;Client Education/Request&#39;) || 
-ISPICKVAL(Area_of_Focus__c,&#39;General Tech Support&#39;) ||
-ISPICKVAL(Area_of_Focus__c,&#39;Mobile Support&#39;) ||
-ISPICKVAL(Area_of_Focus__c,&#39;Recording Support&#39;) ||
-ISPICKVAL(Area_of_Focus__c,&#39;Toolbar Support&#39;) ||
-ISPICKVAL(Area_of_Focus__c,&#39;Web Support&#39;)
+ISPICKVAL(Area_of_Focus__c,&apos;Audio Integration&apos;) ||
+ISPICKVAL(Area_of_Focus__c,&apos;Audio Integration Support&apos;) ||
+ISPICKVAL(Area_of_Focus__c,&apos;Audio Support&apos;) ||
+ISPICKVAL(Area_of_Focus__c,&apos;Client Education/Request&apos;) || 
+ISPICKVAL(Area_of_Focus__c,&apos;General Tech Support&apos;) ||
+ISPICKVAL(Area_of_Focus__c,&apos;Mobile Support&apos;) ||
+ISPICKVAL(Area_of_Focus__c,&apos;Recording Support&apos;) ||
+ISPICKVAL(Area_of_Focus__c,&apos;Toolbar Support&apos;) ||
+ISPICKVAL(Area_of_Focus__c,&apos;Web Support&apos;)
 ),
 ISBLANK ( PGi_Conference__c  )||
 ISBLANK ( PGi_Conference__r.Bridge_Name__c  )||

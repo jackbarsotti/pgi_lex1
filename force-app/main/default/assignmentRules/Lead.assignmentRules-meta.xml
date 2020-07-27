@@ -60,7 +60,7 @@
         <ruleEntry>
             <assignedTo>PGi_Lead_JAPAN_Web_To_Lead</assignedTo>
             <assignedToType>Queue</assignedToType>
-            <formula>OwnerId = &#39;00Ga000000309O8&#39; || Campaign.Parent.Id = &#39;7011B000002OP0g&#39;|| Campaign.Parent.Id = &#39;7011B000002OOni&#39;|| Campaign.Parent.Id = &#39;7011B000002OOnn&#39;|| Campaign.Parent.Id = &#39;7011B000002OOnY&#39;|| Country = &quot;Japan&quot;</formula>
+            <formula>OwnerId = &apos;00Ga000000309O8&apos; || Campaign.Parent.Id = &apos;7011B000002OP0g&apos;|| Campaign.Parent.Id = &apos;7011B000002OOni&apos;|| Campaign.Parent.Id = &apos;7011B000002OOnn&apos;|| Campaign.Parent.Id = &apos;7011B000002OOnY&apos;|| Country = &quot;Japan&quot;</formula>
             <template>Assigned_to_Templates/LeadsNewassignmentnotification</template>
         </ruleEntry>
         <ruleEntry>

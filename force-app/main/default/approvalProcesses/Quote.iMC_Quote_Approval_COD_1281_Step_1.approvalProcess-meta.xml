@@ -78,7 +78,7 @@
             </approver>
             <whenMultipleApprovers>Unanimous</whenMultipleApprovers>
         </assignedApprover>
-        <description>If Opportunity Owner equals Frank Nardi, Cohry Osborne or Eddie Medal, seek Mark Fordham&#39;s approval.</description>
+        <description>If Opportunity Owner equals Frank Nardi, Cohry Osborne or Eddie Medal, seek Mark Fordham&apos;s approval.</description>
         <entryCriteria>
             <criteriaItems>
                 <field>Opportunity.Owner</field>
@@ -132,7 +132,7 @@
             </approver>
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
         </assignedApprover>
-        <description>If Opportunity Owner equals Marianna Rodriguez, Jason Hurst or Rula Marie, and the quote amount is &lt;$10,000, seek Frank Nardi&#39;s approval.</description>
+        <description>If Opportunity Owner equals Marianna Rodriguez, Jason Hurst or Rula Marie, and the quote amount is &lt;$10,000, seek Frank Nardi&apos;s approval.</description>
         <entryCriteria>
             <criteriaItems>
                 <field>Opportunity.Owner</field>
@@ -167,7 +167,7 @@
             </approver>
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
         </assignedApprover>
-        <description>If Opportunity Owner equals Marianna Rodriguez, Jason Hurst or Rula Marie, the quote amount is &gt;=$10,000, and not a Renewal, seek Frank Nardi&#39;s approval, then Mark Fordham&#39;s approval.</description>
+        <description>If Opportunity Owner equals Marianna Rodriguez, Jason Hurst or Rula Marie, the quote amount is &gt;=$10,000, and not a Renewal, seek Frank Nardi&apos;s approval, then Mark Fordham&apos;s approval.</description>
         <entryCriteria>
             <booleanFilter>1 AND 2 AND 3</booleanFilter>
             <criteriaItems>
@@ -212,7 +212,7 @@
             </approver>
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
         </assignedApprover>
-        <description>Seek Steve Anderson&#39;s approval if Quote Discount is &gt;=20%.</description>
+        <description>Seek Steve Anderson&apos;s approval if Quote Discount is &gt;=20%.</description>
         <entryCriteria>
             <criteriaItems>
                 <field>Quote.Discount</field>

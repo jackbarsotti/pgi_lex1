@@ -216,7 +216,6 @@
     <tabs>standard-Dashboard</tabs>
     <tabs>RT1__ReadyTalk</tabs>
     <tabs>standard-WaveHome</tabs>
-    <tabs>PGi_Priority_Matrix</tabs>
     <tabs>Public_Group_Explorer</tabs>
     <tabs>standard-OmniSupervisor</tabs>
     <tabs>standard-QuickText</tabs>
@@ -225,7 +224,11 @@
     <tabs>standard-ServiceAppointment</tabs>
     <tabs>Conference__c</tabs>
     <tabs>TO_Request__c</tabs>
+    <tabs>Batch_Import_Revenue__c</tabs>
     <workspaceConfig>
+        <mappings>
+            <tab>Batch_Import_Revenue__c</tab>
+        </mappings>
         <mappings>
             <tab>Call_Log__c</tab>
         </mappings>
@@ -267,9 +270,6 @@
         </mappings>
         <mappings>
             <tab>OtherChargeCredit__c</tab>
-        </mappings>
-        <mappings>
-            <tab>PGi_Priority_Matrix</tab>
         </mappings>
         <mappings>
             <tab>PGi_Vendor_List__c</tab>

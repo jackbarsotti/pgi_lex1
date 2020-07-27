@@ -10,19 +10,19 @@
     <url>{!REQUIRESCRIPT(&quot;/soap/ajax/23.0/connection.js&quot;)} 
 {!REQUIRESCRIPT(&quot;/soap/ajax/23.0/apex.js&quot;)} 
 
-var OppRecords = sforce.connection.query(&quot;Select StageName From Opportunity where Id=&#39;{!Opportunity.Id}&#39;&quot;);
+var OppRecords = sforce.connection.query(&quot;Select StageName From Opportunity where Id=&apos;{!Opportunity.Id}&apos;&quot;);
 var oppRecord= QuoteRecord.getArray(&quot;records&quot;);
 alert(oppRecord[0].stageName); 
 
-if(oppRecord[0].stageName == &#39;Evaluate Options&#39;){ 
-	var QuoteRecord = sforce.connection.query(&quot;Select OpportunityId, Id, From Quote where OpportunityId=&#39;{!Opportunity.Id}&#39; &quot;); 
+if(oppRecord[0].stageName == &apos;Evaluate Options&apos;){ 
+	var QuoteRecord = sforce.connection.query(&quot;Select OpportunityId, Id, From Quote where OpportunityId=&apos;{!Opportunity.Id}&apos; &quot;); 
 	var records = QuoteRecord.getArray(&quot;records&quot;); 
 	if(records[0] != null){ 
-		alert(&#39;Deal record already exists&#39;); 
+		alert(&apos;Deal record already exists&apos;); 
 	}else{ 
-		window.location.href =&#39;/apex/newQuote?oppid={!Opportunity.Id}&#39;; 
+		window.location.href =&apos;/apex/newQuote?oppid={!Opportunity.Id}&apos;; 
 	}
 else{
-	alert(&#39;Deal will be created only the Stage is Evaluate Options&#39;); 
+	alert(&apos;Deal will be created only the Stage is Evaluate Options&apos;); 
 }</url>
 </WebLink>

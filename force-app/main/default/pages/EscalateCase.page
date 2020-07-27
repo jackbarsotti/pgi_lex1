@@ -1,4 +1,4 @@
-<apex:page showHeader="false" sidebar="false" action="{!init}" standardController="Case" extensions="EscalateCase">
+<apex:page showHeader="false" sidebar="false" action="{!init}" standardController="Case" extensions="EscalateCase" lightningStylesheets="true">
 	<apex:form >
 		<apex:pageMessages id="pm" />
 		<apex:commandButton action="{!goBack}" value="Go back"/>

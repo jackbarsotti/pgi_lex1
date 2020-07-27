@@ -4,8 +4,8 @@
     <active>false</active>
     <description>If MOP details are unchecked then all fields in the planning area are required</description>
     <errorConditionFormula>AND(
-NOT(ISPICKVAL(Type__c,&#39;Vendor&#39;)),
-NOT(ISPICKVAL(Type__c,&#39;Normal&#39;)),
+NOT(ISPICKVAL(Type__c,&apos;Vendor&apos;)),
+NOT(ISPICKVAL(Type__c,&apos;Normal&apos;)),
 MOP_details_will_be_attached__c = FALSE,
 OR(
 ISBLANK( Preparation_Plan__c ),

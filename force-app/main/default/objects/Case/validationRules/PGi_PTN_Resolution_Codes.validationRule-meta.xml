@@ -6,9 +6,9 @@
     <errorConditionFormula>AND(
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;, 
 NOT(ISCHANGED(IsUpdateFromCaseComment__c)),
-RecordType.Name = &#39;PGi-Parent Ticket (NOC)&#39;,
-ISPICKVAL (Status, &#39;Closed&#39;),
-ISPICKVAL(Tracking_Type__c, &#39;&#39;) 
+RecordType.Name = &apos;PGi-Parent Ticket (NOC)&apos;,
+ISPICKVAL (Status, &apos;Closed&apos;),
+ISPICKVAL(Tracking_Type__c, &apos;&apos;) 
 )</errorConditionFormula>
     <errorDisplayField>Tracking_Root_Category__c</errorDisplayField>
     <errorMessage>Tracking Type, and Resolution Codes must be populated when a Parent Ticket (NOC) is closed. Please use the Close Case button to access required fields and properly close a PTN.</errorMessage>

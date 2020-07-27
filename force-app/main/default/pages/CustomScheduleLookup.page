@@ -1,5 +1,6 @@
 <apex:page controller="CustomScheduleLookupController" title="Search" showHeader="false" sideBar="false" tabStyle="Schedule__c" id="pg">
-  <apex:form >
+  <apex:pageBlock rendered="{!$User.UITheme == 'Theme3'}">
+    <apex:form >
     <apex:outputPanel id="page" layout="block" style="margin:5px;padding:10px;padding-top:2px;">     
       <apex:actionRegion >   
         <apex:outputPanel id="pnlSearchResults" style="margin:10px;height:350px;overflow-Y:auto;" layout="block">
@@ -79,4 +80,11 @@
       </apex:actionRegion>
     </apex:outputPanel>
   </apex:form>
+    </apex:pageBlock>
+    <apex:pageBlock rendered="{!$User.UITheme != 'Theme3'}">
+        <script type="text/javascript">
+            { window.alert("Please Switch to Salesforce Classic"); }
+        </script>
+        <apex:pageMessage severity="Info" summary="You must switch to salesforce classic to access this page." strength="1" />
+    </apex:pageBlock>
 </apex:page>

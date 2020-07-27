@@ -4,6 +4,10 @@
     <columns>CASES.RECORDTYPE</columns>
     <columns>OWNER_NAME</columns>
     <columns>CASES.CASE_NUMBER</columns>
+    <columns>SLA_Time_Remaining2__c</columns>
+    <columns>SLA_Time_to_Complete__c</columns>
+    <columns>SLA_in_Hours__c</columns>
+    <columns>SLA_in_Minutes__c</columns>
     <columns>CASES.ORIGIN</columns>
     <columns>Assigned_To__c</columns>
     <columns>CASES.STATUS</columns>

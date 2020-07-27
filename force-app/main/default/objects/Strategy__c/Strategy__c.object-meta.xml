@@ -143,7 +143,7 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>[5/11/15, JK]: Created per Frank Nardi&#39;s request. This object relates to the Account Plan.</description>
+    <description>[5/11/15, JK]: Created per Frank Nardi&apos;s request. This object relates to the Account Plan.</description>
     <enableActivities>true</enableActivities>
     <enableBulkApi>false</enableBulkApi>
     <enableFeeds>false</enableFeeds>

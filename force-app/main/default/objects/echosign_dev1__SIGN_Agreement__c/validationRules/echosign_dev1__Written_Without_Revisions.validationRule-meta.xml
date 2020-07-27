@@ -3,7 +3,7 @@
     <fullName>echosign_dev1__Written_Without_Revisions</fullName>
     <active>false</active>
     <errorConditionFormula>AND( 
-  TEXT(echosign_dev1__SignatureType__c) = &#39;Written Signature&#39;,
+  TEXT(echosign_dev1__SignatureType__c) = &apos;Written Signature&apos;,
   false
 )</errorConditionFormula>
     <errorMessage>Suggesting revisions is not possible with a written signature.</errorMessage>

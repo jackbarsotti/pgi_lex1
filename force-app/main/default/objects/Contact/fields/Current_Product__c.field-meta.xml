@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Current_Product__c</fullName>
     <externalId>false</externalId>
-    <inlineHelpText>This field is a roll up of the current product the Contact&#39;s Access Codes are assigned to.</inlineHelpText>
+    <inlineHelpText>This field is a roll up of the current product the Contact&apos;s Access Codes are assigned to.</inlineHelpText>
     <label>Current Product</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

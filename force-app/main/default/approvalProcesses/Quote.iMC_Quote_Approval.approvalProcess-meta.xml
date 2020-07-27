@@ -93,7 +93,7 @@
             </approver>
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
         </assignedApprover>
-        <description>Since Frank Nardi approves quotes, but also creates quotes himself, this step seeks Mark Fordham&#39;s approval for Frank&#39;s quotes.</description>
+        <description>Since Frank Nardi approves quotes, but also creates quotes himself, this step seeks Mark Fordham&apos;s approval for Frank&apos;s quotes.</description>
         <entryCriteria>
             <criteriaItems>
                 <field>Opportunity.Owner</field>
@@ -117,7 +117,7 @@
             </approver>
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
         </assignedApprover>
-        <description>Seek Cohry Osborne&#39;s approval.</description>
+        <description>Seek Cohry Osborne&apos;s approval.</description>
         <entryCriteria>
             <criteriaItems>
                 <field>Opportunity.Owner</field>
@@ -141,7 +141,7 @@
             </approver>
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
         </assignedApprover>
-        <description>Since Cohry Approves quotes, but also creates quotes himself, this step seeks Steve Anderson&#39;s approval for Cohry&#39;s quotes.</description>
+        <description>Since Cohry Approves quotes, but also creates quotes himself, this step seeks Steve Anderson&apos;s approval for Cohry&apos;s quotes.</description>
         <entryCriteria>
             <criteriaItems>
                 <field>Quote.CreatedBy</field>
@@ -165,7 +165,7 @@
             </approver>
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
         </assignedApprover>
-        <description>Seek Steve Anderson&#39;s approval if Quote Discount is &gt;=20%.</description>
+        <description>Seek Steve Anderson&apos;s approval if Quote Discount is &gt;=20%.</description>
         <entryCriteria>
             <criteriaItems>
                 <field>Quote.Discount</field>

@@ -3,7 +3,7 @@
     <fullName>Time_Zone__c</fullName>
     <description>CAUTION - USED IN INTEGRATIONS</description>
     <externalId>false</externalId>
-    <inlineHelpText>Time Zone of the Chairperson&#39;s location</inlineHelpText>
+    <inlineHelpText>Time Zone of the Chairperson&apos;s location</inlineHelpText>
     <label>Time Zone</label>
     <required>false</required>
     <trackFeedHistory>true</trackFeedHistory>

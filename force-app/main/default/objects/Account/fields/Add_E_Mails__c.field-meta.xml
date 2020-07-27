@@ -3,7 +3,7 @@
     <fullName>Add_E_Mails__c</fullName>
     <externalId>false</externalId>
     <inlineHelpText>If inserting multiple email addresses, use the SAME delimiter between email address (either commas, semi-colons or line-breaks). Do not mix-match delimiters.</inlineHelpText>
-    <label>Add&#39;l Provisioning Email Addresses</label>
+    <label>Add&apos;l Provisioning Email Addresses</label>
     <length>32000</length>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

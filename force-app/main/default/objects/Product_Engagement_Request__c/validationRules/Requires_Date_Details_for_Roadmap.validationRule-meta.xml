@@ -4,7 +4,7 @@
     <active>true</active>
     <description>if Currently in Roadmap = Yes then the Quarterly and Yearly date fields are required</description>
     <errorConditionFormula>AND(
-ISPICKVAL(CurrentlyonRoadmap__c,&#39;YES&#39;), 
+ISPICKVAL(CurrentlyonRoadmap__c,&apos;YES&apos;), 
 ISBLANK(TEXT(Quarter_Completion_Date__c)), 
 ISBLANK(Year_Completion_Date__c)
 )</errorConditionFormula>

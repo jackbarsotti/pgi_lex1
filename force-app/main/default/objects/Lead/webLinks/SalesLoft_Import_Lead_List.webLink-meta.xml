@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SalesLoft_Import_Lead_List</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>SalesLoft Import Lead List</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>var leads = {!GETRECORDIDS( $ObjectType.Lead )};
+
+var myurl = &quot;https://app.salesloft.com/app/import/crm?lead=&quot; + leads;
+
+window.open(myurl,&apos;_blank&apos;);</url>
+</WebLink>

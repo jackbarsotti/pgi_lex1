@@ -19,7 +19,7 @@
         <operation>equals</operation>
         <value>1</value>
     </filters>
-    <label>My Cases I&#39;ve opened &amp; that are open</label>
+    <label>My Cases I&apos;ve opened &amp; that are open</label>
     <language>en_US</language>
     <sharedTo>
         <allInternalUsers/>

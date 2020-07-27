@@ -1236,7 +1236,7 @@ HasOptedOutOfEmail = TRUE
         <description>formula</description>
         <formula>AND( 
 Provisioned__c = TRUE,
-!ISPICKVAL(Status__c, &#39;Deleting&#39;),
+!ISPICKVAL(Status__c, &apos;Deleting&apos;),
 $User.ReadyTalk_Exempt__c = FALSE
 )</formula>
         <triggerType>onAllChanges</triggerType>

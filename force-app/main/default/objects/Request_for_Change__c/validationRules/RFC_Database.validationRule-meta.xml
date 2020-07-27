@@ -4,7 +4,7 @@
     <active>false</active>
     <description>Require additional fields if Category = Database</description>
     <errorConditionFormula>AND(
-$User.ProfileId &lt;&gt; &#39;00e30000001kms9&#39;, 
+$User.ProfileId &lt;&gt; &apos;00e30000001kms9&apos;, 
 ISPICKVAL( Category__c, &quot;Database&quot;),
 ISBLANK (  What_Other_Teams_Are_Involved__c  ),
 ISBLANK (   Where_is_the_Data_Located__c  ),

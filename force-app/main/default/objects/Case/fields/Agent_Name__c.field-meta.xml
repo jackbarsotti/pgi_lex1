@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Agent_Name__c</fullName>
     <externalId>false</externalId>
-    <label>Tier 1 Agent&#39;s Name</label>
+    <label>Tier 1 Agent&apos;s Name</label>
     <length>255</length>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

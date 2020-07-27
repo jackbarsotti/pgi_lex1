@@ -28,7 +28,7 @@
     <caseValues>
         <article>None</article>
         <plural>true</plural>
-        <value>Arbeidsregler for planleggingspolicyer</value>
+        <value>Arbeidsregler for planleggingspolicy</value>
     </caseValues>
     <gender>Masculine</gender>
     <nameFieldLabel>Navn på arbeidsregel for planleggingspol</nameFieldLabel>

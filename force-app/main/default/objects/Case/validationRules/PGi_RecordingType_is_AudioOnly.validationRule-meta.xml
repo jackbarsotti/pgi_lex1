@@ -6,7 +6,7 @@
     <errorConditionFormula>AND(
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
 NOT(ISCHANGED(IsUpdateFromCaseComment__c)),
-ISPICKVAL(Recording_Type__c, &#39;Audio Only&#39;) &amp;&amp;
+ISPICKVAL(Recording_Type__c, &apos;Audio Only&apos;) &amp;&amp;
 ISBLANK(  HUB_URL__c  )
 )</errorConditionFormula>
     <errorMessage>If your Recording Type is Audio Only, then you must populate a value in the following fields: HUB URL</errorMessage>

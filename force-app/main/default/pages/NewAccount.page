@@ -1,3 +1,5 @@
-<apex:page standardController="Account" extensions="NewAccount" action="{!doInit}" tabStyle="Account">
-    <p>To create a new Account, first start with a Lead and go through the Lead Convert process.</p>  
+<apex:page standardController="Account" extensions="NewAccount" action="{!doInit}" tabStyle="Account" lightningStylesheets="true">
+    <apex:pageBlock title="My Content">
+        <p>To create a new Account, first start with a Lead and go through the Lead Convert process.</p>
+    </apex:pageBlock>
 </apex:page>

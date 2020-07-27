@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>activeChannel_gaSource__c</fullName>
     <externalId>false</externalId>
-    <formula>IF(FIND( &quot;utm_source&quot;, gaURL__c ) = 0, &#39;&#39;, 
+    <formula>IF(FIND( &quot;utm_source&quot;, gaURL__c ) = 0, &apos;&apos;, 
 				MID ( gaURL__c, 
       FIND( &quot;utm_source&quot;, gaURL__c ) + 11 ,
       IF(FIND ( &quot;&amp;&quot;, gaURL__c, FIND( &quot;utm_source&quot;, gaURL__c ) ) = 0, LEN(gaURL__c) - 11 - FIND( &quot;utm_source&quot;, gaURL__c ),

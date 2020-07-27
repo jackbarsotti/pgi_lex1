@@ -3,7 +3,7 @@
     <fullName>DBAccountName__c</fullName>
     <externalId>false</externalId>
     <formula>DandbCompany.Name</formula>
-    <label>D&amp;B&#39;s Account Name</label>
+    <label>D&amp;B&apos;s Account Name</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <type>Text</type>

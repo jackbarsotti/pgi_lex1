@@ -3,7 +3,7 @@
     <fullName>ScorecardsMonthYear__c</fullName>
     <externalId>false</externalId>
     <formula>Vendor_Scorecard__r.Month_Year__c</formula>
-    <label>Scorecard&#39;s Month Year</label>
+    <label>Scorecard&apos;s Month Year</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

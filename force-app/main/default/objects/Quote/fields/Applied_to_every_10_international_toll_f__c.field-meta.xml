@@ -10,9 +10,9 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Int&#39;l Toll-Free Access Add-On</fullName>
+                <fullName>Int&apos;l Toll-Free Access Add-On</fullName>
                 <default>false</default>
-                <label>Int&#39;l Toll-Free Access Add-On</label>
+                <label>Int&apos;l Toll-Free Access Add-On</label>
             </value>
         </valueSetDefinition>
     </valueSet>

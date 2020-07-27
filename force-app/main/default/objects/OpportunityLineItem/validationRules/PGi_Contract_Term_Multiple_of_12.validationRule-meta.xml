@@ -7,7 +7,7 @@
 $User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;, 
 CONTAINS(Opportunity.RecordType.Name, &quot;PGi&quot;), 
 IF(AND
-( ISPICKVAL(Billing_Frequency__c , &#39;Annually&#39;) , MOD(Contract_Term__c,12) &lt;&gt;0, $User.Override_Validation_Rules__c = False ),True,False))</errorConditionFormula>
+( ISPICKVAL(Billing_Frequency__c , &apos;Annually&apos;) , MOD(Contract_Term__c,12) &lt;&gt;0, $User.Override_Validation_Rules__c = False ),True,False))</errorConditionFormula>
     <errorDisplayField>Contract_Term__c</errorDisplayField>
     <errorMessage>When the Billing Frequency selected is Annually, the Contract Term selected must be a multiple of 12</errorMessage>
 </ValidationRule>

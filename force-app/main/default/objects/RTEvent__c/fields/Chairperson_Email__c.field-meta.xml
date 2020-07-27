@@ -3,7 +3,7 @@
     <fullName>Chairperson_Email__c</fullName>
     <description>CAUTION - USED IN INTEGRATIONS</description>
     <externalId>false</externalId>
-    <inlineHelpText>Chairperson&#39;s email address</inlineHelpText>
+    <inlineHelpText>Chairperson&apos;s email address</inlineHelpText>
     <label>Chairperson Email</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

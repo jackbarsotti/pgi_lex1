@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>NEW_Date__c</fullName>
     <externalId>false</externalId>
-    <inlineHelpText>This is the hour of the day in numeric format. For example, if the call was made at 4:35pm , this will show &#39;16&#39;.</inlineHelpText>
+    <inlineHelpText>This is the hour of the day in numeric format. For example, if the call was made at 4:35pm , this will show &apos;16&apos;.</inlineHelpText>
     <label>Hour of the Day</label>
     <precision>8</precision>
     <required>false</required>

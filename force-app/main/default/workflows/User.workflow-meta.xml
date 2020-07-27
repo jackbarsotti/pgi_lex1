@@ -66,7 +66,7 @@ YEAR(Date_for_report_trigger__c), MONTH(Date_for_report_trigger__c) + 1, DAY(Dat
         <formula>Id + &quot;, &quot; + ManagerId + &quot;,&quot; + Manager.ManagerId + &quot;,&quot; + Manager.Manager.ManagerId + &quot;,&quot; + Manager.Manager.Manager.ManagerId + &quot;,&quot; + Manager.Manager.Manager.Manager.ManagerId + &quot;,&quot; + Manager.Manager.Manager.Manager.Manager.ManagerId + &quot;,&quot; + 
 Manager.Manager.Manager.Manager.Manager.Manager.ManagerId + &quot;,&quot; + 
 Manager.Manager.Manager.Manager.Manager.Manager.Manager.ManagerId</formula>
-        <name>Set Team Id&#39;s field</name>
+        <name>Set Team Id&apos;s field</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Formula</operation>
         <protected>false</protected>

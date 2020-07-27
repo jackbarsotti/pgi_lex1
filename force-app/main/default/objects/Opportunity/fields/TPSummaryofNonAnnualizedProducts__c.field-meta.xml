@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>TPSummaryofNonAnnualizedProducts__c</fullName>
     <externalId>false</externalId>
-    <formula>IF(RecordTypeId = &#39;0121B000001hgTt&#39;,Amount - TPSummaryofAnnualizedProducts__c,0)</formula>
+    <formula>IF(RecordTypeId = &apos;0121B000001hgTt&apos;,Amount - TPSummaryofAnnualizedProducts__c,0)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>TP Summary of Non-Annualized Products</label>
     <precision>18</precision>

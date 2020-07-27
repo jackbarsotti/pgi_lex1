@@ -3,7 +3,7 @@
     <fullName>CallLog_FinReqRelationshipNeeded</fullName>
     <active>true</active>
     <errorConditionFormula>AND(
-ISPICKVAL( Call_Status__c , &#39;Follow Up On Existing FinReq&#39;),
+ISPICKVAL( Call_Status__c , &apos;Follow Up On Existing FinReq&apos;),
 ISBLANK(  Related_FinReq__c  )
 )</errorConditionFormula>
     <errorDisplayField>Related_FinReq__c</errorDisplayField>

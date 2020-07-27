@@ -33,14 +33,14 @@
                 <label>Account without Company</label>
             </value>
             <value>
-                <fullName>Account&#39;s Companies without Enterprise</fullName>
+                <fullName>Account&apos;s Companies without Enterprise</fullName>
                 <default>false</default>
-                <label>Account&#39;s Companies without Enterprise</label>
+                <label>Account&apos;s Companies without Enterprise</label>
             </value>
             <value>
-                <fullName>Account&#39;s Companies have multiple Enterprises</fullName>
+                <fullName>Account&apos;s Companies have multiple Enterprises</fullName>
                 <default>false</default>
-                <label>Account&#39;s Companies have multiple Enterprises</label>
+                <label>Account&apos;s Companies have multiple Enterprises</label>
             </value>
             <value>
                 <fullName>Enterprise shared across Account hierarchies</fullName>

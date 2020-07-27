@@ -6,9 +6,9 @@
     <errorConditionFormula>AND
 (
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
-ISPICKVAL( Dial_Out__c , &#39;No&#39;),
+ISPICKVAL( Dial_Out__c , &apos;No&apos;),
 ISBLANK (  User_s_Number_Dialed_From__c ),
 ISBLANK (  Conference_Number_Dialed__c  )
 )</errorConditionFormula>
-    <errorMessage>You must provide the User&#39;s Number Dialed From &amp; Conference Number Dialed</errorMessage>
+    <errorMessage>You must provide the User&apos;s Number Dialed From &amp; Conference Number Dialed</errorMessage>
 </ValidationRule>

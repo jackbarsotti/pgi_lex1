@@ -4,7 +4,7 @@
     <defaultValue>50</defaultValue>
     <externalId>false</externalId>
     <inlineHelpText>Each additional 100 audio + slide webcast viewers</inlineHelpText>
-    <label>Audio &amp; Slides: Add&#39;l 100 Participants</label>
+    <label>Audio &amp; Slides: Add&apos;l 100 Participants</label>
     <precision>18</precision>
     <required>false</required>
     <scale>2</scale>

@@ -3,7 +3,7 @@
     <fullName>ContactsEmail__c</fullName>
     <externalId>false</externalId>
     <formula>bizible2__Contact__r.Email</formula>
-    <label>Contact&#39;s Email</label>
+    <label>Contact&apos;s Email</label>
     <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Text</type>

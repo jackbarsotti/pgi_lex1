@@ -3,7 +3,7 @@
     <fullName>FSL__Travel_To_Home__c</fullName>
     <deprecated>false</deprecated>
     <externalId>false</externalId>
-    <inlineHelpText>Determines how many minutes following the resource&#39;s calendar end of day will be available for travel (on the resource&#39;s expense).
+    <inlineHelpText>Determines how many minutes following the resource&apos;s calendar end of day will be available for travel (on the resource&apos;s expense).
 When empty, any amount of travel following the end of work day is valid.</inlineHelpText>
     <label>Travel To Home (minutes)</label>
     <precision>18</precision>

@@ -6,8 +6,8 @@
     <errorConditionFormula>AND
 (
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
-ISPICKVAL(   Issue_Replicated__c  , &#39;Yes&#39;),
-ISPICKVAL(   Issue_Replicated_By__c , &#39;&#39; )
+ISPICKVAL(   Issue_Replicated__c  , &apos;Yes&apos;),
+ISPICKVAL(   Issue_Replicated_By__c , &apos;&apos; )
 )</errorConditionFormula>
     <errorDisplayField>Issue_Replicated_By__c</errorDisplayField>
     <errorMessage>You must provide the Issue Replicated By value</errorMessage>

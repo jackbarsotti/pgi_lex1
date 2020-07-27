@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Origin__c</fullName>
-    <description>To set the case origin when escalating a chat. &#39;Chat&#39; or &#39;Chat - In Product&#39;</description>
+    <description>To set the case origin when escalating a chat. &apos;Chat&apos; or &apos;Chat - In Product&apos;</description>
     <externalId>false</externalId>
     <label>Origin</label>
     <length>50</length>

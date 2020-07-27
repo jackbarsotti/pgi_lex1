@@ -3,7 +3,7 @@
     <fullName>Live_Event_Monitoring__c</fullName>
     <defaultValue>150</defaultValue>
     <externalId>false</externalId>
-    <inlineHelpText>Base price for 60 minutes; prorate for each add&#39;l 30 min</inlineHelpText>
+    <inlineHelpText>Base price for 60 minutes; prorate for each add&apos;l 30 min</inlineHelpText>
     <label>Live Event Monitoring</label>
     <precision>18</precision>
     <required>false</required>

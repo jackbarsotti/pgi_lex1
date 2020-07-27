@@ -4,18 +4,18 @@
     <name>FSL__Estimated_Travel_Time_To_Source__c</name>
     <picklistValues>
         <masterLabel>Aerial</masterLabel>
-        <translation><!-- Aerial --></translation>
+        <translation>Aéreo</translation>
     </picklistValues>
     <picklistValues>
         <masterLabel>None</masterLabel>
-        <translation><!-- None --></translation>
+        <translation>Ninguno</translation>
     </picklistValues>
     <picklistValues>
         <masterLabel>Predictive</masterLabel>
-        <translation><!-- Predictive --></translation>
+        <translation>Predictivo</translation>
     </picklistValues>
     <picklistValues>
         <masterLabel>SLR</masterLabel>
-        <translation><!-- SLR --></translation>
+        <translation>SLR</translation>
     </picklistValues>
 </CustomFieldTranslation>

@@ -4,5 +4,5 @@
     <active>true</active>
     <errorConditionFormula>FSL__Weight__c == 0</errorConditionFormula>
     <errorDisplayField>FSL__Weight__c</errorDisplayField>
-    <errorMessage>Weight can&#39;t have zero value</errorMessage>
+    <errorMessage>Weight can&apos;t have zero value</errorMessage>
 </ValidationRule>

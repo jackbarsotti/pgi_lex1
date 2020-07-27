@@ -3,7 +3,7 @@
     <fullName>natterbox__Disable_Withhold_Caller_ID__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
-    <description>If checked, &#39;Withhold my caller ID&#39; is not shown in the UI as an option under &#39;My caller ID&#39;</description>
+    <description>If checked, &apos;Withhold my caller ID&apos; is not shown in the UI as an option under &apos;My caller ID&apos;</description>
     <externalId>false</externalId>
     <label>Disable Withhold Caller ID</label>
     <trackTrending>false</trackTrending>

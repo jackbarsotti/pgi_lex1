@@ -4,7 +4,7 @@
     <deprecated>false</deprecated>
     <externalId>false</externalId>
     <inlineHelpText>Determines the length of the breaks created. 
-Leave this field empty if you don&#39;t want to create breaks.</inlineHelpText>
+Leave this field empty if you don&apos;t want to create breaks.</inlineHelpText>
     <label>Break Duration (minutes)</label>
     <precision>6</precision>
     <required>false</required>

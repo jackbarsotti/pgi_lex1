@@ -3,7 +3,7 @@
     <fullName>sc4_1</fullName>
     <description>Mostly configurable section. 3-Columns.
 
-Note that for Joint-Selling Initiative Opportunities, there&#39;s a message in this section regarding Territory Codes.</description>
+Note that for Joint-Selling Initiative Opportunities, there&apos;s a message in this section regarding Territory Codes.</description>
     <displayedFields>
         <field>NCS_Sales_Person__c</field>
         <isFieldManaged>false</isFieldManaged>

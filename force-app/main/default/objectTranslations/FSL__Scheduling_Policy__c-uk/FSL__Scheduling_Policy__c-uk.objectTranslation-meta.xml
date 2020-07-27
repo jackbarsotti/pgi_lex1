@@ -61,7 +61,7 @@
         <value><!-- Політики планування --></value>
     </caseValues>
     <gender>Feminine</gender>
-    <nameFieldLabel>Ім&#39;я політики планування</nameFieldLabel>
+    <nameFieldLabel>Ім&apos;я політики планування</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Policy objectives weight can not be negative --></errorMessage>
         <name>FSL__Deny_Objectives_Negative_Weight</name>

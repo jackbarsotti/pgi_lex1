@@ -1178,7 +1178,7 @@
         </actions>
         <active>true</active>
         <description>for FinReqs</description>
-        <formula>AND( ISCHANGED(Assigned_To__c), $User.Id &lt;&gt; Assigned_To__c, $User.Alias &lt;&gt; &#39;ecovate.reports&#39; )</formula>
+        <formula>AND( ISCHANGED(Assigned_To__c), $User.Id &lt;&gt; Assigned_To__c, $User.Alias &lt;&gt; &apos;ecovate.reports&apos; )</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -1367,7 +1367,7 @@
         </actions>
         <active>true</active>
         <description>When Status changes send email to requestor</description>
-        <formula>AND( ISCHANGED (Status__c),  Contains (Requested_For__c, &quot;@pgi&quot;), OR( RecordType.DeveloperName = &#39;PGi_Billing_Support&#39;, RecordType.DeveloperName = &#39;PGi_Credit_Request&#39;, RecordType.DeveloperName = &#39;PGi_Payment_Research_Request&#39;, RecordType.DeveloperName = &#39;PGi_Profile_Request&#39;, RecordType.DeveloperName = &#39;PGi_Rate_Entry_Request&#39;, RecordType.DeveloperName = &#39;PGi_Request_for_Adjustment&#39;, RecordType.DeveloperName = &#39;PGi_Revenue_Assurance_Audit_Request&#39;, RecordType.DeveloperName = &#39;PGi_Company_Cancellation_Request&#39;) )</formula>
+        <formula>AND( ISCHANGED (Status__c),  Contains (Requested_For__c, &quot;@pgi&quot;), OR( RecordType.DeveloperName = &apos;PGi_Billing_Support&apos;, RecordType.DeveloperName = &apos;PGi_Credit_Request&apos;, RecordType.DeveloperName = &apos;PGi_Payment_Research_Request&apos;, RecordType.DeveloperName = &apos;PGi_Profile_Request&apos;, RecordType.DeveloperName = &apos;PGi_Rate_Entry_Request&apos;, RecordType.DeveloperName = &apos;PGi_Request_for_Adjustment&apos;, RecordType.DeveloperName = &apos;PGi_Revenue_Assurance_Audit_Request&apos;, RecordType.DeveloperName = &apos;PGi_Company_Cancellation_Request&apos;) )</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>

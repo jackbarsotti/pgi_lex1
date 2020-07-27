@@ -803,9 +803,9 @@
                 <label>Delegation/Permissions</label>
             </value>
             <value>
-                <fullName>Delete a User&#39;s Profile on Hub</fullName>
+                <fullName>Delete a User&apos;s Profile on Hub</fullName>
                 <default>false</default>
-                <label>Delete a User&#39;s Profile on Hub</label>
+                <label>Delete a User&apos;s Profile on Hub</label>
             </value>
             <value>
                 <fullName>Deliverables Not Provided</fullName>
@@ -2708,9 +2708,9 @@
                 <label>Service Prepped Incorrectly-Conf Setup Incorrect (Conf ID, Link Lines, Call Mgr Script, Transfer, etc.)</label>
             </value>
             <value>
-                <fullName>Service Prepped Incorrectly-Didn&#39;t Correctly Obtain Information from Participants</fullName>
+                <fullName>Service Prepped Incorrectly-Didn&apos;t Correctly Obtain Information from Participants</fullName>
                 <default>false</default>
-                <label>Service Prepped Incorrectly-Didn&#39;t Correctly Obtain Information from Participants</label>
+                <label>Service Prepped Incorrectly-Didn&apos;t Correctly Obtain Information from Participants</label>
             </value>
             <value>
                 <fullName>Service Prepped Incorrectly-Speaker/Participant Placement Incorrect</fullName>
@@ -5286,7 +5286,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Pre Call - AL Error</controllingFieldValue>
-            <valueName>Service Prepped Incorrectly-Didn&#39;t Correctly Obtain Information from Participants</valueName>
+            <valueName>Service Prepped Incorrectly-Didn&apos;t Correctly Obtain Information from Participants</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Pre Call - AL Error</controllingFieldValue>
@@ -6841,7 +6841,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Activate/Inactivate Account</controllingFieldValue>
-            <valueName>Delete a User&#39;s Profile on Hub</valueName>
+            <valueName>Delete a User&apos;s Profile on Hub</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>VRC Education/Request</controllingFieldValue>

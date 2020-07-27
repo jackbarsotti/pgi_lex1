@@ -3,7 +3,7 @@
     <fullName>Last_13_Month_s_GMC_Billed_Revenue__c</fullName>
     <externalId>false</externalId>
     <inlineHelpText>This data is specific to GlobalMeet Collaboration revenue only</inlineHelpText>
-    <label>Last 13 Month&#39;s GMC Billed Revenue</label>
+    <label>Last 13 Month&apos;s GMC Billed Revenue</label>
     <precision>18</precision>
     <required>false</required>
     <scale>2</scale>

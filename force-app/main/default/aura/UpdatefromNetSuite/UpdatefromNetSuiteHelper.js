@@ -6,6 +6,9 @@
         });
         action.setCallback(this, function(responce){
             var state = responce.getState();
+            var title = '';
+            var type = '' ;
+            var message = '';
             if(state === 'SUCCESS'){
                 var result = responce.getReturnValue();
                 component.set("v.accountRecordList",result);
@@ -20,13 +23,28 @@
                 }
                 else{
                     helper.updateAccountSync(component, event, helper);
-                    helper.openPopUp(component, event, helper);
                     // helper.checkSyncStatus(component, event, helper);
                     window.setTimeout(
                         $A.getCallback(function() {
                             helper.checkSyncStatus(component, event, helper)
                         }), 5000
                     );
+                }
+            }
+            else if (state === "ERROR") {
+                var errors = response.getError();
+                if (errors) {
+                    if (errors[0] && errors[0].message) {
+                        title = 'Error';
+                        type = 'error';
+                        message =  errors[0].message;
+                        helper.showToast(component, event,title,type,message);
+                    }
+                } else {
+                    title = 'Error';
+                    type = 'error';
+                    message = 'Unknown error';
+                    helper.showToast(component, event,title,type,message);
                 }
             }
         });
@@ -45,17 +63,7 @@
         console.log('>> record values are updated >>');
         $A.enqueueAction(action);
     },
-    openPopUp : function(component, event, helper){
-        var accountId = component.get('v.recordId');
-        console.log('>> inside show popup >>');
-        var top = screen.height - (screen.height * .5) - 100;
-        var left = screen.width - (screen.width * .5) - 187;
-        var params = 'dependent = yes,resizable=false,scrollbars=false,toolbar=false,menubar=false,location=false,status=true,directories=false,width=375,height=160,top=';
-        params += top.toString();
-        params += ',left=' + left.toString() + '\'';
-        window.open('/apex/account_status?whence='+accountId, 'NetSuite_Synchronization', params);
-        
-    },
+   
     checkSyncStatus : function(component, event, helper){
         var retries = 0;
         var maxRetries = 20;
@@ -94,5 +102,15 @@
             }
         });
         $A.enqueueAction(action);
-    }
+    },
+    
+    showToast : function(component, event,title,type,message) {
+        var toastEvent = $A.get("e.force:showToast");
+        toastEvent.setParams({
+            "title": title,
+            "type" : type,
+            "message": message
+        });
+        toastEvent.fire();
+        }
 })

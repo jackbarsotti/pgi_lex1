@@ -2,9 +2,9 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>TASKRAY__trExternalFeedback__c</fullName>
     <deprecated>false</deprecated>
-    <description>External feedback about a customer&#39;s onboarding experience.</description>
+    <description>External feedback about a customer&apos;s onboarding experience.</description>
     <externalId>false</externalId>
-    <inlineHelpText>Use this field to capture external feedback about a customer&#39;s onboarding experience.</inlineHelpText>
+    <inlineHelpText>Use this field to capture external feedback about a customer&apos;s onboarding experience.</inlineHelpText>
     <label>External Feedback</label>
     <length>32768</length>
     <trackFeedHistory>false</trackFeedHistory>

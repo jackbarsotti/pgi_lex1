@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title="ApexWireMethodWithParams" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+                <template for:each={emailMessages.data} for:item="contact">
+                    <p key={contact.Id}>{contact.Id}</p>
+                </template>
+            
+        </div>
+
+    </lightning-card>
+    <div class="slds-scrollable--y" >
+        <table class="slds-table slds-table--bordered">  
+            <thead>  
+                <tr>  
+                    <th>ACTION</th>
+                    <th>ATTACHMENTS</th>
+                    <th>STATUS</th>     
+                    <th>SUBJECT</th> 
+                    <th>EMAIL ADDRESS</th> 
+                    <th>MESSAGE DATE</th>                                                                  
+                </tr>  
+            </thead>  
+            <tbody>
+                <template for:each={emailMessages.data} for:item="file"> 
+                    <tr key={file.Id}>                                                          
+                        <td key={file.Id}><a href="" id={file.Id} onclick={previewFile}>{file.Id} | Hai</a></td> 
+                        <td key={file.Id}>Attachments</td>
+                        <td key={file.Id}>{file.Status}</td>
+                        <td key={file.Id}><a href="" id={file.Id} onclick={redirectToOutbound}>{file.Subject}</a></td>
+                        <td key={file.Id}>{file.ToAddress}</td>
+                        <td key={file.Id}>{file.MessageDate}</td>
+                    </tr>  
+                </template>  
+            </tbody>  
+        </table>                                 
+    </div> 
+</template>

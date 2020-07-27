@@ -5,7 +5,7 @@
     <description>IF the &quot;Edit Sales Price?&quot; checkbox is TRUE on the Product, Users can edit the Opportunity Product Sales Price for said product.</description>
     <errorConditionFormula>AND(
 CONTAINS($Profile.Name,&quot;ReadyTalk&quot;),
-Opportunity.RecordTypeId &lt;&gt; &#39;01213000001NeTg&#39;,
+Opportunity.RecordTypeId &lt;&gt; &apos;01213000001NeTg&apos;,
 ISCHANGED(UnitPrice),
 Product2.Edit_Sales_Price__c = FALSE
 )</errorConditionFormula>

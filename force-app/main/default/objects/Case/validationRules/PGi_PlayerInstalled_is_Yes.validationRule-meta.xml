@@ -6,7 +6,7 @@
     <errorConditionFormula>AND(
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
 NOT(ISCHANGED(IsUpdateFromCaseComment__c)),
-ISPICKVAL(Player_Installed__c , &#39;Yes&#39;) &amp;&amp;
+ISPICKVAL(Player_Installed__c , &apos;Yes&apos;) &amp;&amp;
 (
 ISBLANK( Player_Type__c ) ||
 ISBLANK( Player_Version__c ) 

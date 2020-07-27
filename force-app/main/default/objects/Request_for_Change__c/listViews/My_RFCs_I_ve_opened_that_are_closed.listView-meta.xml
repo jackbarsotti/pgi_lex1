@@ -26,7 +26,7 @@
         <operation>equals</operation>
         <value>Completed with PIR,Unsuccessful</value>
     </filters>
-    <label>*My RFCs I&#39;ve opened &amp; that are closed</label>
+    <label>*My RFCs I&apos;ve opened &amp; that are closed</label>
     <language>en_US</language>
     <sharedTo>
         <allInternalUsers/>

@@ -11,9 +11,9 @@ IF(ISPICKVAL(Unit_Type__c, &quot;Ancillary&quot;), 0,
 IF(ISPICKVAL(Unit_Type__c, &quot;Contract&quot;), 0, 
 IF(Contains(TEXT(Unit_Type__c), &quot;Minute&quot;) &amp;&amp; Min_Commit__c = False, 0,
 IF(ISPICKVAL(Billing_Frequency__c, &quot;One Time Event&quot;), New_Sales_Price__c*New_Quantity__c, 
-IF(ISPICKVAL(Billing_Frequency__c ,&#39;Monthly&#39;),New_Sales_Price__c*New_Quantity__c*Contract_Term__c, 
-IF(ISPICKVAL(Billing_Frequency__c ,&#39;Quarterly&#39;),((New_Sales_Price__c* New_Quantity__c)/3)* Contract_Term__c, 
-IF(ISPICKVAL(Billing_Frequency__c ,&#39;Annually&#39;),New_Sales_Price__c* New_Quantity__c*( Contract_Term__c /12),New_Sales_Price__c*New_Quantity__c 
+IF(ISPICKVAL(Billing_Frequency__c ,&apos;Monthly&apos;),New_Sales_Price__c*New_Quantity__c*Contract_Term__c, 
+IF(ISPICKVAL(Billing_Frequency__c ,&apos;Quarterly&apos;),((New_Sales_Price__c* New_Quantity__c)/3)* Contract_Term__c, 
+IF(ISPICKVAL(Billing_Frequency__c ,&apos;Annually&apos;),New_Sales_Price__c* New_Quantity__c*( Contract_Term__c /12),New_Sales_Price__c*New_Quantity__c 
 ) 
 ) 
 ) 

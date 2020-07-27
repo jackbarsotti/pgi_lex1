@@ -63,7 +63,7 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Requestor&#39;s Information</label>
+        <label>Requestor&apos;s Information</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>

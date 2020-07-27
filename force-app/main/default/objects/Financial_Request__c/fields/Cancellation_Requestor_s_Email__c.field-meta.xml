@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Cancellation_Requestor_s_Email__c</fullName>
     <externalId>false</externalId>
-    <label>Cancellation Requestor&#39;s Email</label>
+    <label>Cancellation Requestor&apos;s Email</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

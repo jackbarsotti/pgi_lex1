@@ -19,7 +19,7 @@
         <description>Update plan name based on Enterprise Name</description>
         <formula>AND(
 NOT( ISBLANK( Enterprise_Name__c ) ) ,
-Created_By_s_Profile_ID__c = &#39;00ea0000001sdEo&#39;
+Created_By_s_Profile_ID__c = &apos;00ea0000001sdEo&apos;
 )</formula>
         <triggerType>onCreateOnly</triggerType>
     </rules>

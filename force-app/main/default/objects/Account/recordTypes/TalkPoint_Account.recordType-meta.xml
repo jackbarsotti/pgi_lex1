@@ -119,6 +119,17 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Account_Country__c</picklist>
+        <values>
+            <fullName>India</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Account_Executive__c</picklist>
         <values>
             <fullName>3dve</fullName>
@@ -440,6 +451,25 @@
         </values>
         <values>
             <fullName>Target Euro 2016</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Account_State__c</picklist>
+        <values>
+            <fullName>AP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UP</fullName>
             <default>false</default>
         </values>
     </picklistValues>

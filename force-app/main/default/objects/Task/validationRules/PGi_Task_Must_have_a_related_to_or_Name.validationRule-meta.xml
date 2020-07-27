@@ -9,7 +9,7 @@ CONTAINS(RecordType.Name, &quot;PGi&quot;),
 ISBLANK(WhatId), 
 ISBLANK(WhoId), 
 !     ISPICKVAL( Type, &quot;Email&quot;),
-!    CONTAINS($Profile.Name, &#39;System Administrator&#39;) 
+!    CONTAINS($Profile.Name, &apos;System Administrator&apos;) 
 )</errorConditionFormula>
     <errorDisplayField>WhatId</errorDisplayField>
     <errorMessage>You must associate Tasks with an object using the Related To or Name fields.</errorMessage>

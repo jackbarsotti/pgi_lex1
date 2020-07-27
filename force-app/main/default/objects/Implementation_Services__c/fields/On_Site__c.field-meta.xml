@@ -3,7 +3,7 @@
     <fullName>On_Site__c</fullName>
     <defaultValue>false</defaultValue>
     <externalId>false</externalId>
-    <inlineHelpText>Was any work performed at the customer&#39;s location?</inlineHelpText>
+    <inlineHelpText>Was any work performed at the customer&apos;s location?</inlineHelpText>
     <label>On Site</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

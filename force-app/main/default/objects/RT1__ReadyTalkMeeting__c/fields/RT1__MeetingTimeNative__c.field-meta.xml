@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>RT1__MeetingTimeNative__c</fullName>
     <deprecated>false</deprecated>
-    <description>This time is in the Meeting&#39;s native time zone.</description>
+    <description>This time is in the Meeting&apos;s native time zone.</description>
     <externalId>false</externalId>
     <label>Date &amp; Time</label>
     <length>255</length>

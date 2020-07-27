@@ -3,7 +3,7 @@
     <fullName>Recording_Editing_Allowed__c</fullName>
     <defaultValue>true</defaultValue>
     <description>CAUTION - USED IN INTEGRATIONS
-If it&#39;s okay for the recording editor to be used on this subscription&#39;s recordings, check this box.</description>
+If it&apos;s okay for the recording editor to be used on this subscription&apos;s recordings, check this box.</description>
     <externalId>false</externalId>
     <inlineHelpText>Allows chairperson to edit audio and web recordings in Conference Center.</inlineHelpText>
     <label>Recording Editing Allowed</label>

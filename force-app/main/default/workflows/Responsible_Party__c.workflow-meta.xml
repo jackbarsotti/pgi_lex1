@@ -31,7 +31,7 @@
             <field>Responsible_Party__c.Secondary_Manager_s_Email__c</field>
             <operation>notEqual</operation>
         </criteriaItems>
-        <description>When a new Responsible Party record is created, send an email to the address provided in the RP Manager&#39;s Email field.</description>
+        <description>When a new Responsible Party record is created, send an email to the address provided in the RP Manager&apos;s Email field.</description>
         <triggerType>onAllChanges</triggerType>
     </rules>
 </Workflow>

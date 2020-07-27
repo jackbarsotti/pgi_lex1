@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Ultimate_Parent_Billed_Revenue__c</fullName>
     <externalId>false</externalId>
-    <inlineHelpText>Total amount of billed revenue over the past 13 month&#39;s from all premier companies (PGi Companies object) associated to this Account only where this Account is set as the Ultimate Parent.</inlineHelpText>
+    <inlineHelpText>Total amount of billed revenue over the past 13 month&apos;s from all premier companies (PGi Companies object) associated to this Account only where this Account is set as the Ultimate Parent.</inlineHelpText>
     <label>Ultimate Parent Billed Revenue</label>
     <precision>18</precision>
     <required>false</required>

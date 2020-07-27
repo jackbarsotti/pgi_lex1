@@ -9,9 +9,9 @@ $User.ProfileId &lt;&gt; &quot;00e30000001kms9&quot;,
 !$User.Override_Validation_Rules__c = TRUE,
 !$Setup.BypassRules__c.Disable_Validation_Rules__c,
 ISBLANK(BillingState),
-OR(BillingCountry = &#39;United States&#39;, 
-BillingCountry = &#39;Canada&#39;),
-$Profile.Name &lt;&gt; &#39;PGi Implementation Services&#39; ,
+OR(BillingCountry = &apos;United States&apos;, 
+BillingCountry = &apos;Canada&apos;),
+$Profile.Name &lt;&gt; &apos;PGi Implementation Services&apos; ,
 NOT( $User.Id = &quot;0051300000BAcpp&quot;)
 )</errorConditionFormula>
     <errorDisplayField>BillingState</errorDisplayField>

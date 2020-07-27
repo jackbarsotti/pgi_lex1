@@ -639,7 +639,7 @@
         <translation><!-- Delegation/Permissions --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Delete a User&#39;s Profile on Hub</masterLabel>
+        <masterLabel>Delete a User&apos;s Profile on Hub</masterLabel>
         <translation><!-- Delete a User&apos;s Profile on Hub --></translation>
     </picklistValues>
     <picklistValues>
@@ -2151,7 +2151,7 @@
         <translation><!-- Service Prepped Incorrectly-Conf Setup Incorrect (Conf ID, Link Lines, Call Mgr Script, Transfer, etc.) --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Service Prepped Incorrectly-Didn&#39;t Correctly Obtain Information from Participants</masterLabel>
+        <masterLabel>Service Prepped Incorrectly-Didn&apos;t Correctly Obtain Information from Participants</masterLabel>
         <translation><!-- Service Prepped Incorrectly-Didn&apos;t Correctly Obtain Information from Participants --></translation>
     </picklistValues>
     <picklistValues>

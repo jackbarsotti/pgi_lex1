@@ -3,7 +3,7 @@
     <fullName>OwnersFullName__c</fullName>
     <externalId>false</externalId>
     <formula>Owner_First_Name__c + &quot; &quot; +  Owner_Last_Name__c</formula>
-    <label>Owner&#39;s Full Name</label>
+    <label>Owner&apos;s Full Name</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <type>Text</type>

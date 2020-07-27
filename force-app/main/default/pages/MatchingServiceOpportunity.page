@@ -1,8 +1,8 @@
-<apex:page standardController="Opportunity" extensions="MatchingServiceController"   >
+<apex:page standardController="Opportunity" extensions="MatchingServiceController" lightningStylesheets="true">
     <apex:includeLightning />
     <apex:includeScript value="/support/console/45.0/integration.js"/>
     <div  id="MachingServiceApp"  />
-	
+    
     <script>
         console.log('inside the method','{!recordid}');
         let recId  = '{!recordid}';

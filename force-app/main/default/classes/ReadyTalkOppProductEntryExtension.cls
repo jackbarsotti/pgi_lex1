@@ -89,24 +89,28 @@ public without sharing class ReadyTalkOppProductEntryExtension {
     
     // this is the 'action' method on the page
     public PageReference priceBookCheck(){
-    
-        // if the user needs to select a pricebook before we proceed we send them to standard pricebook selection screen
-        if(forcePricebookSelection){        
-            return changePricebook();
-        }
-        else{
-        
-            //if there is only one active pricebook we go with it and save the opp
-            if(theOpp.pricebook2Id != theBook.Id){
-                try{
-                    theOpp.Pricebook2Id = theBook.Id;
-                    update(theOpp);
-                }
-                catch(Exception e){
-                    ApexPages.addMessages(e);
-                }
+        String themeType = UserInfo.getUITheme();
+       if(themeType=='Theme3'){
+            // if the user needs to select a pricebook before we proceed we send them to standard pricebook selection screen
+            if(forcePricebookSelection){        
+                return changePricebook();
             }
+            else{
             
+                //if there is only one active pricebook we go with it and save the opp
+                if(theOpp.pricebook2Id != theBook.Id){
+                    try{
+                        theOpp.Pricebook2Id = theBook.Id;
+                        update(theOpp);
+                    }
+                    catch(Exception e){
+                        ApexPages.addMessages(e);
+                    }
+                }
+                
+                return null;
+            }
+        }else{
             return null;
         }
     }

@@ -3,7 +3,7 @@
     <fullName>Simulive_Additional_Minutes__c</fullName>
     <defaultValue>75</defaultValue>
     <externalId>false</externalId>
-    <inlineHelpText>Per add&#39;l 30 minutes (past initial 60 minutes)</inlineHelpText>
+    <inlineHelpText>Per add&apos;l 30 minutes (past initial 60 minutes)</inlineHelpText>
     <label>Simulive Additional Minutes</label>
     <precision>10</precision>
     <required>false</required>

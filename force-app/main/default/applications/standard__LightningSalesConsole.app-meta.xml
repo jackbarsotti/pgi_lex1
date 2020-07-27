@@ -73,9 +73,13 @@
     <tabs>DataRetentionManager</tabs>
     <tabs>PGIServicesInformation__c</tabs>
     <tabs>Rate__c</tabs>
+    <tabs>Batch_Import_Revenue__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningSalesConsole_UtilityBar</utilityBar>
     <workspaceConfig>
+        <mappings>
+            <tab>Batch_Import_Revenue__c</tab>
+        </mappings>
         <mappings>
             <tab>DataRetentionManager</tab>
         </mappings>

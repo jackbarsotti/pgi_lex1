@@ -3,7 +3,7 @@
     <fullName>Gold_Webinar_Add_l_Minutes__c</fullName>
     <defaultValue>250</defaultValue>
     <externalId>false</externalId>
-    <label>Gold Webinar Add&#39;l Minutes</label>
+    <label>Gold Webinar Add&apos;l Minutes</label>
     <precision>18</precision>
     <required>false</required>
     <scale>0</scale>

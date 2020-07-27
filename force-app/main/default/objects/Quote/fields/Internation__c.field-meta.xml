@@ -3,7 +3,7 @@
     <fullName>Internation__c</fullName>
     <defaultValue>150</defaultValue>
     <externalId>false</externalId>
-    <label>Int&#39;l Toll-Free Access Add-On**</label>
+    <label>Int&apos;l Toll-Free Access Add-On**</label>
     <precision>18</precision>
     <required>false</required>
     <scale>0</scale>

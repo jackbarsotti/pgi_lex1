@@ -17,7 +17,7 @@
                 <type>userHierarchyField</type>
             </approver>
         </assignedApprover>
-        <label>Manager&#39;s Approval</label>
+        <label>Manager&apos;s Approval</label>
         <name>Manager_s_Approval</name>
     </approvalStep>
     <emailTemplate>Workflow_Emails/EMO_Approval_Request</emailTemplate>
@@ -60,7 +60,7 @@
             <type>FieldUpdate</type>
         </action>
     </initialSubmissionActions>
-    <label>Employee Perforamnce Manager&#39;s Approval</label>
+    <label>Employee Perforamnce Manager&apos;s Approval</label>
     <nextAutomatedApprover>
         <useApproverFieldOfRecordOwner>true</useApproverFieldOfRecordOwner>
         <userHierarchyField>Manager</userHierarchyField>

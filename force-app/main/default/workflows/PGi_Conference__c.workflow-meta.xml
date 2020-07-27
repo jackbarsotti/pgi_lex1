@@ -22,7 +22,7 @@
             <operation>equals</operation>
             <value>True</value>
         </criteriaItems>
-        <description>This populates the field &#39;Marked Deleted Date&#39; when the &#39;Deleted Flag&#39; gets set to True</description>
+        <description>This populates the field &apos;Marked Deleted Date&apos; when the &apos;Deleted Flag&apos; gets set to True</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
 </Workflow>

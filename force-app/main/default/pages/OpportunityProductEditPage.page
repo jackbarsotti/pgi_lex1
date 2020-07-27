@@ -1,4 +1,5 @@
-<apex:page standardController="OpportunityLineItem" extensions="OpportunityProductExtension" tabStyle="OpportunityLineItem">
+<apex:page standardController="OpportunityLineItem" extensions="OpportunityProductExtension" tabStyle="OpportunityLineItem"  lightningStylesheets="true" >
+    <apex:includeLightning />
     <apex:form >
 
 	    <apex:pageblock title="Opportunity Product Edit">

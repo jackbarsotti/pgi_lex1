@@ -5,7 +5,7 @@
     <description>Requires a reason to be selected for credits.</description>
     <errorConditionFormula>AND( 
 ISBLANK(TEXT( Reason__c )), 
-CONTAINS( TEXT(Product__c) ,&#39;Credit&#39;))</errorConditionFormula>
+CONTAINS( TEXT(Product__c) ,&apos;Credit&apos;))</errorConditionFormula>
     <errorDisplayField>Reason__c</errorDisplayField>
     <errorMessage>Please select a reason for the credit and save again.</errorMessage>
 </ValidationRule>

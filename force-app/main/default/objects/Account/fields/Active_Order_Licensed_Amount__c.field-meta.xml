@@ -3,7 +3,7 @@
     <fullName>Active_Order_Licensed_Amount__c</fullName>
     <description>Active Order 1st year amount rolled up to be used to calculate Business Level</description>
     <externalId>false</externalId>
-    <inlineHelpText>&#39;Active Order&#39; &#39;1st Year License Amount&#39; rolled up to be used to calculate Business Level</inlineHelpText>
+    <inlineHelpText>&apos;Active Order&apos; &apos;1st Year License Amount&apos; rolled up to be used to calculate Business Level</inlineHelpText>
     <label>Active Order Licensed Amount</label>
     <summarizedField>Opportunity.First_Year_License_Amount__c</summarizedField>
     <summaryFilterItems>

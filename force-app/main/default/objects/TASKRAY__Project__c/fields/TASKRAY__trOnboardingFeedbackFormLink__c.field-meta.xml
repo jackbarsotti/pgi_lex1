@@ -6,7 +6,7 @@
     <externalId>false</externalId>
     <formula>IF(TASKRAY__trGenerateOnboardingFeedbackForm__c, 
 
-HYPERLINK($Setup.TASKRAY__trGlobalSettings__c.TASKRAY__trFormsPublicSiteURL__c+&#39;?flowname=&#39;+$Setup.TASKRAY__trGlobalSettings__c.TASKRAY__trOnboardingFeedbackFlow__c+&#39;&amp;projectId=&#39;+ Id, 
+HYPERLINK($Setup.TASKRAY__trGlobalSettings__c.TASKRAY__trFormsPublicSiteURL__c+&apos;?flowname=&apos;+$Setup.TASKRAY__trGlobalSettings__c.TASKRAY__trOnboardingFeedbackFlow__c+&apos;&amp;projectId=&apos;+ Id, 
 
 &quot;Link to Form&quot;) 
 

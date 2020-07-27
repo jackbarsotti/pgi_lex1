@@ -1,4 +1,4 @@
-<apex:page standardController="Opportunity" extensions="OpportunityProductEntryRedirectExtension" action="{!redirect}" >
+<apex:page standardController="Opportunity" extensions="OpportunityProductEntryRedirectExtension" action="{!redirect}" lightningStylesheets="true">
 <apex:pagemessages > </apex:pagemessages>
 <apex:outputLink value="/{!theopp.id}">Click here to return to the Opportunity</apex:outputLink>
 </apex:page>

@@ -1,5 +1,5 @@
-<apex:page standardController="Opportunity" extensions="ReadyTalkOppProductEntryExtension" action="{!priceBookCheck}" >
-
+<apex:page standardController="Opportunity" extensions="ReadyTalkOppProductEntryExtension" action="{!priceBookCheck}" lightningStylesheets="true">
+    <apex:pageBlock rendered="{!$User.UITheme == 'Theme3'}">
     <apex:sectionHeader Title="Manage {!$ObjectType.Product2.LabelPlural}" subtitle="{!opportunity.Name}"/>
     <apex:messages style="color:red"/>
 
@@ -109,7 +109,7 @@
                                     <apex:outputText styleClass="header" value="{!f.Label}" />
                                 </apex:outputPanel>
                             </apex:facet>
-							<apex:inputField value="{!s[f]}" required="{!OR(f.required, f.dbrequired)}" rendered="{!f != 'TotalPrice'}" />
+							<apex:inputField value="{!s[f]}" required="{!OR(f.required, f.dbrequired)}" rendered="{!f != 'TotalPrice'}"/>
                             <apex:outputField value="{!s[f]}" rendered="{!f == 'TotalPrice'}" />
                         </apex:column>
                     </apex:repeat>
@@ -179,5 +179,11 @@
         </apex:outputPanel>
 
     </apex:form>
-
+</apex:pageBlock>
+<apex:pageBlock rendered="{!$User.UITheme != 'Theme3'}">
+        <script type="text/javascript">
+            { window.alert("Please Switch to Salesforce Classic"); }
+        </script>
+        <apex:pageMessage severity="Info" summary="You must switch to salesforce classic to access this page." strength="1"/>
+    </apex:pageBlock>
 </apex:page>

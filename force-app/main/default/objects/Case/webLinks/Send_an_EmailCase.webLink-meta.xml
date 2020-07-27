@@ -10,11 +10,11 @@
     <url>{!REQUIRESCRIPT(&quot;/soap/ajax/47.0/connection.js&quot;)}
 {!REQUIRESCRIPT(&quot;/support/console/47.0/integration.js&quot;)}
 
-var url = &#39;/apex/SendAnEmail?id={!Case.Id}&#39;;
+var url = &apos;/apex/SendAnEmail?id={!Case.Id}&apos;;
 console.log(url);
 
 var openSubtab = function(result){
-sforce.console.openSubtab(result.id, url, true, &#39;New Email&#39;, null);
+sforce.console.openSubtab(result.id, url, true, &apos;New Email&apos;, null);
 };
 
 if (sforce.console.isInConsole()){

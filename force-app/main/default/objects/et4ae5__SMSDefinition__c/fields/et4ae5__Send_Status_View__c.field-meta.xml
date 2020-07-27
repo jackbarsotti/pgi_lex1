@@ -5,13 +5,13 @@
     <externalId>false</externalId>
     <formula>IF(
 
-      ISPICKVAL( et4ae5__SendStatus__c , &#39;Scheduled&#39; )
+      ISPICKVAL( et4ae5__SendStatus__c , &apos;Scheduled&apos; )
       &amp;&amp;
       et4ae5__Scheduled_Date_Time__c &lt;= NOW()
 
       ,
 
-      &#39;Queued for Processing&#39;
+      &apos;Queued for Processing&apos;
 
       ,
 

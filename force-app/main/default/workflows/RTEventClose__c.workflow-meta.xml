@@ -5,7 +5,7 @@
         <description>Set the &quot;Additional Minutes Rate&quot; to 0 for Webinar subscriptions.</description>
         <field>Additional_Minutes_Rate__c</field>
         <formula>0</formula>
-        <name>RT_Add&#39;l Minutes Rate to Zero</name>
+        <name>RT_Add&apos;l Minutes Rate to Zero</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Formula</operation>
         <protected>false</protected>
@@ -15,7 +15,7 @@
         <description>Set &quot;Additional Participants Rate&quot; to 0 for Webinar subscriptions.</description>
         <field>Additional_Participants_Rate__c</field>
         <formula>0</formula>
-        <name>RT_Add&#39;l Participants Rate to Zero</name>
+        <name>RT_Add&apos;l Participants Rate to Zero</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Formula</operation>
         <protected>false</protected>

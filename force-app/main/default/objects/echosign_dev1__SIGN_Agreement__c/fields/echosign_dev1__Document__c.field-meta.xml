@@ -3,7 +3,7 @@
     <fullName>echosign_dev1__Document__c</fullName>
     <deprecated>false</deprecated>
     <externalId>false</externalId>
-    <formula>IF( LEN(echosign_dev1__SignedPDF__c) &gt; 0, HYPERLINK( echosign_dev1__SignedPDF__c, IMAGE(&#39;https://secure.echosignforsalesforce.com/images/salesforce-pdf-icon.gif&#39;, &#39;PDF&#39;) &amp; &#39; &#39; &amp; Name  &amp; &#39;.pdf&#39;), &quot;&quot;)</formula>
+    <formula>IF( LEN(echosign_dev1__SignedPDF__c) &gt; 0, HYPERLINK( echosign_dev1__SignedPDF__c, IMAGE(&apos;https://secure.echosignforsalesforce.com/images/salesforce-pdf-icon.gif&apos;, &apos;PDF&apos;) &amp; &apos; &apos; &amp; Name  &amp; &apos;.pdf&apos;), &quot;&quot;)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Document</label>
     <required>false</required>

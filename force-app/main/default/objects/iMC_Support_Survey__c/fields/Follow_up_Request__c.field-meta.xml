@@ -12,9 +12,9 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>No, we&#39;re good!</fullName>
+                <fullName>No, we&apos;re good!</fullName>
                 <default>false</default>
-                <label>No, we&#39;re good!</label>
+                <label>No, we&apos;re good!</label>
             </value>
             <value>
                 <fullName>Call Me</fullName>

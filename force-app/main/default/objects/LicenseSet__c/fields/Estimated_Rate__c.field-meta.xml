@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Estimated_Rate__c</fullName>
-    <description>Estimated rate that the customer will pay for this Audio Product&#39;s Minutes.</description>
+    <description>Estimated rate that the customer will pay for this Audio Product&apos;s Minutes.</description>
     <externalId>false</externalId>
-    <inlineHelpText>Estimated rate that the customer will pay for this Audio Product&#39;s Minutes.</inlineHelpText>
+    <inlineHelpText>Estimated rate that the customer will pay for this Audio Product&apos;s Minutes.</inlineHelpText>
     <label>Estimated Rate</label>
     <precision>18</precision>
     <required>false</required>

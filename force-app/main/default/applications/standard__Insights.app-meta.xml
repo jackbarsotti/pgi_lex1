@@ -6,4 +6,5 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <tabs>standard-WaveHome</tabs>
     <tabs>DataRetentionManager</tabs>
+    <tabs>Batch_Import_Revenue__c</tabs>
 </CustomApplication>

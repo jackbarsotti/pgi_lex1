@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Entity_Status__c</fullName>
     <externalId>false</externalId>
-    <formula>IF( CountofCompanies__c = 0, &#39;Inactive&#39;, &#39;Active&#39;)</formula>
+    <formula>IF( CountofCompanies__c = 0, &apos;Inactive&apos;, &apos;Active&apos;)</formula>
     <inlineHelpText>If Count of Companies = 0 then Status = Inactive</inlineHelpText>
     <label>Entity Status</label>
     <required>false</required>

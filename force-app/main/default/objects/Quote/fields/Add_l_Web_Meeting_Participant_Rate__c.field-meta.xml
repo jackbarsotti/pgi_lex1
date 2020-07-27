@@ -5,7 +5,7 @@
     <description>Rate applied to web usage over the defined included web on products that do include web (e.g. Web Meeting Pro (25)); maps to Web Overage on Web Rate Sets.</description>
     <externalId>false</externalId>
     <inlineHelpText>Rate applied to web usage over the defined included web on products that do include web (e.g. Web Meeting Pro (25))</inlineHelpText>
-    <label>Add&#39;l Web Meeting Participant Rate</label>
+    <label>Add&apos;l Web Meeting Participant Rate</label>
     <precision>5</precision>
     <required>false</required>
     <scale>4</scale>

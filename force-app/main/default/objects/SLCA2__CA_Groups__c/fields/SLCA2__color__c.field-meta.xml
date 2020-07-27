@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>SLCA2__color__c</fullName>
-    <defaultValue>&#39;rgb(200,100,0)&#39;</defaultValue>
+    <defaultValue>&apos;rgb(200,100,0)&apos;</defaultValue>
     <deprecated>false</deprecated>
     <externalId>false</externalId>
     <label>color</label>

@@ -143,7 +143,7 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>Display&#39;s daily audio minutes (on-demand &amp; op-assist) and web minutes used by access code.</description>
+    <description>Display&apos;s daily audio minutes (on-demand &amp; op-assist) and web minutes used by access code.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>

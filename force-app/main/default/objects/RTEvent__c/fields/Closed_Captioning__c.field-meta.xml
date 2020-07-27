@@ -4,7 +4,7 @@
     <description>CAUTION - USED IN INTEGRATIONS
 Closed Captioning Services are available as an add-on service to Gold/ Platinum Webinars and Direct/ Premium Operator Assisted Conferences.</description>
     <externalId>false</externalId>
-    <inlineHelpText>Select &quot;Yes&quot; if the event will include Closed Captioning Services (add&#39;l fees will apply).</inlineHelpText>
+    <inlineHelpText>Select &quot;Yes&quot; if the event will include Closed Captioning Services (add&apos;l fees will apply).</inlineHelpText>
     <label>Closed Captioning</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

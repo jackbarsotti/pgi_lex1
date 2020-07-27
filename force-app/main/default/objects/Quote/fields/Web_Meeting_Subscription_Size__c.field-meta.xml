@@ -3,7 +3,7 @@
     <fullName>Web_Meeting_Subscription_Size__c</fullName>
     <defaultValue>25</defaultValue>
     <externalId>false</externalId>
-    <inlineHelpText># of participants included per conference in the Web Meeting Price. Add&#39;l participants are charged a per minute rate.</inlineHelpText>
+    <inlineHelpText># of participants included per conference in the Web Meeting Price. Add&apos;l participants are charged a per minute rate.</inlineHelpText>
     <label>Web Meeting Subscription Size</label>
     <precision>18</precision>
     <required>false</required>

@@ -5,7 +5,7 @@
     <description>A Company VAT Number is required of Company Region = EMEA</description>
     <errorConditionFormula>AND(
 ISBLANK(Company_VAT_Number__c),
-ISPICKVAL( NCS_Company_Region__c , &#39;EMEA&#39;)
+ISPICKVAL( NCS_Company_Region__c , &apos;EMEA&apos;)
 )</errorConditionFormula>
     <errorMessage>A Company VAT Number is required for EMEA based customers</errorMessage>
 </ValidationRule>

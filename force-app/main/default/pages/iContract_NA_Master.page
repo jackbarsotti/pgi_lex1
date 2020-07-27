@@ -1,6 +1,5 @@
 <apex:page showHeader="false" applyBodyTag="false" standardStylesheets="{! renderingAsHTML }" standardController="CONMAN_Contract__c"
-           extensions="iContract_NA_Master_Controller" applyHtmlTag="{!if(renderingAsExcel,false,true)}" contentType="{! renderedContentType }" renderAs="{! renderingService }"
-           lightningStyleSheets="true">
+           extensions="iContract_NA_Master_Controller" applyHtmlTag="{!if(renderingAsPDF,false,true)}" contentType="{! renderedContentType }" renderAs="{! renderingService }" id="page" >
     {!IF (renderingAsWord, "
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />", '')}
     <!-- Added by Anup   RT-335  -->
@@ -28,8 +27,6 @@
             <!-- PDF Page Layout: PDF styling and rendering -->
             <apex:outputPanel layout="none" rendered="{! renderingAsPDF && !isTPX}">
                 @page {
-                
-                
                 @bottom-center {
                 font-size:11px;
                 font-family: Arial,Helvetica,sans-serif;
@@ -38,8 +35,9 @@
                 }
                 
             </apex:outputPanel> 
-            <!-- modified by Vijay -start for header and footer-->
+            <!-- modified by Vijay -start-->
             <apex:outputPanel layout="none" rendered="{! renderingAsPDF && isTPX}">
+                
                 @page {
                     margin-top: 2cm;
                     margin-bottom: 3cm;
@@ -51,17 +49,25 @@
                         font-family: Arial,Helvetica,sans-serif;
                         content:  "Quote Expires on {!expirationDate} |  Quote # {!contract.Name}"   
                     }
-                	@bottom-right {
+                    @bottom-right {
                         font-size:11px;
                         font-family: Arial,Helvetica,sans-serif;
                         content: "Page " counter(page) " of " counter(pages);
-                	}
-                	@top-left {
-                		content: element(headerPdf);
-                	}
+                    }
+                    @top-left {
+                        content: element(headerPdf);
+                    }
+                   
                 }
                 .headerPdf {
-                	position: running(headerPdf);
+                    position: running(headerPdf);
+                }
+                .productTable > table, .productTable > tr,  .productTable > td  {
+                        border-bottom: 1px solid black !important;   
+                        border: 1px solid black !important;
+                    }
+                .productTable {
+                    border: 1px solid black !important;
                 }
             </apex:outputPanel> 
             <!-- End-->
@@ -288,6 +294,20 @@
             margin-left: -250px;
             top:100px;
             }
+            /* RT-581 start */
+            .popUp{
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding:10px;
+            position: fixed;
+            width: 250px;
+            margin-left: -200px;
+            top:100px;
+            }
+            /* RT-581 end */
             .popupBackground{
             background-color:black;
             opacity: 0.20;
@@ -333,7 +353,11 @@
             document.getElementById('{!$component.theForm.productDeatailsChanged}').value='';
             disableDownlodWordButton();
         }
-        
+        function showESign(){
+            CallApexMethodForESign() ;
+        } function showQuote(){
+            CallApexMethodForQuote() ;
+        }
         
         </script>
         <apex:messages />
@@ -384,7 +408,7 @@
                 
                 
                 <!-- Buttons to switch between Agreement and Quote -->
-                <apex:outputPanel styleClass="non-agreement-area" layout="block" rendered="{! isPageRenderable && renderingAsHTML && (!isServiceOrder) }"
+                <apex:outputPanel styleClass="non-agreement-area" layout="block" rendered="{! isPageRenderable && renderingAsHTML && (!isServiceOrder) && !isTpx}"
                                   style="text-align: center; vertical-align:center; width:30%; margin: 0px auto;">
                     <apex:outputPanel layout="none" rendered="{! !isTPX }">
                         <strong style="margin-right:4px">
@@ -423,7 +447,22 @@ is what makes it disabled -->
                         </apex:outputPanel>
                     </apex:outputPanel>
                 </apex:outputPanel>
-                
+
+                <!-- RT-581 start   -->
+                <apex:outputPanel id="modalPopupToUpdateOppty">
+                    <apex:outputPanel styleClass="popupBackground" layout="block"  rendered="{!displayPopUp}"/>
+                    <apex:outputPanel styleClass="popUp" layout="block" rendered="{!displayPopUp}" >
+                        <p style="margin-left: 8%;">{!displayMessage}</p>
+                        <div style=" margin-left: 33%; ">
+                            <apex:commandButton value="OK" action="{!updateOpportunity}" rerender="modalPopupToUpdateOppty">
+                                <apex:param name="type" value="{!invokedType}"/>
+                            </apex:commandButton>
+                            <apex:commandButton value="Cancel" action="{!closePopup}" rerender="modalPopupToUpdateOppty"/>
+                        </div>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+                <!-- RT-581 ends -->
+
                 <!-- eSignature is only for Agreements, not Quotes -->
                 <apex:outputPanel styleClass="non-agreement-area" layout="block" rendered="{! !isQuote && !isPartnerSite }">
                     <h2>
@@ -448,8 +487,10 @@ is what makes it disabled -->
                         </p>
                         <p>
                             <apex:repeat value="{!eSignTemplates}" var="tmpl">
-                                <apex:commandLink value="{!eSignTemplates[tmpl]}" action="{!startESignEvent}">
-                                    <apex:param name="eSignTemplate" value="{!tmpl}" assignTo="{!eSignTemplate}" />
+                                <!-- action="{!startESignEvent}" -->
+                                <apex:commandLink value="{!eSignTemplates[tmpl]}" action="{!showPopupToUpdateOppty}" rerender="modalPopupToUpdateOppty">
+                                    <apex:param name="eSignTemplate" value="{!tmpl}" assignTo="{!eSignTemplate}" /> 
+                                    <apex:param name="type" value="isESignature"/> 
                                 </apex:commandLink>
                             </apex:repeat>
                         </p>
@@ -634,23 +675,25 @@ edit the verbiage on a contract -->
                 </div>
                 <!--   RT-335    End      -->
             </apex:outputPanel>
-            
             <!-- Email Quote PDF to Customer Button -->
-            <apex:outputPanel styleClass="non-agreement-area" layout="block" rendered="{! isQuote && ((!isPartnerSite && canDownloadQuotePDF) || isTpx) }">
+            <apex:outputPanel styleClass="non-agreement-area" layout="block" rendered="{! isQuote && !isPartnerSite && canDownloadQuotePDF }">
                 <h2>
                     Send Documents
                 </h2>
                 <p>
                     You can also send the PGi quote to the Customer.
                 </p>
-                <apex:commandButton value="E-mail Quote" id="emailQuote" action="{!emailQuoteEvent}" />
+                <!-- action="{!emailQuoteEvent}" -->
+                <apex:commandButton value="E-mail Quote" id="emailQuote"  action="{!showPopupToUpdateOppty}" rerender="modalPopupToUpdateOppty">
+                    <apex:param name="type" value="isemailQuote"/>
+                </apex:commandButton>
                 <apex:outputPanel layout="block" rendered="{!openPopupURL != null }">
                     <script>
                     openQuoteEmail();
                     </script>
                 </apex:outputPanel>
             </apex:outputPanel>
-            <apex:outputPanel styleClass="non-agreement-area" layout="block" rendered="{! isQuote && isTPX }">
+            <apex:outputPanel styleClass="non-agreement-area" layout="block" rendered="{! isQuote && isTPX && !isPartnerSite}">
                 <h2>
                     Deal Registration with TPx
                 </h2>
@@ -658,9 +701,56 @@ edit the verbiage on a contract -->
                     Once your deal is ready for registration with TPx, please select Submit and the system will auto send all registration information to TPx 
                     who will register the deal, execute a contract, and capture signature
                 </p>
-                <apex:commandButton value="Submit Registration" id="DealRegistration" action="{!emailDelRegidtration}" />
-                <hr/>
-                <apex:outputPanel layout="block" rendered="{!openPopupURL != null }">
+                <!-- RT-584  start-->
+                <apex:outputPanel id="ismultiLoc" rendered="{!isMultiLocation}">
+                    <apex:outputPanel layout="block" rendered="{! !canDownloadPDF }">
+                        <p>
+                            <span class='warning' id='pdfDisabledMessage'>{! cannotDownloadPDFReason }</span>
+                        </p>
+                    </apex:outputPanel>
+                    <h3>
+                        Multi-Location Details
+                    </h3>
+                    <!-- Commneted Because handling error message from CLass -->
+                   
+                   <apex:outputPanel rendered="{!requireLocation}" > 
+                        <span class="warning" >Please enter Product Notes for all locations</span>
+                    </apex:outputPanel> 
+                    <apex:outputPanel rendered="{!isMultiLocation}" > 
+                    <table >
+                        <tr>
+                            <th style="width: 17%;" >Location Name</th>
+                            <th >Product Notes</th>
+                        </tr>
+
+                    <apex:repeat value="{!siteLocationData}" var="location">
+                        
+                            <tr>
+                                <td style="width: 17%;"><span >{!location.Site_Location_Name__c}</span></td>
+                                <td><span>
+                                    <apex:actionRegion >
+                                    <apex:inputText style="margin: 0px;width: 100%;height: 100%;" value="{!location.Site_Location_Product_Notes__c}" required="false">
+                                    </apex:inputText>
+                                </apex:actionRegion>
+                                </span></td>
+                            </tr>
+                    </apex:repeat>
+                    <br/>
+                    
+                </table>
+            </apex:outputPanel> 
+                </apex:outputPanel>
+                <!-- RT-584 end -->
+                <!-- <apex:commandButton value="Save Location Information" action="{!saveLocations}" rendered="{!isMultiLocation}" reRender="page "/>
+                <apex:commandButton value="Submit Registration" id="DealRegistration" action="{!emailDealRegistration}" disabled="{! !canDownloadPDF }"/> -->
+                <!-- RT-683: Added Apex Message if 	Product Notes is Null -->
+                <!-- <apex:pageMessages id="showmsg"></apex:pageMessages> -->
+               <!-- <apex:commandButton value="Save Location Information" action="{!saveLocations}" rendered="{!isMultiLocation}" reRender="ismultiLoc" oncomplete="window.location.reload()"/>-->
+               <apex:commandButton value="Save Location Information" action="{!saveLocations}" rendered="{!isMultiLocation}" reRender="ismultiLoc,DealRegistration" />
+                <apex:commandButton value="Submit Registration" id="DealRegistration" action="{!emailDealRegistration}" disabled="{! !canDownloadPDF || requireLocation}"  />
+
+                <br/>
+                <apex:outputPanel layout="block" rendered="{!openPopupURL != null && !requireLocation}">
                     <script>
                     openQuoteEmail();
                     </script>

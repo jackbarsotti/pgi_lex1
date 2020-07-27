@@ -21,6 +21,6 @@
         <operation>equals</operation>
         <value>1</value>
     </filters>
-    <label>My FinReqs I&#39;ve opened &amp; that are open</label>
+    <label>My FinReqs I&apos;ve opened &amp; that are open</label>
     <language>en_US</language>
 </ListView>

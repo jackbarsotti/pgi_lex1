@@ -3,7 +3,7 @@
     <label><!-- Winback Attempt Outcome --></label>
     <name>Winback_Attempt_Outcome__c</name>
     <picklistValues>
-        <masterLabel>Couldn&#39;t Save Cutomer</masterLabel>
+        <masterLabel>Couldn&apos;t Save Cutomer</masterLabel>
         <translation><!-- Couldn&apos;t Save Cutomer --></translation>
     </picklistValues>
     <picklistValues>

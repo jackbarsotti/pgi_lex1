@@ -1,4 +1,4 @@
-<apex:page standardController="Opportunity" extensions="opportunityProductEntryExtension" showHeader="true">
+<apex:page standardController="Opportunity" extensions="opportunityProductEntryExtension" showHeader="true" lightningStylesheets="true">
 <!--action="{!priceBookCheck}"-->
 
     <apex:sectionHeader Title="Manage {!$ObjectType.Product2.LabelPlural}" subtitle="{!opportunity.Name}"/>

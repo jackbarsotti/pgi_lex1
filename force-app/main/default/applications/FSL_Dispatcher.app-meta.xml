@@ -196,7 +196,11 @@
     <tabs>standard-ServiceTerritory</tabs>
     <tabs>standard-WorkType</tabs>
     <tabs>TO_Request__c</tabs>
+    <tabs>Batch_Import_Revenue__c</tabs>
     <workspaceConfig>
+        <mappings>
+            <tab>Batch_Import_Revenue__c</tab>
+        </mappings>
         <mappings>
             <tab>Conference__c</tab>
         </mappings>

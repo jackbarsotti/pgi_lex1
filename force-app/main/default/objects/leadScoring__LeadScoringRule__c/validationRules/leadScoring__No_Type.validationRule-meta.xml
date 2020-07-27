@@ -3,7 +3,7 @@
     <fullName>leadScoring__No_Type</fullName>
     <active>true</active>
     <description>Errors if Type is not selected or == --None--</description>
-    <errorConditionFormula>ISPICKVAL(leadScoring__Type__c,&#39;&#39;)||ISPICKVAL(leadScoring__Type__c,&#39;--None--&#39;)</errorConditionFormula>
+    <errorConditionFormula>ISPICKVAL(leadScoring__Type__c,&apos;&apos;)||ISPICKVAL(leadScoring__Type__c,&apos;--None--&apos;)</errorConditionFormula>
     <errorDisplayField>leadScoring__Type__c</errorDisplayField>
     <errorMessage>You must select a Type such as Lead or Campaign Member</errorMessage>
 </ValidationRule>

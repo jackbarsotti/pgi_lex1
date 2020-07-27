@@ -6,9 +6,9 @@
     <errorConditionFormula>AND(
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
 NOT(ISCHANGED(IsUpdateFromCaseComment__c)),
-ISPICKVAL(Recording_Type__c, &#39;Web Only&#39;) &amp;&amp;
+ISPICKVAL(Recording_Type__c, &apos;Web Only&apos;) &amp;&amp;
 (
-ISPICKVAL(Recording_Started_Via__c , &#39;&#39;) 
+ISPICKVAL(Recording_Started_Via__c , &apos;&apos;) 
 ))</errorConditionFormula>
     <errorMessage>If your Recording Type is Web Only, then you must populate a value in the Recording Started Via field</errorMessage>
 </ValidationRule>

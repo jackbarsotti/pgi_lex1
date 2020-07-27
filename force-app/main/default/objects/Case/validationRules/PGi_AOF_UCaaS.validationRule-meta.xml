@@ -6,7 +6,7 @@
     <errorConditionFormula>AND(
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
 NOT(ISCHANGED(IsUpdateFromCaseComment__c)),
-ISPICKVAL(Area_of_Focus__c,&#39;UCaaS Support&#39;),
+ISPICKVAL(Area_of_Focus__c,&apos;UCaaS Support&apos;),
 ISBLANK( Phone_Number__c )
 )</errorConditionFormula>
     <errorMessage>If your Area of Focus is UCaaS Support, then you must populate a value in the following fields: UC Phone Number/Extension</errorMessage>

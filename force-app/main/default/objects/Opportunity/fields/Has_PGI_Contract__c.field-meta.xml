@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Has_PGI_Contract__c</fullName>
     <defaultValue>false</defaultValue>
-    <description>This field gets checked when a PGI Contract gets associated to an opportunity. Used in the process builder &#39;Adobe to create contract&#39;</description>
+    <description>This field gets checked when a PGI Contract gets associated to an opportunity. Used in the process builder &apos;Adobe to create contract&apos;</description>
     <externalId>false</externalId>
     <label>Has PGI Contract</label>
     <trackFeedHistory>false</trackFeedHistory>

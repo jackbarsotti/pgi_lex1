@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>PriortoPC__c</fullName>
     <defaultValue>false</defaultValue>
-    <description>An admin field only, used to mark Closed Won opptys if Closed Won before 5/13 so that business can still modify the Closed Won deals that don&#39;t have Primary Contact</description>
+    <description>An admin field only, used to mark Closed Won opptys if Closed Won before 5/13 so that business can still modify the Closed Won deals that don&apos;t have Primary Contact</description>
     <externalId>false</externalId>
     <label>Prior to Primary Contact Rule</label>
     <trackFeedHistory>false</trackFeedHistory>

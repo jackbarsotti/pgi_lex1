@@ -1,206 +1,214 @@
 <apex:page standardController="Account" extensions="CustomScheduleLookupController" title="Search" showHeader="true" sideBar="true" tabStyle="Account" id="pg">
-  <apex:stylesheet value="{!URLFOR($Resource.RTResources, 'css/jquery-ui.min.css')}"/>
-  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery.js')}"/>
-  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery-ui.min.js')}"/>
-  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/messaging.js')}"/>
-  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/remoting.js')}"/>
-  <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/VFResizer.js')}"/>  
-  
-  <script>    
-    var $ = jQuery.noConflict();
-    $(document).ready(function(){
-      VFResizer.resizerProxyPagePath = "{!URLFOR($Resource.RTResources, 'html/VFResizerProxy.html')}";
-      VFResizer.resize('ScheduleList');      
-      
-      $(document).on('click', '.schedule-details', function(e){
-      	e.preventDefault();
-      	parent.window.location = $(this).attr('href');
-      });
-
-      $(document).on('click', '.makeDefault', function(e){
-        e.preventDefault();
-        var customScheduleId = $(this).attr('id').split(":")[1];
-        makeDefault(customScheduleId, false, null);
-      });
-
-      function makeDefault(customScheduleId, isOverride, buttonRef) {
-        CustomScheduleLookupController.makeDefault(customScheduleId, isOverride, function(result,event){
-          if($.handleRemotingResult(result,event)){
-            if(result)
-              window.top.location.href='/{!AccountId}';
-            else {
-              $.enableDialogButtons(buttonRef);
-              
-              $.showDialog('.message-dialog', 'Overwrite Custom Schedule', {
-                "Cancel": function() {
-                  $.disableDialogButtons($(this)); 
-                  $(this).dialog('close');
-                },               
-                "Continue": function() {
-                  $.disableDialogButtons($(this)); 
-                  makeDefault(customScheduleId, true, $(this));
-                } 
-              });
-
-              $('.warnMessage').html('You are about to overwrite a default schedule, would you like to continue?');
-              $('.warnMessages').show();                
+    <apex:pageBlock title="My Content" rendered="{!$User.UITheme == 'Theme3'}"> 
+        <apex:stylesheet value="{!URLFOR($Resource.RTResources, 'css/jquery-ui.min.css')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery.js')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/jquery-ui.min.js')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/messaging.js')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/remoting.js')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.RTResources, 'js/VFResizer.js')}"/>  
+        
+        <script>    
+        var $ = jQuery.noConflict();
+        $(document).ready(function(){
+            VFResizer.resizerProxyPagePath = "{!URLFOR($Resource.RTResources, 'html/VFResizerProxy.html')}";
+            VFResizer.resize('ScheduleList');      
+            
+            $(document).on('click', '.schedule-details', function(e){
+                e.preventDefault();
+                parent.window.location = $(this).attr('href');
+            });
+            
+            $(document).on('click', '.makeDefault', function(e){
+                e.preventDefault();
+                var customScheduleId = $(this).attr('id').split(":")[1];
+                makeDefault(customScheduleId, false, null);
+            });
+            
+            function makeDefault(customScheduleId, isOverride, buttonRef) {
+                CustomScheduleLookupController.makeDefault(customScheduleId, isOverride, function(result,event){
+                    if($.handleRemotingResult(result,event)){
+                        if(result)
+                            window.top.location.href='/{!AccountId}';
+                        else {
+                            $.enableDialogButtons(buttonRef);
+                            
+                            $.showDialog('.message-dialog', 'Overwrite Custom Schedule', {
+                                "Cancel": function() {
+                                    $.disableDialogButtons($(this)); 
+                                    $(this).dialog('close');
+                                },               
+                                "Continue": function() {
+                                    $.disableDialogButtons($(this)); 
+                                    makeDefault(customScheduleId, true, $(this));
+                                } 
+                            });
+                            
+                            $('.warnMessage').html('You are about to overwrite a default schedule, would you like to continue?');
+                            $('.warnMessages').show();                
+                        }
+                    }
+                    else{
+                        showMessageDialog();
+                    }
+                });        
             }
-          }
-          else{
-            showMessageDialog();
-          }
-        });        
-      }
-
-      function showMessageDialog() {
-        //Display the initial message dialog
-        $.showDialog('.message-dialog', 'Message', {
-          "OK": function() {
-            $(this).dialog('close');
-          }          
-        }, function() {
+            
+            function showMessageDialog() {
+                //Display the initial message dialog
+                $.showDialog('.message-dialog', 'Message', {
+                    "OK": function() {
+                        $(this).dialog('close');
+                    }          
+                }, function() {
+                });
+                
+                $('.errorMessages').show();                
+            }
+            
+            togglePageBlockTable($('#baseRateSectionToggle').get(0));      
+            togglePageBlockTable($('#parentAccountRateSectionToggle').get(0));      
         });
         
-        $('.errorMessages').show();                
-      }
-
-      togglePageBlockTable($('#baseRateSectionToggle').get(0));      
-      togglePageBlockTable($('#parentAccountRateSectionToggle').get(0));      
-    });
-
-    function togglePageBlockTable(el){
-      var jqueryEl = $(el);
-      jqueryEl.parent().parent().siblings().toggle();
-      if(typeof(jqueryEl.css('background-position')) != 'undefined' && jqueryEl.css('background-position').indexOf('-11px')==-1)
-        //jqueryEl.css('background-position', '0 -11px');
-      else
-        //jqueryEl.css('background-position', '0 0px');
-
-      VFResizer.resize('ScheduleList');      
-    }          
-  </script>
-
-  <apex:form >
-    <apex:outputPanel id="page" layout="block">     
-      <apex:actionRegion >   
-        <apex:outputPanel id="pnlSearchResults">
-          <apex:pageBlock id="searchResults"> 
-            <apex:pageBlockButtons >
-              <apex:commandButton value="Back" action="{!goBack}"/>﻿
-            </apex:pageBlockButtons>
-
-            <apex:pageBlockTable value="{!schedules}" var="schedule" id="scheduleResults">
-              <apex:facet name="caption">            
-                <div class="" style="width: 33%; float: left">
-                  <img src="/s.gif" alt="" width="1" height="1" class="minWidth" title=""/>                  
-                  <img src="{!$Resource.Schedule}" width="24px" height="24px" alt="Schedules" title="Schedules" style="float: left; padding-right: 5px;"/>
-                  <img src="/s.gif" id="baseRateSectionToggle" onclick="togglePageBlockTable(this)" style="width: 11px; height: 11px; margin-top: 5px; background: transparent url('/img/alohaSkin/twisty_sprite.png') 0 -11px no-repeat; float: left; padding-right: 5px;"/>
-                  <h3 style="margin-top: 5px; float: left">Base Rate Sets</h3>
-                </div>
-                <br style="clear: both"/>            
-              </apex:facet> 
-                <apex:column headerValue="Action" styleClass="actionColumn" style="cursor: pointer" rendered="{!NOT(schedules.empty)}">
-                  <a href="/apex/viewSchedule?id={!Account.Id}&baseScheduleId={!schedule.Id}&scheduleType={!schedule.scheduleType__c}" target="_parent" class="actionLink" title="View">View</a> | <a href="/apex/addCustomSchedule?id={!Account.Id}&scheduleType={!schedule.scheduleType__c}&baseScheduleId={!schedule.Id}" target="_parent" class="actionLink" title="Add Custom">Add Custom</a>
-                </apex:column>
-                <apex:column headerValue="Rate Set Name" rendered="{!NOT(schedules.empty)}">
-                  <apex:outputField rendered="{!NOT(ISNULL(schedule.Id))}" value="{!schedule.Name}"></apex:outputField>                   
-                </apex:column>
-                <apex:column headerValue="Rate Set Description" rendered="{!NOT(schedules.empty)}">
-                  <apex:outputField rendered="{!NOT(ISNULL(schedule.description__c))}" value="{!schedule.description__c}"></apex:outputField>                   
-                </apex:column>              
-                <apex:column headerValue="Rate Set Type" rendered="{!NOT(schedules.empty)}">
-                  <apex:outputField rendered="{!NOT(ISNULL(schedule.scheduleType__c))}" value="{!schedule.scheduleType__c}"></apex:outputField>                   
-                </apex:column>                            
-            </apex:pageBlockTable>
-            <apex:outputPanel rendered="{!schedules.empty}">
-              <table class="list" border="0" cellspacing="0" cellpadding="0">
-                <tbody>
-                  <tr class="headerRow"><th scope="col" class="noRowsHeader" style="font-weight: normal">No records to display</th></tr>
-                </tbody>
-              </table>      
-            </apex:outputPanel> 
-
-            <apex:outputPanel rendered="{!NOT(ISNULL(parentAccountCustomSchedules))}">
-              <br/>
-              <apex:pageBlockTable value="{!parentAccountcustomSchedules}" var="customSchedule" id="parentAccountcustomScheduleResults">
-                <apex:facet name="caption">            
-                  <div class="" style="width: 33%; float: left">
-                    <img src="/s.gif" alt="" width="1" height="1" class="minWidth" title=""/>
-                    <img src="{!$Resource.Schedule}" width="24px" height="24px" alt="Custom Schedules" title="Custom Schedules" style="float: left; padding-right: 5px;"/>
-                    <img src="/s.gif" id="parentAccountRateSectionToggle" onclick="togglePageBlockTable(this)" style="width: 11px; height: 11px; margin-top: 5px; background: transparent url('/img/alohaSkin/twisty_sprite.png') 0 -11px no-repeat; float: left; padding-right: 5px;"/>
-                    <h3 style="margin-top: 5px; float: left">Parent Account Rate Sets</h3>
-                  </div>
-                  <br style="clear: both"/>            
-                </apex:facet>                                     
-              
-                <apex:column headerValue="Action" styleClass="actionColumn" style="cursor: pointer" rendered="{!NOT(customSchedules.empty)}">
-                  <a href="/apex/viewSchedule?id={!Account.Id}&customScheduleId={!customSchedule.Id}&scheduleType={!customSchedule.baseScheduleType__c}&baseScheduleId={!customSchedule.baseSchedule__c}" target="_parent" class="actionLink" title="View">View</a>
-                </apex:column>     
-                <apex:column headerValue="Rate Set Name" rendered="{!NOT(customSchedules.empty)}">
-                   <apex:outputField rendered="{!NOT(ISNULL(customSchedule.Id))}" value="{!customSchedule.Name}"></apex:outputField> 
-                </apex:column>          
-                <apex:column headerValue="Rate Set Type" rendered="{!NOT(customSchedules.empty)}">
-                   <apex:outputField rendered="{!NOT(ISNULL(customSchedule.Id))}" value="{!customSchedule.baseScheduleType__c}"></apex:outputField> 
-                </apex:column>                        
-              </apex:pageBlockTable>
-              <apex:outputPanel rendered="{!customSchedules.empty}">
-                <table class="list" border="0" cellspacing="0" cellpadding="0">
-                  <tbody>
-                    <tr class="headerRow"><th scope="col" class="noRowsHeader" style="font-weight: normal">No records to display</th></tr>
-                  </tbody>
-                </table>      
-              </apex:outputPanel>                 
-            </apex:outputPanel>              
-            
-            <br/>            
-            <apex:pageBlockTable value="{!customSchedules}" var="customSchedule" id="customScheduleResults">
-              <apex:facet name="caption">            
-                <div class="" style="width: 33%; float: left">
-                  <img src="/s.gif" alt="" width="1" height="1" class="minWidth" title=""/>
-                  <img src="{!$Resource.Schedule}" width="24px" height="24px" alt="Custom Schedules" title="Custom Schedules" style="float: left; padding-right: 5px;"/>
-                  <img src="/s.gif" id="rateSectionToggle" onclick="togglePageBlockTable(this)" style="width: 11px; height: 11px; margin-top: 5px; background: transparent url('/img/alohaSkin/twisty_sprite.png') 0 -11px no-repeat; float: left; padding-right: 5px;"/>
-                  <h3 style="margin-top: 5px; float: left">Account Rate Sets</h3>
-                </div>
-                <br style="clear: both"/>            
-              </apex:facet>                                     
-            
-              <apex:column headerValue="Action" styleClass="actionColumn" style="cursor: pointer" rendered="{!NOT(customSchedules.empty)}">
-                <a href="/apex/viewSchedule?id={!Account.Id}&customScheduleId={!customSchedule.Id}&scheduleType={!customSchedule.baseScheduleType__c}&baseScheduleId={!customSchedule.baseSchedule__c}" target="_parent" class="actionLink" title="View">View</a> | <a href="" id="makedefault:{!customSchedule.Id}" target="_parent" class="actionLink makeDefault" title="Make Default">Make Default</a>
-              </apex:column>     
-              <apex:column headerValue="Rate Set Name" rendered="{!NOT(customSchedules.empty)}">
-                 <apex:outputField rendered="{!NOT(ISNULL(customSchedule.Id))}" value="{!customSchedule.Name}"></apex:outputField> 
-              </apex:column>          
-              <apex:column headerValue="Rate Set Type" rendered="{!NOT(customSchedules.empty)}">
-                 <apex:outputField rendered="{!NOT(ISNULL(customSchedule.Id))}" value="{!customSchedule.baseScheduleType__c}"></apex:outputField> 
-              </apex:column>                        
-              <apex:column headerValue="Default" rendered="{!NOT(customSchedules.empty)}">
-                 <apex:outputText rendered="{!NOT(ISNULL(customSchedule.Id))}" value="{!IF(customSchedule.isDefault__c, 'Yes', 'No')}"></apex:outputText> 
-              </apex:column>                     
-            </apex:pageBlockTable>
-            <apex:outputPanel rendered="{!customSchedules.empty}">
-              <table class="list" border="0" cellspacing="0" cellpadding="0">
-                <tbody>
-                  <tr class="headerRow"><th scope="col" class="noRowsHeader" style="font-weight: normal">No records to display</th></tr>
-                </tbody>
-              </table>      
-            </apex:outputPanel>    
-
-          </apex:pageBlock>          
-        </apex:outputPanel>
-      </apex:actionRegion>
-    </apex:outputPanel>
-  </apex:form>
-  
-  <div id="schedule-details-dialog">  	
-  </div>
-
-  <apex:outputPanel id="message-dialog" styleClass="message-dialog" layout="block">         
-    <div class="ui-state-error ui-corner-all errorMessages" style="padding: 0 .7em .7em .7em; margin-bottom: 5px; display: none"> 
-      <p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span><span class="errorMessage"></span></p>
-    </div>
+        function togglePageBlockTable(el){
+            var jqueryEl = $(el);
+            jqueryEl.parent().parent().siblings().toggle();
+            if(typeof(jqueryEl.css('background-position')) != 'undefined' && jqueryEl.css('background-position').indexOf('-11px')==-1)
+                //jqueryEl.css('background-position', '0 -11px');
+                else
+                    //jqueryEl.css('background-position', '0 0px');
+                    
+                    VFResizer.resize('ScheduleList');      
+        }          
+        </script>
         
-    <div class="ui-state-highlight ui-corner-all warnMessages" style="padding: 0 .7em .7em .7em; margin-bottom: 5px; display: none"> 
-      <p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span><span class="warnMessage"></span></p>
-    </div>
-  </apex:outputPanel>  
+        <apex:form >
+            <apex:outputPanel id="page" layout="block">     
+                <apex:actionRegion >   
+                    <apex:outputPanel id="pnlSearchResults">
+                        <apex:pageBlock id="searchResults"> 
+                            <apex:pageBlockButtons >
+                                <apex:commandButton value="Back" action="{!goBack}"/>﻿
+                            </apex:pageBlockButtons>
+                            
+                            <apex:pageBlockTable value="{!schedules}" var="schedule" id="scheduleResults">
+                                <apex:facet name="caption">            
+                                    <div class="" style="width: 33%; float: left">
+                                        <img src="/s.gif" alt="" width="1" height="1" class="minWidth" title=""/>                  
+                                        <img src="{!$Resource.Schedule}" width="24px" height="24px" alt="Schedules" title="Schedules" style="float: left; padding-right: 5px;"/>
+                                        <img src="/s.gif" id="baseRateSectionToggle" onclick="togglePageBlockTable(this)" style="width: 11px; height: 11px; margin-top: 5px; background: transparent url('/img/alohaSkin/twisty_sprite.png') 0 -11px no-repeat; float: left; padding-right: 5px;"/>
+                                        <h3 style="margin-top: 5px; float: left">Base Rate Sets</h3>
+                                    </div>
+                                    <br style="clear: both"/>            
+                                </apex:facet> 
+                                <apex:column headerValue="Action" styleClass="actionColumn" style="cursor: pointer" rendered="{!NOT(schedules.empty)}">
+                                    <a href="/apex/viewSchedule?id={!Account.Id}&baseScheduleId={!schedule.Id}&scheduleType={!schedule.scheduleType__c}" target="_parent" class="actionLink" title="View">View</a> | <a href="/apex/addCustomSchedule?id={!Account.Id}&scheduleType={!schedule.scheduleType__c}&baseScheduleId={!schedule.Id}" target="_parent" class="actionLink" title="Add Custom">Add Custom</a>
+                                </apex:column>
+                                <apex:column headerValue="Rate Set Name" rendered="{!NOT(schedules.empty)}">
+                                    <apex:outputField rendered="{!NOT(ISNULL(schedule.Id))}" value="{!schedule.Name}"></apex:outputField>                   
+                                </apex:column>
+                                <apex:column headerValue="Rate Set Description" rendered="{!NOT(schedules.empty)}">
+                                    <apex:outputField rendered="{!NOT(ISNULL(schedule.description__c))}" value="{!schedule.description__c}"></apex:outputField>                   
+                                </apex:column>              
+                                <apex:column headerValue="Rate Set Type" rendered="{!NOT(schedules.empty)}">
+                                    <apex:outputField rendered="{!NOT(ISNULL(schedule.scheduleType__c))}" value="{!schedule.scheduleType__c}"></apex:outputField>                   
+                                </apex:column>                            
+                            </apex:pageBlockTable>
+                            <apex:outputPanel rendered="{!schedules.empty}">
+                                <table class="list" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr class="headerRow"><th scope="col" class="noRowsHeader" style="font-weight: normal">No records to display</th></tr>
+                                    </tbody>
+                                </table>      
+                            </apex:outputPanel> 
+                            
+                            <apex:outputPanel rendered="{!NOT(ISNULL(parentAccountCustomSchedules))}">
+                                <br/>
+                                <apex:pageBlockTable value="{!parentAccountcustomSchedules}" var="customSchedule" id="parentAccountcustomScheduleResults">
+                                    <apex:facet name="caption">            
+                                        <div class="" style="width: 33%; float: left">
+                                            <img src="/s.gif" alt="" width="1" height="1" class="minWidth" title=""/>
+                                            <img src="{!$Resource.Schedule}" width="24px" height="24px" alt="Custom Schedules" title="Custom Schedules" style="float: left; padding-right: 5px;"/>
+                                            <img src="/s.gif" id="parentAccountRateSectionToggle" onclick="togglePageBlockTable(this)" style="width: 11px; height: 11px; margin-top: 5px; background: transparent url('/img/alohaSkin/twisty_sprite.png') 0 -11px no-repeat; float: left; padding-right: 5px;"/>
+                                            <h3 style="margin-top: 5px; float: left">Parent Account Rate Sets</h3>
+                                        </div>
+                                        <br style="clear: both"/>            
+                                    </apex:facet>                                     
+                                    
+                                    <apex:column headerValue="Action" styleClass="actionColumn" style="cursor: pointer" rendered="{!NOT(customSchedules.empty)}">
+                                        <a href="/apex/viewSchedule?id={!Account.Id}&customScheduleId={!customSchedule.Id}&scheduleType={!customSchedule.baseScheduleType__c}&baseScheduleId={!customSchedule.baseSchedule__c}" target="_parent" class="actionLink" title="View">View</a>
+                                    </apex:column>     
+                                    <apex:column headerValue="Rate Set Name" rendered="{!NOT(customSchedules.empty)}">
+                                        <apex:outputField rendered="{!NOT(ISNULL(customSchedule.Id))}" value="{!customSchedule.Name}"></apex:outputField> 
+                                    </apex:column>          
+                                    <apex:column headerValue="Rate Set Type" rendered="{!NOT(customSchedules.empty)}">
+                                        <apex:outputField rendered="{!NOT(ISNULL(customSchedule.Id))}" value="{!customSchedule.baseScheduleType__c}"></apex:outputField> 
+                                    </apex:column>                        
+                                </apex:pageBlockTable>
+                                <apex:outputPanel rendered="{!customSchedules.empty}">
+                                    <table class="list" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr class="headerRow"><th scope="col" class="noRowsHeader" style="font-weight: normal">No records to display</th></tr>
+                                        </tbody>
+                                    </table>      
+                                </apex:outputPanel>                 
+                            </apex:outputPanel>              
+                            
+                            <br/>            
+                            <apex:pageBlockTable value="{!customSchedules}" var="customSchedule" id="customScheduleResults">
+                                <apex:facet name="caption">            
+                                    <div class="" style="width: 33%; float: left">
+                                        <img src="/s.gif" alt="" width="1" height="1" class="minWidth" title=""/>
+                                        <img src="{!$Resource.Schedule}" width="24px" height="24px" alt="Custom Schedules" title="Custom Schedules" style="float: left; padding-right: 5px;"/>
+                                        <img src="/s.gif" id="rateSectionToggle" onclick="togglePageBlockTable(this)" style="width: 11px; height: 11px; margin-top: 5px; background: transparent url('/img/alohaSkin/twisty_sprite.png') 0 -11px no-repeat; float: left; padding-right: 5px;"/>
+                                        <h3 style="margin-top: 5px; float: left">Account Rate Sets</h3>
+                                    </div>
+                                    <br style="clear: both"/>            
+                                </apex:facet>                                     
+                                
+                                <apex:column headerValue="Action" styleClass="actionColumn" style="cursor: pointer" rendered="{!NOT(customSchedules.empty)}">
+                                    <a href="/apex/viewSchedule?id={!Account.Id}&customScheduleId={!customSchedule.Id}&scheduleType={!customSchedule.baseScheduleType__c}&baseScheduleId={!customSchedule.baseSchedule__c}" target="_parent" class="actionLink" title="View">View</a> | <a href="" id="makedefault:{!customSchedule.Id}" target="_parent" class="actionLink makeDefault" title="Make Default">Make Default</a>
+                                </apex:column>     
+                                <apex:column headerValue="Rate Set Name" rendered="{!NOT(customSchedules.empty)}">
+                                    <apex:outputField rendered="{!NOT(ISNULL(customSchedule.Id))}" value="{!customSchedule.Name}"></apex:outputField> 
+                                </apex:column>          
+                                <apex:column headerValue="Rate Set Type" rendered="{!NOT(customSchedules.empty)}">
+                                    <apex:outputField rendered="{!NOT(ISNULL(customSchedule.Id))}" value="{!customSchedule.baseScheduleType__c}"></apex:outputField> 
+                                </apex:column>                        
+                                <apex:column headerValue="Default" rendered="{!NOT(customSchedules.empty)}">
+                                    <apex:outputText rendered="{!NOT(ISNULL(customSchedule.Id))}" value="{!IF(customSchedule.isDefault__c, 'Yes', 'No')}"></apex:outputText> 
+                                </apex:column>                     
+                            </apex:pageBlockTable>
+                            <apex:outputPanel rendered="{!customSchedules.empty}">
+                                <table class="list" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr class="headerRow"><th scope="col" class="noRowsHeader" style="font-weight: normal">No records to display</th></tr>
+                                    </tbody>
+                                </table>      
+                            </apex:outputPanel>    
+                            
+                        </apex:pageBlock>          
+                    </apex:outputPanel>
+                </apex:actionRegion>
+            </apex:outputPanel>
+        </apex:form>
+        
+        <div id="schedule-details-dialog">  	
+        </div>
+        
+        <apex:outputPanel id="message-dialog" styleClass="message-dialog" layout="block">         
+            <div class="ui-state-error ui-corner-all errorMessages" style="padding: 0 .7em .7em .7em; margin-bottom: 5px; display: none"> 
+                <p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span><span class="errorMessage"></span></p>
+            </div>
+            
+            <div class="ui-state-highlight ui-corner-all warnMessages" style="padding: 0 .7em .7em .7em; margin-bottom: 5px; display: none"> 
+                <p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span><span class="warnMessage"></span></p>
+            </div>
+        </apex:outputPanel> 
+    </apex:pageBlock>
+    <apex:pageBlock rendered="{!$User.UITheme != 'Theme3'}">
+        <script type="text/javascript">
+        { window.alert("Please Switch to Salesforce Classic"); }
+        </script>
+        <apex:pageMessage severity="Info" summary="You must switch to salesforce classic to access this page." strength="1"/>
+    </apex:pageBlock>    
 </apex:page>

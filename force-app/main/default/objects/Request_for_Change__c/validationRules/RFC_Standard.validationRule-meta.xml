@@ -4,7 +4,7 @@
     <active>false</active>
     <description>if RFC is related to an SCA then the Infrastructure Close Affected and Application Close Affected are required fields</description>
     <errorConditionFormula>AND(
-$User.ProfileId &lt;&gt; &#39;00e30000001kms9&#39;,
+$User.ProfileId &lt;&gt; &apos;00e30000001kms9&apos;,
 NOT( ISBLANK( Related_SCA__c ) ), 
 ISBLANK( Infrastructure_CIs_Affected__c ) ,
 ISBLANK( Application_CIs_Affected__c ) 

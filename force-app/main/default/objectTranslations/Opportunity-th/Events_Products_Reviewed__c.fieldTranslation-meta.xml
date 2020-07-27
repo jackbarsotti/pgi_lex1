@@ -4,7 +4,7 @@
     <label><!-- Event Products Reviewed --></label>
     <name>Events_Products_Reviewed__c</name>
     <picklistValues>
-        <masterLabel>Add&#39;l Event Services</masterLabel>
+        <masterLabel>Add&apos;l Event Services</masterLabel>
         <translation><!-- Add&apos;l Event Services --></translation>
     </picklistValues>
     <picklistValues>

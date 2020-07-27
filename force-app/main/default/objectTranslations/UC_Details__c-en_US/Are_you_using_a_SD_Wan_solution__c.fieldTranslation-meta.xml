@@ -3,7 +3,7 @@
     <label><!-- Are you using a Voice SD-Wan solution? --></label>
     <name>Are_you_using_a_SD_Wan_solution__c</name>
     <picklistValues>
-        <masterLabel>Don&#39;t Know</masterLabel>
+        <masterLabel>Don&apos;t Know</masterLabel>
         <translation><!-- Don&apos;t Know --></translation>
     </picklistValues>
     <picklistValues>

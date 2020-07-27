@@ -37,7 +37,7 @@
             </approver>
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
         </assignedApprover>
-        <description>All opportunity owners except for Frank, seek Frank Nardi&#39;s approval.</description>
+        <description>All opportunity owners except for Frank, seek Frank Nardi&apos;s approval.</description>
         <entryCriteria>
             <criteriaItems>
                 <field>Opportunity.Owner</field>

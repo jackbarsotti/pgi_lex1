@@ -5,7 +5,7 @@
     <errorConditionFormula>AND( 
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;, 
 ISPICKVAL( Billing_Cycle__c, &quot;&quot; ), 
-RecordType.DeveloperName = &#39;PGi_Rate_Entry_Request&#39; 
+RecordType.DeveloperName = &apos;PGi_Rate_Entry_Request&apos; 
 
 )</errorConditionFormula>
     <errorDisplayField>Billing_Cycle__c</errorDisplayField>

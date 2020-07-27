@@ -9,8 +9,8 @@
     <protected>false</protected>
     <url>var status = &quot;{!Lead.Status}&quot;;
 
-if (status == &#39;Qualifying&#39;)
-   window.location = &#39;/lead/leadconvert.jsp?retURL=%2F{!Lead.Id}&amp;id={!Lead.Id}&#39;;
+if (status == &apos;Qualifying&apos;)
+   window.location = &apos;/lead/leadconvert.jsp?retURL=%2F{!Lead.Id}&amp;id={!Lead.Id}&apos;;
 else
    alert(&quot;In order to Convert, your Lead Status must be set to Qualifying&quot;);</url>
 </WebLink>

@@ -1432,7 +1432,7 @@ OwnerId=&quot;00G13000003pdaG&quot;))</formula>
             <type>FieldUpdate</type>
         </actions>
         <active>false</active>
-        <formula>AND(  Owner:User.ProfileId &lt;&gt; &quot;00e30000001rSOR&quot;, NOT(ISPICKVAL( LeadSource,&#39;Lead Gen - Talkpoint&#39;)), CONTAINS(RecordType.Name, &quot;PGi&quot;), OR(Owner:User.Id &lt;&gt; &quot;&quot;,   OwnerId = &quot;00G13000003t04l&quot;), OR(  CreatedBy.Profile.Id = &quot;00e30000001rSOR&quot;,  CreatedBy.Id = &quot;0051300000BAPRk&quot;,  CreatedBy.Id = &quot;0051300000C42An&quot;,  CreatedBy.Id = &quot;005300000063Gke&quot;), OR(ISPICKVAL( LeadSource, &#39;Web Chat&#39;)) )</formula>
+        <formula>AND(  Owner:User.ProfileId &lt;&gt; &quot;00e30000001rSOR&quot;, NOT(ISPICKVAL( LeadSource,&apos;Lead Gen - Talkpoint&apos;)), CONTAINS(RecordType.Name, &quot;PGi&quot;), OR(Owner:User.Id &lt;&gt; &quot;&quot;,   OwnerId = &quot;00G13000003t04l&quot;), OR(  CreatedBy.Profile.Id = &quot;00e30000001rSOR&quot;,  CreatedBy.Id = &quot;0051300000BAPRk&quot;,  CreatedBy.Id = &quot;0051300000C42An&quot;,  CreatedBy.Id = &quot;005300000063Gke&quot;), OR(ISPICKVAL( LeadSource, &apos;Web Chat&apos;)) )</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -1507,7 +1507,7 @@ OwnerId=&quot;00G13000003pdaG&quot;))</formula>
         </actions>
         <active>true</active>
         <description>Tagging the field &quot;MQL Intl Lead&quot; if the lead ownership is ever under queue &quot;PGi-Lead-International Online&quot; and is then moved to another que or user except if moved to &quot;PGi-Lead-Intl Disqualified Leads&quot;</description>
-        <formula>AND( ISCHANGED(OwnerId), Owner:Queue.Id &lt;&gt; &#39;00G13000003pdaG&#39;, PRIORVALUE(Owner_s_Name_if_Queue__c) = &#39;PGi-Lead-International Online&#39; )</formula>
+        <formula>AND( ISCHANGED(OwnerId), Owner:Queue.Id &lt;&gt; &apos;00G13000003pdaG&apos;, PRIORVALUE(Owner_s_Name_if_Queue__c) = &apos;PGi-Lead-International Online&apos; )</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -1876,7 +1876,7 @@ OwnerId=&quot;00G13000003pdaG&quot;))</formula>
         <active>true</active>
         <description>Notify Users when Ownership changes</description>
         <formula>AND(
-$User.Profile_Name_Text__c &lt;&gt; &#39;PGi Sales Operations&#39;,
+$User.Profile_Name_Text__c &lt;&gt; &apos;PGi Sales Operations&apos;,
 ISCHANGED(OwnerId),
 $User.Id &lt;&gt; &quot;&quot;
 )</formula>

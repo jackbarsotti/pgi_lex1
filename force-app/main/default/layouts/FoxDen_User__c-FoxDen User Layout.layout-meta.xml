@@ -53,15 +53,7 @@
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
         <label>Fox Den Plans</label>
-        <layoutColumns>
-            <layoutItems>
-                <height>250</height>
-                <page>PlanAssignmentListFoxDen</page>
-                <showLabel>false</showLabel>
-                <showScrollbars>true</showScrollbars>
-                <width>100%</width>
-            </layoutItems>
-        </layoutColumns>
+        <layoutColumns/>
         <style>OneColumn</style>
     </layoutSections>
     <layoutSections>

@@ -4,10 +4,10 @@
     <active>true</active>
     <description>If Request type is RFP, RFQ, RFI or Proposal is selected then &quot;What do you intend to Propose?&quot; is required.</description>
     <errorConditionFormula>AND (
-ISPICKVAL (  Request_Type__c , &#39;Request for Proposal (RFP)&#39;),
-ISPICKVAL (  Request_Type__c , &#39;Request for Information (RFI)&#39;),
-ISPICKVAL (  Request_Type__c , &#39;Request for Quote (RFQ)&#39;),
-ISPICKVAL (  Request_Type__c , &#39;Proposal&#39;),
+ISPICKVAL (  Request_Type__c , &apos;Request for Proposal (RFP)&apos;),
+ISPICKVAL (  Request_Type__c , &apos;Request for Information (RFI)&apos;),
+ISPICKVAL (  Request_Type__c , &apos;Request for Quote (RFQ)&apos;),
+ISPICKVAL (  Request_Type__c , &apos;Proposal&apos;),
 
 (ISBLANK (  What_do_you_intend_to_Propose__c )))</errorConditionFormula>
     <errorDisplayField>What_do_you_intend_to_Propose__c</errorDisplayField>

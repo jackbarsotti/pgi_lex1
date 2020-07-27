@@ -1,4 +1,5 @@
 <apex:page standardController="CONMAN_Contract__c" extensions="iContract_NA_Master_Controller" >
+    <apex:includeLightning />
     <!-- Top of Agreement: Logo & eSignature ID -->
     <apex:image rendered="{! !renderingAsWord }" id="PGilogo" url="{!$Resource.PGILogoSmall}" height="36px" width="36px" />
     <apex:image rendered="{! renderingAsWord }" url="https://c.na68.content.force.com/servlet/servlet.ImageServer?id=01513000002iSUv&oid=00D30000001H6BZ&lastMod=1469808329000" height="36px" width="36px" />

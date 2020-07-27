@@ -3,7 +3,7 @@
     <fullName>HomeCountryCode__c</fullName>
     <description>The counrty code of the user that made or received the call. For example, UK would be 44.</description>
     <externalId>false</externalId>
-    <inlineHelpText>This is the home country code of the Natterbox user involved in the call. This is the 2 or 3 digit numeric dialling code for that country. For example, for the UK, this would be &#39;44&#39;.</inlineHelpText>
+    <inlineHelpText>This is the home country code of the Natterbox user involved in the call. This is the 2 or 3 digit numeric dialling code for that country. For example, for the UK, this would be &apos;44&apos;.</inlineHelpText>
     <label>HomeCountryCode</label>
     <precision>18</precision>
     <required>false</required>

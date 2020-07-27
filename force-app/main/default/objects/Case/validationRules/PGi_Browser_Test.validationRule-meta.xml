@@ -5,7 +5,7 @@
     <description>If Browser Test is Test No Performed then a reason must be given</description>
     <errorConditionFormula>AND(
 $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
-ISPICKVAL( Browser_Test__c ,&#39;Test Not Performed&#39;),
+ISPICKVAL( Browser_Test__c ,&apos;Test Not Performed&apos;),
 ISBLANK(  No_Browser_Test_Performed_Reason__c  ) 
 )</errorConditionFormula>
     <errorDisplayField>No_Browser_Test_Performed_Reason__c</errorDisplayField>

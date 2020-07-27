@@ -3,9 +3,9 @@
     <fullName>natterbox__Display_Recording_UI__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
-    <description>If checked, users will see a &#39;this call is being recorded&#39; UI displayed in their CTI user interface</description>
+    <description>If checked, users will see a &apos;this call is being recorded&apos; UI displayed in their CTI user interface</description>
     <externalId>false</externalId>
-    <inlineHelpText>If checked, users will see a &#39;this call is being recorded&#39; UI displayed in their CTI user interface</inlineHelpText>
+    <inlineHelpText>If checked, users will see a &apos;this call is being recorded&apos; UI displayed in their CTI user interface</inlineHelpText>
     <label>Display Recording UI</label>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>

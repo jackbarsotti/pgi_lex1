@@ -4,7 +4,7 @@
     <active>true</active>
     <description>If a NOC Alert has been created then the user must populate the NOC Case</description>
     <errorConditionFormula>AND(
-ISPICKVAL(NOC_Alert_Created__c,&#39;Yes&#39;),
+ISPICKVAL(NOC_Alert_Created__c,&apos;Yes&apos;),
 ISBLANK( NOC_Alert_Case__c)
 )</errorConditionFormula>
     <errorDisplayField>NOC_Alert_Case__c</errorDisplayField>

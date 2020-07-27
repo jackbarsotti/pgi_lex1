@@ -5,7 +5,7 @@
     <formula>DandbCompany.EmployeesHere</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <inlineHelpText>The # of Employees at Location of the related D&amp;B company if the Account has been cleaned and matched to a D&amp;B company.</inlineHelpText>
-    <label>D&amp;B&#39;s # of Employees at this Location</label>
+    <label>D&amp;B&apos;s # of Employees at this Location</label>
     <precision>18</precision>
     <required>false</required>
     <scale>0</scale>

@@ -5,7 +5,7 @@
     <deprecated>false</deprecated>
     <description>Toggles the concurrency feature of TaskRay.</description>
     <externalId>false</externalId>
-    <inlineHelpText>This toggles TaskRay&#39;s checks for updates from other users. Disabling it will have less impact on Salesforce servers, but there may be issues regarding multiple users updating the same tasks.
+    <inlineHelpText>This toggles TaskRay&apos;s checks for updates from other users. Disabling it will have less impact on Salesforce servers, but there may be issues regarding multiple users updating the same tasks.
 
 Default value is &quot;Checked&quot;</inlineHelpText>
     <label>Notification Polling Enabled</label>

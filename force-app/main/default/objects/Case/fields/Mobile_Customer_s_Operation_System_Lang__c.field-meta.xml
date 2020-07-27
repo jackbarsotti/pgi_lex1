@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Mobile_Customer_s_Operation_System_Lang__c</fullName>
     <externalId>false</externalId>
-    <label>Mobile Customer&#39;s Operation System Lang</label>
+    <label>Mobile Customer&apos;s Operation System Lang</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
