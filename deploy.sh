@@ -78,7 +78,7 @@ if [ "$BRANCH" == "LEX" ]; then
 fi;
 #master branch
 if [ "$BRANCH" == "master" ]; then
-  cho 'Your current branches: '
+  echo 'Your current branches: '
   echo
   for branch in $(git branch -r|grep -v HEAD); do
     echo $branch
