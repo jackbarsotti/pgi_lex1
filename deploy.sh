@@ -55,10 +55,10 @@ export triggerPath=force-app/main/default/triggers
 #lex branch:
 if [ "$BRANCH" == "LEX" ]; then
   #create tracking branch
-  echo 'Your current branches: '
-  echo
+  #removed to shorten output in travis: echo 'Your current branches: '
+  #removed to shorten output in travis: echo
   for branch in $(git branch -r|grep -v HEAD); do
-    echo $branch
+    #removed to shorten output in travis: echo $branch
     git checkout -qf ${branch#origin/}
   done;
   echo
@@ -78,17 +78,17 @@ if [ "$BRANCH" == "LEX" ]; then
 fi;
 #master branch
 if [ "$BRANCH" == "master" ]; then
-  echo 'Your current branches: '
-  echo
+  #removed to shorten output in travis: echo 'Your current branches: '
+  #removed to shorten output in travis: echo
   for branch in $(git branch -r|grep -v HEAD); do
-    echo $branch
+    #removed to shorten output in travis: echo $branch
     git checkout -qf ${branch#origin/}
   done;
   echo
   git checkout master
  
-  export CHANGED_FILES=$(git diff --name-only LEX force-app/)
-  sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
+  export CHANGED_FILES=$(git diff --name-only LEX force-app/ -l4000)
+  sudo cp --parents $(git diff --name-only LEX force-app/ -l4000) $DEPLOYDIR;
  
   echo
   echo 'There are changed files detected'
