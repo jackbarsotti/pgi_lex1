@@ -31,6 +31,8 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
   @track isSubSymptom = true;
   @track error;
   @track ifFirstTime = true;
+  //Assignment Rule
+  @track isFireAssRule = true;
   //
   @api recordId;
   @api recordTypeId;
@@ -89,7 +91,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
     this.template.querySelectorAll('c-case-form-fields').forEach(eachElement => {
       eachElement.validateInputs11();
       let compVal = eachElement.getValue();
-      console.log('compVal>>66', JSON.stringify(compVal));
+      //console.log('compVal>>66', JSON.stringify(compVal));
       if (compVal.required && compVal.value == null)
       //|| compVal.value === undefined || compVal.value === ''))
       {
@@ -102,7 +104,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
         });
         this.dispatchEvent(evt);
       }
-      console.log('isvalidate', isValidate);
+      //console.log('isvalidate', isValidate);
       if (isValidate && compVal.apiName != null &&
         compVal.apiName != '' &&
         compVal.apiName != undefined &&
@@ -117,12 +119,13 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
         }
       }
     });
-    console.log('isvalidate1', isValidate);
+    //console.log('isvalidate1', isValidate);
     if (isValidate) {
-      console.log('The Original Save');
+      //console.log('The Original Save');
       caseObj.Id = this.recordId;
       updateCase({
-        record: caseObj
+        record: caseObj,
+        isAssignmentRule :this.isFireAssRule
       }).then(res => {
         if (res) {
 
@@ -133,7 +136,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
 
               })
               .catch(error => {
-                // console.log('Error',error);
+                // //console.log('Error',error);
               });
           }
 
@@ -151,7 +154,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
 
         }
       }).catch(error => {
-        console.log('The Error Is', JSON.stringify(error));
+        //console.log('The Error Is', JSON.stringify(error));
       });
     }
 
@@ -161,10 +164,10 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
     createCase({ recordType: this.recordTypeId })
       .then(result => {
         this.recordId = result;
-        console.log('Result', this.recordId);
+        //console.log('Result', this.recordId);
       })
       .catch(error => {
-        console.log('Error', error);
+        //console.log('Error', error);
       });
     getQuickCase()
       .then(result => {
@@ -179,20 +182,20 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
       })
       .catch(error => {
       });
-    getRecordType()
-      .then(result => {
-        if (result !== null && result !== undefined) {
-          var retRecTypData = result;
-          for (var key in retRecTypData) {
-            if (retRecTypData[key].Id == this.recordTypeId) {
-              var currentRTName = retRecTypData[key].Name;
-              this.recordTypeName = currentRTName;
-            }
-          }
-        }
-      })
-      .catch(error => {
-      });
+    // getRecordType()
+    //   .then(result => {
+    //     if (result !== null && result !== undefined) {
+    //       var retRecTypData = result;
+    //       for (var key in retRecTypData) {
+    //         if (retRecTypData[key].Id == this.recordTypeId) {
+    //           var currentRTName = retRecTypData[key].Name;
+    //           this.recordTypeName = currentRTName;
+    //         }
+    //       }
+    //     }
+    //   })
+    //   .catch(error => {
+    //   });
 
     // for getting tabCount and topCount from custom setting 
     getCaseTabViewRecords()
@@ -222,20 +225,22 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
       })
       .catch(error => {
 
-        console.log('Error>>153', error);
+        //console.log('Error>>153', error);
       });
   }
 
   @wire(getObjectInfo, { objectApiName: CASE_OBJECT })
   caseInfo({ data, error }) {
     if (data) {
+      console.log('The Layout Is',data);
+      console.log('The Layout Is',Object.values(data));
       this.dataTypes = Object.values(data.fields).map((fld) => {
-        //console.log('fld', fld);
         let { apiName, dataType, label, required, createable, updateable } = fld;
+      
         return { apiName, dataType, label, required, createable, updateable };
       });
     }
-    console.log('fld>>188', this.dataTypes);
+    //console.log('fld>>188', this.dataTypes);
   }
 
 
@@ -243,9 +248,9 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
   @wire(getRecordUi, { recordIds: '$recordId', layoutTypes: 'Full', modes: 'Create' })
   objectRecordUi({ error, data }) {
     if (data) {
-      //console.log('data: ', data);
+      ////console.log('data: ', data);
       var layoutData = data.layouts.Case;
-      //console.log('layoutData: ', layoutData);
+      ////console.log('layoutData: ', layoutData);
       for (var key in layoutData) {
         this.layoutsection = layoutData[key].Full.Create.sections;
       }
@@ -257,7 +262,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
         sectionHeader.push(layoutSec[key].heading);
       }
       this.sectionHeading = sectionHeader;
-      // console.log('The Value Is', this.sectionHeading);
+      // //console.log('The Value Is', this.sectionHeading);
       var fieldAPIList = [];
       //Layout Sections
       for (var key in layoutSec) {
@@ -301,7 +306,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
           }
           else if (i >= this.topCount && i < (this.topCount + this.tabCount)) {
             tabSections = this.layoutsection[i];
-            console.log('tabSections>>198', tabSections);
+            //console.log('tabSections>>198', tabSections);
             this.tabLayoutSections.push(tabSections);
             var tabSecButtons = this.tabLayoutSections;
             var reqTabs = [];
@@ -312,7 +317,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
             for (var l in tabSecButtons) {
 
               var secRows = tabSecButtons[l].layoutRows;
-              console.log('secRows >>', secRows);
+              //console.log('secRows >>', secRows);
               for (var m in secRows) {
 
                 var items = secRows[m].layoutItems;
@@ -326,7 +331,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
                     if (items[n].required == true) {
 
                       reqTabs.push({ heading: tabSecButtons[l].heading, fieldLabel: layComponents[o].label });
-                      console.log('reqTabs>>258', reqTabs);
+                      //console.log('reqTabs>>258', reqTabs);
 
                     }
                   }
@@ -336,7 +341,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
               }
             }
             this.reqTabSections = reqTabs;
-            console.log('reqTabSections>>276', this.reqTabSections);
+            //console.log('reqTabSections>>276', this.reqTabSections);
           }
           else if (i >= (this.topCount + this.tabCount)) {
             bottomSections = this.layoutsection[i];
@@ -345,7 +350,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
 
         }
 
-        console.log('tabLayoutSections>>206', this.tabLayoutSections);
+        //console.log('tabLayoutSections>>206', this.tabLayoutSections);
       }
       // end for caseTabviewer
 
@@ -368,10 +373,10 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
       getCaseFieldValues({ recordId: this.recordId, fieldAPINameList: fieldApi })
         .then(result => {
           this.record = JSON.parse(result).currentRecord;
-          // console.log('Result',this.record);
+          // //console.log('Result',this.record);
         })
         .catch(error => {
-          // console.log('Error',error);
+          // //console.log('Error',error);
         });
 
       //To get the Field Details
@@ -396,7 +401,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
         })
       }
       this.fieldDetails = fieldDetail;
-      console.log('Field Details>>323', this.fieldDetails);
+      //console.log('Field Details>>323', this.fieldDetails);
     }
   }
 
@@ -410,7 +415,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
         this.buttonSections = buttonData;
       }
     }
-    console.log('buttonSections>>341', this.buttonSections);
+    //console.log('buttonSections>>341', this.buttonSections);
   }
 
   handleSectionToggle(event) {
@@ -418,7 +423,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
   }
   handleCaseTemplateChange(event) {
     this.selectedCaseTemplate = event.target.value;
-    console.log('The Selected>>361', this.selectedCaseTemplate);
+    //console.log('The Selected>>361', this.selectedCaseTemplate);
     //clearing the previous Value
     if (this.caseTemplateRecLayoutValue !== null && this.caseTemplateRecLayoutValue.length > 0) {
       var layoutDefVal = this.caseTemplateRecLayoutValue;
@@ -461,7 +466,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
         //Setting Value for Fields
         if (defaultTemplateValues.length > 0) {
           defaultTemplateValues.forEach(ele => {
-            console.log('The Value Is', ele.apiName);
+            //console.log('The Value Is', ele.apiName);
             let element = this.template.querySelector(`c-case-form-fields[data-id="${ele.apiName}"]`);
             element.setValue(ele.value);
           })
@@ -488,14 +493,22 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
         });
       })
       .catch(error => {
-        console.log('TestE >>>', error);
+        //console.log('TestE >>>', error);
       });
   }
 
   handleCommentChange(event) {
     this.caseCommentValue = event.target.value;
-    console.log('the value is', this.caseCommentValue)
+    //console.log('the value is', this.caseCommentValue)
   }
+
+  handleOnAssRuleChange(event) {
+    this.isFireAssRule = event.target.checked;
+    console.log('the value is', this.isFireAssRule);
+    console.log('the value is1', event.target.checked);
+    console.log('the value is12', event.target.value);
+  }
+
   handleCustomEvent(event) {
     const textVal = event.detail;
     // if(this.fldApi === 'Product__c' || this.fldApi === 'Area_of_Focus__c' || this.fldApi === 'Symptom_Main__c' || this.fldApi === 'Symptom_Sub__c' ){
@@ -503,7 +516,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
     // }
     let apiName;
     let value;
-    console.log('The Value Is1', textVal);
+    //console.log('The Value Is1', textVal);
     textVal.forEach(ele => {
       apiName = ele.apiName;
       value = ele.value;
@@ -511,22 +524,22 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
     if (apiName === 'Product__c') {
       if (this.ifFirstTime) {
         this.ifFirstTime = false;
-        console.log('The Value Is1');
+        //console.log('The Value Is1');
         getAllDependentValues()
           .then(result => {
             this.productrelatedmapData = result;
             this.selectedProduct = value;
-            console.log('Test1');
+            //console.log('Test1');
             this.handleProductChange(value);
           })
           .catch(error => {
-            console.log('Error', error);
+            //console.log('Error', error);
           });
       }
       else {
         this.selectedProduct = value;
         if (this.productrelatedmapData !== undefined && this.productrelatedmapData != null && this.ifFirstTime === false) {
-          console.log('Test');
+          //console.log('Test');
           this.handleProductChange();
         }
       }
@@ -544,30 +557,19 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
   @api
   handleProductChange() {
     var mapDataHandle = this.productrelatedmapData;
-    console.log('The Result', mapDataHandle);
+    //console.log('The Result', mapDataHandle);
     this.isAOF = false;
     let mapData = [{ label: '--None--', value: null }];
 
     if (this.selectedProduct) {
       // if Selected country is none returns nothing
-      if (this.selectedProduct === null) {
-        this.isSymptom = true;
-        this.isSubSymptom = true;
-        this.isAOF = true;
-        mapData = [{ label: '--None--', value: null }];
-        this.selectedProduct = null;
-        this.selectedAreaOfFocus = null;
-        this.selectedSymptom = null;
-        this.selectedSubSymptom = null;
-        return;
-      }
       var prodToAof = mapDataHandle.productToAreaOfFocusMap;
       for (var key in prodToAof) {
         if (key === this.selectedProduct) {
           var setofFocus = prodToAof[key];
           for (var i in setofFocus) {
             mapData.push({ label: setofFocus[i], value: setofFocus[i] });
-            console.log('The log',setofFocus[i]);
+            //console.log('The log',setofFocus[i]);
           }
         }
 
@@ -575,6 +577,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
       if (mapData.length == 1) {
         this.isSymptom = true;
         this.isSubSymptom = true;
+        this.isAOF = true;
         this.selectedSymptom = null;
         this.selectedSubSymptom = null;
         this.selectedAreaOfFocus = null;
@@ -582,10 +585,26 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
 
       this.dependentAOFValues = mapData;
     }
+    else if (this.selectedProduct === null) {
+      //console.log('The Null')
+      this.isSymptom = true;
+      this.isSubSymptom = true;
+      this.isAOF = true;
+      mapData = [{ label: '--None--', value: null }];
+      this.selectedProduct = null;
+      this.selectedAreaOfFocus = null;
+      this.selectedSymptom = null;
+      this.selectedSubSymptom = null;
+    }
     let aof = 'Area_of_Focus__c';
-    console.log('The Picklist Option Is',this.dependentAOFValues);
     let element = this.template.querySelector(`c-case-form-fields[data-id="${aof}"]`);
     element.setproductRelated(this.selectedAreaOfFocus, this.dependentAOFValues, this.isAOF);
+    let sym = 'Symptom_Main__c';
+    let element1 = this.template.querySelector(`c-case-form-fields[data-id="${sym}"]`);
+    element1.setproductRelated(this.selectedSymptom, this.dependentSymptomValues, this.isSymptom);
+    let symSub = 'Symptom_Sub__c';
+    let element2 = this.template.querySelector(`c-case-form-fields[data-id="${symSub}"]`);
+    element2.setproductRelated(this.selectedSubSymptom, this.dependentSubSymptomValues, this.isSubSymptom);
   }
   @api
   handleAreaOfFocusChange() {
@@ -593,26 +612,17 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
       this.valueforSelectingSymptom = this.selectedProduct + this.selectedAreaOfFocus 
       let mapData= [{label:'--None--', value: null}];
       this.isSymptom = false;
-      console.log("symptom", this.valueforSelectingSymptom)
-      console.log('The AOF',this.selectedAreaOfFocus);
+      //console.log("symptom", this.valueforSelectingSymptom)
+      //console.log('The AOF',this.selectedAreaOfFocus);
       if(this.selectedAreaOfFocus) {
           // if returns nothing
-          if(this.selectedAreaOfFocus === null) {
-              this.isSymptom = true;
-              this.isSubSymptom = true;
-              mapData = [{label:'--None--', value: null}];
-              this.selectedAreaOfFocus = null;
-              this.selectedSymptom = null;
-              this.selectedSubSymptom = null;
-              return;
-          }
           var aofToSymptom = mapDataHandle.areaOfFocusToSymptomMap;
           for(var key in aofToSymptom){
               if(key === this.valueforSelectingSymptom){
                   var setofSym =aofToSymptom[key];
                   for(var i in setofSym){
                       mapData.push({label:setofSym[i],value:setofSym[i]}); 
-                      console.log('The Key',setofSym[i]);
+                      //console.log('The Key',setofSym[i]);
                   }
               }
 
@@ -624,10 +634,20 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
           }
           this.dependentSymptomValues = mapData;
       }
-      let sym = 'Symptom_Main__c';
-    console.log('The Picklist Option Is',this.dependentAOFValues);
-    let element = this.template.querySelector(`c-case-form-fields[data-id="${sym}"]`);
-    element.setproductRelated(this.selectedSymptom, this.dependentSymptomValues, this.isSymptom);
+      else if(this.selectedAreaOfFocus === null) {
+        this.isSymptom = true;
+        this.isSubSymptom = true;
+        mapData = [{label:'--None--', value: null}];
+        this.selectedAreaOfFocus = null;
+        this.selectedSymptom = null;
+        this.selectedSubSymptom = null;
+    }
+    let sym = 'Symptom_Main__c';
+    let element1 = this.template.querySelector(`c-case-form-fields[data-id="${sym}"]`);
+    element1.setproductRelated(this.selectedSymptom, this.dependentSymptomValues, this.isSymptom);
+    let symSub = 'Symptom_Sub__c';
+    let element2 = this.template.querySelector(`c-case-form-fields[data-id="${symSub}"]`);
+    element2.setproductRelated(this.selectedSubSymptom, this.dependentSubSymptomValues, this.isSubSymptom);
   }
 
   handleSymptomChange() {
@@ -636,17 +656,13 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
       this.valueforSelectingSubSymptom = this.selectedProduct + this.selectedSymptom + this.selectedAreaOfFocus;
       let mapData= [{label:'--None--', value:null}];
       this.isSubSymptom = false;
-      console.log("symptom1", this.selectedSymptom)
+      //console.log("symptom1", this.selectedSymptom)
+      if(this.selectedSymptom ===null) {
+        //console.log("symptom12", this.selectedSymptom)
+      }
       if(this.selectedSymptom) {
           // if returns nothing
-          if(this.selectedSymptom ===null) {
-            console.log("symptom12", this.selectedSymptom)
-              this.isSubSymptom = true;
-              mapData = [{label:'--None--', value:null}];
-              this.selectedSubSymptom = null;
-              this.selectedSymptom = null;
-              return;
-          }
+          
           var symptomToSub = mapDataHandle.subSymptomMap;
           for(var key in symptomToSub){
               if(key === this.valueforSelectingSubSymptom){
@@ -663,8 +679,15 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
           }
           this.dependentSubSymptomValues = mapData;
       }
+      else if(this.selectedSymptom ===null) {
+        //console.log("symptom12", this.selectedSymptom)
+          this.isSubSymptom = true;
+          mapData = [{label:'--None--', value:null}];
+          this.selectedSubSymptom = null;
+          this.selectedSymptom = null;
+      }
     let symSub = 'Symptom_Sub__c';
-    console.log('The Picklist Option Is',this.dependentAOFValues);
+    //console.log('The Picklist Option Is',this.dependentAOFValues);
     let element = this.template.querySelector(`c-case-form-fields[data-id="${symSub}"]`);
     element.setproductRelated(this.selectedSubSymptom, this.dependentSubSymptomValues, this.isSubSymptom);
   }
