@@ -87,8 +87,11 @@ if [ "$BRANCH" == "master" ]; then
   echo
   git checkout master
  
-  export CHANGED_FILES=$(git diff -l 999999 --name-only LEX force-app/)
-  sudo cp -l 99999 --parents $(git diff -l 999999 --name-only LEX force-app/) $DEPLOYDIR;
+  export CHANGED_FILES=$(git diff --name-only LEX force-app/)
+  for f in $CHANGED_FILES; do
+    sudo cp --parents $f $DEPLOYDIR;
+  done;
+  #sudo cp -l 99999 --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
  
   echo
   echo 'There are changed files detected'
