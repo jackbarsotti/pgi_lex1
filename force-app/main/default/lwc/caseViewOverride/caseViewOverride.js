@@ -16,6 +16,7 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 export default class CaseCreateOverride extends NavigationMixin(LightningElement) {
   @api isNew;
+  @api isView;
   //Product Related Dependent Picklist
   productrelatedmapData;
   @track productValues = [];
@@ -123,9 +124,9 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
         }
       }
     });
-    console.log('isvalidate1', isValidate);
+    //console.log('isvalidate1', isValidate);
     if (isValidate) {
-      console.log('The Original Save');
+      //console.log('The Original Save');
       caseObj.Id = this.recordId;
       updateCase({
         record: caseObj,
@@ -140,7 +141,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
 
               })
               .catch(error => {
-                console.log('Error',error);
+                // //console.log('Error',error);
               });
           }
 
@@ -165,18 +166,8 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
   }
   // Picklist values based on record type
   connectedCallback() {
-    console.log('The First',this.isNew)
-    if(this.isNew == true){
-      createCase({ recordType: this.recordTypeId })
-      .then(result => {
-        this.recordId = result;
-        console.log('Result', this.recordId);
-      })
-      .catch(error => {
-        //console.log('Error', error);
-      });
-    }
-    else {
+    console.log('The First',this.isView)
+    
       console.log('result1',this.recordId);
       getRecordTypeDetail({ recordId: this.recordId })
       .then(result => {
@@ -200,7 +191,6 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
       .catch(error => {
         console.log('Error', error);
       });
-    }
     
     getQuickCase()
       .then(result => {
@@ -278,22 +268,15 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
 
 
 
-  @wire(getRecordUi, { recordIds: '$recordId', layoutTypes: 'Full', modes: 'Edit' })
+  @wire(getRecordUi, { recordIds: '$recordId', layoutTypes: 'Full', modes:'View' })
   objectRecordUi({ error, data }) {
     if (data) {
       ////console.log('data: ', data);
       var layoutData = data.layouts.Case;
-      console.log('layoutData: ', layoutData);
+      ////console.log('layoutData: ', layoutData);
       var layoutSectionResult;
       for (var key in layoutData) {
-         if(this.isNew){
-          console.log('layoutData: ', layoutData);
-          layoutSectionResult = layoutData[key].Full.Create.sections;
-        }
-        else{
-          console.log('2');
-          layoutSectionResult = layoutData[key].Full.Edit.sections;
-        }
+          layoutSectionResult = layoutData[key].Full.View.sections;
         
       }
       console.log('The lay sec Is',layoutSectionResult);
@@ -314,34 +297,20 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
         for (var i in secRows) {
           var items = secRows[i].layoutItems;
           //Retrieve fields From Items
-          
           for (var j in items) {
-            if (this.isNew && items[j].editableForNew) {
+            if (items[j].editableForNew) {
               var reqFields = items[j].required;
               var getfieldApi = items[j].layoutComponents;
               //to get ApiName for LayoutItem
+              let count = 0;
               for (var k in getfieldApi) {
                 let apiNameforMap = getfieldApi[k].apiName;
-                if (apiNameforMap !== null) {
+                if (apiNameforMap !== null && count === 0) {
                   this.lowertoOriginalApi.push({ lower: apiNameforMap.toLowerCase(), apiName: apiNameforMap });
                   fieldAPIList.push({ apiName: getfieldApi[k].apiName, editableForNew: items[j].editableForNew, required: reqFields ,lower: apiNameforMap.toLowerCase()});
                   
                 }
-              }
-            }
-            //edit functionality
-            else if(this.isNew === false && items[j].editableForUpdate){
-              console.log('Hello');
-              var reqFields = items[j].required;
-              var getfieldApi = items[j].layoutComponents;
-              //to get ApiName for LayoutItem
-              for (var k in getfieldApi) {
-                let apiNameforMap = getfieldApi[k].apiName;
-                if (apiNameforMap !== null) {
-                  this.lowertoOriginalApi.push({ lower: apiNameforMap.toLowerCase(), apiName: apiNameforMap });
-                  fieldAPIList.push({ apiName: getfieldApi[k].apiName, editableForNew: items[j].editableForUpdate, required: reqFields ,lower: apiNameforMap.toLowerCase()});
-                  
-                }
+                count += 1;
               }
             }
             //
@@ -351,8 +320,8 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
         this.layoutsection.push({sectionHeader :layoutSec[key].heading,sectionDetails :fieldAPIList});
       }
       //Set FieldProperty
-      let fieldDetail = [];
-        let fieldApi = [];
+      var fieldDetail = [];
+        var fieldApi = [];
       let sectionResult = this.layoutsection;
       for (var key in sectionResult) {
         let eachSection =sectionResult[key].sectionDetails;
@@ -381,6 +350,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
 
      console.log('The Sec Is',this.layoutsection);
      console.log('The fieldApi1 Is',this.dataTypes);
+     console.log('The fieldApi Is',fieldApi);
       // console.log('The fieldDetail11 Is',fieldDetail);
       // end for caseTabviewer
       // var fieldDetail = [];
@@ -403,7 +373,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
           console.log('Result',this.record);
         })
         .catch(error => {
-          // //console.log('Error',error);
+          console.log('Error',error);
         });
 
       //To get the Field Details

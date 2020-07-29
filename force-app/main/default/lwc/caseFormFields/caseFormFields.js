@@ -1,34 +1,16 @@
 import { LightningElement, api } from "lwc";
 
 export default class CaseFormFields extends LightningElement {
+  @api isNew;
+  @api isView;
   @api fieldObject = {};
   @api isComboDisabled;
   @api recordId;
-  @api recordTypeId;
   @api fldApi;
   @api record;
   @api fieldDetails = [];
   @api reqTabSections=[];
   @api fieldProperty;
-  @api value;
-  @api label;
-  @api fieldRequired;
-  @api fieldType;
-  @api fieldLabel;
-  @api isString;
-  @api isPickList;
-  @api isDate;
-  @api isDateTime;
-  @api isTextArea;
-  @api isisLookupDate;
-  @api isUrl;
-  @api isEmail;
-  @api isNumber;
-  @api isBoolean;
-  @api isCurrency;
-  @api pckListOptions;
-  @api editableForNew;
-  @api required;
   @api caseTemplateRecValue =[];
   @api reqTabNames=[];
   @api isError = false;
@@ -38,7 +20,7 @@ export default class CaseFormFields extends LightningElement {
     var fldval = event.target.value;
     var fldValLbel=event.target.label;
     var reqTabs=[];
-    if(this.isPickList && fldval === '--None--'){
+    if(this.fieldObject.isPicklist && fldval === '--None--'){
       fldval = null;
     }
     this.fieldObject.value = fldval;
@@ -135,8 +117,8 @@ export default class CaseFormFields extends LightningElement {
   //  console.log('reqTabSections>>57',this.reqTabSections);
     var fieldDetail = this.fieldDetails;
     for (var key in fieldDetail) {
-      if (fieldDetail[key].realApiName === this.fldApi) {
-      if(this.fldApi === 'Area_of_Focus__c' || this.fldApi === 'Symptom_Main__c' || this.fldApi === 'Symptom_Sub__c' ){
+      if ( this.fldApi === fieldDetail[key].realApiName ) {
+      if(this.isNew && (this.fldApi === 'Area_of_Focus__c' || this.fldApi === 'Symptom_Main__c' || this.fldApi === 'Symptom_Sub__c' )){
         this.isComboDisabled =true;
       }
       this.fieldObject.editableForNew = fieldDetail[key].editableForNew;
@@ -164,37 +146,37 @@ export default class CaseFormFields extends LightningElement {
       type = this.fieldObject.fieldType.toUpperCase();
     }
     if (type === "PICKLIST" || type === "COMBOBOX") {
-      this.isPickList = true;
+      this.fieldObject.isPickList = true;
     }
     if (type === "DATE") {
-      this.isDate = true;
+      this.fieldObject.isDate = true;
     }
     if (type === "DATETIME") {
-      this.isDateTime = true;
+      this.fieldObject.isDateTime = true;
     }
     if (type === "STRING") {
-      this.isString = true;
+      this.fieldObject.isString = true;
     }
     if (type === "TEXTAREA") {
-      this.isTextArea = true;
+      this.fieldObject.isTextArea = true;
     }
     if (type === "REFERENCE") {
-      this.isLookup = true;
+      this.fieldObject.isLookup = true;
     }
     if (type === "URL") {
-      this.isUrl = true;
+      this.fieldObject.isUrl = true;
     }
     if (type === "EMAIL") {
-      this.isEmail = true;
+      this.fieldObject.isEmail = true;
     }
     if (type === "DOUBLE" || type === "PHONE") {
-      this.isNumber = true;
+      this.fieldObject.isNumber = true;
     }
     if (type === "CURRENCY") {
-      this.isCurrency = true;
+      this.fieldObject.isCurrency = true;
     }
     if (type=== "BOOLEAN"){
-      this.isBoolean=true;
+      this.fieldObject.isBoolean=true;
     }
   }
   onEditFocus () {

@@ -5,8 +5,10 @@ import CASE_OBJECT from '@salesforce/schema/Case';
 import getRecordType from '@salesforce/apex/CaseRTSelection.getRecordType';
 export default class CaseRecordTypeSelectionInLWC extends NavigationMixin(LightningElement) {
     @track selectedValue;
+    @track selectedName;
     @track recTypeData = [];
     @track openCaseTab;
+    @track isNew = true;
     @wire(getObjectInfo, { objectApiName: CASE_OBJECT })
     getdefault({error,data}){
        if(data){
@@ -46,6 +48,11 @@ export default class CaseRecordTypeSelectionInLWC extends NavigationMixin(Lightn
     handleChange(event) {
         this.selectedValue = event.target.value;
         console.log('The Selected Value',this.selectedValue);
+        this.recTypeData.forEach(ele =>{
+            if(ele.Id === this.selectedValue){
+                this.selectedName = ele.Name;
+            }
+        })
     }
 
 
@@ -68,8 +75,8 @@ export default class CaseRecordTypeSelectionInLWC extends NavigationMixin(Lightn
         });
     }
     submitDetails() {
-        
         console.log('The Selected Value',this.selectedValue);
+        console.log('The Selected selectedName',this.selectedName);
         this.openCaseTab = true;
         this.isModalOpen = false;
     }

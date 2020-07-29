@@ -120,6 +120,22 @@ public with sharing class CaseCreateOverrideController {
         
     }
 
+    @AuraEnabled(cacheable=true)
+    public static List<RecordType> getRecordType() {
+    return [SELECT Id, Name, DeveloperName, Description 
+            FROM RecordType 
+            WHERE SobjectType = 'Case'];   
+    }
+    
+    @AuraEnabled(cacheable=true)
+    public static List<String> getRecordTypeDetail(string recordId) {
+        System.debug('The Value Is');
+        List<String> recTypeList = new List<String>();
+        case objcase =[SELECT Id, RecordtypeId, RecordType.name FROM Case where Id =: recordId];
+        recTypeList.add(objcase.RecordtypeId);
+        recTypeList.add(objcase.RecordType.name);
+        return recTypeList;
+    }
     // public class AssignmentModel{
     //     @AuraEnabled
     //     public boolean isDisplayed {get; set;}

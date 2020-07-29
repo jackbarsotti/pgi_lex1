@@ -27,7 +27,7 @@
                                                             record-type-id={recordTypeId} record={record}
                                                             fld-api={layoutItems.apiName}
                                                             field-details={fieldDetails}
-                                                            is-new ={isNew}
+                                                            is-view ={isView}
                                                             onmycustomevent={handleCustomEvent}>
                                                         </c-case-form-fields>
                                                     </div>
@@ -45,33 +45,12 @@
                 </template>
             </template>
         </template>
-        <template if:true={requiredCaseComment}>
-            <lightning-accordion active-section-name="New Case Comment">
-                <lightning-accordion-section name="New Case Comment" label="New Case Comment">
-                    <div class="slds-align_absolute-center" >
-                    <lightning-textarea name="New Case Comment" class="inputCmp" value={caseCommentValue}
-                        onchange={handleCommentChange} label="Case Comment" maxlength="300">
-                    </lightning-textarea>
-                </div>
-                </lightning-accordion-section>
-            </lightning-accordion>
-        </template>
-        
-            <lightning-accordion active-section-name="Optional">
-                <lightning-accordion-section name="Optional" label="Optional">
-                    <div class="slds-size_1-of-2 slds-align_absolute-center">
-                        <lightning-input type="checkbox" class="inputCmp" name="Assignment rule" label="Assignment rule" checked={isFireAssRule}
-                        onchange={handleOnAssRuleChange} >
-                    </lightning-input>
-                </div>
-                </lightning-accordion-section>
-            </lightning-accordion>
-        </br>
-    </br>
+      
         <!-- <div  class="slds-align_absolute-center">
             <lightning-button label="Save" onclick={handleSave}></lightning-button>
             <lightning-button label="Cancel" onclick={handleCancel}></lightning-button>
         </div> -->
+        <template if:false={isView}>
         <footer class="slds-model_footer slds-align_absolute-center slds-docked-form-footer">
             <lightning-button variant="brand" label="Save" title="save" onclick={handleSave}
                 class="slds-m-right_x-small">
@@ -79,5 +58,6 @@
             <lightning-button variant="brand" label="Cancel" title="cancel" onclick={handleCancel}>
             </lightning-button>
         </footer>
+    </template>
     </lightning-card>
 </template>

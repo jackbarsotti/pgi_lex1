@@ -55,6 +55,6 @@
         <div class="slds-backdrop slds-backdrop_open"></div>
     </template>
     <template if:true={openCaseTab}>
-        <c-case-create-override record-type-id={selectedValue} ></c-case-create-override>
+        <c-case-create-override record-type-id={selectedValue} record-type-name={selectedName} is-new={isNew}></c-case-create-override>
   </template>
 </template>
