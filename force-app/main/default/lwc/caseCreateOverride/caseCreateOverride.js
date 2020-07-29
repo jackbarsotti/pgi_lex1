@@ -60,7 +60,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
   topCount;
   tabCount;
   buttons;
-  layoutsection;
+  layoutsection =[];
   sectionHeading = [];
   section = 'A';
   formLayoutFieldAPInames;
@@ -251,21 +251,22 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
       ////console.log('data: ', data);
       var layoutData = data.layouts.Case;
       ////console.log('layoutData: ', layoutData);
+      var layoutSectionResult;
       for (var key in layoutData) {
-        this.layoutsection = layoutData[key].Full.Create.sections;
+        layoutSectionResult = layoutData[key].Full.Create.sections;
       }
       var sectionHeader = [];
       var eachSection = [];
-      var layoutSec = this.layoutsection;
+      var layoutSec = layoutSectionResult;
       for (var key in layoutSec) {
         //all section related Information
         sectionHeader.push(layoutSec[key].heading);
       }
       this.sectionHeading = sectionHeader;
       // //console.log('The Value Is', this.sectionHeading);
-      var fieldAPIList = [];
       //Layout Sections
       for (var key in layoutSec) {
+        var fieldAPIList = [];
         var secRows = layoutSec[key].layoutRows;
         //Retrieve Rows from Section
         for (var i in secRows) {
@@ -280,142 +281,94 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
                 let apiNameforMap = getfieldApi[k].apiName;
                 if (apiNameforMap !== null) {
                   this.lowertoOriginalApi.push({ lower: apiNameforMap.toLowerCase(), apiName: apiNameforMap });
-
-                  fieldAPIList.push({ apiName: getfieldApi[k].apiName, editableForNew: items[j].editableForNew, required: reqFields });
+                  fieldAPIList.push({ apiName: getfieldApi[k].apiName, editableForNew: items[j].editableForNew, required: reqFields ,lower: apiNameforMap.toLowerCase()});
+                  
                 }
               }
             }
           }
         }
+        this.layoutsection.push({sectionHeader :layoutSec[key].heading,sectionDetails :fieldAPIList});
       }
-
-      //for selection of top sections,tab sections and bottom sections
-      if (this.topCount > 0 && this.tabCount > 0 && (this.topCount + this.tabCount) < this.layoutsection.length + 1) {
-        this.buttons = true;
-        var i;
-        var topSections = [];
-        var tabSections = [];
-        var bottomSections = [];
-        for (i = 0; i < this.layoutsection.length; i++) {
-          if (i < this.topCount) {
-            topSections = this.layoutsection[i];
-            //  this.topLayoutSections=this.topLayoutSection+this.layoutsection[i];
-            this.topLayoutSections.push(topSections);
-
-
-          }
-          else if (i >= this.topCount && i < (this.topCount + this.tabCount)) {
-            tabSections = this.layoutsection[i];
-            //console.log('tabSections>>198', tabSections);
-            this.tabLayoutSections.push(tabSections);
-            var tabSecButtons = this.tabLayoutSections;
-            var reqTabs = [];
-            var requiredLabel = [];
-            var heading = [];
-            var tempHolder = [];
-            var reqFields;
-            for (var l in tabSecButtons) {
-
-              var secRows = tabSecButtons[l].layoutRows;
-              //console.log('secRows >>', secRows);
-              for (var m in secRows) {
-
-                var items = secRows[m].layoutItems;
-
-                for (var n in items) {
-
-                  reqFields = items[n].required;
-
-                  var layComponents = items[n].layoutComponents;
-                  for (var o in layComponents) {
-                    if (items[n].required == true) {
-
-                      reqTabs.push({ heading: tabSecButtons[l].heading, fieldLabel: layComponents[o].label });
-                      //console.log('reqTabs>>258', reqTabs);
-
-                    }
-                  }
-
-                }
-
-              }
-            }
-            this.reqTabSections = reqTabs;
-            //console.log('reqTabSections>>276', this.reqTabSections);
-          }
-          else if (i >= (this.topCount + this.tabCount)) {
-            bottomSections = this.layoutsection[i];
-            this.bottomLayoutSections.push(bottomSections);
-          }
-
-        }
-
-        //console.log('tabLayoutSections>>206', this.tabLayoutSections);
-      }
-      // end for caseTabviewer
-
-
-
-      var fieldDetail = [];
-      var fieldApi = [];
-      //to get is editable ornot
-      var fieldProperty = [];
-      //to get the Api Name to Querry
-      // var only1CreatedDate = true;
-      for (var key in fieldAPIList) {
+      //Set FieldProperty
+      let fieldDetail = [];
+        let fieldApi = [];
+      let sectionResult = this.layoutsection;
+      for (var key in sectionResult) {
+        let eachSection =sectionResult[key].sectionDetails;
+        for(let j in eachSection){
         this.dataTypes.forEach(ele => {
-          if (fieldAPIList[key].apiName === ele.apiName) {
-            fieldProperty.push({ apiName: ele.apiName, editableForNew: fieldAPIList[key].editableForNew, required: fieldAPIList[key].required });
+          if (eachSection[j].apiName === ele.apiName) {
+            let optionDefault = [{ label: '--None--', value: null }];
+            let options = this.casePickListOptions[ele.apiName] || [];
+              fieldDetail.push({
+              realApiName: ele.apiName,
+              dataType: ele.dataType,
+              label: ele.label,
+              required: eachSection[j].required,
+              createable: ele.createable,
+              updateable: ele.updateable,
+              options: optionDefault.concat(options),
+              editableForNew: eachSection[j].editableForNew
+            });
             fieldApi.push(ele.apiName);
           }
         })
       }
+      }
+      //End
+
+      // console.log('The Sec Is',this.layoutsection);
+      // console.log('The fieldApi1 Is',fieldApi);
+      // console.log('The fieldDetail11 Is',fieldDetail);
+      // end for caseTabviewer
+      // var fieldDetail = [];
+      // var fieldApi = [];
+      // //to get is editable ornot
+      // var fieldProperty = [];
+      // //to get the Api Name to Querry
+      // // var only1CreatedDate = true;
+      // for (var key in fieldAPIList) {
+      //   this.dataTypes.forEach(ele => {
+      //     if (fieldAPIList[key].apiName === ele.apiName) {
+      //       fieldProperty.push({ apiName: ele.apiName, editableForNew: fieldAPIList[key].editableForNew, required: fieldAPIList[key].required });
+      //       fieldApi.push(ele.apiName);
+      //     }
+      //   })
+      // }
       getCaseFieldValues({ recordId: this.recordId, fieldAPINameList: fieldApi })
         .then(result => {
           this.record = JSON.parse(result).currentRecord;
-          // //console.log('Result',this.record);
+          console.log('Result',this.record);
         })
         .catch(error => {
           // //console.log('Error',error);
         });
 
       //To get the Field Details
-      var recordData = this.record;
-      for (var key in fieldProperty) {
-        this.dataTypes.forEach(ele => {
-          if (fieldProperty[key].apiName === ele.apiName) {
-            let optionDefault = [{ label: '--None--', value: null }];
-            let options = this.casePickListOptions[ele.apiName] || [];
-            fieldDetail.push({
-              realApiName: ele.apiName,
-              dataType: ele.dataType,
-              label: ele.label,
-              required: fieldProperty[key].required,
-              createable: ele.createable,
-              updateable: ele.updateable,
-              options: optionDefault.concat(options),
-              editableForNew: fieldProperty[key].editableForNew
-            });
+      // var recordData = this.record;
+      // for (var key in fieldProperty) {
+      //   this.dataTypes.forEach(ele => {
+      //     if (fieldProperty[key].apiName === ele.apiName) {
+      //       let optionDefault = [{ label: '--None--', value: null }];
+      //       let options = this.casePickListOptions[ele.apiName] || [];
+      //       fieldDetail.push({
+      //         realApiName: ele.apiName,
+      //         dataType: ele.dataType,
+      //         label: ele.label,
+      //         required: fieldProperty[key].required,
+      //         createable: ele.createable,
+      //         updateable: ele.updateable,
+      //         options: optionDefault.concat(options),
+      //         editableForNew: fieldProperty[key].editableForNew
+      //       });
 
-          }
-        })
-      }
+      //     }
+      //   })
+      // }
       this.fieldDetails = fieldDetail;
-      //console.log('Field Details>>323', this.fieldDetails);
+      console.log('Field Details>>323', this.fieldDetails);
     }
-  }
-
-  handleTabSections(event) {
-    var buttonData;
-    var clickedButton = event.target.label;
-    var layoutSecData = this.layoutsection;
-    for (var key in layoutSecData) {
-      if (layoutSecData[key].heading == clickedButton) {
-        buttonData = layoutSecData[key];
-        this.buttonSections = buttonData;
-      }
-    }
-    //console.log('buttonSections>>341', this.buttonSections);
   }
 
   handleSectionToggle(event) {

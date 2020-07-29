@@ -2,3 +2,7 @@
     background: #c5c3c3;
     height: 2rem;
 }
+
+.caseCommentStyle textarea {
+    resize: none !important; 
+ }

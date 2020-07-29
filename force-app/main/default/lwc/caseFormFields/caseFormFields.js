@@ -1,6 +1,7 @@
 import { LightningElement, api } from "lwc";
 
 export default class CaseFormFields extends LightningElement {
+  @api fieldObject = {};
   @api isComboDisabled;
   @api recordId;
   @api recordTypeId;
@@ -40,13 +41,13 @@ export default class CaseFormFields extends LightningElement {
     if(this.isPickList && fldval === '--None--'){
       fldval = null;
     }
-    this.value = fldval;
-    productReatedValues.push({value :this.value,apiName :this.fldApi});
+    this.fieldObject.value = fldval;
+    productReatedValues.push({value :this.fieldObject.value,apiName :this.fldApi});
     const selectEvent = new CustomEvent('mycustomevent', {
       detail: productReatedValues
   });
   this.dispatchEvent(selectEvent);
-    console.log('The Xhanged',this.value);
+    console.log('The Xhanged',this.fieldObject.value);
 
      var reqTabValues=this.reqTabSections;
      for(var p in reqTabValues){
@@ -88,10 +89,10 @@ export default class CaseFormFields extends LightningElement {
   @api getValue () {
     return {
       apiName : this.fldApi,
-      value : this.value ? this.value : null,
-      editableForNew : this.editableForNew,
-      required: this.required,
-      type: this.fieldType
+      value : this.fieldObject.value ? this.fieldObject.value : null,
+      editableForNew : this.fieldObject.editableForNew,
+      required: this.fieldObject.required,
+      type: this.fieldObject.fieldType
     }
   }
   @api
@@ -115,7 +116,7 @@ export default class CaseFormFields extends LightningElement {
 
   @api 
   setValue (val ) {
-    this.value = val;
+    this.fieldObject.value = val;
   }
   @api 
   setproductRelated (value , picklistoption, isdisabled) {
@@ -124,9 +125,9 @@ export default class CaseFormFields extends LightningElement {
       console.log('option',ele);
     })
     console.log('isdisabled',isdisabled);
-    this.value = value;
+    this.fieldObject.value = value;
     this.isComboDisabled = isdisabled;
-    this.pckListOptions = picklistoption;
+    this.fieldObject.pckListOptions = picklistoption;
   }
 
   
@@ -138,30 +139,29 @@ export default class CaseFormFields extends LightningElement {
       if(this.fldApi === 'Area_of_Focus__c' || this.fldApi === 'Symptom_Main__c' || this.fldApi === 'Symptom_Sub__c' ){
         this.isComboDisabled =true;
       }
-        this.editableForNew =fieldDetail[key].editableForNew;
-        this.required=fieldDetail[key].required;
-        var caseTempValues = this.caseTemplateRecValue;
-        // if(caseTempValues.length > 0){
-        // for(var i in caseTempValues){
-        //   if(caseTempValues[i].apiName === this.fldApi){
-        //     console.log('The TempLATE API',caseTempValues[i].apiName);
-        //     console.log('The TempLATE Val1',caseTempValues[i].value);
-        //   }
-        // }
-        // }
-        this.fieldProperty = fieldDetail[key];
-        this.fieldType = fieldDetail[key].dataType;
-        this.value = this.record[this.fldApi];
-        this.label = fieldDetail[key].label;
-        this.fieldRequired = fieldDetail[key].required;
-        this.pckListOptions = fieldDetail[key].options || [];
-        // this.pckListOptions.unshift({label:'--None--',value:'--None--'});
+      this.fieldObject.editableForNew = fieldDetail[key].editableForNew;
+        //this.fieldObject.editableForNew =fieldDetail[key].editableForNew;
+        this.fieldObject.required = fieldDetail[key].required;
+        //this.fieldObject.required=fieldDetail[key].required;
+        //this.fieldObject.fieldProperty = fieldDetail[key];
+        this.fieldObject.fieldProperty = fieldDetail[key];
+        this.fieldObject.fieldType = fieldDetail[key].dataType;
+        //this.fieldObject.fieldType = fieldDetail[key].dataType;
+        this.fieldObject.value = this.record[this.fldApi];
+        //this.fieldObject.value = this.record[this.fldApi];
+        //this.fieldObject.label = fieldDetail[key].label;
+        this.fieldObject.label = fieldDetail[key].label;
+        //this.fieldObject.fieldRequired = fieldDetail[key].required;
+        this.fieldObject.fieldRequired = fieldDetail[key].required;
+        //this.fieldObject.pckListOptions = fieldDetail[key].options || [];
+        this.fieldObject.pckListOptions = fieldDetail[key].options || [];
+        // this.fieldObject.pckListOptions.unshift({label:'--None--',value:'--None--'});
         // console.log('The Picklist Option',JSON.stringify(fieldDetail[key].options));
       }
     }
     let type;
-    if (this.fieldType !== null && this.fieldType !== undefined) {
-      type = this.fieldType.toUpperCase();
+    if (this.fieldObject.fieldType !== null && this.fieldObject.fieldType !== undefined) {
+      type = this.fieldObject.fieldType.toUpperCase();
     }
     if (type === "PICKLIST" || type === "COMBOBOX") {
       this.isPickList = true;
@@ -201,6 +201,6 @@ export default class CaseFormFields extends LightningElement {
 
   }
   handleValueSelcted(event) {
-    this.value = event.detail && event.detail.length > 0 ? event.detail[0] : undefined;
+    this.fieldObject.value = event.detail && event.detail.length > 0 ? event.detail[0] : undefined;
 }
 }

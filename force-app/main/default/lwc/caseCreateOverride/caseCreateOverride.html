@@ -15,30 +15,27 @@
                     <lightning-accordion allow-multiple-sections-open active-section-name={sectionHeading}
                         onsectiontoggle={handleSectionToggle}>
                         <template for:each={layoutsection} for:item="sections">
-                            <lightning-accordion-section key={sections.heading} name={sections.heading}
-                                label={sections.heading}>
+                            <lightning-accordion-section key={sections.sectionHeader} name={sections.sectionHeader}
+                                label={sections.sectionHeader}>
                                 <!-- To display Fields -->
-                                <template for:each={sections.layoutRows} for:item="layoutRows">
-                                    <div key={layoutRows} class="slds-grid slds-wrap">
-                                        <template for:each={layoutRows.layoutItems} for:item="layoutItems">
+                                <div key={layoutItems} class="slds-grid slds-wrap">
+                                <template for:each={sections.sectionDetails} for:item="layoutItems">
+                                    
                                             <template if:true={layoutItems.editableForNew}>
-                                                <template for:each={layoutItems.layoutComponents}
-                                                    for:item="layoutItemApi">
                                                     <div key={layoutItemApi} class="slds-size_1-of-2 " style="padding-right: 109px;padding-left: 84px">
-                                                        <c-case-form-fields data-id={layoutItemApi.apiName}
+                                                        <c-case-form-fields data-id={layoutItems.apiName}
                                                             record-type-id={recordTypeId} record={record}
-                                                            case-template-rec-value={caseTemplateRecValue}
-                                                            fld-api={layoutItemApi.apiName}
+                                                            fld-api={layoutItems.apiName}
                                                             field-details={fieldDetails}
                                                             onmycustomevent={handleCustomEvent}>
                                                         </c-case-form-fields>
                                                     </div>
-                                                </template>
                                             </template>
-                                        </template>
-                                    </div>
-                                    <br key={layoutRows} />
+                                    
                                 </template>
+                                
+                            </div>
+                            <br key={sections.sectionHeader} />
                                 <!-- End -->
                             </lightning-accordion-section>
                         </template>
@@ -51,8 +48,11 @@
             <lightning-accordion active-section-name="New Case Comment">
                 <lightning-accordion-section name="New Case Comment" label="New Case Comment">
                     <div class="slds-size_1-of-2 slds-align_absolute-center">
-                    <lightning-textarea name="New Case Comment" class="inputCmp" value={caseCommentValue}
-                        onchange={handleCommentChange} label="Case Comment" maxlength="300">
+                    <lightning-textarea name="New Case Comment" 
+                                        class="caseCommentStyle" value={caseCommentValue}
+                                        onchange={handleCommentChange} 
+                                        label="Case Comment" 
+                                        maxlength="300">
                     </lightning-textarea>
                 </div>
                 </lightning-accordion-section>
