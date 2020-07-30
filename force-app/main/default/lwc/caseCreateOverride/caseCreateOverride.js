@@ -1,6 +1,6 @@
 import { LightningElement, api, wire, track } from 'lwc';
 import CASE_OBJECT from '@salesforce/schema/Case';
-import {getPicklistValuesByRecordType, getObjectInfo} from 'lightning/uiObjectInfoApi';
+import {getObjectInfo ,getPicklistValuesByRecordType} from 'lightning/uiObjectInfoApi';
 import { getRecordUi, deleteRecord } from 'lightning/uiRecordApi';
 import getAllDependentValues from '@salesforce/apex/ProductSymptomsLex.getAllDependentValues';
 import getCaseFieldValues from '@salesforce/apex/CaseCreateOverrideController.getCaseFieldValues';
@@ -36,7 +36,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
   //Assignment Rule
   @track isFireAssRule = true;
   //
-  modes;
+  @api modes ='Create';
   @api recordId;
   @api recordTypeId;
   @api recordTypeName;
@@ -88,6 +88,20 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
     }
   }
 
+  @wire(getObjectInfo, { objectApiName: CASE_OBJECT })
+  caseInfo({ data, error }) {
+    if (data) {
+      
+      console.log('fld>>1881');
+      this.dataTypes = Object.values(data.fields).map((fld) => {
+        let { apiName, dataType, label, required, createable, updateable } = fld;
+      
+        return { apiName, dataType, label, required, createable, updateable };
+        
+      });
+      console.log('fld>>188',this.dataTypes);
+    }
+  }
   handleSave() {
     let caseObj = {};
     caseObj.sobjectType = 'Case';
@@ -99,6 +113,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
       if (compVal.required && compVal.value == null)
       //|| compVal.value === undefined || compVal.value === ''))
       {
+        console.log('api Record',compVal);
         isValidate = false;
         const evt = new ShowToastEvent({
           title: 'Toast Error',
@@ -123,9 +138,9 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
         }
       }
     });
-    console.log('isvalidate1', isValidate);
+    //console.log('isvalidate1', isValidate);
     if (isValidate) {
-      console.log('The Original Save');
+      //console.log('The Original Save');
       caseObj.Id = this.recordId;
       updateCase({
         record: caseObj,
@@ -140,7 +155,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
 
               })
               .catch(error => {
-                console.log('Error',error);
+                // //console.log('Error',error);
               });
           }
 
@@ -163,10 +178,156 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
     }
 
   }
+  @wire(getRecordUi, { recordIds: '$recordId', layoutTypes: 'Full', modes:'$modes' })
+  objectRecordUi({ error, data }) {
+    if (data) {
+      var fieldApi = [];
+      ////console.log('data: ', data);
+      var layoutData = data.layouts.Case;
+      console.log('layoutData: ', layoutData);
+      var layoutSectionResult;
+      for (var key in layoutData) {
+         if(this.isNew){
+          layoutSectionResult = layoutData[key].Full.Create.sections;
+        }
+        else{
+          console.log('2');
+          layoutSectionResult = layoutData[key].Full.Edit.sections;
+        }
+        
+      }
+      console.log('The lay sec Is',layoutSectionResult);
+      var sectionHeader = [];
+      var eachSection = [];
+      var layoutSec = layoutSectionResult;
+      for (var key in layoutSec) {
+        //all section related Information
+        sectionHeader.push(layoutSec[key].heading);
+      }
+      this.sectionHeading = sectionHeader;
+      // //console.log('The Value Is', this.sectionHeading);
+      //Layout Sections
+      for (var key in layoutSec) {
+        var fieldAPIList = [];
+        var secRows = layoutSec[key].layoutRows;
+        //Retrieve Rows from Section
+        for (var i in secRows) {
+          var items = secRows[i].layoutItems;
+          //Retrieve fields From Items
+          for (var j in items) {
+            if (this.isNew && items[j].editableForNew) {
+              var reqFields = items[j].required;
+              var getfieldApi = items[j].layoutComponents;
+              //to get ApiName for LayoutItem
+              for (var k in getfieldApi) {
+                let apiNameforMap = getfieldApi[k].apiName;
+                if (apiNameforMap !== null) {
+                  fieldApi.push(getfieldApi[k].apiName);
+                  this.lowertoOriginalApi.push({ lower: apiNameforMap.toLowerCase(), apiName: apiNameforMap });
+                  fieldAPIList.push({ apiName: getfieldApi[k].apiName, editableForNew: items[j].editableForNew, required: reqFields ,lower: apiNameforMap.toLowerCase()});
+                  
+                }
+              }
+            }
+            //edit functionality
+            else if(this.isNew === false && items[j].editableForUpdate){
+              console.log('Hello');
+              var reqFields = items[j].required;
+              var getfieldApi = items[j].layoutComponents;
+              //to get ApiName for LayoutItem
+              for (var k in getfieldApi) {
+                let apiNameforMap = getfieldApi[k].apiName;
+                if (apiNameforMap !== null) {
+                  fieldApi.push(getfieldApi[k].apiName);
+                  this.lowertoOriginalApi.push({ lower: apiNameforMap.toLowerCase(), apiName: apiNameforMap });
+                  fieldAPIList.push({ apiName: getfieldApi[k].apiName, editableForNew: items[j].editableForUpdate, required: reqFields ,lower: apiNameforMap.toLowerCase()});
+                  
+                }
+              }
+            }
+            //
+          }
+
+        }
+        this.layoutsection.push({sectionHeader :layoutSec[key].heading,sectionDetails :fieldAPIList});
+      }
+      console.log('FieldApi',fieldApi)
+      //Set FieldProperty
+     
+      //End
+
+     
+      // console.log('The fieldDetail11 Is',fieldDetail);
+      // end for caseTabviewer
+      // var fieldDetail = [];
+      // var fieldApi = [];
+      // //to get is editable ornot
+      // var fieldProperty = [];
+      // //to get the Api Name to Querry
+      // // var only1CreatedDate = true;
+      // for (var key in fieldAPIList) {
+      //   this.dataTypes.forEach(ele => {
+      //     if (fieldAPIList[key].apiName === ele.apiName) {
+      //       fieldProperty.push({ apiName: ele.apiName, editableForNew: fieldAPIList[key].editableForNew, required: fieldAPIList[key].required });
+      //       fieldApi.push(ele.apiName);
+      //     }
+      //   })
+      // }
+      getCaseFieldValues({ recordId: this.recordId, fieldAPINameList: fieldApi })
+        .then(result => {
+          this.record = JSON.parse(result).currentRecord;
+          console.log('Result',this.record);
+        })
+        .catch(error => {
+          // //console.log('Error',error);
+        });
+
+        var fieldDetail = [];
+        
+        console.log('The fieldApi1 Is',this.dataTypes);
+      let sectionResult = this.layoutsection;
+      for (var key in sectionResult) {
+        let eachSection =sectionResult[key].sectionDetails;
+        for(let j in eachSection){
+        this.dataTypes.forEach(ele => {
+          if (eachSection[j].apiName === ele.apiName) {
+            let optionDefault = [{ label: '--None--', value: null }];
+            console.log('The PickList',this.casePickListOptions[ele.apiName])
+            let options = this.casePickListOptions[ele.apiName] || [];
+              fieldDetail.push({
+              realApiName: ele.apiName,
+              dataType: ele.dataType,
+              label: ele.label,
+              required: eachSection[j].required,
+              createable: ele.createable,
+              updateable: ele.updateable,
+              options: optionDefault.concat(options),
+              editableForNew: eachSection[j].editableForNew
+            });
+            fieldApi.push(ele.apiName);
+          }
+        })
+      }
+      }
+      console.log('The Sec Is',this.layoutsection);
+     console.log('The fieldApi1 Is',this.dataTypes);
+      this.fieldDetails = fieldDetail;
+      console.log('Field Details>>323', this.fieldDetails);
+    }
+  }
   // Picklist values based on record type
   connectedCallback() {
+    // getObjectInfo({ objectApiName: 'Case' })
+    //   .then(result => {
+        
+    //     console.log('Result456', result);
+    //   })
+    //   .catch(error => {
+    //     console.log('Error', error);
+    //   });
     console.log('The First',this.isNew)
     if(this.isNew == true){
+      this.modes ='Create';
       createCase({ recordType: this.recordTypeId })
       .then(result => {
         this.recordId = result;
@@ -177,6 +338,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
       });
     }
     else {
+      this.modes ='Edit';
       console.log('result1',this.recordId);
       getRecordTypeDetail({ recordId: this.recordId })
       .then(result => {
@@ -254,7 +416,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
           }
 
         }
-
+        console.log('end');
       })
       .catch(error => {
 
@@ -262,175 +424,11 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
       });
   }
 
-  @wire(getObjectInfo, { objectApiName: CASE_OBJECT })
-  caseInfo({ data, error }) {
-    if (data) {
-      
-      
-      this.dataTypes = Object.values(data.fields).map((fld) => {
-        let { apiName, dataType, label, required, createable, updateable } = fld;
-      
-        return { apiName, dataType, label, required, createable, updateable };
-      });
-    }
-    //console.log('fld>>188', this.dataTypes);
-  }
+  
 
 
 
-  @wire(getRecordUi, { recordIds: '$recordId', layoutTypes: 'Full', modes: 'Edit' })
-  objectRecordUi({ error, data }) {
-    if (data) {
-      ////console.log('data: ', data);
-      var layoutData = data.layouts.Case;
-      console.log('layoutData: ', layoutData);
-      var layoutSectionResult;
-      for (var key in layoutData) {
-         if(this.isNew){
-          console.log('layoutData: ', layoutData);
-          layoutSectionResult = layoutData[key].Full.Create.sections;
-        }
-        else{
-          console.log('2');
-          layoutSectionResult = layoutData[key].Full.Edit.sections;
-        }
-        
-      }
-      console.log('The lay sec Is',layoutSectionResult);
-      var sectionHeader = [];
-      var eachSection = [];
-      var layoutSec = layoutSectionResult;
-      for (var key in layoutSec) {
-        //all section related Information
-        sectionHeader.push(layoutSec[key].heading);
-      }
-      this.sectionHeading = sectionHeader;
-      // //console.log('The Value Is', this.sectionHeading);
-      //Layout Sections
-      for (var key in layoutSec) {
-        var fieldAPIList = [];
-        var secRows = layoutSec[key].layoutRows;
-        //Retrieve Rows from Section
-        for (var i in secRows) {
-          var items = secRows[i].layoutItems;
-          //Retrieve fields From Items
-          
-          for (var j in items) {
-            if (this.isNew && items[j].editableForNew) {
-              var reqFields = items[j].required;
-              var getfieldApi = items[j].layoutComponents;
-              //to get ApiName for LayoutItem
-              for (var k in getfieldApi) {
-                let apiNameforMap = getfieldApi[k].apiName;
-                if (apiNameforMap !== null) {
-                  this.lowertoOriginalApi.push({ lower: apiNameforMap.toLowerCase(), apiName: apiNameforMap });
-                  fieldAPIList.push({ apiName: getfieldApi[k].apiName, editableForNew: items[j].editableForNew, required: reqFields ,lower: apiNameforMap.toLowerCase()});
-                  
-                }
-              }
-            }
-            //edit functionality
-            else if(this.isNew === false && items[j].editableForUpdate){
-              console.log('Hello');
-              var reqFields = items[j].required;
-              var getfieldApi = items[j].layoutComponents;
-              //to get ApiName for LayoutItem
-              for (var k in getfieldApi) {
-                let apiNameforMap = getfieldApi[k].apiName;
-                if (apiNameforMap !== null) {
-                  this.lowertoOriginalApi.push({ lower: apiNameforMap.toLowerCase(), apiName: apiNameforMap });
-                  fieldAPIList.push({ apiName: getfieldApi[k].apiName, editableForNew: items[j].editableForUpdate, required: reqFields ,lower: apiNameforMap.toLowerCase()});
-                  
-                }
-              }
-            }
-            //
-          }
-
-        }
-        this.layoutsection.push({sectionHeader :layoutSec[key].heading,sectionDetails :fieldAPIList});
-      }
-      //Set FieldProperty
-      let fieldDetail = [];
-        let fieldApi = [];
-      let sectionResult = this.layoutsection;
-      for (var key in sectionResult) {
-        let eachSection =sectionResult[key].sectionDetails;
-        for(let j in eachSection){
-        this.dataTypes.forEach(ele => {
-          if (eachSection[j].apiName === ele.apiName) {
-            let optionDefault = [{ label: '--None--', value: null }];
-            console.log('The PickList',this.casePickListOptions[ele.apiName])
-            let options = this.casePickListOptions[ele.apiName] || [];
-              fieldDetail.push({
-              realApiName: ele.apiName,
-              dataType: ele.dataType,
-              label: ele.label,
-              required: eachSection[j].required,
-              createable: ele.createable,
-              updateable: ele.updateable,
-              options: optionDefault.concat(options),
-              editableForNew: eachSection[j].editableForNew
-            });
-            fieldApi.push(ele.apiName);
-          }
-        })
-      }
-      }
-      //End
-
-     console.log('The Sec Is',this.layoutsection);
-     console.log('The fieldApi1 Is',this.dataTypes);
-      // console.log('The fieldDetail11 Is',fieldDetail);
-      // end for caseTabviewer
-      // var fieldDetail = [];
-      // var fieldApi = [];
-      // //to get is editable ornot
-      // var fieldProperty = [];
-      // //to get the Api Name to Querry
-      // // var only1CreatedDate = true;
-      // for (var key in fieldAPIList) {
-      //   this.dataTypes.forEach(ele => {
-      //     if (fieldAPIList[key].apiName === ele.apiName) {
-      //       fieldProperty.push({ apiName: ele.apiName, editableForNew: fieldAPIList[key].editableForNew, required: fieldAPIList[key].required });
-      //       fieldApi.push(ele.apiName);
-      //     }
-      //   })
-      // }
-      getCaseFieldValues({ recordId: this.recordId, fieldAPINameList: fieldApi })
-        .then(result => {
-          this.record = JSON.parse(result).currentRecord;
-          console.log('Result',this.record);
-        })
-        .catch(error => {
-          // //console.log('Error',error);
-        });
-
-      //To get the Field Details
-      // var recordData = this.record;
-      // for (var key in fieldProperty) {
-      //   this.dataTypes.forEach(ele => {
-      //     if (fieldProperty[key].apiName === ele.apiName) {
-      //       let optionDefault = [{ label: '--None--', value: null }];
-      //       let options = this.casePickListOptions[ele.apiName] || [];
-      //       fieldDetail.push({
-      //         realApiName: ele.apiName,
-      //         dataType: ele.dataType,
-      //         label: ele.label,
-      //         required: fieldProperty[key].required,
-      //         createable: ele.createable,
-      //         updateable: ele.updateable,
-      //         options: optionDefault.concat(options),
-      //         editableForNew: fieldProperty[key].editableForNew
-      //       });
-
-      //     }
-      //   })
-      // }
-      this.fieldDetails = fieldDetail;
-      console.log('Field Details>>323', this.fieldDetails);
-    }
-  }
+  
 
   handleSectionToggle(event) {
     this.section = event.detail.openSections;
