@@ -118,7 +118,7 @@ for FILE in $CHANGED_FILES; do
   #removed to shorten output in travis: echo "Found changed file:`echo ' '$FILE`";
   # NOTE - naming convention used for <className>Test.cls files: "Test":
   if [[ $FILE == *Test.cls ]]; then
-    find $classPath -samefile "$FILE-meta.xml" | xargs -I sudo cp --parents {} $DEPLOYDIR
+    find $classPath -samefile "$FILE-meta.xml" -exec sudo cp --parents {} $DEPLOYDIR +
     #find $classPath -samefile "$FILE-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} +
     #sudo cp --parents "$(find $classPath -samefile "$FILE-meta.xml")"* $DEPLOYDIR;
     #removed to shorten output in travis: echo 'Copying class file to diff folder for deployment...';
