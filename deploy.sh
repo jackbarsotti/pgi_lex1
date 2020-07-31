@@ -54,7 +54,9 @@ export triggerPath=force-app/main/default/triggers
 #NEW:
 git config --global diff.renameLimit 999999
 printf "%dK\n" $(ulimit -s) | numfmt --from=iec --to=none
-ulimit -s 65536
+ulimit -s
+ulimit -s 999999
+ulimit -s
 
 # Run a git diff for the incremental build depending on checked-out branch (if-statement per branch)
 #lex branch:
