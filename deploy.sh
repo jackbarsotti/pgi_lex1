@@ -96,10 +96,9 @@ if [ "$BRANCH" == "master" ]; then
   git checkout master
  
   export CHANGED_FILES=$(git diff --name-only LEX force-app/)
-  echo $CHANGED_FILES>$DEPLOYDIR
-  #for f in $CHANGED_FILES; do
-    #sudo cp --parents $f $DEPLOYDIR;
-  #done;
+  for f in $CHANGED_FILES; do
+    sudo cp --parents $f $DEPLOYDIR;
+  done;
   #sudo cp -l 99999 --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
  
   echo
@@ -119,7 +118,7 @@ for FILE in $CHANGED_FILES; do
   #removed to shorten output in travis: echo "Found changed file:`echo ' '$FILE`";
   # NOTE - naming convention used for <className>Test.cls files: "Test":
   if [[ $FILE == *Test.cls ]]; then
-    find $classPath -samefile "$FILE-meta.xml" | xargs -i sudo cp --parents {} $DEPLOYDIR
+    find -maxdepth 1 $classPath -samefile "$FILE-meta.xml" | xargs -i sudo cp --parents {} $DEPLOYDIR
     #find $classPath -samefile "$FILE-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} +
     #sudo cp --parents "$(find $classPath -samefile "$FILE-meta.xml")"* $DEPLOYDIR;
     #removed to shorten output in travis: echo 'Copying class file to diff folder for deployment...';
@@ -128,7 +127,7 @@ for FILE in $CHANGED_FILES; do
  
   elif [[ $FILE == *Test.cls-meta.xml ]]; then
     export FILE2=${FILE%.cls-meta.xml};
-    find $classPath -samefile "$FILE2.cls" | xargs -i sudo cp --parents {} $DEPLOYDIR
+    find -maxdepth 1 $classPath -samefile "$FILE2.cls" | xargs -i sudo cp --parents {} $DEPLOYDIR
     #find $classPath -samefile "$FILE2.cls" -exec sudo cp --parents -t $DEPLOYDIR {} +
     #sudo cp --parents "$(find $classPath -samefile "$FILE2.cls")"* $DEPLOYDIR;
     #removed to shorten output in travis: echo 'Copying class meta file to diff folder for deployment...';
@@ -136,7 +135,7 @@ for FILE in $CHANGED_FILES; do
     #removed to shorten output in travis: ls $userPath$diffPath/classes;
  
   elif [[ $FILE == *.cls ]]; then
-    find $classPath -samefile "$FILE2.cls" | xargs -i sudo cp --parents {} $DEPLOYDIR
+    find -maxdepth 1 $classPath -samefile "$FILE2.cls" | xargs -i sudo cp --parents {} $DEPLOYDIR
     #find $classPath -samefile "$FILE2.cls" -exec sudo cp --parents -t $DEPLOYDIR {} +
     #sudo cp --parents "$(find $classPath -samefile "$FILE2.cls")"* $DEPLOYDIR;
     #removed to shorten output in travis: echo 'Copying class file to diff folder for deployment...';
@@ -145,7 +144,7 @@ for FILE in $CHANGED_FILES; do
  
   elif [[ $FILE == *.cls-meta.xml ]]; then
     export FILE2=${FILE%.cls-meta.xml};
-    find $classPath -samefile "$FILE2.cls" | xargs -i sudo cp --parents {} $DEPLOYDIR
+    find -maxdepth 1 $classPath -samefile "$FILE2.cls" | xargs -i sudo cp --parents {} $DEPLOYDIR
     #find $classPath -samefile "$FILE2.cls" -exec sudo cp --parents -t $DEPLOYDIR {} +
     #sudo cp --parents "$(find $classPath -samefile "$FILE2.cls")"* $DEPLOYDIR;
     #removed to shorten output in travis: echo 'Copying class meta file to diff folder for deployment...';
@@ -153,7 +152,7 @@ for FILE in $CHANGED_FILES; do
     #removed to shorten output in travis: ls $userPath$diffPath/classes;
  
   elif [[ $FILE == *.trigger ]]; then
-    find $triggerPath -samefile "$FILE-meta.xml" | xargs -i sudo cp --parents {} $DEPLOYDIR
+    find -maxdepth 1 $triggerPath -samefile "$FILE-meta.xml" | xargs -i sudo cp --parents {} $DEPLOYDIR
     #find $triggerPath -samefile "$FILE-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} +
     #sudo cp --parents "$(find $triggerPath -samefile "$FILE-meta.xml")"* $DEPLOYDIR;
     #removed to shorten output in travis: echo 'Copying trigger file to diff folder for deployment...';
@@ -162,7 +161,7 @@ for FILE in $CHANGED_FILES; do
     
   elif [[ $FILE == *.trigger-meta.xml ]]; then
     export FILE3=${FILE%.trigger-meta.xml};
-    find $triggerPath -samefile "$FILE3.trigger" | xargs -i sudo cp --parents {} $DEPLOYDIR
+    find -maxdepth 1 $triggerPath -samefile "$FILE3.trigger" | xargs -i sudo cp --parents {} $DEPLOYDIR
     #find $triggerPath -samefile "$FILE3.trigger" -exec sudo cp --parents -t $DEPLOYDIR {} +
     #sudo cp --parents "$(find $triggerPath -samefile "$FILE3.trigger")"* $DEPLOYDIR;
     #removed to shorten output in travis: echo 'Copying trigger meta file to diff folder for deployment...';
