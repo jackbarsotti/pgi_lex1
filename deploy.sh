@@ -96,9 +96,19 @@ if [ "$BRANCH" == "master" ]; then
   git checkout master
  
   export CHANGED_FILES=$(git diff --name-only LEX force-app/)
-  for f in $CHANGED_FILES; do
-    sudo cp --parents "$f" $DEPLOYDIR;
-  done;
+  sudo cp --parents [a-b]$CHANGED_FILES $DEPLOYDIR
+  sudo cp --parents [A-B]$CHANGED_FILES $DEPLOYDIR
+  sudo cp --parents [c-e]$CHANGED_FILES $DEPLOYDIR
+  sudo cp --parents [C-E]$CHANGED_FILES $DEPLOYDIR
+  sudo cp --parents [f-l]$CHANGED_FILES $DEPLOYDIR
+  sudo cp --parents [F-L]$CHANGED_FILES $DEPLOYDIR
+  sudo cp --parents [m-q]$CHANGED_FILES $DEPLOYDIR
+  sudo cp --parents [M-Q]$CHANGED_FILES $DEPLOYDIR
+  sudo cp --parents [r-z]$CHANGED_FILES $DEPLOYDIR
+  sudo cp --parents [R-Z]$CHANGED_FILES $DEPLOYDIR
+  #for f in $CHANGED_FILES; do
+    #sudo cp --parents $f $DEPLOYDIR;
+  #done;
   #sudo cp -l 99999 --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
  
   echo
