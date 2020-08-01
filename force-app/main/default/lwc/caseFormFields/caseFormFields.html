@@ -125,7 +125,7 @@
 	<!-- START OF LOOKUP -->
 	<template if:true={fieldObject.isLookup}>
 		<template if:false={isView}>
-			<c-custom-lookup field-label="Select Account Record" child-object-api-name='Case' class="inputCmp" required={fieldObject.fieldRequired}
+			<c-custom-lookup field-label="Select Account Record" value={fieldObject.value} child-object-api-name='Case' class="inputCmp" required={fieldObject.fieldRequired}
 				target-field-api-name={fldApi} onvalueselected={handleValueSelcted}>
 			</c-custom-lookup>
 		</template>

@@ -1,9 +1,9 @@
-Julyimport { LightningElement, api } from "lwc";
+import { LightningElement, api ,track} from "lwc";
 
 export default class CaseFormFields extends LightningElement {
   @api isNew;
   @api isView;
-  @api fieldObject = {};
+  @track fieldObject = {};
   @api isComboDisabled;
   @api recordId;
   @api fldApi;
@@ -120,9 +120,8 @@ export default class CaseFormFields extends LightningElement {
       if ( this.fldApi === fieldDetail[key].realApiName ) {
       if(this.isNew && (this.fldApi === 'Area_of_Focus__c' || this.fldApi === 'Symptom_Main__c' || this.fldApi === 'Symptom_Sub__c' )){
         this.isComboDisabled =true;
-
-
-        
+        console.log('Te Api Is : ',this.fldApi);
+        console.log('Te value Is : ',this.fldApi);
       }
       this.fieldObject.editableForNew = fieldDetail[key].editableForNew;
         //this.fieldObject.editableForNew =fieldDetail[key].editableForNew;
