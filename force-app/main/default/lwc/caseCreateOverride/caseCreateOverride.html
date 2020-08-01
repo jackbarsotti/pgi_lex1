@@ -3,6 +3,7 @@
         <template if:true={record}>
             <template if:true={fieldDetails}>
                 <template if:true={layoutsection}>
+                    <template if:true={isNew}>
                     <lightning-accordion active-section-name="QuickCase Templete">
                         <lightning-accordion-section name="QuickCase Templete" label="QuickCase Templete">
                             <div class="slds-size_1-of-2 slds-align_absolute-center">
@@ -12,6 +13,7 @@
                             </div>
                         </lightning-accordion-section>
                     </lightning-accordion>
+                  </template>
                     <lightning-accordion allow-multiple-sections-open active-section-name={sectionHeading}
                         onsectiontoggle={handleSectionToggle}>
                         <template for:each={layoutsection} for:item="sections">

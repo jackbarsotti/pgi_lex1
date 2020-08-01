@@ -30,9 +30,8 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
   @track valueforSelectingSubSymptom;
   @track isAOF = true;
   @track isSymptom = true;
-  @track isSubSymptom = true;
+  @track isSubSymptom = true; 
   @track error;
-  @track ifFirstTime = true;
   //Assignment Rule
   @track isFireAssRule = true;
   //
@@ -184,7 +183,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
       var fieldApi = [];
       ////console.log('data: ', data);
       var layoutData = data.layouts.Case;
-      console.log('layoutData: ', layoutData);
+     // console.log('layoutData: ', layoutData);
       var layoutSectionResult;
       for (var key in layoutData) {
          if(this.isNew){
@@ -196,7 +195,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
         }
         
       }
-      console.log('The lay sec Is',layoutSectionResult);
+     // console.log('The lay sec Is',layoutSectionResult);
       var sectionHeader = [];
       var eachSection = [];
       var layoutSec = layoutSectionResult;
@@ -231,7 +230,6 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
             }
             //edit functionality
             else if(this.isNew === false && items[j].editableForUpdate){
-              console.log('Hello');
               var reqFields = items[j].required;
               var getfieldApi = items[j].layoutComponents;
               //to get ApiName for LayoutItem
@@ -251,40 +249,30 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
         }
         this.layoutsection.push({sectionHeader :layoutSec[key].heading,sectionDetails :fieldAPIList});
       }
-      console.log('FieldApi',fieldApi)
-      //Set FieldProperty
-     
-      //End
-
-     
-      // console.log('The fieldDetail11 Is',fieldDetail);
-      // end for caseTabviewer
-      // var fieldDetail = [];
-      // var fieldApi = [];
-      // //to get is editable ornot
-      // var fieldProperty = [];
-      // //to get the Api Name to Querry
-      // // var only1CreatedDate = true;
-      // for (var key in fieldAPIList) {
-      //   this.dataTypes.forEach(ele => {
-      //     if (fieldAPIList[key].apiName === ele.apiName) {
-      //       fieldProperty.push({ apiName: ele.apiName, editableForNew: fieldAPIList[key].editableForNew, required: fieldAPIList[key].required });
-      //       fieldApi.push(ele.apiName);
-      //     }
-      //   })
-      // }
+      
       getCaseFieldValues({ recordId: this.recordId, fieldAPINameList: fieldApi })
         .then(result => {
           this.record = JSON.parse(result).currentRecord;
           console.log('Result',this.record);
-        })
-        .catch(error => {
-          // //console.log('Error',error);
-        });
-
-        var fieldDetail = [];
-        
-        console.log('The fieldApi1 Is',this.dataTypes);
+          //To set the Default Value For 
+          if(this.isNew === false){
+            this.selectedProduct = this.record['Product__c'];
+            this.selectedAreaOfFocus = this.record['Area_of_Focus__c']; 
+            this.selectedSubSymptom =this.record['Symptom_Sub__c'];
+            this.selectedSymptom =this.record['Symptom_Main__c'];
+            console.log('The AOFIS',this.selectedAreaOfFocus);
+          }
+          //to get Dependent Picklist Values
+          getAllDependentValues()
+          .then(result => {
+            console.log('ResultDP');
+            this.productrelatedmapData = result;
+          })
+          .catch(error => {
+            console.log('DPError', error);
+          });
+          //Setting Picklist Values And Details
+          var fieldDetail = [];
       let sectionResult = this.layoutsection;
       for (var key in sectionResult) {
         let eachSection =sectionResult[key].sectionDetails;
@@ -309,10 +297,20 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
         })
       }
       }
-      console.log('The Sec Is',this.layoutsection);
-     console.log('The fieldApi1 Is',this.dataTypes);
       this.fieldDetails = fieldDetail;
       console.log('Field Details>>323', this.fieldDetails);
+      //End
+
+         })
+        .catch(error => {
+          // //console.log('Error',error);
+        });
+
+        
+      // console.log('The Sec Is',this.layoutsection);
+    //  console.log('The fieldApi1 Is',this.dataTypes);
+      
+       
     }
   }
   // Picklist values based on record type
@@ -534,27 +532,8 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
       value = ele.value;
     })
     if (apiName === 'Product__c') {
-      if (this.ifFirstTime) {
-        this.ifFirstTime = false;
-        //console.log('The Value Is1');
-        getAllDependentValues()
-          .then(result => {
-            this.productrelatedmapData = result;
-            this.selectedProduct = value;
-            //console.log('Test1');
-            this.handleProductChange(value);
-          })
-          .catch(error => {
-            //console.log('Error', error);
-          });
-      }
-      else {
         this.selectedProduct = value;
-        if (this.productrelatedmapData !== undefined && this.productrelatedmapData != null && this.ifFirstTime === false) {
-          //console.log('Test');
           this.handleProductChange();
-        }
-      }
     }
     //If area of focus
     else if (apiName === 'Area_of_Focus__c'){ 
@@ -572,7 +551,13 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
     //console.log('The Result', mapDataHandle);
     this.isAOF = false;
     let mapData = [{ label: '--None--', value: null }];
-
+    this.isSymptom = true;
+    this.isSubSymptom = true;
+    this.selectedSymptom = null;
+    this.selectedSubSymptom = null;
+    this.dependentSymptomValues = [];
+    this.dependentAOFValues = [];
+    this.dependentSubSymptomValues =[];
     if (this.selectedProduct) {
       // if Selected country is none returns nothing
       var prodToAof = mapDataHandle.productToAreaOfFocusMap;
@@ -587,6 +572,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
 
       }
       if (mapData.length == 1) {
+        console.log('Test 1');
         this.isSymptom = true;
         this.isSubSymptom = true;
         this.isAOF = true;
@@ -602,7 +588,6 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
       this.isSymptom = true;
       this.isSubSymptom = true;
       this.isAOF = true;
-      mapData = [{ label: '--None--', value: null }];
       this.selectedProduct = null;
       this.selectedAreaOfFocus = null;
       this.selectedSymptom = null;
@@ -621,9 +606,15 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
   @api
   handleAreaOfFocusChange() {
       var mapDataHandle = this.productrelatedmapData;
-      this.valueforSelectingSymptom = this.selectedProduct + this.selectedAreaOfFocus 
+      console.log('The Value AOF',this.selectedAreaOfFocus)
+      this.valueforSelectingSymptom = this.selectedProduct + this.selectedAreaOfFocus;
       let mapData= [{label:'--None--', value: null}];
       this.isSymptom = false;
+      this.isSubSymptom = true;
+      this.selectedSymptom = null;
+      this.selectedSubSymptom = null;
+      this.dependentSymptomValues = [];
+      this.dependentSubSymptomValues = [];
       //console.log("symptom", this.valueforSelectingSymptom)
       //console.log('The AOF',this.selectedAreaOfFocus);
       if(this.selectedAreaOfFocus) {
@@ -639,7 +630,9 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
               }
 
           }
+          console.log('TestAof1');
           if(mapData.length == 1){
+            console.log('TestAof1');
               this.isSubSymptom = true;
               this.selectedSymptom = null;
               this.selectedSubSymptom = null;
@@ -647,13 +640,14 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
           this.dependentSymptomValues = mapData;
       }
       else if(this.selectedAreaOfFocus === null) {
+        console.log('TestAof');
         this.isSymptom = true;
         this.isSubSymptom = true;
-        mapData = [{label:'--None--', value: null}];
         this.selectedAreaOfFocus = null;
         this.selectedSymptom = null;
         this.selectedSubSymptom = null;
     }
+    console.log('The Symptom is',this.selectedSymptom);
     let sym = 'Symptom_Main__c';
     let element1 = this.template.querySelector(`c-case-form-fields[data-id="${sym}"]`);
     element1.setproductRelated(this.selectedSymptom, this.dependentSymptomValues, this.isSymptom);
@@ -663,15 +657,15 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
   }
 
   handleSymptomChange() {
+    console.log('The Value SYM');
       var mapDataHandle = this.productrelatedmapData;
      
       this.valueforSelectingSubSymptom = this.selectedProduct + this.selectedSymptom + this.selectedAreaOfFocus;
       let mapData= [{label:'--None--', value:null}];
       this.isSubSymptom = false;
+      this.selectedSubSymptom = null;
+      this.dependentSubSymptomValues = [];
       //console.log("symptom1", this.selectedSymptom)
-      if(this.selectedSymptom ===null) {
-        //console.log("symptom12", this.selectedSymptom)
-      }
       if(this.selectedSymptom) {
           // if returns nothing
           
@@ -694,7 +688,6 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
       else if(this.selectedSymptom ===null) {
         //console.log("symptom12", this.selectedSymptom)
           this.isSubSymptom = true;
-          mapData = [{label:'--None--', value:null}];
           this.selectedSubSymptom = null;
           this.selectedSymptom = null;
       }

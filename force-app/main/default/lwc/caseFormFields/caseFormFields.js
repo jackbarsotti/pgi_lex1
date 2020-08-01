@@ -120,6 +120,9 @@ export default class CaseFormFields extends LightningElement {
       if ( this.fldApi === fieldDetail[key].realApiName ) {
       if(this.isNew && (this.fldApi === 'Area_of_Focus__c' || this.fldApi === 'Symptom_Main__c' || this.fldApi === 'Symptom_Sub__c' )){
         this.isComboDisabled =true;
+
+
+        
       }
       this.fieldObject.editableForNew = fieldDetail[key].editableForNew;
         //this.fieldObject.editableForNew =fieldDetail[key].editableForNew;
