@@ -134,7 +134,7 @@ for FILE in $CHANGED_FILES; do
     #removed to shorten output in travis: echo 'Copying class file to diff folder for deployment...';
     #removed to shorten output in travis: echo 'Class files that will be deployed:';
     #removed to shorten output in travis: ls $userPath$diffPath/classes;
-  fi;
+  
 done;
 #for FILE in $CHANGED_FILES; do
  # if [[ $FILE == *Test.cls-meta.xml ]]; then
