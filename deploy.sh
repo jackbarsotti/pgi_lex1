@@ -53,13 +53,13 @@ export triggerPath=force-app/main/default/triggers
 
 #NEW:
 git config core.preloadIndex false
-git config --global diff.renameLimit 999999
+git config --global diff.renameLimit 9999999
 printf "%dK\n" $(ulimit -s) | numfmt --from=iec --to=none
 ulimit -s
 ulimit -s 9999999
 ulimit -s
 getconf ARG_MAX
-#cd /Users/jackbarsotti/pgi_lex
+cd /Users/jackbarsotti/pgi_lex
 git config http.postBuffer 524288000
 git config pack.windowMemory "100m"
 git config pack.packSizeLimit "100m"
@@ -134,7 +134,7 @@ for FILE in $CHANGED_FILES; do
     #removed to shorten output in travis: echo 'Copying class file to diff folder for deployment...';
     #removed to shorten output in travis: echo 'Class files that will be deployed:';
     #removed to shorten output in travis: ls $userPath$diffPath/classes;
-  
+  fi;
 done;
 #for FILE in $CHANGED_FILES; do
  # if [[ $FILE == *Test.cls-meta.xml ]]; then
