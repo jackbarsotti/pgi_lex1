@@ -52,17 +52,18 @@ export classPath=force-app/main/default/classes
 export triggerPath=force-app/main/default/triggers
 
 #NEW:
-get config --global core.preloadIndex false
+get config core.preloadIndex false
 git config --global diff.renameLimit 999999
 printf "%dK\n" $(ulimit -s) | numfmt --from=iec --to=none
 ulimit -s
 ulimit -s 9999999
 ulimit -s
 getconf ARG_MAX
+cd pgi_lex
 git config http.postBuffer 524288000
-git config --global pack.windowMemory "100m"
-git config --global pack.packSizeLimit "100m"
-git config --global pack.threads "1"
+git config pack.windowMemory "100m"
+git config pack.packSizeLimit "100m"
+git config pack.threads "1"
 #the effectively usable space: (you can pass X number of bytes to any shell command...)
 echo $(( $(getconf ARG_MAX) - $(env | wc -c) ))
 expr `getconf ARG_MAX` - `env|wc -c` - `env|wc -l` \* 4 - 2048
