@@ -78,7 +78,6 @@ echo $(( $(getconf ARG_MAX) - $(env | wc -c) ))
 expr `getconf ARG_MAX` - `env|wc -c` - `env|wc -l` \* 4 - 2048
 echo 'Kernel version:'
 uname -r
-uname -v
 
 # Run a git diff for the incremental build depending on checked-out branch (if-statement per branch)
 #lex branch:
@@ -139,7 +138,8 @@ for FILE in $CHANGED_FILES; do
   #removed to shorten output in travis: echo "Found changed file:`echo ' '$FILE`";
   # NOTE - naming convention used for <className>Test.cls files: "Test":
   if [[ $FILE == *Test.cls ]]; then
-    find $classPath -samefile "$FILE-meta.xml" -maxdepth1 -exec sudo cp --parents "{}" $DEPLOYDIR +
+    find $classPath -maxdepth1 -samefile "$FILE-meta.xml" 
+    #-exec sudo cp --parents "{}" $DEPLOYDIR +
     #find $classPath -samefile "$FILE-meta.xml" -maxdepth1 -exec /bin/cp --parents {} $DEPLOYDIR +
     #PAGE_SIZE*MAX_ARG_PAGES-sizeof(void *) / sizeof(void *)
     #find $classPath -samefile "$FILE-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} +
