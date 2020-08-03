@@ -55,9 +55,12 @@ export triggerPath=force-app/main/default/triggers
 git config --global diff.renameLimit 999999
 printf "%dK\n" $(ulimit -s) | numfmt --from=iec --to=none
 ulimit -s
-ulimit -s 999999
+ulimit -s 9999999
 ulimit -s
 getconf ARG_MAX
+#the effectively usable space: (you can pass X number of bytes to any shell command...)
+echo $(( $(getconf ARG_MAX) - $(env | wc -c) ))
+expr `getconf ARG_MAX` - `env|wc -c` - `env|wc -l` \* 4 - 2048
 
 # Run a git diff for the incremental build depending on checked-out branch (if-statement per branch)
 #lex branch:
@@ -119,13 +122,15 @@ for FILE in $CHANGED_FILES; do
   # NOTE - naming convention used for <className>Test.cls files: "Test":
   if [[ $FILE == *Test.cls ]]; then
     find $classPath -samefile "$FILE-meta.xml" -maxdepth1 -exec sudo cp --parents "{}" $DEPLOYDIR +
+    PAGE_SIZE*MAX_ARG_PAGES-sizeof(void *) / sizeof(void *)
     #find $classPath -samefile "$FILE-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} +
     #sudo cp --parents "$(find $classPath -samefile "$FILE-meta.xml")"* $DEPLOYDIR;
     #removed to shorten output in travis: echo 'Copying class file to diff folder for deployment...';
     #removed to shorten output in travis: echo 'Class files that will be deployed:';
     #removed to shorten output in travis: ls $userPath$diffPath/classes;
- 
-  elif [[ $FILE == *Test.cls-meta.xml ]]; then
+done;
+for FILE in $CHANGED_FILES; do
+  if [[ $FILE == *Test.cls-meta.xml ]]; then
     export FILE2=${FILE%.cls-meta.xml};
     find $classPath -samefile "$FILE2.cls" -maxdepth1 | parallel sudo cp --parents "{}" $DEPLOYDIR
     #find $classPath -samefile "$FILE2.cls" -exec sudo cp --parents -t $DEPLOYDIR {} +
@@ -133,8 +138,9 @@ for FILE in $CHANGED_FILES; do
     #removed to shorten output in travis: echo 'Copying class meta file to diff folder for deployment...';
     #removed to shorten output in travis: echo 'Class files that will be deployed:';
     #removed to shorten output in travis: ls $userPath$diffPath/classes;
- 
-  elif [[ $FILE == *.cls ]]; then
+done;
+for FILE in $CHANGED_FILES; do 
+  if [[ $FILE == *.cls ]]; then
     find $classPath -samefile "$FILE2.cls" -print0 | xargs -0 sudo cp --parents {} $DEPLOYDIR \;
     #find $classPath -samefile "$FILE2.cls" -exec sudo cp --parents -t $DEPLOYDIR {} +
     #sudo cp --parents "$(find $classPath -samefile "$FILE2.cls")"* $DEPLOYDIR;
