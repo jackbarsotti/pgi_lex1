@@ -140,7 +140,8 @@ for FILE in $CHANGED_FILES; do
   # NOTE - naming convention used for <className>Test.cls files: "Test":
   if [[ $FILE == *Test.cls ]]; then
     #find $classPath -maxdepth1 -samefile "$FILE-meta.xml" -exec sudo cp --parents "{}" $DEPLOYDIR +
-    sudo cp -uf --parents "$FILE-meta.xml" $DEPLOYDIR
+    sudo find "$FILE-meta.xml" -name | xargs cp $DEPLOYDIR
+    #sudo cp -uf --parents "$FILE-meta.xml" $DEPLOYDIR
     #find $classPath -samefile "$FILE-meta.xml" -maxdepth1 -exec /bin/cp --parents {} $DEPLOYDIR +
     #PAGE_SIZE*MAX_ARG_PAGES-sizeof(void *) / sizeof(void *)
     #find $classPath -samefile "$FILE-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} +
