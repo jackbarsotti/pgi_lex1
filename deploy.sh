@@ -23,7 +23,7 @@ sfdx plugins --core
  
 # Create temporary diff folder to paste files into later for incremental deployment
  # This is the deploy directory (see below in before_script)
-sudo mkdir -p /Users/jackbarsotti/pgi_lex/force-app/main/default/diff
+sudo mkdir -p /Users/timbarsotti/pgi_lex/force-app/main/default/diff
  
 # Pull our local branches so they exist locally
 # We are on a detached head, so we keep track of where Travis puts us
