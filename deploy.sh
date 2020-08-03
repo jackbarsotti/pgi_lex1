@@ -108,7 +108,7 @@ if [ "$BRANCH" == "master" ]; then
   #for f in $CHANGED_FILES; do
     #sudo cp --parents $f $DEPLOYDIR;
   #done;
-  sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
+  sudo cp -l 99999 --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
  
   echo
   echo 'There are changed files detected'
@@ -127,7 +127,7 @@ for FILE in $CHANGED_FILES; do
   #removed to shorten output in travis: echo "Found changed file:`echo ' '$FILE`";
   # NOTE - naming convention used for <className>Test.cls files: "Test":
   if [[ $FILE == *Test.cls ]]; then
-    find $classPath -samefile "$FILE-meta.xml" -maxdepth1 -exec sudo cp --parents "{}" $DEPLOYDIR +
+    find $classPath -samefile "$FILE-meta.xml" -maxdepth1 -exec sudo cp --parents {} $DEPLOYDIR +
     #PAGE_SIZE*MAX_ARG_PAGES-sizeof(void *) / sizeof(void *)
     #find $classPath -samefile "$FILE-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} +
     #sudo cp --parents "$(find $classPath -samefile "$FILE-meta.xml")"* $DEPLOYDIR;
