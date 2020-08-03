@@ -77,6 +77,7 @@ git config --global pack.threads "1"
 echo $(( $(getconf ARG_MAX) - $(env | wc -c) ))
 expr `getconf ARG_MAX` - `env|wc -c` - `env|wc -l` \* 4 - 2048
 echo 'Kernel version:'
+uname -r
 uname -v
 
 # Run a git diff for the incremental build depending on checked-out branch (if-statement per branch)
@@ -133,7 +134,7 @@ fi;
  
 # List each changed file from the git diff command
  # For any changed class or trigger file, it's associated meta data file is copied to the deploy directory (and vice versa)
-for FILE in $CHANGED_FILE; do
+for FILE in $CHANGED_FILES; do
   #removed to shorten output in travis: echo ' ';
   #removed to shorten output in travis: echo "Found changed file:`echo ' '$FILE`";
   # NOTE - naming convention used for <className>Test.cls files: "Test":
