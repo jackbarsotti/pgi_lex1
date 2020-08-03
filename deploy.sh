@@ -59,8 +59,9 @@ ulimit -s
 ulimit -s 9999999
 ulimit -s
 getconf ARG_MAX
+pwd
 cd /Users/jackbarsotti/pgi_lex
-git init
+pwd
 git config http.postBuffer 524288000
 git config pack.windowMemory "100m"
 git config pack.packSizeLimit "100m"
