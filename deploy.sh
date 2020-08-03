@@ -52,7 +52,7 @@ export classPath=force-app/main/default/classes
 export triggerPath=force-app/main/default/triggers
 
 #NEW:
-git config core.preloadIndex false
+#git config core.preloadIndex false
 git config --global diff.renameLimit 9999999
 printf "%dK\n" $(ulimit -s) | numfmt --from=iec --to=none
 ulimit -s
