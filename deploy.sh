@@ -129,108 +129,108 @@ for FILE in $CHANGED_FILES; do
     #removed to shorten output in travis: echo 'Class files that will be deployed:';
     #removed to shorten output in travis: ls $userPath$diffPath/classes;
 done;
-for FILE in $CHANGED_FILES; do
-  if [[ $FILE == *Test.cls-meta.xml ]]; then
-    export FILE2=${FILE%.cls-meta.xml};
-    find $classPath -samefile "$FILE2.cls" -maxdepth1 | parallel sudo cp --parents "{}" $DEPLOYDIR
+#for FILE in $CHANGED_FILES; do
+ # if [[ $FILE == *Test.cls-meta.xml ]]; then
+  #  export FILE2=${FILE%.cls-meta.xml};
+   # find $classPath -samefile "$FILE2.cls" -maxdepth1 | parallel sudo cp --parents "{}" $DEPLOYDIR
     #find $classPath -samefile "$FILE2.cls" -exec sudo cp --parents -t $DEPLOYDIR {} +
     #sudo cp --parents "$(find $classPath -samefile "$FILE2.cls")"* $DEPLOYDIR;
     #removed to shorten output in travis: echo 'Copying class meta file to diff folder for deployment...';
     #removed to shorten output in travis: echo 'Class files that will be deployed:';
     #removed to shorten output in travis: ls $userPath$diffPath/classes;
-done;
-for FILE in $CHANGED_FILES; do 
-  if [[ $FILE == *.cls ]]; then
-    find $classPath -samefile "$FILE2.cls" -print0 | xargs -0 sudo cp --parents {} $DEPLOYDIR \;
+#done;
+#for FILE in $CHANGED_FILES; do 
+  #if [[ $FILE == *.cls ]]; then
+    #find $classPath -samefile "$FILE2.cls" -print0 | xargs -0 sudo cp --parents {} $DEPLOYDIR \;
     #find $classPath -samefile "$FILE2.cls" -exec sudo cp --parents -t $DEPLOYDIR {} +
     #sudo cp --parents "$(find $classPath -samefile "$FILE2.cls")"* $DEPLOYDIR;
     #removed to shorten output in travis: echo 'Copying class file to diff folder for deployment...';
     #removed to shorten output in travis: echo 'Class files that will be deployed:';
     #removed to shorten output in travis: ls $userPath$diffPath/classes;
  
-  elif [[ $FILE == *.cls-meta.xml ]]; then
-    export FILE2=${FILE%.cls-meta.xml};
-    find $classPath -samefile "$FILE2.cls" | xargs -0 sudo cp --parents {} $DEPLOYDIR
+  #elif [[ $FILE == *.cls-meta.xml ]]; then
+    #export FILE2=${FILE%.cls-meta.xml};
+    #find $classPath -samefile "$FILE2.cls" | xargs -0 sudo cp --parents {} $DEPLOYDIR
     #find $classPath -samefile "$FILE2.cls" -exec sudo cp --parents -t $DEPLOYDIR {} +
     #sudo cp --parents "$(find $classPath -samefile "$FILE2.cls")"* $DEPLOYDIR;
     #removed to shorten output in travis: echo 'Copying class meta file to diff folder for deployment...';
     #removed to shorten output in travis: echo 'Class files that will be deployed:';
     #removed to shorten output in travis: ls $userPath$diffPath/classes;
  
-  elif [[ $FILE == *.trigger ]]; then
-    find $triggerPath -samefile "$FILE-meta.xml" | xargs -0 sudo cp --parents {} $DEPLOYDIR
+  #elif [[ $FILE == *.trigger ]]; then
+    #find $triggerPath -samefile "$FILE-meta.xml" | xargs -0 sudo cp --parents {} $DEPLOYDIR
     #find $triggerPath -samefile "$FILE-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} +
     #sudo cp --parents "$(find $triggerPath -samefile "$FILE-meta.xml")"* $DEPLOYDIR;
     #removed to shorten output in travis: echo 'Copying trigger file to diff folder for deployment...';
     #removed to shorten output in travis: echo 'Trigger files that will be deployed:';
     #removed to shorten output in travis: ls $userPath$diffPath/triggers;
     
-  elif [[ $FILE == *.trigger-meta.xml ]]; then
-    export FILE3=${FILE%.trigger-meta.xml};
-    find $triggerPath -samefile "$FILE3.trigger" | xargs -0 sudo cp --parents {} $DEPLOYDIR
+  #elif [[ $FILE == *.trigger-meta.xml ]]; then
+    #export FILE3=${FILE%.trigger-meta.xml};
+    #find $triggerPath -samefile "$FILE3.trigger" | xargs -0 sudo cp --parents {} $DEPLOYDIR
     #find $triggerPath -samefile "$FILE3.trigger" -exec sudo cp --parents -t $DEPLOYDIR {} +
     #sudo cp --parents "$(find $triggerPath -samefile "$FILE3.trigger")"* $DEPLOYDIR;
     #removed to shorten output in travis: echo 'Copying trigger meta file to diff folder for deployment...';
     #removed to shorten output in travis: echo 'Trigger files that will be deployed:';
     #removed to shorten output in travis: ls $userPath$diffPath/triggers;
-  fi;
-done;
-echo 'All changed files have been copied to their destination directories.'
-echo
+  #fi;
+#done;
+#echo 'All changed files have been copied to their destination directories.'
+#echo
  
 # Make temporary folder for our <className>Test.cls files that will be parsed
-sudo mkdir -p /Users/jackbarsotti/pgi_lex/force-app/main/default/unparsedTests
-export unparsedTestsDir=/Users/jackbarsotti/pgi_lex/force-app/main/default/unparsedTests
+#sudo mkdir -p /Users/jackbarsotti/pgi_lex/force-app/main/default/unparsedTests
+#export unparsedTestsDir=/Users/jackbarsotti/pgi_lex/force-app/main/default/unparsedTests
 # Search the local "classes" folder for <className>Test.cls files
-export classTests=$(find $classPath -name "*Test.cls")
+#export classTests=$(find $classPath -name "*Test.cls")
 # Parse the <className>Test.cls filenames to remove each file's path and ".cls" ending, result: <className>Test
 # Exports as a string that will be called in the deploy command in script phase IF branch is dev or qa
-export parsedList=''
-for testfiles in $classTests; do
-  sudo cp "$testfiles"* $unparsedTestsDir;
-  export parsed=$(find $unparsedTestsDir -name "*Test.cls");
-  export parsed=${parsed##*/};
-  export parsed=${parsed%.cls*};
-  export parsedList="${parsedList}${parsed},";
-done;
+#export parsedList=''
+#for testfiles in $classTests; do
+ # sudo cp "$testfiles"* $unparsedTestsDir;
+  ##export parsed=$(find $unparsedTestsDir -name "*Test.cls");
+  #export parsed=${parsed##*/};
+  #export parsed=${parsed%.cls*};
+  #export parsedList="${parsedList}${parsed},";
+#done;
  
 # Finally, go back to the HEAD from the before_script phase
-echo 'Running: git checkout $build_head'
-git checkout $build_head
+#echo 'Running: git checkout $build_head'
+#git checkout $build_head
  
 # Automatically authenticate against current branch's corresponding SalesForce org
 # Create deployment variable for "sfdx:force:source:deploy RunSpecifiedTests -r <variable>" (see script phase below)
 # Only validate, not deploy, when a pull request is being created
  # When a pull request is MERGED, deploy it
-if [ "$BRANCH" == "LEX" ]; then
-  echo $SFDX_AUTH_URL_LEX>authtravisci.txt;
-  if [ "$TRAVIS_EVENT_TYPE" == "pull_request" ]; then
-    export TESTLEVEL="RunSpecifiedTests -r $parsedList -c";
-  else
-    export TESTLEVEL="RunSpecifiedTests -r $parsedList";
-  fi;
-fi;
+#if [ "$BRANCH" == "LEX" ]; then
+ # echo $SFDX_AUTH_URL_LEX>authtravisci.txt;
+  #if [ "$TRAVIS_EVENT_TYPE" == "pull_request" ]; then
+   # export TESTLEVEL="RunSpecifiedTests -r $parsedList -c";
+  #else
+   # export TESTLEVEL="RunSpecifiedTests -r $parsedList";
+  #fi;
+#fi;
  
-if [ "$BRANCH" == "master" ]; then
-  echo $SFDX_AUTH_URL_DEV>authtravisci.txt;
-  if [ "$TRAVIS_EVENT_TYPE" == "pull_request" ]; then
-    export TESTLEVEL="RunSpecifiedTests -r $parsedList -c";
-  else
-    export TESTLEVEL="RunSpecifiedTests -r $parsedList";
-  fi;
-fi;
+#if [ "$BRANCH" == "master" ]; then
+ # echo $SFDX_AUTH_URL_DEV>authtravisci.txt;
+  #if [ "$TRAVIS_EVENT_TYPE" == "pull_request" ]; then
+  #  export TESTLEVEL="RunSpecifiedTests -r $parsedList -c";
+ # else
+  #  export TESTLEVEL="RunSpecifiedTests -r $parsedList";
+  #fi;
+#fi;
 
 # Store our auth-url for our targetEnvironment alias for deployment
-sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
+#sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
  
 # Create error message to account for potential deployment failure
-export deployErrorMsg='There was an issue deploying. Check ORG deployment status page for details'
+#export deployErrorMsg='There was an issue deploying. Check ORG deployment status page for details'
 
 # Run apex tests and deploy apex classes/triggers
-sfdx force:org:display -u targetEnvironment
-echo 'skipping deployment'
+#sfdx force:org:display -u targetEnvironment
+#echo 'skipping deployment'
 #sfdx force:source:deploy -w 10 -p $DEPLOYDIR -l $TESTLEVEL -u targetEnvironment
-echo
+#echo
  
 # Failure message if deployment fails
 #if [ TRAVIS_TEST_RESULT != 0 ]; then
