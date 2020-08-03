@@ -114,10 +114,10 @@ if [ "$BRANCH" == "master" ]; then
   git checkout master
  
   export CHANGED_FILES=$(git diff --name-only LEX force-app/)
-  #for f in $CHANGED_FILES; do
-    #sudo cp --parents $f $DEPLOYDIR;
-  #done;
-  sudo cp -l 99999 --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
+  for f in $CHANGED_FILES; do
+    sudo cp --parents $f $DEPLOYDIR;
+  done;
+  #sudo cp -l 99999 --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
  
   echo
   echo 'There are changed files detected'
@@ -131,7 +131,7 @@ fi;
  
 # List each changed file from the git diff command
  # For any changed class or trigger file, it's associated meta data file is copied to the deploy directory (and vice versa)
-for FILE in $CHANGED_FILES; do
+for FILE in $DEPLOYDIR; do
   #removed to shorten output in travis: echo ' ';
   #removed to shorten output in travis: echo "Found changed file:`echo ' '$FILE`";
   # NOTE - naming convention used for <className>Test.cls files: "Test":
