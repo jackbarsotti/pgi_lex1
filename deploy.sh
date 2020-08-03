@@ -57,11 +57,16 @@ git config --global diff.renameLimit 9999999
 printf "%dK\n" $(ulimit -s) | numfmt --from=iec --to=none
 ulimit -s
 ulimit -s 9999999
+echo 'new stack size and arg max:'
 ulimit -s
 getconf ARG_MAX
+echo 'limit for number of processes:'
+ulimit -u
+echo 'limit for number of open files:'
 ulimit -n 
-ulimit -v
+echo 'number of current threads/processes:'
 ls -1d /proc/*/task/* | wc -l
+echo 'number of open files:'
 lsof | wc -l
 #cd /home/travis/build/timbarsotti/pgi_lex
 git config http.postBuffer 524288000
