@@ -59,6 +59,7 @@ ulimit -s
 ulimit -s 9999999
 ulimit -s
 getconf ARG_MAX
+git config http.postBuffer 524288000
 git config --global pack.windowMemory "100m"
 git config --global pack.packSizeLimit "100m"
 git config --global pack.threads "1"
