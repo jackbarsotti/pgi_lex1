@@ -52,7 +52,7 @@ export classPath=force-app/main/default/classes
 export triggerPath=force-app/main/default/triggers
 
 #NEW:
-#git config core.preloadIndex false
+git config core.preloadIndex false
 git config --global diff.renameLimit 9999999
 printf "%dK\n" $(ulimit -s) | numfmt --from=iec --to=none
 ulimit -s
@@ -60,10 +60,10 @@ ulimit -s 9999999
 ulimit -s
 getconf ARG_MAX
 #cd /home/travis/build/timbarsotti/pgi_lex
-#git config http.postBuffer 524288000
-#git config --global pack.windowMemory "100m"
-#git config --global pack.packSizeLimit "100m"
-#git config --global pack.threads "1"
+git config http.postBuffer 524288000
+git config --global pack.windowMemory "100m"
+git config --global pack.packSizeLimit "100m"
+git config --global pack.threads "1"
 #the effectively usable space: (you can pass X number of bytes to any shell command...)
 echo $(( $(getconf ARG_MAX) - $(env | wc -c) ))
 expr `getconf ARG_MAX` - `env|wc -c` - `env|wc -l` \* 4 - 2048
@@ -123,18 +123,19 @@ fi;
 # List each changed file from the git diff command
  # For any changed class or trigger file, it's associated meta data file is copied to the deploy directory (and vice versa)
 for FILE in $CHANGED_FILES; do
+  find $classPath -samefile "$FILE-meta.xml" -maxdepth1 -exec sudo cp --parents "{}" $DEPLOYDIR +
   #removed to shorten output in travis: echo ' ';
   #removed to shorten output in travis: echo "Found changed file:`echo ' '$FILE`";
   # NOTE - naming convention used for <className>Test.cls files: "Test":
-  if [[ $FILE == *Test.cls ]]; then
-    find $classPath -samefile "$FILE-meta.xml" -maxdepth1 -exec sudo cp --parents "{}" $DEPLOYDIR +
+  #if [[ $FILE == *Test.cls ]]; then
+    #find $classPath -samefile "$FILE-meta.xml" -maxdepth1 -exec sudo cp --parents "{}" $DEPLOYDIR +
     #PAGE_SIZE*MAX_ARG_PAGES-sizeof(void *) / sizeof(void *)
     #find $classPath -samefile "$FILE-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} +
     #sudo cp --parents "$(find $classPath -samefile "$FILE-meta.xml")"* $DEPLOYDIR;
     #removed to shorten output in travis: echo 'Copying class file to diff folder for deployment...';
     #removed to shorten output in travis: echo 'Class files that will be deployed:';
     #removed to shorten output in travis: ls $userPath$diffPath/classes;
-  fi;
+  #fi;
 done;
 #for FILE in $CHANGED_FILES; do
  # if [[ $FILE == *Test.cls-meta.xml ]]; then
