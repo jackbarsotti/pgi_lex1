@@ -44,10 +44,10 @@ export branch=$TRAVIS_BRANCH
 echo
 echo "Travis branch: $TRAVIS_BRANCH"
 echo
-export userPath=/Users/jackbarsotti/pgi_lex/force-app/main/default
+export userPath=/Users/timbarsotti/pgi_lex/force-app/main/default
 export diffPath=/diff/force-app/main/default
 # For a full build, deploy directory should be "- export DEPLOYDIR=force-app/main/default":
-export DEPLOYDIR=/Users/jackbarsotti/pgi_lex/force-app/main/default/diff
+export DEPLOYDIR=/Users/timbarsotti/pgi_lex/force-app/main/default/diff
 export classPath=force-app/main/default/classes
 export triggerPath=force-app/main/default/triggers
 
@@ -59,13 +59,11 @@ ulimit -s
 ulimit -s 9999999
 ulimit -s
 getconf ARG_MAX
-pwd
-cd /Users/jackbarsotti/pgi_lex
-pwd
+#cd /home/travis/build/timbarsotti/pgi_lex
 git config http.postBuffer 524288000
-git config pack.windowMemory "100m"
-git config pack.packSizeLimit "100m"
-git config pack.threads "10"
+git config --global pack.windowMemory "100m"
+git config --global pack.packSizeLimit "100m"
+git config --global pack.threads "10"
 #the effectively usable space: (you can pass X number of bytes to any shell command...)
 echo $(( $(getconf ARG_MAX) - $(env | wc -c) ))
 expr `getconf ARG_MAX` - `env|wc -c` - `env|wc -l` \* 4 - 2048
