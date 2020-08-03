@@ -59,7 +59,7 @@ ulimit -s
 ulimit -s 9999999
 ulimit -s
 getconf ARG_MAX
-cd pgi_lex
+cd /Users/jackbarsotti/pgi_lex
 git config http.postBuffer 524288000
 git config pack.windowMemory "100m"
 git config pack.packSizeLimit "100m"
@@ -128,7 +128,7 @@ for FILE in $CHANGED_FILES; do
   # NOTE - naming convention used for <className>Test.cls files: "Test":
   if [[ $FILE == *Test.cls ]]; then
     find $classPath -samefile "$FILE-meta.xml" -maxdepth1 -exec sudo cp --parents "{}" $DEPLOYDIR +
-    PAGE_SIZE*MAX_ARG_PAGES-sizeof(void *) / sizeof(void *)
+    #PAGE_SIZE*MAX_ARG_PAGES-sizeof(void *) / sizeof(void *)
     #find $classPath -samefile "$FILE-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} +
     #sudo cp --parents "$(find $classPath -samefile "$FILE-meta.xml")"* $DEPLOYDIR;
     #removed to shorten output in travis: echo 'Copying class file to diff folder for deployment...';
