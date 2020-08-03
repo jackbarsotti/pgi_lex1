@@ -108,7 +108,7 @@ if [ "$BRANCH" == "master" ]; then
   #for f in $CHANGED_FILES; do
     #sudo cp --parents $f $DEPLOYDIR;
   #done;
-  sudo cp -l 99999 --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
+  sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
  
   echo
   echo 'There are changed files detected'
@@ -123,19 +123,18 @@ fi;
 # List each changed file from the git diff command
  # For any changed class or trigger file, it's associated meta data file is copied to the deploy directory (and vice versa)
 for FILE in $CHANGED_FILES; do
-  find $classPath -samefile "$FILE-meta.xml" -maxdepth1 -exec sudo cp --parents "{}" $DEPLOYDIR +
   #removed to shorten output in travis: echo ' ';
   #removed to shorten output in travis: echo "Found changed file:`echo ' '$FILE`";
   # NOTE - naming convention used for <className>Test.cls files: "Test":
-  #if [[ $FILE == *Test.cls ]]; then
-    #find $classPath -samefile "$FILE-meta.xml" -maxdepth1 -exec sudo cp --parents "{}" $DEPLOYDIR +
+  if [[ $FILE == *Test.cls ]]; then
+    find $classPath -samefile "$FILE-meta.xml" -maxdepth1 -exec sudo cp --parents "{}" $DEPLOYDIR +
     #PAGE_SIZE*MAX_ARG_PAGES-sizeof(void *) / sizeof(void *)
     #find $classPath -samefile "$FILE-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} +
     #sudo cp --parents "$(find $classPath -samefile "$FILE-meta.xml")"* $DEPLOYDIR;
     #removed to shorten output in travis: echo 'Copying class file to diff folder for deployment...';
     #removed to shorten output in travis: echo 'Class files that will be deployed:';
     #removed to shorten output in travis: ls $userPath$diffPath/classes;
-  #fi;
+  fi;
 done;
 #for FILE in $CHANGED_FILES; do
  # if [[ $FILE == *Test.cls-meta.xml ]]; then
