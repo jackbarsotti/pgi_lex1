@@ -134,12 +134,12 @@ fi;
 # List each changed file from the git diff command
  # For any changed class or trigger file, it's associated meta data file is copied to the deploy directory (and vice versa)
 for FILE in $CHANGED_FILES; do
+  echo $FILE
   #removed to shorten output in travis: echo ' ';
   #removed to shorten output in travis: echo "Found changed file:`echo ' '$FILE`";
   # NOTE - naming convention used for <className>Test.cls files: "Test":
   if [[ $FILE == *Test.cls ]]; then
-    #find $classPath -maxdepth1 -samefile "$FILE-meta.xml" 
-    #-exec sudo cp --parents "{}" $DEPLOYDIR +
+    #find $classPath -maxdepth1 -samefile "$FILE-meta.xml" -exec sudo cp --parents "{}" $DEPLOYDIR +
     sudo cp -uf --parents "$FILE-meta.xml" $DEPLOYDIR
     #find $classPath -samefile "$FILE-meta.xml" -maxdepth1 -exec /bin/cp --parents {} $DEPLOYDIR +
     #PAGE_SIZE*MAX_ARG_PAGES-sizeof(void *) / sizeof(void *)
