@@ -59,12 +59,15 @@ ulimit -s
 ulimit -s 9999999
 ulimit -s
 getconf ARG_MAX
+ulimit -n 
+ulimit -v
+ls -1d /proc/*/task/* | wc -l
+lsof | wc -l
 #cd /home/travis/build/timbarsotti/pgi_lex
 git config http.postBuffer 524288000
 git config --global pack.windowMemory "100m"
 git config --global pack.packSizeLimit "100m"
 git config --global pack.threads "1"
-git config pack.deltaCacheSize "1"
 #the effectively usable space: (you can pass X number of bytes to any shell command...)
 echo $(( $(getconf ARG_MAX) - $(env | wc -c) ))
 expr `getconf ARG_MAX` - `env|wc -c` - `env|wc -l` \* 4 - 2048
