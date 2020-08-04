@@ -78,8 +78,6 @@ echo $(( $(getconf ARG_MAX) - $(env | wc -c) ))
 expr `getconf ARG_MAX` - `env|wc -c` - `env|wc -l` \* 4 - 2048
 echo 'Kernel version:'
 uname -r
-echo 'printenv:'
-printenv
 
 # Run a git diff for the incremental build depending on checked-out branch (if-statement per branch)
 #lex branch:
@@ -121,8 +119,8 @@ if [ "$BRANCH" == "master" ]; then
   #for f in $CHANGED_FILES; do
     #sudo cp --parents $f $DEPLOYDIR;
   #done;
-  #sudo cp -l 99999 --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
-  tar -cf - -C $CHANGED_FILES | tar xpf - -C /Users/timbarsotti/pgi_lex/force-app/main/default/diff
+  sudo cp -l 99999 --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
+  #tar -cf - -C $CHANGED_FILES | tar xpf - -C /Users/timbarsotti/pgi_lex/force-app/main/default/diff
   echo
   echo 'There are changed files detected'
   echo
@@ -140,7 +138,9 @@ for FILE in $CHANGED_FILES; do
   #removed to shorten output in travis: echo "Found changed file:`echo ' '$FILE`";
   # NOTE - naming convention used for <className>Test.cls files: "Test":
   if [[ $FILE == *Test.cls ]]; then
-    find $classPath -maxdepth1 -samefile "$FILE-meta.xml" -exec sudo cp --parents "{}" $DEPLOYDIR +
+    #find $classPath -maxdepth1 -samefile "$FILE-meta.xml" -exec sudo cp --parents "{}" $DEPLOYDIR +
+    find $classPath -samefile "$FILE-meta.xml" | xargs -L100 sudo cp --parents {} $DEPLOYDIR
+    find $classPath -samefile "$FILE-meta.xml" | xargs -n50 sudo cp --parents {} $DEPLOYDIR
     #find "$FILE-meta.xml" -name | xargs cp $DEPLOYDIR
     #sudo cp -uf --parents "$FILE-meta.xml" $DEPLOYDIR
     #find $classPath -samefile "$FILE-meta.xml" -maxdepth1 -exec /bin/cp --parents {} $DEPLOYDIR +
