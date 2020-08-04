@@ -78,6 +78,16 @@ echo $(( $(getconf ARG_MAX) - $(env | wc -c) ))
 expr `getconf ARG_MAX` - `env|wc -c` - `env|wc -l` \* 4 - 2048
 echo 'Kernel version:'
 uname -r
+echo 'printenv | wc'
+printenv | wc
+echo 'git diff --name-only LEX force-app/ | wc'
+git diff --name-only LEX force-app/ | wc
+echo 'printf '%s ' $DEPLOYDIRECTORY | wc'
+printf '%s ' $DEPLOYDIRECTORY | wc
+echo 'printf '%s ' $classPath | wc'
+printf '%s ' $classPath | wc
+echo 'getconf ARG_MAX'
+getconf ARG_MAX
 
 # Run a git diff for the incremental build depending on checked-out branch (if-statement per branch)
 #lex branch:
