@@ -78,16 +78,6 @@ echo $(( $(getconf ARG_MAX) - $(env | wc -c) ))
 expr `getconf ARG_MAX` - `env|wc -c` - `env|wc -l` \* 4 - 2048
 echo 'Kernel version:'
 uname -r
-echo 'printenv | wc'
-printenv | wc
-echo 'git diff --name-only LEX force-app/ | wc'
-echo $(git diff --name-only LEX force-app/ | wc)
-echo 'printf '%s ' $DEPLOYDIRECTORY | wc'
-printf '%s ' $DEPLOYDIRECTORY | wc
-echo 'printf '%s ' $classPath | wc'
-printf '%s ' $classPath | wc
-echo 'getconf ARG_MAX'
-getconf ARG_MAX
 
 # Run a git diff for the incremental build depending on checked-out branch (if-statement per branch)
 #lex branch:
@@ -149,7 +139,7 @@ for FILE in $CHANGED_FILES; do
   # NOTE - naming convention used for <className>Test.cls files: "Test":
   if [[ $FILE == *Test.cls ]]; then
     #find $classPath -maxdepth1 -samefile "$FILE-meta.xml" -exec sudo cp --parents "{}" $DEPLOYDIR +
-    find $classPath -samefile "$FILE-meta.xml" -print0 | xargs -0 cp --parents {} $DEPLOYDIR
+    find $classPath -samefile "$FILE-meta.xml" | xargs -n 1000 cp --parents {} $DEPLOYDIR
     #find "$FILE-meta.xml" -name | xargs cp $DEPLOYDIR
     #sudo cp -uf --parents "$FILE-meta.xml" $DEPLOYDIR
     #find $classPath -name "$FILE-meta.xml"
