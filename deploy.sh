@@ -81,7 +81,7 @@ uname -r
 echo 'printenv | wc'
 printenv | wc
 echo 'git diff --name-only LEX force-app/ | wc'
-git diff --name-only LEX force-app/ | wc
+echo $(git diff --name-only LEX force-app/ | wc)
 echo 'printf '%s ' $DEPLOYDIRECTORY | wc'
 printf '%s ' $DEPLOYDIRECTORY | wc
 echo 'printf '%s ' $classPath | wc'
