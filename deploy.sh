@@ -119,7 +119,7 @@ if [ "$BRANCH" == "master" ]; then
   #for f in $CHANGED_FILES; do
     #sudo cp --parents $f $DEPLOYDIR;
   #done;
-  git diff --name-only branch2 force-app/ | xargs sudo cp --parents -t "$DEPLOYDIRECTORY"
+  git diff --name-only branch2 force-app/ | xargs cp --parents -t "$DEPLOYDIRECTORY"
   #sudo cp -l 99999 --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR
   #tar -cf - -C $CHANGED_FILES | tar xpf - -C /Users/timbarsotti/pgi_lex/force-app/main/default/diff
   echo
