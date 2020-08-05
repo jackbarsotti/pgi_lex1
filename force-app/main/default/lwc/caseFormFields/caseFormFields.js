@@ -2,6 +2,7 @@ import { LightningElement, api ,track} from "lwc";
 
 export default class CaseFormFields extends LightningElement {
   @api isNew;
+  @api isEdit;
   @api isView;
   @track fieldObject = {};
   @api isComboDisabled;
@@ -187,4 +188,30 @@ export default class CaseFormFields extends LightningElement {
   handleValueSelcted(event) {
     this.fieldObject.value = event.detail && event.detail.length > 0 ? event.detail[0] : undefined;
 }
+//in view Mode onclick of Edit
+handleOnEdit(){
+  console.log('Child myeditevent: ');
+  const selectEvent = new CustomEvent('myeditevent', {
+    fldObj: this.fieldObject.editableForNew
+  });
+  this.dispatchEvent(selectEvent);
+}
+
+// get isEdit() {
+//   if(this.isView){
+//     return false;
+//   }
+// }
+
+@api 
+setEditForView (){
+  
+  console.log('back from parent setEditForView: ');
+    if(this.isView 
+        && this.fieldObject.editableForNew){
+      this.isEdit = true;
+      console.log('back from parent this.isEdit: ', this.isEdit);
+    }
+}
+
 }

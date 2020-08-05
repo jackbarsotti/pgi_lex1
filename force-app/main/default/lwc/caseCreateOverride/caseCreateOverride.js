@@ -417,7 +417,7 @@ export default class CaseCreateOverride extends NavigationMixin(LightningElement
                     options: optionDefault.concat(options),
                     editableForNew: eachSection[j].editableForNew
                   });
-                  fieldApi.push(ele.apiName);
+                  //fieldApi.push(ele.apiName);
                 }
               })
             }
