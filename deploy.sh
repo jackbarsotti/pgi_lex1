@@ -130,10 +130,6 @@ if [ "$BRANCH" == "master" ]; then
     #sudo cp --parents $f $DEPLOYDIR;
   #done;
   sudo cp -l 99999 --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR
-  cp
-  $(git diff --name-only LEX force-app/)
-  cp $(git diff --name-only LEX force-app/) $DEPLOYDIR
-  cp $(git diff --name-only LEX force-app/)
   #tar -cf - -C $CHANGED_FILES | tar xpf - -C /Users/timbarsotti/pgi_lex/force-app/main/default/diff
   echo
   echo 'There are changed files detected'
@@ -153,12 +149,10 @@ for FILE in $CHANGED_FILES; do
   # NOTE - naming convention used for <className>Test.cls files: "Test":
   if [[ $FILE == *Test.cls ]]; then
     #find $classPath -maxdepth1 -samefile "$FILE-meta.xml" -exec sudo cp --parents "{}" $DEPLOYDIR +
-    find $classPath -samefile "$FILE-meta.xml" | xargs -L10 sudo cp --parents {} $DEPLOYDIR
-    find "$FILE-meta.xml" -name | xargs cp $DEPLOYDIR
-    sudo cp -uf --parents "$FILE-meta.xml" $DEPLOYDIR
-    cp
-    find
-    find $classPath -name "$FILE-meta.xml"
+    find $classPath -samefile "$FILE-meta.xml" -print0 | xargs -0 sudo cp --parents {} $DEPLOYDIR
+    #find "$FILE-meta.xml" -name | xargs cp $DEPLOYDIR
+    #sudo cp -uf --parents "$FILE-meta.xml" $DEPLOYDIR
+    #find $classPath -name "$FILE-meta.xml"
     #find $classPath -samefile "$FILE-meta.xml" -maxdepth1 -exec /bin/cp --parents {} $DEPLOYDIR +
     #PAGE_SIZE*MAX_ARG_PAGES-sizeof(void *) / sizeof(void *)
     #find $classPath -samefile "$FILE-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} +
