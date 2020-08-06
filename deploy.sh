@@ -1,4 +1,5 @@
 #! /bin/bash
+set -e
 # Provide basic information about the current build type
 echo
 echo "Travis event type: $TRAVIS_EVENT_TYPE"
@@ -119,11 +120,11 @@ if [ "$BRANCH" == "master" ]; then
   #for f in $CHANGED_FILES; do
     #sudo cp --parents $f $DEPLOYDIR;
   #done;
-  sudo apt install strace
-  strace -f -v -s 99999999 -o strace.log git diff --name-only branch2 force-app/ | xargs sudo cp --parents -t "$DEPLOYDIRECTORY"
-  git diff --name-only branch2 force-app/ | xargs sudo cp --parents -t "$DEPLOYDIRECTORY"
-  strace -f -v -s 99999999 -o strace.log sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR
-
+  #sudo apt install strace
+  #strace -f -v -s 99999999 -o strace.log git diff --name-only branch2 force-app/ | xargs sudo cp --parents -t "$DEPLOYDIRECTORY"
+  #git diff --name-only branch2 force-app/ | xargs sudo cp --parents -t "$DEPLOYDIRECTORY"
+  #strace -f -v -s 99999999 -o strace.log sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR
+  sudo cp --parents $(git diff --name-only master force-app/) $DEPLOYDIR;
   #tar -cf - -C $CHANGED_FILES | tar xpf - -C /Users/timbarsotti/pgi_lex/force-app/main/default/diff
   echo
   echo 'There are changed files detected'
@@ -145,7 +146,8 @@ for FILE in $CHANGED_FILES; do
     echo $FILE
     #find $classPath -maxdepth1 -samefile "$FILE-meta.xml" -exec sudo cp --parents "{}" $DEPLOYDIR +
     find $classPath -samefile "$FILE-meta.xml" | xargs -n 1000 cp --parents {} $DEPLOYDIR
-    strace -f -v -s 99999999 -o strace.log find $classPath -samefile "$FILE-meta.xml" | xargs --max-args=1 cp --parents {} $DEPLOYDIR
+    find $classPath -samefile '$FILE-meta.xml' -exec cp -p {} $DEPLOYDIR \;
+    #strace -f -v -s 99999999 -o strace.log find $classPath -samefile "$FILE-meta.xml" | xargs --max-args=1 cp --parents {} $DEPLOYDIR
     #find "$FILE-meta.xml" -name | xargs cp $DEPLOYDIR
     #sudo cp -uf --parents "$FILE-meta.xml" $DEPLOYDIR
     #find $classPath -name "$FILE-meta.xml"
