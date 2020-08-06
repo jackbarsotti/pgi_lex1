@@ -84,6 +84,8 @@ if [ "$BRANCH" == "master" ]; then
   echo
   git checkout master
   # ls force-app/main/default, then loop through that, then go through each folder and subtype of file, git diff
+  #ls force-app/main/default |
+    #while 
   export CHANGED_FILES=$(git diff --name-only LEX force-app/main/default/classes)
   #for f in $CHANGED_FILES; do
     #sudo cp --parents $f $DEPLOYDIR;
@@ -96,7 +98,7 @@ if [ "$BRANCH" == "master" ]; then
   #pwd
   git diff --name-only LEX force-app/ |
     while read f; do
-      sudo cp --parents $f $DEPLOYDIR
+      sudo cp --parents "$f" $DEPLOYDIR
     done;
   sudo cp --parents $(git diff --name-only LEX) $DEPLOYDIR;
   #sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
