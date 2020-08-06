@@ -89,7 +89,7 @@ if [ "$BRANCH" == "master" ]; then
   #git diff --name-only branch2 force-app/ | xargs sudo cp --parents -t "$DEPLOYDIRECTORY"
   #strace -f -v -s 99999999 -o strace.log sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR
   pwd
-  cd force-app/main/default
+  cd force-app/main/default/classes
   pwd
   sudo cp --parents $(git diff --name-only master) $DEPLOYDIR;
   #sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
