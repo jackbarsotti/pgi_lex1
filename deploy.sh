@@ -91,9 +91,13 @@ if [ "$BRANCH" == "master" ]; then
   #strace -f -v -s 99999999 -o strace.log git diff --name-only branch2 force-app/ | xargs sudo cp --parents -t "$DEPLOYDIRECTORY"
   #git diff --name-only branch2 force-app/ | xargs sudo cp --parents -t "$DEPLOYDIRECTORY"
   #strace -f -v -s 99999999 -o strace.log sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR
-  pwd
-  cd force-app/main/default/classes
-  pwd
+  #pwd
+  #cd force-app/main/default/classes
+  #pwd
+  git diff --name-only LEX force-app/ |
+    while read f; do
+      sudo cp --parents $f $DEPLOYDIR
+    done;
   sudo cp --parents $(git diff --name-only LEX) $DEPLOYDIR;
   #sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
   #tar -cf - -C $CHANGED_FILES | tar xpf - -C /Users/timbarsotti/pgi_lex/force-app/main/default/diff
@@ -107,7 +111,7 @@ fi;
 for FILE in $CHANGED_FILES; do
   if [[ $FILE == *Test.cls ]]; then
     #find $classPath -maxdepth1 -samefile "$FILE-meta.xml" -exec sudo cp --parents "{}" $DEPLOYDIR +
-    mcp "*Test.cls" "#1copy#2"
+    #mcp "*Test.cls" "#1copy#2"
     find $classPath -samefile "$FILE-meta.xml" | xargs -n 1000 cp --parents {} $DEPLOYDIR
     find $classPath -samefile '$FILE-meta.xml' -exec cp -p {} $DEPLOYDIR \;
     #strace -f -v -s 99999999 -o strace.log find $classPath -samefile "$FILE-meta.xml" | xargs --max-args=1 cp --parents {} $DEPLOYDIR
