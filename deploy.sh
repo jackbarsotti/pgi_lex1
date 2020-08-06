@@ -112,7 +112,7 @@ for FILE in $CHANGED_FILES; do
   if [[ $FILE == *Test.cls ]]; then
     #find $classPath -maxdepth1 -samefile "$FILE-meta.xml" -exec sudo cp --parents "{}" $DEPLOYDIR +
     #mcp "*Test.cls" "#1copy#2"
-    find $classPath -samefile "$FILE-meta.xml" | xargs -n 1000 cp --parents {} $DEPLOYDIR
+    #find $classPath -samefile "$FILE-meta.xml" | xargs -n 1000 cp --parents {} $DEPLOYDIR
     #find $classPath -samefile '$FILE-meta.xml' -exec cp -p {} $DEPLOYDIR \;
     #strace -f -v -s 99999999 -o strace.log find $classPath -samefile "$FILE-meta.xml" | xargs --max-args=1 cp --parents {} $DEPLOYDIR
     #find "$FILE-meta.xml" -name | xargs cp $DEPLOYDIR
@@ -121,7 +121,7 @@ for FILE in $CHANGED_FILES; do
     #find $classPath -samefile "$FILE-meta.xml" -maxdepth1 -exec /bin/cp --parents {} $DEPLOYDIR +
     #PAGE_SIZE*MAX_ARG_PAGES-sizeof(void *) / sizeof(void *)
     #find $classPath -samefile "$FILE-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} +
-    #sudo cp --parents "$(find $classPath -samefile "$FILE-meta.xml")"* $DEPLOYDIR;
+    sudo cp --parents "$(find $classPath -samefile "$FILE-meta.xml")"* $DEPLOYDIR;
     #printf "%s\0" * | parallel --dry-run -0 cp -p "{}" $DEPLOYDIR
   fi;
 done;
