@@ -98,9 +98,9 @@ if [ "$BRANCH" == "master" ]; then
   #pwd
   git diff --name-only LEX force-app/ |
     while read f; do
-      sudo cp --parents "$f" $DEPLOYDIR
+      sudo cp --parents $f $DEPLOYDIR
     done;
-  sudo cp --parents $(git diff --name-only LEX) $DEPLOYDIR;
+  #sudo cp --parents $(git diff --name-only LEX) $DEPLOYDIR;
   #sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
   #tar -cf - -C $CHANGED_FILES | tar xpf - -C /Users/timbarsotti/pgi_lex/force-app/main/default/diff
   echo
