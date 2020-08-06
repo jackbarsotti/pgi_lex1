@@ -136,7 +136,7 @@ if [ "$BRANCH" == "master" ]; then
   #done;
   #echo
 fi;
- 
+ #
 # List each changed file from the git diff command
  # For any changed class or trigger file, it's associated meta data file is copied to the deploy directory (and vice versa)
 for FILE in $CHANGED_FILES; do
