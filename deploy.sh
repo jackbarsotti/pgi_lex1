@@ -1,5 +1,6 @@
 #! /bin/bash
-set -e
+# Exit on error:
+#set -e
 # Provide basic information about the current build type
 echo
 echo "Travis event type: $TRAVIS_EVENT_TYPE"
