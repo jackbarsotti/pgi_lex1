@@ -56,8 +56,6 @@ export triggerPath=force-app/main/default/triggers
 #NEW:
 git config core.preloadIndex false
 git config --global diff.renameLimit 9999999
-printf "%dK\n" $(ulimit -s) | numfmt --from=iec --to=none
-ulimit -s
 ulimit -s 9999999
 echo 'new stack size and arg max:'
 ulimit -s
@@ -70,8 +68,6 @@ git config --global pack.threads "1"
 #the effectively usable space: (you can pass X number of bytes to any shell command...)
 echo $(( $(getconf ARG_MAX) - $(env | wc -c) ))
 expr `getconf ARG_MAX` - `env|wc -c` - `env|wc -l` \* 4 - 2048
-echo 'Kernel version:'
-uname -r
 
 #master branch
 if [ "$BRANCH" == "master" ]; then
@@ -93,7 +89,9 @@ if [ "$BRANCH" == "master" ]; then
   #git diff --name-only branch2 force-app/ | xargs sudo cp --parents -t "$DEPLOYDIRECTORY"
   #strace -f -v -s 99999999 -o strace.log sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR
   pwd
-  sudo cp --parents $(git diff --name-only master force-app/) $DEPLOYDIR;
+  cd force-app/main/default
+  pwd
+  sudo cp --parents $(git diff --name-only master) $DEPLOYDIR;
   #tar -cf - -C $CHANGED_FILES | tar xpf - -C /Users/timbarsotti/pgi_lex/force-app/main/default/diff
   echo
   echo 'There are changed files detected'
