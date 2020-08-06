@@ -68,10 +68,10 @@ git config --global pack.threads "1"
 #the effectively usable space: (you can pass X number of bytes to any shell command...)
 echo $(( $(getconf ARG_MAX) - $(env | wc -c) ))
 expr `getconf ARG_MAX` - `env|wc -c` - `env|wc -l` \* 4 - 2048
-sudo apt-get update -y
+#sudo apt-get update -y
 #sudo apt-get install strace
 #sudo apt-get update -y
-sudo apt-get install -y mmv
+#sudo apt-get install -y mmv
 #sudo apt-get install parallel
 #master branch
 if [ "$BRANCH" == "master" ]; then
@@ -83,9 +83,8 @@ if [ "$BRANCH" == "master" ]; then
   done;
   echo
   git checkout master
- 
-  export CHANGED_FILES=$(git diff --name-only LEX force-app/)
-  git diff --name-only LEX force-app/
+  # ls force-app/main/default, then loop through that, then go through each folder and subtype of file, git diff
+  export CHANGED_FILES=$(git diff --name-only LEX force-app/main/default/classes)
   #for f in $CHANGED_FILES; do
     #sudo cp --parents $f $DEPLOYDIR;
   #done;
