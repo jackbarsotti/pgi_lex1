@@ -85,6 +85,7 @@ if [ "$BRANCH" == "master" ]; then
   git checkout master
  
   export CHANGED_FILES=$(git diff --name-only LEX force-app/)
+  git diff --name-only LEX force-app/
   #for f in $CHANGED_FILES; do
     #sudo cp --parents $f $DEPLOYDIR;
   #done;
