@@ -113,7 +113,7 @@ for FILE in $CHANGED_FILES; do
     #find $classPath -maxdepth1 -samefile "$FILE-meta.xml" -exec sudo cp --parents "{}" $DEPLOYDIR +
     #mcp "*Test.cls" "#1copy#2"
     find $classPath -samefile "$FILE-meta.xml" | xargs -n 1000 cp --parents {} $DEPLOYDIR
-    find $classPath -samefile '$FILE-meta.xml' -exec cp -p {} $DEPLOYDIR \;
+    #find $classPath -samefile '$FILE-meta.xml' -exec cp -p {} $DEPLOYDIR \;
     #strace -f -v -s 99999999 -o strace.log find $classPath -samefile "$FILE-meta.xml" | xargs --max-args=1 cp --parents {} $DEPLOYDIR
     #find "$FILE-meta.xml" -name | xargs cp $DEPLOYDIR
     #sudo cp -uf --parents "$FILE-meta.xml" $DEPLOYDIR
