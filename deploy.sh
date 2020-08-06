@@ -69,10 +69,10 @@ git config --global pack.threads "1"
 echo $(( $(getconf ARG_MAX) - $(env | wc -c) ))
 expr `getconf ARG_MAX` - `env|wc -c` - `env|wc -l` \* 4 - 2048
 sudo apt-get update -y
-sudo apt-get install strace
-sudo apt-get update -y
+#sudo apt-get install strace
+#sudo apt-get update -y
 sudo apt-get install -y mmv
-sudo apt-get install parallel
+#sudo apt-get install parallel
 #master branch
 if [ "$BRANCH" == "master" ]; then
   #removed to shorten output in travis: echo 'Your current branches: '
@@ -88,9 +88,9 @@ if [ "$BRANCH" == "master" ]; then
   #for f in $CHANGED_FILES; do
     #sudo cp --parents $f $DEPLOYDIR;
   #done;
-  strace -f -v -s 99999999 -o strace.log git diff --name-only branch2 force-app/ | xargs sudo cp --parents -t "$DEPLOYDIRECTORY"
+  #strace -f -v -s 99999999 -o strace.log git diff --name-only branch2 force-app/ | xargs sudo cp --parents -t "$DEPLOYDIRECTORY"
   #git diff --name-only branch2 force-app/ | xargs sudo cp --parents -t "$DEPLOYDIRECTORY"
-  strace -f -v -s 99999999 -o strace.log sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR
+  #strace -f -v -s 99999999 -o strace.log sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR
   pwd
   cd force-app/main/default/classes
   pwd
@@ -107,6 +107,7 @@ fi;
 for FILE in $CHANGED_FILES; do
   if [[ $FILE == *Test.cls ]]; then
     #find $classPath -maxdepth1 -samefile "$FILE-meta.xml" -exec sudo cp --parents "{}" $DEPLOYDIR +
+    mcp "*Test.cls" "#1copy#2"
     find $classPath -samefile "$FILE-meta.xml" | xargs -n 1000 cp --parents {} $DEPLOYDIR
     find $classPath -samefile '$FILE-meta.xml' -exec cp -p {} $DEPLOYDIR \;
     #strace -f -v -s 99999999 -o strace.log find $classPath -samefile "$FILE-meta.xml" | xargs --max-args=1 cp --parents {} $DEPLOYDIR
@@ -117,6 +118,6 @@ for FILE in $CHANGED_FILES; do
     #PAGE_SIZE*MAX_ARG_PAGES-sizeof(void *) / sizeof(void *)
     #find $classPath -samefile "$FILE-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} +
     #sudo cp --parents "$(find $classPath -samefile "$FILE-meta.xml")"* $DEPLOYDIR;
-    printf "%s\0" * | parallel --dry-run -0 cp -p "{}" $DEPLOYDIR
+    #printf "%s\0" * | parallel --dry-run -0 cp -p "{}" $DEPLOYDIR
   fi;
 done;
