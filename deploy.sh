@@ -8,7 +8,7 @@ if [ "$TRAVIS_EVENT_TYPE" == "pull_request" ]; then
   echo "Travis pull request branch: $TRAVIS_PULL_REQUEST_BRANCH"
 fi;
 echo
-#
+
 # Install sfdx plugins and configure build with sfdx settings
 export SFDX_AUTOUPDATE_DISABLE=false
 export SFDX_USE_GENERIC_UNIX_KEYCHAIN=true
