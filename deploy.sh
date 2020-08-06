@@ -92,6 +92,7 @@ if [ "$BRANCH" == "master" ]; then
   cd force-app/main/default
   pwd
   sudo cp --parents $(git diff --name-only master) $DEPLOYDIR;
+  #sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
   #tar -cf - -C $CHANGED_FILES | tar xpf - -C /Users/timbarsotti/pgi_lex/force-app/main/default/diff
   echo
   echo 'There are changed files detected'
