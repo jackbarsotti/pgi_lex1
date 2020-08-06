@@ -68,7 +68,11 @@ git config --global pack.threads "1"
 #the effectively usable space: (you can pass X number of bytes to any shell command...)
 echo $(( $(getconf ARG_MAX) - $(env | wc -c) ))
 expr `getconf ARG_MAX` - `env|wc -c` - `env|wc -l` \* 4 - 2048
-
+sudo apt-get update -y
+sudo apt-get install strace
+sudo apt-get update -y
+sudo apt-get install -y mmv
+sudo apt-get install parallel
 #master branch
 if [ "$BRANCH" == "master" ]; then
   #removed to shorten output in travis: echo 'Your current branches: '
@@ -80,14 +84,13 @@ if [ "$BRANCH" == "master" ]; then
   echo
   git checkout master
  
-  #export CHANGED_FILES=$(git diff --name-only LEX force-app/)
+  export CHANGED_FILES=$(git diff --name-only LEX force-app/)
   #for f in $CHANGED_FILES; do
     #sudo cp --parents $f $DEPLOYDIR;
   #done;
-  #sudo apt install strace
-  #strace -f -v -s 99999999 -o strace.log git diff --name-only branch2 force-app/ | xargs sudo cp --parents -t "$DEPLOYDIRECTORY"
+  strace -f -v -s 99999999 -o strace.log git diff --name-only branch2 force-app/ | xargs sudo cp --parents -t "$DEPLOYDIRECTORY"
   #git diff --name-only branch2 force-app/ | xargs sudo cp --parents -t "$DEPLOYDIRECTORY"
-  #strace -f -v -s 99999999 -o strace.log sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR
+  strace -f -v -s 99999999 -o strace.log sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR
   pwd
   cd force-app/main/default/classes
   pwd
@@ -114,5 +117,6 @@ for FILE in $CHANGED_FILES; do
     #PAGE_SIZE*MAX_ARG_PAGES-sizeof(void *) / sizeof(void *)
     #find $classPath -samefile "$FILE-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} +
     #sudo cp --parents "$(find $classPath -samefile "$FILE-meta.xml")"* $DEPLOYDIR;
+    printf "%s\0" * | parallel --dry-run -0 cp -p "{}" $DEPLOYDIR
   fi;
 done;
