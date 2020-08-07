@@ -35,16 +35,16 @@ export classPath=force-app/main/default/classes
 export triggerPath=force-app/main/default/triggers
 
 #config section:
-git config core.preloadIndex false
-git config --global diff.renameLimit 9999999
+#git config core.preloadIndex false
+#git config --global diff.renameLimit 9999999
 #ulimit -s 9999999
 #getconf ARG_MAX
-git config http.postBuffer 524288000
-git config --global pack.windowMemory "100m"
-git config --global pack.packSizeLimit "100m"
-git config --global pack.threads "1"
-echo $(( $(getconf ARG_MAX) - $(env | wc -c) ))
-expr `getconf ARG_MAX` - `env|wc -c` - `env|wc -l` \* 4 - 2048
+#git config http.postBuffer 524288000
+#git config --global pack.windowMemory "100m"
+#git config --global pack.packSizeLimit "100m"
+#git config --global pack.threads "1"
+#echo $(( $(getconf ARG_MAX) - $(env | wc -c) ))
+#expr `getconf ARG_MAX` - `env|wc -c` - `env|wc -l` \* 4 - 2048
 
 #sudo cp section
 echo 'sudo cp section:'
