@@ -81,7 +81,7 @@ if [ "$BRANCH" == "master" ]; then
     if [[ $file == *.cls ]]; then
       # No sudo
       # Fix quotes
-      find force-app/main/default/classes -samefile "$file-meta.xml" -exec cp -p -t force-app/main/default/diff {} +
+      find force-app/main/default/classes -samefile "$file-meta.xml" -exec cp -p -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} +
     fi
   done
   #version two: (not working)
