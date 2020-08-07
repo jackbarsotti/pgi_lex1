@@ -70,7 +70,7 @@ if [ "$BRANCH" == "master" ]; then
   awk 'NR <= 5
     { len += length($0)+1; c[NR%5] = $0 }
     END { print("...");
-        for(i=4; i>=0; i--)
+        for(i=4; i>=0; i--); do
           print(c[(NR-i)%5]);
         print NR, len }'
   echo '---- end diff ----'
