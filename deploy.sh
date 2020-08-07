@@ -61,8 +61,6 @@ if [ "$BRANCH" == "master" ]; then
 
   # ls force-app/main/default, then loop through that, then go through each folder and subtype of file, git diff
   pwd
-  cd ..
-  pwd
   ls force-app/main/default |
     while read f; do
       diff=$(git diff --name-only LEX $f)
