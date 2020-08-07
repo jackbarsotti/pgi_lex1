@@ -84,6 +84,7 @@ if [ "$BRANCH" == "master" ]; then
       find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp -p -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} +
     fi
   done
+  ls force-app/main/default/diff
   #version two: (not working)
   #git diff --name-only LEX force-app/ |
     #while read f; do
