@@ -64,7 +64,7 @@ if [ "$BRANCH" == "master" ]; then
   ls force-app/main/default |
     while read f; do
       diff=$(git diff --name-only LEX force-app/main/default/$f)
-      sudo cp --parents $(diff) $DEPLOYDIR
+      sudo cp --parents $(git diff --name-only LEX force-app/main/default/$f) $DEPLOYDIR
     done; 
 
   #git diff --name-only LEX force-app/ |
