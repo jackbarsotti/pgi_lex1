@@ -77,7 +77,7 @@ if [ "$BRANCH" == "master" ]; then
   #exit
   git diff --name-only LEX force-app/ |
   while read -r file; do
-    cp -p "$file"  force-app/main/default/diff
+    cp -p "$file"  /Users/timbarsotti/pgi_lex/force-app/main/default/diff
     if [[ $file == *.cls ]]; then
       # No sudo
       # Fix quotes
