@@ -79,7 +79,9 @@ if [ "$BRANCH" == "master" ]; then
     output=sudo cp --parents "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
     if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
       sudo mkdir -p $file
-      sudo cp --parents "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
+      cp -f /tmp/$file /Users/timbarsotti/pgi_lex/force-app/main/default/diff
+      sudo cp -f /tmp/$file /Users/timbarsotti/pgi_lex/force-app/main/default/diff
+      #sudo cp --parents "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
     elif [[ $output == "cp: cannot stat '$file': No such file or directory" ]]; then
       #string=echo ${$file:19} | sudo touch $string
       touch $file
