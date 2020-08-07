@@ -79,16 +79,11 @@ if [ "$BRANCH" == "master" ]; then
     output=sudo cp --parents "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
     if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
       sudo mkdir -p $file
-      cp -f /tmp/$file /Users/timbarsotti/pgi_lex/force-app/main/default/diff
-      sudo cp -f /tmp/$file /Users/timbarsotti/pgi_lex/force-app/main/default/diff
-      #sudo cp --parents "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
+      sudo cp --parents "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
     elif [[ $output == "cp: cannot stat '$file': No such file or directory" ]]; then
       #string=echo ${$file:19} | sudo touch $string
       touch $file
-      #sudo mkdir -p /Users/timbarsotti/pgi_lex/force-app/main/default/diff
-      cp -f /tmp/$file /Users/timbarsotti/pgi_lex/force-app/main/default/diff
-      sudo cp -f /tmp/$file /Users/timbarsotti/pgi_lex/force-app/main/default/diff
-      #sudo cp --parents "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
+      sudo cp --parents "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
     fi
     if [[ $file == *.cls ]]; then
       find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} +
