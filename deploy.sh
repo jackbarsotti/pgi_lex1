@@ -74,6 +74,7 @@ if [ "$BRANCH" == "master" ]; then
   touch force-app/main/default/aura/AssignToMe_LEX/AssignToMe_LEXHelper.js
   sudo mkdir force-app/main/default/aura/CaseEmailRelatedListApp
   whoami
+  lsattr
   git diff --name-only LEX force-app/ |
   while read -r file; do
     echo $file
@@ -82,12 +83,10 @@ if [ "$BRANCH" == "master" ]; then
     if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
       sudo mkdir $file
       sudo cp "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
-      whoami
     elif [[ $output == "cp: cannot stat '$file': No such file or directory" ]]; then
       #string=echo ${$file:19} | sudo touch $string
       touch $file
       sudo cp --parents "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
-      whoami
     fi
     if [[ $file == *.cls ]]; then
       find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} +
