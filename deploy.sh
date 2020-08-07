@@ -73,8 +73,9 @@ if [ "$BRANCH" == "master" ]; then
   #echo '---- end diff ----'
   touch force-app/main/default/aura/AssignToMe_LEX/AssignToMe_LEXHelper.js
   sudo mkdir force-app/main/default/aura/CaseEmailRelatedListApp
-  chmod 777 /force-app
-  chmod 777 force-app
+  sudo apt-get install make
+  sudo make install
+  pwd
   git diff --name-only LEX force-app/ |
   while read -r file; do
     echo $file
