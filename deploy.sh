@@ -37,8 +37,8 @@ export triggerPath=force-app/main/default/triggers
 #config section:
 git config core.preloadIndex false
 git config --global diff.renameLimit 9999999
-ulimit -s 9999999
-getconf ARG_MAX
+#ulimit -s 9999999
+#getconf ARG_MAX
 git config http.postBuffer 524288000
 git config --global pack.windowMemory "100m"
 git config --global pack.packSizeLimit "100m"
@@ -54,12 +54,9 @@ if [ "$BRANCH" == "master" ]; then
   done;
   echo
   git checkout master
-  #export CHANGED_FILES=$(git diff --name-only LEX force-app/)
-  #export CHANGED_FILES=$(git diff --name-only LEX force-app/main/default/classes)
   #sudo cp --parents $(git diff --name-only LEX) $DEPLOYDIR;
   #sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
 
-  # ls force-app/main/default, then loop through that, then go through each folder and subtype of file, git diff
   #ls force-app/main/default |
     #while read f; do
       #sudo cp --parents $(git diff --name-only LEX force-app/main/default/$f) $DEPLOYDIR
