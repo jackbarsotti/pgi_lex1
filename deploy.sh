@@ -74,8 +74,7 @@ if [ "$BRANCH" == "master" ]; then
   touch force-app/main/default/aura/AssignToMe_LEX/AssignToMe_LEXHelper.js
   sudo mkdir force-app/main/default/aura/CaseEmailRelatedListApp
   whoami
-  lsattr
-  cat /proc/mounts
+  ll /force-app
   git diff --name-only LEX force-app/ |
   while read -r file; do
     echo $file
