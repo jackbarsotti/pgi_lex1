@@ -75,6 +75,7 @@ if [ "$BRANCH" == "master" ]; then
   sudo mkdir force-app/main/default/aura/CaseEmailRelatedListApp
   git diff --name-only LEX force-app/ |
   while read -r file; do
+    echo $file
     sudo cp --parents "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
     output=sudo cp --parents "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
     if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
