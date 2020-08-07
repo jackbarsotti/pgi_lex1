@@ -60,16 +60,35 @@ if [ "$BRANCH" == "master" ]; then
   #sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
 
   # ls force-app/main/default, then loop through that, then go through each folder and subtype of file, git diff
-  pwd
-  ls force-app/main/default |
-    while read f; do
-      sudo cp --parents $(git diff --name-only LEX force-app/main/default/$f) $DEPLOYDIR
-    done; 
+  #ls force-app/main/default |
+    #while read f; do
+      #sudo cp --parents $(git diff --name-only LEX force-app/main/default/$f) $DEPLOYDIR
+    #done; 
 
+  echo '---- git diff ----'
+  git diff --name-only LEX force-app/ |
+  awk 'NR <= 5
+    { len += length($0)+1; c[NR%5] = $0 }
+    END { print("...");
+        for(i=4; i>=0; i--)
+          print(c[(NR-i)%5]);
+        print NR, len }'
+  echo '---- end diff ----'
+  exit
+  git diff --name-only LEX force-app/ |
+  while read -r file; do
+  cp -p "$file"  force-app/main/default/diff
+  if [[ $file == *.cls ]]; then
+    # No sudo
+    # Fix quotes
+    find force-app/main/default/classes -samefile "$file-meta.xml" -exec cp -p -t force-app/main/default/diff {} +
+  fi
+  #version two: (not working)
   #git diff --name-only LEX force-app/ |
     #while read f; do
       #sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR
     #done;
+ 
   echo
   echo 'Find command section:'
   echo
