@@ -70,19 +70,20 @@ if [ "$BRANCH" == "master" ]; then
   awk 'NR <= 5
     { len += length($0)+1; c[NR%5] = $0 }
     END { print("...");
-        for(i=4; i>=0; i--); do
+        for(i=4; i>=0; i--)
           print(c[(NR-i)%5]);
         print NR, len }'
   echo '---- end diff ----'
   exit
   git diff --name-only LEX force-app/ |
   while read -r file; do
-  cp -p "$file"  force-app/main/default/diff
-  if [[ $file == *.cls ]]; then
-    # No sudo
-    # Fix quotes
-    find force-app/main/default/classes -samefile "$file-meta.xml" -exec cp -p -t force-app/main/default/diff {} +
-  fi;
+    cp -p "$file"  force-app/main/default/diff
+    if [[ $file == *.cls ]]; then
+      # No sudo
+      # Fix quotes
+      find force-app/main/default/classes -samefile "$file-meta.xml" -exec cp -p -t force-app/main/default/diff {} +
+    fi
+  done
   #version two: (not working)
   #git diff --name-only LEX force-app/ |
     #while read f; do
