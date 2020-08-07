@@ -75,14 +75,15 @@ if [ "$BRANCH" == "master" ]; then
   sudo mkdir force-app/main/default/aura/CaseEmailRelatedListApp
   git diff --name-only LEX force-app/ |
   while read -r file; do
-    sudo cp --parents "$file"  /Users/timbarsotti/pgi_lex/force-app/main/default/diff
-    output=sudo cp --parents "$file"  /Users/timbarsotti/pgi_lex/force-app/main/default/diff
+    sudo cp --parents "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
+    output=sudo cp --parents "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
     if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
       sudo mkdir $file
-      sudo cp --parents "$file"  /Users/timbarsotti/pgi_lex/force-app/main/default/diff
+      sudo cp "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
     elif [[ $output == "cp: cannot stat '$file': No such file or directory" ]]; then
-      string=echo ${$file:19} | sudo touch $string
-      sudo cp --parents "$string"  /Users/timbarsotti/pgi_lex/force-app/main/default/diff
+      #string=echo ${$file:19} | sudo touch $string
+      touch $file
+      sudo cp "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
     fi
     if [[ $file == *.cls ]]; then
       find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} +
