@@ -71,7 +71,7 @@ if [ "$BRANCH" == "master" ]; then
           #print(c[(NR-i)%5]);
         #print NR, len }'
   #echo '---- end diff ----'
-  touch force-app/main/default/aura/Assign_ToMe_LEX/AssignToMe_LEXHelper.js
+  touch force-app/main/default/aura/AssignToMe_LEX/AssignToMe_LEXHelper.js
   sudo mkdir force-app/main/default/aura/CaseEmailRelatedListApp
   git diff --name-only LEX force-app/ |
   while read -r file; do
