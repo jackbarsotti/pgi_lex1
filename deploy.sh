@@ -85,7 +85,11 @@ if [ "$BRANCH" == "master" ]; then
   echo
   echo 'git diff folder contents:'
   ls /Users/timbarsotti/pgi_lex/force-app/main/default/diff
+  ls /Users/timbarsotti/pgi_lex/force-app/main/default/diff/force-app
+  ls /Users/timbarsotti/pgi_lex/force-app/main/default/diff/force-app/main
+  ls /Users/timbarsotti/pgi_lex/force-app/main/default/diff/force-app/main/default
   echo
+  ls /Users/timbarsotti/pgi_lex/force-app/main/default/diff/force-app/main/default/diff
 fi;
 
 #find section
