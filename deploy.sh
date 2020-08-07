@@ -63,7 +63,7 @@ if [ "$BRANCH" == "master" ]; then
   pwd
   ls force-app/main/default |
     while read f; do
-      diff=$(git diff --name-only LEX $DEPLOYDIR$f)
+      diff=$(git diff --name-only LEX /Users/timbarsotti/pgi_lex/$f)
       sudo cp --parents "$(diff)"* $DEPLOYDIR
     done; 
 
