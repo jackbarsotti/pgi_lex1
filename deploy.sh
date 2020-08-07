@@ -60,12 +60,18 @@ if [ "$BRANCH" == "master" ]; then
   #sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
 
   # ls force-app/main/default, then loop through that, then go through each folder and subtype of file, git diff
-  #ls force-app/main/default |
-    #while 
-  git diff --name-only LEX force-app/ |
+  ls force-app/main/default |
     while read f; do
-      sudo cp --parents "$(f)"* $DEPLOYDIR
-    done;
+      cd $f
+      diff=$(git diff --name-only LEX)
+      sudo cp --parents "$(diff)"* $DEPLOYDIR
+      cd ..
+    done; 
+
+  #git diff --name-only LEX force-app/ |
+    #while read f; do
+      #sudo cp --parents "$(f)"* $DEPLOYDIR
+    #done;
   echo
   echo 'Find command section:'
   echo
