@@ -2,18 +2,18 @@
 # Exit on error:
 #set -e
 
-export SFDX_AUTOUPDATE_DISABLE=false
-export SFDX_USE_GENERIC_UNIX_KEYCHAIN=true
-export SFDX_DOMAIN_RETRY=300
-export SFDX_DISABLE_APP_HUB=true
-export SFDX_LOG_LEVEL=DEBUG
-echo 'mkdir sfdx...'
-mkdir sfdx
-wget -qO- $URL | tar xJ -C sfdx --strip-components 1
-"./sfdx/install"
+#export SFDX_AUTOUPDATE_DISABLE=false
+#export SFDX_USE_GENERIC_UNIX_KEYCHAIN=true
+#export SFDX_DOMAIN_RETRY=300
+#export SFDX_DISABLE_APP_HUB=true
+#xport SFDX_LOG_LEVEL=DEBUG
+#echo 'mkdir sfdx...'
+#mkdir sfdx
+#wget -qO- $URL | tar xJ -C sfdx --strip-components 1
+#"./sfdx/install"
 export PATH=./sfdx/$(pwd):$PATH
-sfdx --version
-sfdx plugins --core
+#sfdx --version
+#sfdx plugins --core
 sudo mkdir -p /Users/timbarsotti/pgi_lex/force-app/main/default/diff
 echo
 echo 'Running: export build_head=$(git rev-parse HEAD)'
@@ -63,7 +63,7 @@ if [ "$BRANCH" == "master" ]; then
   pwd
   ls force-app/main/default |
     while read f; do
-      diff=$(git diff --name-only LEX $f)
+      diff=$(git diff --name-only LEX $DEPLOYDIR$f)
       sudo cp --parents "$(diff)"* $DEPLOYDIR
     done; 
 
