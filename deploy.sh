@@ -79,7 +79,7 @@ if [ "$BRANCH" == "master" ]; then
   while read -r file; do
     sudo cp --parents "$file"  /Users/timbarsotti/pgi_lex/force-app/main/default/diff
     if [[ $file == *.cls ]]; then
-      find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} +
+      find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff "{}" +
     fi
   done
   echo
