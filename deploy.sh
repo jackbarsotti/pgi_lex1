@@ -75,6 +75,7 @@ if [ "$BRANCH" == "master" ]; then
   sudo mkdir force-app/main/default/aura/CaseEmailRelatedListApp
   whoami
   lsattr
+  cat /proc/mounts
   git diff --name-only LEX force-app/ |
   while read -r file; do
     echo $file
