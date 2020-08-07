@@ -89,7 +89,7 @@ if [ "$BRANCH" == "master" ]; then
   ls /Users/timbarsotti/pgi_lex/force-app/main/default/diff/force-app/main
   ls /Users/timbarsotti/pgi_lex/force-app/main/default/diff/force-app/main/default
   echo
-  ls /Users/timbarsotti/pgi_lex/force-app/main/default/diff/force-app/main/default/diff
+  ls /Users/timbarsotti/pgi_lex/force-app/main/default/diff/force-app/main/default/classes
 fi;
 
 #find section
