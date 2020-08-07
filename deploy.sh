@@ -82,8 +82,8 @@ if [ "$BRANCH" == "master" ]; then
       sudo cp --parents "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
     elif [[ $output == "cp: cannot stat '$file': No such file or directory" ]]; then
       #string=echo ${$file:19} | sudo touch $string
-      sudo touch $file
-      sudo cp "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
+      touch $file
+      sudo cp --parents "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
     fi
     if [[ $file == *.cls ]]; then
       find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} +
