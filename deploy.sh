@@ -77,22 +77,14 @@ if [ "$BRANCH" == "master" ]; then
   #exit
   git diff --name-only LEX force-app/ |
   while read -r file; do
-    sudo cp -p "$file"  /Users/timbarsotti/pgi_lex/force-app/main/default/diff
+    sudo cp --parents "$file"  /Users/timbarsotti/pgi_lex/force-app/main/default/diff
     if [[ $file == *.cls ]]; then
-      # No sudo
-      # Fix quotes
-      find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp -p -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} +
+      find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} +
     fi
   done
-  ls /Users/timbarsotti/pgi_lex/force-app/main/default/diff
-  #version two: (not working)
-  #git diff --name-only LEX force-app/ |
-    #while read f; do
-      #sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR
-    #done;
- 
   echo
-  echo 'Find command section:'
+  echo 'git diff folder contents:'
+  ls /Users/timbarsotti/pgi_lex/force-app/main/default/diff
   echo
 fi;
 
