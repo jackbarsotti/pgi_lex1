@@ -64,7 +64,7 @@ if [ "$BRANCH" == "master" ]; then
     #while 
   git diff --name-only LEX force-app/ |
     while read f; do
-      sudo cp --parents "$f" $DEPLOYDIR
+      sudo cp --parents "$f"* $DEPLOYDIR
     done;
   echo
   echo 'Find command section:'
