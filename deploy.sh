@@ -81,7 +81,7 @@ if [ "$BRANCH" == "master" ]; then
       sudo mkdir $file
       sudo cp --parents "$file"  /Users/timbarsotti/pgi_lex/force-app/main/default/diff
     elif [[ $output == "cp: cannot stat '$file': No such file or directory" ]]; then
-      sudo touch $file
+      sudo touch ${%/Users/timbarsotti/$file}
       sudo cp --parents "$file"  /Users/timbarsotti/pgi_lex/force-app/main/default/diff
     fi
     if [[ $file == *.cls ]]; then
