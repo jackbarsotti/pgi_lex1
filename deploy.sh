@@ -74,7 +74,7 @@ if [ "$BRANCH" == "master" ]; then
           print(c[(NR-i)%5]);
         print NR, len }'
   echo '---- end diff ----'
-  exit
+  #exit
   git diff --name-only LEX force-app/ |
   while read -r file; do
     cp -p "$file"  force-app/main/default/diff
