@@ -83,6 +83,7 @@ if [ "$BRANCH" == "master" ]; then
     elif [[ $output == "cp: cannot stat '$file': No such file or directory" ]]; then
       #string=echo ${$file:19} | sudo touch $string
       touch $file
+      sudo mkdir -p /Users/timbarsotti/pgi_lex/force-app/main/default/diff
       sudo cp --parents "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
     fi
     if [[ $file == *.cls ]]; then
