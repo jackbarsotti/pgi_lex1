@@ -80,10 +80,11 @@ if [ "$BRANCH" == "master" ]; then
     if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
       sudo mkdir $file
       sudo cp --parents "$file"  /Users/timbarsotti/pgi_lex/force-app/main/default/diff
-    elif [[ $output == "cp: cannot stat '$file': No such file or directory" ]]
+    elif [[ $output == "cp: cannot stat '$file': No such file or directory" ]]; then
       touch $file
       sudo cp --parents "$file"  /Users/timbarsotti/pgi_lex/force-app/main/default/diff
-    elif [[ $file == *.cls ]]; then
+    fi
+    if [[ $file == *.cls ]]; then
       find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} +
     elif [[ $file == *.cls-meta.xml ]]; then
       parsedfile=${file%.cls-meta.xml}
