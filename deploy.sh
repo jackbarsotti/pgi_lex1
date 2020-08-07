@@ -82,7 +82,7 @@ if [ "$BRANCH" == "master" ]; then
     # No sudo
     # Fix quotes
     find force-app/main/default/classes -samefile "$file-meta.xml" -exec cp -p -t force-app/main/default/diff {} +
-  fi
+  fi;
   #version two: (not working)
   #git diff --name-only LEX force-app/ |
     #while read f; do
