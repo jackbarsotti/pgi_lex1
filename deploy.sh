@@ -77,34 +77,34 @@ if [ "$BRANCH" == "master" ]; then
   git diff --name-only LEX force-app/ |
   while read -r file; do
     echo $file
-    sudo cp --parents "$file" force-app/main/default/diff
-    output=sudo cp --parents "$file" force-app/main/default/diff
+    sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
+    output=sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
     if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
       sudo mkdir $file
-      sudo cp "$file" force-app/main/default/diff
+      sudo cp "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
     elif [[ $output == "cp: cannot stat '$file': No such file or directory" ]]; then
       #string=echo ${$file:19} | sudo touch $string
       touch $file
-      sudo cp --parents "$file" force-app/main/default/diff
+      sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
     fi
     if [[ $file == *.cls ]]; then
-      find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t force-app/main/default/diff {} +
+      find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff {} +
     elif [[ $file == *.cls-meta.xml ]]; then
       parsedfile=${file%.cls-meta.xml}
-      find force-app/main/default/classes -samefile "$parsedfile.cls" -exec sudo cp --parents -t force-app/main/default/diff {} +
+      find force-app/main/default/classes -samefile "$parsedfile.cls" -exec sudo cp --parents -t /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff {} +
     elif [[ $file == *Test.cls ]]; then
-      find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t force-app/main/default/diff {} +
+      find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff {} +
     elif [[ $file == *Test.cls-meta.xml ]]; then
       parsedfile=${file%.cls-meta.xml}
-      find force-app/main/default/classes -samefile "$parsedfile.cls" -exec sudo cp --parents -t force-app/main/default/diff {} +
+      find force-app/main/default/classes -samefile "$parsedfile.cls" -exec sudo cp --parents -t /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff {} +
     elif [[ $file == *.trigger ]]; then
-      find force-app/main/default/triggers -samefile "$file-meta.xml" -exec sudo cp --parents -t force-app/main/default/diff {} +
+      find force-app/main/default/triggers -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff {} +
     elif [[ $file == *.trigger-meta.xml ]]; then
       parsedfile=${file%.trigger-meta.xml}
-      find force-app/main/default/triggers -samefile "$parsedfile.trigger" -exec sudo cp --parents -t force-app/main/default/diff {} +
+      find force-app/main/default/triggers -samefile "$parsedfile.trigger" -exec sudo cp --parents -t /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff {} +
     fi
   done
   echo
   echo 'git diff folder contents:'
-  ls force-app/main/default/diff/force-app/main/default
+  ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default
 fi;
