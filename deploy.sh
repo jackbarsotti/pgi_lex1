@@ -79,20 +79,18 @@ if [ "$BRANCH" == "master" ]; then
     echo $file
     sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
     export output=$(sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff)
-    echo $output | if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
-      Exit
-      set -e
+    #if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
       # need to remove the ending before mkdir
-      sudo mkdir $file
+      #sudo mkdir $file
       #sudo mkdir -p $file
-      sudo cp "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
+      #sudo cp "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
     #elif
-    elif [[ $output == "cp: cannot stat '$file': No such file or directory" ]]; then
+    #if [[ $output == "cp: cannot stat '$file': No such file or directory" ]]; then
       touch $file
       git checkout LEX $file
       sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
       #echo 'The file has been created and moved to diff folder. Disregard above error.'
-    fi
+    #fi
     #if [[ $file == *.cls ]]; then
       #find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} +
     #elif [[ $file == *.cls-meta.xml ]]; then
