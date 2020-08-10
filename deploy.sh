@@ -109,5 +109,10 @@ if [ "$BRANCH" == "master" ]; then
   done
   echo
   echo 'git diff folder contents:'
+  ls /Users/timbarsotti/pgi_lex/force-app/main/default/diff/force-app/main/default/aura/AssignToMe_LEX
+  #AssignToMe_LEXHelper.js
   ls /Users/timbarsotti/pgi_lex/force-app/main/default/diff/force-app/main/default/classes
+  #toDelete1.cls and xml
+  #LeadCOnvertLEXController.cls and xml
+  #AssignToMeListBtnCaseController
 fi;
