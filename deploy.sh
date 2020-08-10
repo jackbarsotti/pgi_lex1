@@ -30,7 +30,7 @@ echo "Travis branch: $TRAVIS_BRANCH"
 echo
 export userPath=/Users/timbarsotti/pgi_lex/force-app/main/default
 export diffPath=/diff/force-app/main/default
-export DEPLOYDIR=/Users/timbarsotti/pgi_lex/force-app/main/default/diff
+export DEPLOYDIR=/Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
 export classPath=force-app/main/default/classes
 export triggerPath=force-app/main/default/triggers
 
@@ -71,8 +71,8 @@ if [ "$BRANCH" == "master" ]; then
           #print(c[(NR-i)%5]);
         #print NR, len }'
   #echo '---- end diff ----'
-  #touch force-app/main/default/aura/AssignToMe_LEX/AssignToMe_LEXHelper.js
-  #sudo mkdir force-app/main/default/aura/CaseEmailRelatedListApp
+  touch force-app/main/default/aura/AssignToMe_LEX/AssignToMe_LEXHelper.js
+  sudo mkdir force-app/main/default/aura/CaseEmailRelatedListApp
   pwd
   git diff --name-only LEX force-app/ |
   while read -r file; do
@@ -82,10 +82,8 @@ if [ "$BRANCH" == "master" ]; then
     if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
       # need to remove the ending before mkdir
       # originally: sudo mkdir $file
-      #sudo mkdir -p $file
-      #sudo cp "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
-      set -e 
-      echo 'FUCK YOU'
+      sudo mkdir -p $file
+      sudo cp "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
     #elif
     elif [[ $output == "cp: cannot stat '$file': No such file or directory" ]]; then
       touch $file
