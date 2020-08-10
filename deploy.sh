@@ -78,8 +78,8 @@ if [ "$BRANCH" == "master" ]; then
   while read -r file; do
     echo $file
     sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
-    sudo mkdir -p /Users/timbarsotti/pgi_lex/force-app/main/default/diff
-    sudo cp --parents "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
+    #sudo mkdir -p /Users/timbarsotti/pgi_lex/force-app/main/default/diff
+    #sudo cp --parents "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
     #output=sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
     #if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
       # need to remove the ending before mkdir
@@ -113,8 +113,10 @@ if [ "$BRANCH" == "master" ]; then
   done
   echo
   echo 'git diff folder contents:'
-  ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
-  ls /Users/timbarsotti/pgi_lex/force-app/main/default/diff
+  ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default
+  echo
+  ls /Users/timbarsotti/pgi_lex/force-app/main/default/diff/force-app/main/default
+  echo
   ls /Users/timbarsotti/pgi_lex/force-app/main/default/diff/force-app/main/default/aura/AssignToMe_LEX
   #AssignToMe_LEXHelper.js
   ls /Users/timbarsotti/pgi_lex/force-app/main/default/diff/force-app/main/default/classes
