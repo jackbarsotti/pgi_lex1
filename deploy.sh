@@ -77,11 +77,14 @@ if [ "$BRANCH" == "master" ]; then
   git diff --name-only LEX force-app/ |
   while read -r file; do
     echo $file
-    sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff | if [[ {} == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
-    #export output=$(sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff)
-    #if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
+    sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
+    export output=$(sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff)
+    echo $output
+    if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
       # need to remove the ending before mkdir
       # originally: sudo mkdir $file
+      exit 
+      set -e 
       sudo mkdir -p $file
       sudo cp "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
     #elif
