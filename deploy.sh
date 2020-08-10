@@ -85,7 +85,7 @@ if [ "$BRANCH" == "master" ]; then
       #sudo mkdir -p $file
       #sudo cp "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
     #elif
-    while [[ $output == "cp: cannot stat '$file': No such file or directory" ]]; do
+    while [[ "$output" == "cp: cannot stat '$file': No such file or directory" ]]; do
       touch $file
       git checkout LEX $file
       sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
