@@ -78,8 +78,8 @@ if [ "$BRANCH" == "master" ]; then
   while read -r file; do
     echo $file
     sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
-    output=$(sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff)
-    if [[ "echo $output" == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
+    output=sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
+    if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
       # need to remove the ending before mkdir
       # originally: sudo mkdir $file
       #sudo mkdir -p $file
