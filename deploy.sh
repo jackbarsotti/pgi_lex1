@@ -71,15 +71,15 @@ if [ "$BRANCH" == "master" ]; then
           #print(c[(NR-i)%5]);
         #print NR, len }'
   #echo '---- end diff ----'
-  touch force-app/main/default/aura/AssignToMe_LEX/AssignToMe_LEXHelper.js
-  sudo mkdir force-app/main/default/aura/CaseEmailRelatedListApp
+  #touch force-app/main/default/aura/AssignToMe_LEX/AssignToMe_LEXHelper.js
+  #sudo mkdir force-app/main/default/aura/CaseEmailRelatedListApp
   pwd
   git diff --name-only LEX force-app/ |
   while read -r file; do
     echo $file
-    sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
-    export output=$(sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff)
-    if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
+    sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff | if [[ {} == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
+    #export output=$(sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff)
+    #if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
       # need to remove the ending before mkdir
       # originally: sudo mkdir $file
       sudo mkdir -p $file
