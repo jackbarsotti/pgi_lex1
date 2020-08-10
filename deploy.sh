@@ -85,8 +85,8 @@ if [ "$BRANCH" == "master" ]; then
       #sudo cp "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
     #elif [[ $output == "cp: cannot stat '$file': No such file or directory" ]]; then
       #string=echo ${$file:19} | sudo touch $string
-      #touch $file
-      #sudo cp --parents "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
+      touch $file
+      sudo cp --parents "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
     #fi
     #if [[ $file == *.cls ]]; then
       #find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} +
@@ -107,5 +107,5 @@ if [ "$BRANCH" == "master" ]; then
   done
   echo
   echo 'git diff folder contents:'
-  ls /Users/timbarsotti/pgi_lex/force-app/main/default/diff/force-app/main/default
+  ls /Users/timbarsotti/pgi_lex/force-app/main/default/diff/force-app/main/default/aura/AssignToMe_LEX
 fi;
