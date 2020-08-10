@@ -88,6 +88,7 @@ if [ "$BRANCH" == "master" ]; then
     #elif
     #if [[ $output == "cp: cannot stat '$file': No such file or directory" ]]; then
       touch $file
+      git checkout LEX $file
       sudo cp --parents "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
       #echo 'The file has been created and moved to diff folder. Disregard above error.'
     #fi
