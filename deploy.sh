@@ -84,7 +84,7 @@ if [ "$BRANCH" == "master" ]; then
        #originally: sudo mkdir $file
       sudo mkdir -p $file
       sudo cp "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
-    fi
+    
     #elif
     elif [[ $output == "cp: cannot stat '$file': No such file or directory" ]]; then
       touch $file
