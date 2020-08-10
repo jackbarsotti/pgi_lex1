@@ -82,7 +82,7 @@ if [ "$BRANCH" == "master" ]; then
     sudo mkdir -p /Users/timbarsotti/pgi_lex/force-app/main/default/diff
     sudo cp --parents /Users/timbarsotti/pgi_lex/force-app/main/default/diff
     output=sudo cp --parents "$file" /Users/timbarsotti/pgi_lex/force-app/main/default/diff
-    if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
+    if [[ $output == "cp: cannot make directory '/Users/timbarsotti/pgi_lex/force-app/main/default/diff/force-app': Permission denied" ]]; then
       exit 
       # need to remove the ending before mkdir
       sudo mkdir $file
