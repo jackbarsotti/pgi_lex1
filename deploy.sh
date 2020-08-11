@@ -86,7 +86,7 @@ if [ "$BRANCH" == "LEX" ]; then
       #sudo cp "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
       #git restore --source master $file ... with /User (already staged too) path
     #elif
-    if [[ "$output" == "cp: cannot stat '$file': No such file or directory" ]]; then
+    if [[ "sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff" == "cp: cannot stat '$file': No such file or directory" ]]; then
       #git restore --staged --source master $file ...  OR
       echo 'HELLO'
       git checkout -q master $file
