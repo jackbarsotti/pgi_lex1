@@ -78,7 +78,7 @@ if [ "$BRANCH" == "LEX" ]; then
   while read -r file; do
     echo $file
     sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
-    output=$(sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff)
+    output=$(echo sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff)
     #if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
       #git restore --source master $file ... with /User (already staged too) path
     #elif
