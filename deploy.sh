@@ -53,7 +53,7 @@ if [ "$BRANCH" == "LEX" ]; then
     git checkout -qf ${branch#origin/}
   done;
   echo
-  git checkout master
+  git checkout LEX
   #sudo cp --parents $(git diff --name-only master) $DEPLOYDIR;
   #sudo cp --parents $(git diff --name-only master force-app/) $DEPLOYDIR;
 
