@@ -82,7 +82,7 @@ if [ "$BRANCH" == "LEX" ]; then
 
     touch file.txt
     echo $output>file.txt
-    #open file.txt |
+    open file.txt
     #while read -r output; do
     #outputfile=/Users/jackbarsotti/pgi_lex1/file.txt
       #if [ "$output" == "cp: cannot stat '$file': No such file or directory" ]; then
