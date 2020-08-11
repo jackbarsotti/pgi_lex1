@@ -22,7 +22,7 @@ echo "Build head: $build_head"
 echo
 git config --replace-all remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
 echo 'Running: git fetch'
-git fetch
+git fetch -q
 export BRANCH=$TRAVIS_BRANCH
 export branch=$TRAVIS_BRANCH
 echo
