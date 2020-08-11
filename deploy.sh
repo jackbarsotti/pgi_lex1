@@ -76,22 +76,22 @@ if [ "$BRANCH" == "LEX" ]; then
   pwd
   git diff --name-only master force-app/ |
   while read -r file; do
-    sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
+    sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff 2>/dev/null
     if [[ $file == *.cls ]]; then
-      find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} +
+      find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} + 2>/dev/null
     elif [[ $file == *.cls-meta.xml ]]; then
       parsedfile=${file%.cls-meta.xml}
-      find force-app/main/default/classes -samefile "$parsedfile.cls" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} +
+      find force-app/main/default/classes -samefile "$parsedfile.cls" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} + 2>/dev/null
     elif [[ $file == *Test.cls ]]; then
-      find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} +
+      find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} + 2>/dev/null
     elif [[ $file == *Test.cls-meta.xml ]]; then
       parsedfile=${file%.cls-meta.xml}
-      find force-app/main/default/classes -samefile "$parsedfile.cls" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} +
+      find force-app/main/default/classes -samefile "$parsedfile.cls" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} + 2>/dev/null
     elif [[ $file == *.trigger ]]; then
-      find force-app/main/default/triggers -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} +
+      find force-app/main/default/triggers -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} + 2>/dev/null
     elif [[ $file == *.trigger-meta.xml ]]; then
       parsedfile=${file%.trigger-meta.xml}
-      find force-app/main/default/triggers -samefile "$parsedfile.trigger" -exec sudo cp --parents -t /Users/jackbarsotti/pgi_lex/force-app/main/default/diff {} +
+      find force-app/main/default/triggers -samefile "$parsedfile.trigger" -exec sudo cp --parents -t /Users/jackbarsotti/pgi_lex/force-app/main/default/diff {} + 2>/dev/null
     fi
   done
   echo
