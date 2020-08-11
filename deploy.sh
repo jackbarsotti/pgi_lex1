@@ -36,7 +36,7 @@ export triggerPath=force-app/main/default/triggers
 
 #config section:
 #git config core.preloadIndex false
-#git config --global diff.renameLimit 9999999
+git config --global diff.renameLimit 9999999
 #ulimit -s 9999999
 #getconf ARG_MAX
 #git config http.postBuffer 524288000
@@ -96,9 +96,6 @@ if [ "$BRANCH" == "LEX" ]; then
   done
   echo
   echo 'git diff folder contents:'
+  echo
   ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default
-  ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/applications
-  #Sales_with_Console.app-meta.xml
-  ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/audience
-  #Default_Convey.audience-meta.xml
 fi;
