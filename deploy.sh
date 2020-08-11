@@ -83,13 +83,13 @@ if [ "$BRANCH" == "LEX" ]; then
     touch file.txt
     echo $output>file.txt |
     while read -r output; do
-    outputfile=/Users/jackbarsotti/pgi_lex1/file.txt
+    #outputfile=/Users/jackbarsotti/pgi_lex1/file.txt
       if [ "$output" == "cp: cannot stat '$file': No such file or directory" ]; then
       #git restore --staged --source master $file ...  OR
       echo 'HELLO'
       fi
     done
-    exit
+    
     #if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
       #git restore --source master $file ... with /User (already staged too) path
     #elif
