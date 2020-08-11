@@ -80,8 +80,8 @@ if [ "$BRANCH" == "LEX" ]; then
     sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
     output=$(echo sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff)
 
-    #touch file.txt
-    #echo $output>file.txt
+    touch file.txt
+    echo $output>file.txt
     #open file.txt |
     #while read -r output; do
     #outputfile=/Users/jackbarsotti/pgi_lex1/file.txt
