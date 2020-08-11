@@ -88,7 +88,7 @@ if [ "$BRANCH" == "LEX" ]; then
       git restore --staged --source master $file
       fi
     done
-  done
+  
     #if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
       #git restore --source master $file ... with /User (already staged too) path
     #elif
