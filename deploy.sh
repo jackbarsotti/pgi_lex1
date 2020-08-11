@@ -48,22 +48,22 @@ export triggerPath=force-app/main/default/triggers
 
 #sudo cp section
 echo 'sudo cp section:'
-if [ "$BRANCH" == "master" ]; then
+if [ "$BRANCH" == "LEX" ]; then
   for branch in $(git branch -r|grep -v HEAD); do
     git checkout -qf ${branch#origin/}
   done;
   echo
   git checkout master
-  #sudo cp --parents $(git diff --name-only LEX) $DEPLOYDIR;
-  #sudo cp --parents $(git diff --name-only LEX force-app/) $DEPLOYDIR;
+  #sudo cp --parents $(git diff --name-only master) $DEPLOYDIR;
+  #sudo cp --parents $(git diff --name-only master force-app/) $DEPLOYDIR;
 
   #ls force-app/main/default |
     #while read f; do
-      #sudo cp --parents $(git diff --name-only LEX force-app/main/default/$f) $DEPLOYDIR
+      #sudo cp --parents $(git diff --name-only master force-app/main/default/$f) $DEPLOYDIR
     #done; 
 
   #echo '---- git diff ----'
-  #git diff --name-only LEX force-app/ |
+  #git diff --name-only master force-app/ |
   #awk 'NR <= 5
     ##{ len += length($0)+1; c[NR%5] = $0 }
     #END { print("...");
@@ -74,7 +74,7 @@ if [ "$BRANCH" == "master" ]; then
   #touch force-app/main/default/aura/AssignToMe_LEX/AssignToMe_LEXHelper.js
   #sudo mkdir force-app/main/default/aura/CaseEmailRelatedListApp
   pwd
-  git diff --name-only LEX force-app/ |
+  git diff --name-only master force-app/ |
   while read -r file; do
     echo $file
     sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
@@ -85,9 +85,9 @@ if [ "$BRANCH" == "master" ]; then
       #sudo mkdir -p $file
       #sudo cp "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
     #elif
-    if [ "$output" == "cp: cannot stat '$file': No such file or directory" ]; then
+    if [[ $output == "cp: cannot stat '$file': No such file or directory" ]]; then
       touch $file
-      git checkout LEX $file
+      git checkout master $file
       sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
       #echo 'The file has been created and moved to diff folder. Disregard above error.'
     fi
