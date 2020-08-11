@@ -99,4 +99,7 @@ if [ "$BRANCH" == "LEX" ]; then
   echo 'git diff folder contents:'
   echo
   ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default
+  echo
+  echo 'Classes directory:'
+  ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/classes
 fi;
