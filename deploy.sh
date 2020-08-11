@@ -74,7 +74,7 @@ if [ "$BRANCH" == "LEX" ]; then
   #touch force-app/main/default/aura/AssignToMe_LEX/AssignToMe_LEXHelper.js
   #sudo mkdir force-app/main/default/aura/CaseEmailRelatedListApp
   pwd
-  git diff --name-only master force-app/ |
+  git diff --name-status master force-app/ |
   while read -r file; do
     echo $file
     sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
@@ -85,11 +85,10 @@ if [ "$BRANCH" == "LEX" ]; then
     outputfile=/Users/jackbarsotti/pgi_lex1/file.txt
     while read -r outputfile; do
       if [ "$output" == "cp: cannot stat '$file': No such file or directory" ]; then
-      #git restore --staged --source master $file ...  OR
-      echo 'HELLO'
+      git restore --staged --source master $file
       fi
     done
-    
+  done
     #if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
       #git restore --source master $file ... with /User (already staged too) path
     #elif
