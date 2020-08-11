@@ -88,7 +88,6 @@ if [ "$BRANCH" == "LEX" ]; then
       git checkout -q master $file
       sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
     fi
-    exit
     #if [[ $file == *.cls ]]; then
       #find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} +
     #elif [[ $file == *.cls-meta.xml ]]; then
