@@ -81,15 +81,14 @@ if [ "$BRANCH" == "LEX" ]; then
     output=$(echo sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff)
 
     touch file.txt
-    echo $output>file.txt
-    open file.txt
-    #while read -r output; do
-    #outputfile=/Users/jackbarsotti/pgi_lex1/file.txt
-      #if [ "$output" == "cp: cannot stat '$file': No such file or directory" ]; then
+    echo $output>file.txt |
+    while read -r output; do
+    outputfile=/Users/jackbarsotti/pgi_lex1/file.txt
+      if [ "$output" == "cp: cannot stat '$file': No such file or directory" ]; then
       #git restore --staged --source master $file ...  OR
-      #echo 'HELLO'
-      #fi
-    #done
+      echo 'HELLO'
+      fi
+    done
     exit
     #if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
       #git restore --source master $file ... with /User (already staged too) path
