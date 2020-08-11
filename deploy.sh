@@ -76,7 +76,6 @@ if [ "$BRANCH" == "LEX" ]; then
   echo 'Running the git diff...'
   git diff --name-only master force-app/ |
   while read -r file; do
-    echo $file
     sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff 2>/dev/null
     if [[ $file == *.cls ]]; then
       find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} + 2>/dev/null
