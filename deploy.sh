@@ -84,10 +84,12 @@ if [ "$BRANCH" == "LEX" ]; then
       #sudo mkdir $file
       #sudo mkdir -p $file
       #sudo cp "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
+      #git restore --source master $file ... with /User (already staged too) path
     #elif
     #if [[ $output == "cp: cannot stat '$file': No such file or directory" ]]; then
-      #git restore --staged --source master $file ... OR
-      git checkout -q master $file
+      #git restore --staged --source master $file ... with /User path, OR
+      git restore --staged --source master $file
+      #git checkout -q master $file
       sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
       #echo 'The file has been created and moved to diff folder. Disregard above error.'
     #fi
