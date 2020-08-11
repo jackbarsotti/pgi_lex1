@@ -82,8 +82,7 @@ if [ "$BRANCH" == "LEX" ]; then
     #if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
       #git restore --source master $file ... with /User (already staged too) path
     #elif
-    if [ "$BRANCH" == "LEX" ]; then
-    #if [ "$output" == "cp: cannot stat '$file': No such file or directory" ]; then
+    if [ "$output" == "cp: cannot stat '$file': No such file or directory" ]; then
       #git restore --staged --source master $file ...  OR
       echo 'HELLO'
       git checkout -q master $file
