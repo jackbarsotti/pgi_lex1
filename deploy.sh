@@ -76,10 +76,21 @@ if [ "$BRANCH" == "LEX" ]; then
   pwd
   git diff --name-only master force-app/ |
   while read -r file; do
-    #touch $file.txt
     echo $file
     sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
     output=$(echo sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff)
+
+    touch $file.txt
+    echo $output>$file.txt
+    open $file.txt |
+    while read -r output; do
+    outputfile=/Users/jackbarsotti/pgi_lex1/$file.txt
+      if [ "$output" == "cp: cannot stat '$file': No such file or directory" ]; then
+      #git restore --staged --source master $file ...  OR
+      echo 'HELLO'
+      fi
+    done
+
     #if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
       #git restore --source master $file ... with /User (already staged too) path
     #elif
@@ -89,11 +100,7 @@ if [ "$BRANCH" == "LEX" ]; then
       git checkout -q master $file
       sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
     fi
-    while [ "$BRANCH" == "LEX" ]; do
-      echo 'HELLO'
-    done
-    exit
-    #rm -f $file.txt
+    rm -f $file.txt
     #if [[ $file == *.cls ]]; then
       #find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} +
     #elif [[ $file == *.cls-meta.xml ]]; then
