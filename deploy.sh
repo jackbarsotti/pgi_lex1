@@ -73,9 +73,10 @@ if [ "$BRANCH" == "LEX" ]; then
   #echo '---- end diff ----'
   #touch force-app/main/default/aura/AssignToMe_LEX/AssignToMe_LEXHelper.js
   #sudo mkdir force-app/main/default/aura/CaseEmailRelatedListApp
-  pwd
+  echo 'Running the git diff...'
   git diff --name-only master force-app/ |
   while read -r file; do
+    echo $file
     sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff 2>/dev/null
     if [[ $file == *.cls ]]; then
       find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} + 2>/dev/null
