@@ -86,6 +86,7 @@ if [ "$BRANCH" == "LEX" ]; then
       #sudo cp "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
     #elif
     if [[ $output == "cp: cannot stat '$file': No such file or directory" ]]; then
+      echo 'HELLO'
       touch $file
       git checkout master $file
       sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
