@@ -85,13 +85,11 @@ if [ "$BRANCH" == "LEX" ]; then
       #sudo mkdir -p $file
       #sudo cp "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
     #elif
-    if [[ $output == "cp: cannot stat '$file': No such file or directory" ]]; then
-      echo 'HELLO'
-      touch $file
+    #if [[ $output == "cp: cannot stat '$file': No such file or directory" ]]; then
       git checkout master $file
       sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
       #echo 'The file has been created and moved to diff folder. Disregard above error.'
-    fi
+    #fi
 
     #if [[ $file == *.cls ]]; then
       #find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} +
