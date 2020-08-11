@@ -79,6 +79,7 @@ if [ "$BRANCH" == "LEX" ]; then
     echo $file
     sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
     export output=$(sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff)
+    while [ "$output" = "cp: cannot stat '$file': No such file or directory" ]; do
     #if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
       # need to remove the ending before mkdir
       #sudo mkdir $file
@@ -87,13 +88,13 @@ if [ "$BRANCH" == "LEX" ]; then
       #git restore --source master $file ... with /User (already staged too) path
     #elif
     #if [[ $output == "cp: cannot stat '$file': No such file or directory" ]]; then
-      #git restore --staged --source master $file ... with /User path, OR
-      git restore --staged --source master $file
-      #git checkout -q master $file
+      #git restore --staged --source master $file ...  OR
+      echo 'HELLO'
+      git checkout -q master $file
       sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
       #echo 'The file has been created and moved to diff folder. Disregard above error.'
     #fi
-
+    done
     #if [[ $file == *.cls ]]; then
       #find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} +
     #elif [[ $file == *.cls-meta.xml ]]; then
