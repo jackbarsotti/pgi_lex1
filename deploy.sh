@@ -74,8 +74,7 @@ if [ "$BRANCH" == "LEX" ]; then
   #touch force-app/main/default/aura/AssignToMe_LEX/AssignToMe_LEXHelper.js
   #sudo mkdir force-app/main/default/aura/CaseEmailRelatedListApp
   pwd
-  #need to remove the --name-status and change to --name-only
-  git diff --name-status master force-app/ |
+  git diff --name-only master force-app/ |
   while read -r file; do
     echo $file
     sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
