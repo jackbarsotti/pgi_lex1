@@ -80,18 +80,14 @@ if [ "$BRANCH" == "LEX" ]; then
     sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
     export output=$(sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff)
     #if [[ $output == "cp: failed to get attributes of '$file': No such file or directory" ]]; then
-      # need to remove the ending before mkdir
-      #sudo mkdir $file
-      #sudo mkdir -p $file
-      #sudo cp "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
       #git restore --source master $file ... with /User (already staged too) path
     #elif
-    if [[ "sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff" == "cp: cannot stat '$file': No such file or directory" ]]; then
+    if [ "$BRANCH" == "LEX" ]; then
+    #if [ "$output" == "cp: cannot stat '$file': No such file or directory" ]; then
       #git restore --staged --source master $file ...  OR
       echo 'HELLO'
       git checkout -q master $file
       sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
-      #echo 'The file has been created and moved to diff folder. Disregard above error.'
     fi
     #if [[ $file == *.cls ]]; then
       #find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t /Users/timbarsotti/pgi_lex/force-app/main/default/diff {} +
@@ -113,10 +109,8 @@ if [ "$BRANCH" == "LEX" ]; then
   echo
   echo 'git diff folder contents:'
   ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default
-  ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/aura/AssignToMe_LEX
-  #AssignToMe_LEXHelper.js
-  ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/classes
-  #toDelete1.cls and xml
-  #LeadCOnvertLEXController.cls and xml
-  #AssignToMeListBtnCaseController
+  ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/applications
+  #Sales_with_Console.app-meta.xml
+  ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/audience
+  #Default_Convey.audience-meta.xml
 fi;
