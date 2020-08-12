@@ -1,6 +1,6 @@
 #! /bin/bash
 # Exit on error:
-#set -e
+set -e
 
 #export SFDX_AUTOUPDATE_DISABLE=false
 #export SFDX_USE_GENERIC_UNIX_KEYCHAIN=true
@@ -15,17 +15,12 @@ export PATH=./sfdx/$(pwd):$PATH
 #sfdx --version
 #sfdx plugins --core
 sudo mkdir -p /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
-echo
-echo 'Running: export build_head=$(git rev-parse HEAD)'
 export build_head=$(git rev-parse HEAD)
-echo "Build head: $build_head"
-echo
 git config --replace-all remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
-echo 'Running: git fetch'
+echo 'Running a git fetch...'
 git fetch -q
 export BRANCH=$TRAVIS_BRANCH
 export branch=$TRAVIS_BRANCH
-echo
 echo "Travis branch: $TRAVIS_BRANCH"
 echo
 export userPath=/Users/timbarsotti/pgi_lex/force-app/main/default
@@ -34,45 +29,17 @@ export DEPLOYDIR=/Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
 export classPath=force-app/main/default/classes
 export triggerPath=force-app/main/default/triggers
 
-#config section:
-#git config core.preloadIndex false
 git config --global diff.renameLimit 9999999
-#ulimit -s 9999999
-#getconf ARG_MAX
-#git config http.postBuffer 524288000
-#git config --global pack.windowMemory "100m"
-#git config --global pack.packSizeLimit "100m"
-#git config --global pack.threads "1"
-#echo $(( $(getconf ARG_MAX) - $(env | wc -c) ))
-#expr `getconf ARG_MAX` - `env|wc -c` - `env|wc -l` \* 4 - 2048
 
-#sudo cp section
-echo 'sudo cp section:'
 if [ "$BRANCH" == "LEX" ]; then
+  echo 'Preparing for an incremental deployment to org...'
   for branch in $(git branch -r|grep -v HEAD); do
     git checkout -qf ${branch#origin/}
   done;
   echo
   git checkout LEX
-  #sudo cp --parents $(git diff --name-only master) $DEPLOYDIR;
-  #sudo cp --parents $(git diff --name-only master force-app/) $DEPLOYDIR;
-
-  #ls force-app/main/default |
-    #while read f; do
-      #sudo cp --parents $(git diff --name-only master force-app/main/default/$f) $DEPLOYDIR
-    #done; 
-
-  #echo '---- git diff ----'
+  echo '------ begin git diff ------'
   #git diff --name-only master force-app/ |
-  #awk 'NR <= 5
-    ##{ len += length($0)+1; c[NR%5] = $0 }
-    #END { print("...");
-        #for(i=4; i>=0; i--)
-          #print(c[(NR-i)%5]);
-        #print NR, len }'
-  #echo '---- end diff ----'
-  #touch force-app/main/default/aura/AssignToMe_LEX/AssignToMe_LEXHelper.js
-  #sudo mkdir force-app/main/default/aura/CaseEmailRelatedListApp
   echo 'Running the git diff...'
   git diff --name-only master force-app/ |
   while read -r file; do
@@ -94,11 +61,13 @@ if [ "$BRANCH" == "LEX" ]; then
       find force-app/main/default/triggers -samefile "$parsedfile.trigger" -exec sudo cp --parents -t /Users/jackbarsotti/pgi_lex/force-app/main/default/diff {} + 2>/dev/null
     fi
   done
+  echo echo '------ end diff ------'
   echo
-  echo 'git diff folder contents:'
+  echo 'Deployment directory contents:'
   echo
   ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default
   echo
-  echo 'Classes directory:'
+  echo 'Class files to be deployed:'
+  echo
   ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/classes
 fi;
