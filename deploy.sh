@@ -137,7 +137,7 @@ fi;
 
 # Store our auth-url for our targetEnvironment alias for deployment
 sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
-
+echo $DEPLOYDIR
 # Run apex tests and deploy apex classes/triggers
 #sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations/Conference__c-en_US
 sfdx force:org:display -u targetEnvironment
