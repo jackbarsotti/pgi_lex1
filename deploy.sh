@@ -1,5 +1,5 @@
 #! /bin/bash
-set -e
+
 #export SFDX_AUTOUPDATE_DISABLE=false
 #export SFDX_USE_GENERIC_UNIX_KEYCHAIN=true
 #export SFDX_DOMAIN_RETRY=300
