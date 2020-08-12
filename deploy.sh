@@ -1,5 +1,5 @@
 #! /bin/bash
-
+set -e
 #export SFDX_AUTOUPDATE_DISABLE=false
 #export SFDX_USE_GENERIC_UNIX_KEYCHAIN=true
 #export SFDX_DOMAIN_RETRY=300
@@ -39,7 +39,6 @@ if [ "$BRANCH" == "LEX" ]; then
   git checkout LEX
   echo
   echo 'Running a git diff...'
-  echo
   git diff --name-only master force-app/ |
   while read -r file; do
     sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff 2>/dev/null
@@ -62,7 +61,7 @@ if [ "$BRANCH" == "LEX" ]; then
   done
   echo 'Complete.'
   echo
-  echo 'Deployment directory contents:'
+  echo 'Deployment directory includes:'
   echo
   ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default
   echo
