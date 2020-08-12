@@ -127,7 +127,7 @@ git checkout $build_head
 # Only validate, not deploy, when a pull request is being created
   # When a pull request is MERGED, deploy it
 if [ "$BRANCH" == "LEX" ]; then
-  #echo $SFDXAUTHURLLEX>authtravisci.txt;
+  echo $SFDX_AUTH_URL_LEX>authtravisci.txt;
   if [ "$TRAVIS_EVENT_TYPE" == "pull_request" ]; then
     export TESTLEVEL="RunSpecifiedTests -r $parsedList -c";
   else
@@ -136,13 +136,10 @@ if [ "$BRANCH" == "LEX" ]; then
 fi;
 
 # Store our auth-url for our targetEnvironment alias for deployment
-#sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
-
-# Create error message to account for potential deployment failure
-export deployErrorMsg='There was an issue deploying. Check ORG deployment status page for details.'
+sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
 
 # Run apex tests and deploy apex classes/triggers
-#sfdx force:org:display -u targetEnvironment
-#sfdx force:source:deploy -w 10 -p $DEPLOYDIR -l $TESTLEVEL -u targetEnvironment
+sfdx force:org:display -u targetEnvironment
+sfdx force:source:deploy -w 10 -p $DEPLOYDIR -l $TESTLEVEL -u targetEnvironment
 echo
 echo 'Build complete. Check ORG deployment status page for details.' 
