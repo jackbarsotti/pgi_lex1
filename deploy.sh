@@ -139,7 +139,7 @@ fi;
 sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
 
 # Run apex tests and deploy apex classes/triggers
-rm -f /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations/Conference__c-en_US
+rmdir -f /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations/Conference__c-en_US
 sudo chown -R $(whoami):staff /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations/Conference__c-en_US
 sfdx force:org:display -u targetEnvironment
 sfdx force:source:deploy -w 10 -p $DEPLOYDIR -l $TESTLEVEL -u targetEnvironment
