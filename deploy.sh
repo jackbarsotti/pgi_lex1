@@ -14,7 +14,7 @@ export SFDX_DOMAIN_RETRY=300
 export SFDX_DISABLE_APP_HUB=true
 export SFDX_LOG_LEVEL=DEBUG
 echo 'mkdir sfdx...'
-mkdir sfdx
+sudo mkdir sfdx
 wget -qO- $URL | tar xJ -C sfdx --strip-components 1
 "./sfdx/install"
 export PATH=./sfdx/$(pwd):$PATH
@@ -63,7 +63,7 @@ if [ "$BRANCH" == "LEX" ]; then
   echo
   git checkout LEX
   echo
-  echo 'Running a git diff...'
+  echo 'Running a git diff, please wait...'
   git diff --name-only master force-app/ |
   while read -r file; do
     # Copy the files from git diff into the deploy directory
@@ -142,4 +142,4 @@ export deployErrorMsg='There was an issue deploying. Check ORG deployment status
 #sfdx force:org:display -u targetEnvironment
 #sfdx force:source:deploy -w 10 -p $DEPLOYDIR -l $TESTLEVEL -u targetEnvironment
 echo
-echo 'Build complete. Check ORG deployment status page for details. 
+echo 'Build complete. Check ORG deployment status page for details.' 
