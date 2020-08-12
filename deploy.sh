@@ -14,7 +14,7 @@ export SFDX_DOMAIN_RETRY=300
 export SFDX_DISABLE_APP_HUB=true
 export SFDX_LOG_LEVEL=DEBUG
 echo 'mkdir sfdx...'
-sudo mkdir sfdx
+mkdir sfdx
 wget -qO- $URL | tar xJ -C sfdx --strip-components 1
 "./sfdx/install"
 export PATH=./sfdx/$(pwd):$PATH
