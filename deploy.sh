@@ -15,11 +15,13 @@ export PATH=./sfdx/$(pwd):$PATH
 sudo mkdir -p /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
 export build_head=$(git rev-parse HEAD)
 git config --replace-all remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
-echo | echo 'Running a git fetch...'
+echo
+echo 'Running a git fetch...'
 git fetch -q
 export BRANCH=$TRAVIS_BRANCH
 export branch=$TRAVIS_BRANCH
-echo "Travis branch: $TRAVIS_BRANCH" | echo
+echo "Travis branch: $TRAVIS_BRANCH" 
+echo
 export userPath=/Users/timbarsotti/pgi_lex/force-app/main/default
 export diffPath=/diff/force-app/main/default
 export DEPLOYDIR=/Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
@@ -35,7 +37,9 @@ if [ "$BRANCH" == "LEX" ]; then
   done;
   echo
   git checkout LEX
-  echo | echo 'Running a git diff...' | echo
+  echo
+  echo 'Running a git diff...'
+  echo
   git diff --name-only master force-app/ |
   while read -r file; do
     sudo cp --parents "$file" /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff 2>/dev/null
@@ -56,9 +60,13 @@ if [ "$BRANCH" == "LEX" ]; then
       find force-app/main/default/triggers -samefile "$parsedfile.trigger" -exec sudo cp --parents -t /Users/jackbarsotti/pgi_lex/force-app/main/default/diff {} + 2>/dev/null
     fi
   done
-  echo 'Complete.' | echo
-  echo 'Deployment directory contents:' | echo
-  ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default | echo
-  echo 'Class files to be deployed:' | echo
+  echo 'Complete.'
+  echo
+  echo 'Deployment directory contents:'
+  echo
+  ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default
+  echo
+  echo 'Class files to be deployed:'
+  echo
   ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/classes
 fi;
