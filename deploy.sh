@@ -12,7 +12,7 @@ export SFDX_AUTOUPDATE_DISABLE=false
 export SFDX_USE_GENERIC_UNIX_KEYCHAIN=true
 export SFDX_DOMAIN_RETRY=300
 export SFDX_DISABLE_APP_HUB=true
-xport SFDX_LOG_LEVEL=DEBUG
+export SFDX_LOG_LEVEL=DEBUG
 echo 'mkdir sfdx...'
 mkdir sfdx
 wget -qO- $URL | tar xJ -C sfdx --strip-components 1
@@ -70,20 +70,20 @@ if [ "$BRANCH" == "LEX" ]; then
     sudo cp --parents "$file" $DEPLOYDIR 2>/dev/null
     # For any changed class or trigger file, it's associated meta data file is copied to the deploy directory (and vice versa):
     if [[ $file == *.cls ]]; then
-      find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
+      find $classPath -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
     elif [[ $file == *.cls-meta.xml ]]; then
       parsedfile=${file%.cls-meta.xml}
-      find force-app/main/default/classes -samefile "$parsedfile.cls" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
+      find $classPath -samefile "$parsedfile.cls" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
     elif [[ $file == *Test.cls ]]; then
-      find force-app/main/default/classes -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
+      find $classPath -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
     elif [[ $file == *Test.cls-meta.xml ]]; then
       parsedfile=${file%.cls-meta.xml}
-      find force-app/main/default/classes -samefile "$parsedfile.cls" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
+      find $classPath -samefile "$parsedfile.cls" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
     elif [[ $file == *.trigger ]]; then
-      find force-app/main/default/triggers -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
+      find $triggerPath -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
     elif [[ $file == *.trigger-meta.xml ]]; then
       parsedfile=${file%.trigger-meta.xml}
-      find force-app/main/default/triggers -samefile "$parsedfile.trigger" -exec sudo cp --parents -t /Users/jackbarsotti/pgi_lex/force-app/main/default/diff {} + 2>/dev/null
+      find $triggerPath -samefile "$parsedfile.trigger" -exec sudo cp --parents -t /Users/jackbarsotti/pgi_lex/force-app/main/default/diff {} + 2>/dev/null
     fi
   done
   echo 'Complete.'
@@ -111,9 +111,11 @@ for testfiles in $classTests; do
   export parsed=${parsed##*/};
   export parsed=${parsed%.cls*};
   export parsedList="${parsedList}${parsed},";
-done;
+done; 
 
 # Finally, go back to the HEAD from earlier
+git config advice.detachedHead false
+echo 'Running: git checkout $build_head'
 git checkout $build_head
 
 # Automatically authenticate against current branch's corresponding SalesForce org
@@ -130,7 +132,7 @@ if [ "$BRANCH" == "LEX" ]; then
 fi;
 
 # Store our auth-url for our targetEnvironment alias for deployment
-sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
+#sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
 
 # Create error message to account for potential deployment failure
 export deployErrorMsg='There was an issue deploying. Check ORG deployment status page for details.'
