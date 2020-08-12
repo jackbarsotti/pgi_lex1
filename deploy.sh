@@ -14,15 +14,14 @@ export SFDX_DOMAIN_RETRY=300
 export SFDX_DISABLE_APP_HUB=true
 export SFDX_LOG_LEVEL=DEBUG
 echo 'mkdir sfdx...'
-mkdir sfdx
+mkdir sfdx 2>/dev/null
 wget -qO- $URL | tar xJ -C sfdx --strip-components 1
 "./sfdx/install"
 export PATH=./sfdx/$(pwd):$PATH
 sfdx --version
 sfdx plugins --core
 
-# Create temporary diff folder to paste files into later for incremental deployment
-  # This is the deploy directory (see below in before_script)
+# Create temporary diff folder (deploy directory) to paste files into later for incremental deployment
 sudo mkdir -p /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
 
 # Pull our local branches so they exist locally
@@ -107,7 +106,7 @@ export unparsedTestsDir=/Users/jackbarsotti/pgi_lex1/force-app/main/default/unpa
 # Search the local "classes" folder for <className>Test.cls files
 export classTests=$(find $classPath -name "*Test.cls")
 # Parse the <className>Test.cls filenames to remove each file's path and ".cls" ending, result: <className>Test
-# Exports as a string that will be called in the deploy command in script phase IF branch is dev or qa
+# Exports as a string that will be called in the deploy command in script phase IF branch is LEX
 export parsedList=''
 for testfiles in $classTests; do
   sudo cp "$testfiles"* $unparsedTestsDir;
@@ -124,7 +123,7 @@ echo 'Running: git checkout $build_head'
 git checkout $build_head
 
 # Automatically authenticate against current branch's corresponding SalesForce org
-# Create deployment variable for "sfdx:force:source:deploy RunSpecifiedTests -r <variable>" (see script phase below)
+# Create deployment variable for "sfdx:force:source:deploy RunSpecifiedTests -r <variable>"
 # Only validate, not deploy, when a pull request is being created
   # When a pull request is MERGED, deploy it
 if [ "$BRANCH" == "LEX" ]; then
