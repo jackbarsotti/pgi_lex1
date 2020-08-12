@@ -27,7 +27,10 @@ sudo mkdir -p /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
 
 # Pull our local branches so they exist locally
 # We are on a detached head, so we keep track of where Travis puts us
+echo
+echo 'Running: export build_head=$(git rev-parse HEAD)'
 export build_head=$(git rev-parse HEAD)
+echo "Build head: $build_head"
 
 # Overwrite remote.origin.fetch to fetch the remote branches (overrides Travis's --depth clone)
 git config --replace-all remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
@@ -45,6 +48,7 @@ echo "Travis branch: $TRAVIS_BRANCH"
 echo
 export userPath=/Users/jackbarsotti/pgi_lex1/force-app/main/default
 export diffPath=/diff/force-app/main/default
+# For a full build, deploy directory should be "- export DEPLOYDIR=force-app/main/default":
 export DEPLOYDIR=/Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
 export classPath=force-app/main/default/classes
 export triggerPath=force-app/main/default/triggers
