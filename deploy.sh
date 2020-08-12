@@ -143,6 +143,6 @@ sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
 #sudo chown -R $(whoami):staff /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations/Conference__c-en_US
 echo $DEPLOYDIR
 sfdx force:org:display -u targetEnvironment
-sfdx force:source:deploy -w 10 -p $DEPLOYDIR/classes -l $TESTLEVEL -u targetEnvironment
+sfdx force:source:deploy -w 10 -p $DEPLOYDIR -l $TESTLEVEL -u targetEnvironment
 echo
 echo 'Build complete. Check ORG deployment status page for details.' 
