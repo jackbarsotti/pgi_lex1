@@ -86,8 +86,8 @@ if [ "$BRANCH" == "LEX" ]; then
     elif [[ $file == *.trigger-meta.xml ]]; then
       parsedfile=${file%.trigger-meta.xml}
       find $triggerPath -samefile "$parsedfile.trigger" -exec sudo cp --parents -t /Users/jackbarsotti/pgi_lex/force-app/main/default/diff {} + 2>/dev/null
-    elif [[ $file == *.page ]]; then
-      find force-app/main/default/pages -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
+    #elif [[ $file == *.page ]]; then
+      #find force-app/main/default/pages -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
     elif [[ $file == *Activity-bg.objectTranslation-meta.xml ]]; then
       sudo cp --parents $FILE -t $DEPLOYDIR {}
     fi
