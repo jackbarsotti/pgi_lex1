@@ -88,12 +88,11 @@ if [ "$BRANCH" == "LEX" ]; then
       find $triggerPath -samefile "$parsedfile.trigger" -exec sudo cp --parents -t /Users/jackbarsotti/pgi_lex/force-app/main/default/diff {} + 2>/dev/null
     elif [[ $file == *.page ]]; then
       find force-app/main/default/pages -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
-    elif [[ $file == *.objectTranslation ]]; then
-      echo $file
+    elif [[ $file == *Activity-bg.objectTranslation ]]; then
       find force-app/main/default/objectTranslations/Activity-bg -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {}
     fi
   done
-  ls $DEPLOYDIR/force-app/main/default/objectTranslations
+  ls $DEPLOYDIR/force-app/main/default/objectTranslations/Activity-bg
   #echo 'Complete.'
   #echo
   #echo 'Deployment directory includes:'
