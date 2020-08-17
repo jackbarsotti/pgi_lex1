@@ -92,7 +92,7 @@ if [ "$BRANCH" == "LEX" ]; then
       find force-app/main/default/objectTranslations/Activity-bg -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {}
     fi
   done
-  echo ls $DEPLOYDIR/force-app/main/default/objectTranslations
+  ls $DEPLOYDIR/force-app/main/default/objectTranslations
   #echo 'Complete.'
   #echo
   #echo 'Deployment directory includes:'
