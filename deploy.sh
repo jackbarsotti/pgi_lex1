@@ -86,8 +86,8 @@ if [ "$BRANCH" == "LEX" ]; then
     elif [[ $file == *.trigger-meta.xml ]]; then
       parsedfile=${file%.trigger-meta.xml}
       find $triggerPath -samefile "$parsedfile.trigger" -exec sudo cp --parents -t /Users/jackbarsotti/pgi_lex/force-app/main/default/diff {} + 2>/dev/null
-    #elif [[ $file == *.page ]]; then
-      #find force-app/main/default/pages -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
+    elif [[ $file == *.page ]]; then
+      find force-app/main/default/pages -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
     elif [[ $file == *Activity-bg.objectTranslation-meta.xml ]]; then
       sudo cp --parents $FILE -t $DEPLOYDIR {}
     fi
@@ -146,6 +146,7 @@ sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
 #sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objects
 #sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations
 #sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/pages/popUp.page
+sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations/Activity-bg
 sudo sfdx force:org:display -u targetEnvironment
 sudo sfdx force:source:deploy -w 10 -p $DEPLOYDIR -l $TESTLEVEL -u targetEnvironment
 echo
