@@ -95,8 +95,8 @@ if [ "$BRANCH" == "LEX" ]; then
       sudo cp --parents $FILE -t $DEPLOYDIR {}
     fi
   done
-  sudo cp --parents /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations/Activity-bg/Activity-bg.objectTranslation-meta.xml $DEPLOYDIR
-  ls $DEPLOYDIR/force-app/main/default/objectTranslations/Activity-bg
+  #sudo cp /Users/jackbarsotti/pgi_lex1/force-app/main/default/objectTranslations/Activity-bg/Activity-bg.objectTranslation-meta.xml $DEPLOYDIR
+  #ls $DEPLOYDIR/force-app/main/default/objectTranslations/Activity-bg
   #echo 'Complete.'
   #echo
   #echo 'Deployment directory includes:'
@@ -148,7 +148,7 @@ sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
 # Run apex tests and deploy apex classes/triggers
 #sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations/Conference__c-en_US
 #sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objects
-#sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations
+sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations
 #sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/pages/popUp.page
 #sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations/Activity-bg
 sudo sfdx force:org:display -u targetEnvironment
