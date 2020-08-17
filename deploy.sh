@@ -97,6 +97,7 @@ if [ "$BRANCH" == "LEX" ]; then
       sudo cp --parents $FILE -t $DEPLOYDIR {}
     fi
   done
+  sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/objectTranslations//Activity-bg/Activity-bg.objectTranslation-meta.xml
   #sudo cp /Users/jackbarsotti/pgi_lex1/force-app/main/default/objectTranslations/Activity-bg/Activity-bg.objectTranslation-meta.xml $DEPLOYDIR
   ls $DEPLOYDIR/force-app/main/default/objectTranslations/Activity-bg
   #echo 'Complete.'
