@@ -100,7 +100,7 @@ if [ "$BRANCH" == "LEX" ]; then
   #sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objects
   #sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/objectTranslations
   #sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/objects
-  sudo cp force-app/main/default/objectTranslations/ -t $DEPLOYDIR
+  sudo cp force-app/main/default/objectTranslations -t $DEPLOYDIR
   echo "/diff/force-app/main/default/objectTranslations/Activity-cs directory:"
   ls $DEPLOYDIR/force-app/main/default/objectTranslations/Activity-cs  
   echo 'Complete.'
