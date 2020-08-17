@@ -93,7 +93,10 @@ if [ "$BRANCH" == "LEX" ]; then
     fi
   done
   #sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations/Activity-bg/Activity-bg.objectTranslation-meta.xml
-  #sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations
+  sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations
+  sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objects
+  sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/objectTranslations
+  sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/objects
   #sudo cp /Users/jackbarsotti/pgi_lex1/force-app/main/default/objectTranslations/Activity-bg/Activity-bg.objectTranslation-meta.xml -t $DEPLOYDIR
   ls $DEPLOYDIR/force-app/main/default/objectTranslations/Activity-cs  
   #echo 'Complete.'
