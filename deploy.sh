@@ -54,7 +54,10 @@ export triggerPath=force-app/main/default/triggers
 
 # Ensure that "inexact rename detection" error isn't skipped due to too many files
 git config --global diff.renameLimit 9999999
-
+sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations
+sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objects
+sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/objectTranslations
+sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/objects
 # Run a git diff for the incremental build depending on checked-out branch (if-statement per branch)
 # LEX branch:
 #sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/objectTranslations/Activity-bg/Activity-bg.objectTranslation-meta.xml
@@ -144,7 +147,10 @@ if [ "$BRANCH" == "LEX" ]; then
     export TESTLEVEL="RunSpecifiedTests -r $parsedList";
   fi;
 fi;
-
+sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations
+sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objects
+sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/objectTranslations
+sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/objects
 # Store our auth-url for our targetEnvironment alias for deployment
 sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
 # Run apex tests and deploy apex classes/triggers
