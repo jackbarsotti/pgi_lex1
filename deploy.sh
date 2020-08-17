@@ -57,8 +57,8 @@ git config --global diff.renameLimit 9999999
 
 # Run a git diff for the incremental build depending on checked-out branch (if-statement per branch)
 # LEX branch:
-#sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/objectTranslations/Activity-bg/Activity-bg.objectTranslation-meta.xml
-#sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/objects
+sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/objectTranslations/Activity-bg/Activity-bg.objectTranslation-meta.xml
+sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/objects
 if [ "$BRANCH" == "LEX" ]; then
   #create tracking branch
   echo 'Preparing for an incremental deployment to org...'
@@ -97,7 +97,8 @@ if [ "$BRANCH" == "LEX" ]; then
       sudo cp --parents $FILE -t $DEPLOYDIR {}
     fi
   done
-  sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/objectTranslations/Activity-bg/Activity-bg.objectTranslation-meta.xml
+  sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations/Activity-bg/Activity-bg.objectTranslation-meta.xml
+  sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations
   #sudo cp /Users/jackbarsotti/pgi_lex1/force-app/main/default/objectTranslations/Activity-bg/Activity-bg.objectTranslation-meta.xml $DEPLOYDIR
   ls $DEPLOYDIR/force-app/main/default/objectTranslations/Activity-bg
   #echo 'Complete.'
