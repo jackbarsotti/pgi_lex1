@@ -134,7 +134,7 @@ if [ "$BRANCH" == "LEX" ]; then
     export TESTLEVEL="RunSpecifiedTests -r $parsedList";
   fi;
 fi;
-
+id -un
 # Store our auth-url for our targetEnvironment alias for deployment
 sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
 # Run apex tests and deploy apex classes/triggers
