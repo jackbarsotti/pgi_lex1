@@ -97,7 +97,7 @@ if [ "$BRANCH" == "LEX" ]; then
     fi
   done
   #sudo cp /Users/jackbarsotti/pgi_lex1/force-app/main/default/objectTranslations/Activity-bg/Activity-bg.objectTranslation-meta.xml $DEPLOYDIR
-  #ls $DEPLOYDIR/force-app/main/default/objectTranslations/Activity-bg
+  ls $DEPLOYDIR/force-app/main/default/objectTranslations/Activity-bg
   #echo 'Complete.'
   #echo
   #echo 'Deployment directory includes:'
