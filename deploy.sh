@@ -89,6 +89,7 @@ if [ "$BRANCH" == "LEX" ]; then
     elif [[ $file == *.page ]]; then
       find force-app/main/default/pages -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
     elif [[ $file == *.objectTranslation ]]; then
+      echo $file
       find force-app/main/default/objectTranslations/Activity-bg -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {}
     fi
   done
