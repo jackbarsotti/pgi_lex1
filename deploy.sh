@@ -90,7 +90,7 @@ if [ "$BRANCH" == "LEX" ]; then
     elif [[ $file == *.page ]]; then
       find force-app/main/default/pages -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
     elif [[ $file == *Translation ]]; then
-      find force-app/main/default/objectTranslations -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
+      find force-app/main/default/objectTranslations -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {}
     fi
   done
   echo 'Complete.'
