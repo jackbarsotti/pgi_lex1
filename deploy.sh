@@ -63,7 +63,6 @@ if [ "$BRANCH" == "LEX" ]; then
   for branch in $(git branch -r|grep -v HEAD); do
     git checkout -qf ${branch#origin/}
   done;
-  echo
   git checkout LEX
   echo
   echo 'Running a git diff, please wait...'
@@ -90,18 +89,18 @@ if [ "$BRANCH" == "LEX" ]; then
     elif [[ $file == *.page ]]; then
       find force-app/main/default/pages -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
     elif [[ $file == *Translation ]]; then
-      find force-app/main/default/objectTranslations -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {}
+      find force-app/main/default/objectTranslations/Activity-bg -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {}
     fi
   done
-  echo 'Complete.'
-  echo
-  echo 'Deployment directory includes:'
-  echo
-  ls $DEPLOYDIR/force-app/main/default
-  echo
-  echo 'Class files to be deployed:'
-  echo
-  ls $DEPLOYDIR/force-app/main/default/classes
+  #echo 'Complete.'
+  #echo
+  #echo 'Deployment directory includes:'
+  #echo
+  #ls $DEPLOYDIR/force-app/main/default
+  #echo
+  #echo 'Class files to be deployed:'
+  #echo
+  #ls $DEPLOYDIR/force-app/main/default/classes
 fi;
 
 # Make temporary folder for our <className>Test.cls files that will be parsed
