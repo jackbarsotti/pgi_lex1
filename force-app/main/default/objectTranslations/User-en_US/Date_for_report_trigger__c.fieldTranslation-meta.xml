@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Date for Report Trigger --></label>
-    <name>Date_for_report_trigger__c</name>
-</CustomFieldTranslation>

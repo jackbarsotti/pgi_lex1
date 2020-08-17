@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This displays approximate days that this record had the Implementation Stage set to include On Hold. --></help>
-    <label><!-- Days at On Hold Status --></label>
-    <name>Days_at_on_Hold_Status__c</name>
-</CustomFieldTranslation>

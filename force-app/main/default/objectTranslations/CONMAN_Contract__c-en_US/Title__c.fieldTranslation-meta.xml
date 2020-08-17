@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- The title that appears at the top of the Contract Document --></help>
-    <label><!-- Contract Title --></label>
-    <name>Title__c</name>
-</CustomFieldTranslation>

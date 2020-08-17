@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Existing Bill-to Client ID --></label>
-    <name>NCS_Existing_BillTo_Client_ID__c</name>
-</CustomFieldTranslation>

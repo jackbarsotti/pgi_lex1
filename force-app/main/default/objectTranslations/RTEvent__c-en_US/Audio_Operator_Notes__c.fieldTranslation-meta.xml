@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This field is visible to InterCall Operators via the ReadyTalk Workspace.  It updates approximately every one minute. --></help>
-    <label><!-- Operator Workspace Notes --></label>
-    <name>Audio_Operator_Notes__c</name>
-</CustomFieldTranslation>

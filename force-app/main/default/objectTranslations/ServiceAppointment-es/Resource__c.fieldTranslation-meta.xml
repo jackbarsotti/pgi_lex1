@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Resource --></label>
-    <lookupFilter>
-        <errorMessage><!-- Value does not match any active resources. --></errorMessage>
-    </lookupFilter>
-    <name>Resource__c</name>
-    <relationshipLabel><!-- FSL Roles --></relationshipLabel>
-</CustomFieldTranslation>

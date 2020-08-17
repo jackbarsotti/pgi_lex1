@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- SW Tag Lead Score --></label>
-    <name>saleswings__SW_Tag_Lead_Score__c</name>
-</CustomFieldTranslation>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- previously or also known as &quot;international country code&quot; --></help>
-    <label><!-- PGi Company&apos;s Business Unit --></label>
-    <name>PGi_Company_s_Business_Unit__c</name>
-</CustomFieldTranslation>

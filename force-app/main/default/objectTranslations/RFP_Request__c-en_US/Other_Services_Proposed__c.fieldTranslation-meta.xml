@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Add for &quot;other&quot; or &quot;additional&quot; services proposed. --></help>
-    <label><!-- Other Services Proposed --></label>
-    <name>Other_Services_Proposed__c</name>
-</CustomFieldTranslation>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Number of Potential New Opportunities * Active Order Licensed Amount --></help>
-    <label><!-- Adjusted Annual Opportunity Value --></label>
-    <name>Adjusted_Annual_Opportunity_Value__c</name>
-</CustomFieldTranslation>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Does this PGi Contract have any attachments? --></help>
-    <label><!-- Has Attachment(s) --></label>
-    <name>Has_Attachment__c</name>
-</CustomFieldTranslation>

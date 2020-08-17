@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Denotes whether person is within EU, based on ZoomInfo person location. email and phone data. --></help>
-    <label><!-- Person Within EU --></label>
-    <name>zisf__Person_Within_EU__c</name>
-</CustomFieldTranslation>

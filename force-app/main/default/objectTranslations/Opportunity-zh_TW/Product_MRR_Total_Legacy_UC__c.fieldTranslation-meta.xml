@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Product MRR Total (Legacy UC) --></label>
-    <name>Product_MRR_Total_Legacy_UC__c</name>
-</CustomFieldTranslation>

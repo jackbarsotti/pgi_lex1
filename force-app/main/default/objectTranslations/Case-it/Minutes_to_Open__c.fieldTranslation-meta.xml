@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Minutes spent with customer while opening case --></help>
-    <label><!-- Minutes to Open --></label>
-    <name>Minutes_to_Open__c</name>
-</CustomFieldTranslation>

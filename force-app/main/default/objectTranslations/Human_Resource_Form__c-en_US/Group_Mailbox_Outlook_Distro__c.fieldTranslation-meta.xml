@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Grant access to this Group Mailbox and/or Outlook Distribution list(s) --></help>
-    <label><!-- Group Mailbox/Outlook Distro --></label>
-    <name>Group_Mailbox_Outlook_Distro__c</name>
-</CustomFieldTranslation>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- If Outage is ‘yes’, fill in the location of the work (or the place where the work will impact). --></help>
-    <label><!-- Outage Location --></label>
-    <name>Outage_Location__c</name>
-</CustomFieldTranslation>

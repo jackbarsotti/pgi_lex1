@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- The # of Employees Global of the related D&amp;B company if the Account has been cleaned and matched to a D&amp;B company. --></help>
-    <label><!-- D&amp;B&apos;s # of Employees Globally --></label>
-    <name>DBsofEmployeesGlobally__c</name>
-</CustomFieldTranslation>

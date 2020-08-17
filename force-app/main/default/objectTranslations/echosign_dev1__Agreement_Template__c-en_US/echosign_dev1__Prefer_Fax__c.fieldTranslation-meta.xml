@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- When sending an agreement for written signature, use the fax number for the contact if available --></help>
-    <label><!-- Use Fax Number --></label>
-    <name>echosign_dev1__Prefer_Fax__c</name>
-</CustomFieldTranslation>

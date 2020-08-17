@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Set this if you want a newly created lead with this Omniture Campaign Code to be assigned to a user or a queue --></help>
-    <label><!-- Set Lead Owner --></label>
-    <name>Set_Lead_Owner__c</name>
-</CustomFieldTranslation>

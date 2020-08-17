@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This is the time the user spent talking to the other party. This does not include talk time of any conversations before the call was transferred to the user. --></help>
-    <label><!-- CallUserTalkSeconds --></label>
-    <name>CallTalkSeconds__c</name>
-</CustomFieldTranslation>

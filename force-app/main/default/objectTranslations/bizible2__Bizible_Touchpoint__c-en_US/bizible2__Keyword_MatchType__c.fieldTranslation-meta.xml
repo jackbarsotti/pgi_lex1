@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- The level of matching with the keyword (ex. phrase, broad) --></help>
-    <label><!-- Keyword MatchType --></label>
-    <name>bizible2__Keyword_MatchType__c</name>
-</CustomFieldTranslation>

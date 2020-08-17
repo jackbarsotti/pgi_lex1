@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- When should CTI wrapup show the &apos;disregard call&apos; button which when pressed skips logging the call in SF --></help>
-    <label><!-- Offer Skip Wrapup Conditions --></label>
-    <name>natterbox__Offer_Skip_Wrapup_Conditions__c</name>
-</CustomFieldTranslation>

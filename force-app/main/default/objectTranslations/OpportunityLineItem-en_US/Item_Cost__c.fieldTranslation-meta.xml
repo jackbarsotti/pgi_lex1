@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- The cost only needs to be entered on Third Party items.  It will automatically be calculated on Modality Products and Services. --></help>
-    <label><!-- Item Cost --></label>
-    <name>Item_Cost__c</name>
-</CustomFieldTranslation>

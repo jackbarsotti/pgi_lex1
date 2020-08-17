@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- 6sense Account Score --></label>
-    <name>sixsense__X6sense_Account_Score__c</name>
-    <relationshipLabel><!-- 6sense Account Score Chatters --></relationshipLabel>
-</CustomFieldTranslation>

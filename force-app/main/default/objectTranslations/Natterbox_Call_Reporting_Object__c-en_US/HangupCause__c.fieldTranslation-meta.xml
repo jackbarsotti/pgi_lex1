@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This is the reason the call was terminated. This field will be useful in showing any potential call errors. --></help>
-    <label><!-- HangupCause --></label>
-    <name>HangupCause__c</name>
-</CustomFieldTranslation>

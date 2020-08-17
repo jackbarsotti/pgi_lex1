@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Read Only - Please populate at this field Account level --></help>
-    <label><!-- Technology Platforms --></label>
-    <name>Technology_Platforms__c</name>
-</CustomFieldTranslation>

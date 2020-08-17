@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Number of days that it took to complete the task group. --></help>
-    <label><!-- Actual Duration --></label>
-    <name>TASKRAY__trActualDuration__c</name>
-</CustomFieldTranslation>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Supports recursive matches of chained dependencies --></help>
-    <label><!-- Parent Dependency --></label>
-    <name>ddcdf__Parent_Dependency__c</name>
-    <relationshipLabel><!-- Recursive Dependencies --></relationshipLabel>
-</CustomFieldTranslation>

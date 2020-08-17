@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Totango Active users (last 14 days) --></label>
-    <name>Totango_Active_users_last_14_days__c</name>
-</CustomFieldTranslation>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- The Type of call recipient:
-User: A Natterbox User
-Device: A VOIP Phone
-External: Phone number being called was external --></help>
-    <label><!-- ConnectedType --></label>
-    <name>ConnectedType__c</name>
-</CustomFieldTranslation>

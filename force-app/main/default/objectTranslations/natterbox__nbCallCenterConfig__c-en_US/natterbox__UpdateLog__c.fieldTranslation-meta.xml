@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Check this if your dialplan policy is generating logs, or leave unchecked to have the CTI generate its own logs. --></help>
-    <label><!-- Update Policy Generated Log --></label>
-    <name>natterbox__UpdateLog__c</name>
-</CustomFieldTranslation>

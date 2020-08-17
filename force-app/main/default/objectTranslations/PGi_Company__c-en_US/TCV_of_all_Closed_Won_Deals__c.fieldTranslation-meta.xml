@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- TCV of all Closed Won Deals --></label>
-    <name>TCV_of_all_Closed_Won_Deals__c</name>
-</CustomFieldTranslation>

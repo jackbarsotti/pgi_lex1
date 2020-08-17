@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Revenue range associated with Company. --></help>
-    <label><!-- Company Revenue Range --></label>
-    <name>zisf__Company_Revenue_Range__c</name>
-</CustomFieldTranslation>

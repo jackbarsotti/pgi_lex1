@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Difference between the time the case was opened and the first user appeared in the Assigned To field (minus the time the case was in a Pending Client Action/Info status) --></help>
-    <label><!-- Time Open &amp; Unassigned --></label>
-    <name>Time_Open_Unassigned__c</name>
-</CustomFieldTranslation>

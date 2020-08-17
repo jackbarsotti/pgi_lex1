@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Please summarize the customer’s requirements, &amp; why you feel PGi’s services are the right fit for this customer.  How does our solution address customer’s needs?  What value does our solution give them?  What proof do you want to demonstrate in Proposal? --></help>
-    <label><!-- PGi&apos;s solution to address client needs? --></label>
-    <name>PGi_s_solution_to_address_client_needs__c</name>
-</CustomFieldTranslation>

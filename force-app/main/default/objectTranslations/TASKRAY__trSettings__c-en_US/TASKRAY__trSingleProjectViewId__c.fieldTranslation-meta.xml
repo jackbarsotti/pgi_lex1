@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Project Id for the Single Project view --></label>
-    <name>TASKRAY__trSingleProjectViewId__c</name>
-</CustomFieldTranslation>

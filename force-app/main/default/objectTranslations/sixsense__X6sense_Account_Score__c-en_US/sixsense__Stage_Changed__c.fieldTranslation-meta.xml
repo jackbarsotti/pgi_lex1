@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Returns Checked if buying stage is different from previous buying stage --></help>
-    <label><!-- Stage Changed --></label>
-    <name>sixsense__Stage_Changed__c</name>
-</CustomFieldTranslation>

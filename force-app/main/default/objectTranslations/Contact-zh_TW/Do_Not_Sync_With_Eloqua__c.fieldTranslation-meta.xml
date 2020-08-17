@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This will be checked if Eloqua has received a hard bounce back for the Contact. Uncheck this field if you have updated the Contact record. --></help>
-    <label><!-- Do Not Sync With Eloqua --></label>
-    <name>Do_Not_Sync_With_Eloqua__c</name>
-</CustomFieldTranslation>

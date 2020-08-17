@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- If specified, the amount of months the record is paid for in advance that is required for this pricing to be available. If not, this pricing is always available. --></help>
-    <label><!-- Subscription Frequency Minimum --></label>
-    <name>Subscription_Frequency_Minimum__c</name>
-</CustomFieldTranslation>

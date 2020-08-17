@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- COB/Copy of Bill --></label>
-    <name>COB_Copy_of_Bill__c</name>
-</CustomFieldTranslation>

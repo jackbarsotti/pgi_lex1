@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- iContract requires the Rich Text Format for language, but it&apos;s very hard to convert the type of a field in use... --></help>
-    <label><!-- Content RTF --></label>
-    <name>Content_RTF__c</name>
-</CustomFieldTranslation>

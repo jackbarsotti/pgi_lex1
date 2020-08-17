@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help>Выбор сопоставления данных для сопоставления входных полей Document Cloud из подписанного соглашения с программой Salesforce.</help>
-    <label><!-- Data Mapping --></label>
-    <name>echosign_dev1__Data_Mapping__c</name>
-    <relationshipLabel><!-- Agreement Templates --></relationshipLabel>
-</CustomFieldTranslation>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Event management support to create a direct to on-demand video &amp; slides presentation for up to 60 minutes in duration and unlimited viewing for 12 months included. --></help>
-    <label><!-- On-Demand Platinum Elite Webcast --></label>
-    <name>On_Demand_Platinum_Elite_Webcast__c</name>
-</CustomFieldTranslation>

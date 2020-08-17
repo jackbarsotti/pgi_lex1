@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This is the conference end time the customer requested. Represents the conference end time on OA bridge. --></help>
-    <label><!-- Customer Requested Conf End --></label>
-    <name>Customer_Requested_Conf_End__c</name>
-</CustomFieldTranslation>

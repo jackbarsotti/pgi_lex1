@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- The current product the Access Code is on --></help>
-    <label><!-- Access Code Current Product --></label>
-    <name>Access_Code_Current_Product__c</name>
-</CustomFieldTranslation>

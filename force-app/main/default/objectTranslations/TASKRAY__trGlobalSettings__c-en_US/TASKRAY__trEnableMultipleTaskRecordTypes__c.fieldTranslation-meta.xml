@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Allows for the use of multiple Task record types per Project. --></help>
-    <label><!-- Enable Multiple Task Record Types --></label>
-    <name>TASKRAY__trEnableMultipleTaskRecordTypes__c</name>
-</CustomFieldTranslation>

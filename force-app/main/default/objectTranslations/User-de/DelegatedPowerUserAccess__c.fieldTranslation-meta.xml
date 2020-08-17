@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This will enable the user to override some of our VR for the business such as opening closed Opptys, or editing closed Opptys, and ect.  Its enhanced access without allowing complete override of all our system VRs. --></help>
-    <label><!-- Delegated/ Power User Access --></label>
-    <name>DelegatedPowerUserAccess__c</name>
-</CustomFieldTranslation>

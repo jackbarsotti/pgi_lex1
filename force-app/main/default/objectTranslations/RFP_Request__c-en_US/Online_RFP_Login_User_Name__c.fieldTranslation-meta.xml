@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Add online RFP login/username here --></help>
-    <label><!-- Online RFP Login/User Name --></label>
-    <name>Online_RFP_Login_User_Name__c</name>
-</CustomFieldTranslation>

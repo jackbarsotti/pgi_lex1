@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- The date/time the status of the Lead changes to unqualified based off the activity of an Inside Sales User --></help>
-    <label><!-- Unqualified Date --></label>
-    <name>Unqualified_Date__c</name>
-</CustomFieldTranslation>

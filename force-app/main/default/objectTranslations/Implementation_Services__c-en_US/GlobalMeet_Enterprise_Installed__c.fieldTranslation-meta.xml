@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This is the number of GlobalMeet Enterprise licenses installed on this project --></help>
-    <label><!-- GlobalMeet Enterprise Installed --></label>
-    <name>GlobalMeet_Enterprise_Installed__c</name>
-</CustomFieldTranslation>

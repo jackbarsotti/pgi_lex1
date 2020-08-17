@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- If LicenseSet is created from Q/C migration, this is the ID it mapped from --></help>
-    <label><!-- Admin: Q/C Line Item ID --></label>
-    <name>AdminQCLineItemID__c</name>
-</CustomFieldTranslation>

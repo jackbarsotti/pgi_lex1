@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Expected date (confirmed by IST or PMO) when GCS customer will be billed full MRR for this new service --></help>
-    <label><!-- 100% Ramp Date --></label>
-    <name>X100_Ramp_Date__c</name>
-</CustomFieldTranslation>

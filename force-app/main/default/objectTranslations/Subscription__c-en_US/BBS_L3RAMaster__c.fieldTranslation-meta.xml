@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This is the L3 unique Id. --></help>
-    <label><!-- L3 RA Master Id --></label>
-    <name>BBS_L3RAMaster__c</name>
-</CustomFieldTranslation>

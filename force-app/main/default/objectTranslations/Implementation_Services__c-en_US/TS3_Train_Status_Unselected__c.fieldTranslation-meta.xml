@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- TS3_Train Status Unselected --></label>
-    <name>TS3_Train_Status_Unselected__c</name>
-</CustomFieldTranslation>

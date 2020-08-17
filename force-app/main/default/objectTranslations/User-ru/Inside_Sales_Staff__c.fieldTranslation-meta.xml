@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- VR on license set will prevent non-Inside Sales users from adding Offerings in &quot;BlueBird&quot; Product Family in iContract --></help>
-    <label><!-- Inside Sales Staff --></label>
-    <name>Inside_Sales_Staff__c</name>
-</CustomFieldTranslation>

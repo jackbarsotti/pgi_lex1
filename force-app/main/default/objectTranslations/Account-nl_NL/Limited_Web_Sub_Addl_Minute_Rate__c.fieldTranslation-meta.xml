@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Per minute rate applied to each add&apos;l webparticipant over the Web Mtg Pro (25), (150) or old, Web Meeting web sub size. --></help>
-    <label><!-- Addl Web Meeting Participant Rate --></label>
-    <name>Limited_Web_Sub_Addl_Minute_Rate__c</name>
-</CustomFieldTranslation>

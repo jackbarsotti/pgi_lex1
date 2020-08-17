@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Manual Match Update Zendesk Batch ID --></label>
-    <name>Zendesk__Manual_Match_Update_Zendesk_Batch_ID__c</name>
-</CustomFieldTranslation>

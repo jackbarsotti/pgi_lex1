@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This is the SUM of the Product Amount field in ALL OPEN renewal opportunities in the account. --></help>
-    <label><!-- Open Renewal Order --></label>
-    <name>Open_Renewal_Order__c</name>
-</CustomFieldTranslation>

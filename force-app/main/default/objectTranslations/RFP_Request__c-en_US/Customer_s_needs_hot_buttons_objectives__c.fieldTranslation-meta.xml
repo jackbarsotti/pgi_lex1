@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- What are the customer’s needs/hot buttons/main objectives? --></help>
-    <label><!-- Customer’s needs/hot buttons/objectives? --></label>
-    <name>Customer_s_needs_hot_buttons_objectives__c</name>
-</CustomFieldTranslation>

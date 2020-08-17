@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Number of days it took to provision the account from the time the project was accepted. --></help>
-    <label><!-- Time to Provisioned --></label>
-    <name>Time_to_Provisioned__c</name>
-</CustomFieldTranslation>

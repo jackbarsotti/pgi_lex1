@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Total Project Expense - Oppty&apos;s NRR --></help>
-    <label><!-- Project Expenses Waived --></label>
-    <name>Project_Expenses_Waived__c</name>
-</CustomFieldTranslation>

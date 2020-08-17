@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- The three digit short country code of the caller (if known). For example: GBR for the United Kingdom. --></help>
-    <label><!-- CallerCountryShort --></label>
-    <name>CallerCountryShort__c</name>
-</CustomFieldTranslation>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Per month --></help>
-    <label><!-- Webcast Continuing Education &amp; Hybrid Me --></label>
-    <name>Webcast_Continuing_Education_Hybrid_Me__c</name>
-</CustomFieldTranslation>

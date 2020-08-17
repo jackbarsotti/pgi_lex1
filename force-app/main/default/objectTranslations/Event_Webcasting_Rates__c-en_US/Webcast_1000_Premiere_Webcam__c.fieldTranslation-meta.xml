@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Per month. Includes one (1) Add-On Package --></help>
-    <label><!-- Webcast 1000 (Premiere) - Webcam --></label>
-    <name>Webcast_1000_Premiere_Webcam__c</name>
-</CustomFieldTranslation>

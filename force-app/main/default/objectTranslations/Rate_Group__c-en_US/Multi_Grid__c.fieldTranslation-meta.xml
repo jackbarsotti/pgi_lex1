@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- How many grids to show side-by-side --></help>
-    <label><!-- Multi-Grid --></label>
-    <name>Multi_Grid__c</name>
-</CustomFieldTranslation>

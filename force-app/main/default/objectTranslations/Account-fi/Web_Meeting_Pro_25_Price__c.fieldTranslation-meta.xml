@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Unlimited Web Meetings for up to 25 participants (incl. chairperson) &amp; 1,000 mins. of US/CAN Toll/Toll-Free On-Demand audio minutes.  Add&apos;l Web Meeting Participant Rate applies for overages. --></help>
-    <label><!-- Web Meeting Pro (25) Price --></label>
-    <name>Web_Meeting_Pro_25_Price__c</name>
-</CustomFieldTranslation>

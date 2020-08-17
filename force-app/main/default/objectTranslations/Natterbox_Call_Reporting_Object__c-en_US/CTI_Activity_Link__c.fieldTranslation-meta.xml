@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- If the call has an associated activity, a link to it will be in this box. --></help>
-    <label><!-- CTI Activity Link --></label>
-    <name>CTI_Activity_Link__c</name>
-</CustomFieldTranslation>

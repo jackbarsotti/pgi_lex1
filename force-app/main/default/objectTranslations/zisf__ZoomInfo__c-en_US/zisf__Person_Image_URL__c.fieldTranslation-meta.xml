@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Person Image URL --></help>
-    <label><!-- Person Image URL --></label>
-    <name>zisf__Person_Image_URL__c</name>
-</CustomFieldTranslation>

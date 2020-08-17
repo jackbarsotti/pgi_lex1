@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Rate charged for a participant dialing into the US toll free number for a Direct Event. --></help>
-    <label><!-- Operator Assisted Direct Toll Free Rate --></label>
-    <name>Operator_Assisted_Express_Toll_Free__c</name>
-</CustomFieldTranslation>

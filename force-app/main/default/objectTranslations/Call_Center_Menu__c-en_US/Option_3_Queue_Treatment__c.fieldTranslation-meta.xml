@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Option 3 Queue Treatment --></label>
-    <name>Option_3_Queue_Treatment__c</name>
-</CustomFieldTranslation>

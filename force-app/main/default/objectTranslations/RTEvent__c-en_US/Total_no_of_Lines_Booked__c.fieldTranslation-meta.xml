@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This includes both Speaker and Participant lines --></help>
-    <label><!-- Total # of Lines Booked --></label>
-    <name>Total_no_of_Lines_Booked__c</name>
-</CustomFieldTranslation>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Date person record was last verified in ZoomInfo&apos;s database. --></help>
-    <label><!-- ZoomInfo Last Verified Date --></label>
-    <name>zisf__ZoomInfo_Last_Verified_Date__c</name>
-</CustomFieldTranslation>

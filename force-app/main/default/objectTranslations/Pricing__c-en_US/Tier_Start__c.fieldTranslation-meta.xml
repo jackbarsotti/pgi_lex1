@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- If specified, this price will only be allowed if the Quantity of the priced record is greater than this number. If not specified, this price is always allowed for any Quantity. --></help>
-    <label><!-- Tier Start --></label>
-    <name>Tier_Start__c</name>
-</CustomFieldTranslation>

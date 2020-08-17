@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Only used for TPx Rentals as each rental has 2 rates: Upfront fee which is One Time rate type and Rental fee which is a Subscription rate type.  Pick this if you want the headers to not apply within iContract --></help>
-    <label><!-- Omit Grouping --></label>
-    <name>Omit_Grouping__c</name>
-</CustomFieldTranslation>

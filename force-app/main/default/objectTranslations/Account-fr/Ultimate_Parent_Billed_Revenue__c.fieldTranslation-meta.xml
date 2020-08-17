@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Total amount of billed revenue over the past 13 month&apos;s from all premier companies (PGi Companies object) associated to this Account only where this Account is set as the Ultimate Parent. --></help>
-    <label><!-- Ultimate Parent Billed Revenue --></label>
-    <name>Ultimate_Parent_Billed_Revenue__c</name>
-</CustomFieldTranslation>

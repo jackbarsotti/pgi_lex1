@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Totango account profile link --></help>
-    <label><!-- Totango account profile link --></label>
-    <name>totangotasks__Totango_activity_Link__c</name>
-</CustomFieldTranslation>

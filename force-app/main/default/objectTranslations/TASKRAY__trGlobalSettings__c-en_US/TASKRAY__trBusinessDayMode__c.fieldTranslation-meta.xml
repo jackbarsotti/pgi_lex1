@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Determines working and non-working days for scheduling tasks. &quot;None&quot; treats every day as a working day; &quot;simple&quot; sets Saturdays and Sundays as non-working days; &quot;native&quot; allows linking custom business hour schedules and holidays to projects. --></help>
-    <label><!-- Project Schedule --></label>
-    <name>TASKRAY__trBusinessDayMode__c</name>
-</CustomFieldTranslation>

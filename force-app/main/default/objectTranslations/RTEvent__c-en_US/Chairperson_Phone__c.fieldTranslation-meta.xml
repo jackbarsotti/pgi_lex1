@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Phone number for the chairperson. --></help>
-    <label><!-- Chairperson Phone --></label>
-    <name>Chairperson_Phone__c</name>
-</CustomFieldTranslation>

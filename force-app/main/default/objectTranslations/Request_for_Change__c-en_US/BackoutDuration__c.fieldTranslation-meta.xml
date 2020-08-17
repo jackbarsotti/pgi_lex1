@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Enter the # of minutes (ex: 5 for five minutes, 60 for sixty minutes, etc) --></help>
-    <label><!-- Backout Duration --></label>
-    <name>BackoutDuration__c</name>
-</CustomFieldTranslation>

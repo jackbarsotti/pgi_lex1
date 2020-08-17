@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Language 6 Associated Script --></label>
-    <name>Language_6_Associated_Script__c</name>
-    <relationshipLabel><!-- DNIS - Language 6 --></relationshipLabel>
-</CustomFieldTranslation>

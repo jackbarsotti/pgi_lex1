@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- If you need to add more than one Company Name, please separate values by comma --></help>
-    <label><!-- Credit Rebill Company Name(s) --></label>
-    <name>Credit_Rebill_Company_Name__c</name>
-</CustomFieldTranslation>

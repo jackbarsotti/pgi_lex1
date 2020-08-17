@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Amount charged for every additional 100 participants. --></help>
-    <label><!-- Broadcast Audio Additional Participants --></label>
-    <name>Broadcast_Audio_Additional_Participants__c</name>
-</CustomFieldTranslation>

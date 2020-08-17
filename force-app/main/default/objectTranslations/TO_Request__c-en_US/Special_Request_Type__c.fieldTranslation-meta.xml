@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Special Request Type --></label>
-    <name>Special_Request_Type__c</name>
-</CustomFieldTranslation>

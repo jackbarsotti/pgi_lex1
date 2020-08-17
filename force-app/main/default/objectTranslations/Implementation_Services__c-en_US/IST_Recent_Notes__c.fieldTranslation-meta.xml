@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Shows the first 200 characters of the description field.  Used in List Views and Reporting. --></help>
-    <label><!-- IST Recent Notes --></label>
-    <name>IST_Recent_Notes__c</name>
-</CustomFieldTranslation>

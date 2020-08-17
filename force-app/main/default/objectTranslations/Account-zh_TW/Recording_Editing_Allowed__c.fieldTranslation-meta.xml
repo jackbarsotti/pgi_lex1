@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Allows chairperson to edit audio and web recordings in Conference Center. --></help>
-    <label><!-- Recording Editing Allowed --></label>
-    <name>Recording_Editing_Allowed__c</name>
-</CustomFieldTranslation>

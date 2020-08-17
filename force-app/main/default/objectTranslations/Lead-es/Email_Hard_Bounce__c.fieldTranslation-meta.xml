@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This box will be checked if Eloqua determines the email address listed for this lead creates a hard bounce or unknown recipient. --></help>
-    <label><!-- Email Hard Bounce --></label>
-    <name>Email_Hard_Bounce__c</name>
-</CustomFieldTranslation>

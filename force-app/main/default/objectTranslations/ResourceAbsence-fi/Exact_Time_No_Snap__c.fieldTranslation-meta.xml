@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Disables 5 minute snap --></help>
-    <label><!-- Exact Time (No Snap) --></label>
-    <name>Exact_Time_No_Snap__c</name>
-</CustomFieldTranslation>

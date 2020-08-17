@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Allows chairperson to record audio or audio/web conference. --></help>
-    <label><!-- Recording Allowed --></label>
-    <name>Recording_Allowed__c</name>
-</CustomFieldTranslation>

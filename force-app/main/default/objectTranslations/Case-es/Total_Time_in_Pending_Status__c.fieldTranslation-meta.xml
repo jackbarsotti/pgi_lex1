@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Days:Hours:Minutes --></help>
-    <label><!-- Total Time in Pending Status --></label>
-    <name>Total_Time_in_Pending_Status__c</name>
-</CustomFieldTranslation>

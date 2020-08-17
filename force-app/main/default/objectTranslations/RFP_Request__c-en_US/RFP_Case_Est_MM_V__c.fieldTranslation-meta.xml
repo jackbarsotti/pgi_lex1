@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- RFP Case Est.MM/V --></label>
-    <name>RFP_Case_Est_MM_V__c</name>
-</CustomFieldTranslation>

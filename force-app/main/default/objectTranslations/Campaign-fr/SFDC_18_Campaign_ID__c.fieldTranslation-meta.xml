@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Unique ID for the campaign record --></help>
-    <label><!-- SFDC 18 Campaign ID --></label>
-    <name>SFDC_18_Campaign_ID__c</name>
-</CustomFieldTranslation>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Enable/disable state synchronization between Five9 and Salesforce Omni-Channel. --></help>
-    <label><!-- Enable Omni-Channel Synchronization --></label>
-    <name>Five9__Omni_Channel_Sync__c</name>
-</CustomFieldTranslation>

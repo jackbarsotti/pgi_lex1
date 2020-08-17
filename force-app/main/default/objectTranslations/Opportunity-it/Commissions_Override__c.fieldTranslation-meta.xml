@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Only open to Business Admins to see, if selected the system will not update Commission records but Business Admins can control manually. --></help>
-    <label><!-- Commissions Override --></label>
-    <name>Commissions_Override__c</name>
-</CustomFieldTranslation>

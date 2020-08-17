@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Convert Parent lookup field to text value for sharing rules. --></help>
-    <label><!-- Parent (Text Only) --></label>
-    <name>Parent_Text_Only__c</name>
-</CustomFieldTranslation>

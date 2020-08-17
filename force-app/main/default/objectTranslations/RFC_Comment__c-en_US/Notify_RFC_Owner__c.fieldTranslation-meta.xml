@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Check this if you want an email notification to go to the RFC Owner.  This will only send on the Comment being created, NOT when the comment is edited. --></help>
-    <label><!-- Notify RFC Owner --></label>
-    <name>Notify_RFC_Owner__c</name>
-</CustomFieldTranslation>

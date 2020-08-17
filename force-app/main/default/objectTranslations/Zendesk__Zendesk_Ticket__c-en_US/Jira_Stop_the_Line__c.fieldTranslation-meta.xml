@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Jira - Stop the Line --></label>
-    <name>Jira_Stop_the_Line__c</name>
-</CustomFieldTranslation>

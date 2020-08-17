@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Determines the Order of Rate Groups on the Products Page and Agreements. Conflicts are resolved alphabetically. --></help>
-    <label><!-- Order --></label>
-    <name>Order__c</name>
-</CustomFieldTranslation>

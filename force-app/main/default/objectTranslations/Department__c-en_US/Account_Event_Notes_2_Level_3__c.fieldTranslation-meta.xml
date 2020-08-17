@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Used only for Level 3 Customers. --></help>
-    <label><!-- Account Event Notes 2 (Level 3) --></label>
-    <name>Account_Event_Notes_2_Level_3__c</name>
-</CustomFieldTranslation>

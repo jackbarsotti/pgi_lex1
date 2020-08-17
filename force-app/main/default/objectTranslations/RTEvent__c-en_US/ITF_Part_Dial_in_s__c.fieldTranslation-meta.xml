@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- ITF Part Dial in details --></help>
-    <label><!-- ITF Part Dial in details --></label>
-    <name>ITF_Part_Dial_in_s__c</name>
-</CustomFieldTranslation>

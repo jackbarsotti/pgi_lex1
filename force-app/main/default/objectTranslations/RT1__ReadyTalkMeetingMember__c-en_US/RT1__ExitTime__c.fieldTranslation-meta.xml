@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Most recent date &amp; time the meeting member left the meeting. --></help>
-    <label><!-- Attendance Exit Time --></label>
-    <name>RT1__ExitTime__c</name>
-</CustomFieldTranslation>

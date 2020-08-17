@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- example: https://login.salesforce.com/001a000001Abc3G --></help>
-    <label><!-- Example URL --></label>
-    <name>Example_URL__c</name>
-</CustomFieldTranslation>

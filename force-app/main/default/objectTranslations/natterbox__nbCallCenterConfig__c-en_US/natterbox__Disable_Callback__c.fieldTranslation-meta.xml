@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Check this to hide fields during wrapup for creating a callback task. --></help>
-    <label><!-- Disable Callback --></label>
-    <name>natterbox__Disable_Callback__c</name>
-</CustomFieldTranslation>

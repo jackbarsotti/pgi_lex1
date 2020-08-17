@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Months 1-6 --></help>
-    <label><!-- Commission Rate 1 --></label>
-    <name>Commission_Rate_1__c</name>
-</CustomFieldTranslation>

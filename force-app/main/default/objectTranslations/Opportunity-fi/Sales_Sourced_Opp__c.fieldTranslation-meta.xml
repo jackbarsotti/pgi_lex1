@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Sales - check this box to receive credit in this opp is sales sourced --></help>
-    <label><!-- Sales Sourced Opp --></label>
-    <name>Sales_Sourced_Opp__c</name>
-</CustomFieldTranslation>

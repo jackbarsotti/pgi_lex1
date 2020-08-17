@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Indicates # of on-demand minutes included with with a web subscription (system populates upon first bill run). --></help>
-    <label><!-- Included Audio Minutes --></label>
-    <name>Included_Audio_Minutes__c</name>
-</CustomFieldTranslation>

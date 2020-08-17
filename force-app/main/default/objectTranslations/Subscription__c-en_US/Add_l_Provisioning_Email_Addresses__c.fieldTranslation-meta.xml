@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Separate add&apos;l email addresses with a semi-colon, comma or hard return. --></help>
-    <label><!-- Add&apos;l Provisioning Email Addresses --></label>
-    <name>Add_l_Provisioning_Email_Addresses__c</name>
-</CustomFieldTranslation>

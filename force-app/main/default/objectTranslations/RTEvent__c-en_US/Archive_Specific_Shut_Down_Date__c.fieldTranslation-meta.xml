@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Archive Specific Shut-Down Date --></label>
-    <name>Archive_Specific_Shut_Down_Date__c</name>
-</CustomFieldTranslation>

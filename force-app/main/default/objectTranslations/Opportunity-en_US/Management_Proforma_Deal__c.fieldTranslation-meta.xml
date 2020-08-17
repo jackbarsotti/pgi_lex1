@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- These are deals that management feels will close even though all four &apos;Management Criteria&apos; are not met. --></help>
-    <label><!-- Management Proforma Deal --></label>
-    <name>Management_Proforma_Deal__c</name>
-</CustomFieldTranslation>

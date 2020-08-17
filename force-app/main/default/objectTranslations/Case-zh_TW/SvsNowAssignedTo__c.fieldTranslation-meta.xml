@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Historical field of who was assigned to the ticket in SvsNow --></help>
-    <label><!-- SvsNow Assigned To --></label>
-    <name>SvsNowAssignedTo__c</name>
-</CustomFieldTranslation>

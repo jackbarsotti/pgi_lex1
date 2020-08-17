@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- If unchecked, the chairperson will not be able to launch Conference Controls from CC (Will not be able to host an on-demand web meeting or manage an audio conference using the Conference Controls). --></help>
-    <label><!-- Conference Controls Allowed --></label>
-    <name>Moderator_Allowed__c</name>
-</CustomFieldTranslation>

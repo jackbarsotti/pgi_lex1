@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Historical field of Work Notes from the ticket in SvsNow --></help>
-    <label><!-- SvsNow Work Notes --></label>
-    <name>SvsNowWorkNotes__c</name>
-</CustomFieldTranslation>

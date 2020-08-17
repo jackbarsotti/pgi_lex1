@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Specify default wrapup button --></label>
-    <name>natterbox__Specify_default_wrapup_button__c</name>
-</CustomFieldTranslation>

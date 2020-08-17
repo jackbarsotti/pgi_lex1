@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This field will contain the timezone offset From UTC for the user who made/received the call at the time the call was made. The default value for this field is zero until updated by the NCRO trigger Rule (v8.5 onwards) --></help>
-    <label><!-- Timezone Offset --></label>
-    <name>Timezone_Offset__c</name>
-</CustomFieldTranslation>

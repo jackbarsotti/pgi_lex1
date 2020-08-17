@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Concatenation of Lead ID and Product Key separated by an underscore --></help>
-    <label><!-- LeadProductKey --></label>
-    <name>sixsense__LeadProductKey__c</name>
-</CustomFieldTranslation>

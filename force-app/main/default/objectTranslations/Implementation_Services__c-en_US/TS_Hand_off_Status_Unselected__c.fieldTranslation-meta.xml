@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- TS_Hand-off Status Unselected --></label>
-    <name>TS_Hand_off_Status_Unselected__c</name>
-</CustomFieldTranslation>

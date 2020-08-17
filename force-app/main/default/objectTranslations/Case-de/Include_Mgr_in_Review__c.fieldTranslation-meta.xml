@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- If selected the Mngt team will receive a copy of the closed case email notification. --></help>
-    <label><!-- Include Mgr in Review --></label>
-    <name>Include_Mgr_in_Review__c</name>
-</CustomFieldTranslation>

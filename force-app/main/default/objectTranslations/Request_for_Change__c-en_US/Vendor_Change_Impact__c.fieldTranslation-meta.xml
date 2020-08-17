@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Enter details relating to any impact to Product, Service, or Infrastructure.  In the event of an outage this detail will be needed. --></help>
-    <label><!-- Impact to Product/Service/Infrastructure --></label>
-    <name>Vendor_Change_Impact__c</name>
-</CustomFieldTranslation>

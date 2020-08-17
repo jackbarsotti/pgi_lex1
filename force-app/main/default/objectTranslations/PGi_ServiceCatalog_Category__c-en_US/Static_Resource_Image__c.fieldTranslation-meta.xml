@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Input the name for the static resource to be displayed as an icon for the end user --></help>
-    <label><!-- Static Resource Image --></label>
-    <name>Static_Resource_Image__c</name>
-</CustomFieldTranslation>

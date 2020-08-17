@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- September Self Assessment --></label>
-    <name>September_Self_Assessment__c</name>
-</CustomFieldTranslation>

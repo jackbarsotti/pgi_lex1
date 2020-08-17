@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- $50 per hour, per employee for event attendance, telemarketing campaigns and email campaigns --></help>
-    <label><!-- Employee Cost --></label>
-    <name>Employee_Cost__c</name>
-</CustomFieldTranslation>

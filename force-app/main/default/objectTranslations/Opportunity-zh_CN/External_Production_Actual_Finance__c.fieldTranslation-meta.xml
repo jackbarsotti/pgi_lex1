@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- To be entered and tracked by Finance. --></help>
-    <label><!-- Actual Production Cost - Finance --></label>
-    <name>External_Production_Actual_Finance__c</name>
-</CustomFieldTranslation>

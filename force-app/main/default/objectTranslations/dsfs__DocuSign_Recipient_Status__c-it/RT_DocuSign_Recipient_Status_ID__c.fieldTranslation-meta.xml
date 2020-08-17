@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- RT DocuSign Recipient Status ID --></label>
-    <name>RT_DocuSign_Recipient_Status_ID__c</name>
-</CustomFieldTranslation>

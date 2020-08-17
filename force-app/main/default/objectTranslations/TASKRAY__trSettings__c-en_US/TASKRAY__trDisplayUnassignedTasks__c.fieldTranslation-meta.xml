@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Display Personal Tasks --></label>
-    <name>TASKRAY__trDisplayUnassignedTasks__c</name>
-</CustomFieldTranslation>

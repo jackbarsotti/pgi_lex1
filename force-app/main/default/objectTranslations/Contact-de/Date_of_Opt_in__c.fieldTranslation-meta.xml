@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Date this record opted in to receiving CEM (commercial electronic messages) from PGi --></help>
-    <label><!-- Date of Opt-in --></label>
-    <name>Date_of_Opt_in__c</name>
-</CustomFieldTranslation>

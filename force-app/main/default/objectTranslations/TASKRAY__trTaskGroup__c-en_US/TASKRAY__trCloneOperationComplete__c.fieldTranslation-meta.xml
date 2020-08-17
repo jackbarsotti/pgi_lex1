@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Indicates a Task Group has been successfully cloned from a template.  This field is automatically set to true when the clone operation is complete. --></help>
-    <label><!-- Clone Operation Complete --></label>
-    <name>TASKRAY__trCloneOperationComplete__c</name>
-</CustomFieldTranslation>

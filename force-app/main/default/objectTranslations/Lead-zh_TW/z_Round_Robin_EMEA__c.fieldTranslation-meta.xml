@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- z-Round Robin (EMEA) --></label>
-    <name>z_Round_Robin_EMEA__c</name>
-</CustomFieldTranslation>

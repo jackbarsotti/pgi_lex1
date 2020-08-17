@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Wrapup and Notes available during call --></label>
-    <name>natterbox__Wrapup_and_Notes_available_during_call__c</name>
-</CustomFieldTranslation>

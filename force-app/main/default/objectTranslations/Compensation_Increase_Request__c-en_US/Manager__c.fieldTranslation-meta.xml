@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- If this field is blank or has the incorrect manager, please send an email to salesforcecrmsupport@pgi.com to have the user&apos;s record updated. --></help>
-    <label><!-- Manager --></label>
-    <name>Manager__c</name>
-</CustomFieldTranslation>

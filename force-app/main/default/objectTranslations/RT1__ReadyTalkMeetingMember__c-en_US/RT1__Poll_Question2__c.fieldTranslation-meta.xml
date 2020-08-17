@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Poll Question 2 --></label>
-    <name>RT1__Poll_Question2__c</name>
-</CustomFieldTranslation>

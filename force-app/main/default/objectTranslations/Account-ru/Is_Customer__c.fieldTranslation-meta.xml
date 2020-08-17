@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Updates nightly based on account have 1+ active access code, status of active and bill account is true. --></help>
-    <label><!-- Is Customer? --></label>
-    <name>Is_Customer__c</name>
-</CustomFieldTranslation>

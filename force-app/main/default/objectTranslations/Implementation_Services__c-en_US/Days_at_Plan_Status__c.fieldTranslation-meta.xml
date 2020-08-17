@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This displays approximate days that this record had the Implementation Stage set to include Plan. --></help>
-    <label><!-- Days at Plan Status --></label>
-    <name>Days_at_Plan_Status__c</name>
-</CustomFieldTranslation>

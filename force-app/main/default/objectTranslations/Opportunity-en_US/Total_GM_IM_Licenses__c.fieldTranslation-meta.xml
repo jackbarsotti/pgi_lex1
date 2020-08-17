@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Shows Total GM, IM and GM Audio licenses --></help>
-    <label><!-- Total # Licenses --></label>
-    <name>Total_GM_IM_Licenses__c</name>
-</CustomFieldTranslation>

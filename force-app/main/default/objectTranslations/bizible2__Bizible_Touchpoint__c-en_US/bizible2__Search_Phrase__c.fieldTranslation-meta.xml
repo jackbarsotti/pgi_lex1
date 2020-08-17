@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- The term(s) that the user entered to view the search results --></help>
-    <label><!-- Search Phrase --></label>
-    <name>bizible2__Search_Phrase__c</name>
-</CustomFieldTranslation>

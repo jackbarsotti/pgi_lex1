@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Phase 3 (Train) Days Left --></label>
-    <name>Phase_3_Days_Left__c</name>
-</CustomFieldTranslation>

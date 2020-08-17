@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- For a rate modification amendment, the sales person must enter this value. --></help>
-    <label><!-- Previous Agreement Effective Date --></label>
-    <name>Previous_Agreement_Effective_Date__c</name>
-</CustomFieldTranslation>
