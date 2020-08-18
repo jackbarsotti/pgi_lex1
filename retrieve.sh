@@ -27,12 +27,13 @@ fi;
  
 # Set the target environment for force:source:retrieve command
 sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
-git remote update
+#git remote update
+git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
 git fetch
 git branch -a
 git config --get remote.origin.fetch
-git checkout --track origin/master
-git checkout LEX
+#git checkout --track origin/master
+#git checkout LEX
 # Delete the contents of force-app folder before we paste source:retrieve contents into it
 echo
 rm -rf force-app/main/default/*
