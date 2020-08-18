@@ -29,7 +29,7 @@ fi;
 sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
 
 git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
-git fetch -q
+git fetch
 
 # Delete the contents of force-app folder before we paste source:retrieve contents into it
 echo
@@ -60,9 +60,10 @@ echo "Now adding and committing these changes to your $TRAVIS_BRANCH branch..."
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
 git add force-app/.
-git stash
+#git stash
 git checkout master
-git stash pop
+#git stash pop
+
 # Git commit -m "auto-build" changes
 echo
 echo 'Running: git commit -m "auto-build"'
