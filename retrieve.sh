@@ -33,7 +33,7 @@ git fetch -q
 
 # Delete the contents of force-app folder before we paste source:retrieve contents into it
 echo
-rm -rf force-app/main/default/*
+rm -rfv force-app/main/default/*
 echo
 echo 'The contents of the force-app directory have been removed.'
 echo "Ready to retrieve org metadata to your $TRAVIS_BRANCH branch."
@@ -47,7 +47,7 @@ sudo mkdir -p /Users/jackbarsotti/pgi_lex1/$classPath
 sudo mkdir -p /Users/jackbarsotti/pgi_lex1/$triggerPath
  
 # Run a source:retrieve to rebuild the contents of the force-app folder (branch specific)
-RETRIEVED_FILES=$(sfdx force:source:retrieve -u targetEnvironment -m ApexClass) |
+sfdx force:source:retrieve -u targetEnvironment -m ApexClass |
 while read -r file; do
 echo 'happy' 
 done
@@ -59,7 +59,6 @@ echo "Now adding and committing these changes to your $TRAVIS_BRANCH branch..."
 # Add changes
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
-git add .
 git add force-app/.
 git checkout master
  
@@ -74,7 +73,7 @@ echo 'Run "git pull" on your local machine to update your local branch with the 
 echo
 echo "Build complete!"
 echo
- git checkout --track origin/master
+
 # Run a git push 
 git remote add origin-master https://${GH_TOKEN}@github.com/jackbarsotti/pgi_lex1.git > /dev/null 2>&1
 git push --quiet --set-upstream origin-master master
