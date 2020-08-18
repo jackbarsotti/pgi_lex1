@@ -33,7 +33,7 @@ git fetch -q
 
 # Delete the contents of force-app folder before we paste source:retrieve contents into it
 echo
-rm -rfv force-app/main/default/*
+rm -rf force-app/main/default/*
 echo
 echo 'The contents of the force-app directory have been removed.'
 echo "Ready to retrieve org metadata to your $TRAVIS_BRANCH branch."
@@ -47,9 +47,9 @@ sudo mkdir -p /Users/jackbarsotti/pgi_lex1/$classPath
 sudo mkdir -p /Users/jackbarsotti/pgi_lex1/$triggerPath
  
 # Run a source:retrieve to rebuild the contents of the force-app folder (branch specific)
-sfdx force:source:retrieve -u targetEnvironment -m ApexClass |
+retrieved_files=$(sfdx force:source:retrieve -u targetEnvironment -m ApexClass) |
 while read -r file; do
-echo 'happy' 
+echo
 done
 echo
 echo "All retrieved metadata files have been added to the force-app directory on your $TRAVIS_BRANCH branch."
