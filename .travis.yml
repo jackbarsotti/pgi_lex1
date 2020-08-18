@@ -17,8 +17,8 @@ env:
 # Deployment stage will incrementally build and deploy for PR and pushes
 # Retrieve stage will automatically retrieve SalesForce metadata on a scheduled basis
 stages:
-#- name: deployment
-  #if: type != cron
+- name: deployment
+  if: type != cron
 - name: retrieve
   if: type != cron
  
