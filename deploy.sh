@@ -70,6 +70,7 @@ if [ "$BRANCH" == "LEX" ]; then
   while read -r file; do
     # Copy the files from git diff into the deploy directory
     sudo cp --parents "$file" $DEPLOYDIR 2>/dev/null
+    sudo cp -r --parents force-app/main/default/aura/ -t $DEPLOYDIR
     # For any changed class or trigger file, it's associated meta data file is copied to the deploy directory (and vice versa):
     if [[ $file == *.cls ]]; then
       find $classPath -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
@@ -89,7 +90,6 @@ if [ "$BRANCH" == "LEX" ]; then
     elif [[ $file == *.page ]]; then
       find force-app/main/default/pages -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
     fi
-    #sudo cp -r --parents force-app/main/default/aura/ -t $DEPLOYDIR
   done 
   echo 'Complete.'
   echo
