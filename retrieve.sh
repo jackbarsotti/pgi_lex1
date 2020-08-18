@@ -27,12 +27,10 @@ fi;
  
 # Set the target environment for force:source:retrieve command
 sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
-#git remote update
+
 git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
 git fetch -q
-git checkout LEX
-#git checkout --track origin/master
-#git checkout LEX
+
 # Delete the contents of force-app folder before we paste source:retrieve contents into it
 echo
 rm -rf force-app/main/default/*
@@ -76,7 +74,7 @@ echo 'Run "git pull" on your local machine to update your local branch with the 
 echo
 echo "Build complete!"
 echo
- 
+ git checkout --track origin/master
 # Run a git push 
 git remote add origin-master https://${GH_TOKEN}@github.com/jackbarsotti/pgi_lex1.git > /dev/null 2>&1
 git push --quiet --set-upstream origin-master master
