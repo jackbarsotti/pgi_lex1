@@ -44,8 +44,8 @@ sudo mkdir -p /Users/jackbarsotti/pgi_lex1/$classPath
 sudo mkdir -p /Users/jackbarsotti/pgi_lex1/$triggerPath
  
 # Run a source:retrieve to rebuild the contents of the force-app folder (branch specific)
-export RETRIEVED_FILES=$(sfdx force:source:retrieve -u targetEnvironment -m ApexClass)
-while [ sfdx force:source:retrieve -u targetEnvironment -m ApexClass,ApexTrigger ]; do
+RETRIEVED_FILES=$(sfdx force:source:retrieve -u targetEnvironment -m ApexClass) |
+while read -r file; do
 echo 'happy' 
 done
 echo
