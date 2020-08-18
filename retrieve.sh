@@ -60,9 +60,9 @@ echo "Now adding and committing these changes to your $TRAVIS_BRANCH branch..."
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
 git add force-app/.
+git stash
 git checkout master
-git add force-app/.
-git checkout master
+git stash pop
 # Git commit -m "auto-build" changes
 echo
 echo 'Running: git commit -m "auto-build"'
