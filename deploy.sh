@@ -57,6 +57,7 @@ git config --global diff.renameLimit 9999999
 
 # Run a git diff for the incremental build depending on checked-out branch (if-statement per branch)
 # LEX branch:
+sudo cp force-app/main/default/triggers/dlrs_ContactTrigger.trigger $DEPLOYDIR
 if [ "$BRANCH" == "LEX" ]; then
   #create tracking branch
   echo 'Preparing for an incremental deployment to org...'
@@ -65,7 +66,6 @@ if [ "$BRANCH" == "LEX" ]; then
   done;
   git checkout LEX
   echo
-  sudo cp -r --parents force-app/main/default/aura/ $DEPLOYDIR
   echo 'Running a git diff, please wait...'
   git diff --name-only master force-app/ |
   while read -r file; do
