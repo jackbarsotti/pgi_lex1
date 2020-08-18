@@ -59,7 +59,7 @@ echo "Now adding and committing these changes to your $TRAVIS_BRANCH branch..."
 # Add changes
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
-git add pgi_lex1/.
+git add force-app/.
 git checkout master
  
 # Git commit -m "auto-build" changes
