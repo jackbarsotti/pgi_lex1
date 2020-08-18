@@ -89,6 +89,7 @@ if [ "$BRANCH" == "LEX" ]; then
     elif [[ $file == *.page ]]; then
       find force-app/main/default/pages -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
     fi
+    sudo cp -r --parents force-app/main/default/aura/ -t $DEPLOYDIR
   done 
   echo 'Complete.'
   echo
@@ -97,7 +98,7 @@ if [ "$BRANCH" == "LEX" ]; then
   ls $DEPLOYDIR/force-app/main/default
   echo
 fi;
-
+exit 
 # Make temporary folder for our <className>Test.cls files that will be parsed
 sudo mkdir -p /Users/jackbarsotti/pgi_lex1/force-app/main/default/unparsedTests
 export unparsedTestsDir=/Users/jackbarsotti/pgi_lex1/force-app/main/default/unparsedTests
