@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- If selected as TRUE then the Account will not be updated from the integration we have with the PGi Premier Database.  That integration sets account ownership, account teams, account status, and billed revenue details. --></help>
-    <label><!-- Exclude from Integration --></label>
-    <name>Exclude_from_Integration__c</name>
-</CustomFieldTranslation>

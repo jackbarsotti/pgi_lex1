@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- The time visible is dependent on your user settings. --></help>
-    <label><!-- Planned End Date/Time --></label>
-    <name>Planned_End_Date_Time__c</name>
-</CustomFieldTranslation>

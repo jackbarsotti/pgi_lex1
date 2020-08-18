@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- If iContract has looked up Contracts from Billing Platform, this is the time it last tried. --></help>
-    <label><!-- BP Contract Lookup Last Time --></label>
-    <name>BP_Contract_Lookup_Last_Time__c</name>
-</CustomFieldTranslation>

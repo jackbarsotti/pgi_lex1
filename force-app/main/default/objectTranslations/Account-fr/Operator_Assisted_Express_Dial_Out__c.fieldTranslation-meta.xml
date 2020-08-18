@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Rate charged for an operator dialing out to US/Canada participant for a Direct Event. --></help>
-    <label><!-- Operator Assisted Direct Dial Out Rate --></label>
-    <name>Operator_Assisted_Express_Dial_Out__c</name>
-</CustomFieldTranslation>

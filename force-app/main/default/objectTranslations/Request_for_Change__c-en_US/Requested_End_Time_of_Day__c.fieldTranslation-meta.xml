@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Time must be entered as 12 hours with AM/PM (ex: 00:00 is not supported it is 12:00 AM) --></help>
-    <label><!-- End Time of Day --></label>
-    <name>Requested_End_Time_of_Day__c</name>
-</CustomFieldTranslation>

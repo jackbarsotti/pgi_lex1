@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This value is the interval that TaskRay checks for updates from other users. This value can range from 5 to 99 seconds, with a default value of 10. Higher values reduce Salesforce server impact but increase the time period between update notifications. --></help>
-    <label><!-- Polling Interval --></label>
-    <name>TASKRAY__trPollingInterval__c</name>
-</CustomFieldTranslation>

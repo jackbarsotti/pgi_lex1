@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- All issued equipment has been returned --></help>
-    <label><!-- All Equipment Returned --></label>
-    <name>All_Equipment_Returned__c</name>
-</CustomFieldTranslation>

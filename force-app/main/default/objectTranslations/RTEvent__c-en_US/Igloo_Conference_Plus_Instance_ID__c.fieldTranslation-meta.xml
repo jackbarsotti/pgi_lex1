@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Igloo Conference+Instance ID --></label>
-    <name>Igloo_Conference_Plus_Instance_ID__c</name>
-</CustomFieldTranslation>

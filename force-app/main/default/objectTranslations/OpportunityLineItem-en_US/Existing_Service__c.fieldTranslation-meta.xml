@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Enter 2 Products- 1st with the box checked for Existing Service, 2nd for New Service being added --></help>
-    <label><!-- Existing Service --></label>
-    <name>Existing_Service__c</name>
-</CustomFieldTranslation>

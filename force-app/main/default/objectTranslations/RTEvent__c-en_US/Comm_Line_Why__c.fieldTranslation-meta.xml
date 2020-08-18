@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Explain why a Communication Line is being requested. --></help>
-    <label><!-- Comm Line Why --></label>
-    <name>Comm_Line_Why__c</name>
-</CustomFieldTranslation>

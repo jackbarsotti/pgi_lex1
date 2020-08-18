@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Mountain timezone for pre-conference start time. This is based upon converting the pre-conference start time from customer to Mountain for EM/EP scheduling purposes. --></help>
-    <label><!-- Mountain Timezone Start Time --></label>
-    <name>Mountain_Timezone_Start_Time__c</name>
-</CustomFieldTranslation>

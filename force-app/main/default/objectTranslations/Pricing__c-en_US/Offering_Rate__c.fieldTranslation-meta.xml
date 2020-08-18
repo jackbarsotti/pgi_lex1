@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- If possible, this Pricing will be used for this Rate + Offering combination. --></help>
-    <label><!-- Offering X Rate --></label>
-    <name>Offering_Rate__c</name>
-    <relationshipLabel><!-- Pricing --></relationshipLabel>
-</CustomFieldTranslation>

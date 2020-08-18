@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Use this field to capture external feedback about a customer&apos;s onboarding experience. --></help>
-    <label><!-- External Feedback --></label>
-    <name>TASKRAY__trExternalFeedback__c</name>
-</CustomFieldTranslation>

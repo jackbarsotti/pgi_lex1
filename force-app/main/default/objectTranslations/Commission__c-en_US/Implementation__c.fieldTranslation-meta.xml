@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Flag for Implementation portions of a new deal. Not the same as professional services deals --></help>
-    <label><!-- Implementation --></label>
-    <name>Implementation__c</name>
-</CustomFieldTranslation>

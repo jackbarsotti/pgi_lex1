@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Separate Member names with commas --></help>
-    <label><!-- Who needs access? --></label>
-    <name>Who_needs_access__c</name>
-</CustomFieldTranslation>

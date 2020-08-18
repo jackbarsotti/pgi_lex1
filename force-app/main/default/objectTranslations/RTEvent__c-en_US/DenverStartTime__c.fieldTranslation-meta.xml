@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Indicates Event Start Time (Mountain Time). --></help>
-    <label><!-- Denver Start Time --></label>
-    <name>DenverStartTime__c</name>
-</CustomFieldTranslation>

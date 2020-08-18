@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Date Restricted List Sent to GX --></label>
-    <name>Date_Restricted_List_Sent_to_GX__c</name>
-</CustomFieldTranslation>

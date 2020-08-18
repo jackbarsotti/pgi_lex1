@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Zendesk ticket that triggered the support survey --></help>
-    <label><!-- Support Ticket Number --></label>
-    <name>Support_Ticket_Number__c</name>
-</CustomFieldTranslation>

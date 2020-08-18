@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This score is based off of a comparison against the past 6 months worth of deals that have closed as won.  It is a measurement of likelihood of this deal closing as won based off of this deal&apos;s age, activity, stage progression, and completeness of detail. --></help>
-    <label><!-- Einstein Score --></label>
-    <name>Einstein_score__c</name>
-</CustomFieldTranslation>

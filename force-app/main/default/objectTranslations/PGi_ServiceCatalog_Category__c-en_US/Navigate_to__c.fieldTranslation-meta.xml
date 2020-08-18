@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- If the navigate to is left blank, then the user is shown the category options --></help>
-    <label><!-- Navigate to --></label>
-    <name>Navigate_to__c</name>
-</CustomFieldTranslation>

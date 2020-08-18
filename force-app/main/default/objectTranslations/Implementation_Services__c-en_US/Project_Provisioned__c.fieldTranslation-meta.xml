@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This field is populated when all provisioning has been completed on the client account. This should mirror the Provisioned Milestone from Taskray. --></help>
-    <label><!-- Project Provisioned --></label>
-    <name>Project_Provisioned__c</name>
-</CustomFieldTranslation>

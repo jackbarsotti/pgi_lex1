@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- How Many Customer Have Asked for This? --></label>
-    <name>How_Many_Customer_Have_Asked_for_This__c</name>
-</CustomFieldTranslation>

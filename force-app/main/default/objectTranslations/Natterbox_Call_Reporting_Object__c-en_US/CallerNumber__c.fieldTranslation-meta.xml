@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- The phone number of the caller in domestic format. If the caller is a Natterbox user, this will be their 4 digit extension number rather than their external number. If you need the Natterbox user&apos;s external number, use the E164CallerNumber field instead. --></help>
-    <label><!-- CallerNumber --></label>
-    <name>CallerNumber__c</name>
-</CustomFieldTranslation>

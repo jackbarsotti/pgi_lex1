@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- By knowing the metadata type, a formula can generate a link to the metadata component in Salesforce, making it easy for an admin to inspect the component. --></help>
-    <label><!-- Metadata Link --></label>
-    <name>ddcdf__Metadata_Link__c</name>
-</CustomFieldTranslation>

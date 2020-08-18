@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This field is now read only.  The field is populated with the number in the L3 Toll Free Number. --></help>
-    <label><!-- Conference Phone Number --></label>
-    <name>Conference_Phone_Number__c</name>
-</CustomFieldTranslation>

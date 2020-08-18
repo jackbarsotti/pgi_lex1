@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Time stamp of first buying stage assigned to Account --></help>
-    <label><!-- Collab/UC Initial Time Stamp --></label>
-    <name>Collab_UC_Initial_Time_Stamp__c</name>
-</CustomFieldTranslation>

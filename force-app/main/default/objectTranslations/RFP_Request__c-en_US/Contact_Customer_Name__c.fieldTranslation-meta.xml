@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Choose Contact currently in Salesforce --></help>
-    <label><!-- Contact/Customer Name --></label>
-    <name>Contact_Customer_Name__c</name>
-    <relationshipLabel><!-- RFP Requests --></relationshipLabel>
-</CustomFieldTranslation>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Total Closed Won: TCV (USD) --></label>
-    <name>Total_Closed_Won_TCV__c</name>
-</CustomFieldTranslation>

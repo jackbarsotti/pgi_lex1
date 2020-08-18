@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Use this to generate the Onboarding Feedback Form Link which can be shared with a customer to capture their external feedback and sentiment. --></help>
-    <label><!-- Generate Onboarding Feedback Form --></label>
-    <name>TASKRAY__trGenerateOnboardingFeedbackForm__c</name>
-</CustomFieldTranslation>

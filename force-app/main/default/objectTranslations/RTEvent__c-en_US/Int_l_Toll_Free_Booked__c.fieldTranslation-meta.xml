@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Were ITFs booked? --></help>
-    <label><!-- Int&apos;l Toll Free Booked --></label>
-    <name>Int_l_Toll_Free_Booked__c</name>
-</CustomFieldTranslation>

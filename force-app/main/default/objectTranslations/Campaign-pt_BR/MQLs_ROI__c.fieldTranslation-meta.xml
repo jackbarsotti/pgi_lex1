@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- The math is MQLs Generated x $35.00 = MQLs Generated ROI --></help>
-    <label><!-- MQLs Generated ROI --></label>
-    <name>MQLs_ROI__c</name>
-</CustomFieldTranslation>

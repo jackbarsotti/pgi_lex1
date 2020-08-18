@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- TaskRay Projects can be completed via the &apos;Complete&apos; button.  &quot;Simple&quot; offers the choice to set the &apos;Completed&apos; checkbox on a Project; &quot;Choice&quot; will prompt the user to choose how to complete the project. --></help>
-    <label><!-- Project Completion Option --></label>
-    <name>TASKRAY__trProjectCompletionOption__c</name>
-</CustomFieldTranslation>

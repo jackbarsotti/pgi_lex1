@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Check this box if this account or subscriber on this account has an active trial. --></help>
-    <label><!-- Trial --></label>
-    <name>Trial__c</name>
-</CustomFieldTranslation>

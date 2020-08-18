@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This is tied to your setting the Implementation Stage value to Bill Review, then by checking the Bill Review Completed checkbox. Without doing both of these you will not see a value here. --></help>
-    <label><!-- Days at Bill Review Status --></label>
-    <name>Days_at_Bill_Review_Status__c</name>
-</CustomFieldTranslation>

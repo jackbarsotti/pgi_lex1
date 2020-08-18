@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This is the percentage of the original amount that is being returned. --></help>
-    <label><!-- Split % --></label>
-    <name>Split__c</name>
-</CustomFieldTranslation>

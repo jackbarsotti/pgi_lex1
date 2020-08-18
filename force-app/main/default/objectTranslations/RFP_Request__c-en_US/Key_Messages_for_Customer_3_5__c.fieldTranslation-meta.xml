@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Describe 3-5 key messages you want the client to remember when they make the decision. --></help>
-    <label><!-- Key Messages for Customer (3-5) --></label>
-    <name>Key_Messages_for_Customer_3_5__c</name>
-</CustomFieldTranslation>

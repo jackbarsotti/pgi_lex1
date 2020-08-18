@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Whether this Rate should appear on the Quote. It will always appear on the Agreement. --></help>
-    <label><!-- Show on Quote --></label>
-    <name>Show_on_Quote__c</name>
-</CustomFieldTranslation>

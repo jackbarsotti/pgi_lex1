@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- User who created this subscription, if it was created in Sugar --></help>
-    <label><!-- Sugar Created By --></label>
-    <name>Sugar_Created_By__c</name>
-</CustomFieldTranslation>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- If checked, user will be mailed a ReadyTalk provisioning kit (wallet card, quick reference card, letter). --></help>
-    <label><!-- Send Kit --></label>
-    <name>Send_Kit__c</name>
-</CustomFieldTranslation>

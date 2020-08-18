@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This is the custom sign-up page URL for this account for provisioning contacts into the account. --></help>
-    <label><!-- Custom Sign-Up Page --></label>
-    <name>Custom_Sign_Up_Page__c</name>
-</CustomFieldTranslation>

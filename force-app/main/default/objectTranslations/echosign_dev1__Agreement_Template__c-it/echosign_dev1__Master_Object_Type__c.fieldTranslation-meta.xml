@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help>Consente di specificare l&#39;oggetto Salesforce a cui fare riferimento per questo modello di accordo (ad es. Opportunità o Lead)</help>
-    <label><!-- Master Object Type --></label>
-    <name>echosign_dev1__Master_Object_Type__c</name>
-</CustomFieldTranslation>

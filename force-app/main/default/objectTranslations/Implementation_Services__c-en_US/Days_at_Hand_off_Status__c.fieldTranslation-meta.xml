@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This is tied to your setting the Implementation Stage value to Hand-off, then by checking the Hand-off Completed checkbox.  Without doing both of these you will not see a value here. --></help>
-    <label><!-- Days at Hand-off Status --></label>
-    <name>Days_at_Hand_off_Status__c</name>
-</CustomFieldTranslation>

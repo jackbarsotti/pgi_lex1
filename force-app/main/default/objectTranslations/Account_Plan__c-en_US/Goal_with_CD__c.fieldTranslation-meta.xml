@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Goal with CD --></label>
-    <name>Goal_with_CD__c</name>
-</CustomFieldTranslation>

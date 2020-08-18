@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Name of L3 Account Manager --></help>
-    <label><!-- L3 Account Manager --></label>
-    <name>L3_Account_Manager__c</name>
-</CustomFieldTranslation>

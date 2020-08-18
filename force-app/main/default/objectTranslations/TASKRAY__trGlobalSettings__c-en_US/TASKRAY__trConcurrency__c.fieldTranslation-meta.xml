@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This toggles TaskRay&apos;s checks for updates from other users. Disabling it will have less impact on Salesforce servers, but there may be issues regarding multiple users updating the same tasks.
-
-Default value is &quot;Checked&quot; --></help>
-    <label><!-- Notification Polling Enabled --></label>
-    <name>TASKRAY__trConcurrency__c</name>
-</CustomFieldTranslation>

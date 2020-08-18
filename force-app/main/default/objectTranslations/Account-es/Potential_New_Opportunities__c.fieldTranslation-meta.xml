@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- The max number of Potential New Opportunities for the account based on the current active order and the number of employees --></help>
-    <label><!-- # Potential New Opportunities --></label>
-    <name>Potential_New_Opportunities__c</name>
-</CustomFieldTranslation>

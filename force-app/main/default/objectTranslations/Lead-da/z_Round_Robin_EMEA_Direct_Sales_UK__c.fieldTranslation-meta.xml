@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Round Robin for EMEA_Direct_Sales_UK --></help>
-    <label><!-- z-Round Robin EMEA Direct Sales UK --></label>
-    <name>z_Round_Robin_EMEA_Direct_Sales_UK__c</name>
-</CustomFieldTranslation>

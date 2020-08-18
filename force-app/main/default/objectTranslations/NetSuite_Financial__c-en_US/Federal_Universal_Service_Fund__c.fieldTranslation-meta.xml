@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Total FUSF charges for the invoice period. --></help>
-    <label><!-- Federal Universal Service Fund --></label>
-    <name>Federal_Universal_Service_Fund__c</name>
-</CustomFieldTranslation>

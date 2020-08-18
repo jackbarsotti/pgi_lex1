@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Populated only if the error is directly related to the lead object --></help>
-    <label><!-- Lead --></label>
-    <name>Janati_RR__Lead__c</name>
-    <relationshipLabel><!-- Round Robin Errors --></relationshipLabel>
-</CustomFieldTranslation>

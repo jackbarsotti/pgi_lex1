@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Use this field to store key information about a deal that can be referenced during a customer&apos;s onboarding project. --></help>
-    <label><!-- Deal Handoff Notes --></label>
-    <name>TASKRAY__trDealHandoffNotes__c</name>
-</CustomFieldTranslation>

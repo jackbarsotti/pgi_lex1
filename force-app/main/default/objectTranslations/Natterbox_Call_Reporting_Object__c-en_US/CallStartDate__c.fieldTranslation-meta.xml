@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Date and time the call sarted. In the format of: 2014-01-23 19:07:09 --></help>
-    <label><!-- CallStartDate --></label>
-    <name>CallStartDate__c</name>
-</CustomFieldTranslation>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- PGi Client ID (S4B) --></label>
-    <name>PGi_Client_ID_S4B__c</name>
-</CustomFieldTranslation>

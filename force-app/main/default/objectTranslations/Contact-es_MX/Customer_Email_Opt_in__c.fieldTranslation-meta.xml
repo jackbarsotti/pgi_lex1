@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Un-check if you do not want customer to receive feature and product related emails. --></help>
-    <label><!-- Feature Updates &amp; Product News Opt-in --></label>
-    <name>Customer_Email_Opt_in__c</name>
-</CustomFieldTranslation>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Total Records Created in Zendesk --></label>
-    <name>Zendesk__Total_Records_Created_in_Zendesk__c</name>
-</CustomFieldTranslation>

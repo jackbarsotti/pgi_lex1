@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Please provide additional details if &quot;other&quot; was selected as organization --></help>
-    <label><!-- Organization Details if &quot;Other&quot; --></label>
-    <name>Organization_Details_if_Other__c</name>
-</CustomFieldTranslation>

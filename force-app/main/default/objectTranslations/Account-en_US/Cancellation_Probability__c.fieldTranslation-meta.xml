@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- The higher the value the higher the risk of cancellation.
-
-4 to 5 - Moderate Risk
-6 and above -  High Risk. --></help>
-    <label><!-- Cancellation Probability --></label>
-    <name>Cancellation_Probability__c</name>
-</CustomFieldTranslation>

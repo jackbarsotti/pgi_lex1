@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- If account is billed annually, the system will populate this field with the last day of the annual period for the access code. --></help>
-    <label><!-- Web Subscription Renewal Date --></label>
-    <name>Web_Subscription_Renewal_Date__c</name>
-</CustomFieldTranslation>

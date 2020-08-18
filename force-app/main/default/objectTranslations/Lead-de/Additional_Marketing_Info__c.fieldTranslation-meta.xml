@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Provides information relevant to how this lead was generated from the marketing team that collected it. --></help>
-    <label><!-- Additional Marketing Info --></label>
-    <name>Additional_Marketing_Info__c</name>
-</CustomFieldTranslation>

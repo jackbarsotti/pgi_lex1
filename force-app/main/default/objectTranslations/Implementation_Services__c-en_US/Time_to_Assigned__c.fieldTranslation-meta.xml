@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Indicates the length of time taken to assign the project. --></help>
-    <label><!-- Time to Assigned --></label>
-    <name>Time_to_Assigned__c</name>
-</CustomFieldTranslation>

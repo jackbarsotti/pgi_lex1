@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- The day of the month that the call happened. This will return the numeric value for the day of the month. --></help>
-    <label><!-- Day of the Month --></label>
-    <name>Day_of_the_Month__c</name>
-</CustomFieldTranslation>

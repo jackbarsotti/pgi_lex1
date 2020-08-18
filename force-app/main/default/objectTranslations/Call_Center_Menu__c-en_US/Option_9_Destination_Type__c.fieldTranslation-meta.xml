@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Option 9 Destination Type --></label>
-    <name>Option_9_Destination_Type__c</name>
-</CustomFieldTranslation>

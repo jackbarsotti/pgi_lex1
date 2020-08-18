@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- If this case is tied to a Global Crossing Ticket Request, check this field. --></help>
-    <label><!-- Opened With L3 --></label>
-    <name>Opened_With_GX__c</name>
-</CustomFieldTranslation>

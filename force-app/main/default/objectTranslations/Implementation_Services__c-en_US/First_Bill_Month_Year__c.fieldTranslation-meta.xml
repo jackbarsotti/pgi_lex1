@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Enter data as MM/YYYY --></help>
-    <label><!-- First Bill Month/Year --></label>
-    <name>First_Bill_Month_Year__c</name>
-</CustomFieldTranslation>

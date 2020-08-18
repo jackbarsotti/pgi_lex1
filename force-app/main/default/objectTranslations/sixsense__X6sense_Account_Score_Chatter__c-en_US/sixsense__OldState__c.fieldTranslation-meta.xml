@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Old State during the chatter notification --></help>
-    <label><!-- Old State --></label>
-    <name>sixsense__OldState__c</name>
-</CustomFieldTranslation>

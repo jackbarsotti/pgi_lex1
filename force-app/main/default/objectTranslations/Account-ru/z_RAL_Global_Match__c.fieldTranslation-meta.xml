@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- The Top-Level Parent in the Account Hierarchy.  You can think of it as the Parent&apos;s Parent&apos;s Parent.  OR Great Great Grandparent. --></help>
-    <label><!-- x-Ultimate Parent --></label>
-    <name>z_RAL_Global_Match__c</name>
-    <relationshipLabel><!-- Accounts (z-RAL-Global Match) --></relationshipLabel>
-</CustomFieldTranslation>

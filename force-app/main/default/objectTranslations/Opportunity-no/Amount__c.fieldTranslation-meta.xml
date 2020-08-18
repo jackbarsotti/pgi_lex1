@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Calculated from the total of the Product TCV associated with this Opportunity (excludes uncommitted audio revenue). --></help>
-    <label><!-- Total TCV --></label>
-    <name>Amount__c</name>
-</CustomFieldTranslation>

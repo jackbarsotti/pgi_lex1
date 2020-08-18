@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- The actual digits tapped into the phone by the caller. For internal calls, this can also show the extension number dialed. This may be different to ConnectedNumber, depending on dialplan rules. --></help>
-    <label><!-- DialledNumber --></label>
-    <name>DialledNumber__c</name>
-</CustomFieldTranslation>

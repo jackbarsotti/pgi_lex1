@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- The city that the user is located in while engaged in the activity --></help>
-    <label><!-- Geo City --></label>
-    <name>bizible2__Geo_City__c</name>
-</CustomFieldTranslation>

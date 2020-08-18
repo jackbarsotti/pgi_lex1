@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help>Wählen Sie die Datenzuordnung aus, um Document Cloud-Feldeingaben aus der signierten Vereinbarung wieder in Salesforce zuzuordnen.</help>
-    <label><!-- Data Mapping --></label>
-    <name>echosign_dev1__Data_Mapping__c</name>
-    <relationshipLabel><!-- Agreement Templates --></relationshipLabel>
-</CustomFieldTranslation>

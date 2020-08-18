@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- IGLOO Radio Tour --></label>
-    <name>IGLOO_Radio_Tour__c</name>
-</CustomFieldTranslation>

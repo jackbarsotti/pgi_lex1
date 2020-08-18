@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Communication, efficiency, proactivity, responsiveness, timing (Select 1-5) --></help>
-    <label><!-- Operator Awareness --></label>
-    <name>Operator_Awareness__c</name>
-</CustomFieldTranslation>

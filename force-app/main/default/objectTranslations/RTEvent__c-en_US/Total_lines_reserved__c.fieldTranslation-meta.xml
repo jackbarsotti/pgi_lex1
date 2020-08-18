@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Total ITF lines requested (Spkr &amp; Part) --></help>
-    <label><!-- Total ITF lines reserved --></label>
-    <name>Total_lines_reserved__c</name>
-</CustomFieldTranslation>

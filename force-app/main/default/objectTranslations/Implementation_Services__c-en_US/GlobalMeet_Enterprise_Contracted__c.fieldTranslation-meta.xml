@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This is the number of GlobalMeet Enterprise licenses on the contract --></help>
-    <label><!-- GlobalMeet Enterprise Contracted --></label>
-    <name>GlobalMeet_Enterprise_Contracted__c</name>
-</CustomFieldTranslation>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Was any work performed at the customer&apos;s location? --></help>
-    <label><!-- On Site --></label>
-    <name>On_Site__c</name>
-</CustomFieldTranslation>

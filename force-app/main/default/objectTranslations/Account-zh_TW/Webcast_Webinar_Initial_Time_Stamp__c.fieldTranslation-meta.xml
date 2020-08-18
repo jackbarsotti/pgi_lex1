@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Time stamp of first Webinar Buying Stage assigned to Account --></help>
-    <label><!-- Webcast/Webinar Initial Time Stamp --></label>
-    <name>Webcast_Webinar_Initial_Time_Stamp__c</name>
-</CustomFieldTranslation>

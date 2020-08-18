@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Per each additional 250 webcast attendees --></help>
-    <label><!-- Audio &amp; Slides - Additional 250 Attendee --></label>
-    <name>Audio_Slides_Webcast_Add_250_Part__c</name>
-</CustomFieldTranslation>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Things Management need to do to help close the deal --></help>
-    <label><!-- Management Next Steps to Close --></label>
-    <name>Management_Next_Steps_to_Close__c</name>
-</CustomFieldTranslation>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Indicates if ZoomInfo Recognizes a Match Between the Email Domain Input Value and Known Domains for the Company. --></help>
-    <label><!-- Email Matches Company Name --></label>
-    <name>zisf__Email_Matches_Company_Name__c</name>
-</CustomFieldTranslation>

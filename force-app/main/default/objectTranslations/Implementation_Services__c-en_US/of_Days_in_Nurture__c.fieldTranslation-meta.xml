@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- # of Days in Nurture --></label>
-    <name>of_Days_in_Nurture__c</name>
-</CustomFieldTranslation>

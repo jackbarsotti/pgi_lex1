@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- TaskRay will substitute the task id for $id in this url --></help>
-    <label><!-- Task Modal Custom Tab 1 URL --></label>
-    <name>TASKRAY__trTaskModalCustomTab1URL__c</name>
-</CustomFieldTranslation>

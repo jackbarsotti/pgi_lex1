@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Examples include revenue uptick, increased minutes, risks, contract terms, etc. --></help>
-    <label><!-- PGi Value --></label>
-    <name>PGi_Value__c</name>
-</CustomFieldTranslation>

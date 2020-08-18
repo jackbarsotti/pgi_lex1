@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- If the Customer&apos;s Case # for Review has a NOC Ticket then this field will auto populate, if it does not or if you manually populate this field then it will be subjective to you to enter the details. --></help>
-    <label><!-- Parent Ticket (NOC) --></label>
-    <name>Parent_Ticket_NOC__c</name>
-    <relationshipLabel><!-- Cases (Parent Ticket (NOC)) --></relationshipLabel>
-</CustomFieldTranslation>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- For new worker&apos;s account, can you please provide the name of an example user who&apos;s permissions we should mirror? --></help>
-    <label><!-- User to mimic --></label>
-    <name>User_to_mimic__c</name>
-    <relationshipLabel><!-- Human Resource Forms (User to mimic) --></relationshipLabel>
-</CustomFieldTranslation>

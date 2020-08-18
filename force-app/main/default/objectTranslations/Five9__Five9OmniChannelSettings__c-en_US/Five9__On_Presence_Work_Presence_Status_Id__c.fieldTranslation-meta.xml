@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- State that is selected when an agent accepts a Live Chat or a routed Salesforce object. Do not include any service channels that are mapped to Five9 channels to prevent a call. --></help>
-    <label><!-- On Presence Work Presence Status Id --></label>
-    <name>Five9__On_Presence_Work_Presence_Status_Id__c</name>
-</CustomFieldTranslation>

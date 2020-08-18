@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Owner Mgmt Level --></label>
-    <name>Owners_Mgmt_Level_Formula__c</name>
-</CustomFieldTranslation>

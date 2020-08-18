@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This is the department the user belongs to in Salesforce. If the user&apos;s department is blank in Salesforce, this filed will be blank too. If Natterbox is unable to find a corresponding Salesforce user for this call, this field will be left blank. --></help>
-    <label><!-- Department --></label>
-    <name>Department__c</name>
-</CustomFieldTranslation>

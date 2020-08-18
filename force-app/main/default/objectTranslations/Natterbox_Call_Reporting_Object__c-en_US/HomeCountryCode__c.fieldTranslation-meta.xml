@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This is the home country code of the Natterbox user involved in the call. This is the 2 or 3 digit numeric dialling code for that country. For example, for the UK, this would be &apos;44&apos;. --></help>
-    <label><!-- HomeCountryCode --></label>
-    <name>HomeCountryCode__c</name>
-</CustomFieldTranslation>

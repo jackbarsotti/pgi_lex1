@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Reservation number associated with Op-assist call. This should be entered when audio case is opened. --></help>
-    <label><!-- Reservation Number --></label>
-    <name>Reservation_Number__c</name>
-</CustomFieldTranslation>

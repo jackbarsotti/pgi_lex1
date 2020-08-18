@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Is worker a re-hire?If yes, enter name used when previously employed at PGi. --></help>
-    <label><!-- If Re-Hire Name When Previously Employed --></label>
-    <name>Re_Hire__c</name>
-</CustomFieldTranslation>

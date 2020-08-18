@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Unit Price (Create/Edit Only) --></label>
-    <name>Unit_Price_Create_Only__c</name>
-</CustomFieldTranslation>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Key Internal or External Drivers --></label>
-    <name>Key_Internal_or_External_Drivers__c</name>
-</CustomFieldTranslation>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- The unique Salesforce component Id for a specific metadata element. --></help>
-    <label><!-- Component Id --></label>
-    <name>ddcdf__Component_Id__c</name>
-</CustomFieldTranslation>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- When enabled, if the agent is on a call, the Five9 adapter state is modified to prevent a text interaction. If the agent is in a text interaction, the Five9 adapter state is modified to prevent a voice interaction. --></help>
-    <label><!-- Enable Federated Routing --></label>
-    <name>Five9__Federated_Routing__c</name>
-</CustomFieldTranslation>

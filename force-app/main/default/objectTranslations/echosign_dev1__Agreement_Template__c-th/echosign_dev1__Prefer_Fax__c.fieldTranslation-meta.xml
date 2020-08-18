@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help>เมื่อส่งข้อตกลงเพื่อขอลายเซ็นที่เขียนด้วยลายมือ จะใช้หมายเลขโทรสารสำหรับการติดต่อ ถ้ามี</help>
-    <label><!-- Use Fax Number --></label>
-    <name>echosign_dev1__Prefer_Fax__c</name>
-</CustomFieldTranslation>

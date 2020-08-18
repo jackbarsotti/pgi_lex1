@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Excludes specified views from the TaskRay interface.  Accepted values are &quot;MyWork&quot;, &quot;Kanban&quot;, &quot;Row&quot;, &quot;Plan&quot;, &quot;Calendar&quot;, &quot;Portfolio&quot;, &quot;TemplatePerformance&quot; separated by commas. --></help>
-    <label><!-- Excluded Views --></label>
-    <name>TASKRAY__trExcludedViews__c</name>
-</CustomFieldTranslation>

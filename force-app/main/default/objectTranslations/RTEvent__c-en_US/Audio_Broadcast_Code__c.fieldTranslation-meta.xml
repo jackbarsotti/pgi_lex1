@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Unique Broadcast Audio code used for this event. --></help>
-    <label><!-- Broadcast Audio Code --></label>
-    <name>Audio_Broadcast_Code__c</name>
-</CustomFieldTranslation>

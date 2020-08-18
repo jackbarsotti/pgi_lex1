@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Has work been done by anyone in the Deal Desk prior to this request?  If so, please state who gave assistance and when. --></help>
-    <label><!-- Prior work completed by Deal Desk? --></label>
-    <name>Prior_work_completed_by_Deal_Desk__c</name>
-</CustomFieldTranslation>

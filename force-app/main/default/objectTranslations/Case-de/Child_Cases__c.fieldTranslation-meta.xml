@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Counts the # of related Cases.  Note: For cases created by email, an external reply to the original thread creates a child case. --></help>
-    <label><!-- Child Cases --></label>
-    <name>Child_Cases__c</name>
-</CustomFieldTranslation>

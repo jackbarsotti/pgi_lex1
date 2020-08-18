@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- The previous predictive engagement score of the account. --></help>
-    <label><!-- ABM | Last PES --></label>
-    <name>ABM_Last_PES__c</name>
-</CustomFieldTranslation>

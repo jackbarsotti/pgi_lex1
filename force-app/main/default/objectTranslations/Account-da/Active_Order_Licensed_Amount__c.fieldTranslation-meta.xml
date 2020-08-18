@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- &apos;Active Order&apos; &apos;1st Year License Amount&apos; rolled up to be used to calculate Business Level --></help>
-    <label><!-- Active Order Licensed Amount --></label>
-    <name>Active_Order_Licensed_Amount__c</name>
-</CustomFieldTranslation>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- this is a manual entry of the amount of all vendor cost for this commission --></help>
-    <label><!-- Vendor Product Costs --></label>
-    <name>Vendor_Product_Costs__c</name>
-</CustomFieldTranslation>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Break 5.2 Duration --></label>
-    <name>Break_5_2_Duration__c</name>
-</CustomFieldTranslation>

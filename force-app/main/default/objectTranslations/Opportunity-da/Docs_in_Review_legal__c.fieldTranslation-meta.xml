@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Management Criteria Met --></help>
-    <label><!-- D: Docs In Review (legal) --></label>
-    <name>Docs_in_Review_legal__c</name>
-</CustomFieldTranslation>

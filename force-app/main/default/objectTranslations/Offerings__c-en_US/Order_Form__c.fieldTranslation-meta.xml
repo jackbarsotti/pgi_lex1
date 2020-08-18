@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Which Order Form to use for this Offering, or none. --></help>
-    <label><!-- Order Form --></label>
-    <name>Order_Form__c</name>
-    <relationshipLabel><!-- Offerings --></relationshipLabel>
-</CustomFieldTranslation>

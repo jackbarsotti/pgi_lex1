@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- z-C.Owner &lt;&gt; A.Owner --></label>
-    <name>z_C_Owner_A_Owner__c</name>
-</CustomFieldTranslation>

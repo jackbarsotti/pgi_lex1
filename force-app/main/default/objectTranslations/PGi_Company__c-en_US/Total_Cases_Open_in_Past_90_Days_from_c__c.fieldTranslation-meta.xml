@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Total Cases Open in Past 90 Days --></label>
-    <name>Total_Cases_Open_in_Past_90_Days_from_c__c</name>
-</CustomFieldTranslation>

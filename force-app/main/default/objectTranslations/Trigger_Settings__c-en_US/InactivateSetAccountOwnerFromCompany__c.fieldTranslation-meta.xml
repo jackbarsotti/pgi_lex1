@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- This is used to inactivate SetAccountOwnerFromCompany trigger. Please set this as True if you want to inactivate SetAccountDefaultRegion trigger --></help>
-    <label><!-- InactivateSetAccountOwnerFromCompany --></label>
-    <name>InactivateSetAccountOwnerFromCompany__c</name>
-</CustomFieldTranslation>

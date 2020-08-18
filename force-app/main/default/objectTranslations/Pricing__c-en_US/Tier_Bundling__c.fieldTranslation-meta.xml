@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- If specified, the Quantity will be divided by this number and the remainder removed to get an actual Quantity. For example, if Tier Bundling is 10, that means that any number between 1 and 10 will be treated as 1, between 11 and 20 as 2, etc. --></help>
-    <label><!-- Tier Bundling --></label>
-    <name>Tier_Bundling__c</name>
-</CustomFieldTranslation>

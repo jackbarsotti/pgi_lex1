@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Base Package is Not Free Trial --></label>
-    <name>Base_Package_is_Not_Free_Trial__c</name>
-</CustomFieldTranslation>

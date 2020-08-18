@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- If available, enter this customer&apos;s previous reservation number. --></help>
-    <label><!-- Previous Reservation --></label>
-    <name>Previous_Reservation__c</name>
-</CustomFieldTranslation>

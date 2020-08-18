@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Shows the name of the Ultimate Parent Account via Account Hierarchy set by Parent field.  Shows up to 5 levels up, if the Hierarchy exceeds that then this is will not be the Ultimate Parent Account.  Always ensure you refer to the Account Hierarchy. --></help>
-    <label><!-- Ultimate Parent --></label>
-    <name>Ultimate_Parent__c</name>
-</CustomFieldTranslation>

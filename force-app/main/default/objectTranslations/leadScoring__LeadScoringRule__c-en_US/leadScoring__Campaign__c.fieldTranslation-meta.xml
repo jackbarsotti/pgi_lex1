@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Leave blank to select all campaigns --></help>
-    <label><!-- Filter By Campaign (optional): --></label>
-    <name>leadScoring__Campaign__c</name>
-    <relationshipLabel><!-- Lead Scoring Rules --></relationshipLabel>
-</CustomFieldTranslation>

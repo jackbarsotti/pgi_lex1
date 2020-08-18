@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- iMC Opportunity Product Record ID --></label>
-    <name>iMC_Opportunity_Product_Record_ID__c</name>
-</CustomFieldTranslation>

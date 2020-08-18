@@ -1,5 +1,0 @@
-<aura:event type="APPLICATION" description="Event template">
-    <aura:attribute name="SObjectId" type="String" description="Response" access="global"/>
-    <aura:attribute name="SObjectLabel" type="String" description="Response" access="global"/>
-    <aura:attribute name="isSelected" type="Boolean" default="false" access="global"/>
-</aura:event>

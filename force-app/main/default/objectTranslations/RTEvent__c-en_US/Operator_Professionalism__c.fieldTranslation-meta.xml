@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Articulation, engagement, etiquette, pronunciation (Select 1-5) --></help>
-    <label><!-- Operator Professionalism --></label>
-    <name>Operator_Professionalism__c</name>
-</CustomFieldTranslation>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Whether or not this Contract/Amendment requires Pricing Approval from the Deal Desk. --></help>
-    <label><!-- Required Approval: Deal Desk --></label>
-    <name>Required_Approval_Deal_Desk__c</name>
-</CustomFieldTranslation>

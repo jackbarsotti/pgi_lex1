@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Emails the Opportunity Owner the CIF form when selected, the Stage = Closed Won, and the record is saved.  Will reset to unchecked once saved. FYI, you need to select this field from the Q/C record if you have a signed contract done via Docusign. --></help>
-    <label><!-- Generate CIF Form (NA Only) --></label>
-    <name>Generate_CIF_Form_NA_Only__c</name>
-</CustomFieldTranslation>
