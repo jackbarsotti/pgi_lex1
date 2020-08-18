@@ -40,8 +40,8 @@ echo
 # Recreate "classes" and "triggers" folders for retrieved metadata files
 export classPath=force-app/main/default/classes
 export triggerPath=force-app/main/default/triggers
-sudo mkdir -p /Users/jackbarsotti/pgi_lex/$classPath
-sudo mkdir -p /Users/jackbarsotti/pgi_lex/$triggerPath
+sudo mkdir -p /Users/jackbarsotti/pgi_lex1/$classPath
+sudo mkdir -p /Users/jackbarsotti/pgi_lex1/$triggerPath
  
 # Run a source:retrieve to rebuild the contents of the force-app folder (branch specific)
 export RETRIEVED_FILES=$(sfdx force:source:retrieve -u targetEnvironment -m ApexClass)

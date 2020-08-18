@@ -54,14 +54,9 @@ export triggerPath=force-app/main/default/triggers
 
 # Ensure that "inexact rename detection" error isn't skipped due to too many files
 git config --global diff.renameLimit 9999999
-sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations
-sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objects
-sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/objectTranslations
-sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/objects
+
 # Run a git diff for the incremental build depending on checked-out branch (if-statement per branch)
 # LEX branch:
-#sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/objectTranslations/Activity-bg/Activity-bg.objectTranslation-meta.xml
-#sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/objects
 if [ "$BRANCH" == "LEX" ]; then
   #create tracking branch
   echo 'Preparing for an incremental deployment to org...'
@@ -94,24 +89,13 @@ if [ "$BRANCH" == "LEX" ]; then
     elif [[ $file == *.page ]]; then
       find force-app/main/default/pages -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
     fi
-  done
-  #sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations/Activity-bg/Activity-bg.objectTranslation-meta.xml
-  #sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations
-  #sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objects
-  #sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/objectTranslations
-  #sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/objects
-  sudo cp --parents -r force-app/main/default/objectTranslations/ -t $DEPLOYDIR
-  echo "/diff/force-app/main/default/objectTranslations/Activity-bg directory:"
-  ls $DEPLOYDIR/force-app/main/default/objectTranslations/Activity-bg  
+  done 
   echo 'Complete.'
   echo
   echo 'Deployment directory includes:'
   echo
   ls $DEPLOYDIR/force-app/main/default
   echo
-  #echo 'Class files to be deployed:'
-  #echo
-  #ls $DEPLOYDIR/force-app/main/default/classes
 fi;
 
 # Make temporary folder for our <className>Test.cls files that will be parsed
@@ -148,18 +132,10 @@ if [ "$BRANCH" == "LEX" ]; then
     export TESTLEVEL="RunSpecifiedTests -r $parsedList";
   fi;
 fi;
-#sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations
-#sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objects
-#sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/objectTranslations
-#sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/objects
+
 # Store our auth-url for our targetEnvironment alias for deployment
 sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
 # Run apex tests and deploy apex classes/triggers
-#sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations/Conference__c-en_US
-#sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objects
-#sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations
-#sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/pages/popUp.page
-#sudo rm -rf /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/objectTranslations/Activity-bg
 sudo sfdx force:org:display -u targetEnvironment
 sudo sfdx force:source:deploy -w 20 -p $DEPLOYDIR -l $TESTLEVEL -u targetEnvironment
 echo
