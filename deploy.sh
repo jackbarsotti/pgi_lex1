@@ -103,7 +103,7 @@ if [ "$BRANCH" == "LEX" ]; then
   ls $DEPLOYDIR/force-app/main/default
   echo
 fi;
-ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/classes
+ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/triggers
  
 # Make temporary folder for our <className>Test.cls files that will be parsed
 sudo mkdir -p /Users/jackbarsotti/pgi_lex1/force-app/main/default/unparsedTests
