@@ -67,7 +67,7 @@ if [ "$BRANCH" == "LEX" ]; then
   git checkout LEX
   echo
   echo 'Running a git diff, please wait...'
-  git diff --diff-filter=A --name-only master force-app/
+  #git diff --diff-filter=A --name-only master force-app/
   git diff --diff-filter=UM --name-only master force-app/ |
   while read -r file; do
     # Copy the files from git diff into the deploy directory
