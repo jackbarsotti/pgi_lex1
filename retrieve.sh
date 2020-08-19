@@ -67,6 +67,7 @@ git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
 git add force-app/.
 ##git stash
+git checkout LEX
 #git checkout master
 ##git stash pop
 
