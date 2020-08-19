@@ -33,7 +33,9 @@ git fetch -q
 #NEW
 ##git add .
 ##git commit -m "blah"
+git stash
 git checkout master
+git pop
 # Delete the contents of force-app folder before we paste source:retrieve contents into it
 echo
 rm -rf force-app/main/default/*
@@ -58,7 +60,8 @@ echo
 echo "All retrieved metadata files have been added to the force-app directory on your $TRAVIS_BRANCH branch."
 echo
 echo "Now adding and committing these changes to your $TRAVIS_BRANCH branch..."
- 
+ls /Users/jackbarsotti/pgi_lex1/force-app
+ls /Users/jackbarsotti/pgi_lex1/force-app/main/default
 # Add changes
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
@@ -81,4 +84,4 @@ echo
 
 # Run a git push 
 git remote add origin-master https://${GH_TOKEN}@github.com/jackbarsotti/pgi_lex1.git > /dev/null 2>&1
-git push --quiet --set-upstream origin-master master
+#git push --quiet --set-upstream origin-master master
