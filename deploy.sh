@@ -106,7 +106,7 @@ fi;
 #sudo rm -f /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/triggers/dlrs_ContactTrigger.trigger-meta.xml
 #sudo rm -f /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/triggers/dlrs_ContactTrigger.trigger
 #sudo cp --parents /Users/jackbarsotti/pgi_lex1/force-app/main/default/triggers/dlrs_ContactTrigger.trigger-meta.xml -t $DEPLOYDIR
-ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/pages
+ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/triggers
  
 # Make temporary folder for our <className>Test.cls files that will be parsed
 sudo mkdir -p /Users/jackbarsotti/pgi_lex1/force-app/main/default/unparsedTests
