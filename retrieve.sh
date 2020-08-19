@@ -60,8 +60,8 @@ echo
 echo "All retrieved metadata files have been added to the force-app directory on your $TRAVIS_BRANCH branch."
 echo
 echo "Now adding and committing these changes to your $TRAVIS_BRANCH branch..."
-ls /Users/jackbarsotti/pgi_lex1/force-app
 ls /Users/jackbarsotti/pgi_lex1/force-app/main/default
+ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/classes
 # Add changes
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
