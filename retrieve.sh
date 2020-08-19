@@ -39,6 +39,7 @@ git checkout master
 # Delete the contents of force-app folder before we paste source:retrieve contents into it
 echo
 rm -rf force-app/main/default/*
+ls /Users/jackbarsotti/pgi_lex1/force-app/main/default
 echo
 echo 'The contents of the force-app directory have been removed.'
 echo "Ready to retrieve org metadata to your $TRAVIS_BRANCH branch."
