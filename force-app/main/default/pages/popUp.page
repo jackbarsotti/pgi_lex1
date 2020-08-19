@@ -1,0 +1,52 @@
+<apex:page showHeader="false" standardController="Contact" extensions="PopupAlertController">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:commandButton value="show Popup Alert" action="{!showPopup}" rerender="popup" status="status"/>
+            <apex:outputPanel id="popup">
+                <apex:outputPanel id="popInnerOutputPnl" styleClass="customPopup" layout="block" rendered="{!displayPopUp}">
+                    <apex:commandButton value="X" title="Close the popup" action="{!closePopup}" styleClass="closeButton" rerender="popup"> </apex:commandButton>
+                    
+                    <apex:pageblockSection >
+                        <apex:selectRadio value="{!Contact.Email}"> </apex:selectRadio><p/>
+                        <apex:selectRadio value="{!Contact.Phone}"> </apex:selectRadio><p/>
+                        <apex:selectRadio value="{!Contact.Email}"> </apex:selectRadio><p/>
+                    </apex:pageblockSection>
+                    
+                    <apex:commandButton value="Ok" action="{!redirectPopup}" styleClass="closeButton" rerender="popup"> </apex:commandButton>
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form>
+    
+    <style type="text/css">
+        .customPopup {
+        background-color: white;
+        border-style: solid;
+        border-width: 2px;
+        left: 20%;
+        padding: 10px;
+        position: absolute;
+        z-index: 9999;
+        /* These are the 3 css properties you will need to tweak so the popup displays in the center of the screen. First set the width.
+        Then set margin-left to negative half of what the width is. You can also add the height property for a fixed size pop up.*/
+        width: 500px;
+        top: 20%;
+        }
+        
+        .disabledTextBox {
+        background-color: white;
+        border: 1px solid;
+        color: black;
+        cursor: default;
+        width: 90px;
+        display: table;
+        padding: 2px 1px;
+        text-align:right;
+        }
+        
+        .closeButton {
+        float: right;
+        }
+    </style>
+    
+</apex:page>
