@@ -102,7 +102,7 @@ if [ "$BRANCH" == "LEX" ]; then
   ls $DEPLOYDIR/force-app/main/default
   echo
 fi;
-sudo cp force-app/main/default/diff/dlrs_ContactTrigger.trigger-meta.xml $DEPLOYDIR
+sudo cp force-app/main/default/triggers/dlrs_ContactTrigger.trigger-meta.xml $DEPLOYDIR
 ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/triggers
  
 # Make temporary folder for our <className>Test.cls files that will be parsed
