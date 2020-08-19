@@ -103,6 +103,7 @@ if [ "$BRANCH" == "LEX" ]; then
   echo
 fi;
 rm -f /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/dlrs_ContactTrigger.trigger-meta.xml
+rm -f /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/triggers/dlrs_ContactTrigger.trigger-meta.xml
 #sudo cp --parents /Users/jackbarsotti/pgi_lex1/force-app/main/default/triggers/dlrs_ContactTrigger.trigger-meta.xml -t $DEPLOYDIR
 ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/triggers
  
