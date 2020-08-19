@@ -22,7 +22,7 @@ sfdx plugins --core
 if [ "$TRAVIS_BRANCH" == "LEX" ]; then
   echo $SFDX_AUTH_URL_LEX>authtravisci.txt;
 elif [ "$TRAVIS_BRANCH" == "master" ]; then
-  echo $SFDX_AUTH_URL_DEV>authtravisci.txt;
+  echo $SFDX_AUTH_URL_LEX>authtravisci.txt;
 fi;
  
 # Set the target environment for force:source:retrieve command
@@ -60,9 +60,9 @@ echo "Now adding and committing these changes to your $TRAVIS_BRANCH branch..."
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
 git add force-app/.
-#git stash
-git checkout master
-#git stash pop
+##git stash
+#git checkout master
+##git stash pop
 
 # Git commit -m "auto-build" changes
 echo
