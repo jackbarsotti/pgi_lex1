@@ -1,3 +1,0 @@
-<apex:page standardController="Opportunity">
-  <p>New opportunities should be created from a related contact.</p> 
-</apex:page>

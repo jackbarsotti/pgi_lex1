@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<SharingReason xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>TASKRAY__Project_Member_added_in_TaskRay__c</fullName>
-    <label>Added to TaskRay Project Team</label>
-</SharingReason>

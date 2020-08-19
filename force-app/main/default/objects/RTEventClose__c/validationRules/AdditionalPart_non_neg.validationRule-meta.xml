@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>AdditionalPart_non_neg</fullName>
-    <active>true</active>
-    <errorConditionFormula>Additional_Participants_Rate__c &lt; 0</errorConditionFormula>
-    <errorDisplayField>Additional_Participants_Rate__c</errorDisplayField>
-    <errorMessage>Additional Participants Rate must be greater or equal to 0.00</errorMessage>
-</ValidationRule>

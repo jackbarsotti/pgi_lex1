@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>sc1_3_end</fullName>
-    <description>Any fields added will always show up at the end. 2-Columns.</description>
-    <label>Section 1: Portal Admin/Cloud Control/Agenday Admin Client (end)</label>
-</FieldSet>

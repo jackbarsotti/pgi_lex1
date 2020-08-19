@@ -66,8 +66,6 @@ public class TaskTriggerHandler extends triggerHandler {
 	private void createAttachmentQuote(List<Task> taskList){
 		Map<Id,Id> activityIdByOppId = new Map<Id,Id>();
 		for(Task taskObj : taskList){
-			System.debug('The Id is Task'+taskObj.WhatId);
-			System.debug('The Id is Task'+taskObj.WhoId);
 			if(String.isNotBlank(taskObj.WhatId) && String.valueOf(taskObj.WhatId).startsWith('006')){
 				activityIdByOppId.put(taskObj.WhatId, taskObj.id);
 			}
@@ -79,18 +77,14 @@ public class TaskTriggerHandler extends triggerHandler {
 		List<Attachment> attachmentList = new List<Attachment>();
 		for(Id key: attachmentByParentId.keySet()){
 			Attachment attRec = attachmentByParentId.get(key);
-			System.debug('The Name'+attRec.Name);
 			Attachment att = new Attachment();
 			att.Name = attRec.Name;
 			att.ParentId = activityIdByOppId.get(key);
 			att.Body = attRec.Body;
 			attachmentList.add(att);
-			System.debug('The Name'+attRec.Name);
-			System.debug('The Parent'+activityIdByOppId.get(key));
 		}
 		if(!attachmentList.isEmpty()){
-			 INSERT attachmentList;
-			System.debug('Entering');
+			INSERT attachmentList;
 		}
 	}
 	

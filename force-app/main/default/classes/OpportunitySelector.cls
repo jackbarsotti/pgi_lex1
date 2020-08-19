@@ -121,7 +121,6 @@ public class OpportunitySelector {
     }
 
     public Map<Id, List<Opportunity>> getOpenPGIRenewalOppsByAccountId(List<Opportunity> oppList) {
-        System.debug('>> oppList >>'+oppList);
         if(oppList == null) {
             return null;
         }
@@ -152,7 +151,6 @@ public class OpportunitySelector {
                 System.debug('failed to query opp records for account: ' + accountId);
             }
         }
-        System.debug('The Return Map'+returnMap);
         return returnMap;
     }
 

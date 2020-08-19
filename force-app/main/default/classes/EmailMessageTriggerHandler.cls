@@ -76,9 +76,13 @@ Numeric - value in minutes
         for(EmailMessage em : (List<EmailMessage>)Trigger.new) {
             emailParentIdSet.add(em.ParentId);
         }
-        for(case caseObj :[Select Id,First_Reply_Time__c,(Select Id,SLA_Time_Capture__c From EmailMessages)from case WHERE Id=:emailParentIdSet]){
-            if(caseObj.EmailMessages.size() == 0 || caseObj.First_Reply_Time__c == null )
-            {
+        for(case caseObj :[Select Id,First_Reply_Time__c,(Select Id,SLA_Time_Capture__c From EmailMessages LIMIT 1)from case WHERE Id=:emailParentIdSet]){
+            Integer count = 0;
+            for(EmailMessage em: caseObj.EmailMessages) {
+                count++;
+                break;
+            }
+            if(count == 0 || caseObj.First_Reply_Time__c == null) {
                 datetime currentTime = datetime.now();
                 caseObj.First_Reply_Time__c=currentTime.format('HH:mm');
                 updateCases.add(caseObj);

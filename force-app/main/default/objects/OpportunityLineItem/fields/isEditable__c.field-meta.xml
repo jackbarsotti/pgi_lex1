@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>isEditable__c</fullName>
-    <defaultValue>false</defaultValue>
-    <description>Only for Records that have a Q/C relationship.  If not checked reps will get a VR error stating they cannot edit details here and will need to edit on the Q/C record instead.</description>
-    <externalId>false</externalId>
-    <label>isEditable</label>
-    <type>Checkbox</type>
-</CustomField>

@@ -46,12 +46,6 @@ public class PGI_Utility{
         }
         return profile;
     } set; }
-    public static Map<Id, Profile> profileById {get {
-        if(profileById == null) {
-            profileById = new Map<Id, Profile>([SELECT Id, Name FROM Profile]);
-        }
-        return profileById;
-    } set;}
     public static Set<String> pluckStrings(List<sObject> sobjects, String stringField) {
         Set<String> returnSet = new Set<String>();
         for(sObject sobj: sObjects) {

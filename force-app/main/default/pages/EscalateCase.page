@@ -1,6 +1,0 @@
-<apex:page showHeader="false" sidebar="false" action="{!init}" standardController="Case" extensions="EscalateCase">
-	<apex:form >
-		<apex:pageMessages id="pm" />
-		<apex:commandButton action="{!goBack}" value="Go back"/>
-	</apex:form>
-</apex:page>

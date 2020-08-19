@@ -1,3 +1,0 @@
-<apex:page StandardController="Request_for_Change__c" extensions="RFCWithdrawApproval" action="{!withdraw}">
-    <apex:pageMessages />
-</apex:page>

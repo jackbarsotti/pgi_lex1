@@ -1,5 +1,0 @@
-<apex:page controller="Redirect">
-    <apex:form >
-        <apex:commandButton value="Send An Email" action="{!fetchRecords}"/>
-    </apex:form>
-</apex:page>

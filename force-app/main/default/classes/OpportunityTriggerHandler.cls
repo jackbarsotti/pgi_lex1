@@ -74,6 +74,7 @@ public without sharing class OpportunityTriggerHandler extends TriggerHandler {
             oppty.Opportunity_Product_Families__c = collectionString;
         }
         
+        
     }
     private Map<Id, Account> relatedAccounts {get {
         if(relatedAccounts == null) {
@@ -86,6 +87,7 @@ public without sharing class OpportunityTriggerHandler extends TriggerHandler {
                                                     (SELECT Id FROM Opportunities WHERE RecordType.Name =: PGI_RENEWAL_RT AND IsClosed = false AND Opportunity_Product_Families__c LIKE '%Unified Communications%') 
                                                     FROM Account WHERE Id IN: accountIds]);
         }
+        System.debug('The Map'+relatedAccounts);
         return relatedAccounts;
     } set;}
 
@@ -93,6 +95,8 @@ public without sharing class OpportunityTriggerHandler extends TriggerHandler {
         Set<Id> accountIds = new Set<Id>();
         Map<Id, Account> accountMap = relatedAccounts;
         for(Opportunity o: (List<Opportunity>)Trigger.new) {
+            System.debug('AccEl'+accountMap.get(o.AccountId));
+            System.debug('AccEl'+accountMap.get(o.AccountId).Opportunities.size());
             if(accountMap.get(o.AccountId) != null && accountMap.get(o.AccountId).Opportunities != null && accountMap.get(o.AccountId).Opportunities.size() > 1) {
                 o.addError('You are only allow to have one open renewal opportunity with Unified Communications at a time.');
             }
@@ -629,9 +633,6 @@ Opportunity Team = clone from origin
                     // picklist - Channel__c = 'Cloud' or 'Major Accounts' or 'APAC' or 'JAPAN' or 'Tier One' ORRRRR
                     // Channel__c = 'Partners' AND Account_Type__c = 'End User – Agent' or 'Direct'
                      //02266649
-                     if(opp.Opportunity_Product_Families__c == 'Webcasting' || opp.Opportunity_Product_Families__c == 'Webcasting;') {
-                         continue;
-                     }
                     if(opp.Opportunity_Product_Families__c.contains('TPx') || (opp.Opportunity_Deal_Type__c != null &&
                                                                                opp.Channel__c != null &&
                                                                                ((opp.Opportunity_Deal_Type__c == 'Conversion' ||
@@ -689,7 +690,11 @@ Opportunity Team = clone from origin
             // if no valid PGi Contract, then display error message to the User
             for(Id oppId : oppIds.keySet()) {
                 Opportunity opp = (Opportunity)Trigger.newMap.get(oppId);
-                if(String.isNotBlank(opp.Opportunity_Product_Families__c) && opp.Opportunity_Product_Families__c.contains('TPx')) {
+                if(opp.Opportunity_Product_Families__c == 'Webcast' || opp.Opportunity_Product_Families__c == 'Webcast;') {
+                    if(!oppIdsWithAttachment.contains(oppId)) {
+                        Trigger.newMap.get(oppId).addError('Please ensure a contract has been attached to this opportunity.');
+                    }
+                } else if(String.isNotBlank(opp.Opportunity_Product_Families__c) && opp.Opportunity_Product_Families__c.contains('TPx')) {
                     if(!oppIdsWithAttachment.contains(oppId)) {
                         Trigger.newMap.get(oppId).addError('Please ensure a contract has been attached to this opportunity.');
                     }

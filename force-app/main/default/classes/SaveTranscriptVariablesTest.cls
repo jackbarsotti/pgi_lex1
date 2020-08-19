@@ -9,7 +9,6 @@ private class SaveTranscriptVariablesTest {
         lct.LiveChatVisitorId = lcv.Id;
         lct.First_Name__c = 'John';
         lct.Last_Name__c = 'Doe';
-        lct.ReferralUri__c = 'https://www.pgi.com';
         insert lct;
 
         //Web or Audio Meetings test
@@ -41,24 +40,6 @@ private class SaveTranscriptVariablesTest {
 
         outputList = SaveTranscriptVariables.saveChatDetails(inputList);
         System.assertEquals(outputList[0].chatQueue, [SELECT Id FROM Group WHERE DeveloperName = 'Chat_Billing_INTL'].Id);
-
-        transcriptRecord = [SELECT Email_Address__c, Subject__c, PGi_Client__c, PGi_Company__c FROM LiveChatTranscript WHERE Id = :lct.Id];
-        System.assertEquals(transcriptRecord.Email_Address__c, input.email);
-        System.assertEquals(transcriptRecord.Subject__c, input.subject);
-        System.assertEquals(transcriptRecord.PGi_Client__c, null);
-        System.assertEquals(transcriptRecord.PGi_Company__c, null);
-
-        //Sales test
-        inputList = new List<SaveTranscriptVariables.Input>();
-        input = new SaveTranscriptVariables.Input();
-        input.routableId = lct.Id;
-        input.subject = 'This is a sales test';
-        input.email = 'john.doe.sales@pgi.com';
-        input.productArea = 'Sales';
-        inputList.add(input);
-
-        outputList = SaveTranscriptVariables.saveChatDetails(inputList);
-        System.assertEquals(outputList[0].chatQueue, [SELECT Id FROM Group WHERE DeveloperName = 'Chat_Sales_NA'].Id);
 
         transcriptRecord = [SELECT Email_Address__c, Subject__c, PGi_Client__c, PGi_Company__c FROM LiveChatTranscript WHERE Id = :lct.Id];
         System.assertEquals(transcriptRecord.Email_Address__c, input.email);

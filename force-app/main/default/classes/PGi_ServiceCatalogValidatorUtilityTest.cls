@@ -31,6 +31,7 @@ public class PGi_ServiceCatalogValidatorUtilityTest {
         obj.validFieldInput('Account','Date_Provisioned__c',str);
         obj.validFieldInput('Account','Date_Provisioned__c','2019-11-12');
         System.assertEquals('true', obj.validFieldInput('Account','Name','Test1'));
+        System.assertEquals('true', obj.validFieldInput('Account','Zendesk__createdUpdatedFlag__c','true'));
         System.assertEquals('true',  obj.validFieldInput('Account','Cumulative_Total_Booked__c','10'));
         System.assertEquals('true', obj.validFieldInput('Account','NumberOfEmployees','10'));
     }

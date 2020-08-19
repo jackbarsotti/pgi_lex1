@@ -20,12 +20,18 @@ public with sharing class AccountController extends BaseController {
     }
   }
   public PageReference init() {
-    String retUrl = ApexPages.currentPage().getParameters().get('retURL');
-    if(ReadyTalkRecordTypeHelper.readyTalkAccountRecordTypeIds.contains(this.a.RecordTypeId)) {
-        return null;
-    } else {
-        delete a;
-        return new PageReference(retUrl);
+    String themeType = UserInfo.getUITheme();
+    if(themeType=='Theme3'){
+      String retUrl = ApexPages.currentPage().getParameters().get('retURL');
+      if(ReadyTalkRecordTypeHelper.readyTalkAccountRecordTypeIds.contains(this.a.RecordTypeId)) {
+          return null;
+      } else {
+          delete a;
+          return new PageReference(retUrl);
+      }
+    }
+    else{
+      return null;
     } 
   }
   /**

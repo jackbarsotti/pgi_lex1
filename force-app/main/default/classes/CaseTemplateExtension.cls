@@ -1,5 +1,5 @@
 public with sharing class CaseTemplateExtension {
-
+    
     // The extension constructor initializes the private member
     // variable mysObject by using the getRecord method from the standard
     // controller.
@@ -7,7 +7,7 @@ public with sharing class CaseTemplateExtension {
     public CaseTemplateExtension(ApexPages.StandardController stdController) {
         this.controller = stdController;
     }
-
+    
     public List<SelectOption> caseRecordTypes {get{
         if(caseRecordTypes == null) {
             caseRecordTypes = new List<SelectOption>();
@@ -16,18 +16,22 @@ public with sharing class CaseTemplateExtension {
             for(RecordType rt: rtList) {
                 caseRecordTypes.add(new SelectOption(rt.Id, rt.Name));
             }
-
+            
         }
         return caseRecordTypes;
     }set;}
-    public PageReference saveAndNew() {
+    public PageReference saveAndNew() {   
+        //  String str = ApexPages.currentPage().getUrl().subStringAfter('/').substringBefore('?');
+        //  return new PageReference('/apex/' + str).setRedirect(true);
         try {
-            controller.save();
+            //  controller.save();
+            String str = ApexPages.currentPage().getUrl().subStringAfter('/').substringBefore('?');
+            return new PageReference('/apex/' + str).setRedirect(true);
         } catch (exception e) {
             ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR, e.getMessage()));
             return null;
         }
-        Case_Template__c ct = new Case_Template__c();
-        return new ApexPages.StandardController(ct).edit();
+         Case_Template__c ct = new Case_Template__c();
+          return new ApexPages.StandardController(ct).edit();  
     }
 }

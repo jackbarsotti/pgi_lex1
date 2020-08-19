@@ -1,4 +1,0 @@
-<apex:page showHeader="false">
-	<chatter:feed entityId="{!$CurrentPage.parameters.id}"/>
-  <!--<chatter:feed entityId="{!$User.Id}"/>-->
-</apex:page>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>DandbCompanyId</fullName>
-    <inlineHelpText>Accounts are scrubbed each night and matched against the entire D&amp;B database, if a match is found then the D&amp;B record will populate here.  The D&amp;B record has additional firmographic details about each Account.</inlineHelpText>
-    <trackFeedHistory>false</trackFeedHistory>
-    <trackHistory>false</trackHistory>
-    <type>Lookup</type>
-</CustomField>

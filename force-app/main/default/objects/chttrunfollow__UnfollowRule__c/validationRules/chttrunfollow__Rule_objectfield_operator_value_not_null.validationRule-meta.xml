@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>chttrunfollow__Rule_objectfield_operator_value_not_null</fullName>
-    <active>true</active>
-    <description>Checks that the rule has a valid object, field, operator, and value</description>
-    <errorConditionFormula>ISNULL(chttrunfollow__ObjectName__c) ||chttrunfollow__ObjectName__c==&#39;&#39; || ISNULL(chttrunfollow__FieldName__c) ||chttrunfollow__FieldName__c==&#39;&#39; || ISNULL(text(chttrunfollow__Operator__c ))  || ISNULL(chttrunfollow__Value__c) || chttrunfollow__Value__c==&#39;&#39;</errorConditionFormula>
-    <errorMessage>Error: You must select an object, field, operator, and value before saving. Blank or null values are not supported.</errorMessage>
-</ValidationRule>

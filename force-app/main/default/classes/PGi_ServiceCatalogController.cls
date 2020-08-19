@@ -107,7 +107,7 @@ global without sharing class PGi_ServiceCatalogController {
     categoryOptionList   = database.query(categoryOptionSoql);
     sectionList     = database.query(sectionSoql);
     hiddenValueList    = database.query(hiddenSoql);
-
+  
     if(ApexPages.currentPage().getParameters().get('category') != null) {
       try {
         selectedCategoryId = ApexPages.currentPage().getParameters().get('category');

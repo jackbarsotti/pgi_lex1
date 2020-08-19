@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Simply_PGi_Ideas_Title</fullName>
-    <active>true</active>
-    <description>Title can&#39;t be longer than 50 characters</description>
-    <errorConditionFormula>LEN( Title ) &gt;= 50</errorConditionFormula>
-    <errorMessage>Title cannot exceed 50 characters</errorMessage>
-</ValidationRule>

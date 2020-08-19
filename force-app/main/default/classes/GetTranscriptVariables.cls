@@ -23,10 +23,9 @@ public with sharing class GetTranscriptVariables {
     try {
         LiveChatTranscript transcriptRecord = [SELECT Id, First_Name__c, Last_Name__c, Name__c, LiveChatDeploymentId FROM LiveChatTranscript WHERE Id = :input.routableID];
         transcriptRecord.Name__c = transcriptRecord.First_Name__c + ' ' + transcriptRecord.Last_Name__c;
-        transcriptRecord.Deflected__c = true;
         UPDATE transcriptRecord;
 
-        output.firstName = (transcriptRecord.First_Name__c != null ? transcriptRecord.First_Name__c : 'Annonymous');
+        output.firstName = transcriptRecord.First_Name__c;
         deploymentId = transcriptRecord.LiveChatDeploymentId;
     }
     catch (Exception e) {

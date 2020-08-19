@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>chttrunfollow__No_Negative_Delay</fullName>
-    <active>true</active>
-    <description>Disallows negative numbers from DaysDelay</description>
-    <errorConditionFormula>chttrunfollow__DaysDelay__c &lt;0</errorConditionFormula>
-    <errorMessage>You cannot use a negative number for the Delay.  Please enter 0 or a positive number.</errorMessage>
-</ValidationRule>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>sc1_8</fullName>
-    <description>The UCaaS section *only* appears if a UCaaS product was created by iContract. All fields in this section currently require logic, so you can only add new fields that do not require logic.</description>
-    <label>Section 1: UCaaS</label>
-</FieldSet>

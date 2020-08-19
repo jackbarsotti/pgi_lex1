@@ -1,3 +1,0 @@
-<apex:page controller="CaseSoftDeleteButtonController" action="{!assignItToQueue}"> 
-  
-</apex:page>

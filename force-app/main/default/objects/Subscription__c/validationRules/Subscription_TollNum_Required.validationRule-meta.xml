@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Subscription_TollNum_Required</fullName>
-    <active>true</active>
-    <errorConditionFormula>AND(ISPICKVAL( Contact_Toll_Number__c , &quot;&quot;),  $User.ProfileId =&#39;00e50000000o1dw&#39;)</errorConditionFormula>
-    <errorDisplayField>Contact_Toll_Number__c</errorDisplayField>
-    <errorMessage>Value required.</errorMessage>
-</ValidationRule>

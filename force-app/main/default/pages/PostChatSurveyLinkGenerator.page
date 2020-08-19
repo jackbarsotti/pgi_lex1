@@ -1,3 +1,0 @@
-<apex:page controller="PostChatSurveyLinkController" action="{!createSurveyLink}" showHeader="false">
-
-</apex:page>

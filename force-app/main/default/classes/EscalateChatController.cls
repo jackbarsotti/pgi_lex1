@@ -9,7 +9,6 @@ public class EscalateChatController {
     public  Boolean isEscalatedToCase{get; set;}
     public  Boolean isEscalatedToFinReq{get; set;}
     public  Boolean isEscalatedToLead{get; set;}
-    public  Boolean multipleLeadRecordsFound {get;set;}
     public  String returnId {get;set;}
     public  String currentUserProfile {get;set;}
     
@@ -28,14 +27,13 @@ public class EscalateChatController {
     */
     public  void init(){
         System.debug('000000>>'+currentRecordId);
-        LiveChatTranscript temp = [SELECT Id, Escalated__c, Escalated_FinReq__c, Escalated_Lead__c, Multiple_Lead_Records_Found__c, CurrentUserProfile__c
+        LiveChatTranscript temp = [SELECT Id, Escalated__c, Escalated_FinReq__c, Escalated_Lead__c, CurrentUserProfile__c
                             FROM LiveChatTranscript 
                             WHERE Id =: currentRecordId limit 1];
         isEscalatedToCase = temp.Escalated__c;
         isEscalatedToFinReq = temp.Escalated_FinReq__c;
         isEscalatedToLead = temp.Escalated_Lead__c;
         currentUserProfile = temp.CurrentUserProfile__c;
-        multipleLeadRecordsFound = temp.Multiple_Lead_Records_Found__c;
 
         if(isEscalatedToCase) {
             ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.INFO, 'This Chat has already been escalated to a Case, please view the related Case for further actions.'));
@@ -43,17 +41,8 @@ public class EscalateChatController {
         if(isEscalatedToFinReq) {
             ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.INFO, 'This Chat has already been escalated to a FinReq, please view the related FinReq for further actions.'));
         }
-        if(isEscalatedToLead && multipleLeadRecordsFound && currentUserProfile.contains('Sales')) {
-            ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.INFO, 'This Chat cannot escalated to a Lead as multiple Lead records exist for this chat visitor. Please search the Email Address to locate the correct Lead.'));
-        }
-        else if(isEscalatedToLead && currentUserProfile.contains('Sales')) {
+        if(isEscalatedToLead) {
             ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.INFO, 'This Chat has already been escalated to a Lead or there is an existing Lead or Contact for this chat visitor. Please view the related Lead or Contact for further actions.'));
-        }
-        else if(isEscalatedToLead && multipleLeadRecordsFound && !currentUserProfile.contains('Sales')) {
-            ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.INFO, 'This chat cannot be escalated to a Lead as multiple Lead records exist for this client. If the chat included a Sales query and you have confirmed this is not an existing customer, please refer to the PGiKnow article “Completing a Sales Lead Tracker” to submit the query to the Sales team.'));
-        }
-        else if(isEscalatedToLead && !currentUserProfile.contains('Sales')) {
-            ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.INFO, 'This chat cannot be escalated to a Lead as there is an existing Contact or Lead record for this client. A notification has been sent to the Sales team and no further action is needed to escalate this Chat to a Lead.'));
         }
     }
 
@@ -70,7 +59,7 @@ public class EscalateChatController {
         if (!(isEscalatedToFinReq) && !(currentUserProfile.contains('Sales'))) {
             options.add(new SelectOption('Financial_Request__c','FinReq'));
         }
-        if (!(isEscalatedToLead)) {
+        if (!(isEscalatedToLead) && (currentUserProfile.contains('Sales') || currentUserProfile == 'System Administrator') ) {
             options.add(new SelectOption('Lead','Lead'));
         }
         
@@ -127,8 +116,7 @@ public class EscalateChatController {
            }
            
            else if(selectedEscalationType == 'Financial_Request__c'){  
-               //FinReq escalation logic now handled by Chat_SubmitEscalatedFinReq VF page
-               /*
+           
                //check if already escalated to FinReq
                 isEscalatedToFinReq = currentChatTranscript.Escalated_FinReq__c;
                 if (isEscalatedToFinReq) {
@@ -160,13 +148,11 @@ public class EscalateChatController {
                     UPDATE currentChatTranscript;
                     returnId = escalatedFinReq.Id;
                }
-               */
-               returnId = 'none';
         }
         
         else if(selectedEscalationType == 'Lead'){
-           //Lead escalation logic now handled by Chat_SubmitLead VF page
-           /*     if (currentChatTranscript.Location_Country_Code__c == '' || currentChatTranscript.Location_Country_Code__c == 'undefined' || currentChatTranscript.Location_Country_Code__c == null ){
+
+                if (currentChatTranscript.Location_Country_Code__c == '' || currentChatTranscript.Location_Country_Code__c == 'undefined' || currentChatTranscript.Location_Country_Code__c == null ){
                         //if null or invalid country code, default to US
                         currentChatTranscript.Location_Country_Code__c = 'US';
                 }
@@ -203,9 +189,8 @@ public class EscalateChatController {
                     UPDATE currentChatTranscript;
                     returnId = escalatedLead.Id;
                 }
-          */      
-          //      else returnId = 'none';
-          returnId = 'none';
+                
+                else returnId = 'none';
             
         }
     }

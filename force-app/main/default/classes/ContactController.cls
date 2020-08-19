@@ -30,20 +30,25 @@ global with sharing class ContactController extends BaseController {
     }
   }
   public PageReference init() {
-    String retUrl = ApexPages.currentPage().getParameters().get('retURL');
-    if(c.RecordTypeId == null) {
-      for(Id i: ReadyTalkRecordTypeHelper.readyTalkContactRecordTypeIds) {
-        c.RecordTypeId = i;
+    String themeType = UserInfo.getUITheme();
+    if(themeType=='Theme3'){
+      String retUrl = ApexPages.currentPage().getParameters().get('retURL');
+      if(c.RecordTypeId == null) {
+        for(Id i: ReadyTalkRecordTypeHelper.readyTalkContactRecordTypeIds) {
+          c.RecordTypeId = i;
+        }
       }
+      if(ReadyTalkRecordTypeHelper.readyTalkContactRecordTypeIds.contains(this.c.RecordTypeId)) {
+          return null;
+      } else {
+        if(c != null && c.Id != null) {
+          delete c;
+        }
+          return new PageReference(retUrl);
+      } 
+    }else{
+      return null;
     }
-    if(ReadyTalkRecordTypeHelper.readyTalkContactRecordTypeIds.contains(this.c.RecordTypeId)) {
-        return null;
-    } else {
-      if(c != null && c.Id != null) {
-        delete c;
-      }
-        return new PageReference(retUrl);
-    } 
   }
   public ContactController(ApexPages.StandardController controller) {
     Contact contact = (contact)controller.getRecord();    

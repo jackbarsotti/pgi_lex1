@@ -1,3 +1,0 @@
-<apex:page controller="FinReqSoftDeleteButtonController" action="{!assignItToQueue}">
-
-</apex:page>

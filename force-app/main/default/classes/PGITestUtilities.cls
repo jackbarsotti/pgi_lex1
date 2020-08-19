@@ -400,20 +400,6 @@ public with sharing class PGITestUtilities {
         return quote;
     }
     
-   
-    /*******************************************************************
-    Purpose:    Get Quote Details        
-    Parameters: -
-    Returns:    ServiceCategory__c
-    *******************************************************************/
-    public static ServiceCategory__c getSerCategory(Id ServId, Id ProdId,  boolean dfaultProd){
-        ServiceCategory__c serCate= new ServiceCategory__c();       
-        //serCate.Service__c=ServId;
-        serCate.default__c= dfaultProd;
-        //serCate.product__c=prodId;
-        return serCate;
-    }
-    
     /*******************************************************************
     Purpose:   getStandardController      
     Parameters: -

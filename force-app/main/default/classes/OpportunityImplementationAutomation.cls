@@ -49,7 +49,7 @@ public with sharing class OpportunityImplementationAutomation {
 //                                     (closedate >= 2018-12-31 AND stagename in ('Closed Won','Closed Won - Implementation','Closed Won - Implementation Complete'))) LIMIT 50];
         }
         else
-        {
+        {	
             SearchedOpportunities =Database.query(strQueryFields +'Owner_Region__c IN (\'APAC\',\'EMEA\')'+strQueryFilters + ' limit 50');
 
             //NumberofClosedOpportunities = [SELECT count() FROM Opportunity WHERE isClosed = true];
@@ -214,12 +214,12 @@ public with sharing class OpportunityImplementationAutomation {
     }
     // RT 122-------------------------------------------------------/
     public void NoISTNeeded(){
-        
-        List<Opportunity> selectedOpportunitys = new List<Opportunity>();
+       List<Opportunity> selectedOpportunitys = new List<Opportunity>();
         
         //We will cycle through our list of oOpportunitys and will check to see if the selected property is set to true, if it is we add the Opportunity to the selectedOpportunitys list
         Set<oOpportunity> OpportunitySet = new Set<oOpportunity>();
         List<Opportunity> OpportunityUpadated = new List<Opportunity>();
+        if(!OpportunityList.isEmpty()){
         OpportunitySet.addAll(OpportunityList);
         for(oOpportunity cCon:OpportunitySet) {
             if(cCon.selected == true) {
@@ -227,7 +227,7 @@ public with sharing class OpportunityImplementationAutomation {
                 OpportunitySet.remove(cCon);
             }
         }
-        for(Opportunity objId :selectedOpportunitys){
+       for(Opportunity objId :selectedOpportunitys){
             
             objId.NoISTNeeded__c  = True;
             OpportunityUpadated.add(objId);
@@ -236,7 +236,7 @@ public with sharing class OpportunityImplementationAutomation {
         OpportunityList.addAll(OpportunitySet);
         UPDATE OpportunityUpadated;
         //system.debug('-----Updatedlist--->>>'+OpportunityUpadated);
-        
+        }
         
         
     }

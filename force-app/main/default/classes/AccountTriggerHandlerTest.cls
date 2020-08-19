@@ -10,7 +10,92 @@ public class AccountTriggerHandlerTest {
 	public static void testMapZoomCountries() {
 
 	}
+//moved to batch job
+	//static testMethod void testPGi_Account_Billed_Revenue_Last_13_Mont() {
 
+	//	//
+ //       // SELECT Last_13_Months_Billed_Revenue__c , RelatedAccount__c FROM PGi_Company__c WHERE isDeleted = false ORDER BY Id DESC NULLS LAST
+ //       //
+ //       //
+ //       // PGi_Company__c > Last_13_Months_Billed_Revenue__c 
+ //       //
+ //       //
+ //       // CURRENCY to rollup into Account.Billed_Revenue_Last_13_Months__c
+ //       //
+
+ //       Account testAcct = new Account(); 
+ //       testAcct.Name = 'test';
+ //       insert testAcct;
+
+ //       List<PGi_Company__c> testRecords = new List<PGi_Company__c>();
+ //       for(Integer i = 0, j = 0; i < 3; i++) {
+        
+ //           testRecords.add(new PGi_Company__c(RelatedAccount__c = testAcct.Id, Last_13_Months_Billed_Revenue__c = 10));
+ //       }   
+ //       insert testRecords;
+
+ //       Test.startTest();
+
+ //       System.assertEquals([SELECT Billed_Revenue_Last_13_Months__c FROM Account WHERE Id = :testAcct.Id].Billed_Revenue_Last_13_Months__c, 30);
+
+ //       Test.stopTest();
+	//}
+
+	static testMethod void testNumberofZenDeskTicketsSubmitted_Last_5_Days() {
+		//
+        // SELECT Zendesk__Ticket_Form_Id__c , Zendesk__Organization__c FROM Zendesk__Zendesk_Ticket__c WHERE isDeleted = false
+        //
+        //
+        // Account.of_Tickets_Last_5_Days__c
+        //
+        //
+        // Zendesk__Zendesk_Ticket__c > Zendesk__Ticket_Form_Id__c 
+        //
+
+        Account testAcct = new Account(); 
+        testAcct.Name = 'test';
+        insert testAcct;
+
+        List<Zendesk__Zendesk_Ticket__c> testRecords = new List<Zendesk__Zendesk_Ticket__c>();
+        for(Integer i = 0, j = 0; i < 3; i++) {
+        
+            testRecords.add(new Zendesk__Zendesk_Ticket__c(Zendesk__Organization__c = testAcct.Id, Zendesk__Ticket_Form_Id__c = i));
+        }   
+        insert testRecords;
+
+        Test.startTest();
+
+        System.assertEquals([SELECT of_Tickets_Last_5_Days__c FROM Account WHERE Id = :testAcct.Id].of_Tickets_Last_5_Days__c, 3);
+
+        Test.stopTest();
+	}
+
+	// static testMethod void testAccount_Count_of_Leads() {
+    //     //
+    //     // SELECT IsDeleted, Account__c FROM Lead WHERE isDeleted = false
+    //     //
+    //     //
+    //     // Account.Count_of_Leads__c
+    //     //
+
+    //     Account testAcct = new Account(); 
+    //     testAcct.Name = 'test';
+    //     insert testAcct;
+
+    //     List<Lead> testRecords = new List<Lead>();
+    //     for(Integer i = 0, j = 0; i < 3; i++) {
+        
+    //         testRecords.add(new Lead(Account__c = testAcct.Id, LastName = 'test', Company = 'test', Email = 'test@test.com'));
+    //     }   
+    //     insert testRecords;
+
+    //     Test.startTest();
+
+    //     System.assertEquals([SELECT Count_of_Leads__c FROM Account WHERE Id = :testAcct.Id].Count_of_Leads__c, 3);
+
+    //     Test.stopTest();
+    // }
+	
 	@isTest
 	public static void testSameAsUltimate() {
 		DandBCompany ultimateDb = PGITestUtilities.createDandBCompany('123', '123', true);

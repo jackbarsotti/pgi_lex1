@@ -28,7 +28,11 @@ public with sharing class Dispatcher {
         this.objectToControllerMapping = objectToControllerMapping; 
     }
     
-    public PageReference dispatch() {       
+    public PageReference dispatch() { 
+        String themeType = UserInfo.getUITheme();
+        System.debug('>>themeType'+themeType);
+        if(themeType=='Theme3'){
+            
         PageReference redir = null;
         
         try{
@@ -42,6 +46,11 @@ public with sharing class Dispatcher {
         }
             
         return redir;  
+      }
+        else{
+            
+            return null;
+        }
     }
     
     public String getObjectName(){

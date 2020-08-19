@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Initial_Bill_Date__c</fullName>
-    <externalId>false</externalId>
-    <inlineHelpText>Expected date (confirmed by IST or PMO) when GCS customer will be initially billed for this new service</inlineHelpText>
-    <label>Initial Bill Date</label>
-    <required>false</required>
-    <type>Date</type>
-</CustomField>

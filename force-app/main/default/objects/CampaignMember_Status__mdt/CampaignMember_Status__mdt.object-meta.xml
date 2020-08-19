@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>to set the campaignMember status Value</description>
-    <label>CampaignMember Status</label>
-    <pluralLabel>CampaignMember Status</pluralLabel>
-    <visibility>Public</visibility>
-</CustomObject>

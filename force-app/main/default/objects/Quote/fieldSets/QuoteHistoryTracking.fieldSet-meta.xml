@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>QuoteHistoryTracking</fullName>
-    <description>Fields that are tracked on the Quote History object.  Whenever a user modifies any of the selected quote fields, the old and new field values are added to the Quote History object sa well as the date, time of the change, and user making the record.</description>
-    <label>QuoteHistoryTracking</label>
-</FieldSet>

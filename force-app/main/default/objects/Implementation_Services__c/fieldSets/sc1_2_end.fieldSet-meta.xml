@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>sc1_2_end</fullName>
-    <description>Not very configurable section; any fields added will always show up at the end. 2-Columns.
-
-Because this section includes spaces, info messages, and dependent fields, you can only add to the end of it.</description>
-    <label>Section 1: Bill-to (end)</label>
-</FieldSet>

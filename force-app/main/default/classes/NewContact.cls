@@ -12,6 +12,8 @@ public with sharing class NewContact {
     }
     // vf page load action
     public PageReference doInit() {
+        String themeType = UserInfo.getUITheme();
+        
         // check for ReadyTalk profile, else redirect to new Contact standard page
         if(!isReadyTalkProfile()) {
             PageReference pr = new PageReference('/003/e');
@@ -24,6 +26,7 @@ public with sharing class NewContact {
 
         } else {
             return null;
+        
         }
     }
     // check if profile contains ReadyTalk

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Enter_Emails</fullName>
-    <active>true</active>
-    <description>If add&#39;l email box is checked, there should be emails entered in the box</description>
-    <errorConditionFormula>And(Add_l_Provisioning_Email_Addresses__c = &quot;&quot;, Add_l_Provisioning_Emails__c)</errorConditionFormula>
-    <errorDisplayField>Add_l_Provisioning_Email_Addresses__c</errorDisplayField>
-    <errorMessage>Additional email address(es) must be entered</errorMessage>
-</ValidationRule>

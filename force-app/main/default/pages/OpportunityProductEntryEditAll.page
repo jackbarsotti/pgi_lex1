@@ -1,3 +1,0 @@
-<apex:page standardController="Opportunity" extensions="OpportunityProductEntryEditAllExtension" action="{!redirect}" >
-
-</apex:page>

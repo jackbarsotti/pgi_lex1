@@ -1,5 +1,0 @@
-<apex:page >
-    <apex:form >
-        <apex:image url="{! URLFOR($Resource.TpxImages,'ucxlogo/ucx.png')}" height="50px" width="50%" />
-    </apex:form>
-</apex:page>

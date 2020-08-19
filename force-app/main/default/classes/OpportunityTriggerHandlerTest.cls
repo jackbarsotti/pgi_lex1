@@ -272,7 +272,7 @@ public class OpportunityTriggerHandlerTest {
             o2.Differentiating_Win_Factors__c = 'test';
             update new List<Opportunity>{o, o2};
                 }
-        Test.stopTest();
+        
         List<Opportunity> renewalOpportunityList = [SELECT Id FROM Opportunity WHERE Id !=: o.Id AND Id !=: o2.Id];
         System.assertEquals(0, renewalOpportunityList.size());
         o2.Competitor_s__c = 'AAPT';
@@ -292,6 +292,7 @@ public class OpportunityTriggerHandlerTest {
         insert implementationServicesList;
         update o2;
         System.assertEquals(2, implementationServicesList.size());
+        Test.stopTest();
     }
     
     static testMethod void testInactiveProducts() {
@@ -972,6 +973,7 @@ UPDATE o2;
         ocr.Role='Champion';
           ocr.IsPrimary=true;
         Insert ocr;
+        Test.startTest();
         o1.Opportunity_Deal_Type__c='New Business';
         Update o1;
         o1.Opportunity_Deal_Type__c='Renewal (No Rev Change)';
@@ -991,7 +993,7 @@ UPDATE o2;
         o1.Opportunity_Deal_Type__c='Win Back';
         Update o1;
         System.assertEquals(true, [SELECT Id,Global_Contact_MQL__c From Contact WHERE Id =: c1a1.Id].Global_Contact_MQL__c);
-        
+        Test.stopTest();
     }
            @isTest
     private static void testfireEvent() {
@@ -1400,7 +1402,7 @@ UPDATE o2;
        System.assertEquals(2, implementationServicesList.size());
        Test.stopTest();
     }
-    @isTest
+      @isTest
 private static void testPGIClosedWonRenewalcloned() {
         bypassDlrs = true;
         TriggerHandler.bypass('AccountTriggerHandler');
@@ -1440,7 +1442,7 @@ private static void testPGIClosedWonRenewalcloned() {
         opportunityList.add(o2);
         
         insert opportunityList;
-    Test.startTest();
+    
         //System.debug('The Id'+o2.AccountId);
         CONMAN_Contract__c testPGiContract = PGITestUtilities.createPGiContract(o2, false);
     	testPGiContract.Contract_Renewal_Date__c = null;
@@ -1498,8 +1500,9 @@ private static void testPGIClosedWonRenewalcloned() {
         o2.StageName = 'Closed Won';
         o1.Primary_Contact__c = c.Id;
         o2.Primary_Contact__c = c.Id;
+    Test.startTest();
        update new List<Opportunity>{o1, o2};
-           Test.stopTest();
+           
             //assert renewal generation
             List<Opportunity> oppList = [SELECT Id, RecordTypeId, (SELECT Id, New_Quantity__c, Product2.Name, Quantity FROM OpportunityLineItems), (SELECT Id FROM OpportunityTeamMembers) FROM Opportunity WHERE Id !=: o1.Id AND Id !=: o2.Id];
         System.assertEquals(2, oppList.size());
@@ -1539,5 +1542,42 @@ private static void testPGIClosedWonRenewalcloned() {
                 System.assertEquals(10, oli.New_Quantity__c);
             }
         }
-}
+    Test.stopTest();
+} 
+    @isTest 
+    private static void testcheckForMaxOneRenewalOpp() {
+           bypassDlrs = true;
+        TriggerHandler.bypass('AccountTriggerHandler');
+        TriggerHandler.bypass('ContactTriggerHandler');
+          List<Opportunity> opportunityList=new  List<Opportunity>();
+        OpportunityTriggerHandler.bypassContactRole = true; //bad trigger - bypass for unit tests
+        
+        Account a = PGITestUtilities.createAccount(true);
+        System.debug('The Account sales'+a.Original_Sales_Person__c);
+        Account a2 = PGITestUtilities.createAccount(true);
+    Contact c = PGITestUtilities.createContact(a, true);
+        Opportunity o1 = PGITestUtilities.createOpportunity(a, false);
+        o1.ownerId = PGITestUtilities.readyTalkUser.Id;
+        o1.Opportunity_Deal_Type__c = 'New Business';
+    	
+        o1.Opportunity_Product_Families__c = 'Unified Communications';
+        o1.RecordTypeId = PGI_Utility.getRecordTypes('Opportunity').get(OpportunityTriggerHandler.PGI_RENEWAL_RT);
+       // insert o1;
+       opportunityList.add(o1);
+       Opportunity o2 = PGITestUtilities.createOpportunity(a, false);
+        o2.ownerId = PGITestUtilities.readyTalkUser.Id;
+        o2.Opportunity_Deal_Type__c = 'New Business';
+    	
+        o2.Opportunity_Product_Families__c = 'Unified Communications';
+        o2.RecordTypeId = PGI_Utility.getRecordTypes('Opportunity').get(OpportunityTriggerHandler.PGI_RENEWAL_RT);
+         opportunityList.add(o2);
+        try{
+          insert opportunityList;  
+        } 
+        catch (Exception e){
+            String error = string.valueOf(e.getMessage());
+            System.assertEquals(true, error.contains('You are only allow to have one open renewal opportunity with Unified Communications at a time.'));
+            System.debug('The Error Is'+e.getMessage());
+        }
+    }
 }

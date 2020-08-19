@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>iMCNRRProduct__c</fullName>
-    <defaultValue>false</defaultValue>
-    <description>updated by WFR from Products if the Product is selected as an iMC NRR</description>
-    <externalId>false</externalId>
-    <label>iMC NRR Product</label>
-    <type>Checkbox</type>
-</CustomField>
