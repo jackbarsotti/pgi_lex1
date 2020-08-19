@@ -31,6 +31,8 @@ sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
 git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
 git fetch -q
 #NEW
+git add .
+git commit -m "fuck"
 git checkout master
 # Delete the contents of force-app folder before we paste source:retrieve contents into it
 echo
