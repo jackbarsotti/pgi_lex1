@@ -74,25 +74,25 @@ if [ "$BRANCH" == "LEX" ]; then
     #sudo cp -r --parents force-app/main/default/aura/ $DEPLOYDIR
     # For any changed class or trigger file, it's associated meta data file is copied to the deploy directory (and vice versa):
     if [[ $file == *.cls ]]; then
-      find $classPath -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} \; 2>/dev/null
+      find $classPath -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} \;
     elif [[ $file == *.cls-meta.xml ]]; then
       parsedfile=${file%.cls-meta.xml}
-      find $classPath -samefile "$parsedfile.cls" -exec sudo cp --parents -t $DEPLOYDIR {} \; 2>/dev/null
+      find $classPath -samefile "$parsedfile.cls" -exec sudo cp --parents -t $DEPLOYDIR {} \;
     elif [[ $file == *Test.cls ]]; then
-      find $classPath -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} \; 2>/dev/null
+      find $classPath -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} \;
     elif [[ $file == *Test.cls-meta.xml ]]; then
       parsedfile=${file%.cls-meta.xml}
-      find $classPath -samefile "$parsedfile.cls" -exec sudo cp --parents -t $DEPLOYDIR {} \; 2>/dev/null
+      find $classPath -samefile "$parsedfile.cls" -exec sudo cp --parents -t $DEPLOYDIR {} \;
     elif [[ $file == *.trigger ]]; then
-      find $triggerPath -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} \; 2>/dev/null
+      find $triggerPath -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} \;
     elif [[ $file == *.trigger-meta.xml ]]; then
       parsedfile=${file%.trigger-meta.xml}
-      find $triggerPath -samefile "$parsedfile.trigger" -exec sudo cp --parents -t $DEPLOYDIR {} \; 2>/dev/null
+      find $triggerPath -samefile "$parsedfile.trigger" -exec sudo cp --parents -t $DEPLOYDIR {} \;
     elif [[ $file == *.page ]]; then
-      find force-app/main/default/pages -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} \; 2>/dev/null
+      find force-app/main/default/pages -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} \;
     elif [[ $file == *.page-meta.xml ]]; then
       parsedfile=${file%.page-meta.xml}
-      find force-app/main/default/pages -samefile "$parsedfile.page" -exec sudo cp --parents -t $DEPLOYDIR {} \; 2>/dev/null
+      find force-app/main/default/pages -samefile "$parsedfile.page" -exec sudo cp --parents -t $DEPLOYDIR {} \;
     fi
   done 
   echo 'Complete.'
@@ -103,7 +103,7 @@ if [ "$BRANCH" == "LEX" ]; then
   echo
 fi;
 #ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/classes
- 
+
 # Make temporary folder for our <className>Test.cls files that will be parsed
 sudo mkdir -p /Users/jackbarsotti/pgi_lex1/force-app/main/default/unparsedTests
 export unparsedTestsDir=/Users/jackbarsotti/pgi_lex1/force-app/main/default/unparsedTests
