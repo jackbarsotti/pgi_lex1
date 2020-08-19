@@ -22,7 +22,7 @@ sfdx plugins --core
 if [ "$TRAVIS_BRANCH" == "LEX" ]; then
   echo $SFDX_AUTH_URL_LEX>authtravisci.txt;
 elif [ "$TRAVIS_BRANCH" == "master" ]; then
-  echo $SFDX_AUTH_URL_LEX>authtravisci.txt;
+  echo $SFDX_AUTH_URL_DEV>authtravisci.txt;
 fi;
  
 # Set the target environment for force:source:retrieve command
@@ -30,7 +30,8 @@ sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
 
 git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
 git fetch -q
-
+#NEW
+git checkout master
 # Delete the contents of force-app folder before we paste source:retrieve contents into it
 echo
 rm -rf force-app/main/default/*
