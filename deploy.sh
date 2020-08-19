@@ -54,7 +54,7 @@ export triggerPath=force-app/main/default/triggers
 
 # Ensure that "inexact rename detection" error isn't skipped due to too many files
 git config --global diff.renameLimit 9999999
-ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
+
 # Run a git diff for the incremental build depending on checked-out branch (if-statement per branch)
 # LEX branch:
 sudo cp force-app/main/default/triggers/dlrs_ContactTrigger.trigger $DEPLOYDIR
