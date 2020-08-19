@@ -58,7 +58,6 @@ git config --global diff.renameLimit 9999999
 # Run a git diff for the incremental build depending on checked-out branch (if-statement per branch)
 # LEX branch:
 sudo cp force-app/main/default/triggers/dlrs_ContactTrigger.trigger $DEPLOYDIR
-sudo cp force-app/main/default/pages/popUp.page $DEPLOYDIR
 if [ "$BRANCH" == "LEX" ]; then
   #create tracking branch
   echo 'Preparing for an incremental deployment to org...'
@@ -92,8 +91,8 @@ if [ "$BRANCH" == "LEX" ]; then
     elif [[ $file == *.page ]]; then
       find force-app/main/default/pages -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} + 2>/dev/null
     elif [[ $file == *.page-meta.xml ]]; then
-      parsedfile=${file%.pages-meta.xml}
-      find force-app/main/default/pages -samefile "$parsedfile.pages" -exec sudo cp --parents -t $DEPLOYDIR {} +2>/dev/null
+      parsedfile=${file%.page-meta.xml}
+      find force-app/main/default/pages -samefile "$parsedfile.page" -exec sudo cp --parents -t $DEPLOYDIR {} +2>/dev/null
     fi
   done 
   echo 'Complete.'
