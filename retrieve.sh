@@ -35,7 +35,7 @@ git fetch -q
 ##git commit -m "blah"
 git stash
 git checkout master
-git pop
+#git pop
 # Delete the contents of force-app folder before we paste source:retrieve contents into it
 echo
 rm -rf force-app/main/default/*
@@ -52,7 +52,7 @@ sudo mkdir -p /Users/jackbarsotti/pgi_lex1/$classPath
 sudo mkdir -p /Users/jackbarsotti/pgi_lex1/$triggerPath
  
 # Run a source:retrieve to rebuild the contents of the force-app folder (branch specific)
-retrieved_files=$(sfdx force:source:retrieve -u targetEnvironment -m ApexClass) |
+retrieved_files=$(sfdx force:source:retrieve -u targetEnvironment) |
 while read -r file; do
 echo
 done
@@ -67,7 +67,6 @@ git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
 git add force-app/.
 ##git stash
-git checkout LEX
 #git checkout master
 ##git stash pop
 
