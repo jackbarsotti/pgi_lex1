@@ -67,6 +67,7 @@ if [ "$BRANCH" == "LEX" ]; then
   git checkout LEX
   echo
   echo 'Running a git diff, please wait...'
+  #this command is good, keeping us from deploying D files, making class dir smaller 
   git diff --diff-filter=UM --name-only master force-app/ |
   while read -r file; do
     # Copy the files from git diff into the deploy directory
