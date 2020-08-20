@@ -1,5 +1,4 @@
 #! /bin/bash
-export -f travis_wait
 # Provide basic information about the current build type
 echo 
 echo "Travis event type: $TRAVIS_EVENT_TYPE"
@@ -147,7 +146,6 @@ fi;
 sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
 # Run apex tests and deploy apex classes/triggers
 sudo sfdx force:org:display -u targetEnvironment
-travis_wait 30 sfdx force:source:retrieve -u targetEnvironment -x /Users/jackbarsotti/pgi_lex1/manifest/package.xml
 sudo sfdx force:source:deploy -w 20 -p $DEPLOYDIR -l $TESTLEVEL -u targetEnvironment
 echo
 echo 'Build complete. Check ORG deployment status page for details.'

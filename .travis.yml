@@ -34,3 +34,5 @@ jobs:
 before_script:
 - chmod +rx deploy.sh
 - chmod +rx retrieve.sh
+- |
+    - while sleep 5m; do echo "=====[ $SECONDS seconds, buildroot still building... ]====="
