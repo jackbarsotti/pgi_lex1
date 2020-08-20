@@ -60,6 +60,7 @@ function bell() {
 }
 bell &
 retrieved_api=$(sudo sfdx force:mdapi:retrieve -r force-app/main/default -u targetEnvironment) |
+unzip -o force-app/main/default/unpackaged.zip -d force-app/main/default |
 while read -r file; do
 echo
 done
