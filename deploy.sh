@@ -66,7 +66,6 @@ if [ "$BRANCH" == "LEX" ]; then
   git checkout LEX
   echo
   echo 'Running a git diff, please wait...'
-  #git diff --diff-filter=A --name-only master force-app/
   git diff --diff-filter=UMA --name-only master force-app/ |
   while read -r file; do
     # Copy the files from git diff into the deploy directory
@@ -101,11 +100,6 @@ if [ "$BRANCH" == "LEX" ]; then
   ls $DEPLOYDIR/force-app/main/default
   echo
 fi;
-
-#sudo rm -f /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/triggers/dlrs_ContactTrigger.trigger-meta.xml
-#sudo rm -f /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/triggers/dlrs_ContactTrigger.trigger
-#sudo cp --parents /Users/jackbarsotti/pgi_lex1/force-app/main/default/triggers/dlrs_ContactTrigger.trigger-meta.xml -t $DEPLOYDIR
-ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff/force-app/main/default/triggers
  
 # Make temporary folder for our <className>Test.cls files that will be parsed
 sudo mkdir -p /Users/jackbarsotti/pgi_lex1/force-app/main/default/unparsedTests
