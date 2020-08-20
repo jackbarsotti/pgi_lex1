@@ -52,10 +52,21 @@ sudo mkdir -p /Users/jackbarsotti/pgi_lex1/$classPath
 sudo mkdir -p /Users/jackbarsotti/pgi_lex1/$triggerPath
  
 # Run a source:retrieve to rebuild the contents of the force-app folder (branch specific)
-retrieved_files=$(sudo sfdx force:source:retrieve -u targetEnvironment -x manifest/package.xml) |
+function bell() {
+  while true; do
+    echo -e "\a"
+    sleep 60
+  done
+}
+bell &
 while read -r file; do
 echo
 done
+exit $?
+retrieved_files=$(sudo sfdx force:source:retrieve -u targetEnvironment -x manifest/package.xml) |
+#while read -r file; do
+#echo
+#done
 echo
 echo "All retrieved metadata files have been added to the force-app directory on your $TRAVIS_BRANCH branch."
 echo
