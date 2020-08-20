@@ -60,15 +60,15 @@ function bell() {
 }
 bell &
 retrieved_api=$(sudo sfdx force:mdapi:retrieve -r force-app/main/default -u targetEnvironment) |
-#unzip -o unpackaged.zip -d force-app/main/default |
+unzip -o unpackaged.zip -d force-app/main/default |
 while read -r file; do
 echo
 done
-#retrieved_files=$(sudo sfdx force:source:retrieve -u targetEnvironment -x manifest/package.xml) |
-#while read -r file; do
-#echo
-#done
-#exit $?
+retrieved_files=$(sudo sfdx force:source:retrieve -u targetEnvironment -x manifest/package.xml) |
+while read -r file; do
+echo
+done
+exit $?
 #retrieved_files=$(sudo sfdx force:source:retrieve -u targetEnvironment -x manifest/package.xml) |
 #while read -r file; do
 #echo
