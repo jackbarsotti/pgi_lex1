@@ -59,7 +59,7 @@ function bell() {
   done
 }
 bell &
-retrieved_api=$(sudo sfdx force:mdapi:retrieve -r force-app/main/default) |
+retrieved_api=$(sudo sfdx force:mdapi:retrieve -r force-app/main/default -u targetEnvironment) |
 while read -r file; do
 echo
 done
