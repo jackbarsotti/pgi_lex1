@@ -1,4 +1,5 @@
 #! /bin/bash
+export -f travis_wait
 # Provide basic information about the current build type
 echo 
 echo "Travis event type: $TRAVIS_EVENT_TYPE"
