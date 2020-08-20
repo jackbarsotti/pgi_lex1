@@ -52,7 +52,7 @@ sudo mkdir -p /Users/jackbarsotti/pgi_lex1/$classPath
 sudo mkdir -p /Users/jackbarsotti/pgi_lex1/$triggerPath
  
 # Run a source:retrieve to rebuild the contents of the force-app folder (branch specific)
-retrieved_files=$(sfdx force:source:retrieve -u targetEnvironment -m /Users/jackbarsotti/pgi_lex1/manifest/package.xml) |
+retrieved_files=$(sfdx force:source:retrieve -u targetEnvironment -x /Users/jackbarsotti/pgi_lex1/manifest/package.xml) |
 while read -r file; do
 echo
 done
