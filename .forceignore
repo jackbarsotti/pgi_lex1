@@ -12,4 +12,4 @@ package.xml
 **/__tests__/**
 
 #test
-**/unpackaged.zip
+**force-app/main/default/unpackaged.zip
