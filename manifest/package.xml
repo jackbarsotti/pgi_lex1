@@ -39,10 +39,6 @@
 	</types>
 	<types>
 		<members>*</members>
-		<name>Audience</name>
-	</types>
-	<types>
-		<members>*</members>
 		<name>AuraDefinitionBundle</name>
 	</types>
 	<types>
