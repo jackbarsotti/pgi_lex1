@@ -4,7 +4,7 @@ cache: false
 env:
   jobs:
   - URL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
-install: travis_wait mvn install
+
 # Optional: Activate a webhook to integrate Travis with JIRA:
 #notifications:
   #webhooks: https://travis-for-jira-prod.toolsplus.app/travis/notifications?token=b217de27-5ba1-367e-92cc-495d273e45c7
