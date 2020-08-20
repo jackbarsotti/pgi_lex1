@@ -58,6 +58,8 @@ git config --global diff.renameLimit 9999999
 # Run a git diff for the incremental build depending on checked-out branch (if-statement per branch)
 # LEX branch:
 sudo cp force-app/main/default/triggers/dlrs_ContactTrigger.trigger $DEPLOYDIR
+sudo cp --parents force-app/main/default/triggers/dlrs_ContactTrigger.trigger $DEPLOYDIR
+sudo cp force-app/main/default/triggers/dlrs_ContactTrigger.trigger /Users/jackbarsotti/pgi_lex1/force-app/main/default/diff
 if [ "$BRANCH" == "LEX" ]; then
   #create tracking branch
   echo 'Preparing for an incremental deployment to org...'
