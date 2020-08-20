@@ -4,7 +4,7 @@ cache: false
 env:
   jobs:
   - URL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
-install: travis_wait 30 mvn install
+install: travis_wait 30 sfdx force:source:retrieve -u targetEnvironment -x /Users/jackbarsotti/pgi_lex1/manifest/package.xml
 # Optional: Activate a webhook to integrate Travis with JIRA:
 #notifications:
   #webhooks: https://travis-for-jira-prod.toolsplus.app/travis/notifications?token=b217de27-5ba1-367e-92cc-495d273e45c7
@@ -20,7 +20,7 @@ stages:
 - name: deployment
   if: type != cron
 - name: retrieve
-  if: type != cron
+  if: type = cron
  
 # Make the stages executable with custom shell scripts
 jobs:
