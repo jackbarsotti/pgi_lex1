@@ -50,13 +50,19 @@ sudo mkdir -p /Users/jackbarsotti/pgi_lex1/$classPath
 sudo mkdir -p /Users/jackbarsotti/pgi_lex1/$triggerPath
  
 # Run a source:retrieve to rebuild the contents of the force-app folder (branch specific)
+echo 'Retrieving files from Salesforce, please wait...'
+echo '(one blank line will be echoed below for each 5 minutes that retrieval takes)'
 function bell() {
   while true; do
     echo -e "\a"
-    sleep 60
+    sleep 300
   done
 }
 bell &
+retrieved_api=$(sudo sfdx force:mdapi:retrieve -r force-app/main/default) |
+while read -r file; do
+echo
+done
 retrieved_files=$(sudo sfdx force:source:retrieve -u targetEnvironment -x manifest/package.xml) |
 while read -r file; do
 echo
