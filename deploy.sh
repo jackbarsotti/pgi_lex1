@@ -146,6 +146,7 @@ fi;
 sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
 # Run apex tests and deploy apex classes/triggers
 sudo sfdx force:org:display -u targetEnvironment
+while travis_wait 50 sleep 300 &> /tmp/build.log || (tail -n 100 /tmp/build.log && exit 1); do echo "=====[ $SECONDS seconds, buildroot still building... ]====="; done
 sudo sfdx force:source:deploy -w 20 -p $DEPLOYDIR -l $TESTLEVEL -u targetEnvironment
 echo
 echo 'Build complete. Check ORG deployment status page for details.'
