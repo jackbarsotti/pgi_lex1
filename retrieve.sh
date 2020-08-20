@@ -63,7 +63,7 @@ while read -r file; do
 echo
 done
 exit $?
-retrieved_files=$(sudo sfdx force:source:retrieve -u targetEnvironment -x manifest/package.xml) |
+#retrieved_files=$(sudo sfdx force:source:retrieve -u targetEnvironment -x manifest/package.xml) |
 #while read -r file; do
 #echo
 #done
