@@ -141,14 +141,15 @@ sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
 # Run apex tests and deploy apex classes/triggers
 sudo sfdx force:org:display -u targetEnvironment
 echo 'Running force:source:deploy. Please wait...'
+echo '(one blank line will be echoed below for each 9 minutes that retrieval takes)'
 function bell() {
   while true; do
     echo -e "\a"
-    sleep 60
+    sleep 540
   done
 }
 bell &
 sudo sfdx force:source:deploy -w 20 -p $DEPLOYDIR -l $TESTLEVEL -u targetEnvironment
-exit $?
+#exit $?
 echo
 echo 'Build complete. Check ORG deployment status page for details.'
