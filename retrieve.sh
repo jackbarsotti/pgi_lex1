@@ -21,7 +21,7 @@ sfdx plugins --core
 # Authenticate against correct org
 if [ "$TRAVIS_BRANCH" == "LEX" ]; then
   echo $SFDX_AUTH_URL_LEX>authtravisci.txt;
-elif [ "$TRAVIS_BRANCH" == "master" ]; then
+elif [ "$TRAVIS_BRANCH" == "masterbackup" ]; then
   echo $SFDX_AUTH_URL_DEV>authtravisci.txt;
 fi;
  
@@ -32,7 +32,7 @@ sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
 git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
 git fetch -q
 git stash
-git checkout master
+git checkout masterbackup
 
 # Delete the contents of force-app folder before we paste source:retrieve contents into it
 echo
@@ -94,5 +94,5 @@ echo "Build complete!"
 echo
 
 # Run a git push 
-git remote add origin-master https://${GH_TOKEN}@github.com/jackbarsotti/pgi_lex1.git > /dev/null 2>&1
-#git push --quiet --set-upstream origin-master master
+git remote add origin-masterbackup https://${GH_TOKEN}@github.com/jackbarsotti/pgi_lex1.git > /dev/null 2>&1
+#git push --quiet --set-upstream origin-masterbackup masterbackup
