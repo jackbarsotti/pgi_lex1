@@ -146,6 +146,7 @@ fi;
 sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
 # Run apex tests and deploy apex classes/triggers
 sudo sfdx force:org:display -u targetEnvironment
+echo 'Running force:source:deploy. Please wait...'
 function bell() {
   while true; do
     echo -e "\a"
