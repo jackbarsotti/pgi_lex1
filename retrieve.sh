@@ -63,11 +63,8 @@ retrieved_files=$(sudo sfdx force:source:retrieve -u targetEnvironment -x manife
 while read -r file; do
 echo
 done
-exit $?
-#retrieved_files=$(sudo sfdx force:source:retrieve -u targetEnvironment -x manifest/package.xml) |
-#while read -r file; do
-#echo
-#done
+#exit $?
+
 echo
 echo "All retrieved metadata files have been added to the force-app directory on your $TRAVIS_BRANCH branch."
 echo
