@@ -149,7 +149,7 @@ function bell() {
   done
 }
 bell &
-sudo sfdx force:source:deploy -w 20 -p $DEPLOYDIR -l $TESTLEVEL -u targetEnvironment
+sudo sfdx force:source:deploy -w 30 -p $DEPLOYDIR -l $TESTLEVEL -u targetEnvironment
 #exit $?
 echo
 echo 'Build complete. Check ORG deployment status page for details.'
