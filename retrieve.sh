@@ -64,7 +64,8 @@ echo "Retrieval complete. Ready to update the remote repository."
 echo
 echo "Now adding and committing these changes to your current branch..."
 pwd
-ls /Users/jackbarsotti/pgi_lex1
+ls /home/travis/build/jackbarsotti/pgi_lex1
+ls /home/travis/build/jackbarsotti/pgi_lex1/force-app/main/default
 
 # Add changes
 git config --global user.email "travis@travis-ci.org"
