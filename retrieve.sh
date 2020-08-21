@@ -28,13 +28,12 @@ fi;
 # Set the target environment for force:source:retrieve command
 sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
 
-#NEW
+# Fetch remote branches, stash any changed files before checking out master branch
 git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
 git fetch -q
 git stash
 #git checkout masterbackup
 git checkout -b newmaster
-echo "Current branch: $TRAVIS_BRANCH"
 
 # Delete the contents of force-app folder before we paste source:retrieve contents into it
 echo
@@ -44,7 +43,8 @@ echo 'The contents of the force-app directory have been removed.'
 echo "Ready to retrieve org metadata to your $TRAVIS_BRANCH branch."
 echo
  
-# Run a source:retrieve to rebuild the contents of the force-app folder (branch specific)
+# Run a source:retrieve to rebuild the contents of the force-app folder
+# Call a function that will echo an empty line every 9 minutes while retrieve is running to prevent build timeouts
 echo 'Retrieving files from Salesforce, please wait...'
 echo '(Ignore any blank lines printed below during retrieval)'
 function bell() {
@@ -58,28 +58,26 @@ retrieved_files=$(sudo sfdx force:source:retrieve -u targetEnvironment -x manife
 while read -r file; do
 echo
 done
-
 echo
-echo "All retrieved metadata files have been added to the force-app directory on your $TRAVIS_BRANCH branch."
+echo "Retrieval complete. Ready to update the remote repository."
 echo
-echo "Now adding and committing these changes to your $TRAVIS_BRANCH branch..."
+echo "Now adding and committing these changes to your current branch..."
 
-ls /Users/jackbarsotti/pgi_lex1/force-app/main/default
-#ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/classes
+ls /Users/jackbarsotti/pgi_lex1
 
 # Add changes
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
 git add force-app/.
 
-# Git commit -m "auto-build" changes
+# git commit -m "auto-build" changes
 echo
 echo 'Running: git commit -m "auto-build"'
 git commit -q -m "auto-build"
 echo "New commit made: $(git log -1 --oneline)" 
 echo
-echo "All metadata files have been retrieved, and the changes have been commited to your $TRAVIS_BRANCH branch."
-echo 'Run "git pull" on your local machine to update your local branch with the new changes.'
+echo "All metadata files have been retrieved, and the changes have been commited to your current branch."
+echo 'Run "git pull" on your local machine to locally rebuild your branch.'
 echo
 echo "Build complete!"
 echo
