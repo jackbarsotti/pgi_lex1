@@ -34,6 +34,7 @@ git fetch -q
 git stash
 #git checkout masterbackup
 git checkout -b newmaster
+echo "$TRAVIS_BRANCH"
 
 # Delete the contents of force-app folder before we paste source:retrieve contents into it
 echo
@@ -42,13 +43,6 @@ echo
 echo 'The contents of the force-app directory have been removed.'
 echo "Ready to retrieve org metadata to your $TRAVIS_BRANCH branch."
 echo
- 
-# Create variables for frequently-referenced file paths
-# Recreate "classes" and "triggers" folders for retrieved metadata files
-#export classPath=force-app/main/default/classes
-#export triggerPath=force-app/main/default/triggers
-#sudo mkdir -p /Users/jackbarsotti/pgi_lex1/$classPath
-#sudo mkdir -p /Users/jackbarsotti/pgi_lex1/$triggerPath
  
 # Run a source:retrieve to rebuild the contents of the force-app folder (branch specific)
 echo 'Retrieving files from Salesforce, please wait...'
@@ -64,7 +58,6 @@ retrieved_files=$(sudo sfdx force:source:retrieve -u targetEnvironment -x manife
 while read -r file; do
 echo
 done
-#exit $?
 
 echo
 echo "All retrieved metadata files have been added to the force-app directory on your $TRAVIS_BRANCH branch."
