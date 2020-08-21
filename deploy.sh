@@ -140,8 +140,8 @@ fi;
 sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
 # Run apex tests and deploy apex classes/triggers
 sudo sfdx force:org:display -u targetEnvironment
-echo 'Running force:source:deploy. Please wait...'
-echo '(one blank line will be echoed below for each 9 minutes that retrieval takes)'
+echo 'Running force:source:deploy. Large deployments could take 25 minutes or more to finish. Please wait...'
+echo '(Ignore any blank lines printed below "Job ID" line during deployment)'
 function bell() {
   while true; do
     echo -e "\a"

@@ -51,11 +51,11 @@ sudo mkdir -p /Users/jackbarsotti/pgi_lex1/$triggerPath
  
 # Run a source:retrieve to rebuild the contents of the force-app folder (branch specific)
 echo 'Retrieving files from Salesforce, please wait...'
-echo '(one blank line will be echoed below for each 5 minutes that retrieval takes)'
+echo '(Ignore any blank lines printed below during retrieval)'
 function bell() {
   while true; do
     echo -e "\a"
-    sleep 300
+    sleep 540
   done
 }
 bell &
