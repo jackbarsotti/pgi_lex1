@@ -55,22 +55,24 @@ export triggerPath=force-app/main/default/triggers
 # Ensure that "inexact rename detection" error isn't skipped due to too many files
 git config --global diff.renameLimit 9999999
 
+# Git Diff Section:
 # Run a git diff for the incremental build depending on checked-out branch (if-statement per branch)
 # LEX branch:
 if [ "$BRANCH" == "LEX" ]; then
-  #create tracking branch
   echo 'Preparing for an incremental deployment to org...'
   for branch in $(git branch -r|grep -v HEAD); do
+    #create tracking branch:
     git checkout -qf ${branch#origin/}
   done;
   git checkout LEX
   echo
   echo 'Running a git diff, please wait...'
+  # Run a git diff only for files with the U, M, or A status (can be seen with git diff --name-status):
   git diff --diff-filter=UMA --name-only masterbackup force-app/ |
   while read -r file; do
-    # Copy the files from git diff into the deploy directory
+    # Copy the files from git diff into the deploy directory:
     sudo cp --parents "$file" $DEPLOYDIR 2>/dev/null
-    # For any changed class or trigger file, it's associated meta data file is copied to the deploy directory (and vice versa):
+    # For any changed class, trigger, page file, it's associated meta data file is copied to the deploy directory (and vice versa):
     if [[ $file == *.cls ]]; then
       find $classPath -samefile "$file-meta.xml" -exec sudo cp --parents -t $DEPLOYDIR {} \;
     elif [[ $file == *.cls-meta.xml ]]; then
@@ -100,7 +102,8 @@ if [ "$BRANCH" == "LEX" ]; then
   ls $DEPLOYDIR/force-app/main/default
   echo
 fi;
- 
+
+# File Parse Section:
 # Make temporary folder for our <className>Test.cls files that will be parsed
 sudo mkdir -p /Users/jackbarsotti/pgi_lex1/force-app/main/default/unparsedTests
 export unparsedTestsDir=/Users/jackbarsotti/pgi_lex1/force-app/main/default/unparsedTests
@@ -123,27 +126,30 @@ echo
 echo 'Running: git checkout $build_head'
 git checkout $build_head
 
-# Automatically authenticate against current branch's corresponding SalesForce org
-# Create deployment variable for "sfdx:force:source:deploy RunSpecifiedTests -r <variable>"
-# Only validate, not deploy, when a pull request is being created
-  # When a pull request is MERGED, deploy it
+# Salesforce Authentication Section:
 if [ "$BRANCH" == "LEX" ]; then
+  # Automatically authenticate against current branch's corresponding SalesForce org:
   echo $SFDX_AUTH_URL_LEX>authtravisci.txt;
+  # Only validate, not deploy, when a pull request is being created:
   if [ "$TRAVIS_EVENT_TYPE" == "pull_request" ]; then
+    # Create deployment variable for "sfdx:force:source:deploy RunSpecifiedTests -r <variable>":
     export TESTLEVEL="RunSpecifiedTests -r $parsedList -c";
   else
+    # When a pull request is MERGED, deploy it:
     export TESTLEVEL="RunSpecifiedTests -r $parsedList";
   fi;
 fi;
-
 # Store our auth-url for our targetEnvironment alias for deployment
 sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
+
+# Deployment Section:
 # Run apex tests and deploy apex classes/triggers
 sudo sfdx force:org:display -u targetEnvironment
 echo
 echo 'Running force:source:deploy. Large deployments could take 25 minutes or more to finish.'
 echo 'Please wait...'
 echo '(Ignore any blank lines printed below "Job ID" line during deployment)'
+# Echo one empty line per 9 minute interval that deployment takes to prevent Travis build timeouts at 10 minutes 
 function bell() {
   while true; do
     echo -e "\a"
@@ -151,7 +157,7 @@ function bell() {
   done
 }
 bell &
+# Deploy to Salesforce
 sudo sfdx force:source:deploy -w 45 -p $DEPLOYDIR -l $TESTLEVEL -u targetEnvironment
-#exit $?
 echo
 echo 'Build complete. Check ORG deployment status page for details.'

@@ -33,8 +33,7 @@ git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
 git fetch -q
 git stash
 echo
-#git checkout masterbackup
-git checkout -b newmaster
+git checkout master
 
 # Delete the contents of force-app folder before we paste source:retrieve contents into it
 rm -rf force-app/main/default/*
@@ -42,11 +41,11 @@ echo
 echo 'The contents of the force-app directory have been removed.'
 echo "Ready to retrieve org metadata to your $TRAVIS_BRANCH branch."
 echo
- 
-# Run a source:retrieve to rebuild the contents of the force-app folder
-# Call a function that will echo an empty line every 9 minutes while retrieve is running to prevent build timeouts
+
+# Retrieve Section: 
 echo 'Retrieving files from Salesforce, please wait...'
 echo '(Ignore any blank lines printed below during retrieval)'
+# Call a function that will echo an empty line every 9 minutes while retrieve is running to prevent build timeouts
 function bell() {
   while true; do
     echo -e "\a"
@@ -54,6 +53,7 @@ function bell() {
   done
 }
 bell &
+# Run a source:retrieve to rebuild the contents of the force-app folder
 retrieved_files=$(sudo sfdx force:source:retrieve -u targetEnvironment -x manifest/package.xml) |
 while read -r file; do
 echo
@@ -66,7 +66,7 @@ ls /home/travis/build/jackbarsotti/pgi_lex1/force-app/main/default
 echo
 echo "Now adding and committing these changes to your current branch..."
 
-# Add changes
+# git add changes
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
 git add force-app/.
@@ -83,8 +83,6 @@ echo
 echo "Build complete!"
 echo
 
-# Run a git push 
-git remote add origin-newmaster https://${GH_TOKEN}@github.com/jackbarsotti/pgi_lex1.git > /dev/null 2>&1
-#git remote add origin-masterbackup https://${GH_TOKEN}@github.com/jackbarsotti/pgi_lex1.git > /dev/null 2>&1
-#git push --quiet --set-upstream origin-masterbackup masterbackup
-git push --quiet --set-upstream origin-newmaster newmaster
+# git push 
+git remote add origin-master https://${GH_TOKEN}@github.com/jackbarsotti/pgi_lex1.git > /dev/null 2>&1
+git push --quiet --set-upstream origin-master master
