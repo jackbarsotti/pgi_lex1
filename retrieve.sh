@@ -37,7 +37,6 @@ echo
 git checkout -b newmaster
 
 # Delete the contents of force-app folder before we paste source:retrieve contents into it
-echo
 rm -rf force-app/main/default/*
 echo
 echo 'The contents of the force-app directory have been removed.'
@@ -62,10 +61,10 @@ done
 echo
 echo "Retrieval complete. Ready to update the remote repository."
 echo
-echo "Now adding and committing these changes to your current branch..."
-pwd
-ls /home/travis/build/jackbarsotti/pgi_lex1
+echo 'Here are the retrieved contents of your rebuilt force-app directory:'
 ls /home/travis/build/jackbarsotti/pgi_lex1/force-app/main/default
+echo
+echo "Now adding and committing these changes to your current branch..."
 
 # Add changes
 git config --global user.email "travis@travis-ci.org"
