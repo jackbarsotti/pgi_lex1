@@ -32,6 +32,7 @@ sfdx force:auth:sfdxurl:store -f authtravisci.txt -a targetEnvironment
 git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
 git fetch -q
 git stash
+echo
 #git checkout masterbackup
 git checkout -b newmaster
 
@@ -62,7 +63,7 @@ echo
 echo "Retrieval complete. Ready to update the remote repository."
 echo
 echo "Now adding and committing these changes to your current branch..."
-
+pwd
 ls /Users/jackbarsotti/pgi_lex1
 
 # Add changes
