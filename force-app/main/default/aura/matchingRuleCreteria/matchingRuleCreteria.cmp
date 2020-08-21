@@ -1,0 +1,94 @@
+<aura:component >
+
+    <!-- Attributes -->
+    <aura:attribute name="childObject" type="object" />
+    <aura:attribute name ="fields" type="List" />
+    <aura:attribute name="selectedValue" type="string" default=""/>
+    <aura:attribute name="lineNumber" type="string" />
+    <aura:attribute name="operatorType" type="List" />
+    <aura:attribute name="FieldType" type="string" default="STRING" /> 
+    <aura:attribute name="MatchingRuleCreation" type="List" />
+    <aura:attribute name="setOutput" type="boolean" default="false" />
+    <aura:attribute name="removeRowMatchingruleList" type="List"/> 
+    <aura:attribute name="isEdit" type="boolean" default="false" />
+    <aura:attribute name="isChildMR" type="boolean" />
+
+    <!-- handler -->
+    <aura:handler name="change" value="{!v.fields}" action="{!c.ChangeHandler}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:registerEvent name="ClearMatchingRow" type="c:ClearMatchingRow"/>
+
+    <!-- to get all removedRowrecords -->
+    <aura:registerEvent name="getRemovedrecordId" type="c:getRemovedrecordId"/>
+    
+    <aura:method name="handleErrorMethod" action="{!c.handleerrorsonSave}" access="public">
+        <aura:attribute name="matchingRuleObj" type="object" default=""/>
+    </aura:method>
+
+    <div class="slds-grid slds-wrap">
+        <div class="{! 'slds-col slds-size_1-of-36 ' + if(v.setOutput, ' ', ' slds-p-top_medium ')}" >
+            {!v.childObject.Line_Number__c}
+        </div>
+
+        <!-- style="padding: 26px 0px 0px 0px;" -->
+        <div class="slds-col slds-size_3-of-12 slds-p-horizontal_small">
+            
+            <aura:if isTrue="{!v.setOutput}">
+                <div class="slds-col slds-size_1-of-1">
+                    <lightning:formattedText value="{!v.childObject.Field_API_Name__c}" />
+                </div>
+                <aura:set attribute="else">
+                    <lightning:select  variant="{! if(v.childObject.Line_Number__c == 1,'','label-hidden')}" disabled="{! if(v.selectedValue != '' , false , true)}" name="selectItem" label="Select field" value="{!v.childObject.Field_API_Name__c}" onblur="{!c.removeValue}" onchange="{!c.selectedFieldType}">
+                        <aura:iteration items="{!v.fields}" var="item">
+                            <option selected="{! (item.fieldApiName==v.childObject.Field_API_Name__c)}" value="{!item.fieldApiName}" > {!item.fieldLabel} </option>
+                        </aura:iteration>
+                    </lightning:select>
+                </aura:set>
+            </aura:if>
+            
+        </div>
+        <div class="slds-col slds-size_3-of-12 slds-p-horizontal_small" >
+            
+            <aura:if isTrue="{!v.setOutput}">
+                <div class="slds-col slds-size_1-of-1" style="padding-left: 42%;">
+                    <lightning:formattedText value="{!v.childObject.Field_Operator__c}" />
+                </div>
+                <aura:set attribute="else">
+                    <lightning:select variant="{! if(v.childObject.Line_Number__c == 1,'','label-hidden')}"  disabled="{! if(v.selectedValue != '' , false , true)}" name="selectOprtType" label="Operator" value="{!v.childObject.Field_Operator__c}" >
+                        <aura:iteration items="{!v.operatorType}" var="item">
+                            <option selected="{! (item.value==v.childObject.Field_Operator__c)}" value="{!item.value}"> {!item.label} </option>
+                        </aura:iteration>
+                    </lightning:select>
+                    
+                </aura:set>
+            </aura:if>
+            
+        </div> 
+        <div class="{! if(v.FieldType == 'DATETIME' || v.FieldType == 'DATE','slds-hide','slds-p-top_xx-small slds-show slds-col slds-size_3-of-12')}" >
+            <!-- style="{! if(v.childObject.Line_Number__c == 1,'','padding: 19px 0px 0px 0px;')}" -->
+            <aura:if isTrue="{!v.setOutput}">
+                <div class="slds-col slds-size_1-of-1" style="padding-left: 82%;">
+                    <lightning:formattedText value="{!v.childObject.Field_Value__c}" />
+                </div>
+                <aura:set attribute="else">
+                    <lightning:input disabled="{! if(v.childObject.Field_Operator__c != '--None--' , false , true)}" variant="{! if(v.childObject.Line_Number__c == 1,'','label-hidden')}" name="input1" label=" Value" value="{!v.childObject.Field_Value__c}" />
+                </aura:set>
+            </aura:if>
+        </div>
+        <div class="{! if(v.FieldType == 'DATETIME' || v.FieldType == 'DATE',' slds-p-top_xx-small slds-show slds-col slds-size_3-of-12','slds-hide')}" >
+            <!-- style="{! if(v.childObject.Line_Number__c == 1,'','padding: 19px 0px 0px 0px;')}" -->
+            <aura:if isTrue="{!v.setOutput}">
+                <div class="slds-col slds-size_1-of-1">
+                    <lightning:formattedText value="{!v.childObject.Field_Value__c}" />
+                </div>
+                <aura:set attribute="else">
+                    <lightning:input disabled="{! if(v.childObject.Field_Operator__c != '--None--' , false , true)}" variant="{! if(v.childObject.Line_Number__c == 1,'','label-hidden')}" placeholder="mmm dd, yyyy" type="date"  label="Value" value="{!v.childObject.Field_Value__c}" />
+                </aura:set>
+            </aura:if>
+            
+        </div>
+        <div class="{! if(v.setOutput, ' slds-hide ', if(v.childObject.Line_Number__c == 1,' slds-hide ',' slds-p-top_x-small slds-p-left_small '))}" style="">
+            <a id="{!v.lineNumber}" onclick="{!c.clearRow}">Remove Row</a>
+        </div>
+    </div>
+</aura:component>

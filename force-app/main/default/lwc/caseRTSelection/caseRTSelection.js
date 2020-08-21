@@ -5,22 +5,16 @@ import CASE_OBJECT from '@salesforce/schema/Case';
 import getRecordType from '@salesforce/apex/CaseRTSelection.getRecordType';
 export default class CaseRecordTypeSelectionInLWC extends NavigationMixin(LightningElement) {
     @track selectedValue;
+    @track selectedName;
     @track recTypeData = [];
     @track openCaseTab;
+    @track isNew = true;
     @wire(getObjectInfo, { objectApiName: CASE_OBJECT })
     getdefault({error,data}){
        if(data){
          // perform your custom logic here
          console.log('The Default RecordTypr',data.defaultRecordTypeId);
          this.selectedValue = data.defaultRecordTypeId;
-        //  const rtInfos = data.recordTypeInfos;
-        //  let rtValues = Object.values(rtInfos);
-        //  console.log('The Rt Values rtInfos',rtInfos);
-        //  for(let i = 0; i < rtValues.length; i++) {
-        //     if(rtValues[i].name !== 'Master') {
-        //         console.log('The Rt Values Is',rtValues[i]);
-        //     }
-        // }
        }else if(error){
            // perform your logic related to error 
         }
@@ -54,6 +48,11 @@ export default class CaseRecordTypeSelectionInLWC extends NavigationMixin(Lightn
     handleChange(event) {
         this.selectedValue = event.target.value;
         console.log('The Selected Value',this.selectedValue);
+        this.recTypeData.forEach(ele =>{
+            if(ele.Id === this.selectedValue){
+                this.selectedName = ele.Name;
+            }
+        })
     }
 
 
@@ -76,8 +75,8 @@ export default class CaseRecordTypeSelectionInLWC extends NavigationMixin(Lightn
         });
     }
     submitDetails() {
-        
         console.log('The Selected Value',this.selectedValue);
+        console.log('The Selected selectedName',this.selectedName);
         this.openCaseTab = true;
         this.isModalOpen = false;
     }

@@ -1,0 +1,150 @@
+<template>
+	<template if:true={isView}>
+		<b>{fieldObject.label} &nbsp;&nbsp;:&nbsp;&nbsp;</b>
+	</template>
+	<!-- {fieldObject.label} -->
+	<!-- FOR TEXT TYPE -->
+	<template if:true={fieldObject.isString}>
+		<template if:false={isView}>
+		<lightning-input tabindex="0" type="text" class="inputCmp" label={fieldObject.label} value={fieldObject.value} onchange={handleOnValueChange}
+			 required={fieldObject.fieldRequired}>
+		</lightning-input>
+	</template>
+		<template if:true={isView}>
+			<lightning-formatted-text  label={fieldObject.label} value={fieldObject.value}>
+			</lightning-formatted-text>
+		</template>
+	</template>
+	<!-- END OF TEXT TYPE -->
+	<!-- START OF CURRENCY TYPE -->
+	<template if:true={fieldObject.isCurrency}>
+		<template if:false={isView}>
+		<lightning-input type="number" class="inputCmp" label={fieldObject.label} value={fieldObject.value}  onchange={handleOnValueChange}
+			required={fieldObject.fieldRequired} tabindex="0">
+		</lightning-input>
+		</template>
+		<template if:true={isView}>
+			<lightning-formatted-number label={fieldObject.label} value={fieldObject.value} format-style="decimal"
+								maximum-fraction-digits="0">
+							</lightning-formatted-number>
+		</template>
+	</template>
+	<!-- END OF CURRENCY TYPE -->
+	<!-- START OF TEXTAREA -->
+	<template if:true={fieldObject.isTextArea}>
+		<template if:false={isView}>
+			<lightning-textarea name="myTextArea" class="inputCmp" value={fieldObject.value}   onchange={handleOnValueChange}
+				 label={fieldObject.label} maxlength="300" required={fieldObject.fieldRequired}> 
+			</lightning-textarea>
+		</template>
+			<template if:true={isView}>
+				<lightning-formatted-text label={fieldObject.label} value={fieldObject.value}>
+				</lightning-formatted-text>
+			</template>
+	</template>
+	<!-- END OF TEXTAREA -->
+	<!-- START OF NUMBER -->
+	<template if:true={fieldObject.isNumber}>
+		<template if:false={isView}>
+			<lightning-input type="number" class="inputCmp" name="datefld" label={fieldObject.label} value={fieldObject.value} onchange={handleOnValueChange}
+				 required={fieldObject.fieldRequired}>
+				</lightning-input>
+		</template>
+				<template if:true={isView}>
+					<lightning-formatted-number  label={fieldObject.label} value={fieldObject.value}>
+					</lightning-formatted-number>
+				</template>
+	</template>
+	<!-- END OF NUMBER -->
+	<!-- START OF EMAIL -->
+	<template if:true={fieldObject.isEmail}>
+		<template if:false={isView}>
+			<lightning-input type="email" class="inputCmp" label={fieldObject.label} value={fieldObject.value} onchange={handleOnValueChange}
+				required={fieldObject.fieldRequired} >
+			</lightning-input>
+		</template>
+			<template if:true={isView}>
+				<lightning-formatted-email  label={fieldObject.label} value={fieldObject.value}>
+				</lightning-formatted-email>
+			</template>
+	</template>
+	<!-- END OF EMAIL -->
+	<template if:true={fieldObject.isUrl}>
+		<template if:false={isView}>
+			<lightning-input type="url" class="inputCmp" label={fieldObject.label} name="input1" onchange={handleOnValueChange}
+				required={fieldObject.fieldRequired} value={fieldObject.value} >
+			</lightning-input>
+		</template>
+			<template if:true={isView}>
+				<lightning-formatted-url  label={fieldObject.label} value={fieldObject.value}>
+				</lightning-formatted-url>
+			</template>
+	</template>
+	<!-- END OF URL -->
+	<!-- START OF DATETIME -->
+	<template if:true={fieldObject.isDateTime}>
+		<template if:false={isView}>
+			<lightning-input type="datetime" class="inputCmp" name="input5" label={fieldObject.label} value={fieldObject.value} onchange={handleOnValueChange}
+				 required={fieldObject.fieldRequired}>
+			</lightning-input>
+		</template>
+			<template if:true={isView}>
+					<lightning-formatted-date-time label={fieldObject.label} value={fieldObject.value} >
+					</lightning-formatted-date-time>
+			</template>
+	</template>
+	<!-- END OF DATETIME -->
+	<!-- START OF DATE -->
+	<template if:true={fieldObject.isDate}>
+		<template if:false={isView}>
+			<lightning-input type="date" class="inputCmp" name="datefld" label={fieldObject.label} onclick={onEditFocus} value={fieldObject.value}
+				onchange={handleOnValueChange}  required={fieldObject.fieldRequired}>
+			</lightning-input>
+		</template>
+			<template if:true={isView}>
+				<lightning-formatted-date-time label={fieldObject.label} value={fieldObject.value} format="MMM d, yyyy">
+				</lightning-formatted-date-time>
+			</template>
+	</template>
+	<!-- END OF DATE -->
+
+
+	<!-- START OF PICKLIST -->
+	<template if:true={fieldObject.isPickList}>
+		<template if:false={isView}>
+			<lightning-combobox onfocus={onEditFocus} class="inputCmp" name="progress" label={fieldObject.label} value={fieldObject.value} placeholder=" "
+				onchange={handleOnValueChange} options={fieldObject.pckListOptions}  tabindex="0" disabled={isComboDisabled}
+				required={fieldObject.fieldRequired}>
+			</lightning-combobox>
+		</template>
+			<template if:true={isView}>
+				<lightning-formatted-text label={fieldObject.label} value={fieldObject.value}></lightning-formatted-text>
+			</template>
+	</template>
+	<!-- END OF PICKLIST -->
+	<!-- START OF LOOKUP -->
+	<template if:true={fieldObject.isLookup}>
+		<template if:false={isView}>
+			<c-custom-lookup field-label="Select Account Record" child-object-api-name='Case' class="inputCmp" required={fieldObject.fieldRequired}
+				target-field-api-name={fldApi} onvalueselected={handleValueSelcted}>
+			</c-custom-lookup>
+		</template>
+			<template if:true={isView}>
+				<lightning-formatted-text  label={fieldObject.label} value={fieldObject.value}>
+				</lightning-formatted-text>
+			</template>
+	</template>
+	<!-- END OF LOOKUP -->
+	<template if:true={fieldObject.isBoolean}>
+		<template if:false={isView}>
+		<lightning-input type="checkbox" class="inputCmp" name="chkboxfld" label={fieldObject.label} value={fieldObject.value}
+			onchange={handleOnValueChange}  required={fieldObject.fieldRequired}>
+		</lightning-input>
+	</template>
+		<template if:true={isView}>
+			<lightning-input type="checkbox" class="inputCmp" name="chkboxfld" label={fieldObject.label} value={fieldObject.value} disabled={isView}
+			 >
+		</lightning-input>
+		</template>
+	</template>
+</template>

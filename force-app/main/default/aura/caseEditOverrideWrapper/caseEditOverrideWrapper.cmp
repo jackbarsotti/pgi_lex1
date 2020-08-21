@@ -1,0 +1,6 @@
+<aura:component 
+ implements="lightning:actionOverride,force:appHostable,force:lightningQuickAction,force:hasRecordId,flexipage:availableForAllPageTypes" access="global" 
+>
+<aura:attribute name="isNew" type="boolean" default="false" />
+    <c:caseCreateOverride recordId="{!v.recordId}" isNew="{!v.isNew}"/>
+</aura:component>

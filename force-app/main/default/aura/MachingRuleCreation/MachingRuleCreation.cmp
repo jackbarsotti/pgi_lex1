@@ -1,0 +1,315 @@
+<aura:component controller="MachingRuleCreation"
+    implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes"
+    access="global">
+
+    <!-- Attributes -->
+    <aura:attribute name="recordId" type="String" default="" />
+    <aura:attribute name="options" type="List" />
+    <aura:attribute name="MatchingRule" type="Matching_Rule__c" default="{'sobjectType':'Matching_Rule__c',
+                                                                         'Evaluation_Order__c':'1',
+                                                                         'Parent_Matching_Rule__c':''}" />
+    <aura:attribute name="ParentMatchingRule" type="sObject" default="{'sobjectType':'Matching_Rule__c',
+                                                                      'Name':'',
+                                                                      'Id':'',
+                                                                      'fieldAPIname':''}" />
+    <aura:attribute name="CreatedMatchingRule" type="Matching_Rule__c" default="{'sobjectType':'Matching_Rule__c'}" />    
+    <aura:attribute name="selectedValue" type="string" default="" />
+    <aura:attribute name="childMatchingRuleObjects" type="List"
+        description="store child objects name which are related to selected object" />
+    <!-- <aura:attribute name="selectedParentName" type="string" default="" /> -->
+    <aura:attribute name="fields" type="List" />
+    <!-- <aura:attribute name="fieldSelValue" type="String" default="" /> -->
+    <aura:attribute name="setOutput" type="boolean" default="false" />
+    <aura:attribute name="hideMatchingRuleCriteria" type="boolean" default="true" />
+    <!-- <aura:attribute name="isShowModel" type="boolean" default="false" /> -->
+    <!-- <aura:attribute name="saveDisabled" type="boolean" default="true" /> -->
+    <aura:attribute name="MatchingRuleCreation" type="List" />
+    <aura:attribute name="isChildMR" type="boolean" default="false" />
+    <aura:attribute name="isEdit" type="boolean" default="false" />
+    <aura:attribute name="MatchingRuleObject" type="sObject" />
+    <!-- <aura:attribute name="lstChildMatchingRuleObjects" type="List" /> -->
+    <!-- <aura:attribute name="numbersAdd" type="Integer" default="1" /> -->
+    <aura:attribute name="RelatedMatchingRuleObject" type="List" />
+    <aura:attribute name="isChildMRedit" type="boolean" default="false" />
+    <!-- <aura:attribute name="MatchingRuleCreationCloned" type="List" /> -->
+    <!-- <aura:attribute name="MatchingRuleCloned" type="Matching_Rule__c" /> -->
+    <aura:attribute name="removeRowMatchingruleList" type="List" />
+    <aura:attribute name="selectedChildObject" type="String" />
+
+    <!-- handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.MatchingRuleCreation}" action="{!c.MatchingRuleCriteriaHandler}" />
+    <aura:handler name="ClearMatchingRow" event="c:ClearMatchingRow" action="{!c.handleComponentEvent}" />
+    <aura:registerEvent name="getValuesfromCreateCMP" type="c:getValuesfromCreateCMP" />
+    <aura:handler name="getValuesfromCreateCMP" event="c:getValuesfromCreateCMP" action="{!c.getValuesfromNewCMP}" />
+    <aura:handler name="MatchingRuleEvent" event="c:MatchingRuleEvent" action="{!c.getMRparentName}" />
+    <aura:handler name="getRemovedrecordId" event="c:getRemovedrecordId" action="{!c.handlestoreRemovedrecordIds}" />
+
+    <div class="slds-p-horizontal_large slds-p-top_medium slds-is-relative" style="background:white;">
+
+        <!-- Lightning spinner -->
+        <lightning:spinner aura:id="initSpinner" class="slds-hide" alternativeText="Loading Records" variant="brand"
+            size="small" body="Component[]" />
+
+        <div class="slds-align_absolute-center setHeader ">
+            <h3>
+                Matching Rule
+            </h3>
+        </div>
+
+        <div class="slds-size_1-of-1" aura:id="toastMessageBody">
+            <!--  <p class="slds-truncate" >
+                {!v.body}
+            </p> -->
+        </div>
+
+        <div class="slds-form-element slds-grid slds-gutters slds-wrap">
+            
+            <div class="slds-col slds slds-size_1-of-2">
+                <div class="slds-grid slds-gutters slds-wrap">
+                    <aura:if isTrue="{!v.setOutput}">
+                        <div class="slds-form-element__control slds-col slds-size_1-of-1">
+                            <b class="slds-p-right_x-small">Matching Rule Name:</b>
+                            <lightning:formattedText value="{!v.MatchingRule.Name}" />
+                        </div>
+                        <aura:set attribute="else">
+                            <div class=" slds-form-element__control slds-col slds-size_1-of-1">
+                                <lightning:input required="true" aura:id="inputCmp" name="input1"
+                                    label="Matching Rule Name" value="{!v.MatchingRule.Name}"
+                                    onchange="{!c.enableSave}" />
+                            </div>
+                        </aura:set>
+                    </aura:if>
+
+<!--                     <aura:if isTrue="{!v.setOutput}">
+                        <div class="slds-form-element__control slds-col slds-size_1-of-1">
+                            <b class="slds-p-right_x-small">Object Name:</b>
+                            <lightning:formattedText value="{!v.MatchingRule.Object_Name__c}" />
+                        </div>
+                        <aura:set attribute="else">
+                            <div class="slds-form-element__control slds-col slds-size_1-of-1">
+                                <lightning:combobox disabled="{!v.isEdit}" required="true" aura:id="objectId"
+                                    name="Sobject Name" label="Object Name" value="{!v.MatchingRule.Object_Name__c}"
+                                    placeholder="Select Sobject" options="{! v.options }"
+                                    onchange="{! c.onSelectOfObject }" />
+                            </div>
+                        </aura:set>
+                    </aura:if> -->
+
+
+                    <aura:if isTrue="{!v.setOutput}">
+                        <div class="slds-form-element__control slds-col slds-size_1-of-1">
+                            <b class="slds-p-right_x-small">Object Name:</b>
+                            <lightning:formattedText value="{!v.MatchingRule.Object_Name__c}" />
+                        </div>
+                        <aura:set attribute="else">
+                            <aura:if isTrue="{!v.isEdit}">
+                                    <div class="slds-form-element__control slds-col slds-size_1-of-1">
+                                        <lightning:input disabled="true" title="{!v.selectedChildObject}" required="true" aura:id="childObjectName" name="input1" label="Object Name" value="{!v.selectedChildObject}"/>
+                                    </div>
+                                    <aura:set attribute="else">
+                                    <div class="slds-form-element__control slds-col slds-size_1-of-1">
+                                        <lightning:combobox disabled="{!v.isEdit}" required="true" aura:id="objectId"
+                                            name="Sobject Name" label="Object Name" value="{!v.MatchingRule.Object_Name__c}"
+                                            placeholder="Select Sobject" options="{! v.options }"
+                                            onchange="{! c.onSelectOfObject }" />
+                                    </div>
+                                </aura:set>        
+                            </aura:if>
+                        </aura:set>
+                    </aura:if>
+
+                    <aura:if isTrue="{!v.setOutput}">
+                        <div class="slds-form-element__control slds-col slds-size_1-of-1">
+                            <b class="slds-p-right_x-small">Evaluation Order:</b>
+                            <lightning:formattedText value="{!v.MatchingRule.Evaluation_Order__c}" />
+
+                        </div>
+                        <aura:set attribute="else">
+                            <div class="slds-form-element__control slds-col slds-size_1-of-1">
+                                <lightning:input disabled="true" title="{!v.MatchingRule.Evaluation_Order__c}" required="true" aura:id="inputCmp" name="input1"
+                                    label="Evaluation Order" value="{!v.MatchingRule.Evaluation_Order__c}"
+                                    onchange="{!c.enableSave}" />
+                            </div>
+                        </aura:set>
+                    </aura:if>
+
+                    <aura:if isTrue="{! or(v.isChildMR, v.isChildMRedit)}">
+                        <div class="slds-p-top_x-small slds-form-element__control slds-col slds-size_1-of-1">
+                            <b class="slds-p-right_x-small">Parent Matching Rule:</b>
+                            <lightning:formattedText value="{!v.CreatedMatchingRule.Name}" />
+                        </div>
+                        <aura:set attribute="else">
+                            <aura:if isTrue="{!v.setOutput}">
+                                <!-- <div class="slds-form-element__control slds-col slds-size_1-of-1"> -->
+                                <b class="slds-p-left_small">Parent Matching Rule:</b><a
+                                    onclick="{!c.redirectoParentMR}">
+                                    <lightning:formattedText value="{!v.ParentMatchingRule.Name}" /></a>
+                                <aura:set attribute="else">
+                                    <div aura:id="parentid"
+                                        class="slds-show slds-form-element__control slds-col slds-size_1-of-1">
+                                        Parent Matching Rule
+                                        <c:ParentMatchingRuleLookup sObjectAPIName="Matching_Rule__c"
+                                            selRecId="{! if(v.setOutput, '',v.ParentMatchingRule.Id)}"
+                                            selRecName="{! if(v.setOutput, '',v.ParentMatchingRule.Name)}"
+                                            FieldApiName="Parent_Matching_Rule__c" />
+                                    </div>
+                                </aura:set>
+                                <!-- </div> -->
+                            </aura:if>
+                        </aura:set>
+                    </aura:if>
+
+                </div>
+            </div>
+            <div class="slds-col slds-grid slds slds-size_1-of-2">
+                <aura:if isTrue="{!v.setOutput}">
+                    <div class="slds-form-element__control slds-col slds-size_1-of-1">
+                        <b class="slds-p-right_x-small">Support Text:</b>
+                        <lightning:formattedRichText value="{!v.MatchingRule.Support_Text__c}" />
+                    </div>
+                    <aura:set attribute="else">
+                        <div class="slds-form-element__control slds-col slds-size_1-of-1">
+                            <lightning:inputRichText onblur="{!c.enableSave}" aura:id="inputCmp" label="Support Text"
+                                labelVisible="true" class="slds-truncate" variant="bottom-toolbar"
+                                value="{!v.MatchingRule.Support_Text__c}" placeholder="Support Text" />
+                            <!--<lightning:input required="true" aura:id="Support_Text__c" name="input1" label="Support Text " value="{!v.MatchingRule.Support_Text__c}" /> -->
+                        </div>
+                    </aura:set>
+                </aura:if>
+            </div>
+        </div>
+        <br />
+
+        <div class="slds-align_absolute-center setHeader">
+            <h3>
+                Matching Rule Criteria
+            </h3>
+        </div>
+        <div>
+            <div class="{!v.hideMatchingRuleCriteria ? ' disableDiv ' : ''}">
+
+                <tr class="{! if(v.setOutput, ' slds-show slds-grid slds-wrap ',' slds-hide ')}">
+                    <th class="slds-col slds-size_3-of-12 slds-p-horizontal_small">
+                        Field
+                    </th>
+                    <th class="slds-col slds-size_8-of-12 slds-p-horizontal_small">
+                        Operator
+                    </th>
+                    <th class="slds-col slds-size_8-of-12 slds-p-horizontal_small">
+                        Value
+                    </th>
+                </tr>
+
+                <aura:iteration items="{!v.MatchingRuleCreation}" var="rec" indexVar="lineNumber">
+                    <c:matchingRuleCreteria childObject="{!rec}" isChildMR="{!v.isChildMR}" isEdit="{!v.isEdit}"
+                        fields="{!v.fields}" selectedValue="{!v.MatchingRule.Object_Name__c}" lineNumber="{!lineNumber}"
+                        setOutput="{!v.setOutput}" MatchingRuleCreation="{!v.MatchingRuleCreation}"
+                        removeRowMatchingruleList="{!v.removeRowMatchingruleList}" />
+                </aura:iteration>
+            </div>
+        </div>
+        <br />
+
+        <div class="{! if(v.setOutput, ' slds-hide ',' slds-show slds-grid ')}" style="display: flex;">
+            <div class="slds-p-right_medium">
+                <lightning:button class="slds-button_brand" label="Add Row" title="Base action"
+                    onclick="{! c.handleClick }"
+                    disabled="{! if(v.MatchingRule.Object_Name__c != '' , false , true)}" />
+            </div>
+            <div class="slds-p-right_medium">
+                <lightning:button class="slds-button_brand" label="Save" title="Save" onclick="{! c.saveResult }" />
+            </div>
+            <div
+                class="{! ' slds-p-right_medium ' + if(v.isChildMR, 'slds-hide ', if(v.isChildMRedit, ' slds-hide ', ' slds-show '))}">
+                <!-- <div class="{! ' slds-p-right_medium ' + if(v.isChildMRedit, ' slds-hide ', ' slds-show ')}"> -->
+                <lightning:button class="slds-button_brand" label="Cancel" title="Cancel" onclick="{! c.cancelEdit }" />
+            </div>
+        </div>
+        <div class="{! if(v.setOutput, ' slds-show slds-grid ',' slds-hide ')}" style="display: flex;">
+            <!-- style="padding:0px 8px 0px 0px;" -->
+            <div class="slds-p-right_small">
+                <lightning:button class="slds-button_brand" label="Edit" title="Edit Matching Rule"
+                    onclick="{! c.editRecord }" />
+            </div>
+            <div>
+                <lightning:button class="slds-button_brand" label="Delete" title="Delete Matching Rule"
+                    onclick="{! c.deleteRecord }" />
+            </div>
+            <div class="slds-col_bump-left">
+                <lightning:button class="slds-button_brand" label="Back to List" title="Back to List"
+                    onclick="{! c.backtolist }" />
+            </div>
+        </div>
+
+        <br />
+
+        <div aura:id="showChildRec" class="slds-hide">
+            <div class="slds-align_absolute-center setHeader">
+                <h3>
+                    Child Matching Records
+                </h3>
+            </div>
+            <br />
+            <div style="text-align:center;">
+                <lightning:button class="slds-button_brand" label="Create Child Matching Rule" title="CreateChildMR"
+                    onclick="{! c.CreateChildMR }" />
+            </div>
+            <br />
+
+
+            <!-- Ralted list Table -->
+            <div class="slds-wrap slds-grid slds-is-relative">
+                <table class="slds-table_cell-buffer">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="slds-p-around_small slds-cell-shrink customthPadding" title="edit/delete" scope="col">
+                            </th>
+                            <th class="slds-p-around_small" scope="col">
+                                <div class="slds-truncate" title="Matching Rule Name">Matching Rule Name</div>
+                            </th>
+                            <th class="slds-p-around_small" scope="col">
+                                <div class="slds-truncate" title="Object Name">Object Name</div>
+                            </th>
+                            <th class="slds-p-around_small" scope="col">
+                                <div class="slds-truncate" title="Evaluation Order">Evaluation Order</div>
+                            </th>
+                            <th class="slds-p-around_small" scope="col">
+                                <div class="slds-truncate" title="Support Text">Support Text</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.RelatedMatchingRuleObject}" var="objMR" indexVar="index">
+                            <c:ChildRecordsTable RelatedMatchingRuleObject="{!v.RelatedMatchingRuleObject}"
+                                MatchingRuleObject="{!objMR}" rowIndex="{!index}" />
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+
+            <br />
+
+            <aura:if isTrue="{!v.isChildMR}">
+                <div class="demo-only" style="height: 640px;">
+                    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+                        aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_large">
+                        <div class="slds-modal__container">
+                            <header class="slds-modal__header">
+                                <lightning:buttonIcon iconName="utility:close" onclick="{! c.closeModel }"
+                                    alternativeText="close" variant="bare-inverse" class="slds-modal__close" />
+                                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Create Child
+                                    Matching Rule</h2>
+                            </header>
+                            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                {!v.body}
+                            </div>
+                        </div>
+                    </section>
+                    <div class="slds-backdrop slds-backdrop_open"></div>
+                </div>
+            </aura:if>
+        </div>
+
+    </div>
+</aura:component>

@@ -1,181 +1,56 @@
 <template>
     <lightning-card title="Case Details">
-        <template if:false={tabRecordType}>
-            <template if:true={record}>
-                <template if:true={fieldDetails}>
-                    <template if:true={layoutsection}>
-                        <lightning-accordion active-section-name="QuickCase Templete">
-                            <lightning-accordion-section name="QuickCase Templete" label="QuickCase Templete">
-                                <div class="slds-size_1-of-2 slds-align_absolute-center">
-                                    <lightning-combobox label="Would you like to select a quick case?" name="quickCase"
-                                        onchange={handleCaseTemplateChange} options={quickCaseListOption}
-                                        placeholder="--None--" value={selectedCaseTemplate}></lightning-combobox><br />
-                                </div>
-                            </lightning-accordion-section>
-                        </lightning-accordion>
-                        <lightning-accordion allow-multiple-sections-open active-section-name={sectionHeading}
-                            onsectiontoggle={handleSectionToggle}>
-                            <template for:each={layoutsection} for:item="sections">
-                                <lightning-accordion-section key={sections.heading} name={sections.heading}
-                                    label={sections.heading}>
-                                    <!-- To display Fields -->
-                                    <template for:each={sections.layoutRows} for:item="layoutRows">
-                                        <div key={layoutRows} class="slds-grid slds-wrap">
-                                            <template for:each={layoutRows.layoutItems} for:item="layoutItems">
-                                                <template if:true={layoutItems.editableForNew}>
-                                                    <template for:each={layoutItems.layoutComponents}
-                                                        for:item="layoutItemApi">
-                                                        <div key={layoutItemApi}
-                                                            class="slds-p-around_medium slds-size_1-of-2">
-                                                            <c-case-form-fields data-id={layoutItemApi.apiName}
-                                                                record-type-id={recordTypeId} record={record}
-                                                                case-template-rec-layout-value={caseTemplateRecLayoutValue}
-                                                                fld-api={layoutItemApi.apiName}
-                                                                field-details={fieldDetails}
-                                                                onmycustomevent={handleCustomEvent}>
-                                                            </c-case-form-fields>
-                                                        </div>
-                                                    </template>
-                                                </template>
+        <template if:true={record}>
+            <template if:true={fieldDetails}>
+                <template if:true={layoutsection}>
+                    <template if:true={isNew}>
+                    <lightning-accordion active-section-name="QuickCase Templete">
+                        <lightning-accordion-section name="QuickCase Templete" label="QuickCase Templete">
+                            <div class="slds-size_1-of-2 slds-align_absolute-center">
+                                <lightning-combobox label="Would you like to select a quick case?" name="quickCase"
+                                    onchange={handleCaseTemplateChange} options={quickCaseListOption}
+                                    placeholder="--None--" value={selectedCaseTemplate}></lightning-combobox><br />
+                            </div>
+                        </lightning-accordion-section>
+                    </lightning-accordion>
+                  </template>
+                    <lightning-accordion allow-multiple-sections-open active-section-name={sectionHeading}
+                        onsectiontoggle={handleSectionToggle}>
+                        <template for:each={layoutsection} for:item="sections">
+                            <lightning-accordion-section key={sections.sectionHeader} name={sections.sectionHeader}
+                                label={sections.sectionHeader}>
+                                <!-- To display Fields -->
+                                <div key={layoutItems} class="slds-grid slds-wrap">
+                                <template for:each={sections.sectionDetails} for:item="layoutItems">
+                                    
+                                            <template if:true={layoutItems.editableForNew}>
+                                                    <div key={layoutItemApi} class="slds-size_1-of-2 " style="padding-right: 109px;padding-left: 84px">
+                                                        <c-case-form-fields data-id={layoutItems.apiName}
+                                                            record-type-id={recordTypeId} record={record}
+                                                            fld-api={layoutItems.apiName}
+                                                            field-details={fieldDetails}
+                                                            is-new ={isNew}
+                                                            onmycustomevent={handleCustomEvent}>
+                                                        </c-case-form-fields>
+                                                    </div>
                                             </template>
-                                        </div>
-                                        <br key={layoutRows} />
-                                    </template>
-                                    <!-- End -->
-                                </lightning-accordion-section>
-                            </template>
+                                    
+                                </template>
+                                
+                            </div>
+                            <br key={sections.sectionHeader} />
+                                <!-- End -->
+                            </lightning-accordion-section>
+                        </template>
 
-                        </lightning-accordion>
-                    </template>
-
+                    </lightning-accordion>
                 </template>
             </template>
         </template>
-        <template if:true={tabRecordType}>
-            <template if:true={record}>
-                <template if:true={fieldDetails}>
-                    <template if:true={layoutsection}>
-                        <lightning-accordion active-section-name="QuickCase Templete">
-                            <lightning-accordion-section name="QuickCase Templete" label="QuickCase Templete">
-                                <div class="slds-size_1-of-2 slds-align_absolute-center">
-                                    <lightning-combobox label="Would you like to select a quick case?" name="quickCase"
-                                        onchange={handleCaseTemplateChange} options={quickCaseListOption}
-                                        placeholder="--None--" value={selectedCaseTemplate}></lightning-combobox><br />
-                                </div>
-                            </lightning-accordion-section>
-                        </lightning-accordion>
-
-                        <lightning-accordion allow-multiple-sections-open active-section-name={sectionHeading}
-                            onsectiontoggle={handleSectionToggle}>
-                            <template for:each={topLayoutSections} for:item="sections">
-                                <lightning-accordion-section key={sections.heading} name={sections.heading}
-                                    label={sections.heading}>
-                                    <!-- To display Fields -->
-                                    <template for:each={sections.layoutRows} for:item="layoutRows">
-                                        <div key={layoutRows} class="slds-grid slds-wrap">
-                                            <template for:each={layoutRows.layoutItems} for:item="layoutItems">
-                                                <template if:true={layoutItems.editableForNew}>
-                                                    <template for:each={layoutItems.layoutComponents}
-                                                        for:item="layoutItemApi">
-                                                        <div key={layoutItemApi}
-                                                            class="slds-p-around_medium slds-size_1-of-2">
-                                                            <c-case-form-fields data-id={layoutItemApi.apiName}
-                                                                record-type-id={recordTypeId} record={record}
-                                                                case-template-rec-layout-value={caseTemplateRecLayoutValue}
-                                                                fld-api={layoutItemApi.apiName}
-                                                                field-details={fieldDetails}
-                                                                onmycustomevent={handleCustomEvent}>
-                                                            </c-case-form-fields>
-                                                        </div>
-                                                    </template>
-                                                </template>
-                                            </template>
-                                        </div>
-                                        <br key={layoutRows} />
-                                    </template>
-                                    <!-- End -->
-                                </lightning-accordion-section>
-                            </template>
-                        </lightning-accordion>
-
-                        <lightning-tabset>
-                            <template for:each={tabLayoutSections} for:item="tabsections">
-                                <lightning-tab key={tabsections.heading} label={tabsections.heading}
-                                    onactive={handleTabSections}>
-                                    <!-- To display Fields -->
-                                    <template for:each={buttonSections.layoutRows} for:item="layoutRows">
-                                        <div key={layoutRows} class="slds-grid slds-wrap">
-                                            <template for:each={layoutRows.layoutItems} for:item="layoutItems">
-                                                <template if:true={layoutItems.editableForNew}>
-                                                    <template for:each={layoutItems.layoutComponents}
-                                                        for:item="layoutItemApi">
-                                                        <div key={layoutItemApi}
-                                                            class="slds-p-around_medium slds-size_1-of-2">
-                                                            <c-case-form-fields data-id={layoutItemApi.apiName}
-                                                                record-type-id={recordTypeId} record={record}
-                                                                req-tab-sections={reqTabSections}
-                                                                case-template-rec-layout-value={caseTemplateRecLayoutValue}
-                                                                fld-api={layoutItemApi.apiName}
-                                                                field-details={fieldDetails}
-                                                                onmycustomevent={handleCustomEvent}>
-                                                            </c-case-form-fields>
-                                                        </div>
-                                                    </template>
-                                                </template>
-                                            </template>
-                                        </div>
-                                        <br key={layoutRows} />
-                                    </template>
-                                    <!-- End -->
-                                </lightning-tab>
-                                <!-- <lightning-button key={tabsections.heading} label={tabsections.heading} onclick={handleTabSections}></lightning-button> -->
-                            </template>
-                        </lightning-tabset>
-                        </br>
-
-                        <lightning-accordion allow-multiple-sections-open active-section-name={sectionHeading}
-                            onsectiontoggle={handleSectionToggle}>
-                            <template for:each={bottomLayoutSections} for:item="sections">
-                                <lightning-accordion-section key={sections.heading} name={sections.heading}
-                                    label={sections.heading}>
-                                    <!-- To display Fields -->
-                                    <template for:each={sections.layoutRows} for:item="layoutRows">
-                                        <div key={layoutRows} class="slds-grid slds-wrap">
-                                            <template for:each={layoutRows.layoutItems} for:item="layoutItems">
-                                                <template if:true={layoutItems.editableForNew}>
-                                                    <template for:each={layoutItems.layoutComponents}
-                                                        for:item="layoutItemApi">
-                                                        <div key={layoutItemApi}
-                                                            class="slds-p-around_medium slds-size_1-of-2">
-                                                            <c-case-form-fields data-id={layoutItemApi.apiName}
-                                                                record-type-id={recordTypeId} record={record}
-                                                                case-template-rec-layout-value={caseTemplateRecLayoutValue}
-                                                                fld-api={layoutItemApi.apiName}
-                                                                field-details={fieldDetails}
-                                                                onmycustomevent={handleCustomEvent}>
-                                                            </c-case-form-fields>
-                                                        </div>
-                                                    </template>
-                                                </template>
-                                            </template>
-                                        </div>
-                                        <br key={layoutRows} />
-                                    </template>
-                                    <!-- End -->
-                                </lightning-accordion-section>
-                            </template>
-                        </lightning-accordion>
-                    </template>
-
-                </template>
-
-            </template>
-        </template>
-        <!-- Case Comments -->
         <template if:true={requiredCaseComment}>
             <lightning-accordion active-section-name="New Case Comment">
                 <lightning-accordion-section name="New Case Comment" label="New Case Comment">
-                    <div class="slds-size_1-of-2 slds-align_absolute-center">
+                    <div class="slds-align_absolute-center" >
                     <lightning-textarea name="New Case Comment" class="inputCmp" value={caseCommentValue}
                         onchange={handleCommentChange} label="Case Comment" maxlength="300">
                     </lightning-textarea>
@@ -183,14 +58,18 @@
                 </lightning-accordion-section>
             </lightning-accordion>
         </template>
+        
             <lightning-accordion active-section-name="Optional">
-                <lightning-accordion-section name="Assignment rule" label="Assignment rule">
+                <lightning-accordion-section name="Optional" label="Optional">
                     <div class="slds-size_1-of-2 slds-align_absolute-center">
-                    
+                        <lightning-input type="checkbox" class="inputCmp" name="Assignment rule" label="Assignment rule" checked={isFireAssRule}
+                        onchange={handleOnAssRuleChange} >
+                    </lightning-input>
                 </div>
                 </lightning-accordion-section>
             </lightning-accordion>
-        
+        </br>
+    </br>
         <!-- <div  class="slds-align_absolute-center">
             <lightning-button label="Save" onclick={handleSave}></lightning-button>
             <lightning-button label="Cancel" onclick={handleCancel}></lightning-button>

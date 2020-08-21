@@ -1,0 +1,12 @@
+.THIS .slds-pill{
+    width : 100% !important;
+}
+.THIS .iconTop {
+    top : 60% !important; 
+}
+.THIS .closeColor {
+    fill : rgb(107, 109, 112);
+}
+.THIS .disp-flex {
+    display : flex;
+}

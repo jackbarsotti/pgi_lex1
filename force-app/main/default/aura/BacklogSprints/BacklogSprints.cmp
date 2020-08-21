@@ -1,0 +1,56 @@
+<aura:component  controller="AgileReviewController">
+    <!-- CHECK GROUP sELECTED-->
+    <aura:attribute name="isGroupSelected" type="Boolean" default="false"/>
+    <!-- Selected Group-->
+    <aura:attribute name="selectedGroup" type="String" />
+    <!-- Map of Agile Sprint -->
+    <aura:attribute name="agileSprint" type="Map" />
+    <!-- Map of Agile And list of case -->
+    <aura:attribute name="agiletoCaseList" type="Map" />
+    <aura:attribute name="key" type="String"/>
+    <!-- list of backlogcases -->
+    <aura:attribute name="backlogCases" type="Case" />    
+    <aura:attribute name="sprintName" type="String"/>
+    <!--check weather backlog Sprint-->
+    <aura:attribute name="notbacklog" type="Boolean"/>
+    <!-- list of cases related to key -->
+    <aura:attribute name="caseList" type="List"/>
+    <!--check weather backlog Sprint-->
+    <aura:attribute name="indexed" type="Integer"/>
+     <!-- check length of key-->
+     <aura:attribute name="keyLength" type="Integer"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    
+    <lightning:card class="slds-card_boundary backcolour" variant="Narrow" title="{!v.sprintName}" iconName="standard:Account">
+        <div class="slds-grid slds-gutters slds-align_absolute-center" Style="margin-bottom: 7px;">
+        <div class="slds-col slds-size_2-of-12 slds-p-top_large" Style ="padding-left: 75px;">
+            <lightning:button variant="brand" label="Start" title="{!v.key}" name="start" onclick="{! c.changeStatus }"/>
+        </div>
+        <div class="slds-col slds-size_2-of-12 slds-p-top_large" >
+            <lightning:button variant="brand" label="complete" title="{!v.key}" name="complete"  onclick="{! c.changeStatus }"/>
+        </div>
+        <div class="slds-col slds-size_2-of-12 slds-p-top_large" >
+            <lightning:button variant="brand" label="close" title="{!v.key}" name="close"  onclick="{! c.changeStatus }"/>
+        </div>
+    </div>
+    <!--component to display backlog Sprints -->
+        <aura:iteration items="{!v.caseList}" var="item">
+                <lightning:card class="slds-card_boundary" variant="Narrow" title="{!item.CaseNumber}" iconName="standard:case">
+                    
+                </lightning:card>
+        </aura:iteration>
+    </lightning:card>
+    
+    <aura:if isTrue="{!(v.indexed == v.keyLength)}">
+    <lightning:card class="slds-card_boundary backcolour" variant="Narrow" title="Backlog Sprint" iconName="standard:Account" >
+            <aura:iteration items="{!v.backlogCases}" var="item">
+                <lightning:card class="slds-card_boundary" variant="Narrow" title="{!item.CaseNumber}" iconName="standard:case">
+                    
+                </lightning:card>
+        </aura:iteration>
+      </lightning:card>
+    </aura:if>
+    
+        
+</aura:component>

@@ -1,0 +1,50 @@
+<aura:component>
+    <aura:attribute name="message" type="String" />
+    <aura:attribute name="messageType" type="String" description="SUCCESS, ERROR" />
+    
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    
+    
+    <!-- SUCCESS toastMessage -->
+    <aura:if isTrue="{!v.messageType == 'SUCCESS'}" >
+        <div class="slds-notify_container icn">
+            <div class="slds-notify slds-notify_toast slds-theme_success" role="alert">
+                <span class="slds-assistive-text">Success</span>
+                <button class="slds-button slds-button_icon-inverse slds-notify__close">
+                    <!-- <lightning:icon class="icn" iconName="action:approval" alternativeText="Approved" /> -->
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <div class="notify__content slds-grid">
+                    <button class="slds-button slds-button_icon-inverse slds-notify__close" onclick="{!c.closetoastMessage}">
+                        <lightning:icon iconName="utility:close" alternativeText="close" />
+                    </button>
+                    <div class="slds-col slds-align-middle">
+                        <h2 class="slds-text-heading_small "> {!v.message}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <aura:set attribute="else" >
+            <aura:if isTrue="{!v.messageType == 'ERROR'}">
+                <div class="slds-notify_container icn">
+                    <div class="slds-notify slds-notify_toast slds-theme_error" role="alert">
+                        <span class="slds-assistive-text">Error</span>
+                        <button class="slds-button slds-button_icon-inverse slds-notify__close" onclick="{!c.closetoastMessage}">
+                            <lightning:icon class="icn" iconName="utility:close" alternativeText="close" /> 
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <div class="notify__content slds-grid">
+                            <lightning:icon class="icn" iconName="utility:warning" alternativeText="close" />      
+                            <div class="slds-col slds-align-middle">
+                                <h2 class="slds-text-heading_small">{!v.message}</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aura:if>
+        </aura:set>
+    </aura:if>
+    
+    
+    
+</aura:component>

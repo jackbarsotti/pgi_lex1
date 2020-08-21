@@ -1,28 +1,67 @@
 <template>
-    <lightning-card title="Wire Get Picklist Info for specified picklist" icon-name="custom:custom67">
-        <div class="slds-m-horizontal_medium">
-            <template if:true={caseAreaOfFocus.data}>
-                <div class="scroller">
-                    <pre>{caseAreaOfFocusData}</pre>
-                </div>
-            </template>
-        </div>
-        <template if:true={caseAreaOfFocus.error}>
-            Error. No object info
-        </template>        
-    </lightning-card>
+    <lightning-card title="Case Details">
+        <template if:true={record}>
+            <template if:true={fieldDetails}>
+                <template if:true={layoutsection}>
 
+                    <template if:false={isView}>
+                    <lightning-accordion active-section-name="QuickCase Templete">
+                        <lightning-accordion-section name="QuickCase Templete" label="QuickCase Templete">
+                            <div class="slds-size_1-of-2 slds-align_absolute-center">
+                                <lightning-combobox label="Would you like to select a quick case?" name="quickCase"
+                                    onchange={handleCaseTemplateChange} options={quickCaseListOption}
+                                    placeholder="--None--" value={selectedCaseTemplate}></lightning-combobox><br />
+                            </div>
+                        </lightning-accordion-section>
+                    </lightning-accordion>
+                    </template>
+                    <lightning-accordion allow-multiple-sections-open active-section-name={sectionHeading}
+                        onsectiontoggle={handleSectionToggle}>
+                        <template for:each={layoutsection} for:item="sections">
+                            <lightning-accordion-section key={sections.sectionHeader} name={sections.sectionHeader}
+                                label={sections.sectionHeader}>
+                                <!-- To display Fields -->
+                                <div key={layoutItems} class="slds-grid slds-wrap">
+                                    <template for:each={sections.sectionDetails} for:item="layoutItems">
 
-    <lightning-card title="Wire Get Object Info" icon-name="custom:custom67">
-        <div class="slds-m-horizontal_medium">
-            <template if:true={objectInfo.data}>
-                <div class="scroller">
-                    <pre>{objectInfoData}</pre>
-                </div>
+                                        <template if:true={layoutItems.editableForNew}>
+                                            <div key={layoutItemApi} class="slds-size_1-of-2 "
+                                                style="padding-right: 109px;padding-left: 84px">
+                                                <c-case-form-fields data-id={layoutItems.apiName}
+                                                    record-type-id={recordTypeId} record={record}
+                                                    fld-api={layoutItems.apiName} field-details={fieldDetails}
+                                                    is-view={isView} onmycustomevent={handleCustomEvent}
+                                                    onmyeditevent ={handleViewEdit}
+                                                    is-edit={isEdit}>
+                                                </c-case-form-fields>
+                                            </div>
+                                        </template>
+
+                                    </template>
+
+                                </div>
+                                <br key={sections.sectionHeader} />
+                                <!-- End -->
+                            </lightning-accordion-section>
+                        </template>
+
+                    </lightning-accordion>
+                </template>
             </template>
-        </div>
-        <template if:true={objectInfo.error}>
-            Error. No object info
+        </template>
+
+        <!-- <div  class="slds-align_absolute-center">
+            <lightning-button label="Save" onclick={handleSave}></lightning-button>
+            <lightning-button label="Cancel" onclick={handleCancel}></lightning-button>
+        </div> -->
+        <template if:false={isView}>
+            <footer class="slds-model_footer slds-align_absolute-center slds-docked-form-footer">
+                <lightning-button variant="brand" label="Save" title="save" onclick={handleSave}
+                    class="slds-m-right_x-small">
+                </lightning-button>
+                <lightning-button variant="brand" label="Cancel" title="cancel" onclick={handleCancel}>
+                </lightning-button>
+            </footer>
         </template>
     </lightning-card>
 </template>

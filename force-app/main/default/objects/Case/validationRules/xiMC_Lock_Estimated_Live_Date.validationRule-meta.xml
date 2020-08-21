@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>xiMC_Lock_Estimated_Live_Date</fullName>
+    <active>false</active>
+    <description>Lock the &quot;Estimated Live Date&quot; field after initial date entry. Created for Lauren Nunn.</description>
+    <errorConditionFormula>AND( 
+RecordType.DeveloperName = &quot;iMC Case&quot;, 
+NOT( ISNEW() ), 
+TEXT((PRIORVALUE( Estimated_Live_Date__c )))&lt;&gt;&quot;&quot;, 
+ISCHANGED( Estimated_Live_Date__c ), 
+$User.Id &lt;&gt; &quot;005d0000002F06P&quot; 
+)</errorConditionFormula>
+    <errorMessage>Cannot adjust the Estimated Live Date after initial entry. Please see Lauren Nunn with questions.</errorMessage>
+</ValidationRule>

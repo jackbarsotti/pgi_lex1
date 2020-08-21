@@ -1,0 +1,143 @@
+<aura:component controller="AgileKanbanController" 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" 
+                access="global" >
+    <!--Scripts-->
+    <ltng:require scripts="/resource/jQuery2,/resource/jQueryUI1" afterScriptsLoaded="{!c.init}"/> 
+    
+    <!--Internal Attributes-->
+    <aura:attribute name="initialRecords" type="Map" />
+    <aura:attribute name="rows" type="List"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="scriptsLoaded" type="Boolean" default="false"/>
+    <aura:attribute name="sortableApplied" type="Boolean" default="false"/>
+    <aura:attribute name="isKanbanBoardView" type="Boolean" default="true"/>
+    <!-- Associated Group String[] -->
+    <aura:attribute name="associatedGroupList" type="List"/>
+    <!-- AgileStatus by Associated Group -->
+    <aura:attribute name="agileStatusbyGroupName" type="Map" />
+    <!-- Selected Group Name -->
+    <aura:attribute name="selectedGroupName" type="String" default="BP.com"/>
+    <!-- Chatter model vf host -->
+    <aura:attribute name="vfHost" type="String" />
+    
+    <!--Handlers-->
+    <aura:handler name="render" value="{!this}" action="{!c.applySortable}"/>
+    
+    <!--Spinner-->
+    <lightning:spinner aura:id="spinner" alternativeText="Loading" size="large" />
+    
+    <div class="slds-col slds-size_2-of-12 slds-p-top_large" Style ="padding-left: 41px;">
+        Select Group
+    </div>
+    <div class="slds-col slds-size_2-of-12" Style="width:15vw">
+        <lightning:select class="hideLabel" 
+                            label="Associated group" 
+                            value="{!v.selectedGroupName}" 
+                            variant = "label-hidden" aura:id="picklist" 
+                            onchange="{!c.onGroupChange}" >
+            <aura:iteration items="{!v.associatedGroupList}" var="grp">
+                <option class="slds-truncate" value="{!grp}" selected ="{!grp == v.selectedGroupName}">{!grp}</option>
+            </aura:iteration>
+        </lightning:select>
+    </div>
+
+    <div class="slds-size_1-of-1" aura:id="toastMessageBody">
+        <p class="slds-truncate" >
+            {!v.body}
+        </p>
+    </div>
+
+    <!-- Kanban Board View -->
+    <div class="{! if(v.isKanbanBoardView, ' slds-show ',' slds-hide ')}">
+        <!--Kanban Column Headers-->
+        <div class="slds-grid">
+            <div class="slds-tabs--path" role="application">
+                <ul class="slds-tabs--path__nav" role="tablist">
+                    <aura:iteration items="{!v.columns}" var="col">                
+                        <li class="slds-tabs--path__item slds-is-incomplete" role="presentation">
+                            <a class="slds-tabs--path__link" tabindex="-1" role="tab" href="javascript:void(0);">
+                                <aura:if isTrue="{! !col.isDropEnabled }">
+                                    <lightning:helptext content="You cannot drop cards into this column!" class="slds-m-right_small"/>
+                                </aura:if>
+                                
+                                <span class="slds-tabs--path__title slds-text-heading--medium">{!col.label}</span>
+                            </a>
+                        </li>
+                    </aura:iteration>
+                </ul>
+            </div>
+        </div> 
+    </div>  
+
+    <!--Kanban Columns-->
+    <div class="{! if(v.isKanbanBoardView, ' slds-grid ',' ')}">        
+        <aura:iteration items="{!v.rows}" var="row">
+            <div class="slds-col slds-lane slds-has-dividers--around-space slds-scrollable_y" data-name="{!row.key.label}" data-drop-enabled="{!row.key.isDropEnabled}">
+                <span class="slds-tabs--path__title slds-text-heading--medium">{!row.key.label}</span>
+                <aura:iteration items="{!row.value}" var="case">
+                    <div class="slds-item slds-m-around--small" data-id="{!case.Id}" data-status="{!case.AgileStatus__c}">
+                        <div class="slds-tile slds-tile--board">
+                            <h3 class="slds-section-title--divider slds-m-bottom--x-small slds-title slds-theme_shade">
+                                <div class="slds-grid">
+                                    <div class="slds-col">
+                                        <div class="slds-m-top_x-small">
+                                            <a href="{!'/' + case.Id}" target="_blank">{!case.CaseNumber}</a>
+                                        </div>
+                                    </div>
+                                    <div class="slds-col slds-text-align_right">
+                                        <lightning:buttonGroup >
+                                            <lightning:buttonIcon iconName="utility:chat" variant="border-filled" alternativeText="Chat" onclick="{!c.openChaterModel}" value="{!case.Id}" name="{!case.Id}" />
+                                            <lightning:buttonIcon iconName="utility:call" variant="border-filled" alternativeText="Log A Call" onclick="{!c.logACall}" name="{!case.Id}" />
+                                            <lightning:buttonIcon iconName="utility:event" variant="border-filled" alternativeText="Log A Meeting" onclick="{!c.logAMeeting}" name="{!case.Id}" />
+                                        </lightning:buttonGroup>
+                                    </div>
+                                </div>
+                            </h3>
+                            
+                            <div class="slds-tile__detail slds-text-body--small">
+                                <p class="slds-truncate">
+                                    CaseNumber: {!case.CaseNumber}
+                                </p>
+                                
+                                <p class="slds-truncate">
+                                    Details: {!case.GeneralDetails__c}
+                                </p>
+                                
+                                <p class="slds-truncate">
+                                    Asssigned To: {!case.Assigned_To__r.Name}
+                                </p>
+                                
+                                <p class="slds-truncate">
+                                    Epic: {!case.AgileEpic__r.Name}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </aura:iteration> 
+            </div>
+        </aura:iteration> 
+    </div>
+
+    <!-- Chatter Model -->
+    <div class="demo-only slds-hide" aura:id="chatterId" style="height: 640px;position: absolute;">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+            aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_large">
+            <div class="slds-modal__container" Style="width:0%">
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close" onclick="{! c.handleCloseChatterModel }"
+                        alternativeText="close" variant="bare-inverse" class="slds-modal__close" />
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Chatter Comment</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <iframe style="overflow-y: hidden;" 
+                            aura:id="vfFrame" src="{!v.vfHost}"  
+                            frameBorder="0" scrolling="no" 
+                            height="500rem" width="100%" />
+                </div>
+                
+            </div>
+        </section>
+         <div class="slds-backdrop slds-backdrop_open"></div>
+    </div> 
+    
+</aura:component>

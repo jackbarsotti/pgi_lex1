@@ -55,7 +55,6 @@
     <tabs>Request_for_Change__c</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
-    <tabs>standard-WaveHomeLightning</tabs>
     <tabs>Batch_Import_Revenue__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningService_UtilityBar</utilityBar>
@@ -83,9 +82,6 @@
         </mappings>
         <mappings>
             <tab>standard-Feed</tab>
-        </mappings>
-        <mappings>
-            <tab>standard-WaveHomeLightning</tab>
         </mappings>
         <mappings>
             <tab>standard-home</tab>

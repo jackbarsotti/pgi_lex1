@@ -1,0 +1,6 @@
+<aura:component 
+ implements="lightning:actionOverride,force:appHostable,force:lightningQuickAction,force:hasRecordId,flexipage:availableForAllPageTypes" access="global" 
+>
+<aura:attribute name="isView" type="boolean" default="true" />
+    <c:caseViewOverride recordId="{!v.recordId}" isView="{!v.isView}"/>
+</aura:component>

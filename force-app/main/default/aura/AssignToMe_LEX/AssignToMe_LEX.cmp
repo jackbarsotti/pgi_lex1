@@ -1,0 +1,14 @@
+<aura:component controller="AssignToMeLEXController" implements="force:hasRecordId,force:lightningQuickActionWithoutHeader,flexipage:availableForAllPageTypes,force:appHostable,force:hasSObjectName" access="global">
+   <aura:html tag="style">
+        .slds-modal {
+        visibility: hidden;
+        display: none;
+        }
+        .slds-backdrop{
+        display: none;
+        }        
+    </aura:html>
+    <aura:attribute name="sObjectName" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+</aura:component>

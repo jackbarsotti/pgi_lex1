@@ -56,23 +56,48 @@ public with sharing class CaseCreateOverrideController {
         
     }
     @AuraEnabled
-    public static boolean updateCase(Case record){
-         
+    public static boolean updateCase(Case record , boolean isAssignmentRule){
+        if(isAssignmentRule){
+            Database.DMLOptions dmo = new Database.DMLOptions();
+            dmo.assignmentRuleHeader.useDefaultRule = true;
+            record.setOptions(dmo);   
+            System.debug('Testing123');
+        }
         UPDATE record;
         return true;
     }
     @AuraEnabled
-    public static boolean insertCaseComment(String caseCommentBody,String recordId){
-        if(caseCommentBody != null && String.isNotBlank(caseCommentBody)) {
+    public static void insertCaseComment(String caseCommentBody,String recordId){
             CaseComment caseComment = new CaseComment(CommentBody = caseCommentBody, ParentId = recordId);
             //caseComment.ParentId = cse.Id;                
             caseComment.CommentBody = caseCommentBody;
             insert caseComment;
-            return true;
-        }
-        
-        return false;
     }
+    // @AuraEnabled
+    // public static List<AssignmentModel> describeAssignment(Id recordTypeId, string objectType){
+    //     sobjectType = objectType;
+    //    // system.debug('record type id ===>'+ recordTypeId);
+    //     List<AssignmentModel> assignmentSections = new List<AssignmentModel>();
+    //     string theRespBody = GetLayoutSchema(recordTypeId, objectType);
+    //     Map<String, Object> m = (Map<String, Object>) JSON.deserializeUntyped(theRespBody);
+    //     if(m.containsKey('saveOptions')){
+    //        List<object > targetLayout = (List<object>) m.get('saveOptions');
+    //         for(object sectionObject: targetLayout){
+                
+    //             Map<String,object> section = (Map<String,object>) sectionObject;
+                
+    //             AssignmentModel am = new AssignmentModel();
+    //             am.isDisplayed = (boolean)section.get('isDisplayed');
+    //             am.soapHeaderName = (string)section.get('soapHeaderName'); 
+    //             am.label = (string)section.get('label'); 
+    //             am.name = (string)section.get('name'); 
+    //             am.defaultValue = (boolean)section.get('defaultValue'); 
+    //             assignmentSections.add(am); 
+    //         }
+    //     }
+         
+    //     return assignmentSections;
+    // }
     @AuraEnabled
     public static List<Case_Template__c> getQuickCase(){
         // Map<String,String> apiNameToValueMAp = new Map<String,String>();
@@ -101,4 +126,34 @@ public with sharing class CaseCreateOverrideController {
             FROM RecordType 
             WHERE SobjectType = 'Case'];   
     }
+    
+    @AuraEnabled(cacheable=true)
+    public static List<String> getRecordTypeDetail(string recordId) {
+        System.debug('The Value Is');
+        List<String> recTypeList = new List<String>();
+        case objcase =[SELECT Id, RecordtypeId, RecordType.name FROM Case where Id =: recordId];
+        recTypeList.add(objcase.RecordtypeId);
+        recTypeList.add(objcase.RecordType.name);
+        return recTypeList;
+    }
+    // public class AssignmentModel{
+    //     @AuraEnabled
+    //     public boolean isDisplayed {get; set;}
+    //     @AuraEnabled
+    //     public string soapHeaderName {get;set;}  
+    //     @AuraEnabled      
+    //     public string label {get;set;}
+    //     @AuraEnabled
+    //     public string name {get;set;}
+    //     @AuraEnabled
+    //     public boolean defaultValue {get; set;}
+    //     @TestVisible    
+    //     public AssignmentModel(boolean isDisplayed, string soapHeaderName, string label,string name,boolean defaultValue) {
+    //         this.isDisplayed = isDisplayed;
+    //         this.soapHeaderName = soapHeaderName;
+    //         this.label = label;
+    //         this.name = name;
+    //         this.defaultValue = defaultValue;
+    //     }
+    // } 
 }

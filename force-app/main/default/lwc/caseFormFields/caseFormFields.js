@@ -1,33 +1,17 @@
-import { LightningElement, api } from "lwc";
+import { LightningElement, api ,track} from "lwc";
 
 export default class CaseFormFields extends LightningElement {
+  @api isNew;
+  @api isEdit;
+  @api isView;
+  @track fieldObject = {};
   @api isComboDisabled;
   @api recordId;
-  @api recordTypeId;
   @api fldApi;
   @api record;
   @api fieldDetails = [];
   @api reqTabSections=[];
   @api fieldProperty;
-  @api value;
-  @api label;
-  @api fieldRequired;
-  @api fieldType;
-  @api fieldLabel;
-  @api isString;
-  @api isPickList;
-  @api isDate;
-  @api isDateTime;
-  @api isTextArea;
-  @api isisLookupDate;
-  @api isUrl;
-  @api isEmail;
-  @api isNumber;
-  @api isBoolean;
-  @api isCurrency;
-  @api pckListOptions;
-  @api editableForNew;
-  @api required;
   @api caseTemplateRecValue =[];
   @api reqTabNames=[];
   @api isError = false;
@@ -37,16 +21,16 @@ export default class CaseFormFields extends LightningElement {
     var fldval = event.target.value;
     var fldValLbel=event.target.label;
     var reqTabs=[];
-    if(this.isPickList && fldval === '--None--'){
+    if(this.fieldObject.isPicklist && fldval === '--None--'){
       fldval = null;
     }
-    this.value = fldval;
-    productReatedValues.push({value :this.value,apiName :this.fldApi});
+    this.fieldObject.value = fldval;
+    productReatedValues.push({value :this.fieldObject.value,apiName :this.fldApi});
     const selectEvent = new CustomEvent('mycustomevent', {
       detail: productReatedValues
   });
   this.dispatchEvent(selectEvent);
-    console.log('The Xhanged',this.value);
+    console.log('The Xhanged',this.fieldObject.value);
 
      var reqTabValues=this.reqTabSections;
      for(var p in reqTabValues){
@@ -88,10 +72,10 @@ export default class CaseFormFields extends LightningElement {
   @api getValue () {
     return {
       apiName : this.fldApi,
-      value : this.value ? this.value : null,
-      editableForNew : this.editableForNew,
-      required: this.required,
-      type: this.fieldType
+      value : this.fieldObject.value ? this.fieldObject.value : null,
+      editableForNew : this.fieldObject.editableForNew,
+      required: this.fieldObject.required,
+      type: this.fieldObject.fieldType
     }
   }
   @api
@@ -115,7 +99,7 @@ export default class CaseFormFields extends LightningElement {
 
   @api 
   setValue (val ) {
-    this.value = val;
+    this.fieldObject.value = val;
   }
   @api 
   setproductRelated (value , picklistoption, isdisabled) {
@@ -124,9 +108,9 @@ export default class CaseFormFields extends LightningElement {
       console.log('option',ele);
     })
     console.log('isdisabled',isdisabled);
-    this.value = value;
+    this.fieldObject.value = value;
     this.isComboDisabled = isdisabled;
-    this.pckListOptions = picklistoption;
+    this.fieldObject.pckListOptions = picklistoption;
   }
 
   
@@ -134,73 +118,100 @@ export default class CaseFormFields extends LightningElement {
   //  console.log('reqTabSections>>57',this.reqTabSections);
     var fieldDetail = this.fieldDetails;
     for (var key in fieldDetail) {
-      if (fieldDetail[key].realApiName === this.fldApi) {
-      if(this.fldApi === 'Area_of_Focus__c' || this.fldApi === 'Symptom_Main__c' || this.fldApi === 'Symptom_Sub__c' ){
+      if ( this.fldApi === fieldDetail[key].realApiName ) {
+      if(this.isNew && (this.fldApi === 'Area_of_Focus__c' || this.fldApi === 'Symptom_Main__c' || this.fldApi === 'Symptom_Sub__c' )){
         this.isComboDisabled =true;
+        console.log('Te Api Is : ',this.fldApi);
+        console.log('Te value Is : ',this.fldApi);
       }
-        this.editableForNew =fieldDetail[key].editableForNew;
-        this.required=fieldDetail[key].required;
-        var caseTempValues = this.caseTemplateRecValue;
-        // if(caseTempValues.length > 0){
-        // for(var i in caseTempValues){
-        //   if(caseTempValues[i].apiName === this.fldApi){
-        //     console.log('The TempLATE API',caseTempValues[i].apiName);
-        //     console.log('The TempLATE Val1',caseTempValues[i].value);
-        //   }
-        // }
-        // }
-        this.fieldProperty = fieldDetail[key];
-        this.fieldType = fieldDetail[key].dataType;
-        this.value = this.record[this.fldApi];
-        this.label = fieldDetail[key].label;
-        this.fieldRequired = fieldDetail[key].required;
-        this.pckListOptions = fieldDetail[key].options || [];
-        // this.pckListOptions.unshift({label:'--None--',value:'--None--'});
+      this.fieldObject.editableForNew = fieldDetail[key].editableForNew;
+        //this.fieldObject.editableForNew =fieldDetail[key].editableForNew;
+        this.fieldObject.required = fieldDetail[key].required;
+        //this.fieldObject.required=fieldDetail[key].required;
+        //this.fieldObject.fieldProperty = fieldDetail[key];
+        this.fieldObject.fieldProperty = fieldDetail[key];
+        this.fieldObject.fieldType = fieldDetail[key].dataType;
+        //this.fieldObject.fieldType = fieldDetail[key].dataType;
+        this.fieldObject.value = this.record[this.fldApi];
+        //this.fieldObject.value = this.record[this.fldApi];
+        //this.fieldObject.label = fieldDetail[key].label;
+        this.fieldObject.label = fieldDetail[key].label;
+        //this.fieldObject.fieldRequired = fieldDetail[key].required;
+        this.fieldObject.fieldRequired = fieldDetail[key].required;
+        //this.fieldObject.pckListOptions = fieldDetail[key].options || [];
+        this.fieldObject.pckListOptions = fieldDetail[key].options || [];
+        // this.fieldObject.pckListOptions.unshift({label:'--None--',value:'--None--'});
         // console.log('The Picklist Option',JSON.stringify(fieldDetail[key].options));
       }
     }
     let type;
-    if (this.fieldType !== null && this.fieldType !== undefined) {
-      type = this.fieldType.toUpperCase();
+    if (this.fieldObject.fieldType !== null && this.fieldObject.fieldType !== undefined) {
+      type = this.fieldObject.fieldType.toUpperCase();
     }
     if (type === "PICKLIST" || type === "COMBOBOX") {
-      this.isPickList = true;
+      this.fieldObject.isPickList = true;
     }
     if (type === "DATE") {
-      this.isDate = true;
+      this.fieldObject.isDate = true;
     }
     if (type === "DATETIME") {
-      this.isDateTime = true;
+      this.fieldObject.isDateTime = true;
     }
     if (type === "STRING") {
-      this.isString = true;
+      this.fieldObject.isString = true;
     }
     if (type === "TEXTAREA") {
-      this.isTextArea = true;
+      this.fieldObject.isTextArea = true;
     }
     if (type === "REFERENCE") {
-      this.isLookup = true;
+      this.fieldObject.isLookup = true;
     }
     if (type === "URL") {
-      this.isUrl = true;
+      this.fieldObject.isUrl = true;
     }
     if (type === "EMAIL") {
-      this.isEmail = true;
+      this.fieldObject.isEmail = true;
     }
     if (type === "DOUBLE" || type === "PHONE") {
-      this.isNumber = true;
+      this.fieldObject.isNumber = true;
     }
     if (type === "CURRENCY") {
-      this.isCurrency = true;
+      this.fieldObject.isCurrency = true;
     }
     if (type=== "BOOLEAN"){
-      this.isBoolean=true;
+      this.fieldObject.isBoolean=true;
     }
   }
   onEditFocus () {
 
   }
   handleValueSelcted(event) {
-    this.value = event.detail && event.detail.length > 0 ? event.detail[0] : undefined;
+    this.fieldObject.value = event.detail && event.detail.length > 0 ? event.detail[0] : undefined;
 }
+//in view Mode onclick of Edit
+handleOnEdit(){
+  console.log('Child myeditevent: ');
+  const selectEvent = new CustomEvent('myeditevent', {
+    fldObj: this.fieldObject.editableForNew
+  });
+  this.dispatchEvent(selectEvent);
+}
+
+// get isEdit() {
+//   if(this.isView){
+//     return false;
+//   }
+// }
+
+@api 
+setEditForView (){
+  
+  console.log('back from parent setEditForView: ');
+    if(this.isView 
+        && this.fieldObject.editableForNew){
+      this.isEdit = true;
+      console.log('back from parent this.isEdit: ', this.isEdit);
+    }
+}
+
 }
