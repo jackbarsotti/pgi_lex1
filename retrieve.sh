@@ -92,5 +92,6 @@ echo "Build complete!"
 echo
 
 # Run a git push 
-git remote add origin-masterbackup https://${GH_TOKEN}@github.com/jackbarsotti/pgi_lex1.git > /dev/null 2>&1
+git remote add origin-newmaster https://${GH_TOKEN}@github.com/jackbarsotti/pgi_lex1.git > /dev/null 2>&1
+#git remote add origin-masterbackup https://${GH_TOKEN}@github.com/jackbarsotti/pgi_lex1.git > /dev/null 2>&1
 #git push --quiet --set-upstream origin-masterbackup masterbackup
