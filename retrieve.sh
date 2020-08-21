@@ -33,6 +33,7 @@ git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
 git fetch -q
 git stash
 git checkout masterbackup
+git checkout -b newmaster
 
 # Delete the contents of force-app folder before we paste source:retrieve contents into it
 echo
@@ -44,10 +45,10 @@ echo
  
 # Create variables for frequently-referenced file paths
 # Recreate "classes" and "triggers" folders for retrieved metadata files
-export classPath=force-app/main/default/classes
-export triggerPath=force-app/main/default/triggers
-sudo mkdir -p /Users/jackbarsotti/pgi_lex1/$classPath
-sudo mkdir -p /Users/jackbarsotti/pgi_lex1/$triggerPath
+#export classPath=force-app/main/default/classes
+#export triggerPath=force-app/main/default/triggers
+#sudo mkdir -p /Users/jackbarsotti/pgi_lex1/$classPath
+#sudo mkdir -p /Users/jackbarsotti/pgi_lex1/$triggerPath
  
 # Run a source:retrieve to rebuild the contents of the force-app folder (branch specific)
 echo 'Retrieving files from Salesforce, please wait...'
@@ -71,7 +72,7 @@ echo
 echo "Now adding and committing these changes to your $TRAVIS_BRANCH branch..."
 
 ls /Users/jackbarsotti/pgi_lex1/force-app/main/default
-ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/classes
+#ls /Users/jackbarsotti/pgi_lex1/force-app/main/default/classes
 
 # Add changes
 git config --global user.email "travis@travis-ci.org"
