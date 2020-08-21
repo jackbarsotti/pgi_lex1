@@ -34,7 +34,7 @@ git fetch -q
 git stash
 #git checkout masterbackup
 git checkout -b newmaster
-echo "$TRAVIS_BRANCH"
+echo "Current branch: $TRAVIS_BRANCH"
 
 # Delete the contents of force-app folder before we paste source:retrieve contents into it
 echo
